@@ -1,0 +1,16 @@
+TIMESTAMP: 2026-09-02T20:14:22Z
+zeta their-central-40 n=333: R med 0.1631 [0.1394, 0.2032]  q med 0.02170 [0.01245, 0.03332]
+zeta our-global      n=333: R med 0.1661 [0.1383, 0.1983]  q med 0.00589 [0.00305, 0.00875]
+
+== reference populations (previously on disk) ==
+GUE, THEIR rule (their Letter 5 H1-H3): R med 0.1878 [0.1494, 0.2426]; q med 0.01867 [0.00988, 0.03023]
+GUE, OUR  rule (heat46, global-in-300): R med 0.1878 [0.1503, 0.2400]; q med 0.00543
+zeta low-height, OUR rule (heat45):     R med 0.1661; q med 0.0059
+
+== registered verdicts ==
+P1 (their rule closes the gap): zeta q(their) 0.02170 / GUE q(their) 0.01867 = 1.16x (was 3.44x under mismatched rules) -> PASS
+    matched-rule ratios: their-rule 1.16x, our-rule 1.09x
+P2 (R selection-robust on zeta): R(their) 0.1631 vs R(our) 0.1661 = 1.8% apart -> PASS
+
+TIMESTAMP: 2026-09-02T20:14:23Z
+done

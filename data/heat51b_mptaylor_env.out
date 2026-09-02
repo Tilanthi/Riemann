@@ -1,0 +1,20 @@
+TIMESTAMP: 2026-09-02T20:20:07Z
+P2 mpmath version: 1.3.0
+
+P1 their T2g function verbatim, THEIR 22-digit m0/d:
+  identity truth (our j=6708 table): a3=+1.537021 a5=+18.406508 a6=-103.015731
+  dps=50: a3=+1.537001 (rel 1.3e-05)  a5=+17.278850 (rel 6.1e-02)  a6=-103.0147 (rel 1.0e-05)
+  dps=90: a3=+1.537001 (rel 1.3e-05)  a5=+17.278850 (rel 6.1e-02)  a6=-103.0147 (rel 1.0e-05)
+  (their published: a3=+1.53700, a5=+17.2788, a6=-103.015)
+
+P3 mp.taylor at k922 and W (their values PASS identity there):
+  k922  j=921: a3 -0.312274 vs -0.312275 (rel 2.3e-06)  a5 -3.114129 vs -3.115109 (rel 3.1e-04)
+  W     j=9004: a3 +13.729222 vs +13.729222 (rel 1.6e-08)  a5 +631.009278 vs +631.009229 (rel 7.7e-08)
+
+P4 fixed contour control (raw quotient into log_unwrap):
+  r=0.1575: worst rel over a2..a6 = 3.97e-16
+  r=0.2475: worst rel over a2..a6 = 3.97e-16
+  r=0.3375: worst rel over a2..a6 = 3.97e-16
+
+TIMESTAMP: 2026-09-02T20:20:29Z
+done

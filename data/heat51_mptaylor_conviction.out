@@ -1,0 +1,27 @@
+TIMESTAMP: 2026-09-02T20:17:52Z
+P0 sanity log(1+z): max |taylor - truth| over orders 0..6 = 0.0   (truth array = series of log(1+z) itself)
+
+P1 synthetic: 120 windowed gammas, pair in middle, d=0.01
+  m0=60.000000 d=0.01  nearest non-pair |u|=1.0993
+  order | mp.taylor (jet)   | truth (jet)      | rel err
+     2 |   -2.05220129e+00 |   -2.05220129e+00 |  0.00e+00 even
+     3 |   -1.50925792e+00 |   -1.50925792e+00 |  4.41e-16 odd 
+     4 |   -5.01045502e+00 |   -5.01045502e+00 |  0.00e+00 even
+     5 |   -1.49338763e+01 |   -1.49338763e+01 |  1.19e-16 odd 
+     6 |   -7.15671360e+01 |   -7.15671360e+01 |  3.97e-16 even
+  worst odd-order rel err  = 4.41e-16
+  worst even-order rel err = 3.97e-16
+  contour control (same F):
+    r=0.1575: worst rel over a2..a6 = 3.46e+03
+    r=0.2475: worst rel over a2..a6 = 3.64e+02
+    r=0.3375: worst rel over a2..a6 = 7.88e+01
+
+P2 reproduce machine 3's Lehmer kappa5 (T2g method, their m0/d):
+  Lehmer j=6708 m0=7005.0817154244996 d=0.0188492495004 (T2g: 7005.0817154237838622066 / 0.0188492488630700935625)
+  identity truth a5 = -24*S5 (full 100k table) = +18.406508   (heat47 contour: +18.406508, 3 radii; heat48 P3: 2 more radii, N=192, dps=60)
+  P3 dps= 50: mp.taylor a5 = -3812.924724849 (rel vs truth 2.08e+02)   a3=+1.468958  a6=-1085636.447813
+  P3 dps= 80: mp.taylor a5 = -3812.924724849 (rel vs truth 2.08e+02)   a3=+1.468958  a6=-1085636.447813
+  P3 dps=120: mp.taylor a5 = -3812.924724849 (rel vs truth 2.08e+02)   a3=+1.468958  a6=-1085636.447813
+
+TIMESTAMP: 2026-09-02T20:18:30Z
+done
