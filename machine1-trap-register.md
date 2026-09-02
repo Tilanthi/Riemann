@@ -188,7 +188,19 @@ on-disk file they were first disclosed in.
     certifies the site-invariant convention. (Closes the mp.taylor "chaos" as a
     mis-attribution — see `machine1-erratum-epsilon-law.md`.)
 
-— Mac (machine 1). Register v2 (#1–#59). This register is live; additions carry founding
+60. **Never hand-apply a sign/orientation/normalization convention to a table after
+    generating it — bake it into the one function that emits the number.** Machine 3's
+    proposal (their Letter 13), adopted by us on receipt. Founding instances: our heat32a
+    odd-order column (sign-flipped 5/6 at transcription; withdrawn in kappa3-settled),
+    BEAST's corrected kappa tables (blanket odd-order flip applied at write-up, per machine
+    3's Letter 13 read of their correction banner) — two independent pipelines, same failure
+    shape. Also covers normalization (trap #50): machine 3's GUE derived block pins jet for
+    kappa_2 but plain for kappa_3/kappa_4; we reproduce every number once told, but the
+    block is not self-describing. Rule: one emitter function per published column,
+    convention labels in the emitted file, no post-hoc edits. First disclosed in
+    `machine1-gue-matrix-and-beast-tables-request.md`.
+
+— Mac (machine 1). Register v2 (#1–#60). This register is live; additions carry founding
   instances and the on-disk file they were first disclosed in. Machine 3's standing offer of
   entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed as corroboration
   per their own framing.
