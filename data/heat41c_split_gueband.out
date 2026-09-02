@@ -1,0 +1,91 @@
+
+[G] site i=452 h=750.8 d=0.155 eps1=+2.076
+  bc_model=0.1266 bc_census=0.1259 (-0.55%) r2=0.99994
+  merge: x_m=-0.01147 b_m=0.12578 c_theory=0.47663 drift=-0.3634
+  b=0.1278: pair x=(-0.03266,+0.00953) c_census=0.48551 dev -1.83% PASS | driftside Y
+  b=0.1322: pair x=(-0.05049,+0.02605) c_census=0.48241 dev -1.20% PASS | driftside Y
+
+[G] site i=1747 h=2249.7 d=0.110 eps1=+1.386
+  bc_model=0.0900 bc_census=0.0894 (-0.58%) r2=0.99994
+  merge: x_m=-0.01096 b_m=0.08937 c_theory=0.40214 drift=-0.4902
+  b=0.0908: pair x=(-0.32997,-0.02619) c_census=4.14722 dev -90.30% FALSIFIER-ROW | driftside Y
+  b=0.0939: pair x=(-0.03903,+0.25970) c_census=2.23376 dev -82.00% FALSIFIER-ROW | driftside N
+
+[G] site i=1935 h=2449.1 d=0.121 eps1=+1.394
+  bc_model=0.0993 bc_census=0.0987 (-0.60%) r2=0.99994
+  merge: x_m=-0.01404 b_m=0.09860 c_theory=0.42213 drift=-0.5671
+  b=0.1001: pair x=(-0.03087,+0.00220) c_census=0.42984 dev -1.79% PASS | driftside Y
+  b=0.1036: pair x=(-0.37489,-0.04515) c_census=2.34736 dev -82.02% FALSIFIER-ROW | driftside Y
+
+[G] site i=3149 h=3682.5 d=0.076 eps1=+1.476
+  bc_model=0.0620 bc_census=0.0617 (-0.53%) r2=0.99993
+  merge: x_m=-0.00401 b_m=0.06162 c_theory=0.33442 drift=-0.2622
+  b=0.0626: pair x=(-0.01444,+0.00632) c_census=0.34128 dev -2.01% PASS | driftside Y
+  b=0.0647: pair x=(-0.02311,+0.01452) c_census=0.33889 dev -1.32% PASS | driftside Y
+
+[G] site i=3793 h=4309.3 d=0.093 eps1=-1.267  status=CENSUS-FIT-FAILED
+
+[G] site i=4086 h=4589.7 d=0.053 eps1=-0.718
+  bc_model=0.0426 bc_census=0.0424 (-0.52%) r2=0.99993
+  merge: x_m=0.00003 b_m=0.04239 c_theory=0.27734 drift=+0.0008
+  b=0.0431: pair x=(-0.00710,+0.00718) c_census=0.28307 dev -2.02% PASS | driftside Y
+  b=0.0445: pair x=(-0.01291,+0.01298) c_census=0.28107 dev -1.33% PASS | driftside Y
+
+[G] site i=4531 h=5010.9 d=0.061 eps1=+1.525
+  bc_model=0.0493 bc_census=0.0491 (-0.51%) r2=0.99993
+  merge: x_m=-0.00148 b_m=0.04905 c_theory=0.29850 drift=-0.1218
+  b=0.0498: pair x=(-0.00977,+0.00677) c_census=0.30479 dev -2.07% PASS | driftside Y
+  b=0.0515: pair x=(-0.01658,+0.01340) c_census=0.30259 dev -1.35% PASS | driftside Y
+
+[W40] site i=158 h=333.9 d=0.283 eps1=-2.454
+  bc_model=0.2341 bc_census=0.2326 (-0.61%) r2=0.99996
+  merge: x_m=-0.03222 b_m=0.23252 c_theory=0.64388 drift=-0.5508
+  b=0.2361: pair x=(-0.06919,+0.00792) c_census=0.65271 dev -1.35% PASS | driftside N
+  b=0.2443: pair x=(-0.10236,+0.03775) c_census=0.64950 dev -0.87% PASS | driftside Y
+
+[W40] site i=888 h=1290.3 d=0.156 eps1=-1.096
+  bc_model=0.1286 bc_census=0.1279 (-0.56%) r2=0.99996
+  merge: x_m=-0.00661 b_m=0.12782 c_theory=0.47789 drift=-0.2179
+  b=0.1298: pair x=(-0.02796,+0.01455) c_census=0.48532 dev -1.53% PASS | driftside Y
+  b=0.1343: pair x=(-0.04569,+0.03151) c_census=0.48265 dev -0.99% PASS | driftside Y
+
+[W40] site i=1579 h=2068.5 d=0.162 eps1=-1.523
+  bc_model=0.1331 bc_census=0.1323 (-0.56%) r2=0.99995
+  merge: x_m=-0.01052 b_m=0.13223 c_theory=0.48688 drift=-0.3209
+  b=0.1343: pair x=(-0.03281,+0.01129) c_census=0.49485 dev -1.61% PASS | driftside Y
+  b=0.1389: pair x=(-0.05138,+0.02866) c_census=0.49202 dev -1.04% PASS | driftside Y
+
+[W40] site i=2513 h=3046.3 d=0.202 eps1=+1.457
+  bc_model=0.1681 bc_census=0.1672 (-0.57%) r2=0.99997
+  merge: x_m=-0.02657 b_m=0.16701 c_theory=0.54435 drift=-0.6062
+  b=0.1697: pair x=(-0.05481,+0.00041) c_census=0.55142 dev -1.28% PASS | driftside Y
+  b=0.1755: pair x=(-0.07881,+0.02154) c_census=0.54879 dev -0.81% PASS | driftside Y
+
+[W40] site i=3357 h=3886.3 d=0.113 eps1=+1.014
+  bc_model=0.0925 bc_census=0.0920 (-0.55%) r2=0.99995
+  merge: x_m=-0.00533 b_m=0.09192 c_theory=0.40641 drift=-0.2238
+  b=0.0934: pair x=(-0.02088,+0.00983) c_census=0.41339 dev -1.69% PASS | driftside Y
+  b=0.0966: pair x=(-0.03369,+0.27611) c_census=2.28409 dev -82.21% FALSIFIER-ROW | driftside N
+
+[W40] site i=4196 h=4694.1 d=0.117 eps1=-1.190
+  bc_model=0.0956 bc_census=0.0951 (-0.54%) r2=0.99995
+  merge: x_m=0.00024 b_m=0.09505 c_theory=0.41379 drift=+0.0052
+  b=0.0965: pair x=(-0.01570,+0.01613) c_census=0.42130 dev -1.78% PASS | driftside N
+  b=0.0999: pair x=(-0.02865,+0.02909) c_census=0.41864 dev -1.16% PASS | driftside N
+
+[W40] site i=4876 h=5333.9 d=0.157 eps1=+1.292
+  bc_model=0.1303 bc_census=0.1295 (-0.57%) r2=0.99997
+  merge: x_m=-0.01246 b_m=0.12945 c_theory=0.47957 drift=-0.3672
+  b=0.1315: pair x=(-0.03378,+0.00907) c_census=0.48603 dev -1.33% PASS | driftside N
+  b=0.1360: pair x=(-0.05194,+0.02590) c_census=0.48363 dev -0.84% PASS | driftside Y
+
+[W40] site i=5524 h=5932.9 d=0.149 eps1=+1.103
+  bc_model=0.1231 bc_census=0.1224 (-0.57%) r2=0.99997
+  merge: x_m=-0.01405 b_m=0.12235 c_theory=0.46633 drift=-0.4370
+  b=0.1243: pair x=(-0.03462,+0.00590) c_census=0.47270 dev -1.35% PASS | driftside Y
+  b=0.1286: pair x=(-0.05193,+0.02168) c_census=0.47035 dev -0.86% PASS | driftside Y
+
+Q1: 24/28 rows within 5% (pre-reg PASS needs >= 22); >10%-off rows: 4 (FALSIFIER at >= 6)
+Q2: drift-side agreement 22/28 rows
+Q3: per-site err_bc above; compare vs heat53 .out census errors (within 0.3 pp expected)
+done

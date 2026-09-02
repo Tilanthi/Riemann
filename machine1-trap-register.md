@@ -200,7 +200,26 @@ on-disk file they were first disclosed in.
     convention labels in the emitted file, no post-hoc edits. First disclosed in
     `machine1-gue-matrix-and-beast-tables-request.md`.
 
-— Mac (machine 1). Register v2 (#1–#60). This register is live; additions carry founding
+
+61. **The wrong-normalization ratio is always a factorial or its reciprocal.** When a
+    pre-registered law check comes back with obs/pred ratio exactly equal to j!, 1/j!, or its
+    negative, the law's normalization is mismatched against the coefficient convention — not the
+    law wrong, not the data wrong. Founding instances (two, same night, independent): Mac's
+    heat51e first pass (ratio -1/720 on the d-law ladder — jet prediction against plain mp.taylor
+    coefficients *and* a sign slip, both read off one number) and machine 3's Letter-15 first
+    pass (ratios exactly 2.0 and 720.0 = 6!). Diagnostic power: the ratio *names the fix* (which
+    factorial, which sign). First disclosed: machine1-heat41c-splitlaw-guebands.md §1.
+
+62. **Accept a census root only inside the predicted corridor.** In landing/pairing censuses
+    (heat41b/41c class), the root-tracker can grab a *neighbouring* zero's landing site and pair
+    it with the true one; the derived split distance then measures the distance to somebody
+    else's zero (our 4 off-rows: far partner at |x| = 0.26-0.37 while the near root sat 5e-4 to
+    2e-3 from the law's predicted x_-). Guard: accept a census root only if it lies within a
+    corridor of x_m + drift*(b - b_m) +/- c*sqrt(b - b_c), else re-seed or discard the row.
+    Founding instance: heat41c rows i=1747 (both), i=1935 (upper), i=3357 (upper). First
+    disclosed: machine1-heat41c-splitlaw-guebands.md §2.
+
+— Mac (machine 1). Register v2 (#1–#62). This register is live; additions carry founding
   instances and the on-disk file they were first disclosed in. Machine 3's standing offer of
   entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed as corroboration
   per their own framing.
