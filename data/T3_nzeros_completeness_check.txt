@@ -1,0 +1,22 @@
+loaded 100000 Odlyzko zero heights
+n=     1  T=14.134725  nzeros(T-eps)=0  nzeros(T+eps)=1  expect 0/1  OK
+n=     2  T=21.022040  nzeros(T-eps)=1  nzeros(T+eps)=2  expect 1/2  OK
+n=     5  T=32.935062  nzeros(T-eps)=4  nzeros(T+eps)=5  expect 4/5  OK
+n=    10  T=49.773832  nzeros(T-eps)=9  nzeros(T+eps)=10  expect 9/10  OK
+n=    50  T=143.111846  nzeros(T-eps)=49  nzeros(T+eps)=50  expect 49/50  OK
+n=   100  T=236.524230  nzeros(T-eps)=99  nzeros(T+eps)=100  expect 99/100  OK
+n=   453  T=750.655950  nzeros(T-eps)=452  nzeros(T+eps)=453  expect 452/453  OK
+n=   693  T=1054.781039  nzeros(T-eps)=692  nzeros(T+eps)=693  expect 692/693  OK
+n=   922  T=1329.043518  nzeros(T-eps)=921  nzeros(T+eps)=922  expect 921/922  OK
+n=  1000  T=1419.422481  nzeros(T-eps)=999  nzeros(T+eps)=1000  expect 999/1000  OK
+n=  1166  T=1610.003264  nzeros(T-eps)=1165  nzeros(T+eps)=1166  expect 1165/1166  OK
+n=  5000  T=5447.861998  nzeros(T-eps)=4999  nzeros(T+eps)=5000  expect 4999/5000  OK
+n=  7005  T=7269.281797  nzeros(T-eps)=7004  nzeros(T+eps)=7005  expect 7004/7005  OK
+n=  9023  T=9038.744798  nzeros(T-eps)=9022  nzeros(T+eps)=9023  expect 9022/9023  OK
+n= 10000  T=9877.782654  nzeros(T-eps)=9999  nzeros(T+eps)=10000  expect 9999/10000  OK
+n= 20000  T=18046.464296  nzeros(T-eps)=19999  nzeros(T+eps)=20000  expect 19999/20000  OK
+n= 50000  T=40433.687385  nzeros(T-eps)=49999  nzeros(T+eps)=50000  expect 49999/50000  OK
+n= 80000  T=61393.964044  nzeros(T-eps)=79999  nzeros(T+eps)=80000  expect 79999/80000  OK
+n= 99999  T=74920.259793  nzeros(T-eps)=99998  nzeros(T+eps)=99999  expect 99998/99999  OK
+n=100000  T=74920.827499  nzeros(T-eps)=99999  nzeros(T+eps)=100000  expect 99999/100000  OK
+ALL OK
