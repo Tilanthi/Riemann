@@ -1,0 +1,33 @@
+L1: their 22-digit string vs fresh zetazero(6709/6710)
+  true m0 = 7005.08171542378365147453  d = 0.0188492488631
+  |their_m0 - true| = 2.107e-13   |their_d - true_d| = 6.258e-19
+  => the string is accurate to 2.1e-13; it was never stale
+
+L2: fresh zetazero site through their T2g (their L10 s3 repro)
+  dps=50: a5 = +18.4065081   (truth +18.406508)
+  dps=90: a5 = +18.4065081   (truth +18.406508)
+
+L3: perturbation ladder from the true m0 (dps 50)
+  their string offset : a5 = +17.278850
+  m0 + +1e-13         : a5 = +17.871393
+  m0 + -1e-13         : a5 = +18.941623
+  m0 + +5e-13         : a5 = +15.730934
+  m0 + +1e-12         : a5 = +13.055360
+  their string exact  : a5 = +17.278850   (letter-8 published +17.2788)
+
+L4: identity-predicted sensitivity vs instrument (amplification)
+  S6 (own pair excluded) = 0.8585   da5/dm0 = 120*S6 = +103.0 per unit
+  true delta per 1e-13: +1.03e-11    instrument (L3): ~0.5
+  amplification(1e-13) = 4.9e+10
+  amplification(7.2e-10, heat51 P3) = 5.2e+10
+  => consistent ~5e10 gain on the site argument at Lehmer
+
+L5: d-shift control at Lehmer (mis-centring via d instead of m0)
+  Lehmer d-shift +-1e-13 (m0 exact): a5 = +18.406508 / +18.406508  (m0-shift gave 17.871/18.942)
+
+NOTE (post-run, see heat51d): the L3 ladder is SMOOTH, slope -240/d^6
+  = -5.351e12/unit, matching the closed-form off-centre own-pair residue
+  da_j = -2*j!*eps/d^(j+1) (odd j). 'Chaos' was the wrong frame: the
+  instrument was computing the honest LOCAL coefficient; the quantity
+  itself is eps-ultraviolet at tight pairs. Erratum issued.
+done

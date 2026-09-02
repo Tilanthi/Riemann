@@ -1,0 +1,16 @@
+seven-site law test: obs (a5_old - a5_new) vs pred -240*eps/d^6
+site                eps          d     pred dA5      obs dA5    ratio
+k453          1.599e-14     0.1552   -2.7444e-7   -2.7444e-7      1.0 OK
+k693         -6.833e-14     0.1106    8.9824e-6    8.9824e-6      1.0 OK
+k922          5.702e-15    0.08075    -4.936e-6    -4.936e-6      1.0 OK
+k1166         -8.56e-15     0.1253    5.3138e-7    5.3138e-7      1.0 OK
+Lehmer        2.107e-13    0.01885      -1.1277      -1.1277      1.0 OK
+telescope     4.407e-37   0.007351  -6.7039e-22  -6.7039e-22      1.0 OK
+W_site       -4.043e-13     0.2999     1.335e-7    1.3598e-7    1.019 OK
+
+7/7 sites: old-minus-new kappa5 == -240*eps/d^6 within 5%
+
+Lehmer provenance: float64(true m0) = 7005.0817154237838622066192328929901123046875
+                     their old JSON  = 7005.0817154237838622066192328929901123046875
+  equal: True  eps(double) = 2.107e-13
+done

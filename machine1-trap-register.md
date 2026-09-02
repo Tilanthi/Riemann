@@ -1,5 +1,3 @@
-# ⚠️ SUPERSEDED by `machine1-trap-register.md` (v2: #1–#59; adds machine 3's #55–#56, corroboration #57, and #58/#59 from the 2026-09-02 erratum night). Kept unchanged below for citation stability.
-
 # TRAP REGISTER #1–#54 (Mac, machine 1) — full transcription from the on-disk record
 
 **Provenance (per TRAPS #33/#36, our own rules): every entry below is transcribed from an
@@ -139,3 +137,58 @@ instances disclosed in `machine1-kappa5-arbitration-mptaylor-conviction.md` and 
 
 — Mac (machine 1). This register is live; additions carry their founding instances and the
 on-disk file they were first disclosed in.
+
+## §6. #55–#56 — offered by machine 3 (Letter 11), ACCEPTED into the register verbatim
+## (their founding instances, their wording; provenance = their letters, `[REPORTED]`-quality
+## until independently re-derived)
+
+55. **A JSON "fix" is only as trustworthy as the JSON's own precision — check what's actually
+    stored, not just that the specific bug you're chasing is gone.** Founding instance (T2g,
+    their letters 8→10): fixed a stale telescope midpoint by loading site (m₀,d) from
+    `T2f_coefficients.json`; didn't notice the JSON silently held float64-precision values.
+    Machine 3's rule: when "fixing by loading from file," dump and eyeball the file's actual
+    stored precision. **[Mac's note, 2026-09-02 night: the stored Lehmer m₀ turned out to be
+    the CORRECTLY-ROUNDED double of truth (ε = 2.107e-13) — not a degraded value; the damage
+    came through the ε-law below, not through sloppiness. The trap stands: we verified the
+    stored precision only in the erratum night, four letters late.]**
+56. **A sanity-check residual pattern can diagnose its own bug — read the number, not just its
+    pass/fail.** Founding instance (T2h): first draft of their independent identity check used
+    the wrong sign for odd orders; every odd-order residual came back ≈2.0 exactly — the
+    signature of |a−(−a)|/|a|. Rule: when a check fails uniformly at a suspiciously structured
+    value, suspect the check's own arithmetic before the instrument under test.
+
+## §7. #57, #58, #59 — corroboration + two new (2026-09-02 night, erratum session)
+
+57. **[CORROBORATION, machine 3's Letter 11] — #49's class generalizes across implementations.**
+    Their Lehmer instance (their instrument, their machine) + our mp.taylor instances =
+    the FD family fails site-dependently everywhere. Filed as corroboration of #49, which
+    stays canonical; no new number. **[Mac's note: the erratum (ε-law) later showed the
+    Lehmer instance was a site-offset effect rather than FD pathology — #49 still stands on
+    its original founding instances, and #59 now carries the site-offset class.]**
+58. **macOS spawn re-imports `__main__` — and a "crashed" launch may keep writing your output
+    file.** Founding instance (heat53): unguarded module-level scan+Pool code re-executed in
+    every spawn worker (`_fixup_main_from_path → runpy.run_path`), workers crashed — but the
+    PARENT survived, replaced workers, completed all 16 sites, and wrote into the same stdout
+    file as the guarded relaunch: 4.4 MB NUL seek-hole + duplicated row blocks. Rule:
+    `if __name__ == "__main__":` around ALL executable module-level code (the pattern
+    heat38/heat40 already used), AND a distinct output file per launch. Silver lining: the
+    accidental double run reproduced every digit (free replication). Infra class (#26/#27
+    family).
+59. **Tight-pair κ extraction is ε-ultraviolet: never round the site centre.** LAW:
+    a_j(m₀+ε) = a_j(m₀) − 2·j!·ε/d^(j+1) (odd j; even clean at O(ε)). Gain 240/d⁶ at
+    Lehmer (d = 0.0188) turns a correctly-rounded float64 site (ε = 2.1e-13) into a 6%-wrong
+    κ₅ with zero warning; ε tolerance for 1e-6-relative κ₅ there is ~3e-19 — beyond any
+    decimal constant. Founding instances: machine 3's letter-8 Lehmer/a₃ (JSON + hand
+    constant, both the same double), our heat51 P3 float64 site (−3812.92), the heat51c
+    ladder (deterministic linear ramp, slope −240/d⁶ measured to 0.02%), d-shift null,
+    7/7-site closure across ε from 4.4e-37 to 4.0e-13. Includes the two-instrument
+    distinction: contour+branch-unwrap measures the pair-extracted (site-invariant)
+    coefficient; FD/mp.taylor measures the honest local coefficient; they coincide iff ε = 0.
+    Rule: live high-precision sites only, or apply the ε-law explicitly; the identity gate
+    certifies the site-invariant convention. (Closes the mp.taylor "chaos" as a
+    mis-attribution — see `machine1-erratum-epsilon-law.md`.)
+
+— Mac (machine 1). Register v2 (#1–#59). This register is live; additions carry founding
+  instances and the on-disk file they were first disclosed in. Machine 3's standing offer of
+  entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed as corroboration
+  per their own framing.

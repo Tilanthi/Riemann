@@ -1,0 +1,39 @@
+# PROVENANCE NOTE (machine 1, 2026-09-02). This .out was written by TWO
+# interleaved runs of heat53 (see .raw.out for the original byte stream):
+#   (a) the ORIGINAL launch ~20:14Z — unguarded module-level code; macOS
+#       spawn workers re-imported __main__, re-ran the candidate scan, and
+#       crashed; the PARENT nonetheless survived, replaced workers, and
+#       completed all 16 sites at 2026-09-02T20:38:13Z;
+#   (b) the GUARDED relaunch 20:34:17Z -> 20:40:14Z (the `if __name__ ==
+#       "__main__":` fix), whose stream is kept verbatim below.
+# The two streams share one stdout file: the raw file carries a 4.4 MB NUL
+# seek-hole and two overlapping row blocks. Every one of the 16 sites was
+# computed by BOTH runs and the digits agree IDENTICALLY (accidental
+# independent replication, including the 2/3-row census-fits at h=2249.7
+# and h=4309.3). Duplicate stream (a) rows are deleted from this file.
+TIMESTAMP: 2026-09-02T20:34:17Z
+band G: 29 candidates, picked 8 across height h 751..5978
+band W40: 124 candidates, picked 8 across height h 334..5933
+[1/16] G   h=750.8 d=0.155 q=0.0111 q_far=0.0083 R=0.1123 bc_m=0.1266 bc_c=0.1259 (-0.55%) twoR_err=-1.18% slope_r=1.087 rows=3/3
+[2/16] G   h=2449.1 d=0.121 q=0.0115 q_far=0.0077 R=0.1451 bc_m=0.0993 bc_c=0.0987 (-0.60%) twoR_err=-1.43% slope_r=1.090 rows=3/3
+[3/16] G   h=3682.5 d=0.076 q=0.0050 q_far=0.0036 R=0.1201 bc_m=0.0620 bc_c=0.0617 (-0.53%) twoR_err=-0.58% slope_r=1.088 rows=3/3
+[4/16] G   h=2249.7 d=0.110 q=0.0095 q_far=0.0063 R=0.1481 bc_m=0.0900 bc_c=0.0894 (-0.62%) twoR_err=-1.13% slope_r=1.109 rows=2/3
+[5/16] W40 h=333.9 d=0.283 q=0.0259 q_far=0.0192 R=0.1170 bc_m=0.2341 bc_c=0.2326 (-0.61%) twoR_err=-2.52% slope_r=1.081 rows=3/3
+[6/16] G   h=4589.7 d=0.053 q=0.0048 q_far=0.0021 R=0.3300 bc_m=0.0426 bc_c=0.0424 (-0.52%) twoR_err=-0.47% slope_r=1.087 rows=3/3
+[7/16] W40 h=1290.3 d=0.156 q=0.0225 q_far=0.0124 R=0.2428 bc_m=0.1286 bc_c=0.1279 (-0.56%) twoR_err=-1.96% slope_r=1.080 rows=3/3
+[8/16] G   h=5010.9 d=0.061 q=0.0034 q_far=0.0026 R=0.1155 bc_m=0.0493 bc_c=0.0491 (-0.51%) twoR_err=-0.38% slope_r=1.088 rows=3/3
+[9/16] G   h=5978.1 d=0.056 q=0.0053 q_far=0.0024 R=0.3028 bc_m=0.0457 bc_c=0.0455 (-0.55%) twoR_err=-0.67% slope_r=1.089 rows=3/3
+[10/16] G   h=4309.3 d=0.093 q=0.0100 q_far=0.0073 R=0.1494 bc_m=0.0755 bc_c=0.0751 (-0.58%) twoR_err=-0.91% slope_r=1.105 rows=2/3
+[11/16] W40 h=2068.5 d=0.162 q=0.0193 q_far=0.0136 R=0.1325 bc_m=0.1331 bc_c=0.1323 (-0.56%) twoR_err=-1.80% slope_r=1.083 rows=3/3
+[12/16] W40 h=3046.3 d=0.202 q=0.0319 q_far=0.0223 R=0.1279 bc_m=0.1681 bc_c=0.1672 (-0.57%) twoR_err=-3.05% slope_r=1.078 rows=3/3
+[13/16] W40 h=3886.3 d=0.113 q=0.0167 q_far=0.0105 R=0.2091 bc_m=0.0925 bc_c=0.0920 (-0.55%) twoR_err=-1.51% slope_r=1.083 rows=3/3
+[14/16] W40 h=4694.1 d=0.117 q=0.0136 q_far=0.0087 R=0.1589 bc_m=0.0956 bc_c=0.0951 (-0.54%) twoR_err=-1.20% slope_r=1.084 rows=3/3
+[15/16] W40 h=5333.9 d=0.157 q=0.0295 q_far=0.0221 R=0.1422 bc_m=0.1303 bc_c=0.1295 (-0.57%) twoR_err=-2.60% slope_r=1.076 rows=3/3
+[16/16] W40 h=5932.9 d=0.149 q=0.0293 q_far=0.0202 R=0.1615 bc_m=0.1231 bc_c=0.1224 (-0.57%) twoR_err=-2.65% slope_r=1.077 rows=3/3
+
+=== registered verdicts ===
+  band G (n=8): P1 median|err| 0.55% max 0.62% -> PASS; P2 q_far slope -10.48 (law 10.1±5) -> FALSIFIER; P3 model med 0.55% vs twoR med 0.79% -> PASS
+  band W40 (n=8): P1 median|err| 0.56% max 0.61% -> PASS; P2 q_far slope -2.56 (law 10.1±5) -> FALSIFIER; P3 model med 0.56% vs twoR med 2.24% -> PASS
+
+TIMESTAMP: 2026-09-02T20:40:14Z
+done
