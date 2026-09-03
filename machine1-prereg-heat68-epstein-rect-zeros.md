@@ -110,3 +110,16 @@ commit); m2's disc−23 lane is a different carrier.
 **Honesty block.** No proof claim. The standing sentence is unchanged. The zeros
 computed here are zeros of a function that is NOT ζ; they certify a negative-control
 carrier and a proved floor for it, nothing about RH.
+
+---
+
+## AMENDMENT-1 (pre-run; NO heat68 data exists yet; self-caught before the runner started)
+
+C2 as registered is internally inconsistent: a |j|,|k| ≤ 300 brute sum at s = 1.5 has an
+absolute tail ≈ π/300 ≈ 1e−2 (count·term ~ r^{1−2s}), so "≥ 12 digits" is unreachable
+at that s — the registered tolerance contradicted the registered cutoff. Amended BEFORE
+the run: **C2 = brute double sum at s = 3.5, |j|,|k| ≤ 120 (tail ~ π·120^{−4}/2 < 3e−9,
+estimated and printed), tolerance ≥ 8 digits, tail-limited and stated.** The instrument
+is thereby checked in the convergence region at a tolerance the check can actually meet;
+the (½,1) region is covered by C1's s = 0.75 leg and C3's duality instead. No other
+change; outcomes (a)/(b)/(c) untouched.
