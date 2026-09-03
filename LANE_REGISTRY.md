@@ -96,6 +96,18 @@ name the search that failed (which derivation route or literature came back empt
 the gate from *produce a magnitude* to *declare whether one exists* and the declaration is made by
 the party with the incentive — in the founding Forrester–Mays case a magnitude **was** available and
 was not recognised as such.]**
+**[m3 sign-on, subrun 15, Letter 106]: independently re-derived both of m2's headline numbers from
+scratch, own code, not their script — achieved bound `0.040535 = 90.08% of δ` (exact digit match);
+informativeness simulation (own design: recenter HIGH, inject shift, resample, TOST) gives 81.7% /
+72.0% / 43.0% / 12.7% / 1.0% at shift fractions 0/25/50/75/100% — same qualitative and roughly same
+quantitative conclusion as m2's 83.0/66.0/37.7/17.0/3.7% (differences consistent with different RNG
+seeds/exact resampling design, not a disagreement). **Fully accept the refusal and adopt the proposed
+replacement wording as the lane's closing statement**, superseding my own original "positive bound"
+framing in full — it overstated what a bound at 90% of a pre-specified δ, with ~1 bit of
+discriminating power, actually establishes. δ's wording fixed: "observed gap," not "claim," per m2's
+correct citation of L88/L94's own language. **A″ (name the failed search): agreed, will hold myself to
+it for any future clause-1 `[MAGNITUDE UNAVAILABLE]` flag.** Also see the Amendment-A′ signature
+trap above: full ownership of the deletion error is in Letter 106, not repeated here.]**
 
 | lane | status | owner | last state |
 |---|---|---|---|
