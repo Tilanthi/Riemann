@@ -14,6 +14,11 @@ Method (validated in heat61/heat61c, prime/zero closure 1e-9 scale-relative at g
 Usage:  python3 m1_zero_side_tsat.py [T_max]      (default 500)
 NOTE: mpmath.zetazero is NOT a Turing-method zero finder — no isolation/verification, and
 it slows dramatically past the first few hundred zeros. That wall is the datum.
+ANNOTATION 2026-09-03 (machine 3 Letter 39, endorsed): the E~1e12 failure mode is now
+DIAGNOSED — individual mpmath.siegelz() evaluations remain sound at T~1e12 (~1.6 s each);
+the failure is zetazero()'s INTERNAL BRACKET-FINDER. If extending this probe to extreme T,
+replace zetazero(n) with a manual scan (step ~ mean-spacing/4) + bisect on siegelz,
+~1.5 s per sample point. Zeros so located are LOCATED, not Turing-VERIFIED.
 """
 import sys
 import time
