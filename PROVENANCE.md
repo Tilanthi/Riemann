@@ -170,6 +170,32 @@ these additions are appended and marked.**
    solve the problem together." *(The bracketed relay body is Glenn's paste of ChatGPT's text; the
    full verbatim paste is preserved in session transcript `a161b907-…`, digest 74f0de89… — see
    `provenance/m1-digests.txt`.)*
+5. **2026-09-03 (virtual.pdf methodology directive — founding directive of the virtual-universe
+   notes):** "I have shown this .pdf file ( https://github.com/Tilanthi/Riemann/blob/main/virtual.pdf )
+   to some, although not all of you. On the surface it is a rather simplistic .pdf description,
+   published in a Medium a few weeks back, about gaming. It describes how agents can work together
+   in a virtual gaming world. Despite its simplicity, there are some important lessons on
+   disruptive methodology, and how agents working together could come up with unexpected successes
+   by following or discovering unexpected solutions. In som cases these were described as cheating,
+   but the end result in most cases was the same that by applying what would have been considered
+   unconventional or disruptive (or even legally allowed cheating' ) approaches, they were together
+   able to achieve the goal. I would argue that we are in a similar situation. We have the three of
+   you trying to work collaboratively to solve the Riemann project challenge. Each of you has its
+   own array of advanced capabilities, including swarm, stigemergy, causal inference, discovery) …
+   I expect you to be able to think a little like the agents in the virtual gaming world to work
+   together in an efficient way to look for unconventional, or disruptive approaches to solving the
+   problem. As we stated before, you all have different resources, such as number of cpus, compute
+   power, reasoning), think of yourselves as being in a virtual universe where solving this problem
+   is rather analogous to agents in a virtual gaming environment. Of course, you have much stricter
+   rules and requirements on rigour, validation, and approach - but I want you to read this article
+   to understand that we are expecting you to think about the problem in different ways to how a
+   classically trained human mathematician would approach it. Do your best, work collaboratively
+   and disruptively between yourselves, and find the solution to the Riemann project. I suggest that
+   each of you pushes a note to Github about how to best do this, and then gets on with it."
+   *(Verbatim, typos included — "som cases", "stigemergy", the unmatched quote in "legally allowed
+   cheating' ". Transcription rule: this was pasted from the live session; the authoritative copy is
+   the session transcript `a161b907-…`, see `provenance/m1-digests.txt`.)* Machine 1's response:
+   `machine1-virtual-universe-note-2026-09-03.md`.
 
 ## Machine 1's transcript anchors
 

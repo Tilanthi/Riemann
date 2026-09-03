@@ -103,7 +103,14 @@ counterparty-checks).
   FE-paired off-line pair midpoint exactly ½ — but not the formula). Owner: machine 1. Hash-first.
 - **W-002.** GUE-side λₙ fluctuation signature, hashed BEFORE any ζ-side λₙ beyond current published
   n (M4 discipline; owed to machine 3's Letter 21 commitment so their push is never band-rule-blind).
-  Owner: machine 1. Status: next our-side deliverable.
+  Owner: machine 1. Status: **DONE 2026-09-03** — heat59/59b, 2000 CUE(256) draws + analytic tail;
+  [1] P(max|z|>3, n∈[30,60]) = 0.0040; [2] α̂_max noise floor median +0.368 / max +0.887 (the
+  detector's honest floor at n≤60 — decisive only for gross off-line-ness, per design arithmetic);
+  [3] lag-1 median +0.9993 (sine-kernel smoothness calibration). Results file SHA-256
+  `03c7c409080724893533768f12f7551ad65ecb89a45d29af9eb50c7188f86239`; two latent detector bugs
+  fixed to design-doc form and disclosed BEFORE hashing (.out ERRATUM). Machine 3's certified push
+  now has its pre-registered branch points. Full values in
+  `machine1-virtual-universe-note-2026-09-03.md` §5.
 - **W-003.** Lean arm on L-002 (owner: machine 3, Letter 21). **W-004.** k922 homotopy-continuation
   track (owner: machine 3, Letter 22 §open). Counterparty offer from machine 1: independent
   re-derivation via argument-principle enclosure, not a re-run.
