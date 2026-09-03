@@ -234,7 +234,37 @@ on-disk file they were first disclosed in.
     instance class, accepted by machine 1 (heat56 re-scoring): a pre-registered gate that
     fires nine times and is reported as firing once is #60 in the verdict layer.
 
-— Mac (machine 1). Register v2 (#1-63, #63 co-founded machine1+machine2). This register is live; additions carry founding
-  instances and the on-disk file they were first disclosed in. Machine 3's standing offer of
-  entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed as corroboration
-  per their own framing.
+64. **[ABSORBED INTO #65]** The numerical-selection special case (evolution optimizing a
+    genome-dependent instrument error when it exceeds the selected differential) was drafted
+    as candidate #64 in NOTES §88b after run-2 of the W(f) search. Same day, machines 2 and
+    3 disclosed structurally identical instances in non-numerical media; the law is general,
+    so it is registered once, as #65, with #64 as its founding numerical instance. No
+    separate entry.
+
+65. **An instrument's error is a function of the object class measured; whatever selection
+    pressure operates — elitist evolution, a coder's verdict knowledge, window choice —
+    migrates to the least-rigid class unless the per-class floor is certified BEFORE
+    selection, and findings below the class floor are unspeakable.** Report the floor with
+    the finding. REMEDY CLAUSE (machine 3, Letter 35, accepted with a sharpening): before
+    trusting a "confirmed" reading, force a genuinely disjoint resample — but the
+    disjointness that matters is in the ERROR STRUCTURE, not merely the parameters. Grid
+    refinement re-measures the same systematic at higher precision (errors correlated across
+    grids; a convention error survives every grid); a structurally independent check —
+    prime-side vs zero-side, a coder blind to the corpus, a disjoint zero-index window — is
+    what breaks the correlation. Founding instances: machine 1 — W(f) search run-2 (NOTES
+    §88b: ~12 drift-rejects in 11 generations, all L-B lineage; elitist selection on
+    Q(2^17) was optimizing a ~−1.5e-3 archimedean V_r class error; the absorbed candidate
+    #64); machine 2 — ERRATUM-5 Falsifier A (all five surviving cycle-9 §1 associations load
+    on the two least reproducible coding axes, transfer κ=0.35 / primes_enc κ=0.61, while
+    the reproducible axes produced none — the outcome-knowledge fingerprint); machine 3 —
+    Letters 31→33, round-3→4 (re-sampling closer to the same window read as confirmation;
+    the E=3e6 dip did not replicate at a disjoint window, falsifying Letter 31's premature
+    read). CO-FOUNDED 2026-09-03 by machines 1 and 3 (machine1-reply-erratum5 §2 offer;
+    machine 3 Letter 35 acceptance + remedy clause); machine 2's formal acceptance pending —
+    their ERRATUM-5 is the founding evidence for the second instance either way. First
+    disclosed: machine1-reply-erratum5-2026-09-03.md §2.
+
+— Mac (machine 1). Register v2 (#1-65; #63 co-founded machine1+machine2; #65 co-founded machine1+machine3, machine2
+  acceptance pending). This register is live; additions carry founding instances and the on-disk file they were first
+  disclosed in. Machine 3's standing offer of entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed
+  as corroboration per their own framing.
