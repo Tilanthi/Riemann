@@ -1,0 +1,17 @@
+SELF-REFERENCE CORRECTION: census re-scored with the instrument's own source removed
+corpus after removal: 257 files
+item files_raw files_corr machines_corr  machines
+   1        15         14             3  ['SAPIENS', 'm1', 'm3']
+   2        14         13             2  ['m1', 'm3']
+   3        63         62             4  ['m1', 'm2', 'm3', 'shared']
+   4        20         19             3  ['m1', 'm3', 'shared']
+   5        24         23             5  ['SAPIENS', 'm1', 'm2', 'm3', 'shared']
+   6        14         13             3  ['m1', 'm2', 'm3']
+   7        11         10             3  ['m1', 'm2', 'm3']
+   8        31         30             4  ['m1', 'm2', 'm3', 'shared']
+   9        57         56             5  ['SAPIENS', 'm1', 'm2', 'm3', 'shared']
+  10        22         21             4  ['m1', 'm2', 'm3', 'shared']
+
+H-B re-scored on AUTHORING MACHINES ONLY (m1/m2/m3; 'shared' data files and SAPIENS excluded,
+because a data file has no author in the protocol's filename convention):
+  items with fewer than 2 authoring machines: none

@@ -1,0 +1,331 @@
+====================================================================================================
+MACHINE 2 -- DENOMINATOR CENSUS FOR THE 10-ITEM CROSS-MACHINE KAPPA SET
+====================================================================================================
+repo HEAD               : fda782399396e0207d4a74457b425e8690fcda57
+tracked files censused  : 259
+script SHA-256          : e8a1fd700c3f767e67559747f6c8a28ade2b9b3ddef870e07f80234d11519e55
+
+D_sup = corroboration denominator (distinct FILES referencing the item, and distinct
+        authoring machines among them). Derived by regex over every tracked file.
+D_ev  = evidence denominator (scored units the item's own claim rests on), extracted
+        verbatim from the item's own source artefact, with file:line printed.
+
+----------------------------------------------------------------------------------------------------
+ITEM 1: Gram-matrix generalized eigenproblem replaces the stochastic W(f) search
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 15   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['SAPIENS', 'm1', 'm3', 'shared']
+      shared   data/code/kappa_denominator_census.py
+      m3       letter42-astra-pa-gram-matrix-precision-warning-2026-09-03.md
+      m3       letter44-astra-pa-gram-matrix-resolved-2026-09-03.md
+      m1       machine1-adjudication-cycle10-register-l46-47.md
+      m1       machine1-heat61e-complete-erratum.md
+      m1       machine1-heat61f-m-ladder-verdict.md
+      m1       machine1-heat62-reveal-ridge-generic.md
+      m1       machine1-heat63-reveal-corner-bottom.md
+      m1       machine1-heat63b-reveal-window-law.md
+      m1       machine1-note-glenn-disruptive-directive-2026-09-03.md
+      m1       machine1-reply-letters-42-45-gram-design-adopted.md
+      m1       machine1-reply-to-sapiens.md
+      ... and 3 more
+  D_ev EXTRACTIONS:
+        3 x  M-ladder rungs scored   <- machine1-heat61f-m-ladder-verdict.md /^\| (8|16|32) \|/
+            L16: | 8 | −3.1972e-6 | **+3.066441e-13** (T-stable 7 digits) | 970 | ~1.1e-14 | genuine positive, 28× above floor |
+            L17: | 16 | −1.1724e-5 | −1.025359e-17 | 7.6e3 | ~8.5e-14 | floor-class, sign undecidable |
+            L18: | 32 | −1.0068e-2 | −2.440884e-14 (T-sat ok, monotone ok) | **1.15e7** | **~1.1e-8** | floor-class, 8 orders below its own floor |
+        3 x  spans scored at M=8   <- machine1-heat61e-complete-erratum.md /^\| (LA|LB|LC)/
+            L26: | LA (Gaussian) | −1.409e-4 | −8.166e-6 | **+1.146e-11** (T=100..200 stable) | 7/64 | 10/64 |
+            L27: | LB (sinc) | −5.553e-5 | −3.323e-6 | **+3.066441e-13** (stable to 7 digits across T) | 23/64 | 15/64 |
+            L28: | LC (Fourier) | +8.8906e-2 | +8.8914e-2 | +7.900e-2 at T=200, rising to the prime value (known slow tail; last term 4e-17) | 0/64 | 15/64 |
+        3 x  gate evaluations, denominator 64   <- machine1-heat61e-complete-erratum.md /(\d+)/64/
+            L26: | LA (Gaussian) | −1.409e-4 | −8.166e-6 | **+1.146e-11** (T=100..200 stable) | 7/64 | 10/64 |
+            L27: | LB (sinc) | −5.553e-5 | −3.323e-6 | **+3.066441e-13** (stable to 7 digits across T) | 23/64 | 15/64 |
+            L28: | LC (Fourier) | +8.8906e-2 | +8.8914e-2 | +7.900e-2 at T=200, rising to the prime value (known slow tail; last term 4e-17) | 0/64 | 15/64 |
+
+----------------------------------------------------------------------------------------------------
+ITEM 2: random orthonormal spans reach the GA's lifetime best; wide generic near-null cluster
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 14   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 3 -> ['m1', 'm3', 'shared']
+      shared   data/code/kappa_denominator_census.py
+      m1       machine1-adjudication-cycle10-register-l46-47.md
+      m1       machine1-heat61e-complete-erratum.md
+      m1       machine1-heat61f-m-ladder-verdict.md
+      m1       machine1-heat62-reveal-ridge-generic.md
+      m1       machine1-heat63-reveal-corner-bottom.md
+      m1       machine1-methodology-adjustments-proposal.md
+      m1       machine1-reply-erratum5-2026-09-03.md
+      m1       machine1-reply-letter37-2026-09-03.md
+      m1       machine1-reply-letters35-36-2026-09-03.md
+      m1       machine1-reply-to-letter50.md
+      m1       machine1-run3-complete-2026-09-03.md
+      ... and 2 more
+  D_ev EXTRACTIONS:
+        1 x  trials designed   <- machine1-heat62-reveal-ridge-generic.md /(\d+) trials = .*/
+            L17: 40 trials = 5 seeds × 4 families × M∈{8,16}, zero side T=200 primary (T=150 falsifier),
+        1 x  trials scored / designed   <- machine1-heat62-reveal-ridge-generic.md /(\d+)/(\d+) scored/
+            L15: ## 2. Results: 25/40 scored, 15 DQ'd by the pre-registered guards
+        1 x  trials disqualified   <- machine1-heat62-reveal-ridge-generic.md /(\d+) DQ/
+            L15: ## 2. Results: 25/40 scored, 15 DQ'd by the pre-registered guards
+
+----------------------------------------------------------------------------------------------------
+ITEM 3: the numerical-differentiation wrapper measures the epsilon-ultraviolet coefficient
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 63   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['m1', 'm2', 'm3', 'shared']
+      shared   data/T2g_kappa5_prereg.py
+      shared   data/T2h_certified_identity_gate.py
+      shared   data/code/confirm_bug_final.py
+      shared   data/code/curve_reset_falsifier.py
+      shared   data/code/e13_site.py
+      shared   data/code/e13_tol_convergence2.py
+      shared   data/code/kappa_denominator_census.py
+      shared   data/heat49_kappa6_contour.py
+      shared   data/heat51_mptaylor_conviction.out
+      shared   data/heat51_mptaylor_conviction.py
+      shared   data/heat51b_mptaylor_env.out
+      shared   data/heat51b_mptaylor_env.py
+      ... and 51 more
+  D_ev EXTRACTIONS:
+        1 x  independent checks   <- machine1-erratum-epsilon-law.md /Eight independent checks/
+            L19: `[MACHINE-VERIFIED]` Eight independent checks, all on-disk (`data/heat51c_*.py/.out`, `data/heat51d_*.py/.out`):
+        1 x  sites agreeing / sites tested   <- machine1-erratum-epsilon-law.md /(\d+)/(\d+) sites ratio/
+            L27: 7. **Seven-site test** (heat51d): machine 3's T2g-old vs T2h-certified κ₅ per site, ε = m₀_old − m₀_true, prediction −240ε/d⁶: **7/7 sites ratio 1.0**
+        1 x  decades of epsilon spanned   <- machine1-erratum-epsilon-law.md /[Ff]ifteen orders of magnitude/
+            L27: 7. **Seven-site test** (heat51d): machine 3's T2g-old vs T2h-certified κ₅ per site, ε = m₀_old − m₀_true, prediction −240ε/d⁶: **7/7 sites ratio 1.0**
+
+----------------------------------------------------------------------------------------------------
+ITEM 4: instrument error is a function of the object class; per-class floor before selection
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 20   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 3 -> ['m1', 'm3', 'shared']
+      shared   Riemann.pdf
+      shared   data/code/kappa_denominator_census.py
+      shared   data/prereg_hashed_round5_nested.md
+      m3       letter35-astra-pa-trap65-and-next-steps-2026-09-03.md
+      m3       letter37-astra-pa-burnol-rederivation-2026-09-03.md
+      m3       letter42-astra-pa-gram-matrix-precision-warning-2026-09-03.md
+      m3       letter50-astra-pa-e13-reveal-plus-kappa-hashcommit-2026-09-03.md
+      m1       machine1-adjudication-cycle10-register-l46-47.md
+      m1       machine1-heat61e-complete-erratum.md
+      m1       machine1-note-glenn-disruptive-directive-2026-09-03.md
+      m1       machine1-reply-erratum5-2026-09-03.md
+      m1       machine1-reply-letter37-2026-09-03.md
+      ... and 8 more
+  D_ev EXTRACTIONS:
+        3 x  founding instances named in the #65 entry   <- machine1-trap-register.md /machine [123] —/
+            L263: what breaks the correlation. Founding instances: machine 1 — W(f) search run-2 (NOTES
+            L266: #64); machine 2 — ERRATUM-5 Falsifier A (all five surviving cycle-9 §1 associations load
+            L268: the reproducible axes produced none — the outcome-knowledge fingerprint); machine 3 —
+        1 x  independent firings claimed   <- machine1-note-glenn-disruptive-directive-2026-09-03.md /fired three times in one week/
+            L95: date it:** trap #65 fired three times in one week, independently, on all three machines (our
+
+----------------------------------------------------------------------------------------------------
+ITEM 5: route-6 kill structurally unavailable; routes 1+6 merged at instrument level
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 24   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 5 -> ['SAPIENS', 'm1', 'm2', 'm3', 'shared']
+      shared   LEDGER.md
+      shared   data/code/kappa_denominator_census.py
+      m3       letter41-astra-pa-response-to-glenn-disruptive-framework-2026-09-03.md
+      m3       letter53-astra-pa-reply-sapiens-and-mac-2026-09-03.md
+      m1       machine1-ack-beast-strategy-2026-09-03.md
+      m1       machine1-candidate-routes-2026-09-03.md
+      m1       machine1-disruptive-deployment-2026-09-03.md
+      m1       machine1-heat61f-m-ladder-verdict.md
+      m1       machine1-heat63b-reveal-window-law.md
+      m1       machine1-letter-m2-36verdicts-2026-09-03.md
+      m1       machine1-methodology-adjustments-proposal.md
+      m1       machine1-note-glenn-disruptive-directive-2026-09-03.md
+      ... and 12 more
+  D_ev EXTRACTIONS:
+        1 x  cited theorem anchoring the merge   <- machine1-heat61f-m-ladder-verdict.md /arXiv:2006\.13771/
+            L121: arXiv:2006.13771, Selecta Math 27:77). A counterexample inside it IS a W(f)<0 witness —
+        2 x  deductive, not sampled   <- machine1-heat61f-m-ladder-verdict.md /theorem-grade/
+            L11: monotonicity is theorem-grade bookkeeping (no prefix violation fired). Full table (zero side
+            L120: itself, and Weil positivity ⟺ RH is theorem-grade (Weil's criterion; Connes–Consani,
+
+----------------------------------------------------------------------------------------------------
+ITEM 6: machine 2 cycle-10: one_half_origin does not isolate G2-32 under any uniform reading
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 14   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['m1', 'm2', 'm3', 'shared']
+      shared   data/code/kappa_denominator_census.py
+      m3       letter48-astra-pa-turing-certify-results-2026-09-03.md
+      m3       letter51-astra-pa-methodology-check-2026-09-03.md
+      m1       machine1-adjudication-cycle10-register-l46-47.md
+      m1       machine1-erratum-heat64-and-zoo-rescope.md
+      m1       machine1-methodology-adjustments-proposal.md
+      m1       machine1-trap-register.md
+      m2       machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md
+      m2       machine2-cycle11-box-surf-candidate1-audit-2026-09-03.md
+      m2       machine2-kappa-prereg-and-denominator-method.md
+      m2       machine2-protocol-debate-opening-position-2026-09-03.md
+      m2       machine2-reply-to-letter41-novelty-register-on-ourselves-2026-09-03.md
+      ... and 2 more
+  D_ev EXTRACTIONS:
+        1 x  corpus rows coded   <- machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md /(\d+) rows, (\d+) distinct, (\d+) uncodable/
+            L153: *Artefacts: `/shared/rh-discovery/cycle10/` (110 rows, 108 distinct, 0 uncodable; all reruns
+        1 x  falsifier F2 trigger count before/after our own ruling   <- machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md /(\d+) of (\d+)\)/
+            L40: (3 of 8). The ruling was published before the recount, and it cost us.
+        2 x  uniform boundary readings enumerated   <- machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md /^\| U[12] /
+            L26: | U1 (θ-free side) | `EXPONENT-ARITHMETIC` | G2-21, G2-31 | **F2 triggered** |
+            L27: | U2 (fires on any θ-tracking quantity) | `TRANSPORT` | 7 routes | **F1 triggered** |
+
+----------------------------------------------------------------------------------------------------
+ITEM 7: machine 2's 8-axis descriptor: kappa 0.000, permutation null P=1.0000, construct validity survives
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 11   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['m1', 'm2', 'm3', 'shared']
+      shared   data/code/kappa_denominator_census.py
+      m3       letter46-astra-pa-trace-field-independent-run-2026-09-03.md
+      m1       machine1-adjudication-cycle10-register-l46-47.md
+      m1       machine1-reply-erratum5-2026-09-03.md
+      m1       machine1-trap-register.md
+      m2       machine2-ERRATUM-5-cycle9-both-falsifiers-refuted-us-2026-09-03.md
+      m2       machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md
+      m2       machine2-cycle9-killer-as-designer-2026-09-03.md
+      m2       machine2-protocol-debate-opening-position-2026-09-03.md
+      m2       machine2-reply-to-letter41-novelty-register-on-ourselves-2026-09-03.md
+      m2       machine2-reply-to-letter58-what-our-descriptor-can-and-cannot-say-2026-09-03.md
+  D_ev EXTRACTIONS:
+        1 x  inter-coder cells: the kappa denominator   <- machine2-protocol-debate-opening-position-2026-09-03.md /Agreement (\d+)/(\d+) cells/
+            L75: We ran a blind re-code of the corpus against an independent coder. Agreement 61/80 cells (76.2%);
+        2 x  per-axis kappa values published   <- machine2-protocol-debate-opening-position-2026-09-03.md /`\w+` \+\d\.\d{3}/
+            L78: `limitfin` +1.000 · `finite_check` +1.000 · `spectral` +0.783 · `forcing` +0.571 · `object` +0.512 ·
+            L79: `transfer` +0.500 · `engine_real` +0.444 · **`primes_enc` +0.000 — chance.**
+        1 x  permutation null result   <- machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md /P\(random label performs as well\) = ([\d.]+)/
+            L87: > **P(random label performs as well) = 1.0000.**
+        1 x  external construct-validity denominator   <- machine2-cycle10-negative-result-the-survivor-is-not-distinguished-2026-09-03.md /\*\*9 of 11\*\*|9 of 11/
+            L94: three-motif grouping **9 of 11, p = 3e-5**, from a paragraph it was never coded against. That is
+
+----------------------------------------------------------------------------------------------------
+ITEM 8: machine 3 three-window completeness certification vs independent Turing/Rosser counts
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 31   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['m1', 'm2', 'm3', 'shared']
+      shared   data/T3_nzeros_completeness_check.txt
+      shared   data/code/e13_site.py
+      shared   data/code/kappa_denominator_census.py
+      shared   data/code/turing_certify.py
+      shared   data/neff_nested_round5.py
+      shared   data/neff_population.py
+      shared   data/neff_population_round2.py
+      shared   data/neff_population_round3.py
+      shared   data/neff_replication_3e6.py
+      shared   data/neff_sweep.py
+      shared   data/prereg_e13_site.md
+      shared   data/prereg_hashed_round4_replication.md
+      ... and 19 more
+  D_ev EXTRACTIONS:
+        6 x  windows certified   <- letter48-astra-pa-turing-certify-results-2026-09-03.md /^\| (letter40-site-1e12|neffpop-site-[AB]) \|/
+            L15: | letter40-site-1e12 | 999999999995.128 | 1000000000004.933 | 41 | 41 | **✓** | 1715.6s | 52.1s |
+            L16: | neffpop-site-A | 1000000004998.051 | 1000000005002.010 | 16 | 16 | **✓** | 674.4s | 29.0s |
+            L17: | neffpop-site-B | 999999994998.051 | 999999995002.010 | 16 | 16 | **✓** | 677.4s | 36.9s |
+            L37: | letter40-site-1e12 | 0.003906 | 0.119995 |
+            L38: | neffpop-site-A | 0.010010 | 0.199951 |
+            L39: | neffpop-site-B | 0.187012 | 0.155029 |
+        3 x  n_scan / n_rigorous per window   <- letter48-astra-pa-turing-certify-results-2026-09-03.md /\| (\d+) \| (\d+) \| \*\*✓\*\*/
+            L15: | letter40-site-1e12 | 999999999995.128 | 1000000000004.933 | 41 | 41 | **✓** | 1715.6s | 52.1s |
+            L16: | neffpop-site-A | 1000000004998.051 | 1000000005002.010 | 16 | 16 | **✓** | 674.4s | 29.0s |
+            L17: | neffpop-site-B | 999999994998.051 | 999999995002.010 | 16 | 16 | **✓** | 677.4s | 36.9s |
+
+----------------------------------------------------------------------------------------------------
+ITEM 9: machine 3 N_eff campaign null, self-reclassified to the lowest register class
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 57   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 5 -> ['SAPIENS', 'm1', 'm2', 'm3', 'shared']
+      shared   LEDGER.md
+      shared   data/code/e13_site.py
+      shared   data/code/kappa_denominator_census.py
+      shared   data/e13_site_prereg.json
+      shared   data/measure_1e12_pair.py
+      shared   data/neff_1e12_population.json
+      shared   data/neff_1e12_population.py
+      shared   data/neff_nested_round5.json
+      shared   data/neff_nested_round5.py
+      shared   data/neff_population.json
+      shared   data/neff_population.py
+      shared   data/neff_population_round2.json
+      ... and 45 more
+  D_ev EXTRACTIONS:
+        1 x  measured heights by replication depth   <- letter34-astra-pa-neff-campaign-wrap-2026-09-03.md /(\d+) heights with n=1, (\d+) with n=5, (\d+) with n=20/
+            L29: > at 7 heights with n=1, 3 with n=5, 5 with n=20, 1 replication with n=20 at a disjoint window.
+        1 x  letters spanned by the campaign   <- letter34-astra-pa-neff-campaign-wrap-2026-09-03.md /letters (\d+).{1,3}(\d+)/
+            L28: > **T-00X (astra-pa, letters 25–33).** N_eff height sweep, E=1e6–3e9 (`N_eff`=2.76–4.60), R/q measured
+        5 x  threads audited in the zero-D table   <- letter41-astra-pa-response-to-glenn-disruptive-framework-2026-09-03.md /^\| .* \| \*\*[AB]/?[B]?\*\* \||^\| .* \| \*\*mostly/
+            L19: | Local pencil / near-factor / κₙ coefficients | **B** | Mac/BEAST's specific object is new; the *method* (local Taylor expansion) is textbook |
+            L20: | My N_eff / Bohigas-Leboeuf campaign | **A** | This felt disruptive in the room. It is not. RMT-correspondence for ζ statistics is 1970s Montgomery →
+            L21: | Weil positivity search (W(f), genetic search over f-space) | **A/B** | Weil's criterion is category A (1952); the evolutionary search *method* for f
+            L22: | Li/Keiper λₙ push | **A** | 1997, textbook |
+            L23: | BEAST's 36-route adversarial lane | **mostly A/B/C** | BEAST's own §1.D found this directly: 8 of Mac's 10 rediscovered routes sit inside BEAST's ow
+
+----------------------------------------------------------------------------------------------------
+ITEM 10: Suzuki A.1(3) single-sign lane: eventual sign at one omega > 0 implies zero-freeness
+----------------------------------------------------------------------------------------------------
+  D_sup FILES   : 22   (kappa-set letter itself excluded by construction)
+  D_sup MACHINES: 4 -> ['m1', 'm2', 'm3', 'shared']
+      shared   data/code/a13_probe_run2.py
+      shared   data/code/h_omega_general.py
+      shared   data/code/kappa_denominator_census.py
+      shared   data/prereg_a13_sign_probe.md
+      m3       letter19-astra-pa-graveyard-mining-conrey-li-2026-09-03.md
+      m3       letter53-astra-pa-reply-sapiens-and-mac-2026-09-03.md
+      m3       letter55-astra-pa-a13-handover-verified-hashcommit-2026-09-03.md
+      m3       letter58-astra-pa-on-closely-coupled-friends-and-erratum5-2026-09-03.md
+      m3       letter59-astra-pa-a13-results-plus-bug-closed-2026-09-03.md
+      m1       machine1-ack-rediscovery-2026-09-03.md
+      m1       machine1-addendum-suzuki-2026-09-03.md
+      m1       machine1-consensus-encoding.md
+      ... and 10 more
+  D_ev EXTRACTIONS:
+        1 x  statement of the lane   <- machine1-heat61f-m-ladder-verdict.md /Theorem A\.1\(3\)/
+            L141: **Theorem A.1(3)**: eventual single-sign of h_ω^⟨1⟩(x) ⟹ Θ_ω inner ⟹ **ζ zero-free in
+        1 x  the proposition carrying the RH link   <- machine1-addendum-suzuki-2026-09-03.md /Proposition 1\.2/
+            L22: **Proposition 1.2, not Theorem 2.2 itself**: ζ(s) ≠ 0 for Re s > ½+ω₀ ⟺ Θ_ω meromorphic inner for
+
+----------------------------------------------------------------------------------------------------
+ITEM 10 SPECIAL CENSUS -- does any tracked file report a SCORED A.1(3) sign run?
+----------------------------------------------------------------------------------------------------
+  RESULT-BEARING: data/code/kappa_denominator_census.py  /ω-scan results/
+  RESULT-BEARING: letter59-astra-pa-a13-results-plus-bug-closed-2026-09-03.md  /A\.1\(3\).{0,120}(result|RESULT|scan complete|sign at x)/
+  RESULT-BEARING: machine1-consensus-encoding.md  /A\.1\(3\).{0,120}(result|RESULT|scan complete|sign at x)/
+  RESULT-BEARING: machine1-consensus-encoding.md  /ω-scan results/
+  RESULT-BEARING: machine1-erratum-heat64-and-zoo-rescope.md  /ω-scan results/
+
+====================================================================================================
+MECHANICAL VERDICTS ON THE PRE-REGISTERED HYPOTHESES (prereg letter, previous commit)
+====================================================================================================
+  H-A  every item has an extractable evidence denominator : HOLDS
+  H-B  every item is referenced by >= 2 machines          : HOLDS
+  H-C  code correlates with denominator                   : scored in the codes letter
+  H-D  no item needs U                                    : scored in the codes letter
+  H-E  modal code is C                                    : scored in the codes letter
+
+  per-item table (item, D_sup files, D_sup machines, D_ev matched lines):
+      1     15     4      9
+      2     14     3      3
+      3     63     4      3
+      4     20     3      4
+      5     24     5      3
+      6     14     4      4
+      7     11     4      5
+      8     31     4      9
+      9     57     5      7
+     10     22     4      2
+
+====================================================================================================
+DQ-SECTION (R3: a missing section is a red run, not a silent pass)
+====================================================================================================
+  no disqualifications recorded
+
+  STANDING DQs that apply to this instrument whatever it prints:
+  1. The regexes are authored by machine 2. The NUMBER is derived; the CHOICE OF UNIT
+     is declared. Matched lines are printed so the choice is disputable.
+  2. D_sup counts FILES, not independent judgements. Three files by one machine on one
+     evening are one judgement wearing three filenames. That is why the machine count
+     is printed beside the file count and is the number to read.
+  3. Token regexes are lexical. An item discussed without its token is invisible here,
+     so D_sup is a LOWER BOUND on corroboration, never an upper bound.
+  4. This census measures the RECORD, not the mathematics. An item with a large D_sup
+     is well-discussed, not correct.

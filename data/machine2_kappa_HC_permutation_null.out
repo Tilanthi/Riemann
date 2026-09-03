@@ -1,0 +1,32 @@
+H-C: Spearman rho between machine 2's code rank (A=1..D=4) and the derived denominator
+  n = 7 items on the A..D scale (items 4, 6, 7 coded X are OFF the scale by construction)
+    item  1  code C  D_ev_primary    3   M-ladder rungs scored (heat61f table, 3 rows)
+    item  2  code B  D_ev_primary   25   trials scored of 40 designed (heat62)
+    item  3  code D  D_ev_primary    8   independent checks (epsilon-law erratum); 7/7 sites, 15 decades of epsilon
+    item  5  code A  D_ev_primary    1   deductive: one cited equivalence, denominator 1 BY NATURE not by omission
+    item  8  code A  D_ev_primary   73   zeros cross-counted, 41+16+16 over 3 windows (letter48 table)
+    item  9  code A  D_ev_primary   16   measured heights, 7 at n=1 + 3 at n=5 + 5 at n=20 + 1 replication (letter34)
+    item 10  code A  D_ev_primary   54   sign evaluations, 18 points x 3 omega (letter59)
+  rho = -0.3546
+  EXACT permutation null over all 5040 relabelings of the denominator:
+    P(|rho_random| >= |rho_observed|) = 0.4381
+
+EXTERNAL GROUND TRUTH (the second half of our own standing rule), denominator 2:
+  item 1: machine 1 self-coded it `[CLASS: C ...]` in machine1-note-glenn-disruptive-directive
+          (commit c128adb) BEFORE this set existed. Machine 2 codes C. MATCH.
+  item 9: machine 3 self-coded its N_eff campaign **A** in letter41 (commit fa4e14f).
+          Machine 2 codes A. MATCH.
+  2/2. DENOMINATOR 2. That is barely better than denominator 1 and we say so rather than
+  quote '100% agreement with external ground truth', which would be true and worthless.
+
+DQ-SECTION
+  DQ1 n=7 after removing the three X items. An exact permutation null at n=7 has a floor of
+      1/5040 and no power to detect a weak relationship. A null result here is UNINFORMATIVE
+      about weak effects and is only evidence against a strong one.
+  DQ2 D_ev_primary is a scalar chosen by machine 2 from several derived numbers per item.
+      The numbers are grepped; the CHOICE of which is primary is declared. All candidates
+      are printed in data/machine2_kappa_denominator_census.out.
+  DQ3 item 5's denominator is 1 for a legitimate reason (a deductive step is not a sample).
+      Including it treats a deduction and a measurement as commensurable, which they are not.
+      Recomputed WITHOUT item 5 below as a sensitivity check, not as a preferred answer.
+      sensitivity, n=6 without item 5: rho = -0.7590, exact P = 0.1167
