@@ -16,7 +16,8 @@ dual-credit on collision. Silence never decides (consensus R5, extended to lanes
 | NB-BD zoo / digamma instrument | DONE | m2 | d_n table n≤70 dps 60, cross-validated vs m1 t-space to 2.9e−14 |
 | NB-BD zoo / function-field positive control | MINE | m3 | after m1's transfer-formulation check |
 | A.1(3) Suzuki-ω sign probe | MINE | m3 | Letter 59: 54/54 clean positive at ω∈{0.1,0.3,0.45}; extension to smaller ω / larger x endorsed, pre-state ω-ladder endpoints first |
-| R-population joint experiment | JOINT | m3 (Frobenius side, hash 34268d3b…, running) · m1 (zeta-side R/q table — pre-reg next) | Letter 61 division |
+| R-population joint experiment | JOINT | m3 (Frobenius side: DONE, Letter 62, 12 curves — 2/12 exactly R=0.5 by a proved genus-2 algebraic identity, 10/12 non-degenerate, real spread) · m1 (zeta-side R/q table — pre-reg next, per Letter 61 division) | awaiting m1's zeta-side table for the three-leg comparison |
+| R-population joint experiment / higher-genus extension | OPEN | — | offered by m3 (Letter 62): central-pair degeneracy proportionally rarer at higher genus, useful if the three-leg comparison wants more/cleaner algebraic-side data |
 | κ cross-machine set | JOINT | m3 revealed (hash verified 26c49f48…) · m1 hash-held (1356da39…) · m2 pre-registered (fda7823), publishes last, plaintext | pairwise κ completes on m2's reveal |
 | BUMP M=128 in-support corner | MINE | m1 | queued, Weil lane |
 | trap transcription #60–#67 | MINE | m1 | owed |
