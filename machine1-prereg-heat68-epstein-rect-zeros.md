@@ -228,3 +228,35 @@ change; outcomes (a)/(b)/(c) untouched.
    guard fires. An L1 degradation **confined to Δ > 0.10 does not trigger (b)/(c)** —
    it is the scored profile of item 4. Grid, tolerances, L2/L3/L4, C1–C5, DQ section,
    honesty block: UNCHANGED.
+
+---
+
+## AMENDMENT-4 (run attempt 1 HALTED at C4 — no zero computed; method/tolerance mismatch, same structure as AMENDMENT-1's C2)
+
+1. **Disclosure — attempt 1 control output in full (deterministic; halt before C5,
+   before the A/B equivalence asserts, before any root):** C1 s=1.3: A 47.8 / B 50.2
+   dig; C1 s=0.75: A 50.4 / B 50.7; C2 brute s=3.5: A 12.1 dig, tail 5.05e−11;
+   C3 duality: A 45.5 / B 50.6; **C4: 18.1 dig — ASSERT FIRED, run halted** (the
+   registered "(any failure = instrument halt)" behaviour, working as designed).
+2. **Diagnosis (the (c)-defect hunt, concluded NOT a defect):** the registered C4
+   scheme was 2-point Richardson 2g(h)−g(2h) on g(e) = −e·ζ^(2)(1−e, Δ=0.1) at
+   h = 1e−10. Its intrinsic error is 2a₁h² where a₁ is the e²-coefficient of g;
+   measured 18.1 dig ⟹ 2a₁h² ≈ 8e−19 ⟹ a₁ ≈ 40 — an ordinary value. So the
+   registered tolerance (≥ 20 dig) was unreachable BY THE REGISTERED METHOD at the
+   registered h, regardless of instrument correctness: the same tolerance/method
+   contradiction structure as AMENDMENT-1's C2. The residue instrument itself
+   (evaluator-A near the pole, dps 50) is not implicated: the 18.1 digits are exactly
+   where the h² floor sits.
+3. **Fix registered (pre-relaunch probe disclosed):** C4 becomes **3-point Richardson
+   (8g(h) − 6g(2h) + g(4h))/3** at h = 1e−10, which cancels the e¹ AND e² terms;
+   error O(a₂h³). Tolerance UNCHANGED at ≥ 20 dig. Standalone probe before the
+   relaunch: **27.2 dig vs π/(2Δ), and h=1e−9 vs 1e−10 agree to 24.2 dig — a gap of
+   exactly 3.0 decades, which IS the O(h³) scaling.** Sub-assert registered
+   accordingly (sharper than an absolute floor): the main digit count d and the
+   h-agreement dh must satisfy **d − dh ∈ [2, 4]** — under O(h³) the disagreement sits
+   three decades below the main value; a gap outside [2,4] falsifies the order
+   diagnosis and reopens the defect hunt.
+4. Everything else — C1–C3/C5 as they ran, the equivalence asserts, the grid, L1–L4
+   with the AMENDMENT-3 re-scope, the outcome dispatch, DQ section, honesty block —
+   UNCHANGED. Attempt 1's halt and this amendment are part of the record; the rerun
+   starts from the beginning (controls rerun, deterministic).
