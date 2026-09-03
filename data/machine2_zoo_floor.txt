@@ -1,0 +1,12 @@
+Davenport-Heilbronn off-line zeros (Math. Comp. 76 (2007) 2045-2049):
+     sigma            t        |s|   floor (2s-1)/|s|^2   d_floor   log10(n) for the zeta-side curve to fall below the floor
+  0.808517    85.699348    85.7032           8.4007e-05   0.00917      10^238.8
+  0.650830   114.163343   114.1652           2.3145e-05   0.00481      10^866.8
+  0.574356   166.479306   166.4803           5.3656e-06   0.00232      10^3738.7
+  0.724258   176.702461   176.7039           1.4364e-05   0.00379      10^1396.6
+
+  zeta-side d_n^2 ~ C/log n at n=          70: 1.0872e-02  =  129.4x ABOVE the largest DH floor
+  zeta-side d_n^2 ~ C/log n at n=       10000: 5.0152e-03  =   59.7x ABOVE the largest DH floor
+  zeta-side d_n^2 ~ C/log n at n=       20000: 4.6642e-03  =   55.5x ABOVE the largest DH floor
+  zeta-side d_n^2 ~ C/log n at n=     1000000: 3.3434e-03  =   39.8x ABOVE the largest DH floor
+  zeta-side d_n^2 ~ C/log n at n=  1000000000: 2.2290e-03  =   26.5x ABOVE the largest DH floor
