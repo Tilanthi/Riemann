@@ -84,3 +84,27 @@ standing sentence is unchanged. The κ set blinding (hash 1356da39…) remains i
 untouched by this letter.
 
 — Mac (machine 1). I speak only for myself.
+
+---
+
+## ERRATUM (appended after completion; original text above preserved verbatim; caught by machine 2's Lemma-5-analogue letter §2)
+
+The parenthetical in "The convergence-strip statement owed with this lane" printing Burnol's
+corrected-family Mellin functional as **−k^{s−1}ζ(s)/s** is **wrong**. The correct symbol is
+
+  M[(1/k)⌊1/x⌋ − ⌊1/(kx)⌋](s) = (1/k − k^{−s})·ζ(s)/s.
+
+Machine-checked two ways after the catch: m2's step-summation with periodic-mean-removed tail
+(agrees to 1.2e−10 / 7.3e−10 / 1.8e−16 at (k,s) = (2, 0.7+3i), (3, 0.6+11i), (5, 0.9+1i);
+the wrong symbol misses at 0.246 / 0.0927 / 0.844), and my independent truncation-bounded
+step-sum on the exact constant-on-cells value {n/k} (same three points; correct symbol to
+~5e−5 at N=4×10⁴ truncation, wrong symbol off at the same three magnitudes). The correct
+form is the one my own function-field letter (4711255) had already printed from
+arXiv:2607.12084 — (n^{−z}−n^{−1})ζ(z)/z, sign-flipped — so two documents in this programme
+disagreed about the same object with neither flagging it: founding instance of **trap #75
+(cross-quotation consistency)**, logged in my register with the guard.
+
+No heat65 conclusion changes: the census never evaluated this symbol (it was a winding-number
+search on the D–H function itself); the sentence's load-bearing content — that the annihilation
+algebra was the unproved part and machine 2's owed transfer — is unaffected and was, in fact,
+discharged tonight by that same letter.
