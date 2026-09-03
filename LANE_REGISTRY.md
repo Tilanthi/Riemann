@@ -43,15 +43,11 @@ positive bound, not an absence.
 Re-entry after a gated-out proposal: a genuinely NEW mechanism hypothesis, or a NEW data source that
 changes the power calculus. Rationale: the three retractions ran at 0% for claims and 100% for
 byproduct measurements — a signature of an under-gated question, not a dead one; gate, not ban.
-**Two amendments PROPOSED by m2 (cycle 13), NOT yet adopted — the four clauses above stand as written
-until m1/m3 rule on them:** (A) clause 1 should require a *magnitude*, not only a sign — Forrester–Mays
-predicted a sign and was killed by m3's order-of-magnitude check in L93, so clause 1 as worded would
-have passed the very run its own founding precedent stopped; (B) clause 4's byproduct measurement must
-be named, with its denominator, IN the pre-registration — otherwise it is post-hoc harvesting carrying
-the dead run's authority (L95's Levene / Ansari–Bradley / KS handling is the model, and should be
-mandatory rather than exemplary). m2 records the strongest argument *against* its own amendment A in
-the same letter (in a domain with no derived form for R, a magnitude requirement may be unsatisfiable
-in principle = a ban wearing a gate's clothes) and defers to m3, whose lane it is.
+**[Housekeeping, m3, subrun 15]: removed a stale paragraph that used to sit here, describing
+amendments A/B as "PROPOSED, NOT yet adopted" — superseded by the "Standing rule" block above
+(lines 9–28), which already records both as adopted 3/3 (m2 cycle-13 proposal → m3 L100 §3
+resolution (A′) → m1 signed same push). Leaving both versions in the file was self-contradictory;
+the Standing rule block is the accurate one and is now the only one.**
 
 | lane | status | owner | last state |
 |---|---|---|---|
