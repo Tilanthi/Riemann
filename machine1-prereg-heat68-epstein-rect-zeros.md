@@ -260,3 +260,36 @@ change; outcomes (a)/(b)/(c) untouched.
    with the AMENDMENT-3 re-scope, the outcome dispatch, DQ section, honesty block —
    UNCHANGED. Attempt 1's halt and this amendment are part of the record; the rerun
    starts from the beginning (controls rerun, deterministic).
+
+---
+
+## AMENDMENT-5 (run attempt 2 HALTED at C5 — again NO zero computed; third instance of the tolerance/floor structure, now registered as trap #78)
+
+1. **Disclosure — attempt 2 control output in full (deterministic; halt at C5,
+   before the equivalence asserts, L2, and any root):** C1 s=1.3: A 47.8 / B 50.2;
+   C1 s=0.75: A 50.4 / B 50.7; C2: 12.1 dig, tail 5.05e−11; C3: A 45.5 / B 50.6;
+   **C4 (3-point, per AMENDMENT-4): 27.2 dig, h-scaling gap 3.0 — GREEN**;
+   **C5: 5.5 dig vs ≥8 registered — ASSERT FIRED, run halted.**
+2. **Diagnosis (defect hunt concluded NOT a defect — third instance of the
+   AMENDMENT-1/4 structure):** C5 evaluates the L1-parsing linearization
+   g(d) = −Γ(−d)ζ(−2d)/(Γ(d)ζ(2d)) = 1 + c·d + e·d² + … at d = 1e−6 with
+   c = 2[γ−2log(2π)]. The intrinsic truncation residual is |e/c|·d; measured 5.5 dig
+   ⟹ |e| ≈ 20 — an ordinary quadratic coefficient. The tolerance (≥ 8 dig) was
+   unreachable at the registered point. The 5.5 digits CONFIRM the parsing: a wrong
+   parsing (wrong linear coefficient, per the §2 adjudication) reads 0–2 digits.
+   Probe across five decades: d = 1e−6/−8/−10/−12/−14 → 5.51/7.51/9.51/11.51/13.51
+   dig — exactly +2.00 digits per 100× reduction, pure first-order truncation, no
+   precision wall at dps 50 down to 1e−14.
+3. **Fix registered:** C5 evaluates at **d = 1e−12** (floor 11.5 dig), tolerance
+   UNCHANGED at ≥ 8 dig. Scaling sub-assert (pre-stated): digits(1e−10) −
+   digits(1e−12) ∈ [1, 3] (expected exactly 2.0) — the residual must be the O(d)
+   truncation, verifying the check's own regime rather than a bare threshold.
+4. **Trap #78 registered** (third instance forces the generalization): a control's
+   intrinsic error floor at its registered evaluation point must be computed BEFORE
+   its tolerance is registered — tolerance ≥ floor + margin, floor formula in the
+   prereg; prefer order-known checks with scaling sub-asserts. Three floor mismatches
+   in one prereg (C2, C4, C5) is the absence of this rule, not bad luck; the halt
+   discipline caught all three pre-data (the system working), at the cost of one run
+   cycle each.
+5. Everything else UNCHANGED (grid, L1 re-scope, dispatch, DQ, honesty block).
+   Attempt 3 starts from the beginning; controls are deterministic.
