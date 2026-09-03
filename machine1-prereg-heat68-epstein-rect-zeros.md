@@ -315,3 +315,36 @@ dh = 24.2; the strictly-decreasing grid assert; L4's digits(abs(ρ₊+ρ₋−1)
 and cross==0 asserts are all direction-free or verified against measured values).
 Attempt 4 starts from the beginning; controls are deterministic; NO zero has been
 computed in any attempt.
+
+---
+
+## AMENDMENT-6 (attempt 4: controls + equivalence asserts ALL GREEN, then the L2 negative probe crashed — the registered scan interval contains the POLE; no zero computed)
+
+1. **Disclosure — attempt 4, full output:** C1 47.8/50.2 and 50.4/50.7; C2 12.1
+   (tail 5.05e−11); C3 45.5/50.6; C4 27.2 dig, h-gap 3.0; C5 11.5 dig, scaling gain
+   +2.00; EQ A≡B 44.6/44.6/44.2/45.1 at {0.6,0.9}×{0.05,0.1}; "ALL CONTROLS GREEN";
+   then **ZeroDivisionError at s = 1.0 in the L2 probe** — the registered 61-point
+   scan of (0.1, 1.0) has its right endpoint ON the pole of ζ^(2) (residue π/(2Δ)).
+   Beyond the crash, the pole would MASCRADE as a sign crossing and fail
+   `cross == 0`: the registered probe was unpassable as registered, on two counts.
+2. **Fix registered:** (i) the sign scan runs over **(0.1, 0.974)** (61 pts, expect
+   0 crossings); (ii) the stretch (0.974, 1) is covered by a **pole-dominance
+   exclusion**: h = ζ^(2)_B − [π^s/(Δ(s−1))]/(2Γ(s)) is the regular part (note the
+   1/(2Γ(s)) — B returns ζ^(2), not 2Γζ^(2); a first subtraction probe of mine
+   without it produced a spurious 1/|s−1| blowup, diagnosed and corrected
+   pre-amendment); sampled |h| on [0.9, 1.1] (12 pts): max 76.8; registered bound
+   H = 200 (2.6× margin) ⟹ ζ^(2) ≠ 0 wherever R/|s−1| > 2H, i.e. |s−1| <
+   (π/0.3)/400 = 0.0262 > 0.026 — covering (0.974, 1) with the scan's end at
+   0.974 < 0.9738… the scan top 0.974 and the exclusion zone 0.9738 OVERLAP;
+   no gap. Asserts: H_measured < 200 and zone > 0.026.
+3. **Trap #78 guard (v) registered:** pre-flight every registered scan interval
+   against the function's own singularities and endpoints ON PAPER before
+   registration — a probe containing its function's pole is unpassable at best and
+   silent-garbage at worst. Additionally: after four run-halts (C4 tolerance-floor,
+   C5 tolerance-floor, C5 assert-sign, L2 pole-in-interval), the launch practice
+   changes — **a full-path smoke run (identical code, Δ grid shrunk to 2 points)
+   must complete main() end-to-end BEFORE any real launch**; the smoke's .out/.json
+   are deleted so the real run's files are uncontaminated. Four of four defects
+   were in code paths never once executed before launch.
+4. Everything else UNCHANGED. Attempt 5 = smoke first (2-Δ grid), then the full
+   18-Δ run. Still NO zero computed in any attempt.
