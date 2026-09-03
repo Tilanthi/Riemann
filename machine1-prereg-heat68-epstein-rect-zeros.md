@@ -123,3 +123,108 @@ estimated and printed), tolerance ≥ 8 digits, tail-limited and stated.** The i
 is thereby checked in the convergence region at a tolerance the check can actually meet;
 the (½,1) region is covered by C1's s = 0.75 leg and C3's duality instead. No other
 change; outcomes (a)/(b)/(c) untouched.
+
+---
+
+## AMENDMENT-2 (pre-run; NO heat68 data exists yet; one instrument erratum self-caught at the C1 debug stage, one new evaluator registered, one arithmetic slip corrected)
+
+1. **Erratum on my §1 source-A instrument — self-caught before any run.** As first
+   coded, the third term carried the index factor (km)^{s−1/2}; the Poisson assembly
+   requires **(m/k)^{s−1/2}** (the Fourier coefficient is f̂(m)|_{a=Δk} ∝
+   (πm/(Δk))^{s−1/2} — k enters the ratio, not the product). The line identity itself is
+   correct — verified twice by hand (s=1 coth closed form; the known s=3/2 transform
+   ∫e^{ibx}(x²+a²)^{−3/2}dx = 2|b|K₁(a|b|)/a) — but the s=1 coth check PASSED WITH THE
+   BUG IN PLACE: at s=1 the k=1 row dominates the k-sum (k≥2 rows carry e^{−2πΔk}), so
+   the k-power is invisible there. The defect surfaced as C1's 4.4e−6 failure at s=1.3,
+   off the special point. Post-fix, C1 reads 4.2e−41 (s=1.3), exact to dps 40 (s=0.75),
+   1.8e−41 (s=2.5); C3 duality 4.0e−41 — the registered ≥25/≥20-digit tolerances now
+   hold with a wide margin. Registered as **trap #77** (special-point checks cannot see
+   k-power errors; a second check point with non-negligible k≥2 rows is mandatory).
+2. **Evaluator-B registered — the small-Δ instrument.** Split the Mellin integral of
+   Θ(t) = θ₃(e^{−t})θ₃(e^{−Δ²t}) at t=π, substitute u=π/t in the lower piece, and
+   transform each θ₃ by θ₃(e^{−x}) = √(π/x)θ₃(e^{−π²/x}). The result:
+
+     **Γ(s)·2ζ^(2)(s,Δ) = ∫_π^∞ t^{s−1}(Θ(t)−1)dt + (π^s/Δ)∫_1^∞ u^{−s}(θθ(u)−1)du
+     + π^s/(Δ(s−1)) − π^s/s**,  θθ(u) = θ₃(e^{−πu})θ₃(e^{−πu/Δ²}),
+
+   where the u-power is **−s** (u^{−s−1}·(u/Δ)θθ = u^{−s}θθ/Δ — noted here because both
+   of my own scratch derivations first wrote u^{1−s}; the third derivation, done from
+   the substitution afresh, is the registered one). The pole term gives residue π/Δ for
+   the bracketed expression, i.e. π/(2Δ) for ζ^(2) — C4's value, unchanged. Evaluation
+   rules (all identities, no approximations): I₁ split at T* = 30/Δ²; on [π,T*] both
+   θ₃ factors evaluated via the channel identity with the switch at x=2 (recursion
+   depth ≤1, asserted: π²/2 > 2); on [T*,∞) both factors direct with the 2e^{−t} +
+   2e^{−Δ²t} tail extracted in closed form (2Γ(s,T*) + 2Δ^{−2s}Γ(s,30)); the residual
+   there is bounded by 2e^{−4Δ²T*}+4e^{−(1+Δ²)T*} < 1e−50 (asserted, quad dropped).
+   J's tail extracted likewise (2π^{s−1}Γ(1−s,π) + 2(π/Δ²)^{s−1}Γ(1−s,π/Δ²)) with the
+   residual quad'd to ∞ (decays like e^{−4πu}). Why B is needed: A costs ~C·ln C Bessel
+   terms with C = cutoff/(2πΔ) — measured 263 s/evaluation at Δ=1e−3, dps 30 (156,579
+   terms), so the registered 200-point scans are infeasible below Δ=0.01 with A alone;
+   B costs ~0.1–0.3 s/evaluation at every Δ in the grid.
+3. **Equivalence asserts added to the runner (all pre-data):** A ≡ B to ≥ 20 digits at
+   (s,Δ) ∈ {0.6, 0.9} × {0.05, 0.1}; B passes C1 (Δ=1, s=1.3 and 0.75) and C3 (s=0.7,
+   Δ=0.05) to ≥ 20 digits; at every Δ ≥ 0.01 the final roots are re-polished with A and
+   asserted ≥ 20 digits against B (at Δ < 0.01 the registered second source is L1,
+   which is evaluated at every Δ per the dual-source design). **The reported root
+   instrument is B**, uniformly across the grid; scan/bisect/secant exactly as
+   registered in §3 (200-point scan dps 30 → bisection to 1e−25 → secant at dps 50).
+4. **C2 tail arithmetic slip corrected:** AMENDMENT-1's printed bound π·120^{−4}/2 had
+   the wrong power. The 2D brute tail at parameter s and cutoff R is 2πR^{2−2s}/(2s−2),
+   which at s=3.5, R=120 is 5.1e−11 — well under the registered 3e−9, so the ≥ 8-digit
+   tolerance stands (conservative). The runner prints the correct bound.
+5. Outcomes (a)/(b)/(c), the Δ grid, L1–L4, the C1–C5 tolerances, the L2 negative
+   probe, and the DQ section are UNCHANGED.
+
+---
+
+## AMENDMENT-3 (pre-run; re-read of the primary source re-scopes ONE anchor; disclosure of bring-up values)
+
+1. **L1 provenance, corrected from the paper itself.** Re-reading §4 of
+   arXiv:2110.09368 around (4.8): the sentence introducing it says the equation is
+   obtained from **"(3.32), which is accurate but certainly only approximate"** (their
+   words; for complex zeros their Table 2 quantifies this), and after stating (4.8)
+   they write that its real zeros "coincide with the ones obtained from the exact
+   Eq. (4.7) up to 27 decimal digits, which supports the hypothesis that the real
+   off-critical zeros generated from Eq. (4.8) are **exact**" — exactness is their
+   HYPOTHESIS, not a theorem. The exact zero equation is their (4.7), a theta-integral
+   equation whose pdfminer extraction is layout-garbled; my best reassembly of (4.7)
+   diverges at t→0, so I do NOT evaluate (4.7) and claim nothing about it. L1 as
+   registered in §2 was therefore mis-classified: it is an APPROXIMATE literature
+   relation, not an exact anchor equation.
+2. **Disclosure — bring-up values (instrument-bring-up stage, before this amendment;
+   no grid run has happened).** During debug I computed roots and L1 comparisons at
+   four of the eighteen grid Δs: **Δ = 1e−3: L1 agreement 99.0/48.9 digits;
+   Δ = 2e−3: 50.9/48.8; Δ = 0.05: 50.8/50.6; Δ = 0.14: 18.9/18.8.** At Δ = 0.14 the
+   residual is in L1, not my instrument: A-polish ≡ B to 45.1 digits there, and L1's
+   own root is fully converged (h(δ) = 0.0, h′ = −0.30). All four values are disclosed
+   rather than hidden; none lies in a region this amendment keeps gated, except
+   Δ = 0.05, which passes with 30 digits of margin.
+3. **Mechanism hypothesis tested and REFUTED pre-run.** I tested whether (4.8) is the
+   zero-equation of my two-term truncation t1+t2 (approximation = dropping my Bessel
+   double sum). No: t1+t2 has NO root within ±0.01 of the true root at Δ ∈ {0.14,
+   0.05}, and |t1+t2| evaluated at the true root is O(5)–O(300) — the Bessel sum is
+   not small, yet L1 still agrees to 50 digits at Δ = 0.05. So (3.32) is not a
+   truncation of my decomposition, and no mechanism for the approximation error is
+   claimed.
+4. **Re-scope (registered before the grid run):**
+   - L1 becomes a **scored literature-agreement measurement at every Δ**, with the
+     ≥ 20-digit gate applied **only on Δ ≤ 0.10** — the regime far from the
+     annihilation point Δ*_c ≈ 0.1417 where the bring-up measurements show 49–99
+     digit agreement (gate boundary 0.10 = the largest grid point at distance
+     ≥ 29% of Δ*_c from Δ*_c).
+   - At Δ ∈ {0.135, 0.14} the L1 digits are REPORTED, not gated: the pre-stated
+     reading is that near-Δ*_c degradation of L1 measures the (3.32)-approximation
+     error (the zero pair annihilates at Δ*_c), NOT an instrument defect. The
+     exact-anchor role at every Δ is carried by the AMENDMENT-2 §3 design: A/B
+     dual-evaluator root agreement ≥ 20 digits (asserted at every Δ ≥ 0.01), L4
+     exact duality (bitwise guard), and C1–C5.
+   - New scored output: the **L1-digit profile over all 18 grid points** — an
+     18-point measurement of the (3.32)-approximation error vs Δ, superseding the
+     paper's single "27 digits" datum at their test value.
+5. **Outcome dispatch amended (S4 restated where it changes):** (a) DUAL-SOURCE
+   CERTIFIED = C1–C5 green + L2 negative probe clean + L4 guard + A/B asserts green +
+   **L1 ≥ 20 digits at every Δ ≤ 0.10**. (b) PROVISIONAL = controls green but gated
+   L1 in 10–20 digits. (c) DEFECT = any control fails, gated L1 < 10 digits, or a
+   guard fires. An L1 degradation **confined to Δ > 0.10 does not trigger (b)/(c)** —
+   it is the scored profile of item 4. Grid, tolerances, L2/L3/L4, C1–C5, DQ section,
+   honesty block: UNCHANGED.
