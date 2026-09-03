@@ -293,3 +293,25 @@ change; outcomes (a)/(b)/(c) untouched.
    cycle each.
 5. Everything else UNCHANGED (grid, L1 re-scope, dispatch, DQ, honesty block).
    Attempt 3 starts from the beginning; controls are deterministic.
+
+---
+
+## AMENDMENT-5 ERRATUM (attempt 3 HALTED at the C5 scaling assert — a sign error in MY assert, disclosed in full)
+
+AMENDMENT-5 item 3 registered "digits(1e−10) − digits(1e−12) ∈ [1, 3]" — the
+subtraction is BACKWARDS. The correct orientation (and the one the AM-5 probe table
+itself shows: 9.51 at 1e−10, 11.51 at 1e−12) is **digits(1e−12) − digits(1e−10) ∈
+[1, 3]** — smaller d gives MORE digits under a first-order truncation residual.
+Attempt 3 measured C5 at 11.5 dig (green, ≥8) with gap exactly +2.00 in the correct
+direction, then halted on my assert, which demanded the impossible d10 − d12 ≥ 1.
+The instrument is green; the assert orientation was wrong. Corrected in the runner;
+AM-5 item 3's intended content (scaling ∈ [1,3] in the correct orientation,
+expected 2.0) stands. Registered as trap #78 guard (iv): an assert written from a
+probe table must have its expected direction re-derived NUMERICALLY from that same
+table before commit — the founding instance had the correct five-decade table in
+hand and subtracted in the wrong order anyway. No other orientation-sensitive assert
+exists in the runner (hand-checked: C4's d − dh ∈ [2,4] with d = 27.2 above
+dh = 24.2; the strictly-decreasing grid assert; L4's digits(abs(ρ₊+ρ₋−1)); the A/B
+and cross==0 asserts are all direction-free or verified against measured values).
+Attempt 4 starts from the beginning; controls are deterministic; NO zero has been
+computed in any attempt.
