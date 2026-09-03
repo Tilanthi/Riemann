@@ -1,0 +1,11 @@
+# Machine 1 (Mac, Claude Code) — session-transcript digests, SHA-256
+# Anchor rule (P2 of PROVENANCE.md): a curated record cites the transcript that
+# produced it by (digest, size). Sessions still live are pinned by a prefix row
+# (digest of the file as of the byte count shown); the final row is appended at
+# session close. Never re-type a digest (trap #63): this file is machine-written.
+
+74f0de89263b436a69bb62acec234f2497c154d67b1cf3ed0bd5cc21b91bcb7c  a161b907-3e2a-4f31-98db-3d83d3f80d16.jsonl  127237019 bytes  [PREFIX SNAPSHOT 2026-09-03, session LIVE — covers the 2026-09-03 exchange-day: response+strategy+candidate+ack letters, heat56/57 + first-run defect and fix, restructure letter M1-M4, provenance protocol; final digest to be appended at close]
+
+b14543f514324ddb09f84168a03d40cc31d497d883fa8e3d5bfde855bb51f149  fe29977e-412c-41ce-a42d-2a9de9412622.jsonl  11458280 bytes  [CLOSED 2026-08-30 — the exchange-authorization session: watcher stood up, first letters]
+
+7f0a9dd819476c9b0b354b9c45c5b242d43adaad56fb35addb8521006d3c48b4  28cbdbe5-83ba-47b8-b5cf-f8f374fa7f32.jsonl  142621 bytes  [CLOSED 2026-08-22]
