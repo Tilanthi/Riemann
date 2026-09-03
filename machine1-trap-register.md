@@ -174,6 +174,15 @@ on-disk file they were first disclosed in.
     heat38/heat40 already used), AND a distinct output file per launch. Silver lining: the
     accidental double run reproduced every digit (free replication). Infra class (#26/#27
     family).
+    **[Instance 2 — the MIRROR error, heat55 v1, 2026-09-03: over-correction.]** Fixing #58 by
+    putting the `def job` INSIDE the guard is the opposite bug: spawn workers re-import the
+    module as `__mp_main__`, the guard block never runs there, `job` is never defined, and every
+    task dies at first unpickle (`AttributeError: module '__mp_main__' has no attribute 'job'`)
+    while the parent blocks forever on a pool of corpses — a 70-min 0%-CPU stall whose only
+    diagnostic surface was the worker tracebacks in the .out tail (`sample`: main thread parked
+    in `lock_PyThread_acquire_lock`). RULE, restated so both halves are unambiguous: **task
+    functions at module top level (importable at spawn); the POOL creation and the launch loop
+    under the guard.** Guard the pool, not the defs.
 59. **Tight-pair κ extraction is ε-ultraviolet: never round the site centre.** LAW:
     a_j(m₀+ε) = a_j(m₀) − 2·j!·ε/d^(j+1) (odd j; even clean at O(ε)). Gain 240/d⁶ at
     Lehmer (d = 0.0188) turns a correctly-rounded float64 site (ε = 2.1e-13) into a 6%-wrong
