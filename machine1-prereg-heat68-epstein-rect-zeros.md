@@ -348,3 +348,28 @@ computed in any attempt.
    were in code paths never once executed before launch.
 4. Everything else UNCHANGED. Attempt 5 = smoke first (2-Δ grid), then the full
    18-Δ run. Still NO zero computed in any attempt.
+
+## AMENDMENT-7 — heat68 follow-up probe: σ>1 zeros of ζ^(2)(s,Δ) (pre-registered BEFORE any scan data)
+
+The follow-up question registered in `machine1-letter-dh-re1-sourced.md` gets its probe now,
+pre-stated before data: does the rectangular carrier ζ^(2)(s,Δ) have zeros with Re s > 1?
+Cassels showed D–H does; Saias–Weingartner's structure theorem does not apply here
+(coefficients are representation counts, not periodic), so the answer is open. If YES: the
+sequential/decay half breaks on the rectangular carrier too, exactly as on D–H and Epstein
+h>1. If NO at scanned heights: height-limited absence only, no claim.
+
+Design: evaluator A (Bessel), dps=30 scan / dps=50 refine. D ∈ {0.05, 0.10},
+t ∈ {5, 10, 15, 20}, σ ∈ [1.05, 4.00] step 0.05 (80 pts/line). Local minima of |ζ^(2)|
+recorded with their ratio to the line median. NOT a scored rung — a search; the runner
+lives at `Riemann/experiments/orchestrator/heat68b_sigma_gt1_probe.py` (ASTRA repo, pushed
+with this amendment's ASTRA commit).
+
+Pre-stated outcomes:
+- **(a)** no local minimum with ratio < 1e−3 at any scanned (D, t, σ) → NO-EVIDENCE
+  (height-limited); raw curves reported, no absence claim.
+- **(b)** candidate with ratio < 1e−3 → 2D bisection refine at dps=50, then DUAL-evaluator
+  verification (A and theta-Mellin B agree at the candidate). Verified → report + letter
+  (decay-half consequence); fails verification → report as artifact with diagnosis.
+- **(c)** minima within 3× of threshold → ambiguous, raw report, no claim.
+
+CPU: single process, one core (heat68 has its own; cap respected).
