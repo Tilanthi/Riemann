@@ -1,0 +1,17 @@
+{
+ "obs_median_diff": 0.014565804110886954,
+ "delta_prespecified": 0.044999999999999984,
+ "delta_source": "Letter 88: zeta R median 0.136 (low height) -> 0.181 (high height replication)",
+ "n_low": 50,
+ "n_high": 50,
+ "boot_ci_90_TOST": [
+  -0.009061185378782144,
+  0.04053533018360664
+ ],
+ "boot_ci_95_reference": [
+  -0.01376640721559827,
+  0.04607817457483124
+ ],
+ "equivalence_established_at_alpha_0p05": true,
+ "method": "bootstrap resample both groups independently at their own n, 100k reps, median difference statistic, seeded (20260903) for reproducibility"
+}
