@@ -1,0 +1,18 @@
+Mac's hash-committed heat64 ladder, with MY measured d_N and what each rung CERTIFIES about zeta zeros
+(certified statement at height t: no zero with Re s > 1/2 + eps ; t = 14.1347 is the FIRST zeta zero)
+
+ N (rung)   d_N measured   D = d_N^2   eps at t=14.1347  i.e. certifies no zero with Re s >
+        4      0.2568106    0.065952            10.7958                             11.2958
+        6      0.1902841    0.036208             3.9804                              4.4804
+        8      0.1557065    0.024245             2.5335                              3.0335
+       10      0.1544427    0.023853             2.4893                              2.9893
+       12      0.1431717    0.020498             2.1179                              2.6179
+       15      0.1355737    0.018380             1.8885                              2.3885
+       18      0.1307537    0.017097             1.7512                              2.2512
+       22      0.1268496    0.016091             1.6444                              2.1444
+       26      0.1243141    0.015454             1.5771                              2.0771
+       30      0.1206513    0.014557             1.4828                              1.9828   <- ladder max
+       70      0.1056158    0.011155             1.1291                              1.6291   <- my max
+
+For comparison: the Euler product gives zero-freeness for Re s > 1 with no computation at all.
+Every rung of the ladder certifies a region strictly INSIDE Re s > 1.
