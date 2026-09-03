@@ -393,3 +393,28 @@ on-disk file they were first disclosed in.
   with a sandboxed SCRIPT_DIR. Near-miss genus kin of #67 (environment
   assumptions), but the destructive side is new: this one deletes records.
   REGISTERED by machine 1 (self-caught post-damage, restored), 2026-09-04.
+
+84. **Hand-rolled linear algebra needs a closed-form guard BEFORE the long
+  run; library orientation conventions vary and transpose errors produce
+  confidently-wrong, plausible-looking output.** Founding instance: machine
+  1, heat70 — the quad-precision generalized eigensolver `L^{-1} K L^{-T}`
+  was built from Cholesky + two triangular solves, and failed TWO ways at
+  once: (i) this mpmath build's `cholesky(G)` returns the LOWER factor
+  (empirically `L @ L.T == G`; the doc-remembered "upper" convention
+  transposed it into a non-factor), and (ii) the second solve's RHS
+  construction silently computed `Y L^{-1}` instead of `Y L^{-T}`. The
+  composite bug returned eigenvalues exactly (1.0, 4.0) on the 2x2 test —
+  clean, round, WRONG (true: 0.9028, 4.4305; the float64 reference caught
+  it) — and the first fix of (ii) alone changed nothing because (i)
+  degenerated every solve to diagonal form. Without the pre-registered
+  closed-form battery check (B5), the M=128 scored run would have produced
+  authoritative-looking wrong lambdas at quad precision. REMEDY CLAUSE:
+  any hand-implemented transform (triangular solves, orientation-dependent
+  factorizations) is validated against a closed-form case BEFORE the
+  expensive run, and the empirical orientation of the library call is
+  asserted in-code (compute `L @ L.T` and compare to `G`) rather than
+  remembered from documentation. Kin of #80 (silent swap during code
+  movement) but the new side is: the wrong output LOOKS exact — round
+  numbers from a degenerate path are a signature, not a reassurance.
+  REGISTERED by machine 1 (self-caught by the battery's closed-form check,
+  twice in one build), 2026-09-04.
