@@ -1,0 +1,38 @@
+REACH TEST. The Epstein coefficient support is SPARSE: for D=7 the represented n<=100 are
+  1,4,9,16,25,36,49,50,53,58,64,65,,... -- the FIRST n with k!=0 is 49 (=49*1).
+  So a Dirichlet polynomial of length N<49 cannot see the second lattice direction at all.
+  Prediction under the sparsity hypothesis: descent improves once N passes 49/50.
+Stability probe: G,u perturbed by relative 1e-9 uniform noise, 3 draws; spread reported.
+
+--- sqrt50 / W2
+   N= 32 rel=0.95616828 cond=1.282e+06  perturbed rel: ['0.95616828', '0.95616828', '0.95616828']   (7s)
+   N= 48 rel=0.94689888 cond=5.861e+07  perturbed rel: ['0.94689895', '0.94689881', '0.94689882']   (15s)
+   N= 56 rel=0.94214098 cond=5.924e+10  perturbed rel: ['0.94213201', '0.94217639', '0.94219598']   (20s)
+   N= 64 rel=0.93671682 cond=2.837e+15  perturbed rel: ['0.93757494', '0.93749580', '0.93746201']   (26s)
+   N= 80 rel=0.92390823 cond=1.890e+19  perturbed rel: ['0.92699613', '0.92629096', '0.92705552']   (41s)
+   N= 96 rel=0.91843148 cond=9.395e+18  perturbed rel: ['0.92040783', '0.92138652', '0.92035360']   (58s)
+
+--- D7 / W2
+   N= 32 rel=0.95413989 cond=1.179e+06  perturbed rel: ['0.95413989', '0.95413989', '0.95413989']   (7s)
+   N= 48 rel=0.94373584 cond=4.211e+07  perturbed rel: ['0.94373590', '0.94373578', '0.94373579']   (15s)
+   N= 56 rel=0.93858533 cond=5.456e+10  perturbed rel: ['0.93857637', '0.93862193', '0.93864294']   (20s)
+   N= 64 rel=0.93280669 cond=3.112e+15  perturbed rel: ['0.93371257', '0.93362910', '0.93359011']   (26s)
+   N= 80 rel=0.91959694 cond=1.753e+18  perturbed rel: ['0.92265405', '0.92196484', '0.92268527']   (41s)
+   N= 96 rel=0.91442879 cond=2.899e+18  perturbed rel: ['0.91610663', '0.91636935', '0.91605581']   (59s)
+
+--- zeta / W2
+   N= 32 rel=0.00007188 cond=1.271e+07  perturbed rel: ['0.00007188', '0.00007187', '0.00007188']   (7s)
+   N= 48 rel=0.00006128 cond=5.202e+08  perturbed rel: ['0.00006128', '0.00006127', '0.00006128']   (15s)
+   N= 56 rel=0.00006071 cond=5.378e+11  perturbed rel: ['0.00006067', '0.00006076', '0.00006079']   (20s)
+   N= 64 rel=0.00005867 cond=2.706e+16  perturbed rel: ['0.00005872', '0.00005870', '0.00005865']   (26s)
+   N= 80 rel=0.00005582 cond=1.049e+19  perturbed rel: ['0.00005650', '0.00005655', '0.00005662']   (41s)
+   N= 96 rel=0.00005124 cond=5.879e+18  perturbed rel: ['0.00005243', '0.00005231', '0.00005241']   (59s)
+
+--- synth05 / W2
+   N= 32 rel=0.68814188 cond=1.462e+06  perturbed rel: ['0.68814188', '0.68814188', '0.68814188']   (7s)
+   N= 48 rel=0.67086609 cond=7.186e+07  perturbed rel: ['0.67086631', '0.67086589', '0.67086593']   (15s)
+   N= 56 rel=0.66372859 cond=6.696e+10  perturbed rel: ['0.66370796', '0.66378864', '0.66381533']   (20s)
+   N= 64 rel=0.65825138 cond=3.224e+15  perturbed rel: ['0.65898590', '0.65893294', '0.65890783']   (26s)
+   N= 80 rel=0.64822543 cond=5.948e+17  perturbed rel: ['0.65082482', '0.64963285', '0.65084179']   (40s)
+   N= 96 rel=0.64046412 cond=1.540e+18  perturbed rel: ['0.64409565', '0.64426818', '0.64401296']   (58s)
+DONE
