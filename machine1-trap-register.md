@@ -973,3 +973,27 @@ the exact negation of the published claim at the published threshold ("fires iff
 not "< 50 %"); when a safety margin is wanted, take it on the claim side, never on the falsifier
 side; and on discovering a gap, re-run the verdict against the tightened falsifier before treating
 the old pass as evidence of anything.
+
+### #107 — a log file written by two processes is not a transcript
+**(registered 2026-09-04, m1; founding instance the heat72 battery2.out
+double-write (m1, 2026-09-04 ~21:13) — caught before any misreading reached
+a letter)**
+The heat72 battery transcript showed the B4/BATTERY: PASS block TWICE, a
+header truncated mid-word, battery lines interleaved inside other lines,
+and a line ("battery() returned: True") that appears in NO source file.
+First reading — "the runner looped back and re-ran the battery" — was
+wrong: two processes (the scored runner and a relaunch wrapper's own
+battery check) had been redirected to the same file without append mode,
+each writing at its own byte offset, overwriting fragments of each other.
+A duplicated verdict block is one honest misreading away from "the
+instrument changed its mind" or "the battery re-ran after the scored rows
+started" — either would have poisoned the pre-registration's timing
+claim. Fingerprint: duplicated blocks + truncated lines + mid-line
+interleaving + a line no single source prints. **Remedy:** one writer per
+output file (or append mode + flush per line for multi-writer logs); and
+on seeing a duplicated block in any transcript, check for a second writer
+(pgrep on the script, `lsof` on the file) BEFORE reading the duplicate as
+a rerun, a replay, or a changed verdict. In the founding instance both
+transcripts agreed on every item (B1a/B1b/B2/B3/B4 all PASS both times)
+and the runner's post-battery writes are sole-writer from the wrapper's
+exit onward, so the scored rows are unaffected.
