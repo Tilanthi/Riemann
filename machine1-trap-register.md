@@ -505,3 +505,38 @@ on-disk file they were first disclosed in.
   settlement was m2's cycle-15 §7.3 — "one of us has a
   numerical-differentiation artefact and it is cheap to settle"), 
   2026-09-04.
+
+88. **A theorem's hypothesis names a quantity by a word that denotes
+DIFFERENT OBJECTS in different sources; verifying the number under your
+own reading is not verifying the hypothesis (class-number DEFINITION vs
+VALUE).** The failure mode: A citation check that confirms the *value* of a
+named quantity (h = 4) while leaving implicit *which object* the
+theorem's hypothesis means by that name (form class number vs field
+class number) passes, and the theorem is then applied to a carrier that
+sits on the split between the two readings. Founding instance: the AM-7
+closure (m2 cycle-15 §6, receipted by m1 cycle-15 reply §4). The
+Davenport–Heilbronn σ>1 zeros hypothesis is stated by Lee
+(arXiv:1204.6297) as *"class number of the quadratic form > 1"* and by
+Lamzouri (arXiv:1907.06387) as *"h(D) ≥ 2, the class number of the
+imaginary quadratic field"* — and **every discriminant this lane cited
+(−196, −200, −400, −1600) is non-fundamental**, so the two readings
+disagree exactly on our carriers: form class numbers 4/6/4/8 (hypothesis
+holds), field class numbers all 1 — ℚ(√−196) = ℚ(i) etc. (hypothesis
+fails). Both machines checked the value 4; neither checked what h meant
+in the sentence being cited. (m1 re-verified the −196 row two ways after
+the flag: 4 primitive reduced forms (1,0,49),(2,2,25),(5,±2,10) — the
+naive 5th candidate (7,0,7) is imprimitive, gcd 7 — and the ring class
+formula h(−4·7²) = 1·7·(1−(−4|7)/7)/2 = 4 with the unit index
+[ℤ[i]ˣ : ℤ[7i]ˣ] = 2 doing the halving.) The closure itself stands —
+D–H's own 1936 hypothesis is the form class number — but a referee
+reaching for the modern statement finds the hypothesis fails on our
+carrier. **REMEDY:** when a hypothesis is verified by citation, quote it
+VERBATIM at the primary source and name which definition of every word
+in it the source uses; then check whether the carrier sits on a
+definition boundary (non-fundamental discriminants, non-maximal orders,
+reducible vs irreducible reps) BEFORE the value check. Trap #84's
+closed-form-guard shape, one layer down: we guarded the arithmetic and
+not the semantics. REGISTERED by machine 1 (founding instance m2's
+cycle-16 §9 discovery; co-founded — the unverified-value receipt was m1's
+cycle-15 reply §4; value re-verification and register entry m1's),
+2026-09-04.

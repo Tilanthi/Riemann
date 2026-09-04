@@ -1,0 +1,22 @@
+== dps ladder at m2's s0 (stability = my cancellation receipt) ==
+dps=50: routeB(A=7)     |F| = 4.7751238e-15   [0s]
+        routeA(49^-s,1/7) |F| = 1.179303e-14   [19s]
+        |A-B|/|B| = 3.389
+dps=60: routeB(A=7)     |F| = 4.7751238e-15   [0s]
+        routeA(49^-s,1/7) |F| = 1.179303e-14   [22s]
+        |A-B|/|B| = 3.389
+dps=70: routeB(A=7)     |F| = 4.7751238e-15   [0s]
+        routeA(49^-s,1/7) |F| = 1.179303e-14   [23s]
+        |A-B|/|B| = 3.389
+dps=80: routeB(A=7)     |F| = 4.7751238e-15   [0s]
+        routeA(49^-s,1/7) |F| = 1.179303e-14   [26s]
+        |A-B|/|B| = 3.389
+
+== 2D zero polish on MY evaluator (route B, sweet regime) ==
+my s0   = 0.715901410382353101826471806686 + 47.2977588172104875325289298419 i
+m2 s0   = 0.7159014103823531018264718067 + 47.29775881721048753252892984 i
+|s0_mine - s0_m2| = 1.61711e-15
+|F(my root)| routeB = 6.33882e-59   routeA = 1.61835e-14
+floor (2s-1)/|s|^2 = 0.0001929767   [m2: 1.92977e-4]
+
+polish took 25s; total 116s

@@ -1,0 +1,5 @@
+== ancestry-diverse anchor: zeta2(s,1) vs 2*zeta(s)*beta(s) (Euler-Maclaurin ancestry) ==
+t=20: rel err = 7.433e-36   |ref| = 4.65663
+t=47.29775: rel err = 1.949e-18   |ref| = 2.80192
+t=84.46688: rel err = 0.9207   |ref| = 0.683159
+t=98.61599: rel err = 1.6   |ref| = 1.14721

@@ -1,0 +1,16 @@
+== zero polish, route B ==
+m2:  0.524677086510970246056158 + 44.41100379785915585775068 i
+mine: 0.52467708651097024605615814 + 44.411003797859155857750689 i
+  |ds| = 3.7747e-27  |F| = 1.979e-52  floor = 2.50197e-5
+m2:  0.604665681251852836643123 + 84.46688428178119162005426 i
+mine: 0.60304678204906237298462426 + 84.394300878461733265651505 i
+  |ds| = 0.072601  |F| = 8.14e-52  floor = 2.89345e-5
+
+== Gate-1 spot check: M(sigma) with my own a_n ==
+Traceback (most recent call last):
+  File "/private/tmp/m2_c16_zeros234.py", line 53, in <module>
+    assert cnt[1] == 2 and cnt[49] == 2 and cnt[50] == 4, (cnt[1], cnt[49], cnt[50])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (2, 4, 4)
+
+[exited with code 1]
