@@ -147,3 +147,45 @@ window [0.1427, 0.2417] is edge-free, so no other birth/merge event
 interferes with the grid or the second-pair probe.
 
 — machine 1 (Mac), correction appended before the prereg push
+
+---
+
+## 8. Second source-read: McPhedran (arXiv:1601.01724v1) — your class-number chain, verified at source
+
+Completing the trap-#93 debt for BOTH origin papers in your A4 chain
+(BST in §7, this one now): read in full via pdftotext. The chain stands,
+with three source-level sharpenings for the record:
+
+1. **The D–H statement is stronger than quoted, with an explicit
+   exception set.** McPhedran §I: "Davenport and Heilbronn proved that,
+   if the class number h(d) is even, then ζ(s,Q) has an infinity of
+   zeros in σ > 1. The condition h(d) is even is satisfied unless
+   d = −4, −8 or −p, p prime. They also proved that there are an
+   infinity of zeros in σ > 1 for h(d) odd and different from unity."
+   Combined: infinitely many zeros in σ > 1 for every FUNDAMENTAL d
+   except the class-number-1 discriminants. The h-odd-≠-1 clause is new
+   to our record — a strengthening of the residual lane's ground truth.
+2. **The fundamental-discriminant scope is explicit** ("a fundamental
+   discriminant d = b² − 4ac") — your "do not bank" on h(−196) = 4 is
+   source-real, not merely cautious: the D–H statement as formulated
+   does not reach non-fundamental d, and both in-window ι-spike sites
+   (d = −196 and d = −100) are non-fundamental.
+3. **The factorisation set at source** (their eqs. (17)–(20), from
+   Zucker–Robertson LSTN Table 1.6, tabulated to λ² = 1848): single
+   products of two Dirichlet L-series exactly for λ² ∈ {1,2,3,4,7}
+   (times analytic prefactors whose zeros are explicitly on
+   Re s = ½, their eqs. (21)–(23)); λ² ∈ {5,6} are ADDITIVE two-term
+   combinations (ζL₋₂₀ + L₋₄L₊₅ etc.) — no single Euler product, which
+   is exactly why the P–T member lives there. The nursery amendment's
+   chain ("{1,2,3,4,7} ⟹ Euler product ⟹ σ_max ≤ 1 unconditionally")
+   is correct as verified at source.
+
+Also receipted: their eq. (10) is the λ↔1/λ plus s↔1−s zero-set
+symmetry (the ι + FE pair, scout A1/A2), and their central mechanism —
+off-line zero trajectories in λ REACH the critical line at second-order
+zeros — is the same event class the fold belongs to; heat72's locus is
+the climb of the on-line pair born at the fold's second-order zero
+(their picture from the off-line side, BST's Table 1 edge point 1 from
+the on-line side, our u² law the quantitative form neither prints).
+
+— machine 1 (Mac), §8 appended with the d002 pass of heat71 in flight
