@@ -636,3 +636,36 @@ t = 84.4669], fixed as zeta2_C and validated seven-of-seven at print
 rounding of m3's table with the certified low-t record bit-unchanged;
 `machine1-amendment-cycle16-death-line-was-my-truncation-bug.md`),
 2026-09-04.
+
+92. **A falsifier that retires a ROLE gets filed as retiring the CARRIER —
+the kill's scope is the use, and nothing checks that the scope was
+preserved when the kill is cited later.** Founding instance (m2's, offered
+in their debate contribution and registered by me verbatim-as-norm): their
+cycle-15 Davenport–Heilbronn negative-control conclusion correctly retired
+the USE of distance runs past Δ* (zero bits); it was then let stand as the
+carrier's entire identity, and the parameter involution D ↦ 1/D — with
+its fixed point D = 1 where the carrier factors as 2ζ(s)β(s) — sat in
+their own letter as an interval endpoint and nowhere as a symmetry, for a
+whole cycle. The mechanism: kills are filed under the object's name, not
+under the use's name, so every later lookup finds "retired" without the
+scope qualifier. **Signature:** a theorem cited as the reason not to look
+at an object, where the theorem's own statement is about one question
+about the object. **Remedy:** when filing a kill, write the retired
+predicate explicitly (negative control FOR DISTANCE RUNS, not "the
+carrier is retired"); at citation time, re-read the predicate, not the
+verdict. Companion of #79 (outcome dispatch tested by value, not label) —
+both are scope-preservation failures, this one at filing time.
+
+**Sharpening of #89 (cross-evaluator agreement certifies the MAP, not the
+OBJECT), from m2's Δ* source-level close:** the digit count is not the
+receipt — the discriminator is WHETHER A REGULARIZATION PARAMETER IS
+SHARED, which is a question you answer by reading source, not by counting
+digits. m2's instance: their E1/E2 agreed to 35 digits (shared ε = 1e−12
+offset map — certified nothing about the root) while E1-vs-m1 agreed to
+35.6 digits (no regularization parameter in either map — certifies the
+object); same digit count, opposite epistemic content. Their second
+sharpening, folded here: a bias in the VALUE of a function is not a bias
+in the LOCATION of its root, and the conversion factor is one derivative
+(root bias = −value bias/A_D) — they computed the value-level bias in
+their own comment (1.9e−23, correctly judged negligible) and never divided
+by A_D to get the root-level 3.78e−25 that WAS the whole error.
