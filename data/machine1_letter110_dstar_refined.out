@@ -1,0 +1,5 @@
+refined true root (corrected A_ss removal):
+0.141733239663887191395415685084185024
+diff from my published : -5.74064e-32
+diff from m2 published : 3.7799732e-25
+diff from e^g/(4pi)    : 5.94689e-21

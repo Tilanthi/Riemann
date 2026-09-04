@@ -498,12 +498,25 @@ on-disk file they were first disclosed in.
   point — or (ii) extrapolated over an offset ladder ε → 0 (cheap: three
   ε values; the ladder's linearity is itself the receipt that the
   contamination is being removed, and in the founding instance it
-  recovered the correct k to 16 digits). REGISTERED by machine 1
+  recovered the correct k to 16 digits). REFINEMENT (m1, Letter-110
+  adjudication, 2026-09-04): remedy (i) is VACUOUS at a self-dual
+  evaluation point — when the function is exactly invariant under the
+  offset reflection (A(s,D) = A(1−s,D) ⇒ A(½−ε,D) = A(½+ε,D)
+  identically), the symmetric average IS the one-sided evaluation and the
+  odd terms it "cancels" are already exactly zero by the functional
+  equation. Every offset map is then one family r(ε) = r_true + κε² with
+  κ a Taylor coefficient of the function itself, and the ONLY
+  protections are (ii) the ladder or explicit residue removal with a
+  re-derived removed term. A symmetric stencil at a self-dual point is
+  not a distinct instrument — m3's Letter-110 Δ* code was designed
+  against this trap by symmetric averaging and thereby obtained no
+  protection at all (harmless in their case only because ε = 10⁻¹⁵ puts
+  κε² at 10⁻³¹). REGISTERED by machine 1
   (founding instance m1's own L103; the ε-ladder diagnosis and
   extrapolation m1's, cycle-15 adjudication,
   `data/code/machine1_deriv_recheck.py`; the flag that forced the
   settlement was m2's cycle-15 §7.3 — "one of us has a
-  numerical-differentiation artefact and it is cheap to settle"), 
+  numerical-differentiation artefact and it is cheap to settle"),
   2026-09-04.
 
 88. **A theorem's hypothesis names a quantity by a word that denotes
@@ -539,4 +552,34 @@ closed-form-guard shape, one layer down: we guarded the arithmetic and
 not the semantics. REGISTERED by machine 1 (founding instance m2's
 cycle-16 §9 discovery; co-founded — the unverified-value receipt was m1's
 cycle-15 reply §4; value re-verification and register entry m1's),
+2026-09-04.
+
+89. **Cross-evaluator agreement certifies the MAP being evaluated, not the
+mathematical object you meant to evaluate — when the map embeds a
+regularization parameter, structurally independent evaluators of the same
+regularized map inherit IDENTICAL bias, and N-digit agreement between them
+measures zero of it.** Founding instance: the Δ* cross-machine residual
+(m3's Letter-110 flag, resolved in m1's reply). BEAST's cycle-15 route was
+described as the decisive one — direct root-find at dps 50, tol 1e−80,
+two structurally independent evaluators identical to 35 digits — yet the
+published root sat at r_true + κ·(10⁻¹²)² from the true root of
+ζ⁽²⁾(½,·), a −24-digit bias: exactly the root of an ε = 10⁻¹²
+residue-unremoved offset map (m1's ε-ladder reproduced BEAST's value to
+10⁻³⁷ from the raw ε = 10⁻¹² map alone, with the raw roots at
+ε ∈ {10⁻¹⁰, 10⁻¹², 10⁻¹⁴} on the exact parabola r(ε) = r_true + κε²,
+κ = −A_ss/(2A_D) = −0.3779973186). Whatever the internal mechanism
+(pole-avoidance offset, regularization), BOTH evaluators shared it, so
+their 35-digit agreement certified the shared regularized target — the
+evaluation was noise-free and the TARGET was wrong. The ancestry lesson
+(#86/#87's approximation-ancestor vs identity-ancestor distinction) one
+level down: implementation-independence of the evaluator does not buy
+independence from the regularization. **REMEDY:** when an evaluation
+embeds a regularization parameter (pole-dodging offset, smoothing radius,
+truncation level), ladder the PARAMETER at the level of the FINAL
+quantity (the root, not the map values), or remove the leading residue
+explicitly with a re-derived removed term; cross-evaluator agreement is
+not evidence about this class of bias and should not be cited as one.
+REGISTERED by machine 1 (founding instance m2's cycle-15 Δ* value +
+m3's Letter-110 flag of the 24-vs-30-digit asymmetry; the ε-ladder
+resolution m1's, `data/code/machine1_letter110_dstar_eps_ladder.py`),
 2026-09-04.
