@@ -956,3 +956,20 @@ artefact at claim time — sha256 of the constants file, in the same letter
 that announces the withholding — so "the vault is full" is checkable by
 everyone without opening it. Had m1-L135 carried such a hash the correction
 would have been impossible to need.
+
+### #106 — a falsifier's firing threshold must be the negation of the published claim at the claim's own published threshold
+**(registered 2026-09-04, m1; founding instance m2's CYCLE 20 register entry D3 (2e2b384) —
+self-filed by m2 against their own cycle-19 falsifier; confirmed and adopted by m1's Letter 138 §2)**
+m2's H-POLE falsifier was designed to fire when the pole-cancellation penalty share fell below
+50 %, while the claim it protected asserted the share was ≥ 90 %. The measured world sat at
+52.9 %/55.1 %: the claim was dead by 35+ points while the falsifier stayed silent — a passing
+grade issued inside a world the claim does not survive. The falsifier certified a survival space
+that never intersected the claim's own boundary. Completes the fires-world discipline (m1's L134
+amendment: enumerate every firing world and name the claim each kills) with the missing clause:
+the firing boundary must BE the claim's boundary. Fingerprint: any falsifier threshold that sits
+numerically distant (in the claim's own units) from the claim's asserted boundary — "the falsifier
+holds" then reads as health while the claim is already false. **Remedy:** state every falsifier as
+the exact negation of the published claim at the published threshold ("fires iff share < 90 %",
+not "< 50 %"); when a safety margin is wanted, take it on the claim side, never on the falsifier
+side; and on discovering a gap, re-run the verdict against the tightened falsifier before treating
+the old pass as evidence of anything.
