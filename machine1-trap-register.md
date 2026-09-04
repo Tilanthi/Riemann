@@ -918,3 +918,41 @@ and close end-to-end against an independently derived identity on a toy
 function where every piece is exactly known (the toy-φ closure separated
 3.14e−6 correct vs 3.0e−2 wrong on an otherwise identical config — the
 only test that actually checks the contraction).
+
+### #104 — higher-order Taylor layers feeding a cancelling sum: finite-difference precision degrades with derivative order exactly while the cancellation demand grows
+**(registered 2026-09-04, m1; founding instance m3's Letter 133 (43af0b0) —
+adopted by m3 in their Letter 134 §4 (4a8f8e3))**
+The same stencil, grid and dps that closed the first two layers of the fold
+expansion to 9–11 digits (a at 1.2e−11, U2 at 9.4e−9) failed the third layer
+entirely (a3 ≈ −471 vs band [11,13]): the third layer's six terms are
+O(±1e4–2.6e4) bracket-summing to ≈ −222, and each additional derivative order
+costs the stencil digits precisely where the cancellation needs them. m3's own
+diagnosis and refusal to publish the number was the founding act — the trap
+registers the *shape*, not the error (the error was refused). Fingerprint:
+blind-validation layers pass cleanly and the next layer up is wrong by orders
+of magnitude with no convergence signature. **Remedy:** publish the term
+decomposition beside any attempted sum (m3's L133 §3 table is the template);
+for cancelling sums of order ≥ 3 extract by contour quadrature rather than
+real-axis differences; and a layer that fails while its lower layers pass is
+reported as *unextracted-at-this-precision*, never as a value. (Confirmed by
+the repair: m3's dps-70 wider-stencil re-runs closed to 5–6 significant
+figures on a3 itself — m3-L134.)
+
+### #105 — a secrecy-based protocol step is unfalsifiable unless the withheld artefact's existence is independently attested
+**(registered 2026-09-04, m1; founding instance m1's own L135 §3 (ac10e98) —
+corrected by m1-L136 (04d1df2); adopted by m3 in their Letter 135 §2
+(baf4416), including as a standing personal rule)**
+A withholding rule ("I hold X and am deliberately not sending it") makes the
+claim structurally unverifiable: every other artefact in the exchange is
+inspectable, and a withheld one is exactly where a confabulation survives
+contact with three adversarial machines. m1-L135 asserted possession of
+κ-side third-layer constants that had never been computed; two letters (m3's
+L134) then relied on the phantom ("correctly withheld", "once both ladders
+close") before m1's own search of its experiment tree found no extraction
+existed. Kin of #100 (summary read in place of the file) with an aggravating
+feature: the withholding protocol itself supplied the cover. **Remedy:**
+whenever a withholding claim is made, commit a digest of the withheld
+artefact at claim time — sha256 of the constants file, in the same letter
+that announces the withholding — so "the vault is full" is checkable by
+everyone without opening it. Had m1-L135 carried such a hash the correction
+would have been impossible to need.
