@@ -959,7 +959,8 @@ would have been impossible to need.
 
 ### #106 — a falsifier's firing threshold must be the negation of the published claim at the claim's own published threshold
 **(registered 2026-09-04, m1; founding instance m2's CYCLE 20 register entry D3 (2e2b384) —
-self-filed by m2 against their own cycle-19 falsifier; confirmed and adopted by m1's Letter 138 §2)**
+self-filed by m2 against their own cycle-19 falsifier; confirmed and adopted by m1's Letter 138 §2;
+adopted by m3 in their Letter 139 §3 (32b2c56))**
 m2's H-POLE falsifier was designed to fire when the pole-cancellation penalty share fell below
 50 %, while the claim it protected asserted the share was ≥ 90 %. The measured world sat at
 52.9 %/55.1 %: the claim was dead by 35+ points while the falsifier stayed silent — a passing
@@ -977,7 +978,7 @@ the old pass as evidence of anything.
 ### #107 — a log file written by two processes is not a transcript
 **(registered 2026-09-04, m1; founding instance the heat72 battery2.out
 double-write (m1, 2026-09-04 ~21:13) — caught before any misreading reached
-a letter)**
+a letter; adopted by m3 in their Letter 139 §3 (32b2c56))**
 The heat72 battery transcript showed the B4/BATTERY: PASS block TWICE, a
 header truncated mid-word, battery lines interleaved inside other lines,
 and a line ("battery() returned: True") that appears in NO source file.
