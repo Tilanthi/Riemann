@@ -1,0 +1,41 @@
+    1 To avoid any controversy, here are the definitions of Landau’s O(· · · ) and Vinogradov’s  symbols:
+f = O(g) as x → x0 means that there exists some (unspecified) neighborhood U of x0 , and a constant
+C > 0 such that |f (x)| 6 Cg(x) for x ∈ U ; this is equivalent to f  g for x ∈ U where now U is specified
+beforehand, and in this latter case one can speak of the “implicit constant” C in . However we sometimes
+also speak of estimates involving O(· · · ) being “uniform” in some parameters: this means that the U and C
+above can be chosen to be independent of those parameters.
+                                                     4
+and that Lp (s) is called the Euler factor at p.2
+   The interplay of the zeta function with primes was revealed by Riemann in the form of
+the so-called “explicit formula”. His version (and that proved later by van Mangoldt and
+others) obscured somewhat the essential point in purely analytic difficulties; going around
+them by means of smooth test functions, one can state it in the following straightforward
+manner:
+    Proposition 1.2.1. Let ϕ : ]0, +∞[→ C be a C ∞ function with compact support, let
+                                        Z +∞
+                                ϕ̂(s) =      ϕ(x)xs−1 dx,
+                                                      0
+be its Mellin transform, which is entire and decays rapidly in vertical strips. Let
+                                              1
+                                       ψ(x) = ϕ(x−1 ).
+                                              x
+    Then we have
+       XX                                Z +∞
+                           k       k
+(1.5)           (log p)(ϕ(p ) + ψ(p )) =      ϕ(x)dx
+         p   k>1                                  0
+                                        X                 1
+                                                                Z        1 Γ0  s        1 Γ0  1 − s 
+                                 −               ϕ̂(ρ) +                               −                   ϕ̂(s)ds.
+                                                         2iπ             2Γ 2              2Γ       2
+                                       ζ(ρ)=0                  (−1/2)
+                                     0<Re(ρ)<1
+
+    A more general case of this will be sketched in the next lecture (Proposition 2.3.5).
+    In this general formula, which expresses sums over prime numbers in terms of sums over
+zeros of ζ(s), the first term on the right-hand side is really the contribution of the pole at
+s = 1 (very often, giving the main term in some asymptotic formula). We implicitly make
+use of the fact that ζ(s) 6= 0 for Re(s) > 1. It is very important to realize that this is
+by no means obvious from the series representation: it follows immediately from the Euler
+product expansion (an absolutely convergent infinite product is non-zero). This must not
+be underestimated: it is for instance the key analytical input in Deligne’s first proof of the
