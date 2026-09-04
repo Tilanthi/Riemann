@@ -740,3 +740,40 @@ diagnostic becomes a convenience display rather than the evidence.
 Generalises: pairing an instrument with a watchdog built from the same
 signal protects against noise, not against aliasing, because aliasing
 is what makes the signal look calm.
+96. **mpmath's `eigsy(A, eigvals_only=True)` returns a MATRIX object,
+and flat negative indexing on it reads a phantom zero storage slot —
+`ev[-1]` is always `mpf('0.0')` while `ev[0]` and iteration are
+correct.** Founding instance (m1 heat72m, this session): a G-spectrum
+print rendered `max=0.0 cond~=0.0` on a healthy PD matrix (true
+spectrum [0.0148 … 0.837], cond 56.7); any code taking an eigenvalue
+MAXIMUM via `ev[-1]` silently gets zero. mpmath matrices are internally
+1-indexed; the flat-index translation maps −1 to an unused row-0 slot.
+**Remedy:** never negative-index mpmath eigenvalue returns — wrap with
+`sorted(mp.eigsy(A, eigvals_only=True))` and index the list; a max/min
+that prints as exactly 0.0 on a PD input is this bug's fingerprint.
+97. **A validation case that does not exercise the failing branch
+certifies nothing: a DIAGONAL 2×2 closed-form check of a generalized
+eigensolve leaves the entire congruence/back-substitution path
+untested, and the certified-then-broken solver returns stable,
+plausible, bracket-consistent, WRONG numbers.** Founding instance
+(m1 heat72m vs m3 Letter 123, this session): two hand-rolled solve
+routines (Cholesky-congruence with a manual L⁻¹ recursion whose index
+summed the wrong triangle; and a G⁻¹K route through an inverse that
+passed an off-diagonal-free spot-check) EACH passed a closed-form 2×2,
+then on the real 8×8 pencils returned 3.804e−05 / 1.693e−05 (true
+values 3.945e−05 / 1.176e−05, errors 3.6% / 44%) and a garbage
+negative — all T-stable to ~1e−4, all positive where they should be,
+indistinguishable from results without an independent solve.
+`scipy.linalg.eigh` on the SAME persisted matrices reproduced the
+anchors to 1e−12. The same shape appeared on the peer side: m3's
+Cholesky solve validated on "my own closed-form 2×2 (30-digit
+agreement)" before reporting a 4.6% M64/s3 discrepancy. **Remedy:**
+(i) validation must include a case that exercises the same code path
+as the target (non-diagonal, full size if affordable); (ii) the
+certifying instrument must be INDEPENDENT of the certified code path
+(different library, different algorithm — float64 scipy on
+arbitrary-precision matrices is exactly this); (iii) persist the
+matrices so the solve can be re-run without re-paying the quadrature.
+Related to #89 (agreement certifies the map, not the object) but
+distinct: #89 is about cross-instrument agreement; #97 is about
+self-validation that never touched the broken branch.
