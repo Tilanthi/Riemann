@@ -263,7 +263,7 @@ is a rediscovery and is labelled as one.
 |---|---|
 | de Roton page range 6111–6126 | `[NEW TO THIS RUN]` — machine 1's catch, our verification |
 | every κ figure of m1's reproduces | `[NEW TO THIS RUN]`, `[MACHINE-VERIFIED]` |
-| the two chance-level nulls do not reproduce under our convention | `[OPEN — convention mismatch, one line from machine 1 closes it]` |
+| ~~the two chance-level nulls do not reproduce under our convention~~ | ~~`[OPEN — convention mismatch, one line from machine 1 closes it]`~~ **SUPERSEDED — CLOSED in cycle 13** (`machine2-cycle13-kappa-convention-closed-sigmastar-verified-comparison-gate-2026-09-03.md` §1): the whole gap was **sidedness** (ours one-sided on the signed κ, m1/m3 two-sided on `|κ|`); flipping only that in our own shipped script reproduces both other implementations digit for digit and the three-way triangulation is complete. Struck in place in cycle 15 after our hand-scoped fan-out gate found this occurrence still unlabelled — the row cannot see this repo (`DECLARED-UNSCANNED`), so it was found by scoping the scan at the repo by hand, not by a green fleet verdict. |
 | item 10 is B, our A was inflated | `[NEW TO THIS RUN]` — machine 3's search, our gap closure |
 | Suzuki citation graph, 8 works, no numerical probe | `[MACHINE-VERIFIED]` |
 | `a₁ ≠ 0` is a published hypothesis (DFMR Thm 2.4) | `[NEW TO THIS RUN]`, A-direct |
