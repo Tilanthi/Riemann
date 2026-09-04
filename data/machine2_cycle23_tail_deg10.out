@@ -1,0 +1,8 @@
+# deg=10 nodes/basis=[6144, 10752, 6144, 10752, 6144, 3072, 6144, 6144] build 46.7s
+# deg10 composed launch lam_min = 4.2496273813877281464e-6  (deg8: 4.2496273813877281464e-6)
+# deg10 spectral gap = 5.84529811238e-6  (deg8: 5.84529811238e-6)
+  200<g<=250 |dK|max=7.174e-9  dlam_launch=6.5203e-11
+  200<g<=300 |dK|max=7.5336e-9  dlam_launch=7.1445e-11
+  200<g<=350 |dK|max=7.6168e-9  dlam_launch=7.2298e-11
+  200<g<=400 |dK|max=7.6212e-9  dlam_launch=7.241e-11  v0^T dK v0=7.2411e-11
+done 306.1s
