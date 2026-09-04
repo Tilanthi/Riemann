@@ -1,0 +1,103 @@
+# machine2 cycle21 -- heat72 birth-locus scored on m2's own instrument (self-dual xi route)
+# ================ controls
+== control 1: zeta2(s,1) == 2 zeta(s) beta(s)
+  s=2.0                          rel=2.3251e-46
+  s=1.5                          rel=6.2048e-46
+  s=(0.5 + 3.0j)                 rel=4.4431e-46
+  s=(0.25 + 11.0j)               rel=8.7205e-42
+== control 2: FE  xi_D(s) == xi_D(1-s)
+  D=0.14       |xi(s)-xi(1-s)|/|xi(s)| = 6.8883e-46
+  D=0.142857142857142857142857 |xi(s)-xi(1-s)|/|xi(s)| = 8.6378e-46
+  D=0.15       |xi(s)-xi(1-s)|/|xi(s)| = 1.4715e-45
+  D=0.7        |xi(s)-xi(1-s)|/|xi(s)| = 5.705e-46
+  D=3.0        |xi(s)-xi(1-s)|/|xi(s)| = 4.8418e-45
+== control 3: xi real on the critical line
+  D=0.142857142857142857142857 t=0.3    Im/|.| = 3.1689e-46
+  D=0.142857142857142857142857 t=2.7    Im/|.| = 1.2721e-46
+  D=0.142857142857142857142857 t=13.1   Im/|.| = 5.3229e-40
+  D=0.15                       t=0.3    Im/|.| = 5.7965e-46
+  D=0.15                       t=2.7    Im/|.| = 1.9453e-46
+  D=0.15                       t=13.1   Im/|.| = 1.3884e-39
+  D=0.25                       t=0.3    Im/|.| = 3.0831e-47
+  D=0.25                       t=2.7    Im/|.| = 4.363e-47
+  D=0.25                       t=13.1   Im/|.| = 3.3151e-40
+
+# ================ S1 gate at exact anchor D + grid-eps truncation audit
+# S1 GATE at the EXACT anchor D values (1/7 and 0.15), dps=45
+D=1/7    eps=0.001123903193255665747441
+   u   = 0.0546145847401620259610970385384
+   ref = 0.054614584740162026
+   dev = 3.8903e-20   PASS(<5e-16)   |xi(u)|=3.75e-46  r=11.723753017863  (32.7s)
+D=0.15   eps=0.008266760336112808604584
+   u   = 0.149621445957926651933472190214
+   ref = 0.149621445957926652
+   dev = 6.6528e-20   PASS(<5e-16)   |xi(u)|=2.24e-46  r=11.871268384583  (31.5s)
+
+# grid-eps truncation audit (m1's printed grid values vs exact anchor offsets)
+  printed 0.0011239031932557   exact 0.001123903193255665747441  delta_eps=3.425e-17  => delta_u ~ 8.309e-16
+  printed 0.0082667603361      exact 0.008266760336112808604584  delta_eps=-1.281e-14  => delta_u ~ 1.146e-13
+
+# ================ SCORED GRID
+# m2 cycle21 birth-locus, dps=45
+# Delta* = 0.141733239663887191395415685084185024
+eps=0.001                u=0.05150723818940063653522997  r=11.7212111984  |xi(u)|=4.9e-46  32.8s
+eps=0.0011239031932557   u=0.05461458474016286082927124  r=11.7237530179  |xi(u)|=2.72e-46  32.4s  ANCHOR dev=8.3483e-16 FAIL
+eps=0.002                u=0.07294509283746563691152741  r=11.7417419993  |xi(u)|=2.32e-46  32.8s
+eps=0.0035               u=0.09670183421043065840984313  r=11.7726082827  |xi(u)|=1.34e-46  32.8s
+eps=0.006                u=0.1270603431867589315365682  r=11.8242421414  |xi(u)|=4.54e-46  32.2s
+eps=0.0082667603361      u=0.149621445957808028913411  r=11.8712683846  |xi(u)|=4.65e-46  31.6s  ANCHOR dev=1.1862e-13 FAIL
+eps=0.012                u=0.1812222345972055203851323  r=11.9491645873  |xi(u)|=2.4e-46  31.0s
+eps=0.02                 u=0.236627035028954718936398  r=12.1180399556  |xi(u)|=1.31e-46  30.5s
+eps=0.035                u=0.3197940308419042261822956  r=12.4424017408  |xi(u)|=1.51e-46  28.6s
+eps=0.06                 u=0.434057465263706265691976  r=13.0081855834  |xi(u)|=1.62e-46  26.1s
+eps=0.1                  u=0.5942792183051371124814878  r=13.9911193603  |xi(u)|=2.39e-46  20.6s
+
+# median r = 11.87126838   min = 11.7212112   max = 13.99111936
+# slope = 22.703045   |slope*dmax| = 2.2476015   0.25*|median| = 2.9678171   => outcome (a) r-constant
+# S2 VERDICT: REFUTED  (band [11,13], 9/11 points inside)
+
+# ================ a3/a4/a5 extrapolation
+a3^BL by polynomial extrapolation of r(eps) -> r(0):
+  npts=3   deg=1   a3 = 11.70067856   (a4 = 20.53165)
+  npts=3   deg=2   a3 = 11.70071747   (a4 = 20.475188)
+  npts=4   deg=1   a3 = 11.70064319   (a4 = 20.559249)
+  npts=4   deg=2   a3 = 11.70071779   (a4 = 20.474724)
+  npts=4   deg=3   a3 = 11.70071733   (a4 = 20.475529)
+  npts=5   deg=1   a3 = 11.70056696   (a4 = 20.605098)
+  npts=5   deg=2   a3 = 11.70071868   (a4 = 20.473697)
+  npts=5   deg=3   a3 = 11.70071733   (a4 = 20.475527)
+  npts=6   deg=1   a3 = 11.70048494   (a4 = 20.644208)
+  npts=6   deg=2   a3 = 11.70072021   (a4 = 20.472271)
+  npts=6   deg=3   a3 = 11.70071734   (a4 = 20.475516)
+  npts=11  deg=1   a3 = 11.68301457   (a4 = 22.703045)
+  npts=11  deg=2   a3 = 11.70185357   (a4 = 20.195919)
+  npts=11  deg=3   a3 = 11.70072013   (a4 = 20.474041)
+
+Richardson on the two smallest DISTINCT eps (0.001, 0.002): a3 = 11.7006804
+
+m3 finite-difference a3 = 11.7007 ; m1 L140 Taylor leg 11.70074 +/- 0.0018 ; m3 v4 contour 11.698987
+m1 prereg 'a3 anchor mean' = 11.7975  = mean(r(eps1), r(eps2)) at eps1=1.12e-3, eps2=8.27e-3
+   -> r at those eps are 11.72375302 and 11.87126838 ; their mean 11.7975107
+
+# ================ fit residuals + S4 second-pair probe
+deg=3  a3=11.7007201272 a4=20.474041 a5=18.427305   max|resid| = 1.784e-6
+deg=4  a3=11.7007189501 a4=20.47451 a5=18.397081   max|resid| = 1.885e-6
+deg=5  a3=11.7007173758 a4=20.475492 a5=18.280546   max|resid| = 3.039e-8
+
+S4 second-pair probe, t in [1.5,4.5], on the 5 largest eps (m1's outcome-(b) trigger):
+   eps=0.012                roots in [1.5,4.5]: ['2.34430066245', '4.01520376596']   (49s)
+   eps=0.02                 roots in [1.5,4.5]: ['2.41077049854', '4.12449535266']   (47s)
+   eps=0.035                roots in [1.5,4.5]: ['2.53601621437', '4.32991443859']   (46s)
+   eps=0.06                 roots in [1.5,4.5]: ['2.74766432879']   (36s)
+   eps=0.1                  roots in [1.5,4.5]: ['3.09797120663']   (29s)
+
+# ================ cross-instrument check vs m3 letter133_zeta2_impl
+A) Dirichlet-series control in Re s > 1 (my instrument vs raw sum):
+   D=0.2417332 s=3.0   mine=5103.63800471532729  raw/2=5103.63800470144393  rel=2.72e-12
+   D=0.1427332 s=2.5   mine=17513.5535327448692  raw/2=17513.5535160682107  rel=9.522e-10
+
+B) my located zeros, evaluated on m3's independent zeta2 implementation:
+   eps=0.1     t=0.5942792183051371124814      |zeta2|_m3 = 2.148e-25    |zeta2|_mine = 2.148e-25     scale=1.499   (first on-line zero)
+   eps=0.1     t=3.09797120663                 |zeta2|_m3 = 4.854e-11    |zeta2|_mine = 4.854e-11     scale=3.577   (second-pair probe root)
+   eps=0.012   t=2.34430066245                 |zeta2|_m3 = 6.018e-11    |zeta2|_mine = 6.018e-11     scale=5.592   (second-pair probe root)
+   eps=0.001   t=0.0515072381894006365352      |zeta2|_m3 = 2.638e-27    |zeta2|_mine = 2.638e-27     scale=1.829   (first on-line zero)

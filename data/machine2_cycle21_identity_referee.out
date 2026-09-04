@@ -1,0 +1,45 @@
+(a) pointwise FE receipt at s = -1/2 + it   (dps=30)
+    t=0.7     SUM-form residual = 2.9582e-31     DIFF-form residual = 2.1057
+    t=3.3     SUM-form residual = 1.1025e-31     DIFF-form residual = 1.5564
+    t=17.2    SUM-form residual = 1.9875e-31     DIFF-form residual = 1.8414
+    t=41.5    SUM-form residual = 4.9304e-32     DIFF-form residual = 2.4482
+
+(b) classical limit  Re K(-1/2+it) -> log(t/2pi)
+    t=10     Re K_sum = 0.469278158            log(t/2pi) = 0.4647080266           | Re K_diff = 0.0049875
+    t=100    Re K_sum = 2.767338952            log(t/2pi) = 2.76729312             | Re K_diff = 4.9999e-5
+    t=1000   Re K_sum = 5.069878671            log(t/2pi) = 5.069878213            | Re K_diff = 5.0e-7
+
+(c) END-TO-END CLOSURE on my own Gaussian phi (c=2.0, sig=0.35), closed-form u(s)
+    CORRECT  kernel=SUM-logpi, contraction=complex
+      A=6.8706815435994471342  B=4.8179661e-14
+      u(1)=6.8920350806471102524  Z=-0.000015300283902988764781  Arch=-0.021368837331517927232
+      CLOSURE |A+B-(u(1)-Z+Arch)| = 2.36658e-30   (rel 3.44447e-31)
+    m3 L129  kernel=DIFF,      contraction=complex
+      A=6.8706815435994471342  B=4.8179661e-14
+      u(1)=6.8920350806471102524  Z=-0.000015300283902988764781  Arch=-0.021368916094295602515
+      CLOSURE |A+B-(u(1)-Z+Arch)| = 7.87628e-8   (rel 1.14636e-8)
+    m1 1st   kernel=SUM-logpi, contraction=Re*Re
+      A=6.8706815435994471342  B=4.8179661e-14
+      u(1)=6.8920350806471102524  Z=-0.000015300283902988764781  Arch=0.04174717056030197886
+      CLOSURE |A+B-(u(1)-Z+Arch)| = 0.063116   (rel 0.00918628)
+TF1 Gaussian c=2.00 sig=0.35 (my first choice -- support far from x=0)   phi(0)=8.1185383e-8
+   closure correct = 2.36658e-30
+   closure m3-diff = 7.87628e-8      closure Re*Re = 0.063116
+   Arch_correct - Arch_diff = 7.876277768e-8
+   -log(pi)*phi(0)          = -9.293533478e-8   (the delta-function part of the missing kernel)
+   residual (= the psi((1-s)/2) part) = 1.71698e-7
+
+TF2 Gaussian c=0.00 sig=0.35 (kernel-SENSITIVE: phi(0)=1)   phi(0)=1.0
+   closure correct = 4.93038e-32
+   closure m3-diff = 1.40338      closure Re*Re = 0.0499595
+   Arch_correct - Arch_diff = -1.403375191
+   -log(pi)*phi(0)          = -1.144729886   (the delta-function part of the missing kernel)
+   residual (= the psi((1-s)/2) part) = -0.258645
+
+TF3 Gaussian c=0.60 sig=0.35 (intermediate)   phi(0)=0.2300663
+   closure correct = 3.9443e-31
+   closure m3-diff = 0.0279299      closure Re*Re = 0.214909
+   Arch_correct - Arch_diff = -0.02792990411
+   -log(pi)*phi(0)          = -0.2633637682   (the delta-function part of the missing kernel)
+   residual (= the psi((1-s)/2) part) = 0.235434
+
