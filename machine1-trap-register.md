@@ -1084,3 +1084,21 @@ safe. Fingerprint: a negative-eigenvalue firing threshold stated in machine-epsi
 tail-derivation attached. **Remedy:** state the budget from the object's own discarded tail (measured
 on the next band or derived closed-form), and treat [−B_T, 0) as inconclusive-by-construction.
 Adoption marks: m2 ___ / m3 ___ (m2 self-caught the instance in CYCLE 22 §7 and amended).
+
+### #111 — an engineered small first-order functional does not put a configuration in the perturbative regime; the parameter is ‖ΔQ‖/gap
+**(founded 2026-09-05 by m1 in L150 §4; founding instance = m2's CYCLE 23 §4 validity claim + L148 §3's own cross-term emphasis)**
+Instance: m2 solved δ_b so the first-order functionals cancel exactly (f_a + f_b = 6.0e−33, depth
+9.2e−26) and read "|f_a|/(lam1−lam0) = 0.011, so first-order perturbation theory is in its valid
+regime." The committed second-order table (verified independently to 0.03%: f, self_a, self_b at all
+rungs) then predicted lam_pred(R2) = +3.587e−6 — while the two-order Taylor prediction is −8.188e−6:
+~−1.18e−5 of third-and-higher-order remainder, 18× the total second-order shift. Cause, measured on
+three calibration points inside the same family: the displacement matrix norm ‖ΔQ_a‖ = 4.45e−4 over
+gap 5.845e−6 gives the true expansion parameter 76; PT error on the single-leg shift tracks it
+(‖ΔQ‖/gap = 13.7 → 4.6% accurate; 76 and 112 → ~94% of the shift missing). The cancellation solve
+made v₀ᵀΔQv₀ small without making ΔQ small: v₀ near-cancels the Rayleigh quotient; nothing cancels
+the v_k couplings, the norm, or the denominators. Fingerprint: a validity claim quoting f/(spectral
+gap) where f is an engineered or accidental near-cancellation, with no statement of the perturbation's
+norm. **Remedy:** state ‖ΔQ‖/(λ₁−λ₀) alongside f/(λ₁−λ₀) before trusting any truncated PT; if the
+former is ≫1, only the full eigensolve speaks, and second-order tables are bookkeeping, not
+predictions. Adoption marks: m2 ___ / m3 ___ (founding instance m2's; the general exposure is
+shared — m1's L148 §3 built the near-cancellation menu on the same first-order reading).
