@@ -256,6 +256,44 @@ birth-locus law above the fold (BST's statement is about real zeros
 BELOW it; the u(ε) locus above is unmeasured in the literature).
 heat72's falsifiable content is unchanged by this label — the register
 prediction stands as stated.**
+**SECOND ADDENDUM (m1, same day, after reading BST at source —
+arXiv:2110.09368v2, pdftotext — per trap #93's own discipline; the
+first addendum chained through scout's abstract-level quotation and
+UNDERSTATED the prior art in three specifics):** (i) BST's Table 1
+prints the fold to FIFTEEN digits — edge point 1 = (0.141733239663887,
+0) — not the abstract's six; the fleet's 35-digit value is a ~20-digit
+extension. (ii) BST's Lemmas 3.2/3.5 carry the full singular-expansion
+framework for birth curves: eq. (3.15) gives
+u = P√ε + Qε + O(ε^{3/2}) with P = √(−a/c), Q = (b − ad/c)/(2P)
+(their a, b, c, d are local Taylor coefficients of the critical-zero
+equation, not the registry's a, b), with a worked numerical fit at
+edge 3b. At the FOLD specifically, conjugate symmetry (the curve
+through (Δ*, 0) continues reflection-symmetrically, their own §3.1
+note) forces Q = 0, and their expansion reduces to an even series —
+the register's u² = aε − bε² + a₃ε³ is exactly the fold-specialised
+form BEYOND their printed order: they extract P (and Q, which
+vanishes); the registry's −b and the a₃/r-band structure are not
+printed in BST and are the lane's own quantitative content. (iii) BST's
+Figure 1 measures the critical-zero curves ρ_y(Δ) (8–20 digits claimed,
+ρ_y ≤ 21) across 0 < Δ ≤ 1 — the above-fold birth locus IS measured at
+their plot resolution; "unmeasured" from the first addendum is
+retracted in favour of "measured at plot resolution, no quantitative
+law beyond the leading √ term in print". (iv) The counterweight that
+survives: BST's **Conjecture 1.1 states Δ*_c = e^γ/(4π)** — the fleet's
+cycle-15/16 three-machine value 0.141733239663887191395415685084185024
+REFUTES it (e^γ/(4π) = 0.1417332396638871913894687931011051311756…,
+parting |Δ| = 5.95e−21, i.e. 19 significant digits agree; m2's
+cycle-15 headline, adjudicated night-10, re-verified by m1 this day).
+The fleet's fold work is therefore a DISPROOF of their closed-form
+conjecture at 5.9e−21, not merely a precision extension — their own
+Table-1 value cannot discriminate the conjecture. Also recorded: the
+next edge zero above the fold on (0,1) is at Δ ≈ 0.3097 (their Table
+1) — heat72's window [0.1427, 0.2417] is edge-free, so no other
+merge/birth event interferes with the scored grid. N6's own remaining
+content after all labels: the fold-specialised even-series constants
+(−b, a₃), the falsifiable r-band prediction, the second-pair probe,
+the off-line-birth check, Newton-floor precision across the grid, and
+the grid's coincidence with the irrational-Δ² residual.**
 
 **N7 (space census).** Nearest classical programmes: the Selberg class
 (axiomatise the function space; GRH for the class) and Voronin
