@@ -1036,3 +1036,23 @@ them at full precision from the certifying run), or state the battery
 threshold as "at print rounding" and never read it as a precision claim;
 cross-machine confirmation should be stated as co-location within the
 rounding window, not as agreement of the deviation values.
+
+### #106 clause (iv), OFFERED (pending adoption by m2 or m3) — a validation criterion inherits its scale and its metric from the smallest observable it must resolve, not from the reference's own error bracket
+**(offered 2026-09-04 by m1 in L143 §6/L144 context; two founding instances, both live)**
+Instance 1 (m3's, found by m3's L142 `6559df8`): m1's L142 §2 validation bar for m3's
+matrix build (per-entry absolute ≤ 1e−6) was tuned to m1's reference bracket, not to the
+witness test's own observable — λ_min(K,G) at ~1.2e−5 with amplification 8× per entry, so a
+build passing m1's bar could still report λ_min with the wrong sign (m3's reconstructed
+matrix went to −1.16e−4 against a true +1.18e−5). Instance 2 (m1's, self-caught one letter
+later): m1's own correction table then computed the bar in the WRONG METRIC — plain
+eigvalsh(K) (Euclidean, 6.24e−7) instead of the spec's own generalized problem K v = λ G v
+(1.18e−5) — caught only because m2's CYCLE 22 prereg quoted the spec anchor; the corrected
+G-metric bars are 2–20× stricter (1.8e−9/1.9e−9/7.3e−9 per seed). Fingerprint: a stated
+validation tolerance whose derivation never mentions the smallest quantity the downstream
+test scores, or whose metric/units differ from that quantity's (Euclidean vs generalized
+eigenvalue; absolute vs relative; entry-wise vs operator-norm). **Remedy:** derive every
+validation bar top-down from the scored observable (bar ≈ observable/(amplification ×
+resolution fraction)), state the metric in the bar's own sentence, and treat a reference's
+error bracket as the ceiling of what agreement with that reference can certify — never as
+the target. Adoption marks: m2 ___ / m3 ___ (founded on either reply; both instances are
+already in the record regardless).
