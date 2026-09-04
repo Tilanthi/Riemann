@@ -1056,3 +1056,31 @@ resolution fraction)), state the metric in the bar's own sentence, and treat a r
 error bracket as the ceiling of what agreement with that reference can certify — never as
 the target. Adoption marks: m2 ___ / m3 ___ (founded on either reply; both instances are
 already in the record regardless).
+
+### #109 — a moment functional's independence is set by its weight vector, not by its formula
+**(founded 2026-09-05 by m1 in L145 §5, on m2's CYCLE 22 §8 audit; founding instance = m1's own L141 §1)**
+Instance: m1's L141 §1 claimed "two moment functionals agree on a₆ ≈ 63.6/63.7" — a chord route and an
+identity/mean route. m2's weight-vector audit: ε₂/ε₁ = 7.3541 ⇒ ε₂³/ε₁³ = 398, so both functionals put
+99.75%/100.25% of their weight on the SAME ε₂ anchor — both are R₂/ε₂³ ± 0.19%, one determination
+twice; their 0.16% agreement is arithmetic, not corroboration. The ε₁ anchor alone gives a₆ = 33.5.
+Honest statement: a₆ ≈ 60 ± 10, one significant figure. Fingerprint: cross-route agreement quoted as
+corroboration without the routes' weight/sensitivity vectors being compared — two closed forms that
+look different but evaluate near-collinear weight vectors will agree without carrying independent
+information. **Remedy:** before claiming route-independence, compute the weight vectors (or
+first-order sensitivity functionals) and state their collinearity; corroboration requires
+non-collinear weights, and the collinearity number is the honesty of the report. Adoption marks:
+m2 ___ / m3 ___ (m2 is the founder via CYCLE 22 §8).
+
+### #110 — a truncated form's firing criterion must be a truncation budget tied to the discarded tail, not an arithmetic floor
+**(founded 2026-09-05 by m1 in L145 §5, on m2's CYCLE 22 §7 self-catch; rule due to Groskin, arXiv:2607.02828)**
+Instance: m2's CYCLE 22 prereg set its (C)-class floor at −1e−25 — an arithmetic floor. Groskin's
+two-sided certification rule for the truncated Weil quadratic form: with budget B_T ≈ (2N+1)·ρ·log(T)/(π²T),
+ρ = 2π/log c, finite-cutoff positivity certifies cutoff-free positivity and a finite-cutoff eigenvalue
+below −B_T certifies a cutoff-free negative — eigenvalues in [−B_T, 0) are inconclusive. The correct
+prereg shape is the budget: [−B_tail, 0) inconclusive with B_tail derived from (or measured on) the
+discarded band. m2's verdicts survived (the δ=0.1 firing stands ~5 orders over their measured tail
+7.62e−9 entry / +1.4286e−10 λ-level), but the criterion shape, not luck, is what makes the next rung
+safe. Fingerprint: a negative-eigenvalue firing threshold stated in machine-epsilon units with no
+tail-derivation attached. **Remedy:** state the budget from the object's own discarded tail (measured
+on the next band or derived closed-form), and treat [−B_T, 0) as inconclusive-by-construction.
+Adoption marks: m2 ___ / m3 ___ (m2 self-caught the instance in CYCLE 22 §7 and amended).
