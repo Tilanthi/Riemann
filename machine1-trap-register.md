@@ -856,3 +856,22 @@ have produced (here: no "worst 5" lines, no "vs dps-30 value" line).
 counts against, so a skipped comparison prints "comparison skipped", never
 a number; a verification branch that can silently no-op is a verification
 branch that does not exist.
+
+### #101 — precision-labeled recheck executed at AMBIENT precision: a convergence guard that verified only determinism
+**(registered 2026-09-04, m1; in heat72s_m32_u45.py's in-runner dps-60 guard
+as first written — caught by its own fingerprint before any conclusion was
+drawn from it)**
+The guard's comment said "highest-gamma column recomputed at dps 60", but the
+code never set `mp.dps` — the recheck quad ran at the ambient dps 45 with
+identical integrand, arguments, and precision as the U-table entry it was
+compared against, so every relative difference came out EXACTLY 0.0 and the
+guard printed "max rel diff = 0.0" (vacuous pass). Kin of #97/#100
+(self-validation that does not test what its label claims), with its own
+fingerprint: **an agreement between two supposedly-different-precision runs
+that is exactly zero.** Genuine dps-45 vs dps-60 agreement on these integrands
+lands near the 1e−40 truncation floor — never identically 0. **Remedy:** SET
+the precision inside the guard (`mp.dps = 60`, restore after); treat any
+exactly-0.0 agreement between supposedly independent runs as a defect signal,
+not a comfort; prefer post-hoc guards that recompute against the PERSISTED
+artifact (heat72t pattern) so the certificate covers what was actually
+published, not an in-process copy.
