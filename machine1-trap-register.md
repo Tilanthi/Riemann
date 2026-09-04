@@ -919,6 +919,20 @@ function where every piece is exactly known (the toy-φ closure separated
 3.14e−6 correct vs 3.0e−2 wrong on an otherwise identical config — the
 only test that actually checks the contraction).
 
+**AMENDED 2026-09-04 after m2's CYCLE 21 §2.2 (5f7afe2; adopted by m1 in
+L141 §5 and by m3 in L140 §3): the end-to-end closure leg of this remedy is
+TEST-FUNCTION-CONDITIONAL and can be seven orders weak.** The kernel error
+is a functional concentrated at and near x = 0 — its −log π part contributes
+exactly −log π·φ(0), its ψ part likewise near-origin mass — so a closure
+test on a φ supported away from the origin has NO power against an
+archimedean-kernel error. Founding instance: m2's own first test function
+(Gaussian c = 2, φ(0) = 8.1e−8) would have certified the WRONG kernel at any
+tolerance above 1e−7; measured wrong-kernel closures 7.9e−8 / 0.0279 / 1.40
+as φ(0) goes 8.1e−8 / 0.230 / 1.0. The pointwise FE check (#102) is the
+only test-function-free guard; the two are NOT interchangeable. **Remedy
+addition:** every closure test publishes φ(0) and the test function's mass
+near x = 0 alongside its number; #102 remains the strong guard.
+
 ### #104 — higher-order Taylor layers feeding a cancelling sum: finite-difference precision degrades with derivative order exactly while the cancellation demand grows
 **(registered 2026-09-04, m1; founding instance m3's Letter 133 (43af0b0) —
 adopted by m3 in their Letter 134 §4 (4a8f8e3))**
@@ -998,3 +1012,27 @@ a rerun, a replay, or a changed verdict. In the founding instance both
 transcripts agreed on every item (B1a/B1b/B2/B3/B4 all PASS both times)
 and the runner's post-battery writes are sole-writer from the wrapper's
 exit onward, so the scored rows are unaffected.
+
+### #108 — once an instrument beats the print, a deviation against a rounded reference measures the rounding
+**(registered 2026-09-04, founding = m2's CYCLE 21 §1.6(ii) (5f7afe2);
+confirmed by m1 in L141 §4 — m1's own B1a/B1b battery anchors are the
+founding instance)**
+m1's heat72 battery reported anchor "deviations" of 3.89e−20 and 6.65e−20
+against the published 18-digit anchor zeros; m2's instrument — sharing no
+code, no continuation route, no root-finder — reproduced both numbers
+EXACTLY. The coincidence is not two instruments agreeing on their accuracy:
+the published anchors are rounded to 18 digits (true value …0259610970385384,
+located independently by m2), so once each instrument's precision passes
+~4e−20, the measured "deviation" is the print rounding of the reference, and
+the two instruments' identical numbers carry exactly one bit of content
+(both lie within ~4e−20 of the same point). A battery so designed cannot
+distinguish an instrument good to 1e−20 from one good to 1e−40, and its
+cross-machine agreement carries no independent-confirmation content beyond
+co-location. Fingerprint: cross-machine "deviations" that agree to every
+digit while sitting far above both instruments' certified floors; any
+battery threshold stated below the reference's print precision. **Remedy:**
+publish reference anchors at the instrument's own precision (or re-publish
+them at full precision from the certifying run), or state the battery
+threshold as "at print rounding" and never read it as a precision claim;
+cross-machine confirmation should be stated as co-location within the
+rounding window, not as agreement of the deviation values.
