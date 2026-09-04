@@ -609,3 +609,30 @@ caught it was run only AFTER the outcome letter shipped, retracting its
 "crosses negative at T > 200" reading — the check itself was 15 lines of
 the runner's own construction; `machine1-heat70-addendum-monotonicity.md`),
 2026-09-04.
+
+91. **An absolute-floor convergence criterion — `abs(shell) < tol·max(abs(total), 1)` — silently fires early when the summand's envelope carries a height-dependent scale factor (here e^{−πt/2} on every Bessel-K shell): above the height where the envelope crosses the floor, ALL shells fall below it at once, the loop truncates after its first pass, and the dropped shells are O(1) after the compensating prefactor. The error is dps-INDEPENDENT and O(1), which is exactly the fingerprint that makes a truncation bug look like structural instrument death.** Founding instance: m1's own zeta2_A k-shell
+stop in heat68, at tol = 1e−45 anchored at 1 (envelope crossing at
+t ≈ 66–70): the error survives any precision ladder, so the instrument
+reported a "measured death line" and the honest operator (me, cycle 16)
+scored five live targets as NOT-CONFIRMED and demanded a new precision law
+before high-t use. Two cycles later the "law" was still sitting there with
+two confirmations and no mechanism; one forced loop destroyed it.
+
+**Signature (the diagnostic fingerprint):** dps-independent O(1) error
+appearing above a sharp height threshold = the height where the summand
+envelope crosses the absolute floor — instrument healthy below it; the
+healthy anchor is what makes the death line look real. **Remedy:** make
+thresholds scale-RELATIVE (running max of |shell|) with a minimum shell
+count, or sum explicitly to a scale-derived cutoff (t-adaptive zcut); and
+the diagnostic discipline — when an instrument dies at height, diff its
+STOPPING RULES against a working instrument at the same height BEFORE
+declaring the death structural. The correct design (relative running-scale
+threshold, minimum shells) was sitting in machine 3's published evaluator
+code, archived by me, undiffed — I compared formulas in cycle 16 and not
+stopping rules. Kill chain: falsified by the dps ladder
+[O(1), dps-independent], located by the zcut-widening + forced-loop test
+[1.35705e−27 at 5 terms → 1.36172e−27 converged vs 0.186 broken at
+t = 84.4669], fixed as zeta2_C and validated seven-of-seven at print
+rounding of m3's table with the certified low-t record bit-unchanged;
+`machine1-amendment-cycle16-death-line-was-my-truncation-bug.md`),
+2026-09-04.
