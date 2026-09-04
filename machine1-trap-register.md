@@ -788,3 +788,24 @@ can be re-run without re-paying the quadrature. Related to #89
 about cross-instrument agreement; #97 is about self-validation that
 never touched the broken branch — and about procedure-composition
 errors that library agreement cannot catch.
+
+### #98 — mpmath `matrix(M, N, [flat scalar list])` silently returns the ZERO matrix
+**(registered 2026-09-04, m1; bit twice in one session before isolation)**
+`mpmath.matrix(3, 1, [mpf(1), mpf(2), mpf(3)])` returns a 3×1 vector of
+`0.0` — no exception, no warning (similarly `matrix(1, 3, [...])`). With
+explicit dimensions, the third argument is interpreted as a list of
+ROW specifications; scalars are not valid rows and collapse to zeros.
+Fingerprint: an entire downstream computation returns exact zeros
+(eigenvalues `0.0`, trace `0.0`) while every component tested in
+isolation is healthy — the same silent-zero signature as #96 but at
+construction time, so the `sorted()` wrap that disarms #96 does not
+help. Cost here: two consecutive "congruence solver returns 0.0"
+sessions spent theorising about eigsy and similarity structure when
+the RHS vectors had never been built. **Remedy:** construct vectors
+and matrices only by (i) `matrix(list-of-row-lists)` (nested), or
+(ii) empty `matrix(m, n)` followed by element assignment
+(`v[i,0] = x`) — the pattern rev-4 used everywhere it worked. Never
+`matrix(M, N, flatlist)`. When a routine returns exact zeros on
+healthy input, print `max|A|` and `trace(A)` of the composed matrix
+BEFORE suspecting the eigensolver; an all-zero operand is a
+constructor bug until proven otherwise.
