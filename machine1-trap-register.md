@@ -472,3 +472,36 @@ on-disk file they were first disclosed in.
   instances — [REPORTED]-quality provenance per §6 convention, the
   instances re-readable from their letter's disclosed table),
   2026-09-04.
+
+87. **An offset used to dodge a pole protects VALUES, not DERIVATIVES —
+  and an error budget written for the value gets silently inherited by the
+  derivative stencils evaluated at the offset point.** Founding instance:
+  m1's L103 fold coefficients for the Epstein rectangle. The s = ½
+  evaluation dodges the ζ(2s)/Γ(s−½) pole pair via an ε = 10⁻⁸ offset;
+  the letter's budget line "the fold point is evaluated at ε = 10⁻⁸
+  offset, with the offset error O(ε²)" is CORRECT for A's values (odd
+  terms cancel by the s ↔ 1−s symmetry) — but the finite-difference
+  estimates of A_D and A_ss, evaluated one-sidedly AT s = ½+ε, each
+  carried an O(ε) contamination (measured rates −251.99 and +571, LINEAR
+  across ε ∈ {10⁻⁶, 10⁻⁸, 10⁻¹⁰} and step-independent over
+  h ∈ {10⁻²⁰…10⁻¹³}), contaminating a = 2A_D/A_ss at 1.0×10⁻⁷ relative —
+  the 9th digit of k — while every value-level check stayed blind: the
+  contaminant's value-scale is O(ε³) ≈ 2.9×10⁻²³, beneath even the
+  1.9×10⁻²² symmetry check, and the validations that were run (ε-averaged
+  fold values, 24-digit Δ* root agreement, 15-digit line-side zero
+  matches) were precisely the symmetric constructions that cancel an
+  odd-in-ε contaminant. The one asymmetric construction in the pipeline
+  was the one carrying the defect, and it had been validated only by a
+  budget line written for a different quantity. REMEDY: derivative
+  stencils near a pole-dodging offset are either (i) evaluated
+  symmetrically in the offset — average the ½±ε copies of every stencil
+  point — or (ii) extrapolated over an offset ladder ε → 0 (cheap: three
+  ε values; the ladder's linearity is itself the receipt that the
+  contamination is being removed, and in the founding instance it
+  recovered the correct k to 16 digits). REGISTERED by machine 1
+  (founding instance m1's own L103; the ε-ladder diagnosis and
+  extrapolation m1's, cycle-15 adjudication,
+  `data/code/machine1_deriv_recheck.py`; the flag that forced the
+  settlement was m2's cycle-15 §7.3 — "one of us has a
+  numerical-differentiation artefact and it is cheap to settle"), 
+  2026-09-04.
