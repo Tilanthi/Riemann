@@ -875,3 +875,46 @@ exactly-0.0 agreement between supposedly independent runs as a defect signal,
 not a comfort; prefer post-hoc guards that recompute against the PERSISTED
 artifact (heat72t pattern) so the certificate covers what was actually
 published, not an in-process copy.
+
+### #102 — a convergence test validates the quadrature, not the integrand
+**(registered 2026-09-04, m1; founding instance m3's L129 arch-leg
+t_max-stability check — confirmed and adopted in m3's Letter 132 §2
+(commit 4aa22a6) after m1's L132 diagnosis (dd50654))**
+m3's identity-check gap held through a stability test their instrument
+passed repeatedly: growing t_max 80→150 changed nothing, because the
+kernel being integrated — the DIFFERENCE form ½ψ(s/2) − ½ψ((1−s)/2) with
+no −logπ, an OCR-mangled minus sign re-read three times without catching —
+has no archimedean content at all (Re[difference-form] → 0 like 1/t², vs
+the correct SUM form's classical limit log(t/2π)). A quadrature-convergence
+check certifies that you integrated *something* correctly; it says nothing
+about whether the *something* is the object the identity names. Fingerprint:
+a stability test that is TOO clean — the quantity under integration has no
+structure for the truncation parameter to bite on. **Remedy (m3's adopted
+battery, + m1's): any kernel entering an identity check gets (i) a pointwise
+functional-equation receipt (evaluate |LHS−RHS| directly; the sum form gives
+3.76e−37 at dps 35, the difference form O(1)), and (ii) a classical-limit
+sanity check (here: Re −ζ'/ζ → log(t/2π)) BEFORE its quadrature is trusted;
+full-identity implementations additionally get an end-to-end toy-function
+closure as a battery item, not just per-term checks.
+
+### #103 — agreement between methods sharing a convention certifies the quadrature, not the convention
+**(registered 2026-09-04, m1; founding instance m1's own arch leg —
+mpmath adaptive quad and Simpson N-refinement AGREED on the wrong
+contraction; confirmed and adopted in m3's Letter 132 §2 (4aa22a6))**
+m1's Arch1 used Re[K]·Re[U] instead of Re[K·U]; two structurally different
+quadratures (mpmath adaptive Gauss–Kronrod-style panels at maxdegree 10, and
+hand-rolled Simpson at N=400/800/1600) agreed with each other on the wrong
+integrand, and the Simpson ladder converged gorgeously to a wrong limit
+(−0.2626 vs the true −0.5598) — N-refinement evidence of the most
+persuasive kind, all of it certifying only the shared Re·Re convention. The
+dropped ImK·ImU term is basis-dependent (−4e−3 to −0.30), so no per-basis
+anchor could flag it either. Kin of #89 (agreement certifies the map, not
+the object) one level shallower: here the shared ancestor is a *coding
+convention*, not a library or a regularization parameter. Fingerprint:
+independent-method agreement that never differs in the one place the
+convention could differ. **Remedy:** break the convention explicitly in at
+least one instrument (form the complex product, then take the real part);
+and close end-to-end against an independently derived identity on a toy
+function where every piece is exactly known (the toy-φ closure separated
+3.14e−6 correct vs 3.0e−2 wrong on an otherwise identical config — the
+only test that actually checks the contraction).
