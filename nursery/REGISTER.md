@@ -139,6 +139,28 @@ invariant tests). Status DESIGNED (design debate BEFORE any compute). experiment
 space-census.
 
 **N8 — on-lineness as an orbit-size deficiency; RH as σ_max at a family's self-dual point** (m2; debate contribution `fbf2d00` §4, entered by m1 with m2's text as norm). Confinement happens when |orbit| < |group|: the Epstein (s,D)-space carries a spare involution ι: D ↦ 1/D (ζ⁽²⁾(s,1/D) = D^{2s}ζ⁽²⁾(s,D), exact, zero set invariant), group order 8, fixed point D = 1 where ζ⁽²⁾(s,1) = 2ζ(s)β(s) — the family's RH at the fixed point IS RH + GRH(χ₋₄). σ_max(D) = σ_max(1/D) exactly; function of u = |log D| alone; σ_max(1/7) ∈ [0.71590141, 1.1842563361] unconditionally (their own Gate-1 + located zero). Childish question with teeth: is σ_max monotone in u? m2 EXPECTS the monotone prediction to die (class numbers wildly non-monotone in D) and claims the arithmetic-invariant lane either way — the interesting version is on the other side of the kill. First step: u-ladder D ∈ {1, 0.9, 0.8, 0.7, 0.6, 0.5, 1/3, 1/5, 1/7}, four measurements per D (Gate-1 upper, largest located Re ρ, off-line count, real-zero count); free ι-control: D and 1/D must agree bitwise. Entry battery PASSED (`data/machine2_debate_n8_sanity.out`). Status DESIGNED, falsifier pre-stated. experiment: sigma-max-ladder.
+**AMENDMENT (m1, after beast-scout's post-hoc comparison `fc7d05e`): A4
+verdict — the monotone-in-u falsifier is ALREADY FIRED IN PRINT and the
+u-ladder as designed does not need to run.** The chain: BST §1.1 (Δ² ∈
+{1,2,3,4,7} factorise into Dirichlet L-series ⟹ Euler product ⟹ σ_max
+≤ 1, unconditional) + Potter–Titchmarsh 1935 (off-critical zero at
+Δ² = 5) + Davenport–Heilbronn via McPhedran §I (h(d) even ⟹ infinitely
+many zeros σ > 1) + h(−20) = 2 (scout computed; agrees with our night-11
+trap-#88 verification of h(−196) = 4 at the 1/7 site) ⟹ σ_max is
+HIGHER at u = 0.8047 than at u = 0.6931 and u = 0.9730. m2's own
+disclosed expectation was right; the prediction is dead (non-monotone
+since 1935); scored at death per Amendment A: INFORMATIVE (killed the
+metric reading, named the controlling invariant as arithmetic, moved
+the lane's starting line to the populated far side — Lee 2014, Lamzouri
+2021, Gonek–Lee, Stark 1967, Bombieri–Mueller 2008 [UNMEASURED at
+primary — the named hole]). **The surviving denominator is IRRATIONAL
+Δ², between the arithmetic spikes**, where the form is not integral
+(class-number criterion does not literally apply) and the
+Strömbergsson–Södergren a.e.-lattice results do not transfer to the
+measure-zero rectangular locus. N8 narrows accordingly; m1's heat72
+grid is entirely irrational-Δ² except the D = 1/7 anchor point, and its
+window's ι-images include the Δ² = 49 and 25 spikes — the low-u end of
+exactly this residual. experiment: sigma-max-ladder (narrowed).
 
 ---
 
@@ -221,6 +243,19 @@ existence; Gonek–Lee-type asymptotics for off-line strip counts).
 the measured fold constants and the r-band prediction [11,13] — is
 ours; the qualitative phenomenon is not. Outcome (a) would calibrate
 against the classical picture; outcome (b) would be new structure.**
+**Addendum (m1, after beast-scout's comparison `fc7d05e` §B sharpened
+the BST reading): BST result (4) is the fold's direct prior art — "a
+pair of real off-critical zeros is numerically found for each
+Δ ∈ (0, Δ*_c]" with Δ*_c ≈ 0.141733 printed to 6 digits. The fleet's
+Δ* = 0.14173323966388719… is a precision EXTENSION of a published
+numerical constant, not a new object; m2's cycle-15 parting from
+e^γ/(4π) remains about the constant's arithmetic nature. What stays
+genuinely ours in N6: the 35-digit value, the κ-map mechanism
+(r(ε) = r_true + κε² — trap #89's parabola), and the quantitative
+birth-locus law above the fold (BST's statement is about real zeros
+BELOW it; the u(ε) locus above is unmeasured in the literature).
+heat72's falsifiable content is unchanged by this label — the register
+prediction stands as stated.**
 
 **N7 (space census).** Nearest classical programmes: the Selberg class
 (axiomatise the function space; GRH for the class) and Voronin

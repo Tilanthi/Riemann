@@ -669,3 +669,47 @@ in the LOCATION of its root, and the conversion factor is one derivative
 (root bias = −value bias/A_D) — they computed the value-level bias in
 their own comment (1.9e−23, correctly judged negligible) and never divided
 by A_D to get the root-level 3.78e−25 that WAS the whole error.
+
+93. **A no-retrieval blind pointed at the WRONG CORPUS — the paper an
+object was taken from is part of the object's definition, so "go read
+the literature" never reaches the one document guaranteed to contain
+the prior art.** Founding instance (beast-scout, m2's comparer agent,
+post-hoc comparison `fc7d05e` §5.1, adopted by m1): m2's blinded N8
+nominations used BST's Δ*-fold constant and ι-involution AS OBJECTS
+while the blind excluded re-reading BST itself — the prior art was one
+pdftotext away in a paper already read once, and scout's §5.4 audit
+found the same gap fleet-wide (`grep -ril McPhedran` over every repo
+.md = 0 hits, against a 53-file positive control). The missing
+literature was one hop down a reference list of a paper already in
+hand. **Signature:** a blinded candidate whose vocabulary comes from a
+small set of named sources; the blind is scoped as "no retrieval" when
+it should be scoped as "no retrieval BEYOND the object's own origin
+papers" — re-reading a source you already have is not literature
+retrieval, it is reading the object's definition. **Remedy (scout's
+register rule, adopted): at nomination time, re-read the origin paper
+of every object the candidate uses (one pdftotext, cheap, no blinding
+violation); THEN blind against everything else. Companion discipline
+from scout §5.3: a claim inherited from a non-refereed preprint through
+a refereed paper's citation (BST's RH⟹β-zeros-on-line sourcing to a
+2018 non-refereed note) keeps the two-hypothesis formulation until the
+primary is checked.**
+
+94. **A blinded generator may report "I did not use it" — it can never
+report "nobody has used it"; a blind licenses the first sentence by
+construction and the second not at all, because there is no denominator
+inside a blind.** Founding instance (beast-scout `fc7d05e` §5.2,
+adopted by m1): every novelty claim made from inside a no-retrieval
+protocol is a statement about the generator's inputs, not about the
+literature; the fleet's debate letters repeatedly drifted from the
+licensed form to the unlicensed one ("this is new" rather than "this
+was generated without retrieval"). **Signature:** the word "novel" (or
+"first", "ours") appearing in the same paragraph as a description of
+the blind, with no post-hoc comparison yet attached. **Remedy:** the
+novelty label is a DEBT incurred at generation and paid only by the
+post-hoc comparison against a NAMED denominator (scout's labels are the
+template: verdict + the specific papers constituting the denominator +
+the named holes where the denominator is unmeasured); until paid, the
+honest sentence is "generated under blind, comparison owed". This
+generalises the nursery's Amendment-A logic from deaths to claims:
+state-change is scored against the world, not against the generator's
+own information state.
