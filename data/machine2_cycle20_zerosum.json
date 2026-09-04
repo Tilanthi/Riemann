@@ -1,0 +1,119 @@
+{
+ "TMAX": 30,
+ "rows": [
+  {
+   "carrier": "K1_zeta",
+   "label": "zeta(s)",
+   "n_online_zeros_below_30": 3,
+   "first_online_zero_t": "14.1347251417",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 9.713831658540712e-05,
+   "pred_capped": 9.713831658540712e-05,
+   "measured_rel_con_N48": 6.127542986858493e-05,
+   "ratio_pred_over_meas": 1.5852735230701107
+  },
+  {
+   "carrier": "K2_zeta_synth",
+   "label": "zeta(s)(1-2^{0.55-s})",
+   "n_online_zeros_below_30": 3,
+   "first_online_zero_t": "14.1347251417",
+   "offline_or_unrefined_found": [
+    "(0.55 + 9.064720284j)",
+    "(0.55 + 18.12944057j)",
+    "(0.55 + 27.19416085j)"
+   ],
+   "pred_zero_sum": 9.713831658540712e-05,
+   "pred_capped": 9.713831658540712e-05,
+   "measured_rel_con_N48": 0.7365013436439687,
+   "ratio_pred_over_meas": 0.00013189156737284196
+  },
+  {
+   "carrier": "K3_epstein_D7",
+   "label": "Epstein Delta=1/7 (D=7)",
+   "n_online_zeros_below_30": 32,
+   "first_online_zero_t": "0.0546145847402",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 5.35896824695652,
+   "pred_capped": 1.0,
+   "measured_rel_con_N48": 0.9437358387644459,
+   "ratio_pred_over_meas": 1.0596185488825094
+  },
+  {
+   "carrier": "K4_epstein_Dsqrt50",
+   "label": "Epstein Delta=1/sqrt50",
+   "n_online_zeros_below_30": 31,
+   "first_online_zero_t": "2.24220883795",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.09717171266942251,
+   "pred_capped": 0.09717171266942251,
+   "measured_rel_con_N48": 0.9468988773771301,
+   "ratio_pred_over_meas": 0.10262100314088876
+  },
+  {
+   "carrier": "K5_Lm4",
+   "label": "L(s,chi_{-4})",
+   "n_online_zeros_below_30": 10,
+   "first_online_zero_t": "6.0209489047",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.0026124577348979098,
+   "pred_capped": 0.0026124577348979098,
+   "measured_rel_con_N48": 0.0011079054760850858,
+   "ratio_pred_over_meas": 2.3580150033460763
+  },
+  {
+   "carrier": "K6_zeta_L5",
+   "label": "zeta(s)L(s,chi_5) = zeta_{Q(sqrt5)}",
+   "n_online_zeros_below_30": 14,
+   "first_online_zero_t": "6.64845334473",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.0021384172006575623,
+   "pred_capped": 0.0021384172006575623,
+   "measured_rel_con_N48": 0.053445687676952854,
+   "ratio_pred_over_meas": 0.04001103351093567
+  },
+  {
+   "carrier": "K7_Lm4_L5",
+   "label": "L(s,chi_{-4})L(s,chi_5)",
+   "n_online_zeros_below_30": 21,
+   "first_online_zero_t": "6.0209489047",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.004653736618970065,
+   "pred_capped": 0.004653736618970065,
+   "measured_rel_con_N48": 0.034338975021821545,
+   "ratio_pred_over_meas": 0.13552345741282998
+  },
+  {
+   "carrier": "K8_epstein_D1",
+   "label": "Epstein Delta=1 = zeta(s)L(s,chi_{-4})",
+   "n_online_zeros_below_30": 13,
+   "first_online_zero_t": "6.0209489047",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.0027095960514833166,
+   "pred_capped": 0.0027095960514833166,
+   "measured_rel_con_N48": 0.0011811153311599074,
+   "ratio_pred_over_meas": 2.2940994668339236
+  },
+  {
+   "carrier": "K9_DH",
+   "label": "Davenport-Heilbronn (1,k,-k,-1,0)",
+   "n_online_zeros_below_30": 10,
+   "first_online_zero_t": "5.09415984457",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.004810398592875886,
+   "pred_capped": 0.004810398592875886,
+   "measured_rel_con_N48": 0.001908239500884705,
+   "ratio_pred_over_meas": 2.520856837229117
+  },
+  {
+   "carrier": "K10_Lm7_L28",
+   "label": "L(s,chi_{-7})L(s,chi_{28}) = genus difference, disc -196",
+   "n_online_zeros_below_30": 29,
+   "first_online_zero_t": "2.77728324208",
+   "offline_or_unrefined_found": [],
+   "pred_zero_sum": 0.054612767815662135,
+   "pred_capped": 0.054612767815662135,
+   "measured_rel_con_N48": 0.024556815156935117,
+   "ratio_pred_over_meas": 2.223935289110114
+  }
+ ]
+}

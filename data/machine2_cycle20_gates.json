@@ -1,0 +1,231 @@
+{
+ "gates": [
+  {
+   "key": "K1_zeta",
+   "label": "zeta(s)",
+   "pole": true,
+   "degree": 1,
+   "offline_zeros": "no",
+   "note": "cycle-19 anchor",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "1.000000006",
+   "gateP": "PASS",
+   "gateE_digits": [
+    18.72,
+    26.06,
+    99.0
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K2_zeta_synth",
+   "label": "zeta(s)(1-2^{0.55-s})",
+   "pole": true,
+   "degree": 1,
+   "offline_zeros": "yes (sigma=0.55)",
+   "note": "cycle-19 anchor",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "0.2679571586",
+   "gateP": "PASS",
+   "gateE_digits": [
+    19.28,
+    26.63,
+    99.0
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K3_epstein_D7",
+   "label": "Epstein Delta=1/7 (D=7)",
+   "pole": true,
+   "degree": 2,
+   "offline_zeros": "yes (7 known, sigma in (1/2,1))",
+   "note": "cycle-19 anchor",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "0.2243994825",
+   "gateP": "PASS",
+   "gateE_digits": [
+    19.34,
+    26.69,
+    31.41
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K4_epstein_Dsqrt50",
+   "label": "Epstein Delta=1/sqrt50",
+   "pole": true,
+   "degree": 2,
+   "offline_zeros": "yes (fold pair real)",
+   "note": "cycle-19 anchor",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "0.2221441542",
+   "gateP": "PASS",
+   "gateE_digits": [
+    19.34,
+    26.68,
+    31.11
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K5_Lm4",
+   "label": "L(s,chi_{-4})",
+   "pole": false,
+   "degree": 1,
+   "offline_zeros": "no",
+   "note": "NEW",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "7.853981653e-9",
+   "gateP": "PASS",
+   "gateE_digits": [
+    21.91,
+    29.13,
+    99.0
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K6_zeta_L5",
+   "label": "zeta(s)L(s,chi_5) = zeta_{Q(sqrt5)}",
+   "pole": true,
+   "degree": 2,
+   "offline_zeros": "no",
+   "note": "NEW",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "0.430408947",
+   "gateP": "PASS",
+   "gateE_digits": [
+    19.07,
+    26.42,
+    30.4
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K7_Lm4_L5",
+   "label": "L(s,chi_{-4})L(s,chi_5)",
+   "pole": false,
+   "degree": 2,
+   "offline_zeros": "no",
+   "note": "NEW  * separator",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "3.380423954e-9",
+   "gateP": "PASS",
+   "gateE_digits": [
+    20.56,
+    27.77,
+    30.4
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K8_epstein_D1",
+   "label": "Epstein Delta=1 = zeta(s)L(s,chi_{-4})",
+   "pole": true,
+   "degree": 2,
+   "offline_zeros": "no",
+   "note": "NEW",
+   "a1_raw": "2.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "0.7853981699",
+   "gateP": "PASS",
+   "gateE_digits": [
+    18.82,
+    26.17,
+    99.0
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K9_DH",
+   "label": "Davenport-Heilbronn (1,k,-k,-1,0)",
+   "pole": false,
+   "degree": 1,
+   "offline_zeros": "yes, incl. sigma>1",
+   "note": "NEW",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "9.228018752e-9",
+   "gateP": "PASS",
+   "gateE_digits": [
+    21.8,
+    28.98,
+    30.4
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K10_Lm7_L28",
+   "label": "L(s,chi_{-7})L(s,chi_{28}) = genus difference, disc -196",
+   "pole": false,
+   "degree": 2,
+   "offline_zeros": "no",
+   "note": "NEW  * separator",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "1.242571428e-8",
+   "gateP": "PASS",
+   "gateE_digits": [
+    20.45,
+    27.65,
+    30.23
+   ],
+   "gateE": "PASS"
+  },
+  {
+   "key": "K11_form_disc23",
+   "label": "Epstein zeta of the non-principal form (2,1,3), disc -23",
+   "pole": false,
+   "degree": 2,
+   "offline_zeros": "unknown",
+   "note": "gate control, expect KILL by Gate A",
+   "a1_raw": "0.0",
+   "gateA": "KILL"
+  },
+  {
+   "key": "K12_zeta_squared",
+   "label": "zeta(s)^2",
+   "pole": true,
+   "degree": 2,
+   "offline_zeros": "no",
+   "note": "gate control, expect KILL by Gate P (double pole)",
+   "a1_raw": "1.0",
+   "gateA": "PASS",
+   "pole_probe_(s-1)F": "100000001.2",
+   "gateP": "KILL"
+  }
+ ],
+ "kills": {
+  "A": 1,
+  "P": 1,
+  "E": 0
+ },
+ "extra": {
+  "K8_epstein_identity_reldiff": "5.08508e-32",
+  "K10_genus_identity_mismatches_to_800": 0,
+  "K10_first_mismatches": [],
+  "K10_c1_equals_c3_(inverse pair)": true,
+  "residues_measured_as_(s-1)F(1+1e-8)": {
+   "K1_zeta": "1.000000006",
+   "K2_zeta_synth": "0.2679571586",
+   "K3_epstein_D7": "0.2243994825",
+   "K4_epstein_Dsqrt50": "0.2221441542",
+   "K5_Lm4": "7.853981653e-9",
+   "K6_zeta_L5": "0.430408947",
+   "K7_Lm4_L5": "3.380423954e-9",
+   "K8_epstein_D1": "0.7853981699",
+   "K9_DH": "9.228018752e-9",
+   "K10_Lm7_L28": "1.242571428e-8",
+   "K11_form_disc23": null,
+   "K12_zeta_squared": "100000001.2"
+  }
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "all:\"Nyman-Beurling\" AND all:zeros": {
+  "status": 200,
+  "n": 7,
+  "titles": [
+   "An extremal problem related to generalizations of the Nyman-Beurling and B\u00e1ez-Duarte criteria",
+   "Orthogonality questions in the Hardy space related to $\u03b6$-zeros",
+   "A lower bound in an approximation problem involving the zeros of the Riemann zeta function",
+   "On the Connection Between Riemann Hypothesis and a Special Class of Neural Networks",
+   "Generalizations of a cotangent sum associated to the Estermann zeta function",
+   "A note on Nyman's equivalent formulation of the Riemann Hypothesis",
+   "A criterion related to the Riemann Hypothesis"
+  ]
+ },
+ "all:\"Beurling-Nyman\" AND all:\"Dirichlet series\"": {
+  "status": 200,
+  "n": 1,
+  "titles": [
+   "Zero free regions for Dirichlet series"
+  ]
+ },
+ "abs:\"Nyman-Beurling\" AND abs:weight": {
+  "status": 200,
+  "n": 2,
+  "titles": [
+   "Inequality and Nyman-Beurling-Baez-Duarte criteria",
+   "On a Hilbert Space Reformulation of Riemann Hypothesis"
+  ]
+ },
+ "crossref:Nyman-Beurling criterion zeros distance": {
+  "status": 200,
+  "titles": [
+   "A teoria de Nyman-Beurling em espa\u00e7os de Hardy",
+   "On the Nyman-Beurling criterion for the Riemann hypothesis",
+   "On probabilistic generalizations of the Nyman-Beurling criterion for the zeta function",
+   "Polynomial approximations in a generalized Nyman\u2013Beurling criterion",
+   "On a Category of Cotangent Sums Related to the Nyman-Beurling Criterion for the Riemann Hypothesis",
+   "The Maximum of Cotangent Sums Related to the Nyman-Beurling Criterion for the Riemann Hypothesis",
+   "Estimates of sums related to the Nyman\u2013Beurling criterion for the Riemann Hypothesis",
+   "Explicit estimates of sums related to the Nyman\u2013Beurling criterion for the Riemann Hypothesis"
+  ]
+ },
+ "crossref:Beurling-Nyman approximation Epstein zeta": {
+  "status": 200,
+  "titles": [
+   "A teoria de Nyman-Beurling em espa\u00e7os de Hardy",
+   "On probabilistic generalizations of the Nyman-Beurling criterion for the zeta function",
+   "Spectral and Analytic Structure of the Nyman\u2013Beurling\u2013B\u00e1ez\u2013Duarte Approximation",
+   "On Joint Approximation of Analytic Functions by Beurling Zeta-Functions",
+   "The Denseness of the Closure of Some Nyman\u2013Beurling Linear Manifolds Implies the Absence of Zeroes of Certain ",
+   "A abordagem de Nyman-Beurling para a hip\u00f3tese de Riemann",
+   "On Value Distribution of Certain Beurling Zeta-Functions",
+   "On Universality of Some Beurling Zeta-Functions"
+  ]
+ },
+ "semanticscholar_graph_api": {
+  "status": 429,
+  "body": "HTTP Error 429: "
+ }
+}

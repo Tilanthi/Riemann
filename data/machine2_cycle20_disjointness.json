@@ -1,0 +1,151 @@
+{
+ "m2_artefacts_swept": 131,
+ "carriers": {
+  "K1_zeta": {
+   "mentioned_in": [
+    "data/machine2_cycle19_nb_results.json"
+   ],
+   "n_mentions": 1,
+   "previously_RUN_in_a_distance_run": [
+    "data/machine2_cycle19_nb_results.json"
+   ],
+   "status": "ANCHOR (deliberate re-run)"
+  },
+  "K2_zeta_synth": {
+   "mentioned_in": [
+    "data/code/machine2_cycle19_nb_distance.py"
+   ],
+   "n_mentions": 1,
+   "previously_RUN_in_a_distance_run": [
+    "data/machine2_cycle19_nb_results.json"
+   ],
+   "status": "ANCHOR (deliberate re-run)"
+  },
+  "K3_epstein_D7": {
+   "mentioned_in": [
+    "data/code/machine2_cycle15_fold_runs.py",
+    "data/code/machine2_cycle16_disjointness.py",
+    "data/code/machine2_cycle16_eval2.py",
+    "data/code/machine2_cycle16_verify_zeros.py",
+    "data/code/machine2_cycle17_fe_check.py",
+    "data/code/machine2_cycle17_lowt.py",
+    "data/code/machine2_cycle19_eval_epstein.py",
+    "data/machine2_cycle15_stage5.out",
+    "data/machine2_cycle15_stage6.out",
+    "data/machine2_cycle16_disjointness.json",
+    "data/machine2_cycle16_zeros_verified.out",
+    "data/machine2_cycle17_census.json",
+    "data/machine2_cycle19_conditioning_probe.log",
+    "machine2-cycle19-nb-floor-measured-and-the-zoo-carriers-do-not-separate-2026-09-04.md"
+   ],
+   "n_mentions": 14,
+   "previously_RUN_in_a_distance_run": [
+    "data/machine2_cycle19_nb_results.json"
+   ],
+   "status": "ANCHOR (deliberate re-run)"
+  },
+  "K4_epstein_Dsqrt50": {
+   "mentioned_in": [
+    "data/code/machine2_cycle19_eval_epstein.py",
+    "data/machine2_cycle15_fold_results5.json"
+   ],
+   "n_mentions": 2,
+   "previously_RUN_in_a_distance_run": [
+    "data/machine2_cycle19_nb_results.json"
+   ],
+   "status": "ANCHOR (deliberate re-run)"
+  },
+  "K5_Lm4": {
+   "mentioned_in": [],
+   "n_mentions": 0,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW (no prior mention)"
+  },
+  "K6_zeta_L5": {
+   "mentioned_in": [],
+   "n_mentions": 0,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW (no prior mention)"
+  },
+  "K7_Lm4_L5": {
+   "mentioned_in": [],
+   "n_mentions": 0,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW (no prior mention)"
+  },
+  "K8_epstein_D1": {
+   "mentioned_in": [
+    "data/code/machine2_cycle15_epstein_fold.py",
+    "data/code/machine2_debate_n8_sanity.py",
+    "data/machine2_debate_n8_sanity.out"
+   ],
+   "n_mentions": 3,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW as a distance-run carrier (mentioned before, never run)"
+  },
+  "K9_DH": {
+   "mentioned_in": [
+    "data/code/machine2_cycle16_classnum.py",
+    "data/code/machine2_cycle16_run_ext.py",
+    "data/code/machine2_cycle16_verify_zeros.py",
+    "data/machine2_cycle13_checks.py",
+    "data/machine2_zoo_floor.txt",
+    "machine2-ERRATUM-8-zoo-decay-consequence-withdrawn.md",
+    "machine2-consensus-opinion-to-machine1.md",
+    "machine2-cycle11-box-surf-candidate1-audit-2026-09-03.md",
+    "machine2-cycle12-citation-sweep-and-kappa-reproduction-2026-09-03.md",
+    "machine2-cycle14-l100-equivalence-verdict-and-section33-ruling.md",
+    "machine2-cycle15-l105-epstein-fold-answer.md",
+    "machine2-cycle16-void-wedge-census-and-seven-off-line-zeros.md",
+    "machine2-cycle17-certified-zero-census-delta-one-seventh-2026-09-04.md",
+    "machine2-cycle19-nb-floor-measured-and-the-zoo-carriers-do-not-separate-2026-09-04.md",
+    "machine2-debate-contribution-orbit-size-and-owning-deltastar.md",
+    "machine2-kappa-codes.md",
+    "machine2-lemma5-analogue-transfer-2026-09-03.md",
+    "machine2-postcomparison-n8-orbit-size-sigma-max-20260904.md",
+    "machine2-rediscovery-rate-2026-09-03.md",
+    "machine2-reply-to-astra-pa-letter1-2026-09-02.md",
+    "machine2-reply3-to-mac-2026-09-02.md"
+   ],
+   "n_mentions": 21,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW as a distance-run carrier (mentioned before, never run)"
+  },
+  "K10_Lm7_L28": {
+   "mentioned_in": [],
+   "n_mentions": 0,
+   "previously_RUN_in_a_distance_run": [],
+   "status": "NEW (no prior mention)"
+  }
+ },
+ "weights": {
+  "W1 = 1/s": {
+   "mentioned_in": [
+    "data/code/machine2_cycle19_nb_distance.py",
+    "machine2-cycle19-nb-floor-measured-and-the-zoo-carriers-do-not-separate-2026-09-04.md"
+   ],
+   "n": 2
+  },
+  "W2 = 1/(s(s+1))": {
+   "mentioned_in": [
+    "data/code/machine2_cycle19_nb_distance.py",
+    "data/machine2_cycle19_nb_results.json",
+    "machine2-cycle19-nb-floor-measured-and-the-zoo-carriers-do-not-separate-2026-09-04.md"
+   ],
+   "n": 3
+  },
+  "W3 = 1/(s(s+1)(s+2))": {
+   "mentioned_in": [
+    "data/code/machine2_cycle19_nb_distance.py",
+    "data/machine2_cycle19_nb_results.json",
+    "machine2-cycle19-nb-floor-measured-and-the-zoo-carriers-do-not-separate-2026-09-04.md"
+   ],
+   "n": 3
+  },
+  "SL sliding, mass at t=+-T0": {
+   "mentioned_in": [],
+   "n": 0
+  }
+ },
+ "prior_artefacts_with_off_zero_weight_mass": []
+}
