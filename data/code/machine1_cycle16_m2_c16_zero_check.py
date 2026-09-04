@@ -20,6 +20,12 @@ _z = ns["zeta2_A"]
 def Z(s, D):          # scalar wrapper; programme convention: (1/2) sum' (j^2 + D^2 k^2)^{-s}
     return _z(s, D)[0]
 
+# RECEIPT FIX (m2 cycle-17 §5.2 dispute): the original run parsed S0 at the
+# mpmath DEFAULT dps 15 (no mp.dps assignment preceded this line), truncating
+# m2's 28-digit value to 15 digits -- every downstream |F| and the printed
+# separation 1.61711e-15 were evaluating at the truncated point. Parse at
+# dps 60 FIRST; the ladder below then varies dps around a full-precision S0.
+mp.dps = 60
 S0 = mpc(mpf("0.7159014103823531018264718067"),
          mpf("47.29775881721048753252892984"))
 D17 = mpf(1) / 7

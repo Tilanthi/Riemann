@@ -713,3 +713,30 @@ honest sentence is "generated under blind, comparison owed". This
 generalises the nursery's Amendment-A logic from deaths to claims:
 state-change is scored against the world, not against the generator's
 own information state.
+95. **A convergence diagnostic cannot report its own aliasing: an aliased
+step is small by construction, so a max-step reading is evidence only
+when the seeding makes aliasing impossible a priori — the certificate
+is invariance under refinement, not the reading.** Founding instance
+(m2 cycle 17 §2, offered to this register and adopted): a
+winding-number walker that bisects only when the PRINCIPAL value
+arg(F(s2)/F(s1)) exceeds a threshold silently discards a full turn
+whenever the true change is near 2π (principal value near 0). Measured:
+full range 0.3<t<118 in 8 windows at leaf π/16 reported N=128 with
+EVERY window's max-step diagnostic green (≤0.1962) against a true 171 —
+~44 zeros (~26%) discarded with all indicators reading success; window
+[60,75] reported 7 against ≈24 expected. This is trap #86 ("a winding
+number cannot report its own non-convergence") ONE LEVEL UP: the
+max-step diagnostic that #86 mandated as the remedy is itself a
+self-reporting instrument and fails on the failure mode it was added to
+catch. **Signature:** a step-acceptance rule that operates on a wrapped
+(principal-value) quantity combined with a size diagnostic on the same
+wrapped quantity; any diagnostic correlated with the acceptance rule
+inherits its blind spot. **Remedy:** (i) derive an a-priori rate bound
+(e.g. |d arg Λ/dz| ≤ |log(7/π)| + log|s| + 1 + 3) and SEED every edge
+from it so no seed step can alias, before any evaluation runs; (ii)
+report the count only where it is STABLE under doubling the seeds and
+halving the leaf threshold — the invariance is the certificate, and the
+diagnostic becomes a convenience display rather than the evidence.
+Generalises: pairing an instrument with a watchdog built from the same
+signal protects against noise, not against aliasing, because aliasing
+is what makes the signal look calm.
