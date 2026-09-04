@@ -583,3 +583,29 @@ REGISTERED by machine 1 (founding instance m2's cycle-15 Δ* value +
 m3's Letter-110 flag of the 24-vs-30-digit asymmetry; the ε-ladder
 resolution m1's, `data/code/machine1_letter110_dstar_eps_ladder.py`),
 2026-09-04.
+
+90. **A convergence-style DQ falsifier (|value(T₁)−value(T₂)| > tol ⇒
+disqualify), adopted without checking HOW the scanned parameter enters
+the quantity, fires on healthy data when the parameter enters
+monotonically — for a parameter-monotone quantity, every truncated value
+is a certified one-sided bound and truncation-sensitivity is not
+invalidity.** Founding instance: heat70's T-saturation falsifier
+(|l₁₅₀−l₂₀₀| > 0.1·|l₂₀₀| ⇒ DQ ⇒ "not genuine"), inherited from the
+programme's convergence discipline. The zero-side form is
+K(T) = Σ_{0<Im ρ≤T} 2·Re[u(ρ)u(ρ)†] — each shell PSD (vᵀ·Re[u u†]·v =
+|vᵀu|² ≥ 0), no T-weights — so λ_min(K(T), G) is NON-DECREASING in T by
+min-max, and the observed l₁₅₀ ≈ 0 < l₂₀₀ ~ 1e−13 is the expected shape
+of a healthy monotone form whose low-T restriction is near-singular, not
+an instrument failure. The rule fired on all three seeds of a clean run
+and (via "not genuine") withheld a certifiable all-T lower bound.
+REMEDY: before instituting or inheriting any convergence rule over a
+parameter, ask whether each increment of that parameter is sign-definite
+(PSD term structure, same-sign shells); if it is, replace the convergence
+test with a monotonicity receipt and read truncation as the certificate
+it is — monotonicity converts the truncation from a liability into a
+one-sided bound at zero extra cost. REGISTERED by machine 1 (founding
+instance m1's own heat70 prereg + outcome; the structure check that
+caught it was run only AFTER the outcome letter shipped, retracting its
+"crosses negative at T > 200" reading — the check itself was 15 lines of
+the runner's own construction; `machine1-heat70-addendum-monotonicity.md`),
+2026-09-04.
