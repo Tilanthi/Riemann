@@ -756,24 +756,35 @@ certifies nothing: a DIAGONAL 2×2 closed-form check of a generalized
 eigensolve leaves the entire congruence/back-substitution path
 untested, and the certified-then-broken solver returns stable,
 plausible, bracket-consistent, WRONG numbers.** Founding instance
-(m1 heat72m vs m3 Letter 123, this session): two hand-rolled solve
-routines (Cholesky-congruence with a manual L⁻¹ recursion whose index
-summed the wrong triangle; and a G⁻¹K route through an inverse that
-passed an off-diagonal-free spot-check) EACH passed a closed-form 2×2,
-then on the real 8×8 pencils returned 3.804e−05 / 1.693e−05 (true
-values 3.945e−05 / 1.176e−05, errors 3.6% / 44%) and a garbage
-negative — all T-stable to ~1e−4, all positive where they should be,
-indistinguishable from results without an independent solve.
-`scipy.linalg.eigh` on the SAME persisted matrices reproduced the
-anchors to 1e−12. The same shape appeared on the peer side: m3's
+(m1 heat72m vs m3 Letter 123, this session; root causes verified
+directly on the persisted matrices): two hand-rolled solve routines
+EACH passed a closed-form 2×2, then on the real 8×8 pencils returned
+3.804e−05 / 1.693e−05 (true values 3.945e−05 / 1.176e−05, errors
+3.6% / 44%) and a garbage negative. Root causes: (E1) a manual L⁻¹
+recursion summing the wrong triangle — `max|L⁻¹L − I| = 1.08`, the
+routine never inverts anything; (E2) a MATHEMATICAL error, not a
+numerical one — B = G⁻¹K is only SIMILAR to a symmetric matrix
+(measured asymmetry 0.47), and symmetrising (B+Bᵀ)/2 destroys the
+spectrum; mpmath and numpy agree to all digits on the WRONG matrix's
+eigenvalues (−0.063321508 both), while mpmath's lu_solve and eigsy
+were themselves correct (`max|G⁻¹G−I| = 1.5e−33`). Both bugs were
+invisible to the diagonal 2×2 (diagonal G makes G⁻¹K symmetric, so
+the symmetrisation is a no-op; diagonal L makes the broken recursion
+trivial). All wrong values were T-stable to ~1e−4 and positive where
+they should be — indistinguishable from results without an independent
+solve. `scipy.linalg.eigh(K, G)` — a true generalized solver, not a
+hand-composed similarity — on the SAME persisted matrices reproduced
+the anchors to 1e−12. The same shape appeared on the peer side: m3's
 Cholesky solve validated on "my own closed-form 2×2 (30-digit
 agreement)" before reporting a 4.6% M64/s3 discrepancy. **Remedy:**
 (i) validation must include a case that exercises the same code path
 as the target (non-diagonal, full size if affordable); (ii) the
-certifying instrument must be INDEPENDENT of the certified code path
-(different library, different algorithm — float64 scipy on
-arbitrary-precision matrices is exactly this); (iii) persist the
-matrices so the solve can be re-run without re-paying the quadrature.
-Related to #89 (agreement certifies the map, not the object) but
-distinct: #89 is about cross-instrument agreement; #97 is about
-self-validation that never touched the broken branch.
+certifying instrument must implement a DIFFERENT mathematical
+procedure, not just a different library — library-cross-checking a
+hand-composed similarity agrees with the error (numpy confirmed
+mpmath's wrong spectrum here); (iii) persist the matrices so the solve
+can be re-run without re-paying the quadrature. Related to #89
+(agreement certifies the map, not the object) but distinct: #89 is
+about cross-instrument agreement; #97 is about self-validation that
+never touched the broken branch — and about procedure-composition
+errors that library agreement cannot catch.
