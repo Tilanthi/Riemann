@@ -1,0 +1,40 @@
+METHOD B Lipschitz: sampled sup|F'| = 16.22248 over 900 pts; L = 1.6*sup = 25.95596  (9s)
+
+METHOD B  modulus exclusion on Re[0.5200,1.1843] x Im[20,43], area 15.27790
+   depth 0  cell 0.16606  cells=460    certified-empty=0      survive=460   area_certified=0.00000
+   depth 1  cell 0.08303  cells=1840   certified-empty=128    survive=1712  area_certified=1.06281
+   depth 2  cell 0.04152  cells=6848   certified-empty=4577   survive=2271  area_certified=9.50094
+   depth 3  cell 0.02076  cells=9084   certified-empty=8716   survive=368   area_certified=4.52317
+   depth 4  cell 0.01038  cells=1472   certified-empty=1343   survive=129   area_certified=0.17424
+   depth 5  cell 0.00519  cells=516    certified-empty=511    survive=5     area_certified=0.01657
+   depth 6  cell 0.00259  cells=20     certified-empty=20     survive=0     area_certified=0.00016
+   TOTAL certified-empty area = 15.27790 of 15.27790 (100.0000%);  UNCERTIFIED = 0.000000  [20240 evals, 101s]
+
+METHOD A  whole box: zeros=0 verdict=CERTIFIED  max|dArg|=0.30052 (cap 0.78540)  max step ratio=0.49859 (cap 0.50)
+          min|F| on contour=0.090065  contour pts=1274  evals=1275  refine depth=3  uncertified steps=0  raw=-0.000000000  [7s]
+   sub Im[20,21]: zeros=0     CERTIFIED  max|dArg|=0.3793 ratio=0.4402 min|F|=0.11215 pts=204
+   sub Im[21,22]: zeros=0     CERTIFIED  max|dArg|=0.3788 ratio=0.4012 min|F|=0.11009 pts=208
+   sub Im[22,23]: zeros=0     CERTIFIED  max|dArg|=0.3152 ratio=0.4514 min|F|=0.28135 pts=200
+   sub Im[23,24]: zeros=0     CERTIFIED  max|dArg|=0.3720 ratio=0.3985 min|F|=0.12197 pts=208
+   sub Im[24,25]: zeros=0     CERTIFIED  max|dArg|=0.3782 ratio=0.4382 min|F|=0.09101 pts=204
+   sub Im[25,26]: zeros=0     CERTIFIED  max|dArg|=0.3766 ratio=0.4503 min|F|=0.11611 pts=204
+   sub Im[26,27]: zeros=0     CERTIFIED  max|dArg|=0.3770 ratio=0.4357 min|F|=0.15255 pts=208
+   sub Im[27,28]: zeros=0     CERTIFIED  max|dArg|=0.3759 ratio=0.4448 min|F|=0.17213 pts=204
+   sub Im[28,29]: zeros=0     CERTIFIED  max|dArg|=0.3761 ratio=0.4157 min|F|=0.15102 pts=204
+   sub Im[29,30]: zeros=0     CERTIFIED  max|dArg|=0.3764 ratio=0.4843 min|F|=0.09161 pts=207
+   sub Im[30,31]: zeros=0     CERTIFIED  max|dArg|=0.3761 ratio=0.4088 min|F|=0.13130 pts=204
+   sub Im[31,32]: zeros=0     CERTIFIED  max|dArg|=0.3756 ratio=0.4263 min|F|=0.24277 pts=204
+   sub Im[32,33]: zeros=0     CERTIFIED  max|dArg|=0.3672 ratio=0.4905 min|F|=0.11863 pts=207
+   sub Im[33,34]: zeros=0     CERTIFIED  max|dArg|=0.3754 ratio=0.4233 min|F|=0.12970 pts=204
+   sub Im[34,35]: zeros=0     CERTIFIED  max|dArg|=0.3704 ratio=0.4371 min|F|=0.12982 pts=208
+   sub Im[35,36]: zeros=0     CERTIFIED  max|dArg|=0.3747 ratio=0.4183 min|F|=0.17526 pts=204
+   sub Im[36,37]: zeros=0     CERTIFIED  max|dArg|=0.3746 ratio=0.4126 min|F|=0.20506 pts=204
+   sub Im[37,38]: zeros=0     CERTIFIED  max|dArg|=0.3721 ratio=0.4815 min|F|=0.11234 pts=206
+   sub Im[38,39]: zeros=0     CERTIFIED  max|dArg|=0.3747 ratio=0.4774 min|F|=0.10848 pts=206
+   sub Im[39,40]: zeros=0     CERTIFIED  max|dArg|=0.3691 ratio=0.4321 min|F|=0.13046 pts=208
+   sub Im[40,41]: zeros=0     CERTIFIED  max|dArg|=0.3627 ratio=0.4941 min|F|=0.24085 pts=203
+   sub Im[41,42]: zeros=0     CERTIFIED  max|dArg|=0.3712 ratio=0.4376 min|F|=0.15223 pts=204
+   sub Im[42,43]: zeros=0     CERTIFIED  max|dArg|=0.3709 ratio=0.4893 min|F|=0.13764 pts=207
+   (c3) ADDITIVITY: sum of 23 sub-boxes = 0 ; whole box = 0 ; VOID subs = 0 ; agree = True  [32s]
+
+wrote scan_results.json  total 150s

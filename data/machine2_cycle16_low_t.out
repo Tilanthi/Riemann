@@ -1,0 +1,25 @@
+pole box Re[0.5200,1.1842563] x Im[-0.5,0.5]: raw winding=-1.000000000 -> zeros = winding+1 = 0  CERTIFIED
+   max|dArg|=0.39411 ratio=0.47535 min|F|=0.005893 pts=306
+t[  0.5,  1.0] zeros=0     CERTIFIED  max|dArg|=0.0309 ratio=0.0311 min|F|=0.459196 pts=220
+t[  1.0,  2.0] zeros=0     CERTIFIED  max|dArg|=0.0499 ratio=0.0532 min|F|=0.587599 pts=220
+t[  2.0,  3.0] zeros=0     CERTIFIED  max|dArg|=0.3614 ratio=0.4288 min|F|=0.054309 pts=224
+t[  3.0,  4.0] zeros=0     CERTIFIED  max|dArg|=0.3576 ratio=0.4469 min|F|=0.091197 pts=224
+t[  4.0,  5.0] zeros=0     CERTIFIED  max|dArg|=0.1096 ratio=0.1135 min|F|=0.613114 pts=220
+t[  5.0,  6.0] zeros=0     CERTIFIED  max|dArg|=0.3514 ratio=0.4098 min|F|=0.106498 pts=224
+t[  6.0,  7.0] zeros=0     CERTIFIED  max|dArg|=0.3479 ratio=0.4423 min|F|=0.066968 pts=224
+t[  7.0,  8.0] zeros=0     CERTIFIED  max|dArg|=0.3443 ratio=0.4889 min|F|=0.073287 pts=223
+t[  8.0,  9.0] zeros=0     CERTIFIED  max|dArg|=0.3481 ratio=0.4887 min|F|=0.149089 pts=223
+t[  9.0, 10.0] zeros=0     CERTIFIED  max|dArg|=0.2302 ratio=0.2789 min|F|=0.290110 pts=220
+t[ 10.0, 11.0] zeros=0     CERTIFIED  max|dArg|=0.3506 ratio=0.4910 min|F|=0.090965 pts=227
+t[ 11.0, 12.0] zeros=0     CERTIFIED  max|dArg|=0.3495 ratio=0.4245 min|F|=0.105098 pts=224
+t[ 12.0, 13.0] zeros=0     CERTIFIED  max|dArg|=0.3409 ratio=0.4873 min|F|=0.113647 pts=223
+t[ 13.0, 14.0] zeros=0     CERTIFIED  max|dArg|=0.3451 ratio=0.4139 min|F|=0.171818 pts=224
+t[ 14.0, 15.0] zeros=0     CERTIFIED  max|dArg|=0.3473 ratio=0.4755 min|F|=0.116883 pts=223
+t[ 15.0, 16.0] zeros=0     CERTIFIED  max|dArg|=0.3421 ratio=0.3914 min|F|=0.089759 pts=224
+t[ 16.0, 17.0] zeros=0     CERTIFIED  max|dArg|=0.3472 ratio=0.4650 min|F|=0.099296 pts=227
+t[ 17.0, 18.0] zeros=0     CERTIFIED  max|dArg|=0.2817 ratio=0.4909 min|F|=0.191124 pts=221
+t[ 18.0, 19.0] zeros=0     CERTIFIED  max|dArg|=0.3397 ratio=0.4914 min|F|=0.139576 pts=227
+t[ 19.0, 20.0] zeros=0     CERTIFIED  max|dArg|=0.3425 ratio=0.4730 min|F|=0.124545 pts=223
+
+LOW-t TOTAL Re[0.5200,1.1842563] x Im[0,20] (upper half): 20 unit boxes, zeros in NONE
+  VOID boxes: 0 ; wall 18s

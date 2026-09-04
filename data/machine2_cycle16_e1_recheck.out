@@ -1,0 +1,11 @@
+zero s0 (Im)                 pred dps used    |F| on E1     verdict      
+44.4110037979                30.3     75      5.093e-40     PASS         
+47.2977588172                32.3     77      1.301e-38     PASS         
+84.4668842818                57.6     102     2.285e-39     PASS         
+91.0613568039                62.1     107     2.258e-38     PASS         
+92.4006726138                63.0     108     4.579e-39     PASS         
+98.6159981162                67.3     112     2.009e-38     PASS         
+110.277847994                75.2     120     7.188e-38     PASS         
+
+  7/7 zeros confirmed on E1 at adequate precision (implementation-independent,
+   ANCESTRY-SHARED: E1 and E2 both descend from the Jacobi theta transformation).

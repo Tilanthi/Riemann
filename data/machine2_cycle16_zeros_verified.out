@@ -1,0 +1,33 @@
+boxes with zeros: [(44, 45, 1), (47, 48, 1), (84, 85, 1), (91, 92, 1), (92, 93, 1), (98, 99, 1), (110, 111, 1)]
+
+== ZEROS OF zeta2(s,1/7) with Re s >= 0.52, located and cross-checked ==
+  s0 = (0.5246770865109702460561581364 + 44.41100379785915585775068919j)
+     sigma0 - 1/2 = 0.02467708651097   |s0| = 44.4141029897   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 2.033e-40   on E1 (dps 60, SAME theta ancestor) = 4.344e-33
+     floor (2*sigma0-1)/|s0|^2 = 2.50196994654e-5
+  s0 = (0.7159014103823531018264718067 + 47.29775881721048753252892984j)
+     sigma0 - 1/2 = 0.21590141038235   |s0| = 47.303176468   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 6.816e-40   on E1 (dps 60, SAME theta ancestor) = 1.221e-32
+     floor (2*sigma0-1)/|s0|^2 = 0.000192976695244
+  s0 = (0.6046656812518528366431236261 + 84.46688428178119162005426882j)
+     sigma0 - 1/2 = 0.10466568125185   |s0| = 84.4690485377   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 5.23e-40   on E1 (dps 60, SAME theta ancestor) = 4.367e-6
+     floor (2*sigma0-1)/|s0|^2 = 2.93385803802e-5
+  s0 = (0.6310301952784749425929755304 + 91.06135680391329435771957746j)
+     sigma0 - 1/2 = 0.13103019527847   |s0| = 91.0635432106   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 1.161e-40   on E1 (dps 60, SAME theta ancestor) = 0.1849
+     floor (2*sigma0-1)/|s0|^2 = 3.16018345644e-5
+  s0 = (0.6608607494128433009276473937 + 92.40067261379804243385567371j)
+     sigma0 - 1/2 = 0.16086074941284   |s0| = 92.4030358614   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 7.281e-40   on E1 (dps 60, SAME theta ancestor) = 1.218
+     floor (2*sigma0-1)/|s0|^2 = 3.76797144841e-5
+  s0 = (0.6852853131833004632846554526 + 98.61599811620170433773193031j)
+     sigma0 - 1/2 = 0.1852853131833   |s0| = 98.6183791208   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 2.304e-39   on E1 (dps 60, SAME theta ancestor) = 8609.0
+     floor (2*sigma0-1)/|s0|^2 = 3.81026578639e-5
+  s0 = (0.6203387601752353028098032884 + 110.2778479937533731781573067j)
+     sigma0 - 1/2 = 0.12033876017524   |s0| = 110.279592755   class = off-line strip (1/2<sigma<1)
+     |F(s0)| on E2 = 3.062e-40   on E1 (dps 60, SAME theta ancestor) = 5.081e+10
+     floor (2*sigma0-1)/|s0|^2 = 1.97899738838e-5
+
+  denominator: 7 boxes flagged, 7 roots recovered.

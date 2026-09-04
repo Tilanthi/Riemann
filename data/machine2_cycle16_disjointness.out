@@ -1,0 +1,79 @@
+== SWEEP: machine-2 artefacts containing region-search vocabulary ==
+   denominator: 105 machine-2 artefacts scanned (38 letters, 18 code, 19 out, 30 progress)
+   pattern: /winding|argument principle|argument-principle|contour|zero count|zero-count|census|sign scan|sign-scan|root scan/i
+   HIT  progress/rh-cycle10-dispatched.md                                      1
+   HIT  progress/rh-cycle10-one-half-origin.md                                 3
+   HIT  progress/rh-cycle12-machine2-deroton-sweep.md                          1
+   HIT  progress/rh-cycle15-l105-epstein-carrier.md                            5
+   HIT  progress/rh-cycle16.md                                                 5
+   HIT  progress/rh-cycle3-laneA-part2.md                                      2
+   HIT  progress/rh-cycle3-laneB.md                                            6
+   HIT  progress/rh-cycle4-reply3-to-mac-dispatched-20260902T1200.md           1
+   HIT  progress/rh-cycle5-laneB-attractors.md                                 4
+   HIT  progress/rh-cycle6-e8-recompute.md                                     1
+   HIT  progress/rh-cycle7-partB-gate-response.md                              5
+   HIT  progress/rh-cycle8-out-of-sample-kappa.md                              3
+   HIT  progress/rh-cycle9-F1-blind-recode.md                                  3
+   HIT  progress/rh-cycle9-F2-oos-screen.md                                    3
+   HIT  progress/rh-cycle9-lane-d2.md                                          4
+   HIT  progress/rh-index-convention-audit.md                                  2
+   HIT  progress/rh-kappa-set-machine2.md                                      5
+   HIT  progress/rh-letter4-scale-and-sign-audit.md                            1
+   HIT  progress/rh-reply3-to-mac.md                                           1
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle15_fold_runs.py       29
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle16_certify.py         10
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle16_disjointness.py    14
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle16_run_ext.py         7
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle16_run_low.py         12
+   HIT  rh-exchange-repo/Riemann/data/code/machine2_cycle16_run_scan.py        9
+   HIT  rh-exchange-repo/Riemann/data/machine2_cycle15_stage5.out              4
+   HIT  rh-exchange-repo/Riemann/data/machine2_cycle15_stage6.out              1
+   HIT  rh-exchange-repo/Riemann/data/machine2_cycle15_stage7.out              1
+   HIT  rh-exchange-repo/Riemann/data/machine2_cycle16_low_t.out               2
+   HIT  rh-exchange-repo/Riemann/data/machine2_cycle16_wedge_scan.out          2
+   HIT  rh-exchange-repo/Riemann/data/machine2_kappa_HC_permutation_null.out   1
+   HIT  rh-exchange-repo/Riemann/data/machine2_kappa_census_selfref_correction.out 1
+   HIT  rh-exchange-repo/Riemann/data/machine2_kappa_denominator_census.out    16
+   HIT  rh-exchange-repo/Riemann/machine2-CORRECTED-kappa-tables-2026-09-02-RELAY-BY-astra-pa.md 4
+   HIT  rh-exchange-repo/Riemann/machine2-CORRECTED-kappa-tables-2026-09-02.md 5
+   HIT  rh-exchange-repo/Riemann/machine2-E8-verdict-cycle6-2026-09-02.md      3
+   HIT  rh-exchange-repo/Riemann/machine2-ERRATUM-2-to-mac-2026-09-02.md       1
+   HIT  rh-exchange-repo/Riemann/machine2-ERRATUM-3-e8-range-2026-09-03.md     4
+   HIT  rh-exchange-repo/Riemann/machine2-ERRATUM-6-kappa-prereg-blinding-claim-superseded.md 1
+   HIT  rh-exchange-repo/Riemann/machine2-cycle15-l105-epstein-fold-answer.md  16
+   HIT  rh-exchange-repo/Riemann/machine2-cycle5-kappa4-2026-09-02.md          5
+   HIT  rh-exchange-repo/Riemann/machine2-cycle8-oos-falsification-2026-09-03-RELAY-BY-astra-pa.md 3
+   HIT  rh-exchange-repo/Riemann/machine2-ensemble-strategy-2026-09-03.md      1
+   HIT  rh-exchange-repo/Riemann/machine2-kappa-codes.md                       13
+   HIT  rh-exchange-repo/Riemann/machine2-kappa-prereg-and-denominator-method.md 10
+   HIT  rh-exchange-repo/Riemann/machine2-lemma5-analogue-transfer-2026-09-03.md 3
+   HIT  rh-exchange-repo/Riemann/machine2-protocol-debate-opening-position-2026-09-03.md 1
+   HIT  rh-exchange-repo/Riemann/machine2-rediscovery-rate-2026-09-03.md       4
+   HIT  rh-exchange-repo/Riemann/machine2-reply-to-astra-pa-letter1-2026-09-02.md 10
+   HIT  rh-exchange-repo/Riemann/machine2-reply-to-letters3and4-2026-09-02.md  4
+   HIT  rh-exchange-repo/Riemann/machine2-reply-to-partB-gate-2026-09-03-RELAY-BY-astra-pa.md 3
+   HIT  rh-exchange-repo/Riemann/machine2-reply3-to-mac-2026-09-02.md          10
+   HIT  rh-exchange-repo/Riemann/machine2-report.md                            17
+   HIT  rh-exchange-repo/Riemann/machine2-trace-field-2026-09-03.md            4
+   HIT  rh-exchange-repo/Riemann/machine2-two-channel-law-2026-09-02.md        5
+   -> 55 artefacts hit, 50 clean
+
+== TEST: pairwise intersection of each cycle-16 target with every prior machine-2 region ==
+
+  TARGET C16-V2  Re[0.52,2] x Im[20,43]  area=34.0400   (PRIMARY: the disclosed VOID wedge)
+    vs C15-R1   Re[0.52   ,4      ] Im[-20    ,20     ] conv=True  : |intersection| = 0.000000  (dRe=1.4800 dIm=0.0000)  touches
+    vs C15-R2   Re[0.5001 ,0.52   ] Im[-5     ,5      ] conv=False : |intersection| = 0.000000  (dRe=0.0000 dIm=0.0000)  disjoint
+    vs C15-R3   Re[0.46   ,0.54   ] Im[-5     ,5      ] conv=True  : |intersection| = 0.000000  (dRe=0.0200 dIm=0.0000)  touches
+    vs C15-R4   Re[0.52   ,2      ] Im[20     ,43     ] conv=False : |intersection| = 34.040000  (dRe=1.4800 dIm=23.0000)  CONTAINS TARGET
+    vs C15-R5   Re[0.46   ,0.54   ] Im[-12    ,12     ] conv=True  : |intersection| = 0.000000  (dRe=0.0200 dIm=0.0000)  touches
+    vs C15-R6   Re[1.5    ,1e+09  ] Im[-1e+09 ,1e+09  ] conv=True  : |intersection| = 11.500000  (dRe=0.5000 dIm=23.0000)  overlap
+    VERDICT C16-V2: FAIL-AS-NEW-SPACE (contained in C15-R4) -> RE-EXAMINATION, not new territory
+
+  TARGET C16-V1  Re[0.5001,0.52] x Im[-5,5]  area=0.1990   (SECONDARY: the aliased thin box)
+    vs C15-R1   Re[0.52   ,4      ] Im[-20    ,20     ] conv=True  : |intersection| = 0.000000  (dRe=0.0000 dIm=10.0000)  touches
+    vs C15-R2   Re[0.5001 ,0.52   ] Im[-5     ,5      ] conv=False : |intersection| = 0.199000  (dRe=0.0199 dIm=10.0000)  CONTAINS TARGET
+    vs C15-R3   Re[0.46   ,0.54   ] Im[-5     ,5      ] conv=True  : |intersection| = 0.199000  (dRe=0.0199 dIm=10.0000)  CONTAINS TARGET
+    vs C15-R4   Re[0.52   ,2      ] Im[20     ,43     ] conv=False : |intersection| = 0.000000  (dRe=0.0000 dIm=0.0000)  disjoint
+    vs C15-R5   Re[0.46   ,0.54   ] Im[-12    ,12     ] conv=True  : |intersection| = 0.199000  (dRe=0.0199 dIm=10.0000)  CONTAINS TARGET
+    vs C15-R6   Re[1.5    ,1e+09  ] Im[-1e+09 ,1e+09  ] conv=True  : |intersection| = 0.000000  (dRe=0.0000 dIm=10.0000)  touches
+    VERDICT C16-V1: FAIL-AS-NEW-SPACE (contained in C15-R5) -> RE-EXAMINATION, not new territory

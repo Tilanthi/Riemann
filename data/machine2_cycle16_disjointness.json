@@ -1,0 +1,90 @@
+{
+ "prior": [
+  [
+   "C15-R1",
+   "zeta2(s,1/7)",
+   0.52,
+   4.0,
+   -20.0,
+   20.0,
+   true,
+   "data/machine2_cycle15_stage5.out:'box Re[0.52,4.0] x Im[-20.0,20.0] n=1200 winding=-1 pole=1 => zeros~0, max step arg=2.5279'"
+  ],
+  [
+   "C15-R2",
+   "zeta2(s,1/7)",
+   0.5001,
+   0.52,
+   -5.0,
+   5.0,
+   false,
+   "data/machine2_cycle15_stage5.out:'box Re[0.5001,0.52] x Im[-5.0,5.0] n=600 winding=6.0 max step arg=3.1313' -- VOID (aliased)"
+  ],
+  [
+   "C15-R3",
+   "zeta2(s,1/7)",
+   0.46,
+   0.54,
+   -5.0,
+   5.0,
+   true,
+   "data/machine2_cycle15_stage6.out:'Re[0.46,0.54] x Im[-5.0,5.0] n=2400 winding=6.0 max step arg=0.27809'"
+  ],
+  [
+   "C15-R4",
+   "zeta2(s,1/7)",
+   0.52,
+   2.0,
+   20.0,
+   43.0,
+   false,
+   "data/machine2_cycle15_stage7.out:'Re[0.52,2.0] x Im[20.0,43.0] n=2000 winding=-29.0 max step arg=3.1411' -- VOID (impossible)"
+  ],
+  [
+   "C15-R5",
+   "zeta2(s,1/7)",
+   0.46,
+   0.54,
+   -12.0,
+   12.0,
+   true,
+   "data/machine2_cycle15_stage8.out:'Re[0.46,0.54] x Im[-12,12] n=5000 zeros=20.0 max step arg=0.31835'"
+  ],
+  [
+   "C15-R6",
+   "zeta2(s,1/7)",
+   1.5,
+   1000000000.0,
+   -1000000000.0,
+   1000000000.0,
+   true,
+   "data/machine2_cycle15_stage7.out: Dirichlet majorant, sum_{n>=2} a_n n^-1.5 = 0.2689 + 0.0156 < 1 => half-plane sigma>=1.5 zero-free"
+  ]
+ ],
+ "target": [
+  [
+   "C16-V2",
+   "zeta2(s,1/7)",
+   0.52,
+   2.0,
+   20.0,
+   43.0,
+   "PRIMARY: the disclosed VOID wedge"
+  ],
+  [
+   "C16-V1",
+   "zeta2(s,1/7)",
+   0.5001,
+   0.52,
+   -5.0,
+   5.0,
+   "SECONDARY: the aliased thin box"
+  ]
+ ],
+ "verdict": {
+  "C16-V2": "FAIL-AS-NEW-SPACE (contained in C15-R4) -> RE-EXAMINATION, not new territory",
+  "C16-V1": "FAIL-AS-NEW-SPACE (contained in C15-R5) -> RE-EXAMINATION, not new territory"
+ },
+ "n_artefacts": 85,
+ "n_hits": 48
+}

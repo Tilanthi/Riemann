@@ -1,0 +1,11 @@
+GATE 1  Dirichlet majorant, N = 4000000 terms (denominator), P0 = 4.116296
+  sigma=1.05000   partial=2.123978      tail<=2.205        M(sigma)<=4.328524      -
+  sigma=1.10000   partial=1.501609      tail<=0.5402       M(sigma)<=2.041791      -
+  sigma=1.15000   partial=1.103657      tail<=0.1761       M(sigma)<=1.279765      -
+  sigma=1.16520   partial=1.012251      tail<=0.1286       M(sigma)<=1.140852      -
+  sigma=1.18426   partial=0.912278      tail<=0.08772      M(sigma)<=1.000000      ZERO-FREE
+  sigma=1.20000   partial=0.840134      tail<=0.06447      M(sigma)<=0.904600      ZERO-FREE
+  sigma=1.50000   partial=0.268973      tail<=0.0003374    M(sigma)<=0.269310      ZERO-FREE
+  sigma=2.00000   partial=0.087828      tail<=1.125e-07    M(sigma)<=0.087828      ZERO-FREE
+  => certified zero-free half-plane:  sigma >= 1.1842563361
+  VOID wedge area = 34.0400 ; GATE 1 kills 18.7621 (55.12%) ; residual 15.2779
