@@ -1,0 +1,25 @@
+C_vis = 0.0461914179322
+
+== Delta <-> 1/Delta ==
+s=(0.7 + 1.3j)     D=0.1417   agreement 25.0003 digits
+s=(1.6 + 0.0j)     D=0.3      agreement 25.7229 digits
+
+== visibility blind zone below Delta* ==
+N=1e6   threshold=0.0033434463    blind for Delta*-Delta < 6.60233e-8
+N=1e9   threshold=0.0022289642    blind for Delta*-Delta < 2.93437e-8
+N=1e12  threshold=0.0016717232    blind for Delta*-Delta < 1.65058e-8
+N=1e15  threshold=0.0013373785    blind for Delta*-Delta < 1.05637e-8
+
+== local-law reading: m1's gap-coefficient vs L105's offset restatement ==
+D=0.141733   u=0.000796263471829    m1 0.000796259955422    (rel -4.416e-6)   L105 0.00159252456996     (ratio 1.999997)
+D=0.14170    u=0.0093769930087      m1 0.00937131481026     (rel -0.0006055)   L105 0.0187502396172      (ratio 1.9996005)
+D=0.1416     u=0.0187711462594      m1 0.0187255791402      (rel -0.002428)   L105 0.0375122313602      (ratio 1.9983985)
+
+== class numbers ==
+q=49    disc=-196    h=4   [(1, 0, 49), (2, 2, 25), (5, -2, 10), (5, 2, 10)]
+q=50    disc=-200    h=6   [(1, 0, 50), (2, 0, 25), (3, -2, 17), (3, 2, 17), (6, -4, 9), (6, 4, 9)]
+q=100   disc=-400    h=4   [(1, 0, 100), (4, 0, 25), (8, -4, 13), (8, 4, 13)]
+q=400   disc=-1600   h=8   [(1, 0, 400), (4, 4, 101), (13, -8, 32), (13, 8, 32), (16, 0, 25), (16, 16, 29), (17, -10, 25), (17, 10, 25)]
+q=1600  disc=-6400   h=16   (16 forms)
+
+wrote fold_results2.json

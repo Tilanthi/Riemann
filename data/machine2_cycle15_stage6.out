@@ -1,0 +1,8 @@
+== on-line zeros of Lambda(1/2+iy), Delta=1/7, 0 < y <= 5 ==
+   on-line zero at y = 0.054614584740162026
+   on-line zero at y = 2.25411074112523997
+   on-line zero at y = 3.86665629085255202
+on-line zeros with 0 < y <= 5 : 3  (plus mirror images, plus none at y=0)
+
+== symmetric box counts (Delta = 1/7) ==
+Re[0.46,0.54] x Im[-5.0,5.0] n=2400 : winding=6.0  pole=0 => zeros=6.0  max step arg=0.27809

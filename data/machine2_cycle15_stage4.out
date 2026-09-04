@@ -1,0 +1,13 @@
+== evaluator cross-check (theta-Mellin vs Bessel), dps=50 ==
+s=1.3                    D=0.1417                theta=(247.084342078 + 0.0j)   bessel=(247.084342078 + 0.0j)    agree 50.0805 dig
+s=0.75                   D=0.5                   theta=(-7.92759856455 + 0.0j)  bessel=(-7.92759856455 + 0.0j)   agree 50.1712 dig
+s=0.500000000001         D=0.141733239664        theta=(2.96018610972e-19 + 0.0j) bessel=(2.96018610972e-19 + 0.0j)  agree 20.9272 dig
+
+== is e^gamma/(4pi) the fold point? ==
+zeta2(1/2+1e-12, e^gamma/4pi) via theta   = (2.9601861097249e-19 + 0.0j)
+zeta2(1/2+1e-12, e^gamma/4pi) via bessel  = (2.9601861097249e-19 + 0.0j)
+Delta* root via theta   = 0.14173323966388719139541530708686641   (minus closed form: 5.946514e-21)
+Delta* root via bessel  = 0.14173323966388719139541530708686641   (minus closed form: 5.946514e-21)
+closed form            = 0.141733239663887191389468793101105131
+
+wrote fold_results4.json
