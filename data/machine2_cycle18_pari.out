@@ -1,0 +1,18 @@
+PARI/GP version check: [2, 13, 3]
+[A] qfbclassno(-196) = 4
+[A] quadclassunit(-196) = [4, [4], [Qfb(5, 2, 10)], 1]
+[B] primitive reduced forms of disc -196: [[1, 0, 49], [2, 2, 25], [5, -2, 10], [5, 2, 10]]
+[B] h by enumeration = 4
+[B] form [1, 0, 49] has order 1
+[B] form [2, 2, 25] has order 2
+[B] form [5, -2, 10] has order 4
+[B] form [5, 2, 10] has order 4
+[CTRL] D=-84 classno=4 structure=[2, 2]
+[CTRL] D=-56 classno=4 structure=[4]
+[CTRL] D=-20 classno=2 structure=[2]
+[CTRL] D=-23 classno=3 structure=[3]
+[CTRL] D=-4 classno=1 structure=[]
+[CTRL] D=-3 classno=1 structure=[]
+[C] h(order f=7 in Q(i)) via formula = 4   kronecker(-4,7)=-1
+[C] disc of order = f^2*dK = -196
+[D] ambiguous reduced forms (2-torsion classes) = 2  => 2-torsion subgroup order 2
