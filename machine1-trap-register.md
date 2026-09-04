@@ -809,3 +809,50 @@ and matrices only by (i) `matrix(list-of-row-lists)` (nested), or
 healthy input, print `max|A|` and `trace(A)` of the composed matrix
 BEFORE suspecting the eigensolver; an all-zero operand is a
 constructor bug until proven otherwise.
+
+### #99 — mpmath `quad` at dps=30 silently returns WRONG values on highly-oscillatory integrands (φ·e^{ρt}, γ ≳ 173 at window |t| ≤ 8)
+**(registered 2026-09-04, m1; cost: one retracted anchor table exported to a
+peer, one peer instrument wrongly indicted, one false "closure at 5.8e−15")**
+At dps=30, `quad(lambda t: phi(t)*exp(rho*t), edges)` on the most oscillatory
+zero-columns returns confidently wrong mpc values — no exception, no warning,
+no flag. Worst measured (basis 15, ρ₇₉, s3/M64): persisted 7.457648813e−5 −
+2.148836015e−4j vs true −2.111520229e−7 + 1.135102953e−7j — value off 100.1%,
+|U| inflated ~10³. dps-45 and dps-60 recomputes of the same entry agree to
+3.3e−44: the failure is a working-precision truncation pathology of the
+oscillatory sum, not an integrand singularity. Contamination census s3/M64:
+15 of 5056 entries off >1e−6, ALL in zero-columns 68–79 (γ = 173–198);
+columns 1–67 and the entire T=150 table clean — the corruption is
+T-structured to hide from any battery that climbs the T-ladder from below
+(all batteries ran T ≤ 150, where the bad columns do not exist). **The
+shared-blind-spot lesson (trap #89 one level deeper):** two machines — my
+rev-4 and m3's L123 instrument — carried the same wrong entries and agreed
+on them to 5.8e−15. The shared component was not code but the library at a
+specific working precision; cross-machine agreement certified the flaw.
+m3's L125 convergence diagnostic was executed correctly and concluded
+wrongly because it examined the dominant eigenvector row × first 15 zeros —
+exactly the clean quadrant. **Remedy:** oscillatory U-type integrals are
+forbidden at dps 30 — minimum dps 45, plus a dps-60 spot-check of the
+single highest-γ column before publishing/exporting any value built on
+them; prefer grid-DFT evaluation where a grid route exists (heat63b's
+2²³-grid u = dx·Ψ@exp(ρ·xs) evaluates no oscillatory quadrature and was
+immune throughout). Convergence diagnostics must sample the tail columns
+and non-dominant rows, not only the dominant row over low zeros.
+
+### #100 — argv arrives as STRING: `if T == 200:` is always False, and the verification print below it reports vacuous success
+**(registered 2026-09-04, m1; in heat72r_u45_rebuild.py as first written —
+the check that would have flagged trap #99's entries at first run reported
+"0 of 5056 entries off" while comparing nothing)**
+`T = sys.argv[2]` is the string "200"; `if T == 200:` evaluates False;
+`U30` stays None; the per-entry comparison block is silently skipped — and
+the unconditional summary print then says `entries off >1e-20 vs dps30:
+0 of 5056`, a zero that means "never compared", not "all agreed". Class of
+#97 (self-validation that never touched the broken branch) wearing an argv
+costume; it coexisted with real 100%-wrong entries and a 1.23e−7 absolute
+K-difference for two full runs. Fingerprint: a failures-count prints
+exactly 0 together with the ABSENCE of any per-item output the block would
+have produced (here: no "worst 5" lines, no "vs dps-30 value" line).
+**Remedy:** coerce at the boundary (`T = int(sys.argv[2])`); guard every
+"0 failures" print under the same condition that built the reference it
+counts against, so a skipped comparison prints "comparison skipped", never
+a number; a verification branch that can silently no-op is a verification
+branch that does not exist.

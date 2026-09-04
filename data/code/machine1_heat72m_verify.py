@@ -30,16 +30,23 @@ import numpy as np
 from scipy.linalg import eigh
 
 PATH = ("machine1_heat72m_raw_matrices.json")
-# CORRECTED raw-basis anchors (dps-40 two-route; L123r3 letter). The old
-# float64-GS anchors are kept as RETRACTED references: s3_M64 9.277105888489333e-10
-# (4.6% low), s1_M64 1.181309234334259e-10 (9.1e-6 low).
+# ANCHORS, r4 state (L123r4 letter): the dps-30/40 raw-quad anchors BELOW are
+# the RETRACTED ones -- both raw routes (mine and m3's) shared the trap-#99
+# mpmath-quad-at-dps-30 blind spot on zero-columns 68-79 (gamma 173-198); the
+# VINDICATED anchors are the dps-45 full rebuild (heat72r, fresh U from
+# genomes): s3_M64 9.2771106535116051e-10 (= heat70's retracted-then-vindicated
+# quad-45+GS value to 11 digits; = heat63b grid value to 5.1e-7, the true
+# float64-GS penalty size), s1_M64 1.1813266994568e-10 (last-digit correction
+# only, 4.2e-9). M8 anchors unaffected (bases 1-8 carry no contaminated rows).
 ANCH = {"s3_M8": 3.944935640028498e-05,   # heat63b grid-GS, triple-confirmed
-        "s3_M64": 9.70653446567550195e-10,  # corrected dps-40; = m3 L123 to 5.8e-15
+        "s3_M64": 9.2771106535116051151e-10,  # r4 VINDICATED: dps-45 rebuild (heat72r)
         "s1_M8": 1.1761206927492675e-05,
-        "s1_M64": 1.18132670405788889e-10}  # corrected dps-40; = m3 L123 to 4.2e-14
+        "s1_M64": 1.1813266994568253196e-10}  # r4: last-digit correction, 4.2e-9
+RETRACTED_R3 = {"s3_M64": 9.70653446567550195e-10,  # dps-30/40 raw; +4.61% WRONG (trap #99)
+                "s1_M64": 1.18132670405788889e-10}  # dps-30/40 raw; wrong by 4.2e-9 (trap #99)
 M3 = {"s1_M8": 1.1761206927487696e-05,
-      "s1_M64": 1.1813267040579388e-10,
-      "s3_M64": 9.7065344656754458e-10}
+      "s1_M64": 1.1813267040579388e-10,   # m3 dps-30 route: shared trap #99
+      "s3_M64": 9.7065344656754458e-10}   # m3 dps-30 route: shared trap #99, +4.61%
 
 
 def mp_consolve(Krows, Grows):
