@@ -9,13 +9,14 @@ phi_i(x) = w(x) * sum_bumps c*exp(-1/(1-t^2)) 1_{|t|<1},  t = (x-mu)/s
 w(x)     = theta((8-|x|)/2),  theta(y)=e^{-1/y}/(e^{-1/y}+e^{-1/(1-y)}) on (0,1), 0 for y<=0, 1 for y>=1
 u_i(rho) = int_{-8}^{8} phi_i(x) e^{rho x} dx
 """
-import json, sys, time
+import json, os, sys, time
 from mpmath import mp, mpf, mpc, exp, quad
 
 DPS = 40
 mp.dps = DPS
 
-REPO = "/shared/rh-exchange-repo/Riemann"
+REPO = os.environ.get("RH_REPO") or os.path.normpath(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 
 def theta(y):

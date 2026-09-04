@@ -19,7 +19,7 @@ Objects (our derivation; only the genomes + the reference matrices are m1's):
   so m1's recipe dominates the true zero side in the Loewner order, by
   2|g(p)-g(p')|^2 = 8 delta^2 |g'|^2 + O(delta^4).
 """
-import json, sys, time
+import json, os, sys, time
 from mpmath import mp
 from m2_u_instrument import Basis, load_genomes, load_target, make_phi, breakpoints, gl_nodes
 
@@ -30,7 +30,11 @@ N = 8
 
 gens = load_genomes(KEY)
 tgt = load_target(KEY)
-gam = [mp.mpf(g) for g in json.load(open("/workspace/rh/cycle22/zeros210.json"))]
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_ZEROS = os.environ.get("RH_ZEROS") or (
+    os.path.join(_HERE, "zeros210.json") if os.path.exists(os.path.join(_HERE, "zeros210.json"))
+    else os.path.join(_HERE, "..", "machine2_cycle23_zeros210.json"))
+gam = [mp.mpf(g) for g in json.load(open(_ZEROS))]
 bases = [Basis(g, degree=DEG) for g in gens]
 half = mp.mpf(1) / 2
 
