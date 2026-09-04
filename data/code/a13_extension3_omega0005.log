@@ -1,0 +1,21 @@
+prime sieve N=200000000 done in 1.2s, 11078937 primes
+[omega=0.0005] c_omega array built in 41.1s
+   [1/12] x=      100000  h= 3.16281844e-03  sign=+  sqrt(x)*h= 1.000171  [0.3s]
+   [2/12] x=     1000000  h= 9.99595613e-04  sign=+  sqrt(x)*h= 0.999596  [2.7s]
+   [3/12] x=    10000000  h= 3.16084350e-04  sign=+  sqrt(x)*h= 0.999546  [27.0s]
+   [4/12] x=     5000000  h= 4.47404578e-04  sign=+  sqrt(x)*h= 1.000427  [13.4s]
+   [5/12] x=     6000000  h= 4.08191944e-04  sign=+  sqrt(x)*h= 0.999862  [16.1s]
+   [6/12] x=     7000000  h= 3.78043485e-04  sign=+  sqrt(x)*h= 1.000209  [18.8s]
+   [7/12] x=     8000000  h= 3.53569527e-04  sign=+  sqrt(x)*h= 1.000046  [21.3s]
+   [8/12] x=     9000000  h= 3.33428645e-04  sign=+  sqrt(x)*h= 1.000286  [24.0s]
+   [9/12] x=    10000000  h= 3.16084350e-04  sign=+  sqrt(x)*h= 0.999546  [26.9s]
+   [10/12] x=    30000000  h= 1.82596339e-04  sign=+  sqrt(x)*h= 1.000121  [80.8s]
+   [11/12] x=   100000000  h= 9.99820413e-05  sign=+  sqrt(x)*h= 0.999820  [271.5s]
+   [12/12] x=   200000000  h= 7.06964756e-05  sign=+  sqrt(x)*h= 0.999799  [550.2s]
+ALL DONE, total time 1095.2024023532867
+
+=== DQ-SECTION (unconditional, per R3) ===
+ (empty: no computation failures)
+
+=== FALSIFIER CHECK ===
+omega=0.0005: cluster signs=['+', '+', '+', '+', '+', '+'] osc=False  tail signs=['+', '+', '+'] osc=False
