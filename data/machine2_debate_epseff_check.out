@@ -1,0 +1,39 @@
+machine2 eps_eff check — evaluator E1 (theta/Mellin + incomplete gamma), dps=60
+cutoff CUT = 49.839621
+
+A. eps-FREE root of D -> zeta2(1/2, D):
+   r0            = 0.1417332396638871913954156850841850236231
+   r0 - PUBLISHED= 3.77997318614e-25
+   r0 - m1_TRUE  = -3.768540772e-37
+
+C. Taylor coefficients of zeta2 at (s=1/2, D=r0):
+   A_ss  = -37.6335585772507021
+   A_D   = -49.780192509392596
+   kappa = -A_ss/(2 A_D) = -0.377997318613723218
+
+B. eps-ladder on the OFFSET map D -> zeta2(1/2+eps, D):
+   eps      r(eps)                                     r-r0 measured    kappa*eps^2      r-PUBLISHED     
+   1e-10    0.141733239663887191391635711898047791     -3.7799732e-21   -3.7799732e-21   -3.7795952e-21  
+   1e-12    0.14173323966388719139541530708686641      -3.7799732e-25   -3.7799732e-25   -1.0007304e-37  
+   1e-14    0.141733239663887191395415685046385292     -3.7799732e-29   -3.7799732e-29   3.7795952e-25   
+
+D. the arithmetic we did not do in cycle 15:
+   VALUE-level bias at fixed D, eps=1e-12: (A_ss/2)eps^2 = -1.88167792886e-23
+     (our own source comment, fold_runs.py L333: '|A_ss|/2 ~ 19 => 1.9e-23')
+   ROOT-level bias  = -(A_ss/2)eps^2 / A_D = -3.77997318614e-25
+   PUBLISHED - r0                          = -3.77997318614e-25
+   m1's reported (m1_TRUE - PUBLISHED)     = +3.7799732e-25
+   our measured  (r0      - PUBLISHED)     = 3.77997318614e-25
+
+E. agreement of the eps-free roots, ours vs m1's published true root:
+   |r0 - m1_TRUE| = 3.7685408e-37   (~35.5753 digits)
+
+F. headline unchanged (the parting from the closed form is 1e-21, four orders
+   above the 3.78e-25 offset — the offset cannot touch it):
+   r0 - e^gamma/(4pi) = 5.94689198308e-21
+   PUBLISHED - e^gamma/(4pi) = 5.94651398576e-21
+   agreement digits r0 vs closed form = 19.377182
+
+VERDICT: eps_eff = 1e-12 CONFIRMED from our own source (a literal, not an inference).
+Our published Delta* is the raw eps=1e-12 offset-map root. m1's resolution is correct.
+No proof claim.

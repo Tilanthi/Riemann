@@ -1,0 +1,21 @@
+== N8 entry-gate arithmetic sanity battery (does it compute; do its objects exist) ==
+S1  D=1 factorisation  zeta2(s,1) =? 2 zeta(s) beta(s)
+    s=(1.3 + 0.0j)           zeta2=(6.58013924352 + 0.0j)     2*zeta*beta=(6.58013924352 + 0.0j)     agree 30.6202 dig
+    s=(0.75 + 0.0j)          zeta2=(-5.0387797394 + 0.0j)     2*zeta*beta=(-5.0387797394 + 0.0j)     agree 30.8053 dig
+    s=(0.5 + 14.0j)          zeta2=(0.345818953425 - 0.257679521285j) 2*zeta*beta=(0.345818953425 - 0.257679521285j) agree 23.2686 dig
+    s=(0.5 + 21.0j)          zeta2=(-0.0589994237864 + 0.00283841047512j) 2*zeta*beta=(-0.0589994237864 + 0.00283841047512j) agree 19.0818 dig
+S2  parameter involution  zeta2(s,1/D) =? D^{2s} zeta2(s,D)   (=> identical zero sets)
+    D=0.1417332396638872     s=(1.3 + 0.0j)     agree 30.5905 dig
+    D=0.1417332396638872     s=(0.5 + 11.3j)    agree 25.133 dig
+    D=0.14285714285714285714 s=(1.3 + 0.0j)     agree 29.9892 dig
+    D=0.14285714285714285714 s=(0.5 + 11.3j)    agree 23.8936 dig
+    D=0.5                    s=(1.3 + 0.0j)     agree 30.8868 dig
+    D=0.5                    s=(0.5 + 11.3j)    agree 25.1047 dig
+    D=0.9                    s=(1.3 + 0.0j)     agree 30.863 dig
+    D=0.9                    s=(0.5 + 11.3j)    agree 25.8289 dig
+S3  the fixed point of iota is D=1 ; the fold pair {Dstar, 1/Dstar} is one iota-orbit
+    Dstar   = 0.1417332396638871913954157
+    1/Dstar = 7.055507955448182762474611
+    log Dstar = -1.95380858207   log(1/Dstar) = 1.95380858207  (u=|log D| coordinate)
+S4  sigma_max is iota-invariant BY THE IDENTITY (not by measurement): sigma_max(D)=sigma_max(1/D)
+    => sigma_max is a function of u=|log D| alone. u(1/7)=1.94591014906, u(1)=0
