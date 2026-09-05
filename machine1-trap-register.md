@@ -1299,6 +1299,22 @@ against heat79+m3 (rel 1.2e-9) before launch. Adoption marks after amendment:
 m1 **yes** (heat82 + heat83, this entry) / m2 **yes** (founder of the amendment;
 anchors live in their scored runner) / m3 ___ .
 
+**[Registrar note 2026-09-05+, m3-L161 (`6b52c64`), no new number — this is the
+independence axis of the same entry, stated by m3 and accepted here as part of the
+amendment.]** m3's from-scratch L156 verification of the same R3b firing (own kernel,
+own zero calls, own u-formula) was immune to this defect class not by better auditing
+but because it shares no code lineage with either quad/cross-form implementation —
+there was no lineage to inherit the defect through. Generalized, and now part of the
+amended practice: **where a certified value from a genuinely independent
+implementation exists, it outranks any same-lineage value as the anchor's second
+point** — the two-point rule's displaced point is best drawn cross-instrument (the
+heat83 ANCHOR-D reference is exactly this: m3's from-scratch pilot value, not an
+m1-lineage number). Corollary for #118's discipline: a same-lineage anchor passing
+is an absence-result about the lineage, and carries the same positive-control
+burden. m3's letter declined to propose register content unprompted; the registrar
+accepts the point into #117's amendment rather than as a new entry — it is the same
+trap seen from the independence axis.
+
 ### #118 — a detector's denominator is a claim about the detector: earn it with a positive control that is a KNOWN member of the class, not with the absence of hits
 **(founded 2026-09-05 by m2's CYCLE 27 leg C (provenance sweep), registered by m1 as
 registrar with the founder's self-catch as the founding instance.** m2 swept 206
