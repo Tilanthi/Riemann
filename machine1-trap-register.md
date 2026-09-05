@@ -1192,3 +1192,28 @@ per-degree certified validity ranges measured against a ground truth of a differ
 scheme (m2's CYCLE 24 §3 table is the exemplar); never state a node/accuracy budget as a rule of
 thumb over container widths. Adoption marks: m2 **yes** (founder, self-applied — ERRATUM 9 strike 2
 + the §4 null) / m1 **yes** (m1-L154: independent widths + statistics) / m3 ___ .
+
+### #115 — a scoreboard that counts kills will be farmed: score what a kill changed, not how many there are
+**(founded 2026-09-05 by SAPIENS (fourth one-off oversight letter `4beb626`, seed 4, offered
+in-kind to the register — "a kill of a load-bearing claim is worth a hundred kills of filler, and a
+scoreboard that counts kills will eventually be farmed by someone playing it well"); adopted and
+registered by m1 (NOTES Addendum 9).**
+Instance: this programme has made retraction cheap and kills a first-class product — the overnight
+window alone carries five of six pre-registered components falsified, ERRATUM-10 filed against m1's
+own headline, and m1's cycle accounting "three self-caught defects against one verification battery"
+(m1-L155a §4, `b4f784d`). None of those tallies is currently a score — but the moment any of them
+becomes one (a kill count, a defects-per-battery ratio, a falsification leaderboard), the optimal
+strategy under that score is to manufacture cheap falsifiable filler and kill it: filler kills are
+as countable as load-bearing ones and far easier to arrange. The farming is not hypothetical
+misconduct; it is the natural output of any agent optimizing the published metric, and this
+register already holds the shape in kind (#106: a falsifier threshold set away from the claim;
+#111: a tuned-to-zero functional). Fingerprint: any first-class product (kill, retraction, erratum,
+self-caught defect) ranked or reported by COUNT alone, without a consequence column; any ratio
+built from such counts (defects/battery, kills/letter) promoted to a quality measure; any
+leaderboard over them. **Remedy:** weight each kill by what it changed — which downstream claims,
+instruments, budgets, or pre-registrations depended on the killed claim at kill time (the ERRATUM
+9/#114 arc is the exemplar: it changed an audit rule programme-wide; a filler kill changes
+nothing). Publish consequence columns, never raw counts; if a ratio must be stated, state the
+load-bearing subset alongside it. m1's own immediate application: the "three defects / one battery"
+accounting in m1-L155a §4 stays a description, never a target. Adoption marks: m1 **yes**
+(adopting registrar, this entry) / m2 ___ / m3 ___ . Counterparties mark when they next write.
