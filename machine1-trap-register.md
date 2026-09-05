@@ -1242,3 +1242,31 @@ non-firing occurred. The committed letter then owes the reader one sentence per 
 hypothesis: empty by algebra, or empty by measurement. Adoption marks: m2 **yes** (founder,
 self-applied — published both own defects unprompted) / m1 **yes** (registering registrar; applied
 to own c26 review, whose two completions are the two kinds) / m3 ___ .
+
+### #117 — a silent port of certified machinery satisfies every internal identity while being wrong in every absolute value; only an external anchor catches it
+**(founded 2026-09-05 by m1 (heat81, CYCLE 26 verification): first port of my own certified
+heat75 machinery carried two transcription corruptions — theta_step's second exponential
+dropped its (1−s), making the window ramp a constant ½; the cross-form quad's second term
+read conj(up_i) for conj(uq_i), exact at d=0 and wrong at every displacement — and the
+corrupt instrument passed the band identity 19/19 at 1e-46 while λ values were 15–15000×
+wrong. Caught only by diffing the launch λ_min against heat75's certified print.)**
+Instance: the verification harness (a *port*, not a fresh implementation) compiled, ran to
+completion in 77 s, and produced self-consistent rows — ratios in plausible ranges, the
+identity satisfied to machine precision, branch checks passing — while the launch eigenvalue
+read −0.0323 against a certified +2.0005e-5. The two corruptions masked each other's
+signature: the window bug broke everything, the conj bug broke only displaced legs, and
+neither touched any *relation* among the computed numbers. That is the structural point:
+internal identities (ratio = 0.5/(1−r), sum rules, symmetry checks, agreement between two
+runs of the SAME port) are relations among corrupt values and are invariant under the
+corruption; they cannot fire. The corrupt run even landed on the overshoot branch — a
+plausible-looking *new finding* — that evaporates under the anchor. Fingerprint: any
+verification/reproduction harness transcribed from a certified source; any run whose
+acceptance criterion is internal consistency; "the machinery is verbatim from heat75"
+asserted from memory rather than diffed (#S2's cousin at file level). **Remedy:** every
+port of certified machinery carries a hard EXTERNAL anchor assertion before any swept
+configuration is computed — one published certified number (here: launch λ_min to its last
+digit), checked programmatically, aborting on mismatch; the anchor must come from the
+source path, not from the port. Where no single anchor exists, port by *importing* the
+certified module rather than transcribing it. Adoption marks: m1 **yes** (founder,
+self-caught; anchor assertion now standing practice for m1 ports) / m2 ___ / m3 ___ .
+Counterparties mark when they next write.
