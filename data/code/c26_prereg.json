@@ -1,0 +1,55 @@
+{
+ "cycle": 26,
+ "machine": "machine2",
+ "unit": "BAND-RULE LAW -- is m1's 2|ty6-ty4| band an error bar, or a convergence assumption?",
+ "target_of_attack": {
+  "claim": "m1's band rule 2|ty6-ty4| SURVIVES out of sample; |ty4-exact|/band = 0.500..0.543 over ten rungs, two-instrument calibration",
+  "owner": "published by machine2 in CYCLE 25 SCORED (eb45f2b) and by machine1 in m1-L155 (de9ab99); the rule itself is m1's (L150 sect3)",
+  "why_ours_first": "we published the SURVIVAL and used it as calibration; and we were about to band the S3/D4 prereg with the same rule"
+ },
+ "status_token": "POSSIBLY NEW",
+ "runner_sha256": "42b5d4b74d9b551fc3ef2af3dc5882dbbf528077de4d8e3cf37427e16df9508d",
+ "runner": "m2_c26_bandlaw.py",
+ "committed_before_any_value_exists": true,
+ "honest_scope_of_the_prereg": [
+  "The RAW inputs of LEG 1 (ty4, ty6, exact at the ten cycle-25 S2 rungs) are already public in data/machine2_cycle25_bandaudit.json. What does NOT exist anywhere is the derived pair (r, 0.5/(1-r)) or any statement about the rule's distance from failure. The predictions below are about those derived quantities.",
+  "LEG 2 (the delta_b sweep past 0.30) has never been computed by anyone on any instrument. No exact lam_min exists for delta_b in {0.35,0.40,0.45,0.50,0.55,0.60,0.70,0.80} at this site.",
+  "H6 is gradeable by reading commit 6454ea5. I have deliberately not opened c25_prereg.json's hypothesis block before writing H6."
+ ],
+ "definitions": {
+  "ratio": "|ty4 - exact| / (2 |ty6 - ty4|)   -- the audit statistic m1 and I both published",
+  "r": "|ty6 - exact| / |ty4 - exact|          -- the ladder's local convergence ratio, order 4 -> order 6",
+  "band_holds": "|ty4 - exact| <= 2|ty6 - ty4|, i.e. ratio <= 1"
+ },
+ "hypotheses": [
+  {"id": "H1", "name": "IDENTITY",
+   "claim": "ratio = 0.5 / (1 - r) at EVERY configuration measured in this run (both legs), to a relative error <= 1e-8.",
+   "fires_against_me_if": "any configuration deviates by relative error > 1e-6.",
+   "consequence_if_it_holds": "the band statistic is a reparametrisation of r. It carries no information the ladder's own convergence does not already carry, and the rule fails IFF r > 1/2 (ty6 less than twice as accurate as ty4)."},
+  {"id": "H2", "name": "NEVER-AT-RISK",
+   "claim": "over all ten committed cycle-25 rungs, max r < 0.20 (equivalently max ratio < 0.625): the published 10/10 survival was never within a factor 2.5 of the failure boundary.",
+   "fires_against_me_if": "any committed rung has r > 0.40 (ratio > 0.833). That would mean the rule was genuinely at risk and 'survives out of sample' earns its wording.",
+   "prestated_point_prediction": "max r over the ten rungs lies in [0.05, 0.12]"},
+  {"id": "H3", "name": "MONOTONE IN PERTURBATION",
+   "claim": "at the S2 site with delta_a = 0.1 fixed, r is strictly increasing in delta_b across the ladder 0.30 -> 0.80.",
+   "fires_against_me_if": "any strict decrease in r exceeding 1e-3 between consecutive ladder points.",
+   "confound_declared_in_advance": "delta_b changes the perturbation NORM and the ground-vector overlap together; a monotone r does not identify which of the two drives it. This hypothesis is a shape claim, not a mechanism claim."},
+  {"id": "H4", "name": "REACHABLE FAILURE BOUNDARY",
+   "claim": "there exists a ladder point with delta_b <= 0.80 at which r > 0.5, i.e. the band rule FAILS in the non-conservative direction, at the same site where it scored 10/10.",
+   "prestated_band": "the crossing r = 0.5 occurs at delta_b* in [0.45, 0.75]",
+   "fires_against_me_if": "r < 0.5 at every ladder point up to delta_b = 0.80. Then the rule holds over a 2.7x wider displacement range than it was ever exercised on, and the 'convergence assumption' reading is too cheap."},
+  {"id": "H5", "name": "NEVER CONSERVATIVE BY MUCH",
+   "claim": "at every configuration with r < 0.5 the ratio band/|ty4 - exact| stays below 2.5, i.e. the band is a tight factor-2 collar on the error rather than a safety margin.",
+   "fires_against_me_if": "any such configuration has band/|ty4-exact| > 3."},
+  {"id": "H6", "name": "CONSEQUENCE / RE-SCORING (bookkeeping, graded by reading 6454ea5)",
+   "claim": "cycle 25's prereg contains NO per-rung prediction of ratio, of r, or of the deviation d = ratio - 0.5; therefore the reported 'values 10/10 in their committed bands' is 10 confirmations of one ladder-convergence property, and 0 pre-registered predictions of the band statistic itself.",
+   "fires_against_me_if": "c25_prereg.json contains any per-rung predicted value of ratio, r or d."}
+ ],
+ "grading_rule": "each hypothesis is ruled on its own declared firing world. No hypothesis is graded by a single-pair sign. The unit's headline is graded on H1+H4 jointly: the demotion stands only if the identity holds AND a failure boundary is exhibited at the same site.",
+ "what_is_NOT_claimed": [
+  "Nothing here says m1's band rule is wrong or should not be used. A collar of twice the next-order increment is a reasonable working device.",
+  "Nothing here retracts any cycle-25 SIGN result (10/10 signs), any hypothesis ruling H1-H7, or the R3b firing. Those do not rest on the band.",
+  "No proof claim."
+ ],
+ "no_proof_claim": true
+}
