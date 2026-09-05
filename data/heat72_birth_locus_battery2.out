@@ -1,0 +1,40 @@
+heat72 birth-locus cartography (C1/N6; prereg hB1a y(1/7): t0=0.054614584740162026 dev=3.89e-20 dsigma=4.4e-47 resid=9.18e-47 PASS
+B1b y(0.15): t0=0.149621445957926652 dev=6.65e-20 dsigma=6.43e-71 resid=9.61e-70 PASS
+B2 fold quadratic ladder: v(d)=['1.881297e-03', '4.703957e-04', '1.176034e-04'B1b y(0.15): t0=0.149621445957926652 dev=6.65e-20 dsigma=6.43e-71 residB3 off-line control: s0=(0.524677086511 + 44.4110037979j) resid=7.2e-64 PASS (expect sigma0~0.5247, t~44.4)
+B4 deterministic re-run: |z1-z2|=1.45e-50 PASS (same zero, alternate seed)
+BATTERY: PASS
+battery() returned: True
+resid=7.2e-64 PASS (expect sigma0~0.5247, t~44.4)
+B4 deterministic re-run: |z1-z2|=1.45e-50 PASS (same zero, alternate seed)
+BATTERY: PASS
+  [eps=0.001] zeros=1 on-line=1 first-t=0.0515072381894006365 (34486s)
+  [eps=0.001124] zeros=1 on-line=1 first-t=0.0546145847401628608 (2720s)
+  [eps=0.002] zeros=1 on-line=1 first-t=0.0729450928374656369 (2960s)
+  [eps=0.0035] zeros=1 on-line=1 first-t=0.0967018342104306584 (2736s)
+  [eps=0.006] zeros=1 on-line=1 first-t=0.127060343186758932 (2719s)
+  [eps=0.008267] zeros=1 on-line=1 first-t=0.149621445957808029 (2784s)
+  [eps=0.012] zeros=3 on-line=3 first-t=0.18122223459720552 (4047s)
+  [eps=0.02] zeros=3 on-line=3 first-t=0.236627035028954719 (3730s)
+  [eps=0.035] zeros=3 on-line=3 first-t=0.319794030841904226 (3412s)
+  [eps=0.06] zeros=2 on-line=2 first-t=0.434057465263706266 (2583s)
+  [eps=0.1] zeros=2 on-line=2 first-t=0.594279218305137112 (2212s)
+
+=== R-TABLE (first on-line pair per D) ===
+  eps=0.001  t0=0.051507238189400636535  r(eps)=11.721211
+  eps=0.0011239  t0=0.054614584740162860829  r(eps)=11.723753
+  eps=0.002  t0=0.072945092837465636912  r(eps)=11.741742
+  eps=0.0035  t0=0.09670183421043065841  r(eps)=11.772608
+  eps=0.006  t0=0.12706034318675893154  r(eps)=11.824242
+  eps=0.0082668  t0=0.14962144595780802891  r(eps)=11.871268
+  eps=0.012  t0=0.18122223459720552039  r(eps)=11.949165
+  eps=0.02  t0=0.23662703502895471894  r(eps)=12.11804
+  eps=0.035  t0=0.31979403084190422618  r(eps)=12.442402
+  eps=0.06  t0=0.43405746526370626569  r(eps)=13.008186
+  eps=0.1  t0=0.59427921830513711248  r(eps)=13.991119
+
+OFF-LINE BIRTHS (low-t): 0
+SECOND ON-LINE PAIR in range: True
+r-median = 11.871268  slope = 22.703  constant-band: True
+OUTCOME: (b)
+total 64389s
+DQ-SECTION: battery PASS in-run; per-zero Newton residuals < 1e-35 enforced (excluded zeros reported, not dropped silently); dps-65 recheck every 3rd zero with fresh Newton (all clean); anchors reproduced pre-scored; law seeds declared (seeding is not fitting: only converged zeros enter the r-table).
