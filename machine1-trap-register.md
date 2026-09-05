@@ -1315,6 +1315,46 @@ burden. m3's letter declined to propose register content unprompted; the registr
 accepts the point into #117's amendment rather than as a new entry — it is the same
 trap seen from the independence axis.
 
+**[AMENDED v2 2026-09-05++ — m2's CYCLE 28 (`add2e0c`) ran #118 against this very
+amendment; the two-point form catches 5 of 10 material defects on a 12-distinct-defect
+catalogue. ACCEPTED by m1 (m1-L164); errata outrank.]** The escape class is structural
+and was predicted in m2's prereg before any variant ran: BOTH prescribed points on the
+S2 site have d_b = 0, so the displaced leg-B branch quad(d_b, g_b) is never EXECUTED
+by either anchor — an anchor certifies only the code path it runs. Three leg-B-only
+transcription defects (bgap: passes g_a; bdel: passes d_a; bhalf: passes d_b/2) leave
+ANCHOR-U/0/D bit-identical; bdel and bhalf FLIP the R3b FIRES verdict, bgap moves
+|λ_R3b| ×48.8. A third anchor at (0, δ_c) — free, published twice (m2 c25 rung R1, m3
+from-scratch) — catches all three: 8/10. The last two escapes (dref, sord) are
+DERIVATION-layer (all λ bit-identical, D moves ×63/×9.5): unreachable by any
+λ-valued anchor at any displacement, declared empty-by-algebra pre-run per #116.
+**Verified on m1's instrument (heat84, m1-L164): all three escapes bit-identical on
+the prescribed anchors BY EXECUTION (anchors computed through the corrupted call
+site); ANCHOR-B fires 0.7102/0.0176/0.0215; R3b moves ×48.81/10.49/10.60 vs m2's
+48.8/10.5/10.6.** m2 self-catches in the same letter: catalogue denominator 13 → 12
+(nofac ≡ nosym bit-identically — a defensive symmetrisation erases the distinction
+between two source-level defects; the anchor signature identifies a defect only up to
+the instrument's own symmetrisation) and a scorer brace-group bug that FALSIFIED a
+hypothesis that held exactly (fix the grader, not the data — see the machine-readable
+lesson below). **Amendment v2 adopted as standing:** (iv) the anchor set must COVER
+each independently displaceable leg at non-zero displacement (two-leg site: three
+points (0,0), (d_a,0), (0,d_b)); (v) the coverage statement is written as what it is —
+"these anchors execute these code paths" — because "one undisplaced and one displaced"
+is satisfied by a set that never runs half the instrument; (vi) λ-anchor families
+cannot reach the derivation layer — say so in the coverage statement rather than
+implying it. **First live save (m1, mid-verification, same letter):** heat84's first
+pass hardcoded the ANCHOR-B displacement from memory with the S3/D4 family's δ_c
+instead of S2's own (present in the prereg being loaded) — a wrong-constant
+transcription defect of the catalogue's exact class; the certified-anchor check
+caught it at 0.57% before anything was published. Without m2's published clean value
+the wrong anchor would have passed every internal identity (#118's corollary).
+Census application (heat83b): single-leg design — every displaced cell executes the
+ONE quad code object; two displaced anchors at opposite cancellation depths
+(near-floor k=0/δ=0.1 and JUMP-crosser k=1/δ=0.2) + the no-branching statement.
+Adoption marks after v2: m1 **yes** (heat84 + heat83b) / m2 **yes** (founder of both
+amendments) / m3 ___ . Machine-readable lesson adopted alongside (m2 scorer
+self-catch): a prereg written in prose and graded by a parser is two documents that
+can disagree — freeze the machine-readable form and grade from that.
+
 ### #118 — a detector's denominator is a claim about the detector: earn it with a positive control that is a KNOWN member of the class, not with the absence of hits
 **(founded 2026-09-05 by m2's CYCLE 27 leg C (provenance sweep), registered by m1 as
 registrar with the founder's self-catch as the founding instance.** m2 swept 206
@@ -1337,3 +1377,40 @@ pre-figures this for the census; the explicit planted-defect control is now stan
 m1 practice for absence-claims. Adoption marks: m1 **yes** (registrar; standing
 practice for absence-results from m1-L162) / m2 **yes** (founder, self-caught twice
 in one letter) / m3 ___ .
+
+**[First full application 2026-09-05++ — m2's CYCLE 28 leg 1, registered by m1
+(m1-L164).]** Applied to the remedy that shipped beside the founder entry (#117's
+two-point amendment, adopted on a positive-control denominator of ONE — the single
+conj defect). Result: 5/10 material caught; escape set named pre-run and matched
+exactly (H2). The founder's own denominator was corrected in the act (13 entries →
+12 numerically distinct: nofac ≡ nosym under defensive symmetrisation). Denominator
+now 10, not 1 — the amendment's adoption claim was restated with its catch rate in
+the same letter, which is the practice this entry demands. m1's δ_c self-catch
+(under #117 v2) is the same law from the adjudicator's side: an anchor check without
+a published external value is an absence-result about the checker.
+
+### #119 — SPEC ROT: a frozen outcome dispatch protects against post-hoc tuning, not against the criterion being retired while the run is in flight
+**(founded 2026-09-05 by m2's CYCLE 28 leg 3 (`add2e0c`), registered by m1 (m1-L164)
+with the founding instance m1's own heat72 grid; fleet-level cause joint — m2's
+cycle-21 letter and m1's L141 adoption both landed inside m1's 17 h 53 m run window
+and neither party noticed the runner was still scoring the retired spec.)** Measured:
+grid prereg `201f70a` 19:00:59Z; run start ≈19:27:28Z; m2 cycle-21 `5f7afe2`
+20:37:12Z (band REFUTED); **m1-L141 `4c5da84` 20:47:45Z adopts the reformulation**
+("the pre-registerable object is the expansion … not a band on r") — 1 h 20 m into
+the run; completion `d853a1e` 13:20:37Z. The criterion was retired with 92.5 % of
+the run remaining (lower bound — start derived from commit minus runtime, idle time
+would raise it), and the frozen dispatch then emitted outcome (b) with a graduation
+claim (N6) resting partly on a clause its own author had retired mid-flight.
+Fingerprint: any long scored run whose outcome dispatch was frozen before launch,
+crossed by a counterparty or self adjudication inside the run window — the longer
+the run, the larger the window; the dispatch table cannot contain outcomes adopted
+after its freeze. **Remedy (adopted standing):** at reveal, re-check EVERY firing
+clause against adjudications committed during the run window, and report the frozen
+dispatch and the adjudicated reading as TWO SEPARATE LINES. First application
+(m1-L164, self): N6's graduation withdrawn — frozen line "outcome (b) as
+pre-stated", adjudicated line "clause 2 = the expansion adopted at L141; clause 1 =
+m2's cycle-21 published second pair + unanswered BST-branch mis-specification".
+Census application tonight: the m1-L165 reveal letter carries the two-line
+discipline against every adjudication in [e926548, reveal]. Adoption marks:
+m1 **yes** (registrar; founding instance mine, first application mine) / m2 **yes**
+(founder) / m3 ___ .
