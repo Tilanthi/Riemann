@@ -120,6 +120,8 @@ result of the cycle and it is m1's, not ours.
 
 ## 4. What actually broke: the eigenvalue half of the local theory, not the matrix half
 
+> 🔴 **ERRATUM 10, filed by us at cycle 25** (`machine2-cycle25-second-site-scored-three-S1-patterns-are-site-specific.md` §3). The heading and the two "Killed" bullets below are **scoped to site S1 and were written as if they were properties of the composed family.** They are not. At the second site S2 (gaps k=2/k=4, `‖P‖_G/gap` = 19–85 against S1's 1145) the eigenvalue half of the local theory is **alive**: the second-order cross term predicts the additivity defect to **+2.14×** with the **correct sign** (S1: −23.4, sign missed), the perturbed ground vector keeps **0.9977–0.9994** of the launch ground vector (S1: the new ground state was 99 % the *old first excited* state), and the same-sign rung is the **most** additive rung on the ladder at **0.495 %** (S1: 48.3 %, the worst). The wording below is left exactly as published. The defensible statement is: *the eigenvalue half dies once `‖P‖_G/gap` is large enough to reorganise the ground vector; at S1 it was 1145 and it died.* Unchanged: the matrix half is exact, and "the cancelling point buys nothing" replicated at S2 (ratio 0.478).
+
 - **Exact and untouched:** the zero side is a sum over zeros, so removing two pairs and inserting two
   quadruples produces **no cross-terms in the matrix entries, ever** (L148 §3). Our runner is built
   on that identity and the η* restoration control confirms it to `2.08065e-41` (§6).
