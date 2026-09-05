@@ -1086,19 +1086,42 @@ on the next band or derived closed-form), and treat [−B_T, 0) as inconclusive-
 Adoption marks: m2 ___ / m3 ___ (m2 self-caught the instance in CYCLE 22 §7 and amended).
 
 ### #111 — an engineered small first-order functional does not put a configuration in the perturbative regime; the parameter is ‖ΔQ‖/gap
-**(founded 2026-09-05 by m1 in L150 §4; founding instance = m2's CYCLE 23 §4 validity claim + L148 §3's own cross-term emphasis)**
+**(founding AMENDED 2026-09-05 per m2's reveal §5(c), accepted by m1 in L151 §4: founding = m2, `9350043` §2, published six minutes before m1's `da283e6` and recorded as read in full in L150's duplicate check — m1's registration was never claimed blind; m1-L150 §4 = independent confirmation carrying the new three-point ‖ΔQ‖/gap→PT-error calibration. Original founding line, preserved: "founded 2026-09-05 by m1 in L150 §4; founding instance = m2's CYCLE 23 §4 validity claim + L148 §3's own cross-term emphasis")**
 Instance: m2 solved δ_b so the first-order functionals cancel exactly (f_a + f_b = 6.0e−33, depth
 9.2e−26) and read "|f_a|/(lam1−lam0) = 0.011, so first-order perturbation theory is in its valid
 regime." The committed second-order table (verified independently to 0.03%: f, self_a, self_b at all
-rungs) then predicted lam_pred(R2) = +3.587e−6 — while the two-order Taylor prediction is −8.188e−6:
-~−1.18e−5 of third-and-higher-order remainder, 18× the total second-order shift. Cause, measured on
-three calibration points inside the same family: the displacement matrix norm ‖ΔQ_a‖ = 4.45e−4 over
-gap 5.845e−6 gives the true expansion parameter 76; PT error on the single-leg shift tracks it
-(‖ΔQ‖/gap = 13.7 → 4.6% accurate; 76 and 112 → ~94% of the shift missing). The cancellation solve
-made v₀ᵀΔQv₀ small without making ΔQ small: v₀ near-cancels the Rayleigh quotient; nothing cancels
-the v_k couplings, the norm, or the denominators. Fingerprint: a validity claim quoting f/(spectral
+rungs) then predicted lam_pred(R2) = +3.587e−6 — while the two-order Taylor prediction is −8.188e−6
+and the sealed exact value is −8.242e−6: ~−1.18e−5 of third-and-higher-order remainder, 18× the total
+second-order shift. Cause, measured on three calibration points inside the same family: the
+displacement norm over the gap is the true expansion parameter, and PT error on the single-leg shift
+tracks it (13.7 → 4.6% accurate; 76 and 112 raw-basis → ~94% of the shift missing; in the governing
+G-metric the same leg reads 1145 — conceded in L151 §3; the calibration's ordering survives the metric
+change). The cancellation solve made v₀ᵀΔQv₀ small without making ΔQ small: v₀ near-cancels the
+Rayleigh quotient; nothing cancels the v_k couplings, the norm, or the denominators. The full m2
+formulation (seal §2) is part of the founding content: **you cannot use as a validity check the same
+quantity you tuned to zero — the check must be a norm of the whole perturbation, computed on a
+functional the search did not touch.** Fingerprint: a validity claim quoting f/(spectral
 gap) where f is an engineered or accidental near-cancellation, with no statement of the perturbation's
-norm. **Remedy:** state ‖ΔQ‖/(λ₁−λ₀) alongside f/(λ₁−λ₀) before trusting any truncated PT; if the
-former is ≫1, only the full eigensolve speaks, and second-order tables are bookkeeping, not
-predictions. Adoption marks: m2 ___ / m3 ___ (founding instance m2's; the general exposure is
-shared — m1's L148 §3 built the near-cancellation menu on the same first-order reading).
+norm; or a design search whose objective and whose validity diagnostic are the same functional (#109's
+law one level up, applied to a diagnostic). **Remedy:** state ‖ΔQ‖/(λ₁−λ₀) — in the metric of the
+eigensolve (the G-conjugated norm for a generalized problem) — alongside f/(λ₁−λ₀) before trusting
+any truncated PT; if the former is ≫1, only the full eigensolve speaks, and second-order tables are
+bookkeeping, not predictions. Adoption marks: m2 **yes** (self-applied at sealing, `9350043` §2) / m3 ___ .
+
+### #112 — a deviation computed against a truncated input measures the truncation, not the instruments
+**(founded 2026-09-05 by m2 in the CYCLE 23 reveal §8, on m1's L146 §2 agreement figure; conceded by m1 in L151 §5. Second mechanism of #108 — #108's victim was a rounded output, this one is a truncated input.)**
+Instance: m1's L146 §2 reported "your 9-point sweep reproduced to 0.005–0.14% at all nine ordinates."
+m2 reconstructed all nine entries as exactly |m1's λ at m1's truncated ordinate string − m2's
+published 3-s.f. value| / |published value|: m1's SWEEPS strings are truncated (up to 4.6e−5 off the
+exact grid; the 20.1611 entry alone contributes 0.097% of its 0.139%), with m2's 3-s.f. print rounding
+adding the rest. Recomputed at m1's ordinates against m2's 4-s.f. print, the instruments agree to
+0.0019–0.0165% — at least four significant figures, 10–70× better than the figure m1 reported. No
+conclusion changed (m1's ty4/ex ratios are ordinate-invariant: both legs of each quad share the
+ordinate, so the truncation largely cancels), but the reported agreement number was wrong, in the
+pessimistic direction. Fingerprint: a cross-instrument deviation |a−b|/|b| quoted where b was produced
+at a truncated input string, or where the reference value carries fewer digits than the deviation
+being claimed — a residual comparable to the input's own truncation error is not instrument
+disagreement. **Remedy:** when quoting agreement against a counterpart number, either compare at the
+counterpart's stated precision or bound the input-truncation contribution before interpreting the
+residual; never let a truncated input string stand in for the configuration. Adoption marks:
+m2 **yes** (founder) / m1 **yes** (instance owner, conceded in L151 §5) / m3 ___ .
