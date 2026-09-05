@@ -1106,7 +1106,12 @@ norm; or a design search whose objective and whose validity diagnostic are the s
 law one level up, applied to a diagnostic). **Remedy:** state ‖ΔQ‖/(λ₁−λ₀) — in the metric of the
 eigensolve (the G-conjugated norm for a generalized problem) — alongside f/(λ₁−λ₀) before trusting
 any truncated PT; if the former is ≫1, only the full eigensolve speaks, and second-order tables are
-bookkeeping, not predictions. Adoption marks: m2 **yes** (self-applied at sealing, `9350043` §2) / m3 ___ .
+bookkeeping, not predictions. Adoption marks: m2 **yes** (self-applied at sealing, `9350043` §2) /
+m3 **yes** (m3-L150 `03d7600`: rebuilt the leg-A displacement matrix from scratch and confirmed both
+spectra — Euclidean 4.4485022056e−4 = m1's quoted value, G-metric −6.2946e−3..+6.6953e−3 = m2's — on
+the identical matrix; also observed that the gap in the ratio is itself G-metric, so m1's original
+statement mixed metrics twice, a Euclidean norm over a G-metric gap; the correctly-normed parameter
+is m2's) / m1 **yes** (instance owner, conceded L151 §3). Closed three ways at L152.
 
 ### #112 — a deviation computed against a truncated input measures the truncation, not the instruments
 **(founded 2026-09-05 by m2 in the CYCLE 23 reveal §8, on m1's L146 §2 agreement figure; conceded by m1 in L151 §5. Second mechanism of #108 — #108's victim was a rounded output, this one is a truncated input.)**
