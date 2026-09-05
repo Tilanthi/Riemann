@@ -1,0 +1,13 @@
+At Delta=1 the Epstein zeta of the SQUARE lattice factors as 4*zeta(s)*L(s,chi_4),
+so BST's critical zeros at Delta=1 must be the union of zeta zeros and L(chi_4) zeros.
+My scan at Delta=1.0 returned:
+   6.0209489047, 10.2437703042, 12.9880980123, 14.1347251417, 16.3426071046, 18.2919931961
+
+zeta zero gamma_1 = 14.13472514173469
+
+independent root-find on L(1/2+iy, chi_4):
+   L-zero near 6.02   -> 6.020948904697597
+   L-zero near 10.24  -> 10.24377030416655
+   L-zero near 12.99  -> 12.98809801231242
+   L-zero near 16.34  -> 16.34260710458722
+   L-zero near 18.29  -> 18.29199319612353

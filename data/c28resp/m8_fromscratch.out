@@ -1,0 +1,19 @@
+genomes loaded: M=8  0.0s
+G_raw regenerated 20.5s
+zeros to T=200: 79  26.5s
+U(rho) table built 266.3s
+K_T200 regenerated 266.3s
+
+CONTROLS, M=8, delta=0 (published in data/machine1_heat78c_selftest.out)
+k   m2 from-scratch lam_min  m1 published             rel diff   
+0   4.7342065079869e-6       4.7342065079869e-6       5.08e-17   
+1   8.5081584629334e-6       8.5081584629334e-6       5.36e-15   
+2   7.9558173971367e-6       7.9558173971367e-6       6.06e-15   
+3   1.2107295795588e-5       1.2107295795588e-5       3.47e-14   
+4   1.8018301158367e-5       1.8018301158367e-5       5.49e-15   
+5   2.1937050676173e-5       2.1937050676173e-5       2.0e-14    
+6   1.4397210826966e-5       1.4397210826966e-5       3.33e-16   
+7   1.4377138564892e-5       1.4377138564892e-5       2.35e-14   
+
+worst relative difference over 8 controls: 3.47e-14   (m1 prints 14 s.f.)
+total 312.0s

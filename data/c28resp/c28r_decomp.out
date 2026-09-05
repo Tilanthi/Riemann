@@ -1,0 +1,44 @@
+====================================================================================
+E8  DECOMPOSITION of the registered -> rung-3 move of a3, per K
+====================================================================================
+K   d a3 (a only)  d a3 (b only)  d a3 (both)    sum of parts  
+6   -2.019e-9      -4.968e-9      -6.988e-9      -6.988e-9     
+7   -2.73e-9       -6.019e-9      -8.749e-9      -8.749e-9     
+8   -3.607e-9      -7.123e-9      -1.073e-8      -1.073e-8     
+
+====================================================================================
+E9  SENSITIVITIES per K:  d a3/da  and  d a3/d|b|  (measured, linear regime confirmed)
+====================================================================================
+K=5   d a3/da = -1.0011e+6     d a3/d|b| = -1084.5        ratio |da/db| = 923.1
+K=6   d a3/da = -1.3562e+6     d a3/d|b| = -1327.8        ratio |da/db| = 1021.0
+K=7   d a3/da = -1.8338e+6     d a3/d|b| = -1608.6        ratio |da/db| = 1140.0
+K=8   d a3/da = -2.4223e+6     d a3/d|b| = -1903.8        ratio |da/db| = 1272.0
+
+====================================================================================
+E10 ERROR BUDGET for a3^BL under the rung-3 constants and their published guards
+     guards from m1-L164 sec.5:  a guard 5.61e-16,  |b| guard 5.01e-13
+====================================================================================
+K=6  a3 = 11.700717319895874   from-a 7.61e-10     from-b 6.65e-10     input total 1.43e-9      maxresid 7.33e-10
+K=7  a3 = 11.7007173174123915   from-a 1.03e-9      from-b 8.06e-10     input total 1.83e-9      maxresid 2.01e-10
+K=8  a3 = 11.7007173164027646   from-a 1.36e-9      from-b 9.54e-10     input total 2.31e-9      maxresid 8.67e-11
+
+K=6..8 model spread (m1's +/-4e-9 bar, and my +/-5e-10 bar, are BOTH this construction):
+   spread = 3.493e-9   mid = 11.7007173179036767
+
+====================================================================================
+E11 WOULD >21-DIGIT a,b BUY THE 10th FIGURE?  set the constants EXACT-in-model and refit
+     (surrogate: perturb a,b by 1e-25 -- i.e. constants effectively infinitely precise)
+====================================================================================
+residual constants-induced motion at 25-digit a,b:  3.598e-19
+K-model spread that REMAINS regardless:              3.493e-9
+10th significant figure of a3 = unit in the          1e-9 place
+
+====================================================================================
+E12 SIGNIFICANT FIGURES that survive BOTH constant sets (K=6..8 mid of each)
+====================================================================================
+registered  mid = 11.7007173267260452
+rung3       mid = 11.7007173179036767
+   8 s.f.:  registered 11.700717       rung3 11.700717       AGREE
+   9 s.f.:  registered 11.7007173      rung3 11.7007173      AGREE
+  10 s.f.:  registered 11.70071733     rung3 11.70071732     DISAGREE
+  11 s.f.:  registered 11.700717327    rung3 11.700717318    DISAGREE

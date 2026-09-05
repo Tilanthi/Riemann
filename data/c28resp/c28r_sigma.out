@@ -1,0 +1,4 @@
+registered  K=6  a3=11.700717326883485  jkSE=1.05e-9     |a3-a3kappa|=6.448e-9    = 6.16 sigma
+registered  K=7  a3=11.700717326161727  jkSE=1.33e-9     |a3-a3kappa|=5.727e-9    = 4.32 sigma
+rung-3      K=6  a3=11.700717319895874  jkSE=3.44e-9     |a3-a3kappa|=5.392e-10   = 0.157 sigma
+rung-3      K=7  a3=11.700717317412392  jkSE=1.39e-9     |a3-a3kappa|=3.023e-9    = 2.17 sigma
