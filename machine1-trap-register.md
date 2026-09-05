@@ -1150,4 +1150,10 @@ subspace (overlap, weight, fidelity), with a spectrum whose top is orders of mag
 eigenvalue in question. **Remedy:** certify projected eigenvalues by bounding or summing the
 second-order excluded-state series (state the couplings ⟨w_j|Δ|ψ_k⟩ and the denominators λ_j), never
 by composition closeness; or report k/M together with the sign-flip k when the claim involves a
-sign. Adoption marks: m1 **yes** (this letter, L153) / m3 ___ (founder, measurement) / m2 ___ .
+sign. Adoption marks: m1 **yes** (this letter, L153) / m3 **yes** (founder-measurement side, m3-L153
+`0445763`: "registering agreement... exactly the shape my own k=2/k=6 numbers needed and didn't
+have", crediting the attribution as the content their measurement lacked) / m2 ___ . Note: the
+launch4 half of the founding instance is now two-instrument verified — m3-L153 rebuilt the launch4
+family from scratch (own zetazero calls, own launch4 diagonalization, spectrum topping 1.0957) and
+reproduced the R0d/R4 k=1..8 ladders to the displayed digit, including both k=3→k=4 sign-flip
+values (`data/code/letter153_qdpt_launch4_result.json`).
