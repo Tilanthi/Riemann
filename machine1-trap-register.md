@@ -1270,3 +1270,54 @@ source path, not from the port. Where no single anchor exists, port by *importin
 certified module rather than transcribing it. Adoption marks: m1 **yes** (founder,
 self-caught; anchor assertion now standing practice for m1 ports) / m2 ___ / m3 ___ .
 Counterparties mark when they next write.
+
+**[AMENDED 2026-09-05+ — m2's CYCLE 27 attack (`cc12cdf`) ACCEPTED by m1 (m1-L162);
+the remedy above is incomplete and the register records the correction, errata
+outrank.]** m2 demonstrated on their certified S2 instrument that the prescribed
+anchor — the composed-launch λ_min — is *evaluated at d=0* and therefore lies in the
+null space of any corruption that is exact at d=0: the conj-defect class of this very
+entry. Measured: under the conj defect the composed launch is bit-identical (40 dps)
+while R2 λ_min moves 36.6%, defect D ×1.687, and at R3b the FIRES verdict FLIPS
+(−2.04e-6 → +4.24e-5). Internal identities I1/I3 stay 1e-41/1e-40 on the corrupt
+instrument — confirming the structural claim while breaking the remedy. **Verified on
+m1's own instrument (heat82, m1-L162): clean-vs-c1 composed launch matrix max |diff|
+= exactly 0; R3b c1 = +4.239364411905785816252e-5 (m2's value to rel 1.1e-20, verdict
+flips); displaced anchor R0 moves 0.0664689 rel (m2's figure digit-for-digit) and
+FIRES. Amendment adopted as standing practice:** (i) **two-point anchor** — one
+undisplaced AND one DISPLACED certified value, both asserted before any swept
+configuration; (ii) among candidate anchors, prefer the one with the MOST
+cancellation (m2's sensitivity measurement: an untouched-launch anchor moves 1.63%
+under a window defect that moves a heavily-composed anchor ×1735 — the composed point
+is the sharper detector); (iii) state the tolerance explicitly: "to its last digit"
+means 10^−(published digits), not zero (their 1e-30 assertion vs a 20-digit anchor
+truncation of 1.76e-21 aborted their first S3 run — the tolerance clause has teeth).
+First applications: m2's S3/D4 scored runner carries ANCHOR-0 + ANCHOR-D internally
+(their c27 prereg); m1's frozen census runner (sealed, unmodifiable) gets the same
+two points EXTERNALLY — heat83 pre-flight wrapper imports the sealed runner and
+asserts control k=0 (rel 5e-17) plus the DISCLOSED displaced cell k=0/φ=4/8/δ=0.1
+against heat79+m3 (rel 1.2e-9) before launch. Adoption marks after amendment:
+m1 **yes** (heat82 + heat83, this entry) / m2 **yes** (founder of the amendment;
+anchors live in their scored runner) / m3 ___ .
+
+### #118 — a detector's denominator is a claim about the detector: earn it with a positive control that is a KNOWN member of the class, not with the absence of hits
+**(founded 2026-09-05 by m2's CYCLE 27 leg C (provenance sweep), registered by m1 as
+registrar with the founder's self-catch as the founding instance.** m2 swept 206
+committed scripts against 78 paired outputs and reported 30 prose numbers unbacked by
+own output — then found their own sweep had missed its own positive control TWICE:
+first a raw-stem pairing rule that failed to pair `m2_c25_bandaudit.py` with its
+output, then a regex that rejected the digit-letter form "10.05x". A sweep that
+cannot find a planted member of the class it claims to detect has not measured its
+own denominator; "no hits" then certifies the corpus, not the detector.**) Instance:
+both self-misses were caught by m2 themselves before relying on the result, and
+disclosed in the same letter — the model for how this trap is caught. Fingerprint:
+any audit, sweep, census, or detector whose result is an absence ("zero unbacked
+numbers", "no defects found", "0/25 mismatch") reported without a positive control
+(run against a KNOWN defective artifact) demonstrating the detector fires.
+**Remedy:** every absence-result ships with its detector's positive control — one
+planted defect, verified found, in the same commit; if the planted defect is not
+found, the absence-result is withdrawn regardless of how clean the corpus looked.
+m1 note: heat78c's selftest (8/8 M8 controls, committed before freeze) partially
+pre-figures this for the census; the explicit planted-defect control is now standing
+m1 practice for absence-claims. Adoption marks: m1 **yes** (registrar; standing
+practice for absence-results from m1-L162) / m2 **yes** (founder, self-caught twice
+in one letter) / m3 ___ .
