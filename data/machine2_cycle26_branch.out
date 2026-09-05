@@ -1,0 +1,24 @@
+(i) branch hunt -- delta_b past the sealed ladder; t = (exact-ty6)/(ty6-ty4)
+d_b    |          ratio              r     t sign      0.5/(1-r)      0.5/(1+r) branch
+0.55   |     0.83875179     0.40387609          +     0.83875179     0.35615679 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+0.60   |      1.1488426     0.56477938          +      1.1488426     0.31953386 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+0.80   |      54.905087     0.99089338          +      54.905087     0.25114353 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+0.90   |      198.44768     0.99748044          +      198.44768     0.25031534 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+1.00   |      297.96194     0.99832193          +      297.96194     0.25020993 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+1.10   |      276.55608     0.99819205          +      276.55608      0.2502262 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+1.20   |      233.01304      0.9978542          +      233.01304     0.25026851 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+1.40   |      234.81175     0.99787063          +      234.81175     0.25026645 SAME-SIGN  fits 0.5/(1-r)  ratio>0.5 True
+
+(ii) un-fail window on the overshoot branch: band holds iff ratio<=1
+     overshoot branch: ratio = 0.5/(1+r) <= 1 for ALL r>=0  -> never fails
+     m1's window is the DEGRADED same-sign continuation |t|>1 (ty6 worse than ty4):
+|t|=|e/D|     r=|t|/|1-t| ratio=0.5|1-t| verdict
+1.5                   3.0           0.25 IN 
+2.0                   2.0            0.5 IN    <-- INSIDE the published [0.500,0.543] window
+2.086           1.9208103          0.543 IN    <-- INSIDE the published [0.500,0.543] window
+2.5             1.6666667           0.75 IN 
+3.0                   1.5            1.0 IN 
+3.001           1.4997501         1.0005 OUT
+4.0             1.3333333            1.5 OUT
+
+done
