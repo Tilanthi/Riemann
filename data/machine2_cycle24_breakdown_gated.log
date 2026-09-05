@@ -1,0 +1,5 @@
+   basis 5 deg 7 gamma 280: dep=1.135e-13  tol=3.263e-18  gt-unc=5.911e-45 -> BAD
+basis 5 deg=7 first-bad-gamma(gated) = 280
+basis 5 deg=8 first-bad-gamma(gated) = None
+basis 5 deg=9 first-bad-gamma(gated) = None
+basis 5 deg=10 first-bad-gamma(gated) = None
