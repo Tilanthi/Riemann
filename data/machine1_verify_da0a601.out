@@ -1,0 +1,68 @@
+--- variant (i: eps as displayed in L163): line y = 2.64552082577 + 7.4624557454*eps   (model: 2.64552141181 + 7.46245287679*eps)
+row           eps_used    departure      floor      ratio
+  1              0.001    5.8317e-7    6.0e-16    9.72e+8
+  2          0.0011239    8.1471e-6   7.32e-16  1.114e+10
+  3              0.002     5.803e-7    2.1e-15   2.763e+8
+  4             0.0035      5.76e-7   6.22e-15   9.253e+7
+  5              0.006    5.6883e-7   1.81e-14   3.143e+7
+  6          0.0082668   -1.2734e-5   3.43e-14   3.716e+8
+  7              0.012    5.5162e-7   7.21e-14   7.651e+6
+  8               0.02    5.2867e-7    2.0e-13   2.642e+6
+  9              0.035    4.8564e-7   6.13e-13   7.928e+5
+ 10               0.06    4.1393e-7    1.8e-12   2.299e+5
+ 11                0.1    2.9918e-7    5.0e-12   5.984e+4
+worst departure 1.2734e-5 at row 6; rows with ratio>1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+--- variant (ii: eps true grid literals): line y = 2.64552141181 + 7.46245287682*eps   (model: 2.64552141181 + 7.46245287679*eps)
+row           eps_used    departure      floor      ratio
+  1              0.001   2.5087e-13    6.0e-16      418.1
+  2 0.0011239031932557    2.468e-13   7.32e-16      337.3
+  3              0.002   2.2345e-13    2.1e-15      106.4
+  4             0.0035   1.7558e-13   6.22e-15       28.2
+  5              0.006   1.2278e-13   1.81e-14      6.784
+  6    0.0082667603361    1.629e-14   3.43e-14     0.4753
+  7              0.012  -1.5735e-14   7.21e-14     0.2182
+  8               0.02  -4.4207e-13    2.0e-13      2.209
+  9              0.035  -9.5572e-13   6.13e-13       1.56
+ 10               0.06  -5.6074e-14    1.8e-12    0.03115
+ 11                0.1   4.3384e-13    5.0e-12    0.08677
+worst departure 9.5572e-13 at row 9; rows with ratio>1: [1, 2, 3, 4, 5, 8, 9]
+--- (i) letter display: eps truncated, u/r as printed in L163 (model-line reference, fit-free)
+  row  1  dep  -4.8201e-15  floor   6.0e-16  ratio     8.033
+  row  2  dep    7.5643e-6  floor  7.32e-16  ratio 1.034e+10
+  row  3  dep  -7.6837e-15  floor   2.1e-15  ratio     3.659
+  row  4  dep  -1.8717e-14  floor  6.22e-15  ratio     3.007
+  row  5  dep  -1.0113e-14  floor  1.81e-14  ratio    0.5587
+  row  6  dep   -1.3297e-5  floor  3.43e-14  ratio   3.88e+8
+  row  7  dep  -1.2763e-15  floor  7.21e-14  ratio    0.0177
+  row  8  dep  -2.3114e-13  floor   2.0e-13  ratio     1.155
+  row  9  dep  -3.7641e-13  floor  6.13e-13  ratio    0.6144
+  row 10  dep   1.1372e-12  floor   1.8e-12  ratio    0.6317
+  row 11  dep   2.6095e-12  floor   5.0e-12  ratio    0.5219
+  WORST dep 1.3297e-5 (row 6); rows ratio>1: [(1, '8.033'), (2, '1.034e+10'), (3, '3.659'), (4, '3.007'), (6, '3.88e+8'), (8, '1.155')]
+--- (ii) eps true grid literals, u/r as printed in L163 (model-line reference, fit-free)
+  row  1  dep  -4.8201e-15  floor   6.0e-16  ratio     8.033
+  row  2  dep  -5.8508e-15  floor  7.32e-16  ratio     7.997
+  row  3  dep  -7.6837e-15  floor   2.1e-15  ratio     3.659
+  row  4  dep  -1.8717e-14  floor  6.22e-15  ratio     3.007
+  row  5  dep  -1.0113e-14  floor  1.81e-14  ratio    0.5587
+  row  6  dep  -6.0936e-14  floor  3.43e-14  ratio     1.778
+  row  7  dep  -1.2763e-15  floor  7.21e-14  ratio    0.0177
+  row  8  dep  -2.3114e-13  floor   2.0e-13  ratio     1.155
+  row  9  dep  -3.7641e-13  floor  6.13e-13  ratio    0.6144
+  row 10  dep   1.1372e-12  floor   1.8e-12  ratio    0.6317
+  row 11  dep   2.6095e-12  floor   5.0e-12  ratio    0.5219
+  WORST dep 2.6095e-12 (row 11); rows ratio>1: [(1, '8.033'), (2, '7.997'), (3, '3.659'), (4, '3.007'), (6, '1.778'), (8, '1.155')]
+--- (iii) heat72x full precision: eps true, u/r 50 digits (model-line reference, fit-free)
+  row  1  dep  -5.2306e-15  floor   6.0e-16  ratio     8.718
+  row  2  dep  -5.6942e-15  floor  7.32e-16  ratio     7.783
+  row  3  dep  -8.9722e-15  floor   2.1e-15  ratio     4.272
+  row  4  dep  -1.4585e-14  floor  6.22e-15  ratio     2.343
+  row  5  dep  -2.3938e-14  floor  1.81e-14  ratio     1.323
+  row  6  dep   -3.242e-14  floor  3.43e-14  ratio     0.946
+  row  7  dep  -4.6388e-14  floor  7.21e-14  ratio    0.6434
+  row  8  dep  -7.6321e-14  floor   2.0e-13  ratio    0.3814
+  row  9  dep  -1.3244e-13  floor  6.13e-13  ratio    0.2162
+  row 10  dep  -2.2598e-13  floor   1.8e-12  ratio    0.1255
+  row 11  dep  -3.7565e-13  floor   5.0e-12  ratio   0.07513
+  WORST dep 3.7565e-13 (row 11); rows ratio>1: [(1, '8.718'), (2, '7.783'), (3, '4.272'), (4, '2.343'), (5, '1.323')]

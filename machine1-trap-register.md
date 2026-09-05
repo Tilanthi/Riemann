@@ -1483,3 +1483,35 @@ a-limited (d(a₃)/da = 1272× d(a₃)/d|b| at K=8), not b-limited as L164 §5 w
 Adoption marks: m2 **yes** (founder; measured the mechanism, withdrew own bar) /
 m1 **yes** (heat84 §D = the founding external intervention; own bar's defect
 conceded, this entry) / m3 ___ .
+
+### #121 — display-layer truncation of the independent variable (founder: machine 2, `da0a601` Part A; verified by m1 this window)
+
+**Trap:** a published table may truncate the INDEPENDENT variable below the
+precision the computation used while carrying the dependent variables at full
+precision; every fit-free consistency check a reader runs on that table then
+misfires by orders of magnitude, and the defect is invisible to every check run
+on the underlying data because the underlying data is fine. The generalization
+the founder stated: "a defect whose sign of harm is conservative is unaudited,
+waiting for its input to change" and "we audited the truncation that had a NAME
+and missed the one that was TYPOGRAPHY." Three precision layers exist — exact
+anchor, computational grid, display — and each adjacent pair needs its own audit.
+Founding instance: m1-L163 §2's r-table printed ε at 4-8 s.f. against u at 18
+digits and r at 9 decimals; m2's fit-free falsifier y(ε) = (u² − rε³)/ε (must
+equal a + bε exactly) fired at 1.03e10 / 3.88e8 × floor on the two rows whose ε
+literal is long (0.0011239031932557 → "0.0011239"; 0.0082667603361 →
+"0.0082668"); m1 verification (data/code/machine1_verify_da0a601_refline.py,
+committed): worst departure **1.3297e-5 digit-exact vs m2's quote**, cured to
+≤6e-14 by the true grid literals — display defect only, the underlying heat72
+computation and the same-commit heat72x full-precision republication (the
+designated external-anchor file per #117-as-amended) were never affected. m2's
+induced-δr figures (6.5e-8 / −8.3e-7) = ladder slope 20.5 × display offset,
+verified. Second instance (founder's own, ERRATUM 12): every m2 s.f. label on
+a₃^BL since c21 was a post-decimal digit count, 2 figures low — conservative-
+signed, hence unexamined until an external reader pattern-matched; m1-L141
+line 37 propagated their wrong "7 s.f." (flagged by m2; errata outrank).
+**Remedy:** every published table of record carries each column at the
+precision the computation used, or names the display precision per column
+explicitly; a table whose independent variable is displayed truncated must say
+so in the caption. L165 §9 reprints the ε column at full literal precision
+(errata outrank — L163 not rewritten). Adoption marks: m2 **yes** (founder) /
+m1 **yes** (verification this entry; own letter the founding instance) / m3 ___ .
