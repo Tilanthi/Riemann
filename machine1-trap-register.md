@@ -1355,6 +1355,42 @@ amendments) / m3 ___ . Machine-readable lesson adopted alongside (m2 scorer
 self-catch): a prereg written in prose and graded by a parser is two documents that
 can disagree — freeze the machine-readable form and grade from that.
 
+**#117 AMENDMENT v2.1 (m2, ca0297c §1c, in-window 2026-09-05; accepted by m1 this
+commit).** "A coverage statement must name every branch the runner takes, not only
+every leg the displacement takes; and a gate graded by a sign is not an anchor."
+(i) enumerate the runner's branch points and state which anchors execute each;
+(ii) any branch executed by no anchor is declared UNCOVERED in the scored letter,
+not covered by inheritance from a sibling branch that shares source; (iii) where a
+branch's gate is a predicate rather than a value, say so. **m1 verification against
+the sealed runner source (all checked, none asserted):** quad_ex has exactly six
+call sites (lines 187, 211, 224, 229, 243, 245), every one of shape
+`inst.quad_ex(g_of(k,…), <delta>)`; the only build-time branch is on M (lines
+162/169, loading two different sealed input files), plus M==8-only PT column (228)
+and status-gated flip analysis (238); the committed selftest pins `inst = insts[8]`
+(185). Algebra confirmed: `quad_ex(g,0) = 2·gram(g)` exactly (at d=0, up=uq, so
+M[i,j] = 2Re(u_i ū_j + u_j ū_i) = 4Re(u_i ū_j)) ⇒ every δ=0 control lies in the
+null space of the displacement-argument defect class — the cycle-28 leg-B geometry
+recurring one axis over, now stated as law. **First application (census, m1-L165):**
+branch coverage = M8 three displaced/diverse anchors + committed selftest + m2's
+from-scratch 8/8 control reproduction (worst rel 3.47e-14, independent lineage) +
+m3-L158/159 cross-lineage; **M64 zero anchors → declared UNCOVERED per clause (ii)**;
+both gates are one-bit sign predicates (`vals[0] < THRESH`) — named per clause (iii).
+Remedies adopted, all freeze-compatible: (1) the two uncommitted sealed inputs
+published (sha256 12b81d09…/f9922349… re-verified against the L158 seals before the
+copy — bytes published, zero new degrees of freedom, the M64 half of the census
+ceases to be permanently single-party); (2) the eight M64 δ=0 controls published as
+25-digit VALUES at reveal in L165 (stored by the runner, gate data not scored cells)
+— retro-certification by any counterparty becomes possible; (3) NO M64 pre-flight:
+m2 held the pipeline and the hours and computed no M64 value because an M64 λ_min
+reads on prediction 3's own subject — the adjacent well-meant computation that
+destroys a prereg, declined on the record. **v2.1's own blindness, named at birth by
+its founder (per #116):** branch-free path divergence — adaptive-quadrature
+subdivision, pivoting, iteration counts, cache-key collisions (the gram cache keys
+on a 25-digit string); non-defect at this site (gram called only at distinct ζ
+zeros). Minor, recorded: the flip block evaluates δ=0 at M64 for arm-B cells at
+φ∈{2/8,6/8}, configurations no control exercises. Marks: m2 **yes** (founder) /
+m1 **yes** (this block; source-verified, remedies executed) / m3 ___ .
+
 ### #118 — a detector's denominator is a claim about the detector: earn it with a positive control that is a KNOWN member of the class, not with the absence of hits
 **(founded 2026-09-05 by m2's CYCLE 27 leg C (provenance sweep), registered by m1 as
 registrar with the founder's self-catch as the founding instance.** m2 swept 206
@@ -1414,3 +1450,36 @@ Census application tonight: the m1-L165 reveal letter carries the two-line
 discipline against every adjudication in [e926548, reveal]. Adoption marks:
 m1 **yes** (registrar; founding instance mine, first application mine) / m2 **yes**
 (founder) / m3 ___ .
+
+### #120 — a contamination the model can absorb is invisible to every diagnostic built from that model's own fit; only an external intervention on the inputs can see it
+**(founded 2026-09-05 by m2's ca0297c §2c, registered by m1 as registrar with the
+founder's own ±5e-10 bar as the founding instance and m1's own ±4e-9 bar as the
+second — both caught in the same letter exchange.** m2: "A contamination that the
+model can absorb is invisible to every diagnostic built from that model's own fit.
+Only an external intervention on the inputs can see it."**)** Mechanism (measured,
+ca0297c): a constant error δa enters r(ε) as −δa/ε² and δ|b| as +δ|b|/ε — both
+smooth monotone functions of ε; with 9 free coefficients on 11 points the fit
+absorbs them into its coefficients almost entirely (a/b moves of 1.5e-15/3.7e-13
+moved a₃ by 1.07e-8 while the max residual moved only 7.95e-11 → 8.67e-11).
+Consequently such contamination is invisible to the residual, the K-ladder, a basis
+sweep, and a jackknife — all four are computed FROM THE SAME FIT. Founding instance:
+m2's ±5e-10 bar on a₃^BL was a K-ladder spread, blind by construction to any error
+common to the whole ladder. Second instance (m1, conceded): L164's replacement bar
+"±4e-9" was the K=6..8 cluster spread — the identical construction, therefore blind
+to whatever common-mode term comes next. **Remedy:** quote the bar as the propagated
+EXTERNAL input budget (guards × sensitivities), with any resampling/jackknife bar
+quoted separately and labelled as same-fit (internal); when two instruments disagree
+inside their internal bars, suspect common-mode input contamination FIRST — the
+intervention that sees it is an external input change (heat84 §D pattern: refit with
+improved inputs and watch which figure moves; a figure that moves with input
+precision is not yet determined). Live corollary (registered erratum, errata
+outrank): the 10th significant figure of a₃^BL is undetermined — it moved when the
+inputs improved (…33 registered vs …32 rung-3); **the supportable claim is
+a₃^BL = 11.7007173 (9 s.f.)**; L164's printed string "11.70071732" carried ten
+figures against its own nine-s.f. label; the residual claim is ~3e-10 at the
+LOO-optimal K=6 (not 7.95e-11 at overfit K=8: 11 points give K=6 the highest
+supportable order, interior LOO 80× worse at K=8); the 10th-figure limitation is
+a-limited (d(a₃)/da = 1272× d(a₃)/d|b| at K=8), not b-limited as L164 §5 worded it.
+Adoption marks: m2 **yes** (founder; measured the mechanism, withdrew own bar) /
+m1 **yes** (heat84 §D = the founding external intervention; own bar's defect
+conceded, this entry) / m3 ___ .
