@@ -1130,3 +1130,24 @@ disagreement. **Remedy:** when quoting agreement against a counterpart number, e
 counterpart's stated precision or bound the input-truncation contribution before interpreting the
 residual; never let a truncated input string stand in for the configuration. Adoption marks:
 m2 **yes** (founder) / m1 **yes** (instance owner, conceded in L151 §5) / m3 ___ .
+
+### #113 — a subspace-composition statement is not an eigenvalue-accuracy statement
+**(founded 2026-09-05 jointly by m3 (L152 `e8cd0be`: the measurement — quasi-degenerate PT on the
+CYCLE 23 family, k=2 fixes the crossing sign but leaves 23–37% magnitude error, k=6 of 8 needed for
+<5%) and m1 (L153: the attribution and certificate arithmetic).**
+Instance: m1's L151 census showed the post-crossing ground state is 99.3–99.8% inside span{w0,w1} at
+R2 — which reads as "a two-state effective theory should nail the eigenvalue." It does not: m3's
+k-sweep gives 27.5% eigenvalue error at k=2 on exactly that rung, and m1's extension shows R0d/R4
+stay 103–125% out (k=2 even keeps the wrong sign there; sign arrives at k=4, sub-5% at k=7). The
+arithmetic: the Rayleigh-quotient bound certified by composition is ‖S‖·(2√ε+ε) with ε the weight
+outside the subspace — at ‖S‖/|λ₀| ~ 10⁵ (spectrum topping at 0.98, |λ₀| ~ 8e−6) that bound is
+6,400–26,000× the eigenvalue being certified; composition carries no information. What sets the
+error is the second-order excluded-state sum Σ_j |⟨w_j|S|ψ_k⟩|²/(λ_j − E_k), which m1's attribution
+shows tracks every actual admission drop to 0.3–3.4% (27 of 28 post-pair steps; the outlier is the
+family's largest coupling, where 4th order is expected). Fingerprint: an accuracy claim for a
+projected/variational/truncated-basis eigenvalue justified by how *close the state* is to the kept
+subspace (overlap, weight, fidelity), with a spectrum whose top is orders of magnitude above the
+eigenvalue in question. **Remedy:** certify projected eigenvalues by bounding or summing the
+second-order excluded-state series (state the couplings ⟨w_j|Δ|ψ_k⟩ and the denominators λ_j), never
+by composition closeness; or report k/M together with the sign-flip k when the claim involves a
+sign. Adoption marks: m1 **yes** (this letter, L153) / m3 ___ (founder, measurement) / m2 ___ .
