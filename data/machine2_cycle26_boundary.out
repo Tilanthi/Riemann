@@ -1,0 +1,26 @@
+(A) bisecting r = 1/2 on delta_b in [0.55, 0.60]
+   bracket  r(0.55) = 0.40387609   r(0.6) = 0.56477938
+   it  0  delta_b* in [0.575, 0.6]
+   it  5  delta_b* in [0.58125, 0.58203125]
+   it 10  delta_b* in [0.581372070312, 0.581396484375]
+   it 15  delta_b* in [0.581391143799, 0.581391906738]
+   it 20  delta_b* in [0.581391787529, 0.581391811371]
+   it 21  delta_b* in [0.581391787529, 0.58139179945]
+   delta_b* = 0.581391793489   (band rule fails for delta_b > this)
+
+(B) observable surrogate q = |ty6-ty4|/|ty4-ty2| vs the unobservable r
+d_b      |            r            q        q/(1-q)      rel.dev band
+0.10     |  0.003392063  0.011620984    0.011757619        2.466 IN   surrogate says IN  AGREE
+0.164990 |  0.018756211  0.032210732    0.033282796       0.7745 IN   surrogate says IN  AGREE
+0.20     |  0.028076188  0.055622448    0.058898529        1.098 IN   surrogate says IN  AGREE
+0.30     |  0.075857937   0.64072598      1.7833908        22.51 IN   surrogate says OUT **DISAGREE**
+0.35     |   0.10153967   0.93960916      15.558802        152.2 IN   surrogate says OUT **DISAGREE**
+0.40     |   0.15120114    1.4604328     -3.1718694        21.98 IN   surrogate says OUT **DISAGREE**
+0.45     |   0.21528301    2.8237156     -1.5483311        8.192 IN   surrogate says OUT **DISAGREE**
+0.50     |   0.29100738     5.924234     -1.2030773        5.134 IN   surrogate says OUT **DISAGREE**
+0.55     |   0.40387609    13.475345     -1.0801581        3.674 IN   surrogate says OUT **DISAGREE**
+0.60     |   0.56477938    28.025588      -1.037002        2.836 OUT  surrogate says OUT AGREE
+0.70     |   0.89971418    38.091848     -1.0269601        2.141 OUT  surrogate says OUT AGREE
+0.80     |   0.99089338    9.4209516     -1.1187514        2.129 OUT  surrogate says OUT AGREE
+
+agreement 6/12      done 54.1s

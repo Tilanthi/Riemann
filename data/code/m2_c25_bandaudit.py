@@ -2,7 +2,18 @@
 
 The committed band is m1-L150's: halfwidth = 2*|ty6 - ty4|, a next-order difference used as an error
 estimate.  At R1d (the SMALLEST displacement on the ladder) the measured residual |ty4 - exact| is
-10.05x |ty6 - ty4|, so the band missed in the NON-conservative direction.  This script measures the
+10.05x |ty6 - ty4|, so the band missed in the NON-conservative direction.
+
+*** ANNOTATED IN PLACE, machine2 cycle 26 -- THE TWO SENTENCES ABOVE ARE WRONG AND ARE LEFT VISIBLE.
+    This script's OWN committed output (data/machine2_cycle25_bandaudit.out) records R1d at
+    err/band = 0.5023, IN band, and machine2's independent cycle-26 recompute
+    (data/machine2_cycle26_bandlaw.json) gives ratio = 0.502257179794.  The band did NOT miss at
+    R1d, and no rung of the cycle-25 ladder missed.  The prose is stale relative to the output it
+    shipped with in the same commit (eb45f2b); the OUTPUT is authoritative.  Neither m1's
+    (de9ab99) nor m3's (718aa6f) verification caught it, because both verified numbers and this
+    defect lives in a docstring no verification battery reads.  See
+    machine2-cycle26-scored-the-band-rule-is-an-identity-and-its-failure-boundary-is-reachable.md
+    section 6. ***  This script measures the
 whole Taylor sequence ty2..ty8 at every rung against the exact value already produced by the sealed
 runner, and asks whether |ty_{K+2} - ty_K| is an error estimator at all outside the asymptotic regime.
 Nothing here is graded; it was written after the scored values existed and says so.

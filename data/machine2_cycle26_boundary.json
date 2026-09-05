@@ -1,0 +1,118 @@
+{
+ "delta_b_star": "0.58139179348946",
+ "bracket": [
+  "0.5813917875289917",
+  "0.5813917994499207"
+ ],
+ "surrogate": {
+  "0.10": {
+   "r": "0.0033920629801",
+   "q": "0.0116209835978",
+   "q_over_1mq": "0.0117576186918",
+   "rel_dev": "2.46621",
+   "in_band": true,
+   "surrogate_verdict": true,
+   "agree": true
+  },
+  "0.16499045761728792745744": {
+   "r": "0.0187562108974",
+   "q": "0.0322107323955",
+   "q_over_1mq": "0.0332827956185",
+   "rel_dev": "0.774495",
+   "in_band": true,
+   "surrogate_verdict": true,
+   "agree": true
+  },
+  "0.20": {
+   "r": "0.0280761875834",
+   "q": "0.0556224483193",
+   "q_over_1mq": "0.0588985286873",
+   "rel_dev": "1.09781",
+   "in_band": true,
+   "surrogate_verdict": true,
+   "agree": true
+  },
+  "0.30": {
+   "r": "0.075857937101",
+   "q": "0.640725980641",
+   "q_over_1mq": "1.78339079954",
+   "rel_dev": "22.5096",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.35": {
+   "r": "0.101539674703",
+   "q": "0.939609158003",
+   "q_over_1mq": "15.5588020789",
+   "rel_dev": "152.229",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.40": {
+   "r": "0.151201139415",
+   "q": "1.46043284214",
+   "q_over_1mq": "-3.17186939869",
+   "rel_dev": "21.9778",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.45": {
+   "r": "0.215283009031",
+   "q": "2.82371556963",
+   "q_over_1mq": "-1.54833111953",
+   "rel_dev": "8.19207",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.50": {
+   "r": "0.291007380395",
+   "q": "5.92423403581",
+   "q_over_1mq": "-1.20307726902",
+   "rel_dev": "5.13418",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.55": {
+   "r": "0.40387608946",
+   "q": "13.4753451223",
+   "q_over_1mq": "-1.08015810306",
+   "rel_dev": "3.67448",
+   "in_band": true,
+   "surrogate_verdict": false,
+   "agree": false
+  },
+  "0.60": {
+   "r": "0.564779376346",
+   "q": "28.0255877078",
+   "q_over_1mq": "-1.03700197053",
+   "rel_dev": "2.83612",
+   "in_band": false,
+   "surrogate_verdict": false,
+   "agree": true
+  },
+  "0.70": {
+   "r": "0.89971417564",
+   "q": "38.0918484043",
+   "q_over_1mq": "-1.02696010156",
+   "rel_dev": "2.14143",
+   "in_band": false,
+   "surrogate_verdict": false,
+   "agree": true
+  },
+  "0.80": {
+   "r": "0.990893375672",
+   "q": "9.42095162578",
+   "q_over_1mq": "-1.11875142436",
+   "rel_dev": "2.12903",
+   "in_band": false,
+   "surrogate_verdict": false,
+   "agree": true
+  }
+ },
+ "surrogate_agreement": "6/12"
+}

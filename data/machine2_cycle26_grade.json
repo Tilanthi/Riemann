@@ -1,0 +1,85 @@
+{
+ "cycle": 26,
+ "machine": "machine2",
+ "unit": "band-rule law",
+ "H1_IDENTITY": {
+  "verdict": "HELD",
+  "n": 19,
+  "max_rel_dev": 1.0571e-39,
+  "declared_threshold": 1e-08,
+  "fires_if": ">1e-6",
+  "content_note": "identity requires ty6 strictly between ty4 and exact; held at every configuration including the three where the band FAILS"
+ },
+ "H2_NEVER_AT_RISK": {
+  "verdict": "HELD",
+  "max_r_committed_rungs": 0.0786888525323,
+  "argmax": "R1e",
+  "prestated_point_prediction": [
+   0.05,
+   0.12
+  ],
+  "hit": true,
+  "distance_to_failure_boundary_in_r": 6.354140185164872
+ },
+ "H3_MONOTONE": {
+  "verdict": "HELD",
+  "r_ladder": [
+   0.075857937101,
+   0.101539674703,
+   0.151201139415,
+   0.215283009031,
+   0.291007380395,
+   0.40387608946,
+   0.564779376346,
+   0.89971417564,
+   0.990893375672
+  ],
+  "strictly_increasing": true
+ },
+ "H4_REACHABLE_FAILURE": {
+  "verdict": "HELD",
+  "first_failing_delta_b": "0.60",
+  "ratio_there": "1.14884261642",
+  "r_there": "0.564779376346",
+  "boundary_delta_b_star": "0.58139179348946",
+  "bracket": [
+   "0.5813917875289917",
+   "0.5813917994499207"
+  ],
+  "prestated_band": [
+   0.45,
+   0.75
+  ],
+  "hit": true
+ },
+ "H5": {
+  "verdict": "VACUOUS - OWN PREREG DEFECT, SELF-CAUGHT",
+  "why": "band/|ty4-exact| = 1/ratio = 2(1-r) identically, so H5's assertion 2(1-r)<2.5 is equivalent to r>-0.25 and cannot fire for r>=0. Empty firing world. Descends from the same identity as H1: two hypotheses, one determination.",
+  "counted_as_success": false
+ },
+ "H6_BOOKKEEPING": {
+  "verdict": "HELD",
+  "graded_by_reading": "6454ea5 data/code/c25_prereg.json",
+  "per_rung_keys_found": [
+   "d_a",
+   "d_b",
+   "site",
+   "ty2",
+   "ty4",
+   "ty6",
+   "band_halfwidth",
+   "shift_ty4",
+   "fires_ty4"
+  ],
+  "predicted_ratio_or_r_or_d": false,
+  "note": "the only 'ratio' keys in that file are ||P||_G/gap ratios, unrelated to the band statistic"
+ },
+ "EXTENSION_remedy": {
+  "verdict": "NEGATIVE",
+  "surrogate": "q = |ty6-ty4|/|ty4-ty2|",
+  "agreement_with_band_verdict": "6/12",
+  "false_safe_count": 0,
+  "note": "q exceeds 1 from delta_b=0.40 while the band still holds through 0.55; geometric model q/(1-q) mispredicts r by 0.77x-152x and goes negative. q<1/3 was never false-safe over 12 configurations at ONE site - sufficient-looking, far from necessary, do not generalise."
+ },
+ "no_proof_claim": true
+}
