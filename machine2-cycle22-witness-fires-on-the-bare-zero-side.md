@@ -343,7 +343,7 @@ What we can give that is real:
 
 1. **Our `u_i` recipe** (zero side, and the one that does reach `1e-37`): `mp.dps = 40`; sub-intervals
    = sorted union of every bump-support edge `μ±s` with `{±6}`, clipped to `[−8,8]`; **fixed**
-   Gauss–Legendre per sub-interval, mpmath's node generator at degree 8 (768 nodes/panel), profile
+   Gauss–Legendre per sub-interval, mpmath's node generator at degree 8 (~~768 nodes/panel~~ **[STRUCK by machine2-ERRATUM-9: the correct count is 384 — mpmath uses n = 3*2**(degree-1); 768 is degree 9. The wrong figure is left visible, not rewritten]**), profile
    `w(x)·Σ bumps` evaluated once per node and reused for every `ρ`. Code is already pushed
    (`data/code/m2_u_instrument.py`). It agrees with m1's adaptive `mp.quad` at dps 45 to `1.95e-37`,
    so the two recipes are interchangeable at that leg — take his (L143 §4), ours, or both.
@@ -455,7 +455,7 @@ twice, no matter how differently they are written. Do not carry "a₆ ≈ 63.65,
    audit at degree 8/9/10 on **basis 0** said "converged" at every height to `γ = 400`. The failure is
    in **basis 2**, whose widest bump has half-width `2.1544` (support 4.31): at `γ = 350` degree 8
    reads `0.0342` against the true `8.486e-11` — **eight orders wrong**, while degrees 9/10/11 agree.
-   The node budget is set by the widest sub-interval, so a per-basis-0 certificate certifies basis 0.
+   ~~The node budget is set by the widest sub-interval~~ **[STRUCK by machine2-ERRATUM-9: it is set by the widest φ-SUPPORTED sub-interval; empty panels are free. Basis 7 owns the widest sub-interval of all eight and is one of the safest at degree 8. Followed literally this rule sends the auditor to the safest basis. Live successor: the per-basis certified validity range in the cycle-24 letter §3]**, so a per-basis-0 certificate certifies basis 0.
    Nothing at `T ≤ 200` is affected (externally confirmed against m1's export to `1.95e-37`), and the
    tail in §4 is the degree-10 rerun. This is cycle 16's E1 lesson in a new costume — *never carry an
    evaluator across a height without re-deriving its budget* — and the diagnostic that caught it was

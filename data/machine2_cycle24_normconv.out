@@ -1,0 +1,26 @@
+# build 9s
+gap = 5.84529811238e-6
+G spectrum: lmin=0.012041155 lmax=0.43905636 cond=36.462978 sqrt(cond)=6.0384582 1/lmin=83.048514 1/sqrt(lmin)=9.1130957
+diag(G): ['0.103668', '0.172964', '0.0284632', '0.0866799', '0.421374', '0.0825642', '0.0824781', '0.0720088']
+
+== P_a ==
+  G-metric Frobenius             0.01027626   /gap = 1758.0387     ours/this = 0.651526
+  G^-1 P spectral              0.0098163684   /gap = 1679.3615     ours/this = 0.68205
+  G-metric spectral (OURS)     0.0066952522   /gap = 1145.4082     ours/this = 1.0
+  corr Frobenius               0.0061322918   /gap = 1049.0982     ours/this = 1.0918
+  corr spectral                0.0046206954   /gap = 790.49782     ours/this = 1.44897
+  raw Frobenius               0.00058926832   /gap = 100.81065     ours/this = 11.362
+  raw spectral                0.00044485022   /gap = 76.103941     ours/this = 15.0506
+  raw max|entry|              0.00026259931   /gap = 44.924879     ours/this = 25.4961
+  closest to m1's 4.45e-4: raw spectral = 0.00044485022 (factor 0.999663)
+
+== P_b ==
+  G^-1 P spectral              0.0018191897   /gap = 311.22275     ours/this = 0.779606
+  G-metric Frobenius           0.0016819743   /gap = 287.74825     ours/this = 0.843206
+  G-metric spectral (OURS)     0.0014182514   /gap = 242.63115     ours/this = 1.0
+  corr Frobenius               0.0011380682   /gap = 194.69806     ours/this = 1.24619
+  corr spectral                0.0008189578   /gap = 140.1054      ours/this = 1.73178
+  raw Frobenius               0.00010901371   /gap = 18.649812     ours/this = 13.0098
+  raw spectral                 8.0140706e-5   /gap = 13.710286     ours/this = 17.697
+  raw max|entry|               6.4579593e-5   /gap = 11.048127     ours/this = 21.9613
+  closest to m1's 4.45e-4: corr spectral = 0.0008189578 (factor 1.84035)

@@ -1,0 +1,87 @@
+basis 0 hmax=2.339 effmax=1.192 deg=7 first-bad-gamma=None
+basis 0 hmax=2.339 effmax=1.192 deg=8 first-bad-gamma=None
+basis 0 hmax=2.339 effmax=1.192 deg=9 first-bad-gamma=None
+basis 0 hmax=2.339 effmax=1.192 deg=10 first-bad-gamma=None
+basis 1 hmax=2.479 effmax=2.466 deg=7 first-bad-gamma=260
+basis 1 hmax=2.479 effmax=2.466 deg=8 first-bad-gamma=None
+basis 1 hmax=2.479 effmax=2.466 deg=9 first-bad-gamma=None
+basis 1 hmax=2.479 effmax=2.466 deg=10 first-bad-gamma=None
+basis 2 hmax=4.603 effmax=4.287 deg=7 first-bad-gamma=140
+basis 2 hmax=4.603 effmax=4.287 deg=8 first-bad-gamma=320
+basis 2 hmax=4.603 effmax=4.287 deg=9 first-bad-gamma=None
+basis 2 hmax=4.603 effmax=4.287 deg=10 first-bad-gamma=None
+basis 3 hmax=1.801 effmax=1.792 deg=7 first-bad-gamma=340
+basis 3 hmax=1.801 effmax=1.792 deg=8 first-bad-gamma=None
+basis 3 hmax=1.801 effmax=1.792 deg=9 first-bad-gamma=None
+basis 3 hmax=1.801 effmax=1.792 deg=10 first-bad-gamma=None
+basis 4 hmax=2.666 effmax=2.653 deg=7 first-bad-gamma=220
+basis 4 hmax=2.666 effmax=2.653 deg=8 first-bad-gamma=None
+basis 4 hmax=2.666 effmax=2.653 deg=9 first-bad-gamma=None
+basis 4 hmax=2.666 effmax=2.653 deg=10 first-bad-gamma=None
+basis 5 hmax=3.561 effmax=2.300 deg=7 first-bad-gamma=20
+basis 5 hmax=3.561 effmax=2.300 deg=8 first-bad-gamma=20
+basis 5 hmax=3.561 effmax=2.300 deg=9 first-bad-gamma=20
+basis 5 hmax=3.561 effmax=2.300 deg=10 first-bad-gamma=20
+basis 6 hmax=2.031 effmax=1.533 deg=7 first-bad-gamma=400
+basis 6 hmax=2.031 effmax=1.533 deg=8 first-bad-gamma=None
+basis 6 hmax=2.031 effmax=1.533 deg=9 first-bad-gamma=None
+basis 6 hmax=2.031 effmax=1.533 deg=10 first-bad-gamma=None
+basis 7 hmax=5.118 effmax=2.463 deg=7 first-bad-gamma=260
+basis 7 hmax=5.118 effmax=2.463 deg=8 first-bad-gamma=None
+basis 7 hmax=5.118 effmax=2.463 deg=9 first-bad-gamma=None
+basis 7 hmax=5.118 effmax=2.463 deg=10 first-bad-gamma=None
+{
+"0": {
+"7": null,
+"8": null,
+"9": null,
+"10": null
+},
+"1": {
+"7": 260,
+"8": null,
+"9": null,
+"10": null
+},
+"2": {
+"7": 140,
+"8": 320,
+"9": null,
+"10": null
+},
+"3": {
+"7": 340,
+"8": null,
+"9": null,
+"10": null
+},
+"4": {
+"7": 220,
+"8": null,
+"9": null,
+"10": null
+},
+"5": {
+"7": 20,
+"8": 20,
+"9": 20,
+"10": 20
+},
+"6": {
+"7": 400,
+"8": null,
+"9": null,
+"10": null
+},
+"7": {
+"7": 260,
+"8": null,
+"9": null,
+"10": null
+}
+}
+   basis 5 deg 7 gamma 280: dep=1.135e-13  tol=3.263e-18  gt-unc=5.911e-45 -> BAD
+basis 5 deg=7 first-bad-gamma(gated) = 280
+basis 5 deg=8 first-bad-gamma(gated) = None
+basis 5 deg=9 first-bad-gamma(gated) = None
+basis 5 deg=10 first-bad-gamma(gated) = None
