@@ -1,0 +1,39 @@
+variant     ANCH-U     ANCH-0     ANCH-D     ANCH-B |     dD_R2   dlamR3b  FIRE  MATL | caught by 1/2/3 anchors
+clean          0.0        0.0        0.0        0.0 |       0.0       0.0     Y     - | . . .
+c1             0.0        0.0     0.0665      0.291 |     0.687      21.7     n     M | . Y Y
+c2          0.0163    1.74e+3    1.87e+3    1.62e+3 |     129.0   1.66e+4     Y     M | Y Y Y
+bgap           0.0        0.0        0.0       0.71 |      1.32      48.8     Y     M | . . Y
+bdel           0.0        0.0        0.0     0.0301 |      2.73      10.5     n     M | . . Y
+bhalf          0.0        0.0        0.0     0.0214 |     0.836      10.6     n     M | . . Y
+agap           0.0        0.0      0.675        0.0 |      19.0     174.0     Y     M | . Y Y
+bsign          0.0        0.0        0.0        0.0 |       0.0       0.0     Y     - | . . .
+remdup         0.0      189.0      208.0      205.0 |      19.3   2.86e+3     Y     M | Y Y Y
+nofac          0.0      0.317      0.301      0.313 |      0.99      8.28     n     M | Y Y Y
+nosym          0.0      0.317      0.301      0.313 |      0.99      8.28     n     M | Y Y Y
+dref           0.0        0.0        0.0        0.0 |      63.0       0.0     Y     M | . . .
+sord           0.0        0.0        0.0        0.0 |       9.5       0.0     Y     M | . . .
+eps14          0.0        0.0        0.0   4.37e-16 |  3.28e-14  2.12e-12     Y     - | . . Y
+
+MATERIAL defects            : 11/13  ['c1', 'c2', 'bgap', 'bdel', 'bhalf', 'agap', 'remdup', 'nofac', 'nosym', 'dref', 'sord']
+caught by #117 as worded (1): 4/11  ['c2', 'remdup', 'nofac', 'nosym']
+caught by #117 amended   (2): 6/11
+caught by proposed       (3): 9/11
+ESCAPE at 2 anchors         : ['bgap', 'bdel', 'bhalf', 'dref', 'sord']
+ESCAPE at 3 anchors         : ['dref', 'sord']
+ESCAPE at 3, cross-lineage  : ['dref', 'sord']
+
+--- graded ---
+H1  HELD                         escape set at two anchors = ['bgap', 'bdel', 'bhalf', 'dref', 'sord']
+H2  HELD                         predicted ['bdel', 'bgap', 'bhalf', 'dref', 'sord'], observed ['bdel', 'bgap', 'bhalf', 'dref', 'sord']
+H3  HELD                         ANCHOR_B rel on legB = ['0.71', '0.0301', '0.0214'] ; on dref/sord = ['0.0', '0.0']
+H4  DEMONSTRATION (as declared)  DEMONSTRATION (empty by algebra, declared before the run): all four anchors bit-identical for dref and sord = [True, True]
+H5  HELD                         bsign anchors bit-identical = True, D_R2 identical = True, D_R3b identical = True
+H6  HELD                         eps14: rel lam_R1 move 4.369e-16, rel D_R2 move 3.284e-14, amplification A = 75.1773
+H7  HELD                         flips among legB = ['bdel', 'bhalf']
+H8  CONTROL (as declared)        CONTROL: c1 ANCHOR_0 bit-identical = True, c1 ANCHOR_D rel = 0.0664689, c2 ANCHOR_0 rel = 1735.63
+
+--- cross-lineage agreement m2(clean) vs m3 from-scratch (MEASURED this cycle) ---
+ANCHOR_0  vs m3 launch  rel 6.592e-16
+ANCHOR_D  vs m3 R0      rel 2.164e-16
+ANCHOR_B  vs m3 R1      rel 9.719e-16
+R3b_lam   vs m3 R3b     rel 1.0e-12

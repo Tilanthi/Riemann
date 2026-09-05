@@ -1,0 +1,311 @@
+{
+ "rows": {
+  "clean": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.0",
+   "bit_identical_all": true,
+   "dD_R2": "0.0",
+   "dD_R3b": "0.0",
+   "dlam_R3b": "0.0",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": false,
+   "caught1": false,
+   "caught2": false,
+   "caught3": false,
+   "caught3_cross": false
+  },
+  "c1": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.066468919",
+   "ANCHOR_B": "0.29143249",
+   "bit_identical_all": false,
+   "dD_R2": "0.68675712",
+   "dD_R3b": "0.9581154",
+   "dlam_R3b": "21.748191",
+   "fires": false,
+   "flip": true,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "c2": {
+   "ANCHOR_U": "0.01630262",
+   "ANCHOR_0": "1735.6257",
+   "ANCHOR_D": "1868.3281",
+   "ANCHOR_B": "1622.1682",
+   "bit_identical_all": false,
+   "dD_R2": "129.16806",
+   "dD_R3b": "13.58224",
+   "dlam_R3b": "16559.068",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": true,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "bgap": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.71020939",
+   "bit_identical_all": false,
+   "dD_R2": "1.324185",
+   "dD_R3b": "1.1714742",
+   "dlam_R3b": "48.811126",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": false,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "bdel": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.030139556",
+   "bit_identical_all": false,
+   "dD_R2": "2.725782",
+   "dD_R3b": "1.0183065",
+   "dlam_R3b": "10.488026",
+   "fires": false,
+   "flip": true,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": false,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "bhalf": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.021448531",
+   "bit_identical_all": false,
+   "dD_R2": "0.83623251",
+   "dD_R3b": "0.99212782",
+   "dlam_R3b": "10.592623",
+   "fires": false,
+   "flip": true,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": false,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "agap": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.67455927",
+   "ANCHOR_B": "0.0",
+   "bit_identical_all": false,
+   "dD_R2": "19.034795",
+   "dD_R3b": "27.75933",
+   "dlam_R3b": "173.90138",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "bsign": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.0",
+   "bit_identical_all": true,
+   "dD_R2": "0.0",
+   "dD_R3b": "0.0",
+   "dlam_R3b": "0.0",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": false,
+   "caught1": false,
+   "caught2": false,
+   "caught3": false,
+   "caught3_cross": false
+  },
+  "remdup": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "189.04778",
+   "ANCHOR_D": "207.64562",
+   "ANCHOR_B": "205.38824",
+   "bit_identical_all": false,
+   "dD_R2": "19.261498",
+   "dD_R3b": "1.7391173",
+   "dlam_R3b": "2862.638",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": true,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "nofac": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.31741131",
+   "ANCHOR_D": "0.30149487",
+   "ANCHOR_B": "0.31320531",
+   "bit_identical_all": false,
+   "dD_R2": "0.98994806",
+   "dD_R3b": "0.99705086",
+   "dlam_R3b": "8.2812863",
+   "fires": false,
+   "flip": true,
+   "MATERIAL": true,
+   "caught1": true,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "nosym": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.31741131",
+   "ANCHOR_D": "0.30149487",
+   "ANCHOR_B": "0.31320531",
+   "bit_identical_all": false,
+   "dD_R2": "0.98994806",
+   "dD_R3b": "0.99705086",
+   "dlam_R3b": "8.2812863",
+   "fires": false,
+   "flip": true,
+   "MATERIAL": true,
+   "caught1": true,
+   "caught2": true,
+   "caught3": true,
+   "caught3_cross": true
+  },
+  "dref": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.0",
+   "bit_identical_all": true,
+   "dD_R2": "63.004558",
+   "dD_R3b": "0.66833039",
+   "dlam_R3b": "0.0",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": false,
+   "caught3": false,
+   "caught3_cross": false
+  },
+  "sord": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "0.0",
+   "bit_identical_all": true,
+   "dD_R2": "9.5027406",
+   "dD_R3b": "1.4381224",
+   "dlam_R3b": "0.0",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": true,
+   "caught1": false,
+   "caught2": false,
+   "caught3": false,
+   "caught3_cross": false
+  },
+  "eps14": {
+   "ANCHOR_U": "0.0",
+   "ANCHOR_0": "0.0",
+   "ANCHOR_D": "0.0",
+   "ANCHOR_B": "4.3689336e-16",
+   "bit_identical_all": false,
+   "dD_R2": "3.2844449e-14",
+   "dD_R3b": "1.768559e-13",
+   "dlam_R3b": "2.1185837e-12",
+   "fires": true,
+   "flip": false,
+   "MATERIAL": false,
+   "caught1": false,
+   "caught2": false,
+   "caught3": true,
+   "caught3_cross": false
+  }
+ },
+ "material": [
+  "c1",
+  "c2",
+  "bgap",
+  "bdel",
+  "bhalf",
+  "agap",
+  "remdup",
+  "nofac",
+  "nosym",
+  "dref",
+  "sord"
+ ],
+ "escape_2anchor": [
+  "bgap",
+  "bdel",
+  "bhalf",
+  "dref",
+  "sord"
+ ],
+ "escape_3anchor": [
+  "dref",
+  "sord"
+ ],
+ "escape_3anchor_cross_lineage": [
+  "dref",
+  "sord"
+ ],
+ "graded": {
+  "H1": {
+   "pass": true,
+   "note": "escape set at two anchors = ['bgap', 'bdel', 'bhalf', 'dref', 'sord']"
+  },
+  "H2": {
+   "pass": true,
+   "note": "predicted ['bdel', 'bgap', 'bhalf', 'dref', 'sord'], observed ['bdel', 'bgap', 'bhalf', 'dref', 'sord']"
+  },
+  "H3": {
+   "pass": true,
+   "note": "ANCHOR_B rel on legB = ['0.71', '0.0301', '0.0214'] ; on dref/sord = ['0.0', '0.0']"
+  },
+  "H4": {
+   "pass": true,
+   "note": "DEMONSTRATION (empty by algebra, declared before the run): all four anchors bit-identical for dref and sord = [True, True]"
+  },
+  "H5": {
+   "pass": true,
+   "note": "bsign anchors bit-identical = True, D_R2 identical = True, D_R3b identical = True"
+  },
+  "H6": {
+   "pass": true,
+   "note": "eps14: rel lam_R1 move 4.369e-16, rel D_R2 move 3.284e-14, amplification A = 75.1773"
+  },
+  "H7": {
+   "pass": true,
+   "note": "flips among legB = ['bdel', 'bhalf']"
+  },
+  "H8": {
+   "pass": true,
+   "note": "CONTROL: c1 ANCHOR_0 bit-identical = True, c1 ANCHOR_D rel = 0.0664689, c2 ANCHOR_0 rel = 1735.63"
+  }
+ },
+ "amplification_A": "75.177266",
+ "cross_lineage_rel": {
+  "ANCHOR_0": "6.592e-16",
+  "ANCHOR_D": "2.164e-16",
+  "ANCHOR_B": "9.719e-16",
+  "R3b_lam": "1.0e-12"
+ }
+}

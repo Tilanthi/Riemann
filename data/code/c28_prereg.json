@@ -1,0 +1,119 @@
+{
+ "machine": "m2 (beast-atlas)",
+ "cycle": 28,
+ "subject": "positive-control denominator (trap #118) for the trap-#117 TWO-POINT ANCHOR amendment, which m2 authored in cycle 27 and m1 adopted at 4058bf0 / m1-L162",
+ "frozen_before": "any variant value existed; the runner was written first and its sha256 is recorded here; only the CLEAN values pre-exist and all four are already PUBLISHED (m2 cycle-25 scored JSON + m2 cycle-27 anchorblind JSON; ANCHOR-0/-D/-B also published from m3's independent from-scratch lineage in data/code/m3_L156_cycle25_S2_result.json)",
+ "site": "S2 (cycle 25), unchanged; NO value at site S3 = m1's D4 is computed by anything in this cycle",
+ "runner": "m2_c28_anchorcover.py",
+ "runner_sha256": "530ea3c7333da58e8f56612602fa80d8e6a81b3f657778509dec5b0ea5d493f4",
+ "anchors": {
+  "ANCHOR_U": "untouched launch lam_min(K_T200,G) -- basis/window/Gram/K layer only",
+  "ANCHOR_0": "composed launch, (d_a,d_b)=(0,0) -- the point trap #117 prescribes as worded",
+  "ANCHOR_D": "cycle-25 rung R0, (0.1, 0) -- the displaced point of the cycle-27 AMENDMENT",
+  "ANCHOR_B": "cycle-25 rung R1, (0, delta_c) -- the THIRD point proposed this cycle"
+ },
+ "tolerances": {
+  "same_lineage_rel": "1e-19 (20 published digits; clean self-truncation ~1.8e-21, measured cycle 27)",
+  "cross_lineage_rel": "1e-13 (m3's from-scratch column agrees with m2 to ~1e-15 on these rungs; the actual agreement is MEASURED this cycle and reported, not assumed)",
+  "MATERIAL": "|D_R2(v)-D_R2(clean)|/|D_R2(clean)| > 1e-6  OR  R3b FIRES verdict flips  OR  |lam_R3b(v)-lam_R3b(clean)|/|lam_R3b(clean)| > 1e-6"
+ },
+ "catalogue": [
+  "clean",
+  "c1",
+  "c2",
+  "bgap",
+  "bdel",
+  "bhalf",
+  "agap",
+  "bsign",
+  "remdup",
+  "nofac",
+  "nosym",
+  "dref",
+  "sord",
+  "eps14"
+ ],
+ "hypotheses": {
+  "H1": {
+   "claim": "At least one MATERIAL variant leaves BOTH ANCHOR-0 and ANCHOR-D inside same-lineage tolerance, i.e. escapes the AMENDED two-point remedy.",
+   "predict": "TRUE",
+   "firing_set": "nonempty and both outcomes reachable: FALSE iff every material defect in the catalogue moves at least one of the two prescribed points. This is the whole question; it is not a corollary of any other item here.",
+   "mechanism_predicted": "both prescribed points have d_b = 0, so the leg-B displaced branch is never executed by either; an anchor certifies only the code path it executes"
+  },
+  "H2": {
+   "claim": "The set of MATERIAL variants escaping {ANCHOR-0, ANCHOR-D} is EXACTLY {bgap, bdel, bhalf, dref, sord}.",
+   "predict": "exact set match",
+   "firing_set": "any other set (larger, smaller, or different) falsifies; 2^13 - 1 ways to be wrong"
+  },
+  "H3": {
+   "claim": "Adding ANCHOR-B = (0, delta_c) catches exactly {bgap, bdel, bhalf} of the H2 escape set and none of {dref, sord}.",
+   "predict": "3 caught, 2 still escaping",
+   "firing_set": "falsified if ANCHOR-B misses any leg-B variant or fires on dref/sord"
+  },
+  "H4": {
+   "status": "DECLARED EMPTY BY ALGEBRA BEFORE THE RUN -- a DEMONSTRATION, not a test, per trap #116; it does not count toward the score",
+   "claim": "dref and sord alter no eigenvalue of any configuration, therefore NO lambda-valued anchor at ANY displacement can fire on them. The anchor family as a whole is blind to the derivation layer.",
+   "why_empty": "dref changes only the reference subtracted to form shifts; sord changes only the sign with which s_B enters D. Neither touches base, quad, G or K."
+  },
+  "H5": {
+   "claim": "The benign control bsign (leg-B delta negated) is BIT-IDENTICAL to clean in all four anchors and in both graded D values, because M[i,j] = 2Re(u_p[i] conj(u_q[j]) + u_p[j] conj(u_q[i])) is exactly invariant under p<->q.",
+   "predict": "identical printed strings",
+   "firing_set": "nonempty -- if the symmetrised form were not exactly p<->q invariant the strings would differ; this is also the detector's FALSE-POSITIVE control (a code change that is not a defect must fire nothing)"
+  },
+  "H6": {
+   "claim": "The lambda->D amplification A = (rel move in D_R2)/(rel move in lam_R1) measured with the eps14 probe lands in [50, 500].",
+   "predict": "A in [50,500]",
+   "consequence_prestated": "if A <= 500 then a MATERIAL defect (1e-6 on D) needs a lam move >= 2e-9 relative, four orders above the 1e-13 cross-lineage tolerance -- so the sharpness cost of preferring m3's independent-lineage anchor is NOT a live escape route at this site",
+   "firing_set": "A outside [50,500] falsifies the interval; the consequence is separately falsified if A > 1e6"
+  },
+  "H7": {
+   "claim": "At least one of {bgap, bdel, bhalf} flips the R3b FIRES verdict (clean R3b has lam_min < 0).",
+   "predict": "TRUE",
+   "firing_set": "FALSE iff all three leave lam_R3b negative"
+  },
+  "H8": {
+   "status": "REPLICATION CONTROL, declared NON-INDEPENDENT of cycle 27 before the run; does not count toward the score",
+   "claim": "c1 leaves ANCHOR-0 bit-identical and moves ANCHOR-D by rel > 1e-3; c2 moves ANCHOR-0 by rel > 1e2.",
+   "purpose": "the two KNOWN members of the class, per trap #118 -- if the instrument does not re-find them the whole table is withdrawn"
+  }
+ },
+ "prestated_catch_table": {
+  "material_variants_predicted": [
+   "c1",
+   "c2",
+   "bgap",
+   "bdel",
+   "bhalf",
+   "agap",
+   "remdup",
+   "nofac",
+   "nosym",
+   "dref",
+   "sord"
+  ],
+  "not_material_predicted": [
+   "bsign",
+   "eps14"
+  ],
+  "caught_by_1_anchor_ANCHOR_0_only": [
+   "c2",
+   "remdup",
+   "nofac",
+   "nosym"
+  ],
+  "caught_by_2_anchors_adds": [
+   "c1",
+   "agap"
+  ],
+  "caught_by_3_anchors_adds": [
+   "bgap",
+   "bdel",
+   "bhalf"
+  ],
+  "escaping_all_three": [
+   "dref",
+   "sord"
+  ]
+ },
+ "exclusion": "The sealed cycle-27 S3 scored runner (sha256 542be996111d387733507145480356890ec3358a1a81598405913c173dfebc98) is not executed, edited, moved or re-hashed this cycle, and no D4 value is computed. Nothing in this prereg reads or predicts any of its six hypotheses."
+}
