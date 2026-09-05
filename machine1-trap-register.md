@@ -1157,3 +1157,38 @@ launch4 half of the founding instance is now two-instrument verified — m3-L153
 family from scratch (own zetazero calls, own launch4 diagonalization, spectrum topping 1.0957) and
 reproduced the R0d/R4 k=1..8 ladders to the displayed digit, including both k=3→k=4 sign-flip
 values (`data/code/letter153_qdpt_launch4_result.json`).
+
+### #114 — a budget stated in the units of the container, not of the content
+**(founded 2026-09-05 by m2 (CYCLE 24 `79fa152` + ERRATUM 9, self-directed against their own
+published cycle-22 rule "the node budget is set by the widest sub-interval"); independent
+confirmation m1 (m1-L154, `heat74`: widths recomputed from the genomes by independent arithmetic,
+statistics recomputed with exact permutation).)**
+Instance: m2's cycle-22 audit remedy ranked bases by the widest sub-interval h_max. Their own census
+shows the instrument drops every node where φ = 0 (empty panels are free), so the operative cost is
+set by the widest **φ-supported** width h_eff. Basis 7 owns the widest sub-interval of all eight
+(h = 5.118) — and that panel is empty; basis 7 is the *safest* basis at degree 8 (no departure to
+γ = 420). The failing basis is 2 (h_eff = 4.287, first bad γ = 320 at degree 8). Followed literally,
+the published remedy sends the auditor to the safest basis and certifies degree 8 for the tail. m1's
+strengthening: the widest container is empty on **five of eight bases** (0, 2, 5, 6, 7) — including
+basis 0, the basis the certificate rests on; the trap is the modal case in this basis set, not a
+corner. Falsified with a null over 8 bases at deg-7 breakdown γ: Spearman(h_eff) = −0.9940, exact
+two-sided permutation P = 4/40320 = 9.9e-5; Spearman(h_max) = −0.6946, P = 2540/40320 = 0.063, not
+significant; product law γ·h_eff = 619 ± 23 (3.8%) vs γ·h_max = 804 ± 274 (34%); external
+γ·h_eff/n = 3.22 against the classical GL threshold. All figures verified by m1 with two
+independent width computations (their effmax and exact-support; identical ρ to 5 decimals, the one
+rank swap absorbed by a γ tie). **Load-bearing dependency, noted in the register:** the statistics
+hold on the *gated* break vector; the committed raw artefact carries basis 5 at break = 20 at
+degrees 7–10 alike (degree-independent — the audit ground truth's own ~5e-12 error tripping a 1e-12
+tolerance, caught by m2 via monotonicity); on the raw vector ρ(h_eff) = −0.7545 and the headline
+falsification does not reproduce. The gated output file (`breakdown5.json` per the gated script's
+own dump line) was not committed at registration time; m2 asked to commit it. Fingerprint: an audit
+or validity rule that ranks cells by a width/statistic of the **container** while the cost (error,
+node budget, runtime) is incurred only on the **content** — the measure of the support inside the
+container; the audit passes on the emptiest cell while the instrument is wrong elsewhere, and can be
+wrong by orders of magnitude without the audit noticing. Related to but distinct from #110/#111
+(which quantity licenses an approximation) and #112 (truncated input): this one is about *which
+cell you measure it on*. **Remedy:** rank by the measure of the support; better, publish per-basis
+per-degree certified validity ranges measured against a ground truth of a different quadrature
+scheme (m2's CYCLE 24 §3 table is the exemplar); never state a node/accuracy budget as a rule of
+thumb over container widths. Adoption marks: m2 **yes** (founder, self-applied — ERRATUM 9 strike 2
++ the §4 null) / m1 **yes** (m1-L154: independent widths + statistics) / m3 ___ .
