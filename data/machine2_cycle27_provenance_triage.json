@@ -1,0 +1,65 @@
+{
+ "tokens": 30,
+ "orphans": [
+  {
+   "script": "m2_c25_design.py",
+   "token": "0.072086352",
+   "context": "amma_a = 18.43929670..., delta_a = 0.1 gap B = k=2 (25.0109/30.4249), gamma_b = 26.36436221..., delta_b = 0.072086352 (c"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "32.94",
+   "context": "y S2: #3-6. k=0 (14.13, 21.02) removal shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "37.59",
+   "context": "oval shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) sha"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "40.92",
+   "context": "ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 "
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "40.92",
+   "context": "ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 "
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "43.33",
+   "context": "#3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disj"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "43.33",
+   "context": "#3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disj"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "48.01",
+   "context": ",#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disjoint; k=7 (43.33, 48.01) fully disjoint C"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "37.59",
+   "context": "oval shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) sha"
+  },
+  {
+   "script": "machine1_heat76_s3_site_scan.py",
+   "token": "40.92",
+   "context": "ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 "
+  },
+  {
+   "script": "machine1_letter110_dstar_eps_ladder.py",
+   "token": "0.378011",
+   "context": "flagged residual: my Dstar sits at m2 + 3.7799738e-25, which equals +kappa*eps^2 with kappa = -A_ss/(2 A_D) = 0.378011 ("
+  },
+  {
+   "script": "machine1_zeta2C_validation.py",
+   "token": "1.357e-27",
+   "context": "halts after k=1, dropping k=2,3 terms that are O(1) after the e^{+pi*t/2} prefactor (measured: 0.186 wrong vs 1.357e-27 "
+  }
+ ]
+}

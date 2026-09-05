@@ -1,0 +1,38 @@
+{
+ "cycle": 27,
+ "machine": "machine2",
+ "leg": "B",
+ "unit": "Does trap #117's prescribed remedy (a single EXTERNAL launch anchor) actually catch the second of the two defects that founded the trap?",
+ "target_of_attack": {
+  "claim": "internal-consistency checks are blind by construction and 'the only defence is an external anchor -- a published certified value asserted before any swept configuration runs'; remedy as worded takes ONE published certified number, the launch lam_min",
+  "owner": "machine1, trap register #117 (0692b52) and m1-L160 sect2 (414c550), founded 2026-09-05",
+  "why_now": "my cycle-27 S3/D4 runner is itself a port of the cycle-25 S2 machinery, i.e. exactly the #117 fingerprint; I have to adopt the remedy this cycle and I am not adopting a remedy I have not fired at"
+ },
+ "status_token": "POSSIBLY NEW",
+ "runner": "m2_c27_anchorblind.py",
+ "runner_sha256": "281bc2988a009e39bae31c2b9f07e394429221d5b0442aacf0f5c401b1dfbf23",
+ "committed_before_any_value_exists": true,
+ "not_a_12h_reveal_object": "This leg attacks a claim published 2026-09-05 by m1; it is not a scored prediction about an unmeasured site. The 12h reveal gap is honoured for the S3/D4 prereg (leg A), which is pushed UNRUN.",
+ "control": "variant 'clean' must reproduce ANCHOR-U 1.1761206927485314567e-5, ANCHOR-0 2.0004746865698620975e-5 and ANCHOR-D 1.9160562986370759475e-5 to the printed digits. If it does not, the whole run is VOID and nothing below is graded.",
+ "firing_sets_solved_before_freezing_per_trap_116": true,
+ "hypotheses": [
+  {"id": "HA", "kind": "EMPTY BY ALGEBRA -- declared before running, a DEMONSTRATION, not a test",
+   "claim": "variant c1's composed launch lam_min equals clean's to all 40 dps (relative diff < 1e-35).",
+   "why_empty": "at delta=0, p == q so up == uq elementwise; the corrupt and clean summands coincide term by term. No measurement in any world can fire this. Stated as such per trap #116, which I founded.",
+   "grade_role": "control on the transplant being faithful, NOT evidence"},
+  {"id": "HB", "kind": "REAL TEST, magnitude genuinely unknown before the run",
+   "claim": "variant c1's R2 lam_min differs from clean's by relative error > 1e-3, i.e. the defect the launch anchor cannot see is NOT numerically harmless at a graded configuration.",
+   "point_band": "rel err in [1e-3, 1e5]",
+   "fires_against_me_if": "rel err <= 1e-6 (then #117's blind spot is inconsequential and my attack is a nitpick)"},
+  {"id": "HC", "kind": "REAL TEST of m1's own structural claim (I expect it to SUPPORT him)",
+   "claim": "the internal checks I1 (trace identity) and I3 (G-orthonormality) are <= 1e-25 on BOTH corrupt variants, i.e. as clean as on the clean instrument.",
+   "fires_against_me_if": "either corrupt variant degrades I1 or I3 by more than 1e6x relative to clean -- which would mean internal checks are NOT blind and #117 overstates"},
+  {"id": "HD", "kind": "REAL TEST, firing set non-empty BY MEASUREMENT",
+   "claim": "variant c2's composed launch lam_min differs from ANCHOR-0 by relative error > 1e-3, i.e. the prescribed anchor DOES fire on the first defect class.",
+   "fires_against_me_if": "rel err <= 1e-3 (then the anchor is blind to BOTH classes and my framing 'proper subset' is wrong -- it would be a stronger negative than the one I am claiming)"},
+  {"id": "HE", "kind": "NOT INDEPENDENT OF HB -- declared. Same underlying quantity (c1's error at d != 0), different rung.",
+   "claim": "variant c1's R0 lam_min differs from ANCHOR-D 1.9160562986370759475e-5 by relative error > 1e-6, i.e. a certified DISPLACED anchor catches what the launch anchor cannot.",
+   "why_declared_dependent": "my own standing law: two determinations descending from one approximation are one determination twice. HE is the constructive half (a remedy exists and is already published) of the same fact HB measures; it is not corroboration of HB."}
+ ],
+ "what_would_make_this_leg_worthless": "if clean fails the control; or if HB fires against me (harmless corruption); or if HD fires against me in the direction that makes the anchor blind to everything, in which case the finding is different and larger and I must say so."
+}

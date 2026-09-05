@@ -1,0 +1,48 @@
+TIER-2 TRIAGE: is the unbacked prose number quoted from somewhere ELSE in the repo?
+(found elsewhere => cross-file quotation, the expected false-positive class;
+ found NOWHERE else => a number with no committed source anywhere = candidate defect)
+
+m1_heat72v_dual_a3_eval.py         0.0082668                    QUOTED-ELSEWHERE (1 files)
+m2_c24_widthlaw.py                 5.118                        QUOTED-ELSEWHERE (4 files)
+m2_c25_bandaudit.py                10.05                        QUOTED-ELSEWHERE (3 files)
+m2_c25_design.py                   0.072086352                  ORPHAN -- no committed source anywhere in repo
+machine1_heat75_cycle25_verify.py  29.74812380764528515442463   QUOTED-ELSEWHERE (5 files)
+machine1_heat75_cycle25_verify.py  35.26061987328243047394007   QUOTED-ELSEWHERE (5 files)
+machine1_heat75_cycle25_verify.py  34.67923030189662027812064   QUOTED-ELSEWHERE (5 files)
+machine1_heat76_s3_site_scan.py    18.439                       QUOTED-ELSEWHERE (25 files)
+machine1_heat76_s3_site_scan.py    26.364                       QUOTED-ELSEWHERE (15 files)
+machine1_heat76_s3_site_scan.py    29.748                       QUOTED-ELSEWHERE (12 files)
+machine1_heat76_s3_site_scan.py    35.261                       QUOTED-ELSEWHERE (4 files)
+machine1_heat76_s3_site_scan.py    34.679                       QUOTED-ELSEWHERE (9 files)
+machine1_heat76_s3_site_scan.py    14.13                        QUOTED-ELSEWHERE (41 files)
+machine1_heat76_s3_site_scan.py    21.02                        QUOTED-ELSEWHERE (31 files)
+machine1_heat76_s3_site_scan.py    21.02                        QUOTED-ELSEWHERE (31 files)
+machine1_heat76_s3_site_scan.py    25.01                        QUOTED-ELSEWHERE (23 files)
+machine1_heat76_s3_site_scan.py    30.42                        QUOTED-ELSEWHERE (19 files)
+machine1_heat76_s3_site_scan.py    32.94                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    37.59                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    40.92                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    40.92                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    43.33                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    43.33                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    48.01                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    37.59                        ORPHAN -- no committed source anywhere in repo
+machine1_heat76_s3_site_scan.py    40.92                        ORPHAN -- no committed source anywhere in repo
+machine1_heat79_m3_pilot_verify.py 1.1761206927485              QUOTED-ELSEWHERE (11 files)
+machine1_letter110_dstar_eps_ladder.py 0.378011                     ORPHAN -- no committed source anywhere in repo
+machine1_zeta2C_validation.py      1.357e-27                    ORPHAN -- no committed source anywhere in repo
+machine2_cycle17_census2.py        0.1962                       QUOTED-ELSEWHERE (4 files)
+
+tokens examined: 30 | orphans: 12
+  ORPHAN m2_c25_design.py                 0.072086352    | amma_a = 18.43929670..., delta_a = 0.1 gap B = k=2 (25.0109/30.4249), gamma_b = 26.36436221..., delta_b = 0.072086352 (c
+  ORPHAN machine1_heat76_s3_site_scan.py  32.94          | y S2: #3-6. k=0 (14.13, 21.02) removal shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,
+  ORPHAN machine1_heat76_s3_site_scan.py  37.59          | oval shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) sha
+  ORPHAN machine1_heat76_s3_site_scan.py  40.92          | ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 
+  ORPHAN machine1_heat76_s3_site_scan.py  40.92          | ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 
+  ORPHAN machine1_heat76_s3_site_scan.py  43.33          | #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disj
+  ORPHAN machine1_heat76_s3_site_scan.py  43.33          | #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disj
+  ORPHAN machine1_heat76_s3_site_scan.py  48.01          | ,#5 with S2; k=5 (37.59, 40.92) shares #6 with S2 k=6 (40.92, 43.33) fully disjoint; k=7 (43.33, 48.01) fully disjoint C
+  ORPHAN machine1_heat76_s3_site_scan.py  37.59          | oval shares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) sha
+  ORPHAN machine1_heat76_s3_site_scan.py  40.92          | ares S1's; k=1 (21.02, 25.01) shares #3 with both k=3 (30.42, 32.94) shares #4,#5 with S2; k=5 (37.59, 40.92) shares #6 
+  ORPHAN machine1_letter110_dstar_eps_ladder.py 0.378011       | flagged residual: my Dstar sits at m2 + 3.7799738e-25, which equals +kappa*eps^2 with kappa = -A_ss/(2 A_D) = 0.378011 (
+  ORPHAN machine1_zeta2C_validation.py    1.357e-27      | halts after k=1, dropping k=2,3 terms that are O(1) after the e^{+pi*t/2} prefactor (measured: 0.186 wrong vs 1.357e-27 

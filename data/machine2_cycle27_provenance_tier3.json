@@ -1,0 +1,209 @@
+[
+ {
+  "script": "m2_c25_design.py",
+  "token": "0.072086352",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle23-FAMILY-CHOICE-composition-with-near-cancellation.md",
+    "0.07208635197257083638787626"
+   ],
+   [
+    "machine2-cycle23-REVEAL-and-letter-the-family-fires-my-prereg-falls-m1s-prediction-holds.md",
+    "0.072086351972570836388"
+   ],
+   [
+    "letter154-astra-pa-leg-b-norm-independently-confirms-beast-falsifier.md",
+    "0.07208635197257083638787626"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "32.94",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle25-PREREG-second-cancellation-site.md",
+    "32.9350615876781787143"
+   ],
+   [
+    "machine2-cycle25-second-site-scored-three-S1-patterns-are-site-specific.md",
+    "32.9350615877"
+   ],
+   [
+    "letter156-astra-pa-cycle25-S2-third-instrument-confirms-plus-typo-caught.md",
+    "32.9350615876781787143"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "37.59",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle25-PREREG-second-cancellation-site.md",
+    "37.5861781587510215000"
+   ],
+   [
+    "machine2-cycle25-second-site-scored-three-S1-patterns-are-site-specific.md",
+    "37.5861781588"
+   ],
+   [
+    "letter156-astra-pa-cycle25-S2-third-instrument-confirms-plus-typo-caught.md",
+    "37.5861781588256712572177634807053328214055973"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "40.92",
+  "sourced": true,
+  "examples": [
+   [
+    "machine1-l155a-s3-addendum-c4-no-delta-c-d4-named.md",
+    "40.9"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ],
+   [
+    "machine2_cycle23_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "40.92",
+  "sourced": true,
+  "examples": [
+   [
+    "machine1-l155a-s3-addendum-c4-no-delta-c-d4-named.md",
+    "40.9"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ],
+   [
+    "machine2_cycle23_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "43.33",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle20-the-stall-is-the-zeros-and-it-is-burnol-2026-09-04.md",
+    "43.327"
+   ],
+   [
+    "machine1-l138-cycle20-adjudication-intervention-reproduced-d3-adopted-as-106.md",
+    "43.327"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "43.3270732809149995194961221654068057826456684"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "43.33",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle20-the-stall-is-the-zeros-and-it-is-burnol-2026-09-04.md",
+    "43.327"
+   ],
+   [
+    "machine1-l138-cycle20-adjudication-intervention-reproduced-d3-adopted-as-106.md",
+    "43.327"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "43.3270732809149995194961221654068057826456684"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "48.01",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle20-the-stall-is-the-zeros-and-it-is-burnol-2026-09-04.md",
+    "48.005"
+   ],
+   [
+    "machine1-l138-cycle20-adjudication-intervention-reproduced-d3-adopted-as-106.md",
+    "48.005"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "48.005150881167159727942472749427516041686844"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "37.59",
+  "sourced": true,
+  "examples": [
+   [
+    "machine2-cycle25-PREREG-second-cancellation-site.md",
+    "37.5861781587510215000"
+   ],
+   [
+    "machine2-cycle25-second-site-scored-three-S1-patterns-are-site-specific.md",
+    "37.5861781588"
+   ],
+   [
+    "letter156-astra-pa-cycle25-S2-third-instrument-confirms-plus-typo-caught.md",
+    "37.5861781588256712572177634807053328214055973"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_heat76_s3_site_scan.py",
+  "token": "40.92",
+  "sourced": true,
+  "examples": [
+   [
+    "machine1-l155a-s3-addendum-c4-no-delta-c-d4-named.md",
+    "40.9"
+   ],
+   [
+    "machine2_cycle22_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ],
+   [
+    "machine2_cycle23_zeros210.json",
+    "40.918719012147495187398126914633254395726166"
+   ]
+  ]
+ },
+ {
+  "script": "machine1_letter110_dstar_eps_ladder.py",
+  "token": "0.378011",
+  "sourced": false,
+  "examples": []
+ },
+ {
+  "script": "machine1_zeta2C_validation.py",
+  "token": "1.357e-27",
+  "sourced": true,
+  "examples": [
+   [
+    "machine1_zeta2A_diagnosis_zcut_widening.out",
+    "1.35705e-27"
+   ]
+  ]
+ }
+]

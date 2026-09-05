@@ -1,0 +1,348 @@
+{
+ "cycle": 27,
+ "machine": "machine2",
+ "site": "S3 = m1's corrected pick D4 (m1-L155a, b4f784d)",
+ "anchors_passed": {
+  "ANCHOR-0": "1.7606e-21",
+  "ANCHOR-D": "1.22584e-20",
+  "ANCHOR-S3-launch": "4.77518e-18",
+  "ANCHOR-S3-fa": "4.0129e-10",
+  "ANCHOR-S3-dc": "8.25063e-20",
+  "ANCHOR-S3-PTa": "7.83085e-7",
+  "ANCHOR-S3-PTb": "1.12341e-6"
+ },
+ "geometry": {
+  "gap_A_k": 1,
+  "gap_B_k": 7,
+  "removed": [
+   "21.02203963877155499262848",
+   "25.01085758014568876321379",
+   "43.32707328091499951949612",
+   "48.00515088116715972794247"
+  ],
+  "g_a": "23.01644860945862187792114",
+  "g_b": "45.0813523810095595976635",
+  "g_bs": "45.6661120810410796237193",
+  "grid_bs": 4,
+  "delta_a": "0.1",
+  "delta_c": "0.2234889609786364321684392",
+  "delta_b_R3": "0.30",
+  "delta_b_R3b": "0.40"
+ },
+ "launch": {
+  "lam": "0.000012965524199220302938",
+  "gap": "0.00010504797656262",
+  "lam_s": "9.8654427832351134061e-6",
+  "gap_s": "0.00011536886416282"
+ },
+ "functionals": {
+  "f_a": "-1.00441985340306407e-6",
+  "f_b": "1.00441985340306407e-6",
+  "f_b3": "2.10565684131618936e-6",
+  "f_b4": "4.95961249340576875e-6",
+  "f_as": "-6.20514660519335924e-7",
+  "f_bs": "-9.70298138250249007e-8",
+  "f_sum": "2.9506533e-36"
+ },
+ "second_order": {
+  "R2": [
+   "-2.43421373531e-7",
+   "-7.37888543706e-8",
+   "-1.52359256852e-7"
+  ],
+  "R3": [
+   "-2.43421373531e-7",
+   "-2.79191518592e-7",
+   "-2.8518175813e-7"
+  ],
+  "R3b": [
+   "-2.43421373531e-7",
+   "-1.15467533149e-6",
+   "-5.32660218082e-7"
+  ],
+  "R4": [
+   "-1.25081883409e-7",
+   "-3.6820404447e-10",
+   "6.79646107108e-9"
+  ]
+ },
+ "PT": {
+  "P_a": "60.019047",
+  "P_b(d_c)": "17.80298",
+  "P_b(0.30)": "34.378142",
+  "P_b(0.40)": "69.324696",
+  "P_bs": "1.3799944",
+  "gap": "0.000105047976563",
+  "gap_s": "0.000115368864163"
+ },
+ "PT_by_rung": {
+  "R2": "17.80298",
+  "R3": "34.378142",
+  "R3b": "69.324696",
+  "R4": "1.3799944"
+ },
+ "taylor": {
+  "R0": {
+   "d_a": "0.1",
+   "d_b": "0.0",
+   "site": "b",
+   "ty2": "0.000011921966737656042589",
+   "ty4": "0.000011656225155968071474",
+   "ty6": "0.000011650570622998892812",
+   "band_halfwidth": "1.130906594e-8",
+   "shift_ty4": "-1.30929904325223146e-6",
+   "fires_ty4": false
+  },
+  "R1": {
+   "d_a": "0.0",
+   "d_b": "0.2234889609786364321684392",
+   "site": "b",
+   "ty2": "0.000014315357913735373001",
+   "ty4": "0.000013931397110999069396",
+   "ty6": "0.000013893272953209814983",
+   "band_halfwidth": "7.624831558e-8",
+   "shift_ty4": "9.65872911778766458e-7",
+   "fires_ty4": false
+  },
+  "R2": {
+   "d_a": "0.1",
+   "d_b": "0.2234889609786364321684392",
+   "site": "b",
+   "ty2": "0.000013110056497946433163",
+   "ty4": "0.000012291496565150518672",
+   "ty6": "0.000012236737648716909319",
+   "band_halfwidth": "1.095178329e-7",
+   "shift_ty4": "-6.74027634069784266e-7",
+   "fires_ty4": false
+  },
+  "R1b": {
+   "d_a": "0.0",
+   "d_b": "0.3",
+   "site": "b",
+   "ty2": "0.000016135459664930896209",
+   "ty4": "0.000015030048044237034341",
+   "ty6": "0.000014774452105699821527",
+   "band_halfwidth": "5.111918771e-7",
+   "shift_ty4": "2.0645238450167314e-6",
+   "fires_ty4": false
+  },
+  "R3": {
+   "d_a": "0.1",
+   "d_b": "0.3",
+   "site": "b",
+   "ty2": "0.000014841550487813673657",
+   "ty4": "0.000012963631088971851411",
+   "ty6": "0.000012614474197806076156",
+   "band_halfwidth": "6.983137823e-7",
+   "shift_ty4": "-1.89311024845152687e-9",
+   "fires_ty4": false
+  },
+  "R1e": {
+   "d_a": "0.0",
+   "d_b": "0.4",
+   "site": "b",
+   "ty2": "0.000020753059927308802782",
+   "ty4": "0.000018485618185718376557",
+   "ty6": "0.000016640118719048255599",
+   "band_halfwidth": "3.690998933e-6",
+   "shift_ty4": "5.52009398649807362e-6",
+   "fires_ty4": false
+  },
+  "R3b": {
+   "d_a": "0.1",
+   "d_b": "0.4",
+   "site": "b",
+   "ty2": "0.000019470149780241579814",
+   "ty4": "0.000015254808976928987356",
+   "ty6": "0.00001218318077952244575",
+   "band_halfwidth": "6.143256395e-6",
+   "shift_ty4": "2.28928477770868442e-6",
+   "fires_ty4": false
+  },
+  "R0s": {
+   "d_a": "0.1",
+   "d_b": "0.0",
+   "site": "bs",
+   "ty2": "9.228313434350511308e-6",
+   "ty4": "9.1147118498666574059e-6",
+   "ty6": "9.1129536170044291588e-6",
+   "band_halfwidth": "3.516465724e-9",
+   "shift_ty4": "-7.50730933368456e-7",
+   "fires_ty4": false
+  },
+  "R1d": {
+   "d_a": "0.0",
+   "d_b": "0.1",
+   "site": "bs",
+   "ty2": "9.7856647567385803109e-6",
+   "ty4": "9.768253575492965833e-6",
+   "ty6": "9.7680482406256185175e-6",
+   "band_halfwidth": "4.106697347e-10",
+   "shift_ty4": "-9.71892077421475731e-8",
+   "fires_ty4": false
+  },
+  "R4": {
+   "d_a": "0.1",
+   "d_b": "0.1",
+   "site": "bs",
+   "ty2": "9.1551934694108940641e-6",
+   "ty4": "9.0249604684486559584e-6",
+   "ty6": "9.0230337538177606458e-6",
+   "band_halfwidth": "3.853429262e-9",
+   "shift_ty4": "-8.40482314786457448e-7",
+   "fires_ty4": false
+  }
+ },
+ "prediction_D_from_ty4": {
+  "R2": {
+   "s_A": "-1.30929904325e-6",
+   "s_B": "9.65872911779e-7",
+   "shift": "-6.7402763407e-7",
+   "D": "-3.30601502596e-7",
+   "R_c": "0.1645733612",
+   "defect_frac_pct": "49.048657",
+   "cross_2nd": "-1.52359256852e-7",
+   "D_over_cross_ty4": "2.1698813"
+  },
+  "R3": {
+   "s_A": "-1.30929904325e-6",
+   "s_B": "2.06452384502e-6",
+   "shift": "-1.89311024845e-9",
+   "D": "-7.57117912013e-7",
+   "R_c": "0.2434402706",
+   "defect_frac_pct": "39993.334",
+   "cross_2nd": "-2.8518175813e-7",
+   "D_over_cross_ty4": "2.6548609"
+  },
+  "R3b": {
+   "s_A": "-1.30929904325e-6",
+   "s_B": "5.5200939865e-6",
+   "shift": "2.28928477771e-6",
+   "D": "-1.92151016554e-6",
+   "R_c": "0.3221830557",
+   "defect_frac_pct": "83.934956",
+   "cross_2nd": "-5.32660218082e-7",
+   "D_over_cross_ty4": "3.6073844"
+  },
+  "R4": {
+   "s_A": "-7.50730933368e-7",
+   "s_B": "-9.71892077421e-8",
+   "shift": "-8.40482314786e-7",
+   "D": "7.43782632415e-9",
+   "R_c": "0.01036566595",
+   "defect_frac_pct": "0.88494739",
+   "cross_2nd": "6.79646107108e-9",
+   "D_over_cross_ty4": "1.0943675"
+  }
+ },
+ "H1_PT_band": {
+  "R2": {
+   "PT": "17.80298",
+   "point": "1.0594468",
+   "band": [
+    "0.52972342",
+    "2.1188937"
+   ],
+   "in_fitted_PT_range": false
+  },
+  "R3": {
+   "PT": "34.378142",
+   "point": "1.6261848",
+   "band": [
+    "0.81309238",
+    "3.2523695"
+   ],
+   "in_fitted_PT_range": true
+  },
+  "R3b": {
+   "PT": "69.324696",
+   "point": "2.567512",
+   "band": [
+    "1.283756",
+    "5.1350239"
+   ],
+   "in_fitted_PT_range": true
+  },
+  "R4": {
+   "PT": "1.3799944",
+   "point": "0.2004042",
+   "band": [
+    "0.1002021",
+    "0.4008084"
+   ],
+   "in_fitted_PT_range": false
+  }
+ },
+ "scored_runner": "m2_c27_s3_scored.py",
+ "scored_runner_sha256": "542be996111d387733507145480356890ec3358a1a81598405913c173dfebc98",
+ "scored_runner_NOT_RUN_THIS_CYCLE": true,
+ "reveal_gap_hours": 12,
+ "seconds": 215.5,
+ "status_token": "POSSIBLY NEW",
+ "debt_discharged": "first item of cycle 27, named in my own cycle-26 letter (ffc9873): pre-register S3 = m1's corrected D4 pick, banded with r (or 2(1-r)) reported alongside per my ask 1, granted in m1-L160 sect3",
+ "deferral_decision": {
+  "question": "cycle 26 deferred this prereg for TWO reasons. Do they still hold? Decided explicitly, not inherited.",
+  "reason_A_procedural": "'pre-registering at a cycle's tail is what the 12h window exists to prevent'. STILL HOLDS as a rule, and is HONOURED here by pre-registering at the HEAD of cycle 27 and pushing this file UNRUN. The scored runner is sealed by sha256 and is not executed for at least 12 h.",
+  "reason_B_substantive": "'the S3 prereg would have banded its rungs with the rule under attack'. NO LONGER HOLDS. The attack completed: cycle 26 proved ratio = 0.5|1+t| is an IDENTITY (19/19, max rel dev 1.06e-39), m1-L159 (ii) proved the published [0.500,0.543] window is NOT injective (a healthy ladder |t| in [0,0.086] and a degraded one |t| in [2.000,2.086] both satisfy it), the true failure set is |t| > 3 not r > 1/2, and m1 activated his concession at L160 sect3 with the surviving device stated as the tripwire same-sign AND |t| <= 3. A rule whose domain of validity is now known and published is no longer 'under attack'; banding with it is contamination only while the domain is unknown. The band is therefore used here as a DEVICE with its domain named, and every band figure is reported with r and t alongside so that no reader can invert a non-injective statistic.",
+  "new_reason_that_did_NOT_exist_in_cycle_26": "this runner is a PORT of the cycle-25 S2 machinery, i.e. exactly trap #117's fingerprint, founded by m1 today. Leg B of this cycle measured #117's prescribed one-point launch anchor and found its firing world is a proper subset of the corruption space. So the prereg carries a TWO-POINT anchor (one undisplaced, one displaced), plus m1's three independent D4 values as a third, cross-machine anchor at the new site. That requirement is new, is satisfied, and is the reason the port is trustworthy."
+ },
+ "cross_machine_anchor_result": "m1's four published D4 numbers (launch lam_min 1.2965524199220303e-5, f_a(0.1) -1.004419853e-6, delta_c 0.22348896097863643215, PT_a 60.019 / PT_b 17.803) are INDEPENDENTLY REPRODUCED on my instrument to rel 4.8e-18 / 4.0e-10 / 8.3e-20 / 7.8e-7 / 1.1e-6. His corrected pick is confirmed by a second instrument before any prediction is made about it.",
+ "statistic_deliberately_NOT_pre_registered": "cycle 25's PRIMARY ratio |D|/|shift| at R2 over R3. The design column shows R3's ty4 shift is -1.893e-9, four orders below R2's -6.740e-7: the denominator passes near zero at THIS site, which is exactly the ill-conditioning m1 re-banded L149 for. Grading is on D and R_c (m1's replacement), decided BEFORE the scored run rather than after.",
+ "hypotheses": [
+  {
+   "id": "H1",
+   "name": "IS D/X_2nd A FAMILY PROPERTY OR A SITE PROPERTY?",
+   "kind": "REAL TEST, the headline",
+   "claim": "at all four composed rungs, D/X_2nd lies inside the pre-registered band H1_PT_band, i.e. D/X_2nd is a function of PT = ||P_b||_G/gap alone and cycle 25's five-point curve is a FAMILY curve.",
+   "band_source": "power law fitted to cycle 25's three in-PT-range points (19.389,1.120),(56.079,2.140),(84.779,2.927); slope 0.65114563; band = point/2 .. point*2. R3 and R3b are interpolations; R2 (PT 17.80) and R4 (PT 1.38) are EXTRAPOLATIONS below the fitted range and are labelled as such.",
+   "fires_against_me_if": "2 or more of the 4 rungs land outside their band => D/X_2nd is a SITE property and cycle-25's regularity does not transfer, which extends my own ERRATUM 10 rather than closing it",
+   "firing_set": "NON-EMPTY by measurement -- S1's -23.4 at PT 1145 is outside any positive band, so a site CAN fail this"
+  },
+  {
+   "id": "H2",
+   "name": "EIGENVALUE HALF ALIVE",
+   "kind": "REAL TEST",
+   "claim": "sign(D/X_2nd) > 0 at all four composed rungs AND ground-vector overlap ovl_launch_v0 >= 0.99 at all ten rungs.",
+   "reason": "max PT at S3 is 69.3, far below the 214 where S2's overlap fell to 0.702 and the 1145 where S1's sign inverted",
+   "fires_against_me_if": "any composed rung has D/X_2nd < 0, or any overlap < 0.99",
+   "firing_set": "NON-EMPTY by measurement -- S1 fired both halves"
+  },
+  {
+   "id": "H3",
+   "name": "THE TWO PREDICTORS DISAGREE AT R4 AND THE EXACT VALUE ADJUDICATES",
+   "kind": "REAL TEST, a genuine coin-flip",
+   "claim": "at R4 the ty4 predictor says D/X_2nd = 1.0943675 and the PT band says [0.100, 0.401]. I predict the exact value lands within a factor 2 of the ty4 predictor, i.e. in [0.547, 2.189], and therefore OUTSIDE the PT band.",
+   "note": "this is the one item where my two forecasts contradict each other; I am naming which I back BEFORE the run rather than reporting whichever wins",
+   "fires_against_me_if": "the exact D/X_2nd at R4 lands in [0.100, 0.401]",
+   "consequence_if_it_fires_against_me": "H1 gains at R4 exactly what H3 loses -- these two are ANTI-correlated by construction and I say so; they are one determination reported as two directions, not two independent tests"
+  },
+  {
+   "id": "H4",
+   "name": "NO RUNG FIRES",
+   "kind": "REAL TEST",
+   "claim": "lam_min > 0 at all ten S3 rungs.",
+   "surrogate": "the ty4 column is positive everywhere, min 9.0250e-6 at R4; the most displaced rung R3b has ty6 = 1.2183e-5 > 0",
+   "fires_against_me_if": "any rung has lam_min < 0",
+   "firing_set": "NON-EMPTY by measurement -- S1 and S2 each had a firing rung; cycle-25's R3b fired at 19570x its truncation budget"
+  },
+  {
+   "id": "H5",
+   "name": "THE TRIPWIRE TRANSFERS TO A THIRD SITE",
+   "kind": "REAL TEST, and NOT a test of the identity",
+   "claim": "same-sign AND |t| <= 3 holds at all ten rungs, and max r over the ten rungs <= 0.30.",
+   "declared_dependence": "ratio = 0.5|1+t| is an IDENTITY (cycle 26, 19/19 at 1.06e-39). H5 therefore says nothing about the band statistic; it is purely a statement about ladder convergence at a site the tripwire has never been exercised on. Stated so nobody reads a confirmed H5 as evidence for the band rule.",
+   "fires_against_me_if": "any rung has opposite sign or |t| > 3, or max r > 0.30",
+   "firing_set": "NON-EMPTY by measurement -- at S2 the tripwire failed once delta_b passed 0.5814; S3's largest rung is delta_b = 0.40 with band halfwidth 6.143e-6, 8.8x the R3 halfwidth, so the ladder is visibly degrading and failure is reachable"
+  },
+  {
+   "id": "H6",
+   "name": "THE CANCELLING POINT STILL BUYS NOTHING",
+   "kind": "REAL TEST, DECLARED DEPENDENT on the ty4 column",
+   "claim": "R_c(R2)/R_c(R3) lands in [0.30, 1.50]; ty4 predicts 0.676, S2 measured 0.610 (0.0841/0.1378).",
+   "declared_dependence": "the point prediction comes from the same ty4 column as H3, so a hit here is not independent corroboration of H3",
+   "fires_against_me_if": "outside [0.30, 1.50]",
+   "firing_set": "NON-EMPTY -- at S1 the corresponding figure was 1.314/... and the exact-cancellation rung could in principle be strongly suppressed"
+  }
+ ],
+ "what_would_make_this_prereg_worthless": "any anchor failing at reveal time; or the scored runner differing from sha256 542be996111d387733507145480356890ec3358a1a81598405913c173dfebc98"
+}

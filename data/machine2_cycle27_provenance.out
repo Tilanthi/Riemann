@@ -1,0 +1,38 @@
+py total 206 | with committed output 78 | scripts with unbacked prose numbers 10 | tokens 30
+
+--- m1_heat72v_dual_a3_eval.py  (1)
+    0.0082668                | 1 threshold: |a3_kappa - r_median| <= 1 (r_median = 11.8713, prereg line 67 = grid 6th point r(eps=0.0082668, D=0.15)) |a3_kappa - a3_identity| <= 1 (
+
+--- m2_c24_widthlaw.py  (1)
+    5.118                    | RTED width h_eff, because the instrument drops nodes where phi == 0. Basis 7 has the widest panel of all (h = 5.118) and does NOT fail at degree 8 up 
+
+--- m2_c25_bandaudit.py  (1)
+    10.05                    | s an error estimate. At R1d (the SMALLEST displacement on the ladder) the measured residual |ty4 - exact| is 10.05x |ty6 - ty4|, so the band missed in
+
+--- m2_c25_design.py  (1)
+    0.072086352              | amma_a = 18.43929670..., delta_a = 0.1 gap B = k=2 (25.0109/30.4249), gamma_b = 26.36436221..., delta_b = 0.072086352 (cancelling) Its headline negati
+
+--- machine1_heat75_cycle25_verify.py  (3)
+    29.74812380764528515442463 | ch, site b] + 2*Gram(g_a) + 2*Gram(g_b') [launch', site bs] g_a = z3 + (z4-z3)*7/8 = 29.74812380764528515442463 g_b = z5 + (z6-z5)*4/8 = 35.2606198732
+    35.26061987328243047394007 | [launch', site bs] g_a = z3 + (z4-z3)*7/8 = 29.74812380764528515442463 g_b = z5 + (z6-z5)*4/8 = 35.26061987328243047394007 (cancellation site) g_b' = 
+    34.67923030189662027812064 | 2463 g_b = z5 + (z6-z5)*4/8 = 35.26061987328243047394007 (cancellation site) g_b' = z5 + (z6-z5)*3/8 = 34.67923030189662027812064 (same-sign control) 
+
+--- machine1_heat76_s3_site_scan.py  (19)
+    18.439                   | ed, leg A at delta_a=0.1, leg B laddered. Disjointness ledger (insertion ordinates must be disjoint from S1: 18.439/26.364 and S2: 29.748/35.261/34.67
+    26.364                   | A at delta_a=0.1, leg B laddered. Disjointness ledger (insertion ordinates must be disjoint from S1: 18.439/26.364 and S2: 29.748/35.261/34.679; remov
+    29.748                   | .1, leg B laddered. Disjointness ledger (insertion ordinates must be disjoint from S1: 18.439/26.364 and S2: 29.748/35.261/34.679; removal sharing all
+    35.261                   | B laddered. Disjointness ledger (insertion ordinates must be disjoint from S1: 18.439/26.364 and S2: 29.748/35.261/34.679; removal sharing allowed per
+    34.679                   | ered. Disjointness ledger (insertion ordinates must be disjoint from S1: 18.439/26.364 and S2: 29.748/35.261/34.679; removal sharing allowed per S2's 
+    14.13                    | , recorded): gap k = up200 index of the pair's lower zero. zeros removed by S1: #1-4; by S2: #3-6. k=0 (14.13, 21.02) removal shares S1's; k=1 (21.02,
+
+--- machine1_heat79_m3_pilot_verify.py  (1)
+    1.1761206927485          | the untouched floor lambda_min(K_T200, G) against my published anchor 1.1761206927492675e-5 and their quoted 1.1761206927485e-5. M8 displaced configs 
+
+--- machine1_letter110_dstar_eps_ladder.py  (1)
+    0.378011                 | flagged residual: my Dstar sits at m2 + 3.7799738e-25, which equals +kappa*eps^2 with kappa = -A_ss/(2 A_D) = 0.378011 (4-5 digit match) -- the signat
+
+--- machine1_zeta2C_validation.py  (1)
+    1.357e-27                | halts after k=1, dropping k=2,3 terms that are O(1) after the e^{+pi*t/2} prefactor (measured: 0.186 wrong vs 1.357e-27 right at m2's t=84.4669 zero).
+
+--- machine2_cycle17_census2.py  (1)
+    0.1962                   | s accepted as "converged", and 2*pi of winding is silently discarded. v1 reported max per-step |Delta arg| = 0.1962 < pi/16 -- fully GREEN -- while un
