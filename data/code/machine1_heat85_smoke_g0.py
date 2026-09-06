@@ -64,10 +64,15 @@ def main():
     except SystemExit as e:
         print("stage A SystemExit: %r" % (e,))
     j = json.load(open(SCRATCH_A))
+    # re-freeze-3: G4 threshold amended 1e3 -> 0.1 (#144, launch-3 receipt:
+    # measured defect size rel 0.4872).  Under this stub lam_bad = 1e-11 vs
+    # ref ~5e-11 gives rel ~0.80 > 0.1, so detected is now True in stage A;
+    # the abort still comes from G2/G3, which is the branch under test here.
     okA = (j.get("aborted") == "gate failure (G2/G3/G4)"
            and j["gate"]["G2_founders_reproduced"] is False
            and j["gate"]["G3_kill_controls_fired"] is False
-           and j["gate"]["defect_injection"]["detected"] is False)
+           and j["gate"]["defect_injection"]["detected"] is True
+           and j["gate"]["defect_injection"]["threshold_as_run"].startswith("0.1"))
     print("stage A abort json: aborted=%r g2=%r g3=%r detected=%r  ->  %s"
           % (j.get("aborted"), j["gate"]["G2_founders_reproduced"],
              j["gate"]["G3_kill_controls_fired"],

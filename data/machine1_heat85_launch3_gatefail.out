@@ -1,0 +1,24 @@
+input seals verified (3/3)
+instrument built 0.0s
+G1 control k=0 lam 4.76112961139e-11 ok
+G1 control k=1 lam 7.82396275017e-11 ok
+G1 control k=2 lam 1.47853878161e-10 ok
+G1 control k=3 lam 8.58369711366e-11 ok
+G1 control k=4 lam 9.26191571099e-11 ok
+G1 control k=5 lam 1.09127522827e-10 ok
+G1 control k=6 lam 4.6318830868e-11 ok
+G1 control k=7 lam 4.46656072881e-11 ok
+G2/3 founder 16/0.05 lam 5.053612052e-11 rel 3.78e-26 fires=False match=True
+G2/3 founder 18/0.05 lam 6.978488137e-11 rel 5.94e-26 fires=False match=True
+G2/3 founder 19/0.05 lam 1.497705145e-10 rel 1.89e-25 fires=False match=True
+G2/3 founder 20/0.05 lam 9.928773792e-11 rel 2.5e-27 fires=False match=True
+G2/3 founder 21/0.05 lam 5.746150303e-11 rel 7.32e-26 fires=False match=True
+G2/3 founder 22/0.05 lam 7.092723674e-11 rel 6.0e-27 fires=False match=True
+G2/3 founder 23/0.05 lam 1.172846725e-10 rel 2.66e-25 fires=False match=True
+G2/3 founder 24/0.05 lam 1.628097523e-10 rel 1.62e-25 fires=False match=True
+G2/3 founder 24/0.1 lam 1.616794486e-10 rel 1.6e-25 fires=False match=True
+G2/3 founder 15/0.05 lam -6.329602531e-10 rel 6.5e-26 fires=True match=True
+G2/3 founder 17/0.05 lam -2.938951237e-11 rel 7.13e-26 fires=True match=True
+G2/3 founder 0/0.1 lam -2.630881951 rel 5.54e-26 fires=True match=True
+G4 defect injection rel 0.4872 detected=False
+GATE FAIL — no mutant scored

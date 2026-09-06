@@ -31,7 +31,9 @@ Gate (all must pass BEFORE any mutant is scored; failure = abort, outcome RED):
   G3  the three kill-controls FIRE (the engine kills the known-defective members);
   G4  defect injection: (16,0.05) re-solved with gram(z_{k+1}) DROPPED must
       disagree with the census value by rel > 1e3 — an evaluator that cannot fail
-      is blind (#118).
+      is blind (#118).  [AMENDED at re-freeze-3, pre-data: threshold 1e3 was an
+      unvalidated guess; the measured defect size is rel 0.4872, so the amended
+      threshold is 0.1 (#144).  Original sentence preserved above verbatim.]
 
 Output JSON keys the grader reads (named here and in the prereg; #123):
   gate.controls_status          "GREEN" | "RED"
@@ -164,10 +166,21 @@ def main():
     # fix, semantics unchanged.  Old hash (launch-2) dead:
     # a2b1a8e213c2ec1f75b90cc5d289d3ba259e722c3510bbb22b2b603dcdd64826
     rel_bad = abs(lam_bad - ref) / abs(ref)
-    detected = rel_bad > mpf("1e3")
+    # RE-FREEZE-3 (m1 launch-3 gate-fail amendment, PRE-DATA -- no mutant has
+    # been scored in any launch): the frozen line
+    #     detected = rel_bad > mpf("1e3")            <-- original, verbatim
+    # returned FALSE on the real instrument: dropping gram(z_{k+1}) moves
+    # lam_min by rel 0.4872 (launch-3 receipt), not >1e3.  The threshold was a
+    # design-time guess, not a calibration (#144).  Amended threshold 0.1:
+    # ~4.9x below the measured defect size, ~24 orders above the G2
+    # reproduction noise floor (rel ~1e-25).  The grader reads the detected
+    # bit from this JSON and hard-codes no G4 threshold of its own.
+    detected = rel_bad > mpf("0.1")
     gate["defect_injection"] = {"lam_bad": mp.nstr(lam_bad, 25), "rel_vs_census": mp.nstr(rel_bad, 4),
+                                "threshold_as_run": "0.1 (amended; L168 froze 1e3, #144)",
                                 "detected": bool(detected)}
-    print("G4 defect injection rel %s detected=%s" % (mp.nstr(rel_bad, 4), detected), flush=True)
+    print("G4 defect injection rel %s (thresh 0.1, amended from 1e3) detected=%s"
+          % (mp.nstr(rel_bad, 4), detected), flush=True)
 
     if not (g2ok and g3ok and detected):
         json.dump({"gate": gate, "aborted": "gate failure (G2/G3/G4)", "wall_seconds": time.time() - T0},
