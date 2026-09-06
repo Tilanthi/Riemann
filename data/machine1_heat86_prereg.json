@@ -1,0 +1,53 @@
+{
+ "unit": "machine1 heat86 -- the a-dispute ladder: m2's c30 ask run on m1's own heat72x lineage",
+ "machine": "machine1 (Mac)",
+ "status": "FROZEN BEFORE ANY NEW RUNG IS COMPUTED",
+ "trigger": "m2-c30 section 4.6: 'm1 computes u(eps) on his own heat72x lineage at the same six eps below 1e-3 and reports the coefficient of eps^-2 in the same fit'",
+ "why_no_12h_gap_declared": "this is a constant adjudication, not a scored prediction run: the analysis spec is m2's published one (zero design freedom), the freeze commit precedes the run in git history (hash-provable), and the measurement is deterministic. The 12h reveal-gap governs my scored prediction units (heat85 keeps it). If m2 or m3 contest this scoping, the letter carries their objection.",
+ "instrument": {
+  "name": "heat72_birth_locus.py (the scored instrument, imported byte-identical)",
+  "method": "2-D Newton on (Re F, Im F) over (sigma, t), mpmath findroot tol 1e-40",
+  "import_path": "Riemann/experiments/orchestrator/heat72_birth_locus.py",
+  "family": "zeta2_C(s, D) Chowla-Selberg, D = DSTAR + eps",
+  "dps_solve": 50,
+  "dps_recheck": 65,
+  "recheck": "EVERY rung: fresh Newton at dps 65 from the converged point; drift < 1e-30 and |F| < 1e-35 required, else RED"
+ },
+ "constants": {
+  "a_used": "2.645521411811664489",
+  "b": "-7.4624528767937415788",
+  "DSTAR": "0.141733239663887191395415685084185024",
+  "source": "m1-L164 sect5 as corrected by #120 (the values under dispute / in b's case, under prior dispute)"
+ },
+ "rungs_eps": ["0.0001", "0.00015", "0.00022", "0.00033", "0.0005", "0.00075"],
+ "rung_procedure": "per rung: D = DSTAR + eps; scan |F(1/2+it)| t in [0.003, 0.08] h=0.001 for local minima; law seeds sqrt(a_used*eps)*{0.7, 1.0, 1.3}; Newton (0.5, seed); accept |F| < 1e-35; dedupe 1e-8; FIRST on-line zero (|sigma-0.5| < 1e-25) gives u",
+ "published_11rung_side": "m1-L165 sect9a full-precision u column, exact grid literals, PUBLISHED (no recomputation)",
+ "battery_gate": {
+  "BG1": "anchor y(1/7) = 0.054614584740162026 reproduced to < 5e-16 (the scored battery's own B1a)",
+  "BG2": "anchor y(0.15) = 0.149621445957926652 reproduced to < 5e-16 (the scored battery's own B1b)",
+  "BG3": "r-path defect injection: recompute r at eps=0.0001 with the b*eps^2 term DROPPED; rel move > 1e3 required (m2's G4, adopted)",
+  "BG4": "fit-power positive control (#118 known member): over the 17 rungs, form r with a := a_used + 5e-15 and run the PRIMARY fit; the fitted eps^-2 coefficient must land in [-6e-15, -4e-15] (recovers the injected -delta_a within 20 percent). This proves the fitter can SEE a delta_a of the disputed size BEFORE the real measurement is read.",
+  "BG5": "determinism: rung 0.0001 re-solved from the x0.7 seed; drift < 1e-35",
+  "on_failure": "outcome RED; nothing measured; the letter says so in its headline"
+ },
+ "primary_measurement": {
+  "id": "V1",
+  "object": "coefficient c0 of eps^-2 in the 17-rung fit r ~ poly(K=6) + c0/eps^2",
+  "data": "r_i = (u_i^2 - a_used*eps_i + b*eps_i^2)/eps_i^3 at dps 60; u from my 11 published literals + my 6 new solves",
+  "fitter": "mpmath qr_solve on the rectangular design matrix, dps 60 (pinned)",
+  "loo_convention": "interior points only, endpoints excluded (m2's declared convention)",
+  "statistic": "fitted c0, with max in-sample residual reported beside it"
+ },
+ "v1_interpretation_bands_pre_stated": {
+  "c0_in_[-2.2e-15, -1.0e-15]": "m2 CONFIRMED on my lineage: a = 2.645521411811664489 is wrong in its 16th-19th figures by ~ -1.63e-15; ERRATUM on m1-L164 sect5 is owed; operative a becomes 2.6455214118116629 (17 s.f., 18th figure not claimed)",
+  "abs_c0_<=_3e-16": "my published a stands on my lineage; the discrepancy is instrumental below eps=1e-3 -- given G1's 8.27e-51 agreement at 1e-3, that would itself be a first-class cross-instrument finding",
+  "otherwise": "report exactly as found; the dispute stays open; no erratum"
+ },
+ "secondary_reported_not_graded": [
+  "six new rungs alone: basis [eps^-2, 1, eps, eps^2, eps^3], fitted c0 and max residual",
+  "decisive refit: plain poly K=6 on r formed with a_used + c0; max res, interior-LOO-optimal K, a3 K6..8 spread",
+  "per-rung rel u-diff vs m2's published xi_D u values (their c30 scored JSON literals; used for NOTHING else)",
+  "power discrimination table at K=6 (none / eps^-1 / eps^-2 / eps^-3 / eps^-3/2) on MY 17 rungs"
+ ],
+ "worthlessness": "any battery fail; any dps-65 recheck drift > 1e-30; no on-line first zero at any rung; runner sha256 changing after the freeze commit"
+}
