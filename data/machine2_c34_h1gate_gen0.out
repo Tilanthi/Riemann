@@ -1,0 +1,243 @@
+################################################################################################
+# AMENDED GATE -- SPECIFICATION EMITTED BY THE GATE ITSELF (ruling 95d7305 §3(c), register #140)
+################################################################################################
+
+--- prereg §3.1, verbatim ---
+CONVENTION-SWING GATE (binding, pre-registered). For each metric let `Delta_conv` = max - min of the gen-0 value across the three rules, and `Delta_eff` = |gen-1 - gen-0| under the primary rule. If `Delta_conv >= Delta_eff`, the metric is reported `INDETERMINATE - CONVENTION-DOMINATED`, no directional claim is made, and the sign is not quoted - whatever the p-value says.
+
+--- amended, as executed by this file ---
+CONVENTION-SWING GATE (binding, pre-registered, AMENDED c34). A convention is ADMISSIBLE for a metric only if the metric is not constant under it: a rule under which the metric takes the same value on all three per-machine sub-censuses and on the pooled census is CONSTANT-BY-ALGEBRA, is not a rival reading of the data, and is struck from that metric's degrees of freedom; two rules giving identical values everywhere are ALIASES and count once. For each metric let `Delta_gate` = max - min, over that metric's ADMISSIBLE degrees of freedom (U-rules x attribution specifications S0-S3), of the EFFECT `gen-1 - gen-0` recomputed consistently under each, and `Delta_eff` = |gen-1 - gen-0| under the primary rule and specification. If `Delta_gate >= Delta_eff`, the metric is reported `INDETERMINATE - CONVENTION-DOMINATED`, no directional claim is made, and the sign is not quoted - whatever the p-value says. If a metric has no admissible degree of freedom, the gate is UNDEFINED for it and that is reported instead of a pass. The gen-0 LEVEL swings are published as a diagnostic and are NOT the gate: a level swing and an effect are not the same quantity.
+
+--- word-level diff (prereg -> amended) ---
+   --- 
+   +++ 
+   @@ -2,22 +2,104 @@
+    GATE
+    (binding,
+   -pre-registered).
+   +pre-registered,
+   +AMENDED
+   +c34).
+   +A
+   +convention
+   +is
+   +ADMISSIBLE
+   +for
+   +a
+   +metric
+   +only
+   +if
+   +the
+   +metric
+   +is
+   +not
+   +constant
+   +under
+   +it:
+   +a
+   +rule
+   +under
+   +which
+   +the
+   +metric
+   +takes
+   +the
+   +same
+   +value
+   +on
+   +all
+   +three
+   +per-machine
+   +sub-censuses
+   +and
+   +on
+   +the
+   +pooled
+   +census
+   +is
+   +CONSTANT-BY-ALGEBRA,
+   +is
+   +not
+   +a
+   +rival
+   +reading
+   +of
+   +the
+   +data,
+   +and
+   +is
+   +struck
+   +from
+   +that
+   +metric's
+   +degrees
+   +of
+   +freedom;
+   +two
+   +rules
+   +giving
+   +identical
+   +values
+   +everywhere
+   +are
+   +ALIASES
+   +and
+   +count
+   +once.
+    For
+    each
+    metric
+    let
+   -`Delta_conv`
+   +`Delta_gate`
+    =
+    max
+    -
+   -min
+   +min,
+   +over
+   +that
+   +metric's
+   +ADMISSIBLE
+   +degrees
+   +of
+   +freedom
+   +(U-rules
+   +x
+   +attribution
+   +specifications
+   +S0-S3),
+    of
+    the
+   -gen-0
+   -value
+   -across
+   -the
+   -three
+   -rules,
+   +EFFECT
+   +`gen-1
+   +-
+   +gen-0`
+   +recomputed
+   +consistently
+   +under
+   +each,
+    and
+    `Delta_eff`
+   @@ -29,7 +111,9 @@
+    the
+    primary
+   -rule.
+   +rule
+   +and
+   +specification.
+    If
+   -`Delta_conv
+   +`Delta_gate
+    >=
+    Delta_eff`,
+   @@ -57,2 +141,50 @@
+    p-value
+    says.
+   +If
+   +a
+   +metric
+   +has
+   +no
+   +admissible
+   +degree
+   +of
+   +freedom,
+   +the
+   +gate
+   +is
+   +UNDEFINED
+   +for
+   +it
+   +and
+   +that
+   +is
+   +reported
+   +instead
+   +of
+   +a
+   +pass.
+   +The
+   +gen-0
+   +LEVEL
+   +swings
+   +are
+   +published
+   +as
+   +a
+   +diagnostic
+   +and
+   +are
+   +NOT
+   +the
+   +gate:
+   +a
+   +level
+   +swing
+   +and
+   +an
+   +effect
+   +are
+   +not
+   +the
+   +same
+   +quantity.
+
+################################################################################################
+# gen-0 census, range = (53a3b46, HEAD]  -- POOLED
+################################################################################################
+  S0-PRIMARY       [U-DROP ] M1=0.4567 M2=0.2348 M3=46.605 NC=0.3842   (fals=289 SELF=101 CROSS=21 BOTH=10 UNATTR=157)
+  S1-OWN-ONLY      [U-DROP ] M1=0.3045 M2=0.3523 M3=46.605 NC=0.1908   (fals=289 SELF=57 CROSS=21 BOTH=10 UNATTR=201)
+  S2-TOKENS-ONLY   [U-DROP ] M1=0.2007 M2=0.5345 M3=46.605 NC=0.1476   (fals=289 SELF=27 CROSS=21 BOTH=10 UNATTR=231)
+  S3-NO-MAC        [U-DROP ] M1=0.4567 M2=0.2273 M3=46.605 NC=0.3817   (fals=289 SELF=102 CROSS=20 BOTH=10 UNATTR=157)
+
+################################################################################################
+# ADMISSIBILITY OF EACH CONVENTION, MEASURED (a rule under which the metric is the
+# same number on all three machines AND pooled is CONSTANT-BY-ALGEBRA, not a rival
+# reading of the data).  Classified by measurement, never by a hand-kept exemption
+# list: an exemption list goes stale silently, this cannot.
+################################################################################################
+  M1   admissible U-rules: ['U-DROP']   [U-SELF=CONSTANT-BY-ALGEBRA(1.0000); U-SPLIT=CONSTANT-BY-ALGEBRA(1.0000)]
+  M2   admissible U-rules: ['U-DROP', 'U-SELF']   [U-SPLIT=ALIAS of U-DROP]
+  M3   admissible U-rules: ['U-DROP']   [U-SELF=ALIAS of U-DROP; U-SPLIT=ALIAS of U-DROP]
+  NC   admissible U-rules: ['U-DROP']   [U-SELF=ALIAS of U-DROP; U-SPLIT=ALIAS of U-DROP]
+  M1   admissible specs:   ['S0-PRIMARY', 'S1-OWN-ONLY', 'S2-TOKENS-ONLY']   [S3-NO-MAC=ALIAS of S0-PRIMARY]
+  M2   admissible specs:   ['S0-PRIMARY', 'S1-OWN-ONLY', 'S2-TOKENS-ONLY', 'S3-NO-MAC']
+  M3   admissible specs:   ['S0-PRIMARY']   [S1-OWN-ONLY=ALIAS of S0-PRIMARY; S2-TOKENS-ONLY=ALIAS of S0-PRIMARY; S3-NO-MAC=ALIAS of S0-PRIMARY]
+  NC   admissible specs:   ['S0-PRIMARY', 'S1-OWN-ONLY', 'S2-TOKENS-ONLY', 'S3-NO-MAC']
+
+################################################################################################
+# LEVEL swings (DIAGNOSTIC, NOT THE GATE) and the firing world of each gate version
+################################################################################################
+  metric   gen-0 (S0,U-DROP)  level swing, U  level swing, spec       MDE   admissible d.o.f.
+  M1                  0.4567          0.5433             0.2561    0.2600   U:1
+          ORIGINAL GATE VACUOUS BOTH WAYS: counting the inadmissible rules it fires for every detectable effect; striking them it can never fire.
+  M2                  0.2348          0.1276             0.3072    0.3036   U:2
+          original gate well defined (>=2 admissible U-rules, non-zero swing)
+          ⚠ PRE-DATA WARNING (diagnostic, NOT a gate verdict): the gen-0 LEVEL swing across admissible specifications is 0.3072 >= MDE 0.3036.
+          A level swing is not an effect; the amended gate compares effect-to-effect and can only be evaluated at E.  But a metric whose LEVEL moves by more than its own MDE under a defensible re-reading is fragile, and this is said before the data, not after.
+  M3                 46.6054          0.0000             0.0000   34.9470   U:1
+          ORIGINAL GATE VACUOUS: every U-rule is an ALIAS here, so its zero swing measures no robustness at all.
+  NC                  0.3842          0.0000             0.2366    0.2310   U:1
+          ORIGINAL GATE VACUOUS: every U-rule is an ALIAS here, so its zero swing measures no robustness at all.
+          ⚠ PRE-DATA WARNING (diagnostic, NOT a gate verdict): the gen-0 LEVEL swing across admissible specifications is 0.2366 >= MDE 0.2310.
+          A level swing is not an effect; the amended gate compares effect-to-effect and can only be evaluated at E.  But a metric whose LEVEL moves by more than its own MDE under a defensible re-reading is fragile, and this is said before the data, not after.
+
+################################################################################################
+# B-BOUNDARY CHECK (DEFECT-4): every commit on main whose message contains the string 'gen-1'
+################################################################################################
+   candidate: 30fb884|2026-09-06T09:16:19+02:00|Tilanthi
+   candidate: 46d1489|2026-09-06T09:20:18+00:00|thebeastagi
+   candidate: 09091c5|2026-09-06T14:06:23+02:00|Tilanthi
+   candidate: b5ce966|2026-09-06T12:18:00+00:00|machine2
+   candidate: 904f620|2026-09-06T16:29:26+02:00|Tilanthi
+   candidate: 95d7305|2026-09-06T15:04:23+00:00|thebeastagi
+   => 6 commits match the literal string; the prereg says 'if two candidates exist, the EARLIER wins'.
+   => a mechanical reading of §5 selects a commit that declares no breeding artefact, and the earliest such commit PREDATES the pre-registration itself.
+   => B has NOT landed under any reading anyone intends; see the amendment letter.
