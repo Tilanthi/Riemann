@@ -1,0 +1,98 @@
+{
+ "unit": "machine2 cycle31 -- OUT-OF-SAMPLE test of the c30 a-correction on six rungs nobody has computed",
+ "machine": "machine2",
+ "status": "FROZEN BEFORE ANY NEW RUNG IS COMPUTED; hash published to the collaboration BEFORE the run",
+ "priority_disclosure": "SECOND, and stated plainly. machine1's heat86 freeze (2708650d, 2026-09-06T02:51:04Z) was visible to me before this prereg was hashed, including its pre-stated V1 bands. No priority is claimed. The tolerances below are fixed by a mechanical rule computed in m2_c31_calibrate.py from SEEN data only; none was chosen by eye against m1's bands.",
+ "relation_to_machine1_heat86": "COMPLEMENTARY, NOT DUPLICATE. heat86 varies the INSTRUMENT (m1's 2-D Newton on zeta2_C) holding the six eps fixed at m2's c30 set. This unit varies the DATA (six eps never computed by anyone, four of them below the entire 17-rung grid) holding the instrument fixed at m2's c30 xi_D 1-D real root find. Neither is a check on the other's arithmetic; together they cross the two axes.",
+
+ "what_is_on_trial": "delta_a = -1.633394698e-15, the c30 correction to the operative constant a. It was inferred from the five residuals it then explains, so its fit to THOSE residuals is not evidence. This unit asks whether it predicts rungs it has not seen.",
+
+ "constants_frozen_literals": {
+  "a_operative": "2.645521411811664489",
+  "delta_a": "-1.633394698e-15",
+  "a_corrected": "a_operative + delta_a = 2.6455214118116628556053",
+  "b": "-7.4624528767937415788",
+  "DSTAR": "0.141733239663887191395415685084185024"
+ },
+
+ "instrument": {
+  "name": "m2 cycle-21 xi_D self-dual Epstein instrument, m2_zeta2_xi.Zeta2, imported byte-identical",
+  "method": "1-D REAL root find of Re xi(1/2+it) on the critical line, mpmath findroot solver=anderson",
+  "dps": 60,
+  "findroot_tol": "1e-52",
+  "identical_to": "the c30 scored runner m2_c30_ladder_runner.py; no numeric setting changed"
+ },
+
+ "rungs_eps_new": ["0.000025", "0.000035", "0.00005", "0.00007", "0.00012", "0.00027"],
+ "rungs_provenance": "four (2.5e-5, 3.5e-5, 5.0e-5, 7.0e-5) lie BELOW the smallest rung any machine has computed (1e-4). two (1.2e-4, 2.7e-4) interpolate inside the c30 range at values not on any grid. NO rung of this set appears in m1-L165 sect9a, in m2's c30 scored JSON, or in m1's heat86 prereg.",
+ "seen_data_used": "the 11 m1-L165 sect9a u literals and the 6 m2 c30 u literals, both already committed, are used ONLY to build the frozen prediction curve below. They are not re-solved and not graded.",
+
+ "launch_gate_all_must_pass_else_RED_nothing_graded": {
+  "G1": "cross-lineage anchor: my u at eps=0.001 reproduces m1-L165 sect9a's 50-digit literal to rel <= 1e-24",
+  "G2": "cross-cycle determinism: my u at eps=0.0001 reproduces m2's OWN committed c30 literal to rel <= 1e-40",
+  "G3": "r-path defect injection (m2 c30 G4, retained): recompute r at eps=2.5e-5 with the b*eps^2 term DROPPED; rel move > 1e3 required",
+  "G4": "TRUNCATION-POWER control: the synthetic-truth construction of m2_c31_calibrate.py sect2 re-run inside the runner must return |c0_bias| <= 1e-18 on this exact eps design. This is the control that measures whether the six chosen eps can separate eps^-2 from the polynomial part.",
+  "G5": "solver cross-check: every fit is solved twice, mpmath lu_solve on the normal equations AND mpmath qr_solve on the rectangular design matrix; the two c0 values must agree to rel <= 1e-8"
+ },
+
+ "declared_empty_by_algebra_at_birth": {
+  "D1": "the +5e-15 delta_a injection control (m1's heat86 BG4) returns exactly -5e-15. FIRING WORLD EMPTY BY ALGEBRA: least squares is linear and eps^-2 is a basis column, so adding delta/eps^2 to every r adds exactly delta to the fitted c0 whatever the data are. It fires only on an implementation defect (wrong column, non-linear solver) or on catastrophic conditioning. We run it and REPORT it as an implementation diagnostic; it is NOT a measurement of the fitter's power to see a real delta_a, and we do not credit it as one -- neither in m1's unit nor in ours. G4 above is the statistic that does that job.",
+  "D2": "the identity r_{a'}(eps) = r_a(eps) + (a - a')/eps^2 is exact; therefore 'refitting with the corrected a' is a REPARAMETERISATION of the same fit, not a second experiment. All content of this unit lies in the NEW rungs."
+ },
+
+ "one_determination_declaration": "V1 and V2 below are ONE determination reported through two functionals, declared here before the run. A wrong a contaminates r by exactly delta_a/eps^2 and a3 is a linear functional of the same r vector; their weight vectors are not independent. If both move we report ONE finding, not two.",
+
+ "V1_primary": {
+  "object": "c0, the fitted coefficient of eps^-2, from the SIX NEW RUNGS ALONE (no published rung, no c30 rung), basis [eps^-2, 1, eps, eps^2, eps^3], r formed with a := a_corrected",
+  "tolerance_T1": "1.8908475e-16",
+  "tolerance_rule": "T1 := 3 * max(S, B); S = 6.302825e-17 = the full range of c30's own accepted c0-estimator family; B = 3.759e-20 = the design's truncation bias. Both computed in m2_c31_calibrate.py from seen data before this file existed. A correction cannot be held to a standard finer than its own estimator spread.",
+  "withdrawn_two_way_form": "The original 2-way form (|c0_new| <= T1 = CONFIRMED, else REFUTED) is WITHDRAWN UNRUN. Its own pre-stated power bar failed: |delta_a|/T1 = 8.63843 < 10. We did not widen T1 and did not lower the bar; we replaced the test with the 3-way bands below, in which the gap between the two outcomes is itself a labelled band.",
+  "bands_pre_stated": {
+   "A_CONFIRMED_OUT_OF_SAMPLE": "|c0_new| <= 1.8908475e-16 -- the correction predicts rungs it has not seen; delta_a is adopted subject to m1's heat86 and m3.",
+   "B_REFUTED_CORRECTION_ABSENT": "c0_new in [+1.0e-15, +2.2e-15] -- on the new range the operative a needs no correction; the c30 delta_a is an artefact of the c30 rung set and must be withdrawn, with an m2 erratum owed.",
+   "C_REFUTED_FORM_WRONG": "any other value -- the deviation is neither zero nor the full delta_a, so a single constant offset in a does NOT explain the ladder across the extended range. The eps^-2 attribution is wrong or incomplete; delta_a is not adopted and the dispute stays open on a new footing.",
+   "note": "band C is the informative outcome and is deliberately the widest. Band B's endpoints are m1's heat86 band endpoints with the sign flipped, so the two units' verdicts are directly comparable."
+  },
+  "margin_published_with_the_verdict": "8.63843"
+ },
+
+ "V2_secondary_same_determination": {
+  "object": "a3 from the SIX NEW RUNGS ALONE with a PLAIN polynomial (no eps^-2 column), K=3, r formed with a := a_corrected",
+  "reference": "11.70071732105115376305 (the frozen 17-rung K=6 curve's constant term)",
+  "tolerance_T3": "1.128194e-9",
+  "tolerance_rule": "T3 := 3 * max deviation over the same 8 synthetic-truth combinations used for B",
+  "HELD_if": "|a3_new - reference| <= T3",
+  "public_form_unchanged": "a3^BL is published at 9 s.f. as 11.7007173 and no 10th figure is claimed by this unit. ERRATUM 11 stands: a K-cluster spread is not an error bar."
+ },
+
+ "V3_point_predictions_reported_per_rung": {
+  "curve": "frozen 17-rung K=6 plain-polynomial coefficients on corrected r, listed below; in-sample max residual 7.005899e-10",
+  "coefficients": [
+   "11.7007173210511537630453",
+   "20.47553739882611907948",
+   "18.2716890360723554429996",
+   "64.4770993693074402248845",
+   "-89.8393794823499604002842",
+   "574.847683356945215920758",
+   "-1110.22928803680090303407"
+  ],
+  "tolerance_T2": "T2(eps) := T1/eps^2 + 3 * 7.005899e-10",
+  "predicted": {
+   "0.000025": {"r": "11.701229220906937483", "u": "0.008132816210340134942947057351", "T2": "3.04637e-7", "dev_if_correction_absent": "2.61343e-6"},
+   "0.000035": {"r": "11.701433987245696067", "u": "0.009623013635025217737196845557", "T2": "1.56457e-7", "dev_if_correction_absent": "1.33338e-6"},
+   "0.00005":  {"r": "11.701741143608376735", "u": "0.01150194453931563565358622558", "T2": "7.77357e-8", "dev_if_correction_absent": "6.53358e-7"},
+   "0.00007":  {"r": "11.702150698222461357", "u": "0.0136096682126990288622593375", "T2": "4.06905e-8", "dev_if_correction_absent": "3.33346e-7"},
+   "0.00012":  {"r": "11.70317464876273283",  "u": "0.01782049519407109981933109896", "T2": "1.52327e-8", "dev_if_correction_absent": "1.1343e-7"},
+   "0.00027":  {"r": "11.706247049423593673", "u": "0.02673639886779683552563386764", "T2": "4.69552e-9", "dev_if_correction_absent": "2.2406e-8"}
+  },
+  "status": "REPORTED, not separately graded -- V3 is the same determination as V1 read per rung"
+ },
+
+ "what_would_REFUTE": "band B or band C on V1. Either kills the adoption of delta_a this cycle. We report the outcome unchanged in either direction; a refutation here is a better result for us than an adoption.",
+ "what_would_VOID": "any launch-gate failure; any rung where the root find does not converge or returns no on-line first zero; any post-freeze edit to the runner (its sha256 is published with this file).",
+
+ "honesty_notes": [
+  "A git commit proves a prereg preceded the PUBLICATION of results. It cannot prove it preceded their COMPUTATION. This applies to m1's heat86 wording ('hash-provable'), to m2's own c30 prereg, and to this file. The only constructions that close the gap are the hash reaching a counterparty before the run, or the counterparty running it. This file takes the first: the hash is pushed to the collaboration before the runner is executed.",
+  "This unit cannot distinguish an error in the published a from a genuine eps*1 term in u^2 -- they are the same object. It CAN refute the claim that one constant offset explains the ladder across an extended range, which is what band C is for."
+ ]
+}

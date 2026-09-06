@@ -1,0 +1,73 @@
+=== 0. constants (all FROZEN literals) ===
+  a_operative = 2.645521411811664489
+  delta_a     = -1.633394698e-15   (c30 joint 17-rung K=6, frozen literal)
+  a_corrected = 2.6455214118116628556053
+
+=== 1. S -- the spread of the cycle-30 estimator family for c0 ===
+  joint 17-rung K=6, basis [eps^-2 + poly6]  -1.633394698e-15
+  joint 17-rung K=6 + eps^-1 in basis        -1.585179e-15
+  joint 17-rung K=5                          -1.927230284e-15
+  six c30 rungs alone, K=3                   -1.623411826e-15
+  six c30 rungs alone, K=2                   -1.64820725e-15
+  1-D max-residual scan                      -1.639822722e-15
+  full range incl. the LOO-REJECTED K=5 : S_all = 3.4205128e-16
+  full range of the ACCEPTED family     : S     = 6.302825e-17
+
+=== 2. B -- model-truncation bias of the PROPOSED design, from seen data ===
+  method: take the corrected 17-rung data, fit a HIGHER-order plain polynomial (K=8) to it,
+  use that as a synthetic truth, evaluate it at the six proposed eps, then run the GRADED
+  estimator (six rungs alone, basis [eps^-2, 1, eps, eps^2, eps^3]) on the synthetic values.
+  Truth has c0 == 0 exactly, so whatever c0 comes back is pure truncation/conditioning bias.
+    synth K=6 -> graded fit K=2 : c0_bias = -3.7558201e-20
+    synth K=6 -> graded fit K=3 : c0_bias = -2.1055624e-24
+    synth K=7 -> graded fit K=2 : c0_bias = -3.7590184e-20
+    synth K=7 -> graded fit K=3 : c0_bias = -2.1840305e-24
+    synth K=8 -> graded fit K=2 : c0_bias = -3.7563679e-20
+    synth K=8 -> graded fit K=3 : c0_bias = -2.0687293e-24
+    synth K=9 -> graded fit K=2 : c0_bias = -3.746944e-20
+    synth K=9 -> graded fit K=3 : c0_bias = -1.3858734e-24
+  B = max |c0_bias| over the 8 synthetic/graded combinations = 3.7590184e-20
+
+=== 3. THE MECHANICAL TOLERANCE RULE (stated before any new rung is solved) ===
+  T1 := 3 * max(S, B).   S = the correction's own estimator spread; B = the design's
+  truncation bias.  A correction cannot be held to a standard finer than either.
+  S = 6.302825e-17 ; B = 3.7590184e-20 ; T1 = 1.8908475e-16
+  ALTERNATIVE HYPOTHESIS (a_operative is right, no correction needed) predicts
+  c0_new = 1.633394698e-15 .  Discrimination margin = |delta_a| / T1 = 8.63843
+  PRE-STATED ABORT: if the margin is < 10 the test is UNDERPOWERED and is reported as such
+  instead of graded.   margin >= 10 ? NO
+
+=== 4. THE FROZEN PREDICTION CURVE (17-rung K=6 plain poly on corrected r) ===
+  in-sample max residual = 7.005899e-10
+    c[0] = 11.7007173210511537630453
+    c[1] = 20.47553739882611907948
+    c[2] = 18.2716890360723554429996
+    c[3] = 64.4770993693074402248845
+    c[4] = -89.8393794823499604002842
+    c[5] = 574.847683356945215920758
+    c[6] = -1110.22928803680090303407
+  a3 (= c[0]) = 11.70071732105115376305      [9 s.f. public form stays 11.7007173 -- ERRATUM 11 stands]
+
+  per-rung POINT PREDICTIONS at the six proposed eps (r and u), tolerance T2(eps):
+  T2(eps) := T1/eps^2 + 3 * in-sample max residual
+  eps        r_pred                     u_pred                           T2(eps)        alt-H dev     
+  2.5e-5     11.701229220906937483      0.008132816210340134942947057351 3.04637e-7     2.61343e-6    
+  3.5e-5     11.701433987245696067      0.009623013635025217737196845557 1.56457e-7     1.33338e-6    
+  5.0e-5     11.701741143608376735      0.01150194453931563565358622558  7.77357e-8     6.53358e-7    
+  7.0e-5     11.702150698222461357      0.0136096682126990288622593375   4.06905e-8     3.33346e-7    
+  0.00012    11.70317464876273283       0.01782049519407109981933109896  1.52327e-8     1.1343e-7     
+  0.00027    11.706247049423593673      0.02673639886779683552563386764  4.69552e-9     2.2406e-8     
+
+=== 5. T3 -- tolerance on a3 from the six new rungs alone (plain poly, corrected a) ===
+  same synthetic construction as section 2, but reading a3 out of a PLAIN K=3 poly fit
+    synth K=6 -> plain K=2 : a3 = 11.700717321115046129  dev = 6.38924e-11
+    synth K=6 -> plain K=3 : a3 = 11.700717321051158711  dev = 4.94821e-15
+    synth K=7 -> plain K=2 : a3 = 11.70071732073903091  dev = 3.12123e-10
+    synth K=7 -> plain K=3 : a3 = 11.700717320675089112  dev = 3.76065e-10
+    synth K=8 -> plain K=2 : a3 = 11.700717320819061479  dev = 2.32092e-10
+    synth K=8 -> plain K=3 : a3 = 11.700717320755164729  dev = 2.95989e-10
+    synth K=9 -> plain K=2 : a3 = 11.700717320908250807  dev = 1.42903e-10
+    synth K=9 -> plain K=3 : a3 = 11.700717320844514142  dev = 2.0664e-10
+  T3 := 3 * max dev = 1.128194e-9   (reference a3 = 11.70071732105115376305)
+  ALT-H: with a_operative the same plain fit is off by ~|delta_a|/eps^2 propagated into a3;
+  c30 measured that as a 1.2264073e-6 shift on the 17-rung grid -- margin is >1e3 T3.
