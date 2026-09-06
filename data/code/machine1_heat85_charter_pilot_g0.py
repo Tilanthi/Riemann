@@ -158,7 +158,12 @@ def main():
     # ---------------- G4: defect injection ----------------
     lam_bad = solve(16, "0.05", drop_second_gram=True)
     ref = mpf(cj["64/16/4/0.05"]["lam_min"])
-    rel_bad = abs(lam_bad - ref) / fabs(ref)
+    # RE-FREEZE-2 (m1 launch-2 RED note): launch-2 crashed on this line --
+    # 'fabs' was never defined in this file (every other quotient uses abs());
+    # a runtime NameError in a branch no pre-freeze check executed.  One-token
+    # fix, semantics unchanged.  Old hash (launch-2) dead:
+    # a2b1a8e213c2ec1f75b90cc5d289d3ba259e722c3510bbb22b2b603dcdd64826
+    rel_bad = abs(lam_bad - ref) / abs(ref)
     detected = rel_bad > mpf("1e3")
     gate["defect_injection"] = {"lam_bad": mp.nstr(lam_bad, 25), "rel_vs_census": mp.nstr(rel_bad, 4),
                                 "detected": bool(detected)}
