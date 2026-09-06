@@ -1,0 +1,46 @@
+IDENT Check 1 -- Connes Q_W_lambda vs census K_S, first look (m1)
+sources: [S1] heat78c runner  [S2] heat70 genomes  [S3] heat72k idt  [S4] 2602.04022v1
+input seals verified (2/2: GEN, IDT); runner sha256 88ab08f82fc8d14453dc064ba292dd35dc57541a5acc45f0d0bf10cd2721cd53
+sealed runner imported; make_phi/window/bumpval used verbatim
+M8 basis rebuilt from frozen genomes: 8 functions, window |t|<=8 (= Connes supp [lam^-1, lam] with lam = e^8 = 2980.958)
+zeros with 0<Im<=200: 79 (Im(zeta_{79})=198.0153097, Im(zeta_{80})=201.2647519)
+[A] K_T200 == sum_{0<Im rho<=200} 2Re[U_i conj(U_j)] : max|diff| = 4.65275e-47 (scale 0.0812169, rel 5.72879e-46)  -> VERIFIED-HERE
+[B] k=2 phi=4/8: |quad_ex(g,0) - 2*gram(g)| max = 0.0  -> VERIFIED-HERE
+[B] k=3 phi=4/8: |quad_ex(g,0) - 2*gram(g)| max = 0.0  -> VERIFIED-HERE
+[B] k=7 phi=4/8: |quad_ex(g,0) - 2*gram(g)| max = 0.0  -> VERIFIED-HERE
+
+SIDE-BY-SIDE (basis: log variable t = log u, inner product du/u; U(i,s) = int phi_i e^{st} dt = Mellin at s)
+  Connes [S4]                            | ours [S1,S3]
+  ---------------------------------------+---------------------------------------
+  Q_W_lambda(f,f)=sum_v W_v(f*f-conv)    | K_S = K_T200 - gram(z_k)
+  prime+archimedean side of Weil EF      |   - gram(z_{k+1}) + quad_ex(g,delta)
+                                         | K_T200 = zero side, T=200 [A]
+  operator A_lambda, L^2([lam^-1,lam])   | MxM Galerkin matrix, G-metric
+  supp [lam^-1,lam], lambda free (->inf) | fixed window |t|<=8 (lam=e^8)
+  no zero appears in construction        | zeros are the construction [A]
+  pristine form                          | rank-4 surgery: -2 on-line zero
+                                         |   modes, +pair at 1/2+-delta+ig [B]
+  open (a): lambda_min simple+even,      | controls: surgically modified form
+    lambda->inf (continuum, lambda-axis) |   stays >= -1e-12 at each M (M-axis)
+  open (b): k_lambda ~ theta_x           | (no counterpart)
+  Galerkin: trig N=100-250 (fn.14,Groskin) | Galerkin: M in {8,64} genome bumps
+
+VERDICT (first look, m1; second look = m3 from sealed sources, per L167 s2):
+  NOT a linear reparametrization (different side of the identity; surgery
+    absent in Connes; different truncation axes).
+  NOT unrelated: both are restrictions of the SAME Weil explicit-formula
+    quadratic form -- his from the W side (operator, lambda-axis), ours from
+    the zero side (T=200 finite sum [A], M-Galerkin at fixed lam=e^8), with
+    the W-side equality on our basis carried by m3's receipted Kowalski
+    Prop 1.2.1 identity check, cited not redone.
+  CLASSIFICATION: same form, opposite sides of the identity; ours = doubly
+    truncated zero-side realization + falsification surgery; his = pristine
+    operator on the growing-support axis.  Special-case-with-modification.
+  CONSEQUENCE for Bridge 1 (weakened, per m3-L167 decay-mode correction:
+    ACCEPTED): our M-ladder measures Galerkin faithfulness of OUR probe at
+    fixed lam=e^8 -- a precondition for any numerical lambda-ladder (Groskin's
+    T-rearranged negative eigenvalues are the same stability family, trap
+    #129) -- it does NOT measure Connes' open (a) or (b).
+
+no proof claim; nothing scored; sealed inputs read-only, seals verified above
+IDENT Check 1 done 842.4s
