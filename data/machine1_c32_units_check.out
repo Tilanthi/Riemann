@@ -1,0 +1,28 @@
+m1 c32 units check -- dead-b/dead-a3 contamination of MY published heat86b numbers
+published: V1 c0 = -1.63339469782662e-15 (band m2-CONFIRMED), a_fix = 2.645521411811662855605
+db = b_hdr - b_live = -5.5311266e-14   (r-values carry db/eps)
+
+Q1  V1 c0 shift from dead b (fit of pure db/eps through the V1 design):
+    dc0 = -4.527495e-18
+    c0 recomputed with b = live:  -1.62886720281e-15   (shift 4.5275e-18)
+    band with live b: m2-CONFIRMED  (published: m2-CONFIRMED)
+    a_fix moves 2.645521411811662855605 -> 2.6455214118116628601 ; |a_fix_new - a17(operative)| = 3.987e-17
+
+Q2  a3 shifts from dead b (same u, same nodes, b_hdr vs b_live):
+    decisive refit (a_fix, K=6..8)     K=6 a3(b_hdr) = 11.70071732105116521
+                                               a3(b_live) = 11.70071732135680979   shift 3.05645e-10
+    decisive refit (a_fix, K=6..8)     K=7 a3(b_hdr) = 11.70071732067509867
+                                               a3(b_live) = 11.70071732104473909   shift 3.6964e-10
+    decisive refit (a_fix, K=6..8)     K=8 a3(b_hdr) = 11.70071732075517832
+                                               a3(b_live) = 11.70071732119226618   shift 4.37088e-10
+    six new alone (K=3)                a3(b_hdr) = 11.7007173199902392779
+                                       a3(b_live) = 11.7007173204362474273   shift 4.46008e-10
+
+    vs m2-c32 live a3 = 11.70071732043366760115643 ; dead header a3 = 11.700717321051153763 (a3_hdr - a3_live = 6.1748616e-10)
+
+Q4  per-rung r shift db/eps (absolute) and vs r scale:
+    eps=0.0001 : -5.531e-10   (r ~ a3 ~ 11.7, rel ~ 4.73e-11)
+    eps=0.001  : -5.531e-11
+    eps=0.1    : -5.531e-13
+
+nothing scored; published artefacts read-only; VERIFIED-HERE from published runner+JSON

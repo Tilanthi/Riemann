@@ -1,0 +1,36 @@
+m1 derivative route: dps=60 r_w=0.05 N_w=16 h_e=1.0e-9 npts=9 kx=3 ke=4 zcut=172.694
+evaluator: heat72 zeta2_C formula, deep-tail zcut; D* = 0.141733239663887191395415685084185024
+CTL evenness |d_w h|_0 = 2.38129e-17
+CTL fold residual h(0,0) [even limit] = -1.87618e-35 + 0.0 i
+  stencil e-node -4/4 done [252s]
+  stencil e-node -3/4 done [477s]
+  stencil e-node -2/4 done [706s]
+  stencil e-node -1/4 done [936s]
+  stencil e-node 0/4 done [1155s]
+  stencil e-node 1/4 done [1373s]
+  stencil e-node 2/4 done [1586s]
+  stencil e-node 3/4 done [1799s]
+  stencil e-node 4/4 done [2012s]
+CTL max |Im g_jl| (j,l != 0,0) = 7.24507e-64
+g10 = (0.00000000173699321583161493265293778652 + 9.08409037355567018284865062993e-72j)   g01 = (-0.0000000017778641423755601190330953196 - 1.21281416234286326350568561932e-74j)
+  series-solve residual G(x(e),e) at e=0.0001: 1.77786e-10
+  series-solve residual G(x(e),e) at e=0.001: 1.77786e-10
+  series-solve residual G(x(e),e) at e=0.01: 1.77784e-10
+
+a  = (-1.02352969843027138007831738329 + 5.34585170183848280293517466524e-63j)
+b  = (7.20739449823435841641640281968 + 6.49855760361788441556484021364e-61j)
+a3 = (-65.5120069648630028427651592666 - 9.20168318264982488625596724077e-58j)
+D4 witness = (791.66351016957015807 + 2.4389698970660490726e-56j)
+
+a  - A17(operative)      = (-3.6690511 + 5.3458517e-63j)
+a  - m2 der-route        = (-3.6690511 + 5.3458517e-63j)
+b  - header literal      = (14.669847 + 6.4985576e-61j)   (b wrong-from claim: +5.53113e-14)
+b  - m2 der-route        = (14.669847 + 6.4985576e-61j)
+a3 - header literal      = (-77.212724 - 9.2016832e-58j)   (a3 wrong-from claim: -6.17486e-10)
+a3 - m2 der-route        = (-77.212724 - 9.2016832e-58j)
+a3 - m2 ladder-free      = (-77.212724 - 9.2016832e-58j)
+closing control: no (eps,u) pairs found in heat86b JSON -- skipped
+
+wall 2012s; no proof claim; determination measurement, not scored
+
+[exited with code 0]

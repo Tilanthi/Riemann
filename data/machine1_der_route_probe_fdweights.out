@@ -1,0 +1,12 @@
+fd_weights root-cause probe (dps 50)
+order-0 buggy : ['0.0', '0.00357142857143', '-0.000892857142857', '-0.00486111111111', '0.00121527777778', '0.00138888888889', '-0.000347222222222', '-9.92063492063e-5', '2.48015873016e-5']
+order-0 fixed : ['0.0', '0.0', '0.0', '0.0', '1.0', '0.0', '0.0', '0.0', '0.0']
+fixed == e_center: True | buggy sum w_o: 5.0978941e-57 | buggy sum w_o*o: -0.0035714286
+poly self-test order 0: buggy -0.05833333333 (err -7.058) | fixed 7.0 (err 0.0) | truth 7.0
+poly self-test order 1: buggy 0.6083333333 (err -4.392) | fixed 5.0 (err 0.0) | truth 5.0
+analytic reproduction: healthy tab through BUGGY order-0 weights -> g10 = 1.73699285714e-9
+v1 observed g10 = 1.73699321583e-9  | ratio rec/v1 = 0.99999979  (rel dev -2.065e-7)
+note: rel dev -2.1e-7 is the rounding of the 6-s.f. slope literal; the
+      buggy weights annihilate the constant to 5.1e-57 and pass only
+      slope * HE * (sum w_o o) with sum w_o o = -1/280 -- the
+      reconstruction is exact to the literal's precision.
