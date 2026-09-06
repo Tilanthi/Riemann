@@ -1,0 +1,42 @@
+{
+ "unit": "m2 c31 out-of-sample test of the c30 a-correction",
+ "dps": 60,
+ "runner_sha256": "8d43fc1ecdb72c75861bb6a19993faae2bd6485419e395c24626985184b58a0c",
+ "prereg_sha256": "d8a70e39af3213c8833578100107a58ff98d8d5308ca2184e2d73cfe084a015b",
+ "gate": {
+  "G1": {
+   "eps": "0.001",
+   "rel_dev_vs_m1_L165_9a": "8.265769e-51",
+   "threshold": "1e-24",
+   "pass": true,
+   "secs": 31.5
+  },
+  "G2": {
+   "eps": "0.0001",
+   "rel_dev_vs_m2_c30_own_literal": "1.7203286e-40",
+   "threshold": "1e-40",
+   "pass": false,
+   "secs": 32.4
+  },
+  "G3": {
+   "rel_move_when_b_term_dropped": "25509.979",
+   "threshold": "> 1e3",
+   "pass": true
+  },
+  "G4": {
+   "max_synthetic_c0_bias": "3.7590184e-20",
+   "threshold": "<= 1e-18",
+   "pass": true,
+   "n_combinations": 8
+  },
+  "ALL_PASS_pre_rungs": false
+ },
+ "rungs": {},
+ "V1": {},
+ "V2": {},
+ "V3": {},
+ "diagnostics": {},
+ "notes": {
+  "outcome": "RED -- gate failed before any new rung; NOTHING graded"
+ }
+}

@@ -1,0 +1,7 @@
+=== LAUNCH GATE ===
+  G1 eps=1e-3 rel=8.265769e-51  PASS (32s)
+  G2 eps=1e-4 rel=1.7203286e-40  FAIL (32s)
+  G3 b-drop rel move = 25509.979  PASS
+  G4 truncation-power |c0_bias| max = 3.7590184e-20  PASS
+
+OUTCOME RED -- gate failed, nothing scored.
