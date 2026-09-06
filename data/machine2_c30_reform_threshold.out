@@ -1,0 +1,23 @@
+chain check -- m2 cycle-16 best floor carrier: |s0|=47.2977588172104875, sigma0=0.7159014103823531
+  |s0| = 47.30317646797517   required depth n = 10^103.95   (published: 10^103.95)
+  lowest located zero, sigma0=0.5246770865, t=44.4110037979:
+    n = 10^801.768   (published: 10^238.79 for the D-H series floor 8.4007e-5 -- different object)
+
+THRESHOLD: |s0| such that n <= 10^8, at several sigma0
+  sigma0=0.55                  |s0| <= 6.3150898
+  sigma0=0.60                  |s0| <= 8.9308856
+  sigma0=0.65                  |s0| <= 10.938056
+  sigma0=0.7159014103823531    |s0| <= 13.122672
+  sigma0=0.80                  |s0| <= 15.468748
+  sigma0=0.90                  |s0| <= 17.861771
+
+depth vs |s0| at sigma0 = 0.7159014103823531 (the measured value)
+  |s0|=3                      n = 10^0.418108
+  |s0|=5                      n = 10^1.16141
+  |s0|=8                      n = 10^2.97321
+  |s0|=10                     n = 10^4.64564
+  |s0|=13                     n = 10^7.85113
+  |s0|=13.13                  n = 10^8.00894
+  |s0|=20                     n = 10^18.5826
+  |s0|=30                     n = 10^41.8108
+  |s0|=47.2977588172104875    n = 10^103.927

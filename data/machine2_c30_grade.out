@@ -1,0 +1,12 @@
+=== m2 CYCLE 30 GRADER === prereg sha256 a0d6b65b85e490b5854e6b0e87c47a706bb4de1ab6316222d64c5d68d64818f0
+GATE: G1 PASS  G2 PASS  G3 PASS  G4 PASS
+Q1  FALSIFIED   1.62012669e-7                                   thr <= 2e-8                
+Q2  FALSIFIED   3                                               thr == 6                   
+Q3  FALSIFIED   1.22640733e-6                                   thr <= 1e-8                
+Q4  FALSIFIED   3.823088586e-8                                  thr < 3.4931094e-9         
+Q5  FALSIFIED   half=7.3021696e-7 base=3.0364091e-6 ratio=0.24  thr half >= base           
+
+TALLY 0 HELD / 5 FALSIFIED : held=[] falsified=['Q1', 'Q2', 'Q3', 'Q4', 'Q5']
+#122 DEFLATION: Q1 and Q5 share the ANALYTICITY reason (declared at freeze). Both failing is ONE determination, not two -> effective determinations = 4
+CONTROL C1 (declared EMPTY-BY-ALGEBRA firing world, NOT in the tally): min shift 1.1338118e-8 vs >= 1e-8 -> as designed
+wrote m2_c30_verdicts.json

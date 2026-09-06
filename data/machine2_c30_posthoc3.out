@@ -1,0 +1,17 @@
+=== (i) SIX NEW RUNGS ALONE (no published rung used): r = c0/eps^2 + a3 + a4 eps + a5 eps^2 ===
+  K=2  c0 = -1.64820725e-15    a3 = 11.70071732564302772986 max res 2.9521426e-10
+  K=3  c0 = -1.623411826e-15   a3 = 11.70071731999023927789 max res 1.9377289e-12
+  17-rung joint value for comparison: c0 = -1.633394698e-15
+
+=== (ii) ELEVEN PUBLISHED RUNGS ALONE: can they see it?  (the blindness receipt) ===
+  K=5  c0 = -7.936482168e-14   (true value -1.63e-15)  max res 2.147528e-8
+  K=6  c0 = -4.035251546e-15   (true value -1.63e-15)  max res 3.0550231e-10
+  K=7  c0 = -1.693751323e-15   (true value -1.63e-15)  max res 3.8197146e-12
+
+=== (iii) INSTRUMENT BOUND: delta_u <= |xi(u)|/|xi'(u)| at the smallest rung ===
+  eps=1e-4  u=0.01626735311637081543652166236
+  |xi(u)|  = 1.2871867e-42
+  |xi'(u)| = 0.45995276
+  => delta_u <= 2.7985194e-42
+  the delta_a signature needs delta_u = delta_a*sqrt(eps)/(2*sqrt(a)) = 5.021193e-18
+  ratio (needed / bound) = 1.794232e+24

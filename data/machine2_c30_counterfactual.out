@@ -1,0 +1,14 @@
+--- GRADED (a operative)   (a3 11-rung K6 reference = 11.700717319895873971)
+   Q1 max dev      1.6201267e-7      thr <=2e-8        FALSIFIED
+   Q2 LOO-opt K    3                 thr ==6           FALSIFIED
+   Q3 a3 shift     1.2264073e-6      thr <=1e-8        FALSIFIED
+   Q4 a3 spread    3.8230886e-8      thr <3.4931094e-9 FALSIFIED
+   Q5 loo half/base 0.24048702       thr >=1           FALSIFIED
+   a3(union) = 11.70071854630320403863
+--- COUNTERFACTUAL (a ladder)   (a3 11-rung K6 reference = 11.70071732211112988688)
+   Q1 max dev      1.256199e-9       thr <=2e-8        HELD
+   Q2 LOO-opt K    6                 thr ==6           HELD
+   Q3 a3 shift     1.0599761e-9      thr <=1e-8        HELD
+   Q4 a3 spread    3.7606978e-10     thr <3.4931094e-9 HELD
+   Q5 loo half/base 1.3769782        thr >=1           HELD
+   a3(union) = 11.70071732105115376305

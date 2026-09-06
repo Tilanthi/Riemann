@@ -1,0 +1,49 @@
+=== A. WHICH POWER?  17-rung max residual, one extra basis function, K=6 ===
+  none                 max res = 1.0576135e-7      coeffs 
+  eps^-1 (b)           max res = 1.4555253e-8      coeffs -1.8919529e-11
+  eps^-2 (a)           max res = 7.0058991e-10     coeffs -1.6333947e-15
+  eps^-3 (Delta*)      max res = 1.4015624e-8      coeffs -1.5433288e-19
+  eps^-3/2             max res = 7.2382904e-9      coeffs -1.7115101e-13
+  eps^-2 and eps^-3    max res = 5.8262355e-10     coeffs -1.6897538e-15 5.4569672e-21
+
+=== B. sign-checked delta_a from the eps^-2 fit ===
+  fitted coefficient of eps^-2 :  c0 = -1.633394698e-15
+  identity: r_used = r_true + (a_true - a_used)/eps^2  =>  a_true = a_used + c0
+  a_used (operative, #120-corrected) = 2.645521411811664489
+  a_true (ladder measurement)        = 2.645521411811662855605
+  a_true - retired 16 s.f. value     = -1.443947e-16
+  a_true - m1 eps->0 ladder a(0)     = -2.233947e-16
+  a_used - retired 16 s.f. value     = 1.489e-15   (the #120 move)
+
+=== C. DECISIVE TEST: recompute r with a_true and refit with a PLAIN polynomial ===
+  --- a = 2.645521411811664489 (a_used (operative))
+      K=3  max res 2.3338107e-6    LOO 3.0364091e-6    a3 11.70071854630320403863
+      K=4  max res 2.1933924e-6    LOO 1.1440706e-5    a3 11.70071790369700052463
+      K=5  max res 1.3114932e-7    LOO 3.3509293e-6    a3 11.70071729031494337243
+      K=6  max res 1.0576135e-7    LOO 2.0956314e-5    a3 11.70071725916216214355
+      K=7  max res 9.2364171e-8    LOO 0.00040249435   a3 11.700717241223173461
+      K=8  max res 7.9088614e-8    LOO 0.0082780965    a3 11.70071722093127628275
+      LOO-optimal K=3  a3=11.70071854630320403863  max res 2.3338107e-6
+      a3 spread K6..8 = 3.8230886e-8
+  --- a = 2.645521411811662855605 (a_true (ladder))
+      K=3  max res 2.3210895e-6    LOO 3.0116178e-6    a3 11.7007185799748947935
+      K=4  max res 2.1806743e-6    LOO 1.131057e-5     a3 11.70071794343184547116
+      K=5  max res 3.6950413e-8    LOO 1.905419e-6     a3 11.70071733817012448711
+      K=6  max res 7.0058991e-10   LOO 4.6422001e-7    a3 11.70071732105115375648
+      K=7  max res 4.818036e-10    LOO 1.5788547e-6    a3 11.70071732067508397119
+      K=8  max res 4.294156e-10    LOO 3.8143854e-5    a3 11.7007173207551598572
+      LOO-optimal K=6  a3=11.70071732105115375648  max res 7.0058991e-10
+      a3 spread K6..8 = 3.7606979e-10
+  --- a = 2.645521411811663 (retired 16 s.f.)
+      K=3  max res 2.3222141e-6    LOO 3.013803e-6     a3 11.70071857699826359816
+      K=4  max res 2.1817986e-6    LOO 1.1322072e-5    a3 11.70071793991922176981
+      K=5  max res 3.7822595e-8    LOO 2.0331972e-6    a3 11.70071733393965011023
+      K=6  max res 9.1662884e-9    LOO 2.2757525e-6    a3 11.70071731558006813667
+      K=7  max res 7.7259287e-9    LOO 3.4141862e-5    a3 11.70071731365140829431
+      K=8  max res 6.6001051e-9    LOO 0.00069702506   a3 11.70071731193056925225
+      LOO-optimal K=5  a3=11.70071733393965011023  max res 3.7822595e-8
+      a3 spread K6..8 = 3.6494989e-9
+
+=== D. one-parameter scan: delta_a minimising the 17-rung K=6 max residual ===
+  delta_a* = -1.639822722e-15   -> a = 2.645521411811662849177   max res 6.1794914e-10
+  (eps^-2 joint-fit value c0 = -1.633394698e-15)

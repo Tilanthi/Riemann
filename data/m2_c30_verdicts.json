@@ -1,0 +1,57 @@
+{
+ "verdicts": {
+  "Q1": {
+   "stat": "max dev_K6_extrap",
+   "value": "1.62012669e-7",
+   "threshold": "<= 2e-8",
+   "held": false,
+   "boundary": false,
+   "per_rung": {
+    "0.0001": "1.6201267e-7",
+    "0.00015": "7.1726739e-8",
+    "0.00022": "3.299535e-8",
+    "0.00033": "1.4217132e-8",
+    "0.0005": "5.6432544e-9",
+    "0.00075": "1.8752976e-9"
+   }
+  },
+  "Q2": {
+   "stat": "fit17/loo_optimal_K",
+   "value": 3,
+   "threshold": "== 6",
+   "held": false,
+   "boundary": false
+  },
+  "Q3": {
+   "stat": "fit17/a3_shift_abs",
+   "value": "1.22640733e-6",
+   "threshold": "<= 1e-8",
+   "held": false,
+   "boundary": false
+  },
+  "Q4": {
+   "stat": "fit17/a3_spread_K6to8",
+   "value": "3.823088586e-8",
+   "threshold": "< 3.4931094e-9",
+   "held": false,
+   "boundary": false
+  },
+  "Q5": {
+   "stat": "fit17/loo_rms_half vs loo_rms_base",
+   "value": "half=7.3021696e-7 base=3.0364091e-6 ratio=0.24048702",
+   "threshold": "half >= base",
+   "held": false,
+   "boundary": false
+  }
+ },
+ "tally": {
+  "held": [],
+  "falsified": [
+   "Q1",
+   "Q2",
+   "Q3",
+   "Q4",
+   "Q5"
+  ]
+ }
+}

@@ -1,0 +1,118 @@
+{
+  "unit": "machine2 CYCLE 30 OBJECT LANE -- the denser small-epsilon birth-locus ladder",
+  "machine": "machine2 (beast-atlas / BEAST-AGI)",
+  "status": "FROZEN BEFORE ANY NEW RUNG IS COMPUTED",
+  "charter_role": "m1-L166 sect4 mechanism 5: the >=1 falsifiable object-layer prediction that can lose, for cycle 30",
+
+  "model": "u(eps)^2 = (a - b*eps)*eps + a3*eps^3 + a4*eps^4 + ... ; r(eps) := (u^2 - a*eps + b*eps^2)/eps^3 = a3 + a4*eps + a5*eps^2 + ...",
+  "constants_operative": {
+    "a": "2.645521411811664489",
+    "b": "-7.4624528767937415788",
+    "source": "m1-L165 bookkeeping, L164 sect5 as corrected by the #120 erratum",
+    "retired_lineage_used_as_control_only": {"a_16sf": "2.645521411811663", "b_12sf": "-7.46245287679"}
+  },
+
+  "instrument": {
+    "name": "m2 cycle-21 xi_D 1-D real root find on the critical line (m2_zeta2_xi.Zeta2)",
+    "lineage": "structurally different from m1's 2-D Newton on (Re F, Im F); same object",
+    "dps": 60
+  },
+
+  "existing_data_used_to_form_predictions": {
+    "source": "m1-L165 sect9a full-precision (dps-50) u column, 11 rows, exact grid literals; PUBLISHED, no new computation",
+    "design_column_file": "m2_c30_design.py / c30_design.out",
+    "K6_intercept_11rung": "11.700717319895873971",
+    "K6_max_in_sample_residual_11rung": "7.32894e-10",
+    "K8_max_in_sample_residual_11rung": "8.67039e-11",
+    "loo_optimal_K_11rung": 6,
+    "a3_spread_K6to8_11rung": "3.4931094e-9",
+    "interior_loo_rms_K6_11rung": "9.67329e-7"
+  },
+
+  "new_rungs_eps": ["0.0001", "0.00015", "0.00022", "0.00033", "0.0005", "0.00075"],
+  "new_rung_justification": "all six lie BELOW the entire published grid (min eps 0.001); the ladder is the first probe whose lever arm on the intercept is shorter than the published grid's",
+
+  "input_precision_budget_frozen": {
+    "dr_da": "-1/eps^2", "dr_db": "+1/eps",
+    "half_ulp_a_operative": "5e-19", "half_ulp_b_operative": "5e-19",
+    "max_induced_dr_over_new_rungs_from_a": "5.0e-11 (at eps=1e-4)",
+    "max_induced_dr_over_new_rungs_from_b": "5.0e-15 (at eps=1e-4)",
+    "ladder_floor_named_in_advance": "eps >= 2.24e-5 keeps dr|a below 1e-9; the six chosen rungs sit at or above 1e-4, a 4.5x margin",
+    "why_this_ladder_was_impossible_before": "with the retired 16-s.f. a, dr|a is 1.489e-7 at eps=1e-4 -- larger than every graded threshold below"
+  },
+
+  "launch_gate": {
+    "G1": "instrument reproduces m1-L165 sect9a u at eps=0.001 to rel <= 1e-24",
+    "G2": "instrument reproduces m1-L165 sect9a u at eps=0.0082667603361 to rel <= 1e-24",
+    "G3": "the 11-rung design fit reproduces the published ladder: LOO-optimal K == 6 AND |a3(K=6) - 11.700717319895873971| < 1e-15 AND max in-sample residual at K=8 within 1% of 8.67039e-11",
+    "G4": "defect injection: recomputing r at eps=0.0001 with the b*eps^2 term DROPPED must disagree with the clean r by rel > 1e3 (an evaluator that cannot fail is blind)",
+    "on_failure": "outcome RED; NO prediction is graded; the letter says so in its headline"
+  },
+
+  "coverage_statement_v2_1_at_launch": {
+    "covered_branches": "the r-formula path and the root-find path AT eps >= 0.001 (G1, G2 sit there)",
+    "UNCOVERED_at_launch": "every new rung eps < 0.001 has NO external anchor of any lineage in existence; the only defences there are (i) the frozen input-precision budget (algebra), (ii) G4 defect injection, (iii) the printed internal residual |xi_D(u)| per rung, (iv) the recorded bracketing branch per rung",
+    "declared_before_the_run": true
+  },
+
+  "hypotheses": [
+    {"id": "Q1", "name": "out-of-sample extrapolation of the published fit",
+     "claim": "for each of the six new rungs, |r_obs - r_pred| <= 2e-8, where r_pred is the 11-rung K=6 fit evaluated at that eps",
+     "graded_on": ["rungs/0.0001/dev_K6_extrap", "rungs/0.00015/dev_K6_extrap", "rungs/0.00022/dev_K6_extrap", "rungs/0.00033/dev_K6_extrap", "rungs/0.0005/dev_K6_extrap", "rungs/0.00075/dev_K6_extrap"],
+     "threshold": "max over the six <= 2e-8",
+     "reason": "analyticity of the BST fold expansion in eps, plus an input budget of <=5e-11 over the whole new range",
+     "loss_interpretation": "either the two instrument lineages part company below the published grid, or r carries structure the analytic expansion does not, or my root find loses accuracy at small eps. All three are reportable; the run must say which by the per-rung residual column."},
+
+    {"id": "Q2", "name": "LOO order is unchanged by the denser ladder",
+     "claim": "the interior leave-one-out optimal polynomial degree over the union of 17 rungs is K = 6",
+     "graded_on": ["fit17/loo_optimal_K"],
+     "threshold": "== 6",
+     "reason": "order is set by the residual floor against degrees of freedom; the new rungs add intercept leverage, not curvature",
+     "loss_interpretation": "if the optimum moves UP, the published '~3e-10 residual at LOO-optimal K=6' was an artefact of where the grid sat; if it moves DOWN, the high-order coefficients were fitting the grid's own sparsity."},
+
+    {"id": "Q3", "name": "a3 is stable under a 10x extension of the ladder toward zero",
+     "claim": "|a3(17-rung, at the 17-rung LOO-optimal K) - 11.700717319895873971| <= 1e-8",
+     "graded_on": ["fit17/a3_shift_abs"],
+     "threshold": "<= 1e-8",
+     "reason": "a3^BL = 11.7007173 (9 s.f.) was established as PRECISION-limited, not model-limited (ERRATUM 11 / m1-L164); a precision-limited figure must not move when the lever arm changes",
+     "loss_interpretation": "a move above 1e-8 kills the 9 s.f. form itself, not only its error bar -- it would mean the published intercept was extrapolation-limited and nobody had tested it from below."},
+
+    {"id": "Q4", "name": "the ladder buys resolution on the intercept",
+     "claim": "the spread of a3 over K = 6,7,8 on the 17-rung fit is strictly smaller than the 11-rung spread 3.4931094e-9",
+     "graded_on": ["fit17/a3_spread_K6to8"],
+     "threshold": "< 3.4931094e-9",
+     "reason": "the K-model spread is an extrapolation-lever effect; the six new rungs sit 1.3x-10x closer to eps=0 than the closest published rung",
+     "loss_interpretation": "a spread that does NOT shrink closes the 10th-significant-figure question negatively: no denser small-eps ladder should be resourced to buy figure 10, and the residual bar stays a K-cluster statement. That is a real result and it is the outcome I would bet against."},
+
+    {"id": "Q5", "name": "no half-power term",
+     "claim": "adding an eps^(1/2) basis function to the 17-rung LOO-optimal fit does NOT reduce the interior LOO rms",
+     "graded_on": ["fit17/loo_rms_base", "fit17/loo_rms_half"],
+     "threshold": "loo_rms_half >= loo_rms_base",
+     "reason": "the fold expansion is analytic in eps by construction (BST); a half power would have to come from outside the model",
+     "loss_interpretation": "a reduction is the single most interesting outcome available in this unit and would be reported as such, with the fitted coefficient and its own null; it would NOT be claimed as structure without a permutation/refit null (our own cycle-10 rule)."}
+  ],
+
+  "declared_controls_not_counted_in_the_tally": [
+    {"id": "C1", "name": "input-constant sensitivity positive control (#118)",
+     "claim": "recomputing r at the new rungs with the RETIRED 12-s.f. b shifts r by |db|/eps >= 1e-8 at every rung with eps <= 3.3e-4",
+     "graded_on": ["control/C1_min_shift_over_small_rungs"],
+     "firing_world_at_birth": "EMPTY BY ALGEBRA -- dr/db = 1/eps exactly, so this can only fire if the implementation does not compute the formula it claims to. It is therefore an IMPLEMENTATION control, not an object prediction, and it is declared as one BEFORE the run per our own standing law (a falsifier with an empty firing world is a diagnostic, not a falsifier; say which kind -- this one is by ALGEBRA)."}
+  ],
+
+  "reasons_clustered_per_122": {
+    "Q1": "analyticity + input budget",
+    "Q2": "residual floor vs dof",
+    "Q3": "the 9 s.f. figure is precision-limited",
+    "Q4": "extrapolation lever arm",
+    "Q5": "analyticity (SHARED with Q1)",
+    "declared_dependence": "Q1 and Q5 share the analyticity reason. If BOTH fail they are ONE determination, not two, and the scored tally must say so in the same paragraph as the tally. Q2, Q3, Q4 have distinct reasons. Q3 and Q4 are NOT anti-correlated but they are ordered: Q4 failing does not imply Q3 failing."
+  },
+
+  "conventions_declared_before_the_run": {
+    "A": "all thresholds are strict as written; ties go AGAINST the hypothesis",
+    "B": "a margin within rel 1e-3 of any threshold is flagged BOUNDARY and reported beside the verdict, not verdict-changing",
+    "C": "the grader grades ONLY the named JSON keys above (m1 ask 5 / #123). Any headline the runner prints that is not a named key is explicitly NOT the graded statistic",
+    "D": "gate failure => all five UNGRADED, not failed",
+    "E": "no D4 leg-B value is computed anywhere in this unit; the sealed S3/D4 runner is not read, executed, edited or re-hashed by it"
+  }
+}
