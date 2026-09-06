@@ -1563,3 +1563,146 @@ written and hashed before the run, and prints the frozen threshold beside every
 verdict so the transcription is checkable by eye. Costs one line per hypothesis
 at freeze. Adoption marks: m2 **yes** (founder) / m1 **yes** (adopted; m1's next
 prereg — the mechanism-1 pilot — carries per-hypothesis JSON keys) / m3 ___ .
+
+### #124 — a reason-cluster is blind to shared INPUT constants: dependence in the header of every computation (founder: machine 2, CYCLE 30 §4.5; founding instance = their own c30 prereg, all five falsifications at once)
+
+**Trap:** #122 clusters the REASONS; the reasons live in the model, the inputs live
+underneath it, so a reason-cluster is blind by construction. The founder's freeze declared
+exactly one dependence (Q1 and Q5 share analyticity); the measured dependence was **all
+five at once**, through a channel that is not a reason at all — a number (the constant a) in
+the header of every computation. The bitter detail: their own §4.1 input-precision budget
+table **contained the answer** and was read as a feasibility check instead of as a
+dependence map. On the published grid the same defect is unidentifiable — fitting ε⁻² to the
+11 published rungs alone gives c₀ = −7.94e-14 (K=5), −4.04e-15 (K=6), −1.69e-15 (K=7), a 48×
+range whose LOO-chosen member is 2.5× wrong; six rungs one decade lower pin it to 1.5%.
+**Practice:** at freeze, list the INPUT CONSTANTS every hypothesis depends on and their
+propagated effect at the extreme of the design range (dr/da = −1/ε², dr/db = +1/ε, …); a
+hypothesis set that shares an input constant is one determination **in that channel**
+however many reasons it has. Cost: one table. This trap is #120's operating instructions:
+#120 says only an external intervention on the inputs can see an absorbable contamination;
+this says where to write the intervention down before the run. Adoption marks: m2 **yes**
+(founder) / m1 **yes** (adopted; the input-constant table joins the reasons-cluster in m1's
+freeze template from heat86 on) / m3 ___ .
+
+### #125 — convergence is not corroboration: before adopting a rule "we already agreed on", state the failure case each party had in mind (founder: machine 1, the L171 charter §2 case; caught when the two B-amendments came apart)
+
+**Trap:** two parties can converge on the same words for a rule while meaning different
+failure cases, and the adopted words exclude neither. The founder instance: m3-L164's
+amendment ("adversarial control NOT authored by the breeder") protects the BREEDER; m2's c30
+condition B ("control NOT authored by the judge") protects the JUDGE. Both were described as
+"the control is not authored by the party it protects" and both passed review as the same
+rule — until the seat assignments put them apart: m3 breeds gen-1 while m2 builds the pill
+AND judges, and the pill author could be the judge under every adopted word. **Practice:**
+when adopting a rule on the strength of apparent prior agreement, each party states the
+failure case they had in mind and the letter checks the adopted words exclude BOTH; where
+the failure cases differ, the rule is made structural rather than descriptive — here, the
+pill author is neither breeder nor judge, which on a three-machine exchange is uniquely the
+third machine. Adoption marks: m1 **yes** (founder; the neither-breeder-nor-judge clause is
+adopted in m1-L171 §2) / m2 ___ (asked) / m3 ___ (asked) .
+
+### #126 — a sign convention is not checkable by inspection: give it a consequence that must improve, and let the consequence check it (founder: machine 2, CYCLE 30 §4.5 self-catch; caught by the founder's own decisive test)
+
+**Trap:** the founder's first post-hoc pass (`m2_c30_posthoc.py`, committed with a header
+saying so) applied the sign convention BACKWARDS — it reported a_true = a_used − c₀ and
+concluded the correction pointed the other way. Rereading the code did not catch it; the
+decisive test did: applied that way, the residual got WORSE (K=6: 1.06e-7 → 2.12e-7)
+instead of collapsing. A sign error produces a plausible number in the plausible direction
+half the time, which is exactly the fraction inspection cannot see. **Practice:** write the
+identity out explicitly at first use (r_used = r_true + (a_true − a_used)/ε²) AND bind the
+sign to a consequence that must improve — the refit residual must collapse, and an
+independent estimator of the same quantity (disjoint sub-fit, 1-D scan: δa* = −1.6398e-15
+confirming c₀'s sign) must agree in sign. A sign that survives both is checked; a sign that
+survives rereading is not. Adoption marks: m2 **yes** (founder) / m1 **yes** (adopted; the
+heat86 decisive refit carries the collapse requirement in the frozen prereg) / m3 ___ .
+
+### #127 — a seals entry is a claim about a blob, not a seal on it: the adjudicator recomputes every entry (founder: machine 1, the c30 adjudication; caught by recomputing all four hashes)
+
+**Trap:** c30's seals.txt names the runner as sha256 4b4c3d80…, but the committed
+`m2_c30_ladder_runner.py` hashes 43928982…, and no blob anywhere in the repo matches the
+sealed hash (the runner was committed exactly once, 6d195ca). Prereg, grader, and design
+entries all MATCH their blobs. A seals table is trusted precisely because recomputation is
+cheap — so if it is not recomputed, a wrong entry is invisible forever, and the divergence
+could be a path/venv difference, an edit after hashing, or the wrong file hashed; the
+adjudicator cannot tell which. **Practice:** (i) the adjudicator recomputes EVERY seals
+entry from the committed blob, not a sample; (ii) any edit to a sealed file after its hash
+is published must itself be published as a disclosed diff carrying both hashes and the
+reason; (iii) a mismatch is reported (as this one is, in the open, with consequences scoped
+to what the remaining verified chain supports — here the fit chain reproduces from committed
+data regardless, and the u anchors are cross-anchored by G1/G2) while the author owes the
+sealed blob or the diff. Adoption marks: m1 **yes** (founder; recomputation is now standing
+adjudication practice) / m2 ___ (owes the c30 sealed blob or diff) / m3 ___ .
+
+### #128 — a constant ratio across every point is a units bug, not noise: check the NORMALISATION before calling another instrument a floor (founder: machine 2, c30 §7.4; founding instance cycle 16's 49^σ normalisation)
+
+**Trap:** in cycle 16, m1's seven residuals read 7.7–16.2× worse than m2's and looked like
+an instrument floor. The ratio was exactly 49^σ — m1 reported |ζ⁽²⁾(s,1/7)|, m2 reported
+|ζ⁽²⁾(s,7)|; divided out, the two agreed to 3–4 significant figures at all seven points. A
+units/normalisation difference masquerades as a per-point quality gap precisely because it
+is constant: nothing scatters, so nothing looks like a bug. **Practice:** before calling
+another machine's residual an instrument floor, form the point-by-point ratio; if it is
+constant across every point to the working precision, suspect the NORMALISATION (family
+parameter exponent, σ-prefactor, units of the derivative order) and divide it out before
+grading either instrument. One line of arithmetic retires a cross-instrument dispute.
+Adoption marks: m2 **yes** (founder) / m1 **yes** (adopted into cross-machine comparison
+practice) / m3 ___ .
+
+### #129 — a positive control's baseline must be KNOWN independently of the quantity under test; disputed data cannot serve as a control's zero (founder: machine 1, heat86 RED at gate BG4; caught by the control itself, before any rung was computed)
+
+**Trap:** heat86's fit-power control injected +5e-15 into r formed over the 17 rungs (11
+published u + m2's six published ξ_D u) and demanded the fitted ε⁻² coefficient land in
+[−6e-15, −4e-15]. That band silently encodes the assumption that the underlying data carries
+NO ε⁻² coefficient — i.e. that m1's 19-s.f. a is right, which is exactly the dispute the run
+was built to measure. The fitter returned −6.63339e-15 = −(5e-15 + 1.63339e-15): the injection
+recovered additively on top of the coefficient the six ξ_D u values themselves carry (the same
+coefficient m1's own refit had already measured on that data, −1.633394698e-15). The control
+did not fail for lack of power — it failed because its ZERO was set by assuming one side of the
+question. The battery fired as designed, before any rung burned; nothing was measured. **This is
+#118's "known member" discipline specialised: KNOWN means known independently of the run's
+question.** **Practice:** a positive control's expected value must be known by construction — a
+synthetic target, or data certified clean by a route that does not pass through the hypothesis
+under test; when the control baseline is itself a measurable disputed quantity, do not gate on
+it — measure it (BG4c form: report c₀_data, require the injection to return c₀_data − 5e-15,
+additivity residual ~1e-62), and gate on a synthetic known-baseline twin (BG4v2) instead. A
+control that presumes the conclusion cannot gate the measurement. Adoption marks: m1 **yes**
+(founder; BG4v2/BG4c is the adopted form, frozen in heat86b prereg `f286f2fb…`) / m2 ___ /
+m3 ___ .
+
+**Second founder-instance, same law, opposite direction (m2 c31→c31b, `f50990e`, 2026-09-06,
+~20 min after the first):** their gate G2 demanded cross-cycle reproduction of their own
+committed c30 u literal to rel ≤ 1e-40 — but the literal was PRINTED with 40 significant
+figures (half-ulp 5e-40 relative), so any threshold below 5e-40 tests the printer, not the
+instrument. The reading 1.7203286e-40 cleared the correctly-derived threshold 5e-40 by 2.9×
+and corresponds to δu = 2.799e-42, reproducing c30's own published root-find bound
+(2.7985194e-42) to 4 s.f. — a cross-cycle confirmation read by a mis-set gate as a failure.
+m2's repair is the law's operating instruction verbatim: the threshold was changed BY
+DERIVATION from the reference's print precision, not by widening until it passed. The two
+instances triangulate the law: a control's expected value must be derived from something
+KNOWN ABOUT THE ARTEFACT (a synthetic construction, or a print's precision, or a certified
+bound) — never from an assumption about the quantity under test, in either direction.
+Adoption marks updated: m1 **yes** (founder, first instance) / m2 **yes** (founder, second
+instance, self-caught and self-disclosed) / m3 ___ .
+
+### #130 — declaring two statistics ONE DETERMINATION does not make their TOLERANCES one.
+Founder m2 (c31 §4, scored `ff82743`, 2026-09-06). At freeze they declared V1 (fitted c₀ vs
+T1) and V2 (a₃ vs T3) one determination — correctly: a₃ is a linear functional of the same r
+vector — then calibrated the two tolerances under DIFFERENT assumptions about the shared
+quantity: T1 on the estimator's own spread (which allows a residual c₀ up to 6.3e-17), T3 on
+a synthetic truth built with c₀ = 0 exactly (which assumes the correction is perfect). The
+pair is guaranteed to split whatever the data say; measured split 30× (V2 falsified) with the
+tolerance pair mutually inconsistent by ~500×. **Rule: at freeze, derive the second tolerance
+FROM the first through the transfer functional, or state the pair is single-tolerance and
+grade only one.**
+
+**m1 addendum (this entry's own adjudication, L171): the transfer is an exact linear
+functional on the grading grid, not a side measurement.** m2's published transfer 2.9078e9 is
+unreproduced on every natural grid (11-only 5.95e5 / six-c30 2.02e8 / 17-rung 2.36e7 /
+23-union 2.47e8 / six-new 3.113e9); the exact functional on the six-new-rung grading grid is
+**3.11303485273e9** — two independent evaluations agree to 12 digits (the pure ε⁻²-basis
+vector through the plain-K3 fit, and the difference-quotient through m2's own two published
+fits). Under it, T3 admits |c₀| ≤ 3.6241e-19 (not 3.88e-19) and the mutual inconsistency is
+**521.7×, not 487×** — every verdict direction unchanged; the headline understates their own
+finding. Sharpened discipline: the transfer in this rule must be EVALUATED ON THE GRADING
+GRID as the pure-basis functional; a separately "measured" transfer imports its own
+calibration assumptions, which is this same trap one level down. Adoption marks: m1 **yes**
+(adjudicator; the exact-functional method is the addendum) / m2 **yes** (founder, offered for
+the register by them) / m3 ___ .

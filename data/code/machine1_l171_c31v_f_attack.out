@@ -1,0 +1,46 @@
+A1 V1 c0 (six rungs alone, my fit) = 1.18153215408e-17  m2: 1.18153194401e-17
+   max |res| = 7.4404443e-12  m2: 7.4405818e-12
+A2 V2 a3 (plain K=3, my fit)  = 11.700717355407978975 
+   m2: 11.7007173554079789751
+   dev vs reference = 3.4356825e-8  m2: 3.4356825e-8
+A3 transfer dev_V2/c0_V1 = 2.90782e+9  m2: 2.9078e9
+   T3/transfer = 3.87986e-19  T1 = 1.89085e-16  ratio T1/(T3/transfer) = 487.3  m2: 487x
+A4 delta_a + c0_new = 1.64521001744e-15  m2 c0_new_with_a_operative: 1.64521001744e-15
+A5 eps^2*dev range: -2.353e-17 ... 1.066e-17  m2: -2.353e-17 ... +1.066e-17
+   138x check: delta_a/c0_new = 138.24
+
+B1 [k>=6 family (115 cells)] n = 115  distinct F: 115
+   survivors: 9  worst survivor F = -1.13375  at 64/16/4/0.05 site 16/4
+   firers above worst survivor: 7  m2: 7
+      64/20/4/0.45 site 20/4 F = -1.12894
+      64/22/4/0.45 site 22/4 F = -1.11836
+      64/19/4/0.45 site 19/4 F = -1.11268
+      64/21/4/0.45 site 21/4 F = -1.10977
+      64/23/4/0.45 site 23/4 F = -1.09627
+      64/24/4/0.3 site 24/4 F = -1.05427
+      64/24/4/0.45 site 24/4 F = -0.984251
+
+B1 [FULL M=64 (205 cells)] n = 205  distinct F: 205
+   survivors: 9  worst survivor F = -1.13375  at 64/16/4/0.05 site 16/4
+   firers above worst survivor: 7  m2: 7
+      64/20/4/0.45 site 20/4 F = -1.12894
+      64/22/4/0.45 site 22/4 F = -1.11836
+      64/19/4/0.45 site 19/4 F = -1.11268
+      64/21/4/0.45 site 21/4 F = -1.10977
+      64/23/4/0.45 site 23/4 F = -1.09627
+      64/24/4/0.3 site 24/4 F = -1.05427
+      64/24/4/0.45 site 24/4 F = -0.984251
+
+B3 S medians: all-41 = 8.24323  k>=9 phi8=4 family = 25.049  k=20..24 mean = 27.1946
+B4 lam->F exchange rate 1/|S|: min 0.03232 at 24/4  max 0.1694 at 1/2  spread = 5.24 x
+
+B2 per-site line-fit max|res| (asinh vs log10 delta), worst 8:
+    site 24/4 slope -30.9412 max|res| 6.466
+    site 16/4 slope -27.7114 max|res| 5.862
+    site 18/4 slope -25.049 max|res| 5.794
+    site 19/4 slope -27.8577 max|res| 3.263
+    site 20/4 slope -26.4059 max|res| 2.879
+    site 22/4 slope -26.7702 max|res| 1.888
+    site 21/4 slope -26.7222 max|res| 1.726
+    site 23/4 slope -25.1335 max|res| 1.701
+    (S table slope for comparison is in the same units)

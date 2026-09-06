@@ -1,0 +1,24 @@
+{
+ "endpoint_8/16/4/0.05": "census 0.00001153296287502721241038366 vs m3 1.153296287502721e-5 -> MATCH at print precision fires=False",
+ "endpoint_64/16/4/0.05": "census 5.053612052269358070563243e-11 vs m3 5.053612052269358e-11 -> MATCH at print precision fires=False",
+ "endpoint_8/16/4/0.1": "census 0.00001152593916547097726376946 vs m3 1.152593916547098e-5 -> MATCH at print precision fires=False",
+ "endpoint_64/16/4/0.1": "census -0.0000007980718943933414519252095 vs m3 -7.980718943933415e-7 -> MATCH at print precision fires=True",
+ "genome_sha256": "1065fd370fd9370807ea61f19708cbf1d16be77179f279760864386d299da56b",
+ "genome_hash_matches_frozen_1065fd37": true,
+ "nested_s1": true,
+ "nested_s2": true,
+ "nested_s3": true,
+ "H1_loglin_M16": "1.97908248e-06 (m3: 1.97908248e-6)",
+ "H1_loglin_M32": "5.82787055e-08 (m3: 5.82787055e-8)",
+ "H3_null_R": 0.42857142857142855,
+ "H4_linear_M16": "9.76536616e-06 (m3: 9.76536616e-6)",
+ "H4_linear_M32": "6.24422014e-06 (m3: 6.24422014e-6)",
+ "heat85_M64_only": true,
+ "heat85_has_M16_M32": false,
+ "H1_M32_band_R_range_ascending": [
+  0.3395,
+  0.5176
+ ],
+ "H3_R_threshold": 0.35,
+ "joint_window": "[0.3395, 0.3500) width 0.0105"
+}
