@@ -1,0 +1,23 @@
+### m1-L171 §5 bullet 1 -- the load-bearing arithmetic, checked line by line
+  move #120 vs retired16   = 1.489e-15   (m1 says +1.489e-15)
+  ... / guard 5.61e-16     = 2.65419   (m1 says 2.9x)
+  move #120 vs m1 band-A   = 1.633395e-15
+  ... / guard 5.61e-16     = 2.91158
+  move #120 vs LADDER-FREE = 1.620983874e-15
+  ... / guard 5.61e-16     = 2.88945
+
+  half-ulp of the retired 16-s.f. constant = 5e-16
+         m1 band-A - retired16 =   -1.44395e-16   inside half-ulp? True
+    operative 17sf - retired16 =       -1.0e-16   inside half-ulp? True
+       LADDER-FREE - retired16 = -1.3198387e-16   inside half-ulp? True
+
+  16-s.f. roundings:
+           #120 -> 16 s.f. = 2.645521411811664   17 s.f. = 2.6455214118116645   18 s.f. = 2.64552141181166449
+      m1 band-A -> 16 s.f. = 2.645521411811663   17 s.f. = 2.6455214118116629   18 s.f. = 2.64552141181166286
+    operative17 -> 16 s.f. = 2.645521411811663   17 s.f. = 2.6455214118116629   18 s.f. = 2.6455214118116629
+    LADDER-FREE -> 16 s.f. = 2.645521411811663   17 s.f. = 2.6455214118116629   18 s.f. = 2.64552141181166287
+
+### the c31 residual is EXACTLY the difference of two estimator biases
+  bias(17-rung K6) - bias(c31b six K3) = 1.18153192667e-17
+  published c31 c0_new                 =  1.18153194401e-17
+  agreement                            = 1.734e-25

@@ -1,0 +1,16 @@
+A1 direction of failure:  BELOW bracket 10   ABOVE bracket 0   INSIDE 30
+  one-sided sign test on the 10 failures: p = 2^-10 = 0.000977
+
+site-median 10^F vs the true bracket (does F preserve the one resolvable ORDER?):
+   24/4: true delta_c in (0.1,0.2)   median 10^F = 0.088254
+   23/4: true delta_c in (0.05,0.1)   median 10^F = 0.0714952
+   21/4: true delta_c in (0.05,0.1)   median 10^F = 0.0688544
+   22/4: true delta_c in (0.05,0.1)   median 10^F = 0.067439
+   20/4: true delta_c in (0.05,0.1)   median 10^F = 0.0649306
+   19/4: true delta_c in (0.05,0.1)   median 10^F = 0.0613071
+   18/4: true delta_c in (0.05,0.1)   median 10^F = 0.0550307
+   16/4: true delta_c in (0.05,0.1)   median 10^F = 0.0502576
+
+  24/4 median 10^F = 0.088254;  max of the other seven = 0.0714952  ratio 1.23441
+  true lower bound on that ratio: 24/4 delta_c > 0.1, others < 0.1 => ratio > 1 (uninformative), but
+  24/4's OWN survivor at delta=0.1 already proves delta_c>0.1 while F's median says 0.08825 < 0.1: SELF-CONTRADICTORY

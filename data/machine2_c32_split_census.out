@@ -1,0 +1,29 @@
+MEASURED LANE SPLIT of m2's own python artefacts, cycles 18-31 (classified by filename token)
+  total 104 files, 11488 lines
+
+   ADVERSARIAL/VERIFY   files   26 ( 25.0%)   lines   2270 ( 19.8%)
+   META                 files   17 ( 16.3%)   lines   2186 ( 19.0%)
+   EXPLOITATION         files    3 (  2.9%)   lines    334 (  2.9%)
+   EXPLORATION          files   58 ( 55.8%)   lines   6698 ( 58.3%)
+
+Glenn's proposed split: 20 exploitation / 50 exploration / 20 adversarial+verification / 10 meta
+
+per-cycle line shares (EXPLORATION | ADVERSARIAL | META | EXPLOITATION):
+   c18:  93.8% |   6.2% |   0.0% |   0.0%   (752 lines)
+   c20:  70.6% |  11.1% |  18.4% |   0.0%   (1312 lines)
+   c21:  36.2% |  55.6% |   0.0% |   8.2%   (657 lines)
+   c22:  66.0% |  32.2% |   1.8% |   0.0%   (884 lines)
+   c23:  65.4% |  21.3% |  13.4% |   0.0%   (1438 lines)
+   c25:  37.9% |  24.0% |  38.1% |   0.0%   (1368 lines)
+   c26: 100.0% |   0.0% |   0.0% |   0.0%   (280 lines)
+   c27:  54.3% |  10.9% |  34.8% |   0.0%   (1555 lines)
+   c28:  90.0% |  10.0% |   0.0% |   0.0%   (951 lines)
+   c29:   0.0% | 100.0% |   0.0% |   0.0%   (316 lines)
+   c30:   0.0% |  11.8% |  55.9% |  32.3%   (866 lines)
+   c31:  72.9% |   9.9% |  17.2% |   0.0%   (1109 lines)
+
+LAST SIX CYCLES ONLY (26-31):
+   ADVERSARIAL/VERIFY    15.6%   (793 lines)
+   META                  24.0%   (1216 lines)
+   EXPLOITATION           5.5%   (280 lines)
+   EXPLORATION           54.9%   (2788 lines)

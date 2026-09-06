@@ -1,0 +1,24 @@
+n = 50
+log10(diff) ~ -46.7143 + 1.00415 * n        max|resid| = 8.875  rms 3.011
+log10(diff) ~ -56.9211 + 0.40869 * gamma_n  max|resid| = 4.239  rms 1.648
+  gamma_1=14.134725  gamma_50=143.111846
+
+NON-MONOTONE STEPS (diff decreases as index rises):
+   n=47: 0.000720794 -> 0.000314865  (factor 0.437)
+   n=49: 0.0209081 -> 0.00313565  (factor 0.15)
+   n=50: 0.00313565 -> 0.00212727  (factor 0.678)
+
+LARGEST OUTLIERS vs the gamma-linear law (residual in decades):
+   n=50 gamma=143.1118 diff=0.00212727  resid=-4.239 dec
+   n= 1 gamma= 14.1347 diff=2.60179e-55  resid=-3.440 dec
+   n=49 gamma=141.1237 diff=0.00313565  resid=-3.258 dec
+   n=47 gamma=138.1160 diff=0.000314865  resid=-3.027 dec
+   n= 2 gamma= 21.0220 diff=4.80071e-52  resid=-2.989 dec
+   n= 3 gamma= 25.0109 diff=4.43756e-50  resid=-2.653 dec
+
+=== the paper's own asymptotic for 1-chi^2, evaluated at the letter's lambda ===
+  C = 2^14/3 * sqrt(2 pi) = 13689.53255
+  L = 2 log lambda = log 13 = 2.564949357;  4 pi e^L = 163.362818
+  1 - chi^2 ~ 1.59061e-62   (log10 = -61.798437)
+  best tabulated zero agreement       = 2.60179e-55   (log10 = -54.585)
+  ratio (zero accuracy / 1-chi^2 law) = 1.63572e+7

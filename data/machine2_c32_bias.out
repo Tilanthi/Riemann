@@ -1,0 +1,38 @@
+=== REPLICATION: c0 with a_used = the #120 value (should reproduce the published c0) ===
+  17-rung  m1's 11 + m2's 6   (m2 c30 published fit) K=6  c0 = -1.63339469783e-15   maxres = 7.006e-10
+  17-rung  m1's 11 + m1's 6   (m1 heat86b V1 fit)    K=6  c0 = -1.63339469783e-15   maxres = 7.006e-10
+  6-alone  m2's c30 six                              K=3  c0 = -1.62341182589e-15   maxres = 1.938e-12
+  6-alone  m1's heat86b six                          K=3  c0 = -1.62341182589e-15   maxres = 1.938e-12
+  6-alone  m2's c31b six (OUT OF SAMPLE, finer)      K=3  c0 = -1.62157937856e-15   maxres = 7.441e-12
+  12 fine  m2 c30 + m2 c31b                          K=6  c0 =  -1.6215736339e-15   maxres = 8.067e-12
+  12 fine  m1 heat86b + m2 c31b                      K=6  c0 =  -1.6215736339e-15   maxres = 8.067e-12
+
+=== BIAS: c0 with a_used = the LADDER-FREE a  (an unbiased estimator must return 0) ===
+  17-rung  m1's 11 + m2's 6   (m2 c30 published fit) K=6  c0 = -1.24108239478e-17   maxres = 7.006e-10
+  17-rung  m1's 11 + m1's 6   (m1 heat86b V1 fit)    K=6  c0 = -1.24108239478e-17   maxres = 7.006e-10
+  6-alone  m2's c30 six                              K=3  c0 = -2.42795200955e-18   maxres = 1.938e-12
+  6-alone  m1's heat86b six                          K=3  c0 = -2.42795200955e-18   maxres = 1.938e-12
+  6-alone  m2's c31b six (OUT OF SAMPLE, finer)      K=3  c0 = -5.95504681082e-19   maxres = 7.441e-12
+  12 fine  m2 c30 + m2 c31b                          K=6  c0 = -5.89760020923e-19   maxres = 8.067e-12
+  12 fine  m1 heat86b + m2 c31b                      K=6  c0 = -5.89760020923e-19   maxres = 8.067e-12
+
+=== TEST 2: does swapping the LINEAGE of the six fine rungs move c0 at all? ===
+  K=5: m2's six -> -1.92723028429588e-15
+       m1's six -> -1.92723028429588e-15
+       |difference| = 7.48722e-40   rel = 3.88497e-25
+  K=6: m2's six -> -1.63339469782662e-15
+       m1's six -> -1.63339469782662e-15
+       |difference| = 8.25734e-40   rel = 5.05532e-25
+  K=7: m2's six -> -1.6253100565515e-15
+       m1's six -> -1.6253100565515e-15
+       |difference| = 9.38848e-40   rel = 5.77642e-25
+
+=== K-sensitivity of the published 17-rung estimator (a_used = #120) ===
+  K= 4  c0 = -1.25305261878e-14  implied a = 2.645521411811651958474  err vs ladder-free = -1.09095e-14
+  K= 5  c0 =  -1.9272302843e-15  implied a = 2.64552141181166256177  err vs ladder-free = -3.06246e-16
+  K= 6  c0 = -1.63339469783e-15  implied a = 2.645521411811662855605  err vs ladder-free = -1.24108e-17
+  K= 7  c0 = -1.62531005655e-15  implied a = 2.64552141181166286369  err vs ladder-free = -4.32618e-18
+  K= 8  c0 = -1.62484804941e-15  implied a = 2.645521411811662864152  err vs ladder-free = -3.86418e-18
+  K= 9  c0 = -1.62458828876e-15  implied a = 2.645521411811662864412  err vs ladder-free = -3.60441e-18
+  K=10  c0 = -1.62428309919e-15  implied a = 2.645521411811662864717  err vs ladder-free = -3.29923e-18
+  K=11  c0 = -1.62384302856e-15  implied a = 2.645521411811662865157  err vs ladder-free = -2.85915e-18

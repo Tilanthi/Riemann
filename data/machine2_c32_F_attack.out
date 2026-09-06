@@ -1,0 +1,104 @@
+census M=64 cells: 205
+phi8=4 slice     : 125
+
+==============================================================================
+A1  EXTERNAL GROUND TRUTH: does 10^F land inside the site's own bracket?
+==============================================================================
+bracketed sites (both a survivor and a firer among the five deltas): 8
+
+  site 16/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -27.711374
+     d=  0.05 surv  F =   -1.1337512  10^F =  0.0734935  INSIDE 
+     d=   0.1 FIRE  F =   -1.5154237  10^F =  0.0305194  OUTSIDE
+     d=   0.2 FIRE  F =   -1.3750641  10^F =  0.0421634  OUTSIDE
+     d=   0.3 FIRE  F =   -1.2987979  10^F =  0.0502576  INSIDE 
+     d=  0.45 FIRE  F =   -1.1963953  10^F =  0.0636216  INSIDE 
+
+  site 18/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -25.049018
+     d=  0.05 surv  F =    -1.103304  10^F =  0.0788308  INSIDE 
+     d=   0.1 FIRE  F =   -1.5123395  10^F =  0.0307369  OUTSIDE
+     d=   0.2 FIRE  F =   -1.3443202  10^F =  0.0452564  OUTSIDE
+     d=   0.3 FIRE  F =   -1.2593947  10^F =  0.0550307  INSIDE 
+     d=  0.45 FIRE  F =   -1.1857459  10^F =   0.065201  INSIDE 
+
+  site 19/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -27.857697
+     d=  0.05 surv  F =   -1.0960986  10^F =  0.0801496  INSIDE 
+     d=   0.1 FIRE  F =   -1.3294307  10^F =  0.0468349  OUTSIDE
+     d=   0.2 FIRE  F =   -1.3154961  10^F =   0.048362  OUTSIDE
+     d=   0.3 FIRE  F =   -1.2124889  10^F =  0.0613071  INSIDE 
+     d=  0.45 FIRE  F =   -1.1126774  10^F =  0.0771476  INSIDE 
+
+  site 20/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -26.405882
+     d=  0.05 surv  F =   -1.1002711  10^F =  0.0793833  INSIDE 
+     d=   0.1 FIRE  F =   -1.3089481  10^F =  0.0490967  OUTSIDE
+     d=   0.2 FIRE  F =   -1.2739381  10^F =  0.0532184  INSIDE 
+     d=   0.3 FIRE  F =   -1.1875509  10^F =  0.0649306  INSIDE 
+     d=  0.45 FIRE  F =   -1.1289365  10^F =  0.0743128  INSIDE 
+
+  site 21/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -26.722154
+     d=  0.05 surv  F =   -1.1228412  10^F =  0.0753631  INSIDE 
+     d=   0.1 FIRE  F =   -1.1749617  10^F =  0.0668403  INSIDE 
+     d=   0.2 FIRE  F =   -1.2231371  10^F =  0.0598223  INSIDE 
+     d=   0.3 FIRE  F =   -1.1620683  10^F =  0.0688544  INSIDE 
+     d=  0.45 FIRE  F =   -1.1097685  10^F =  0.0776661  INSIDE 
+
+  site 22/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -26.77018
+     d=  0.05 surv  F =   -1.1154186  10^F =  0.0766622  INSIDE 
+     d=   0.1 FIRE  F =   -1.2260791  10^F =  0.0594184  INSIDE 
+     d=   0.2 FIRE  F =   -1.2459175  10^F =  0.0567652  INSIDE 
+     d=   0.3 FIRE  F =   -1.1710888  10^F =   0.067439  INSIDE 
+     d=  0.45 FIRE  F =   -1.1183632  10^F =  0.0761442  INSIDE 
+
+  site 23/4   delta_c in (0.05, 0.1)   log10 bracket = (-1.30103, -1.0)   S = -25.133452
+     d=  0.05 surv  F =   -1.0835406  10^F =   0.082501  INSIDE 
+     d=   0.1 FIRE  F =   -1.2182197  10^F =  0.0605035  INSIDE 
+     d=   0.2 FIRE  F =   -1.2089146  10^F =  0.0618138  INSIDE 
+     d=   0.3 FIRE  F =   -1.1457232  10^F =  0.0714952  INSIDE 
+     d=  0.45 FIRE  F =   -1.0962688  10^F =  0.0801182  INSIDE 
+
+  site 24/4   delta_c in (0.1, 0.2)   log10 bracket = (-1.0, -0.69897)   S = -30.941231
+     d=  0.05 surv  F =   -1.1138409  10^F =  0.0769412  OUTSIDE
+     d=   0.1 surv  F =  -0.81303464  10^F =   0.153803  INSIDE 
+     d=   0.2 FIRE  F =   -1.1446315  10^F =  0.0716751  OUTSIDE
+     d=   0.3 FIRE  F =   -1.0542654  10^F =   0.088254  OUTSIDE
+     d=  0.45 FIRE  F =  -0.98425099  10^F =   0.103693  INSIDE 
+
+  VERDICT A1: 30/40 cell-level estimates land inside their own site's bracket (75.0%)
+
+==============================================================================
+A2  THE NULL: is F a monotone relabelling of lam_min?
+==============================================================================
+
+  phi8=4 slice (125): n=125
+    F vs lam_min alone     : Kendall tau-a = +0.605935   concordant 6223  DISCORDANT 1527  tied 0
+    F vs delta alone       : Kendall tau-a = +0.006710   concordant 3151  DISCORDANT 3099  tied 1500
+    F vs asinh term alone  : Kendall tau-a = +0.605935   concordant 6223  DISCORDANT 1527  tied 0
+    F vs fires bit alone   : Kendall tau-a = +0.126194   concordant 1011  DISCORDANT 33  tied 6706
+
+  full M=64 (205): n=205
+    F vs lam_min alone     : Kendall tau-a = +0.649641   concordant 17247  DISCORDANT 3663  tied 0
+    F vs delta alone       : Kendall tau-a = +0.002678   concordant 8433  DISCORDANT 8377  tied 4100
+    F vs asinh term alone  : Kendall tau-a = +0.649641   concordant 17247  DISCORDANT 3663  tied 0
+    F vs fires bit alone   : Kendall tau-a = +0.081205   concordant 1731  DISCORDANT 33  tied 19146
+
+==============================================================================
+A3  THE DISCARDED RESIDUAL: within-site spread of F, and it as a GATE
+==============================================================================
+  sites: 41   median spread = 0.065472709 dec   max = 0.40903552 dec
+  WORST 8 sites by within-site F spread (decades):
+    18/4  spread   0.40903552  n=5  survivor-bearing=True
+    16/4  spread   0.38167249  n=5  survivor-bearing=True
+    24/4  spread   0.33159691  n=5  survivor-bearing=True
+    19/4  spread   0.23333208  n=5  survivor-bearing=True
+    20/4  spread   0.20867694  n=5  survivor-bearing=True
+    15/4  spread   0.17745181  n=5  survivor-bearing=False
+    13/4  spread   0.17733896  n=5  survivor-bearing=False
+    23/4  spread   0.13467909  n=5  survivor-bearing=True
+  BEST 5:
+    2/6  spread  0.018578059  n=5  survivor-bearing=False
+    4/2  spread  0.015833121  n=5  survivor-bearing=False
+    4/4  spread  0.015528643  n=5  survivor-bearing=False
+    5/6  spread  0.013285779  n=5  survivor-bearing=False
+    8/4  spread  0.012574026  n=5  survivor-bearing=False
+
+  survivor-bearing sites  n=8  median spread 0.23333208
+  all-fire sites          n=33  median spread 0.058050373

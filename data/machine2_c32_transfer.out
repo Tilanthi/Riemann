@@ -1,0 +1,11 @@
+EXACT transfer (const term of plain-K3 LS fit of eps^-2) = 3113034852.7302
+m1 reports                                              = 3.11303485273e9
+m2 c31 letter reported                                  = 2.9078e9
+
+provenance of 2.9078e9  = observed V2 dev / observed V1 c0_new = 2.9078202e+9
+   -> a DIFFERENCE QUOTIENT anchored at one measured point, not the linear functional.
+   -> ratio exact/quotient = 1.0705733
+
+under EXACT functional: T3 admits |c0| <= 3.6241e-19  (m1: 3.6241e-19; m2 printed 3.88e-19)
+mutual inconsistency ratio = 521.743  (m1: 521.7x; m2 printed 487x)
+under m2's quotient      : |c0| <= 3.87986e-19  ratio = 487.349
