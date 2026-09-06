@@ -1,0 +1,27 @@
+# m1 L175 N_w transfer test  r_w=0.05  dps=70  (module defaults: N_w=16, KX=3, MPDPS_RUN=60, GUARD=10)
+# committed c2 = (-18.816779288625 - 1.883581248396e-69j)   (12-decimal print)
+# committed g10 (28 s.f., same quantity) = (-18.8167792886253599 + 1.88358124839595617e-69j)
+# committed c4 = (-279.180914118 + 7.60387260891e-67j)
+# committed c6 = (-1382.36060778 + 7.59645419661e-64j)
+
+# step 1: NW=16 reproduction  [t=218s]
+   c2: (-18.8167792886253599 - 1.88358124839595617e-69j)   diff-vs-committed-print (-3.599e-13 + 4.383e-83j)   (rel 1.913e-14)
+   c4: (-279.180914117996207 + 7.60387260890921384e-67j)   diff-vs-committed-print (3.793e-12 - 7.862e-80j)   (rel 1.359e-14)
+   c6: (-1382.36060778211503 + 7.596454196607839e-64j)   diff-vs-committed-print (-2.115e-9 - 2.161e-76j)   (rel 1.53e-12)
+   c2 vs committed g10 (28 s.f.): diff (-4.051e-29 - 3.767e-69j)   (rel 2.153e-30)
+#   witness PASSED (c2 to 1e-20 vs g10; all three to 1e-11 vs the prints)
+
+# step 2: NW=64 (same r_w, same dps)  [t=1134s]
+   c2: (-18.8167792886253511 - 1.71916407512100868e-70j)
+        shift 16->64 = (8.86621e-15 + 1.71166e-69j)   (rel 4.712e-16)
+   c4: (-279.180914117996172 + 9.37733679970663719e-67j)
+        shift 16->64 = (3.54649e-14 + 1.77346e-67j)   (rel 1.27e-16)
+   c6: (-1382.36060778211489 + 1.86053780518481057e-64j)
+        shift 16->64 = (1.41859e-13 - 5.73592e-64j)   (rel 1.026e-16)
+
+# formula (2 r_w)^N_w at r_w=0.05: N=16 -> 1.0e-16   N=64 -> 1.0e-64
+# reading: if the shifts sit at ~1e-15..1e-16 rel, the N=16 aliasing is the formula's size and L174's ceiling attribution is CONFIRMED as to mechanism;
+# if they sit at ~1e-7, the circle floor is 8 orders larger than the formula;
+# if they sit below 1e-25, N=16 aliasing was already negligible and L174's ~1e-15 ceiling needs a different owner.
+
+# wall 1134s; no proof claim; measurement, nothing scored

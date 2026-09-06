@@ -53,7 +53,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 import machine1_heat78c_survivor_census as census  # noqa: E402  (sealed, verified below)
-from mpmath import mp, mpf, mpim, zetazero  # noqa: E402
+# RE-FREEZE (m1-L175 §9): launch-1 crashed here -- 'mpim' has never existed in mpmath.
+# The intended ordinate extraction is zetazero(n).imag; one-token fix, semantics
+# unchanged (g_of interpolates the ordinates either way).  Old hash in L168 is dead.
+from mpmath import mp, mpf, zetazero  # noqa: E402
 
 mp.dps = 45
 THRESH = mpf("-1e-12")
@@ -102,7 +105,7 @@ def main():
     inst = census.Instrument(M, K, G, phis, edges)
     print("instrument built %.1fs" % (time.time() - T0), flush=True)
 
-    zeros = [mpf(str(mpim(zetazero(n)))) for n in range(1, 28)]  # 27: k=25 needs zeros[26]
+    zeros = [mpf(str(zetazero(n).imag)) for n in range(1, 28)]  # 27: k=25 needs zeros[26]
 
     def g_of(k, phi8=4):
         return zeros[k] + (zeros[k + 1] - zeros[k]) * mpf(phi8) / 8

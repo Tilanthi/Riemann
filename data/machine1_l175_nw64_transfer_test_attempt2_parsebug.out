@@ -1,0 +1,5 @@
+# m1 L175 N_w transfer test  r_w=0.05  dps=70  (module defaults: N_w=16, KX=3, MPDPS_RUN=60, GUARD=10)
+# committed c2 = (-18.816779288625 - 1.883581248396e-69j)   (12-decimal print)
+# committed g10 (28 s.f., same quantity) = (10.0 - 18.8167792886253599j)
+# committed c4 = (-279.180914118 + 7.60387260891e-67j)
+# committed c6 = (-1382.36060778 + 7.59645419661e-64j)

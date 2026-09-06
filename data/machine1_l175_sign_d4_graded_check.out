@@ -1,0 +1,62 @@
+# m1 L175 battery  dps=55+12  D* = 0.141733239663887191395415685084  t=1788701023
+
+## A. sign calibration on MY lineage (heat72 zeta2_C)
+# A.1  D = D* - 1e-3 : expect a REAL root (m2 calibration: u = 0.0513621518162436, u^2 = +0.00263807064, ECHOED)
+   u    = 0.051362151816243616   |f(u)| = 9.017e-131
+   u^2  = 0.00263807063919
+   u    - m2 calib u  = 1.595e-17   (rel 3.106e-16)
+   u^2  - m2 calib u2 = -8.051e-13   (rel -3.052e-10)
+# A.2  D = D* + 1e-3 : expect NO real root (scan) + on-line ordinate (m2: u^2 = -0.00265299559 on the line, ECHOED)
+   f(0.005) = -0.050997376
+   f(0.01) = -0.053775846
+   f(0.02) = -0.062767348
+   f(0.03) = -0.076916456
+   f(0.04) = -0.096992041
+   f(0.05) = -0.12385857
+   f(0.06) = -0.15848846
+   sign changes on [0, 0.06]: 0  (0 expected)
+   on-lineness probe at v=0.05: |Im|/|Re| = 0.2579
+   line ordinate v   = 0.051507238189400637   |Re f| = 6.762e-130   |Im f| = 1.127e-130
+   -v^2 = -0.0026529955859   vs m2 calib -0.00265299559   diff 4.1e-12
+# => on MY evaluator: real pair at D < D*, on-line pair at D > D*; with u^2 = -x my printed a is +2.6455... on the D > D* side. Sign anchored by measurement, not by the header anchor under audit.
+
+## B. post-reveal reproduction of ONE graded point: u2_true(eps = 0.02) (m2 graded value ECHOED)
+   my u^2  = 0.0500158309334201322927895535832
+   |f(u)|  = 1.623e-129
+   m2 u^2  = 0.0500158309334201322927895535832   diff = 9.04928e-34   rel = 1.809e-32
+
+## C. D4 erratum: v3 closing-control residuals parsed from committed .stdout
+# parsed 6 closing rows (eps, u_pred, u_pub, du_re)
+# C.1 u^2-space residuals: resid = u_pub^2 - u_pred^2  (u_pred used a4 = -D4 = -14725.652175546936)
+   eps=0.0001  resid=1.47461316105e-12  resid/eps^4=14746.13161
+   eps=0.00015  resid=7.46522885851e-12  resid/eps^4=14746.13108
+   eps=0.00022  resid=3.45436988257e-11  resid/eps^4=14746.13194
+   eps=0.00033  resid=1.74877497533e-10  resid/eps^4=14746.13381
+   eps=0.0005  resid=9.21633555188e-10  resid/eps^4=14746.13688
+   eps=0.00075  resid=4.66577132102e-9  resid/eps^4=14746.14146
+#   a WRONG 4th coefficient -> resid ~ eps^4 (resid/eps^4 constant); a mere truncation (a5 missing) -> resid ~ eps^5 (resid/eps^4 ~ eps)
+# C.2 two-term LS fit: p = 14746.12774  q = 18.2933496   (LOO spread p 0.00013, q 0.265)
+   corrected a4 (mine, eps = D - D* ladder convention) = 20.4755634  +- 0.00013
+   implied  a5 (mine, same convention)                 = 18.2933496  +- 0.265
+   vs m2 ladder-print convention |a4| = 20.4755387...: diff = 2.468e-5  (0.19 LOO-sigmas)
+   vs m2 a5 = 18.2711625...: diff = 0.02219  (0.0838 LOO-sigmas)
+# C.3 du ~ eps^3.5 receipts (through the sqrt: du ~ resid/(2u) ~ eps^{7/2})
+   eps 0.0001->0.00015: du ratio 4.1332   eps^3.5 prediction 4.1335
+   eps 0.00015->0.00022: du ratio 3.8205   eps^3.5 prediction 3.8208
+   eps 0.00022->0.00033: du ratio 4.1329   eps^3.5 prediction 4.1335
+   eps 0.00033->0.0005: du ratio 4.2805   eps^3.5 prediction 4.2815
+   eps 0.0005->0.00075: du ratio 4.1321   eps^3.5 prediction 4.1335
+
+## D. m2 graded output arithmetic (parsed from machine2_c33_oos_graded.out)
+# D.1 P1 slopes recomputed (v1 block, graded of record)
+   k=1: my slope 1.97511  printed 1.97511  diff -1.0e-6   in band of 1+-0.10: False (v1 code target 0: False)
+   k=2: my slope 2.97083  printed 2.97083  diff 4.6e-6   in band of 2+-0.10: False (v1 code target 1: False)
+   k=3: my slope 3.98745  printed 3.98745  diff -1.4e-6   in band of 3+-0.10: False (v1 code target 2: False)
+   k=4: my slope 4.9304  printed 4.9304  diff 3.5e-6   in band of 4+-0.10: False (v1 code target 3: False)
+   k=5: my slope 6.03272  printed 6.03272  diff -1.3e-6   in band of 5+-0.10: False (v1 code target 4: False)
+# D.2 P3: eps3 = 0.00046685618  eps5 = 0.0049933414  gain recomputed 0.09349575 (printed 10.695674)
+# D.3 graded-vs-extension consistency at eps=0.02:
+   err_3: graded 3.2218907e-6   7-coef prediction 3.2218705e-6   ratio 1.0
+   err_5: graded 4.2721783e-9   |a6+a7 e| e^6  4.252063e-9   ratio 1.0047
+
+# wall 2620s; no proof claim; verification battery, nothing scored

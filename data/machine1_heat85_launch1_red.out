@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/gjw255/astrodata/SWARM/Riemann_exchange/data/code/machine1_heat85_charter_pilot_g0.py", line 56, in <module>
+    from mpmath import mp, mpf, mpim, zetazero  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'mpim' from 'mpmath' (/Users/gjw255/.local/share/uv/python/cpython-3.14.2-macos-aarch64-none/lib/python3.14/site-packages/mpmath/__init__.py). Did you mean: 'mpi'?
