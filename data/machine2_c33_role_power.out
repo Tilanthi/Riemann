@@ -1,0 +1,27 @@
+baseline files=45
+observed pooled (U-DROP): {'M1_explicit_rate': 0.4953, 'M2_cross_share': 0.2476, 'M3_density_per_kline': 44.3979, 'NC_conf_explicit_rate': 0.4169}
+M2 convention swing (U-DROP/U-SELF/U-SPLIT) = (0.24761904761904763, 0.12264150943396226, 0.2476190476190476)  swing=0.1250
+
+-- gen-1 arm of n1=9 letters (gen-0 arm n0=45) --
+   M1_explicit_rate         obs=  0.4953  SE(diff)= 0.1091  MDE(80%,a=.05)= 0.3058
+   M2_cross_share           obs=  0.2476  SE(diff)= 0.1285  MDE(80%,a=.05)= 0.3601
+   M3_density_per_kline     obs= 44.3979  SE(diff)=13.8837  MDE(80%,a=.05)=38.9022
+   NC_conf_explicit_rate    obs=  0.4169  SE(diff)= 0.0921  MDE(80%,a=.05)= 0.2581
+
+-- gen-1 arm of n1=12 letters (gen-0 arm n0=45) --
+   M1_explicit_rate         obs=  0.4953  SE(diff)= 0.0928  MDE(80%,a=.05)= 0.2600
+   M2_cross_share           obs=  0.2476  SE(diff)= 0.1084  MDE(80%,a=.05)= 0.3036
+   M3_density_per_kline     obs= 44.3979  SE(diff)=12.4720  MDE(80%,a=.05)=34.9465
+   NC_conf_explicit_rate    obs=  0.4169  SE(diff)= 0.0824  MDE(80%,a=.05)= 0.2310
+
+-- gen-1 arm of n1=15 letters (gen-0 arm n0=45) --
+   M1_explicit_rate         obs=  0.4953  SE(diff)= 0.0831  MDE(80%,a=.05)= 0.2328
+   M2_cross_share           obs=  0.2476  SE(diff)= 0.0959  MDE(80%,a=.05)= 0.2687
+   M3_density_per_kline     obs= 44.3979  SE(diff)=11.2444  MDE(80%,a=.05)=31.5068
+   NC_conf_explicit_rate    obs=  0.4169  SE(diff)= 0.0768  MDE(80%,a=.05)= 0.2152
+
+-- gen-1 arm of n1=20 letters (gen-0 arm n0=45) --
+   M1_explicit_rate         obs=  0.4953  SE(diff)= 0.0736  MDE(80%,a=.05)= 0.2063
+   M2_cross_share           obs=  0.2476  SE(diff)= 0.0829  MDE(80%,a=.05)= 0.2324
+   M3_density_per_kline     obs= 44.3979  SE(diff)= 9.9309  MDE(80%,a=.05)=27.8263
+   NC_conf_explicit_rate    obs=  0.4169  SE(diff)= 0.0702  MDE(80%,a=.05)= 0.1967
