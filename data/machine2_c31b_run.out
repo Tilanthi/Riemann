@@ -1,0 +1,22 @@
+=== LAUNCH GATE ===
+  G1 eps=1e-3 rel=8.265769e-51  PASS (32s)
+  G2 eps=1e-4 rel=1.7203286e-40  PASS (32s)
+  G3 b-drop rel move = 25509.979  PASS
+  G4 truncation-power |c0_bias| max = 3.7590184e-20  PASS
+
+=== SIX NEW RUNGS (four below the entire 17-rung grid) ===
+  eps=0.000025  u=0.00813281621034013495933607 dev=1.7061e-8     T2=3.046e-7    in  |xi|=3.226e-53 32s
+  eps=0.000035  u=0.00962301363502521775497485 dev=7.98031e-9    T2=1.565e-7    in  |xi|=3.936e-53 32s
+  eps=0.00005   u=0.0115019445393156356715568 dev=3.30714e-9    T2=7.774e-8    in  |xi|=4.573e-53 32s
+  eps=0.00007   u=0.0136096682126990288776025 dev=1.21758e-9    T2=4.069e-8    in  |xi|=4.859e-53 32s
+  eps=0.00012   u=0.017820495194071099816363 dev=-6.12192e-11  T2=1.523e-8    in  |xi|=4.173e-53 33s
+  eps=0.00027   u=0.0267363988677968354068168 dev=-3.2279e-10   T2=4.696e-9    in  |xi|=1.161e-53 33s
+
+=== V1 ===
+  c0_new = 1.18153194401e-17  (qr 1.18153194401e-17, rel 5.19414e-50)  max res 7.4405818e-12
+=== V2 ===
+  a3_new = 11.7007173554079789751  dev = 3.4356825e-8  (T3 1.128194e-9)
+=== D1 (empty by algebra) ===
+  recovered shift = 5.0e-15 (expect exactly 5e-15)
+
+wrote m2_c31b_scored.json

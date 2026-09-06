@@ -1,0 +1,40 @@
+=== CONSTANTS ===
+  theta (published FIRES threshold) : -1.0e-12
+  u = |theta|                       : 1.0e-12
+  census M=64 cells                 : 205  (survivors 9)
+  per-site slopes available         : 41 sites
+  slope range   [-30.941231 , -5.9048649]
+  S_bar = MEDIAN slope (fallback)   : -8.24322934555
+
+=== APPLIED TO THE SEALED CENSUS, phi8=4 SLICE (125 cells) ===
+  rank  cell        fires  lam_min                 F = est. log10 delta_c
+     1  24/0.1      False  1.61679448637e-10       -0.81303464
+     2  24/0.45     True   -0.000184057401869      -0.98425099
+     3  24/0.3      True   -6.91089556195e-6       -1.0542654
+     4  23/0.05     False  1.17284672477e-10       -1.0835406
+     5  19/0.05     False  1.49770514478e-10       -1.0960986
+     6  23/0.45     True   -7.58225196531e-5       -1.0962688
+     7  20/0.05     False  9.92877379156e-11       -1.1002711
+     8  18/0.05     False  6.97848813668e-11       -1.103304
+     9  21/0.45     True   -0.000357751504884      -1.1097685
+    10  19/0.45     True   -0.000922668961096      -1.1126774
+  ...
+   123  0/0.1       True   -2.63088195054          -5.8953046
+   124  0/0.05      True   -0.515776458634         -5.9240229
+   125  0/0.45      True   -170.9051224            -5.9396316
+
+=== CONDITION (c): the rule must not be the FIRES bit with extra steps ===
+  survivors 9, distinct F 9 ; firers 116, distinct F 116
+  firers scoring ABOVE the worst survivor : 7   (0 would mean F IS the bit)
+  best firer F = -0.98425099   worst survivor F = -1.1337512
+
+=== SELF-CONSISTENCY (the rule's own named defect #1) ===
+  per-site S_k (+ fallback)  within-site F spread: median 0.0949847  max 0.409036
+  global median S_bar only   within-site F spread: median 0.508205  max 2.46424
+  reference: the census delta grid itself spans 0.954243 decades
+
+=== gen-0 SCOPE ===
+  gen-0 site k=25 has no census slope -> falls back to S_bar = -8.2432293
+  gen-0's delta term spans only 0.477121 decades (named defect #3)
+
+wrote m2_c31_fitness_constants.json

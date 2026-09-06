@@ -1,0 +1,162 @@
+{
+ "unit": "m2 c31 out-of-sample test of the c30 a-correction",
+ "dps": 60,
+ "runner_sha256": "53bf2c351e14ad14b7295c6c47a31aba8079882c152449c4808487b5d8ee03b8",
+ "prereg_sha256": "8917819cfcaf866f328fed5d6a551e9cf54e4d9540bfc437c7f27c5d91114ed9",
+ "gate": {
+  "G1": {
+   "eps": "0.001",
+   "rel_dev_vs_m1_L165_9a": "8.265769e-51",
+   "threshold": "1e-24",
+   "pass": true,
+   "secs": 31.9
+  },
+  "G2": {
+   "eps": "0.0001",
+   "rel_dev_vs_m2_c30_own_literal": "1.7203286e-40",
+   "threshold": "5e-40 (half-ulp of the 40-s.f. c30 reference literal)",
+   "pass": true,
+   "secs": 32.3
+  },
+  "G3": {
+   "rel_move_when_b_term_dropped": "25509.979",
+   "threshold": "> 1e3",
+   "pass": true
+  },
+  "G4": {
+   "max_synthetic_c0_bias": "3.7590184e-20",
+   "threshold": "<= 1e-18",
+   "pass": true,
+   "n_combinations": 8
+  },
+  "ALL_PASS_pre_rungs": true,
+  "G5": {
+   "rel_dev_lu_vs_qr_on_c0": "5.1941407e-50",
+   "threshold": "<= 1e-8",
+   "pass": true
+  },
+  "ALL_PASS": true
+ },
+ "rungs": {
+  "0.000025": {
+   "u": "0.008132816210340134959336068070940762320306",
+   "r_corrected_a": "11.7012292379679054259573",
+   "r_pred_frozen_curve": "11.7012292209069374831573",
+   "dev_signed": "1.706096794e-8",
+   "T2": "3.0463737e-7",
+   "within_T2": true,
+   "internal_residual_xi": "3.22605e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 32.2
+  },
+  "0.000035": {
+   "u": "0.009623013635025217754974852059278739816048",
+   "r_corrected_a": "11.701433995226010888216",
+   "r_pred_frozen_curve": "11.7014339872456960672521",
+   "dev_signed": "7.980314821e-9",
+   "T2": "1.5645667e-7",
+   "within_T2": true,
+   "internal_residual_xi": "3.93593e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 32.3
+  },
+  "0.00005": {
+   "u": "0.01150194453931563567155676941668683643768",
+   "r_corrected_a": "11.7017411469155159129492",
+   "r_pred_frozen_curve": "11.7017411436083767352848",
+   "dev_signed": "3.307139178e-9",
+   "T2": "7.773567e-8",
+   "within_T2": true,
+   "internal_residual_xi": "4.57337e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 32.4
+  },
+  "0.00007": {
+   "u": "0.01360966821269902887760245528186822810223",
+   "r_corrected_a": "11.7021506994400400297881",
+   "r_pred_frozen_curve": "11.7021506982224613571416",
+   "dev_signed": "1.217578673e-9",
+   "T2": "4.0690494e-8",
+   "within_T2": true,
+   "internal_residual_xi": "4.85946e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 32.5
+  },
+  "0.00012": {
+   "u": "0.01782049519407109981636298012442234783656",
+   "r_corrected_a": "11.7031746487015136776143",
+   "r_pred_frozen_curve": "11.7031746487627328296939",
+   "dev_signed": "-6.121915208e-11",
+   "T2": "1.5232655e-8",
+   "within_T2": true,
+   "internal_residual_xi": "4.17282e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 32.7
+  },
+  "0.00027": {
+   "u": "0.02673639886779683540681680986901007426482",
+   "r_corrected_a": "11.7062470491008034225262",
+   "r_pred_frozen_curve": "11.7062470494235936728743",
+   "dev_signed": "-3.227902503e-10",
+   "T2": "4.6955248e-9",
+   "within_T2": true,
+   "internal_residual_xi": "1.1612e-53",
+   "bracket_branch": "right-expansion (bracket grown by 1.5x from t_guess*4)",
+   "secs": 33.0
+  }
+ },
+ "V1": {
+  "c0_new_six_rungs_alone": "1.18153194401e-17",
+  "c0_new_qr": "1.18153194401e-17",
+  "max_in_sample_residual": "7.4405818e-12",
+  "T1": "1.8908475e-16",
+  "basis": "[eps^-2, 1, eps, eps^2, eps^3]"
+ },
+ "V2": {
+  "a3_new_six_rungs_alone_plainK3": "11.7007173554079789751",
+  "reference": "11.70071732105115376305",
+  "dev": "3.4356825e-8",
+  "T3": "1.128194e-9"
+ },
+ "V3": {},
+ "diagnostics": {
+  "D1_injection_empty_by_algebra": {
+   "injected": "+5e-15 into a  (equivalently +5e-15/eps^2 into every r)",
+   "recovered_c0_shift": "5.0e-15",
+   "expected_exactly": "5e-15",
+   "status": "implementation diagnostic ONLY -- firing world empty by algebra, declared at birth"
+  },
+  "c0_new_with_a_operative": "1.64521001744e-15",
+  "union_23_rung_plain_fit_corrected_a": {
+   "3": {
+    "max_res": "2.4908184e-6",
+    "a3": "11.70071811748690378968"
+   },
+   "4": {
+    "max_res": "2.2633679e-6",
+    "a3": "11.70071769730257116789"
+   },
+   "5": {
+    "max_res": "3.7954297e-8",
+    "a3": "11.70071733346769149961"
+   },
+   "6": {
+    "max_res": "1.4062645e-8",
+    "a3": "11.70071732411628619471"
+   },
+   "7": {
+    "max_res": "1.3675077e-8",
+    "a3": "11.70071732454891798732"
+   },
+   "8": {
+    "max_res": "1.3003756e-8",
+    "a3": "11.70071732533612421127"
+   },
+   "9": {
+    "max_res": "1.2333206e-8",
+    "a3": "11.70071732617243968554"
+   }
+  }
+ },
+ "notes": {}
+}

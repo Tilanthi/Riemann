@@ -1,0 +1,20 @@
+{
+ "prereg_sha256_from_runner": "8917819cfcaf866f328fed5d6a551e9cf54e4d9540bfc437c7f27c5d91114ed9",
+ "runner_sha256_from_runner": "53bf2c351e14ad14b7295c6c47a31aba8079882c152449c4808487b5d8ee03b8",
+ "margin_published_with_verdict": "8.63843",
+ "gate_all_pass": true,
+ "V1_c0_new": "1.18153194401e-17",
+ "V1_T1": "0.00000000000000018908475",
+ "V1_verdict": "A_CONFIRMED_OUT_OF_SAMPLE",
+ "V2_a3_dev": "3.4356825e-8",
+ "V2_verdict": "FALSIFIED",
+ "V3_per_rung_within_T2": {
+  "0.000025": true,
+  "0.000035": true,
+  "0.00005": true,
+  "0.00007": true,
+  "0.00012": true,
+  "0.00027": true
+ },
+ "one_determination": "V1 and V2 were declared ONE determination at freeze; if both move they are reported as ONE finding, not two."
+}
