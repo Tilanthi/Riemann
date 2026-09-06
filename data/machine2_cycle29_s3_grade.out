@@ -1,0 +1,65 @@
+
+H1   IS D/X_2nd A FAMILY PROPERTY OR A SITE PROPERTY?      ==> FALSIFIED (fires against me)
+     threshold as frozen : 2 or more of the 4 rungs land outside their band
+     R2   PT 17.80298   D/X_2nd = 2.2442921      band [0.52972342, 2.1188937]  OUTSIDE  (extrapolation)
+     R3   PT 34.378142  D/X_2nd = 2.9849794      band [0.81309238, 3.2523695]  IN
+     R3b  PT 69.324696  D/X_2nd = 6.3026378      band [1.283756, 5.1350239]  OUTSIDE
+     R4   PT 1.3799944  D/X_2nd = 1.0998638      band [0.1002021, 0.4008084]  OUTSIDE  (extrapolation)
+     outside-band count = 3 of 4 (fires at >= 2); rungs outside: R2,R3b,R4
+
+H2   EIGENVALUE HALF ALIVE                                 ==> FALSIFIED (fires against me)
+     threshold as frozen : any composed rung has D/X_2nd < 0, or any overlap < 0.99
+     R2   sign(D/X_2nd) = +   (2.2442921)
+     R3   sign(D/X_2nd) = +   (2.9849794)
+     R3b  sign(D/X_2nd) = +   (6.3026378)
+     R4   sign(D/X_2nd) = +   (1.0998638)
+     min ovl_launch_v0 over all ten rungs = 0.9864700425  (threshold 0.99)
+     violations: R3b ovl 0.9864700425
+
+H3   TWO PREDICTORS DISAGREE AT R4; ty4 BACKED IN ADVANCE  ==> HELD
+     threshold as frozen : the exact D/X_2nd at R4 lands in [0.100, 0.401]
+     R4 exact D/X_2nd = 1.0998638
+     ty4 predictor 1.0943675, backed interval [0.547, 2.189]
+     PT band [0.1002021, 0.4008084]
+     in ty4 interval: True   in PT band: False
+     NOTE: H1 and H3 are ANTI-CORRELATED BY CONSTRUCTION at R4 (frozen text). Do not count twice.
+
+H4   NO RUNG FIRES                                         ==> HELD
+     threshold as frozen : any rung has lam_min < 0
+     R0   lam_min = 0.000011650516687591433337 ok
+     R1   lam_min = 0.000013891724440577747155 ok
+     R2   lam_min = 0.000012234778255481211575 ok
+     R1b  lam_min = 0.000014754466880691030394 ok
+     R3   lam_min = 0.000012588197708340718624 ok
+     R1e  lam_min = 0.00001632606657277594412  ok
+     R3b  lam_min = 0.000011653894662637249585 ok
+     R0s  lam_min = 0.0000091129437636501602204 ok
+     R1d  lam_min = 0.0000097680471887404247159 ok
+     R4   lam_min = 0.0000090230233504601213598 ok
+     rungs with lam_min < 0: none
+
+H5   THE TRIPWIRE TRANSFERS TO A THIRD SITE                ==> HELD
+     threshold as frozen : any rung has opposite sign or |t| > 3, or max r > 0.30
+     R0   same_sign=True  |t|=0.00953843717129 r=0.00944831501217 OK
+     R1   same_sign=True  |t|=0.0406176220502 r=0.0390322258528 OK
+     R2   same_sign=True  |t|=0.0357821769186 r=0.0345460442514 OK
+     R1b  same_sign=True  |t|=0.0781906986596 r=0.0725202867701 OK
+     R3   same_sign=True  |t|=0.0752569693745 r=0.0699897526991 OK
+     R1e  same_sign=True  |t|=0.170171897605 r=0.145424700382 OK
+     R3b  same_sign=True  |t|=0.172314512978 r=0.146986590263 OK
+     R0s  same_sign=True  |t|=0.00560412359513 r=0.00557289241724 OK
+     R1d  same_sign=True  |t|=0.00512277923078 r=0.00509667011497 OK
+     R4   same_sign=True  |t|=0.00539953217382 r=0.00537053380375 OK
+     max r over the ten rungs = 0.146986590263  (threshold 0.30)
+     NOTE: declared in the prereg: ratio = 0.5|1+t| is an IDENTITY, so a HELD H5 is NOT evidence for the band rule.
+
+H6   THE CANCELLING POINT STILL BUYS NOTHING               ==> HELD
+     threshold as frozen : outside [0.30, 1.50]
+     R_c(R2) = 0.1702170025   R_c(R3) = 0.2737108259
+     R_c(R2)/R_c(R3) = 0.621886262409615563547207140263866340553101228284299294863952   band [0.30, 1.50]
+     ty4 predicted 0.67603 (0.1645733612/0.2434402706); S2 measured 0.610
+     runner's separately-printed 'PRIMARY ratio' (defect-fraction pct) = 0.2074130287 -- NOT the graded statistic (convention B)
+     NOTE: declared dependent on the same ty4 column as H3 -- a hit is NOT independent corroboration.
+
+=== TALLY: 4 HELD / 2 FALSIFIED / 0 other, of 6 ===
+=== independence: H1 and H3 anti-correlated at R4; H6 dependent on the H3 ty4 column. 6 verdicts, NOT 6 independent tests. ===

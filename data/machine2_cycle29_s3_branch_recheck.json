@@ -1,0 +1,92 @@
+{
+ "rows": {
+  "R0": {
+   "sealed": "0.000011650516687591433337",
+   "relA": "1.13314e-20",
+   "relB": "1.31547e-20",
+   "relAB": "1.31549e-20",
+   "branch2_db_nonzero": false,
+   "branch3_site_bs": false
+  },
+  "R1": {
+   "sealed": "0.000013891724440577747155",
+   "relA": "2.72169e-20",
+   "relB": "2.6702e-20",
+   "relAB": "2.67032e-20",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R2": {
+   "sealed": "0.000012234778255481211575",
+   "relA": "8.07164e-21",
+   "relB": "6.72306e-21",
+   "relAB": "6.7035e-21",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R1b": {
+   "sealed": "0.000014754466880691030394",
+   "relA": "5.33273e-21",
+   "relB": "5.41368e-21",
+   "relAB": "5.41347e-21",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R3": {
+   "sealed": "0.000012588197708340718624",
+   "relA": "3.7923e-21",
+   "relB": "3.67595e-21",
+   "relAB": "3.70069e-21",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R1e": {
+   "sealed": "0.00001632606657277594412",
+   "relA": "1.41116e-20",
+   "relB": "1.34885e-20",
+   "relAB": "1.34885e-20",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R3b": {
+   "sealed": "0.000011653894662637249585",
+   "relA": "3.06632e-20",
+   "relB": "3.19709e-20",
+   "relAB": "3.19509e-20",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": false
+  },
+  "R0s": {
+   "sealed": "9.1129437636501602204e-6",
+   "relA": "1.61863e-21",
+   "relB": "2.70227e-21",
+   "relAB": "2.70955e-21",
+   "branch2_db_nonzero": false,
+   "branch3_site_bs": true
+  },
+  "R1d": {
+   "sealed": "9.7680471887404247159e-6",
+   "relA": "3.15129e-21",
+   "relB": "3.0307e-21",
+   "relAB": "3.03052e-21",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": true
+  },
+  "R4": {
+   "sealed": "9.0230233504601213598e-6",
+   "relA": "2.29967e-21",
+   "relB": "3.87812e-21",
+   "relAB": "3.85765e-21",
+   "branch2_db_nonzero": true,
+   "branch3_site_bs": true
+  }
+ },
+ "worst": {
+  "A": "3.0663155e-20",
+  "B": "3.1970886e-20",
+  "AB": "3.1950922e-20"
+ },
+ "branch2_rungs": 8,
+ "branch3_rungs": 3,
+ "seconds": 44.9
+}
