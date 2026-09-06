@@ -1,0 +1,18 @@
+## (1) D* re-derived by an independent 1-D root find
+   D*_rootfind = 0.141733239663887191395415685084185023623144562
+   D*_literal  = 0.141733239663887191395415685084185024
+   difference  = -3.7685544e-37     |xi(1/2,D*)| at the root = 1.44892e-71   [5s]
+
+## (2) d(coefficient)/dD* by central difference of the whole pipeline, delta = 1.0e-25
+   d a/dD* =         -42.6418612841    induced error from the literal = 1.60698e-35
+   d b/dD* =          452.708172669    induced error from the literal = -1.70606e-34
+   da3/dD* =         -2123.16726697    induced error from the literal = 8.00127e-34
+   da4/dD* =          6698.97547725    induced error from the literal = -2.52455e-33
+   da5/dD* =         -16819.9239728    induced error from the literal = 6.33868e-33
+
+   value at the literal (cfg S):
+      a = 2.6455214118116628680161261212
+      b = -7.46245287679368626753358035163
+     a3 = 11.700717320433667601156432487
+     a4 = -20.4755387553904125007058067226
+     a5 = 18.2711625011499510374264312727

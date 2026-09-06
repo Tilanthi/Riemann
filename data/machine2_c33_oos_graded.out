@@ -1,0 +1,104 @@
+=== v1 (FROZEN, graded of record) ===
+# coefficients graded against (finest config D):
+#    a = 2.6455214118116628680161261212
+#    b = -7.46245287679368626753358035163
+#   a3 = 11.700717320433667601156432487
+#   a4 = -20.4755387553904125007058067226
+#   a5 = 18.2711625011499510374264312727
+
+eps = 0.005   u2_true = 0.0130424955856729258829848843783   |xi(u)| = 2.865e-62   |xi'(u)| = 0.0
+    err_1 = 0.00018511147
+    err_2 = 1.4498485e-6
+    err_3 = 1.2741131e-8
+    err_4 = 5.6081122e-11
+    err_5 = 1.0162612e-12
+
+eps = 0.01   u2_true = 0.0257204665539171670667894917272   |xi(u)| = 8.159e-62   |xi'(u)| = 0.0
+    err_1 = 0.00073474756
+    err_2 = 1.1497723e-5
+    err_3 = 2.0299384e-7
+    err_4 = 1.761547e-9
+    err_5 = 6.5569223e-11
+
+eps = 0.02   u2_true = 0.0500158309334201322927895535832   |xi(u)| = 2.161e-61   |xi'(u)| = 0.0
+    err_1 = 0.0028945973
+    err_2 = 9.0383848e-5
+    err_3 = 3.2218907e-6
+    err_4 = 5.4195542e-8
+    err_5 = 4.2721783e-9
+
+eps = 0.04   u2_true = 0.0945789457473251507443749468706   |xi(u)| = 1.72e-61   |xi'(u)| = 0.0
+    err_1 = 0.011241911
+    err_2 = 0.00069801388
+    err_3 = 5.0832031e-5
+    err_4 = 1.5853484e-6
+    err_5 = 2.8561861e-7
+
+## P1  slope of log10 err_k vs log10 eps  (target k+1 +- 0.10)
+   k=1: slope = 1.97511   target 1   FAIL   (points 4, dropped 0)
+   k=2: slope = 2.97083   target 2   FAIL   (points 4, dropped 0)
+   k=3: slope = 3.98745   target 3   FAIL   (points 4, dropped 0)
+   k=4: slope = 4.9304   target 4   FAIL   (points 4, dropped 0)
+   k=5: slope = 6.03272   target 5   FAIL   (points 4, dropped 0)
+   => P1 FALSIFIED
+
+## P2  at eps=0.02: err_5 = 4.27218e-9 in [1e-10,1e-8]? True;  err_3 = 3.22189e-6 in [1e-6,1e-5]? True
+   implied |a6| ~ err_5/eps^6 = 66.7528
+   => P2 HELD
+
+## P3  eps at which err_k = 1e-12 (from the k-th fitted power law)
+   order 3: eps_(1e-12) = 0.00046685618
+   order 5: eps_(1e-12) = 0.0049933414
+   ratio eps_5 / eps_3 = 10.695674   target >= 3   => P3 HELD
+=== v2 (one-line derived fix, REPORTED NOT GRADED) ===
+# coefficients graded against (finest config D):
+#    a = 2.6455214118116628680161261212
+#    b = -7.46245287679368626753358035163
+#   a3 = 11.700717320433667601156432487
+#   a4 = -20.4755387553904125007058067226
+#   a5 = 18.2711625011499510374264312727
+
+eps = 0.005   u2_true = 0.0130424955856729258829848843783   |xi(u)| = 2.865e-62   |xi'(u)| = 0.0
+    err_1 = 0.00018511147
+    err_2 = 1.4498485e-6
+    err_3 = 1.2741131e-8
+    err_4 = 5.6081122e-11
+    err_5 = 1.0162612e-12
+
+eps = 0.01   u2_true = 0.0257204665539171670667894917272   |xi(u)| = 8.159e-62   |xi'(u)| = 0.0
+    err_1 = 0.00073474756
+    err_2 = 1.1497723e-5
+    err_3 = 2.0299384e-7
+    err_4 = 1.761547e-9
+    err_5 = 6.5569223e-11
+
+eps = 0.02   u2_true = 0.0500158309334201322927895535832   |xi(u)| = 2.161e-61   |xi'(u)| = 0.0
+    err_1 = 0.0028945973
+    err_2 = 9.0383848e-5
+    err_3 = 3.2218907e-6
+    err_4 = 5.4195542e-8
+    err_5 = 4.2721783e-9
+
+eps = 0.04   u2_true = 0.0945789457473251507443749468706   |xi(u)| = 1.72e-61   |xi'(u)| = 0.0
+    err_1 = 0.011241911
+    err_2 = 0.00069801388
+    err_3 = 5.0832031e-5
+    err_4 = 1.5853484e-6
+    err_5 = 2.8561861e-7
+
+## P1  slope of log10 err_k vs log10 eps  (target k+1 +- 0.10)
+   k=1: slope = 1.97511   target 2   PASS   (points 4, dropped 0)
+   k=2: slope = 2.97083   target 3   PASS   (points 4, dropped 0)
+   k=3: slope = 3.98745   target 4   PASS   (points 4, dropped 0)
+   k=4: slope = 4.9304   target 5   PASS   (points 4, dropped 0)
+   k=5: slope = 6.03272   target 6   PASS   (points 4, dropped 0)
+   => P1 HELD
+
+## P2  at eps=0.02: err_5 = 4.27218e-9 in [1e-10,1e-8]? True;  err_3 = 3.22189e-6 in [1e-6,1e-5]? True
+   implied |a6| ~ err_5/eps^6 = 66.7528
+   => P2 HELD
+
+## P3  eps at which err_k = 1e-12 (from the k-th fitted power law)
+   order 3: eps_(1e-12) = 0.00046685618
+   order 5: eps_(1e-12) = 0.0049933414
+   ratio eps_5 / eps_3 = 10.695674   target >= 3   => P3 HELD
