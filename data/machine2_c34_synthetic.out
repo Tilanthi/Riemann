@@ -1,0 +1,43 @@
+==============================================================================
+T1 RECOVERY + T2 ALIASING LAW  (centre = D*_syn exactly)
+   pass: x_raw -> c_1..c_5, and the error follows (2 r_w)^N_w
+   N_w= 24  max rel err raw = 3.298e-25   rec = 4.933e-27   (2r)^N = 4.722e-27   g00 = 4.722e-27   etilde = 4.541e-28
+   N_w= 32  max rel err raw = 5.533e-34   rec = 8.276e-36   (2r)^N = 7.923e-36   g00 = 7.923e-36   etilde = 7.618e-37
+            fall vs previous N_w = 1.678e-9  (law: 1.678e-9)
+   N_w= 40  max rel err raw = 9.284e-43   rec = 1.388e-44   (2r)^N = 1.329e-44   g00 = 1.329e-44   etilde = 1.278e-45
+            fall vs previous N_w = 1.678e-9  (law: 1.678e-9)
+   N_w= 56  max rel err raw = 2.619e-60   rec = 4.498e-62   (2r)^N = 3.741e-62   g00 = 3.741e-62   etilde = 3.598e-63
+            fall vs previous N_w = 2.821e-18  (law: 2.815e-18)
+
+==============================================================================
+T3 OFFSET  (centre = D*_syn + 1.0e-30, a KNOWN wrong centre)
+   etilde            = 1.0e-30      (must be 1.0e-30)
+   etilde/delta      = 1.0   [T3a pass iff -> 1]
+   implied D* - D*_syn = -3.59754e-63   [T3b pass iff ~0]
+     a: raw err =  8.408e-30   REC err =  1.694e-62   [T3c pass iff rec << raw]
+     b: raw err =  2.399e-29   REC err =  2.035e-62   [T3c pass iff rec << raw]
+    a3: raw err =  7.066e-29   REC err =  1.232e-62   [T3c pass iff rec << raw]
+    a4: raw err =  1.707e-28   REC err =  2.137e-62   [T3c pass iff rec << raw]
+    a5: raw err =  7.155e-28   REC err =  5.681e-62   [T3c pass iff rec << raw]
+   T3d  raw shift vs sensitivity prediction:
+        a  measured       -2.186e-29   predicted       -2.186e-29   ratio 1.0
+        b  measured      1.77502e-28   predicted      1.77502e-28   ratio 1.0
+       a3  measured    -8.267074e-28   predicted    -8.267074e-28   ratio 1.0
+       a4  measured    3.4818974e-27   predicted    3.4818974e-27   ratio 1.0
+       a5  measured      -1.3022e-26   predicted      -1.3022e-26   ratio 1.0
+
+==============================================================================
+T4 SENSITIVITY: free series-shift route vs a real pipeline central difference
+     a  free =             -21.86   pipeline FD =             -21.86   rel diff = 4.044e-62
+     b  free =            177.502   pipeline FD =            177.502   rel diff = 7.783e-59
+    a3  free =          -826.7074   pipeline FD =          -826.7074   rel diff = 1.791e-52
+    a4  free =         3481.89738   pipeline FD =         3481.89738   rel diff = 3.629e-47
+    a5  free =      -13022.000306   pipeline FD =      -13022.000306   rel diff = 2.562e-40
+
+==============================================================================
+T5 SABOTAGE: a NON-centre perturbation must make the dominance test SCATTER
+   (i) pure centre shift, implied delta_k / delta (must all be 1.000):
+       1.0  1.0  1.0  1.0  1.0
+   (ii) g[1][0] perturbed by 1e-40, implied delta_k (must SCATTER):
+       1.189387e-41  2.4822256e-41  3.9753122e-41  4.8788784e-41  5.6985323e-41
+       spread max/min = 4.7911506   [T5 pass iff >> 1]
