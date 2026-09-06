@@ -1,0 +1,21 @@
+dps=130: residual=3.60667e-131  f'=-37.4819713608  residual/|f'|=9.62242e-133  [26s]
+dps=150: residual=6.75688e-151  f'=-37.4819713608  residual/|f'|=1.8027e-152  [42s]
+
+## my D*, dps=150 root find, computed at working dps=175 (root_at uses dps+25),
+## SERIALISED AT 175 DIGITS -- the full working precision, per my own ADDENDUM 1:
+  0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138148742188420142330184348
+
+## certified portion: the dps130-vs-dps150 spread is the error bar
+  D*(130) - D*(150) = 7.18811e-133
+
+## P1 -- the measurement
+  D*(m2, full precision) - D_new(m3)  ABS = 1.10671462288e-120
+  D*(m2, full precision) - D_new(m3)  REL = 7.80843382612e-120
+  PREREG P1 band: sign POSITIVE, rel in [1.0e-120, 6.0e-119], centre 7.808e-120
+
+## the serialisation arithmetic (DERIVATION, not a prediction)
+  my published 80-digit string - my full-precision value = -8.75933e-82  (this is my own rounding error)
+  |m3 - my 80-digit string| / D  = 6.18015e-81   <- the 6.18e-81 m3 reported
+  half-ulp of an 80-s.f. string at D~0.1417, relative = 3.52775e-80
+
+[67s] done

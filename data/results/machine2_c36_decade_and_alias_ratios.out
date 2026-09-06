@@ -1,0 +1,10 @@
+runA a4 rel diff, artefact string  -> 9.40438e-17  ; letter L171 s5 quotes 9.40e-18
+runB a5 rel diff, artefact string  -> 4.57016e-18  ; letter L171 s5 quotes 4.57e-19
+runB a4 rel diff, artefact string  -> 1.82169606617962481267e-20 ; letter quotes 1.82e-20  (agrees)
+
+a4 runA: dev=9.40295e-17  alias=(2r)^Nw=2.81475e-18  ratio=33.406
+a4 runB: dev=3.84892e-21  alias=(2r)^Nw=1.15292e-22  ratio=33.3841
+a5 runB: dev=4.5935e-18  alias=(2r)^Nw=1.15292e-22  ratio=39842.3
+a  runB: dev=1.30199e-22  alias=(2r)^Nw=1.15292e-22  ratio=1.1293
+
+c35 measured m3 g[1][0] alias ratio was 5.333e-27 / 4.722e-27 = 1.12939

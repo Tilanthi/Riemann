@@ -1,0 +1,33 @@
+==============================================================================
+(1) Delta_sys = D*(m2 evaluator) - D*(m3 evaluator)   [POST-HOC, not preregistered]
+==============================================================================
+  my D* read back from the run's own output, 175 digits
+  D*(m2) - D_new                       = 1.10671462287763e-120
+  D*(m3) - D_new  (m3's own residual)  = 1.10671462287763e-120
+  Delta_sys = D*(m2) - D*(m3)          = -1.0898124e-151
+  Delta_sys relative                   = -7.6891802e-151
+  second-order term neglected in 'newton': (f''/2f')*(D_new-D*)^2 ~ 8.642e-240  (this is the floor of the subtraction)
+
+==============================================================================
+(2) a4/a5 re-read against my 45-s.f. values  [DERIVATION, not a prediction]
+==============================================================================
+  a4: my published 45 s.f. = -20.4755387553904125007058067225760662898269858
+      m3's hardcoded ref  = -20.475538755390412501   (20 s.f.)
+      ref - mine (m3's truncation error) = -2.94193e-19   relative 1.4368e-20
+      half-ulp of a 20-s.f. string here  = 2.44194e-20 relative
+      QUOTED  rel diff (vs 20-s.f. ref)  = 1.8217e-20
+      CORRECT rel diff (vs 45-s.f. mine) = 3.84892e-21   <== the measurement
+  a5: my published 45 s.f. = 18.2711625011499510374264312726700306984558616
+      m3's hardcoded ref  = 18.271162501149951037   (20 s.f.)
+      ref - mine (m3's truncation error) = -4.26431e-19   relative 2.3339e-20
+      half-ulp of a 20-s.f. string here  = 2.73655e-20 relative
+      QUOTED  rel diff (vs 20-s.f. ref)  = 4.57016e-18
+      CORRECT rel diff (vs 45-s.f. mine) = 4.5935e-18   <== the measurement
+  a4 run A: CORRECT rel diff vs my 45 s.f. = 9.40295e-17
+  a  run B: CORRECT rel diff vs my 45 s.f. = 1.30199e-22
+
+==============================================================================
+(3) channel attribution: the aliasing scale (2 r_w)^N_w  [POST-HOC]
+==============================================================================
+  run A: (2*0.04)^16 = 2.81475e-18
+  run B: (2*0.04)^20 = 1.15292e-22
