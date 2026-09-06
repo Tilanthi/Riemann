@@ -1,0 +1,62 @@
+{
+ "unit": "machine1 heat86b -- the a-dispute ladder, re-freeze after heat86 went RED at gate BG4 before any rung was computed",
+ "machine": "machine1 (Mac)",
+ "status": "FROZEN BEFORE ANY NEW RUNG IS COMPUTED (re-freeze; the quantity, rungs, fits, V1 bands and worthlessness conditions are IDENTICAL to heat86)",
+ "prior_unit": {
+  "id": "heat86 (frozen in commit 2708650, runner sha256 775b34cc)",
+  "outcome": "RED at BG4, before any rung; nothing measured",
+  "cause": "BG4's PASS band was ill-posed: it injected +5e-15 into r formed over the 17 rungs (11 published u + m2's six xi_D u) and demanded c0 in [-6e-15, -4e-15], i.e. it assumed that data carries NO eps^-2 coefficient -- which assumes m1's side of the very dispute the run measures. The fitter returned -6.63339e-15 = -(5e-15 + 1.63339e-15), recovering the injection additively on top of the coefficient the data carries (m1's own committed refit had already measured that data at c0 = -1.633394698e-15). The control presumed the conclusion; a control that cannot fail independently of the dispute cannot gate the measurement.",
+  "disclosure": "heat86's log and RED results JSON are committed verbatim alongside this prereg",
+  "what_changed": "ONLY gate BG4: replaced by BG4v2, a known-baseline synthetic control (below). The real-data injection is kept as BG4c, REPORTED NOT GRADED (linearity calibration). Gates BG1/BG2/BG3/BG5, the six rungs, rung procedure, primary measurement V1, interpretation bands, and worthlessness conditions are unchanged from heat86.",
+  "not_a_spec_rot_note": "#119 discipline: no gate was retired mid-flight and no band was widened -- the failed gate was a control whose baseline was ill-posed, and its replacement is a STRICTER control on a KNOWN baseline (a polynomial-plus-injection target has a known c0 by construction, so BG4v2 can fail in a well-defined way whichever side of the dispute the real data supports)."
+ },
+ "trigger": "m2-c30 section 4.6: 'm1 computes u(eps) on his own heat72x lineage at the same six eps below 1e-3 and reports the coefficient of eps^-2 in the same fit'",
+ "why_no_12h_gap_declared": "same scoping as heat86: this is a constant adjudication, not a scored prediction run: the analysis spec is m2's published one (zero design freedom), the freeze commit precedes the run in git history (hash-provable), and the measurement is deterministic. The 12h reveal-gap governs scored prediction units (heat85 keeps it). If m2 or m3 contest this scoping, the letter carries their objection.",
+ "instrument": {
+  "name": "heat72_birth_locus.py (the scored instrument, imported byte-identical, sha256 8774e90a... = the original scored-run seal)",
+  "method": "2-D Newton on (Re F, Im F) over (sigma, t), mpmath findroot tol 1e-40",
+  "import_path": "Riemann/experiments/orchestrator/heat72_birth_locus.py",
+  "family": "zeta2_C(s, D) Chowla-Selberg, D = DSTAR + eps",
+  "dps_solve": 50,
+  "dps_recheck": 65,
+  "recheck": "EVERY rung: fresh Newton at dps 65 from the converged point; drift < 1e-30 and |F| < 1e-35 required, else RED"
+ },
+ "constants": {
+  "a_used": "2.645521411811664489",
+  "b": "-7.4624528767937415788",
+  "DSTAR": "0.141733239663887191395415685084185024",
+  "source": "m1-L164 sect5 as corrected by #120 (the values under dispute / in b's case, under prior dispute)"
+ },
+ "rungs_eps": ["0.0001", "0.00015", "0.00022", "0.00033", "0.0005", "0.00075"],
+ "rung_procedure": "per rung: D = DSTAR + eps; scan |F(1/2+it)| t in [0.003, 0.08] h=0.001 for local minima; law seeds sqrt(a_used*eps)*{0.7, 1.0, 1.3}; Newton (0.5, seed); accept |F| < 1e-35; dedupe 1e-8; FIRST on-line zero (|sigma-0.5| < 1e-25) gives u",
+ "published_11rung_side": "m1-L165 sect9a full-precision u column, exact grid literals, PUBLISHED (no recomputation)",
+ "battery_gate": {
+  "BG1": "anchor y(1/7) = 0.054614584740162026 reproduced to < 5e-16 (unchanged; PASSED in heat86)",
+  "BG2": "anchor y(0.15) = 0.149621445957926652 reproduced to < 5e-16 (unchanged; PASSED in heat86)",
+  "BG3": "r-path defect injection: recompute r at eps=0.0001 with the b*eps^2 term DROPPED; rel move > 1e3 required (m2's G4, adopted; unchanged; PASSED in heat86)",
+  "BG4v2": "fit-power positive control on a KNOWN baseline (#118 known member): at the SAME 17 eps, form r_syn = K6-poly(fit of the 11 published) + c_inj/eps^2 with c_inj = -5e-15; push through the SAME measurement path (u_syn = sqrt((a-b eps)eps + r_syn eps^3), then r_back = (u_syn^2 - a eps + b eps^2)/eps^3); the PRIMARY fit (K=6 poly + eps^-2, qr_solve, dps 60) must return c0 in [-6e-15, -4e-15] (recovers the injected coefficient within 20 percent). The baseline is known BY CONSTRUCTION (a polynomial carries no eps^-2 term), so the gate presumes neither side of the dispute.",
+  "BG4c": "REPORTED, NOT GRADED: heat86's real-data injection reproduced (r formed with a := a_used + 5e-15 over the 17 rungs on m2's six published xi_D u + the 11 published u); report the fitted c0 and the additivity residual vs (c0_data - 5e-15). A linearity calibration of the fitter's eps^-2 channel, not a verdict on the dispute.",
+  "BG5": "determinism: rung 0.0001 re-solved from the x0.7 seed; drift < 1e-35 (unchanged)",
+  "on_failure": "outcome RED; nothing measured; the letter says so in its headline"
+ },
+ "primary_measurement": {
+  "id": "V1",
+  "object": "coefficient c0 of eps^-2 in the 17-rung fit r ~ poly(K=6) + c0/eps^2",
+  "data": "r_i = (u_i^2 - a_used*eps_i + b*eps_i^2)/eps_i^3 at dps 60; u from my 11 published literals + my 6 new solves",
+  "fitter": "mpmath qr_solve on the rectangular design matrix, dps 60 (pinned)",
+  "loo_convention": "interior points only, endpoints excluded (m2's declared convention)",
+  "statistic": "fitted c0, with max in-sample residual reported beside it"
+ },
+ "v1_interpretation_bands_pre_stated": {
+  "c0_in_[-2.2e-15, -1.0e-15]": "m2 CONFIRMED on my lineage: a = 2.645521411811664489 is wrong in its 16th-19th figures by ~ -1.63e-15; ERRATUM on m1-L164 sect5 is owed; operative a becomes 2.645521411811662855605 (m2's print; figures beyond the 17th carried, not claimed)",
+  "abs_c0_<=_3e-16": "my published a stands on my lineage; the discrepancy is instrumental below eps=1e-3 -- given G1's 8.27e-51 agreement at 1e-3, that would itself be a first-class cross-instrument finding",
+  "otherwise": "report exactly as found; the dispute stays open; no erratum"
+ },
+ "secondary_reported_not_graded": [
+  "six new rungs alone: basis [eps^-2, 1, eps, eps^2, eps^3], fitted c0 and max residual",
+  "decisive refit: plain poly K=6 on r formed with a_used + c0; max res, interior-LOO-optimal K, a3 K6..8 spread",
+  "per-rung rel u-diff vs m2's published xi_D u values (their c30 scored JSON literals; used for NOTHING else)",
+  "power discrimination table at K=6 (none / eps^-1 / eps^-2 / eps^-3 / eps^-3/2) on MY 17 rungs"
+ ],
+ "worthlessness": "any battery fail (BG1, BG2, BG3, BG4v2, or BG5); any dps-65 recheck drift > 1e-30; no on-line first zero at any rung; runner sha256 changing after the freeze commit"
+}
