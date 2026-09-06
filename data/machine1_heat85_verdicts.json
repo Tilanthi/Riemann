@@ -1,0 +1,57 @@
+{
+ "verdicts": [
+  {
+   "id": "P1",
+   "name": "ridge delta-edge",
+   "verdict": "FIRES AGAINST m1",
+   "threshold_as_frozen": "all 8 survive at 0.04 AND lam(0.04)>lam(0.05) each AND >=5 of 8 fire at 0.06 AND >=7 of 8 fire at 0.07; failed clauses: only 2 fire at 0.06; only 2 fire at 0.07",
+   "detail": [
+    "k=16  lam(0.04)=9.719689068850549274916106e-11  lam(0.05)=5.053612052269358070563243e-11  survives04=True  lam04>lam05=True",
+    "k=18  lam(0.04)=8.676676887731142657644369e-11  lam(0.05)=6.978488136681017448086459e-11  survives04=True  lam04>lam05=True",
+    "k=19  lam(0.04)=1.61040519595222465906149e-10  lam(0.05)=1.497705144781316555952511e-10  survives04=True  lam04>lam05=True",
+    "k=20  lam(0.04)=1.038045314116267448053362e-10  lam(0.05)=9.928773791557768914406345e-11  survives04=True  lam04>lam05=True",
+    "k=21  lam(0.04)=5.843402371148211770002196e-11  lam(0.05)=5.746150303120180858811188e-11  survives04=True  lam04>lam05=True",
+    "k=22  lam(0.04)=7.114132410290981691107932e-11  lam(0.05)=7.092723673875707410805701e-11  survives04=True  lam04>lam05=True",
+    "k=23  lam(0.04)=1.224540572712583401856705e-10  lam(0.05)=1.172846724773643443900395e-10  survives04=True  lam04>lam05=True",
+    "k=24  lam(0.04)=1.628715421168043345988716e-10  lam(0.05)=1.628097522798301326768591e-10  survives04=True  lam04>lam05=True  [BOUNDARY rel 3.8e-04]",
+    "fires at 0.06: 2 of 8 (need >= 5)",
+    "fires at 0.07: 2 of 8 (need >= 7)"
+   ]
+  },
+  {
+   "id": "P2",
+   "name": "k=17 knife is site-local",
+   "verdict": "FIRES AGAINST m1",
+   "threshold_as_frozen": "17/0.04 fires while 16/0.04 and 18/0.04 survive",
+   "detail": [
+    "17/0.04 fires=False lam=4.004056007633837749902505e-11",
+    "16/0.04 survives=True lam=9.719689068850549274916106e-11",
+    "18/0.04 survives=True lam=8.676676887731142657644369e-11"
+   ]
+  },
+  {
+   "id": "P3",
+   "name": "ridge terminates at k=24",
+   "verdict": "FIRES AGAINST m1",
+   "threshold_as_frozen": "25/0.05 fires",
+   "detail": [
+    "25/0.05 fires=False lam=1.197943798587377859163083e-10",
+    "(gamma0(26)=94.99: step law puts delta_c at 0.2 >> 0.05)"
+   ]
+  },
+  {
+   "id": "P4",
+   "name": "k=24@0.1 ordinary monotone",
+   "verdict": "FIRES AGAINST m1",
+   "threshold_as_frozen": "0.09 survives with lam>lam(0.1); 0.11 and 0.12 fire; failed clauses: 24/0.11 survives; 24/0.12 survives",
+   "detail": [
+    "lam(0.09)=1.621347215057043757567677e-10 lam(0.1)=1.616794486368028675385043e-10 lam(0.11)=1.60847425135330434249532e-10 lam(0.12)=1.58965494960597419458382e-10"
+   ]
+  }
+ ],
+ "tally": {
+  "held": 0,
+  "fired": 4,
+  "ungraded": 0
+ }
+}

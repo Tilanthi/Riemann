@@ -1,0 +1,55 @@
+input seals verified (3/3)
+instrument built 0.1s
+G1 control k=0 lam 4.76112961139e-11 ok
+G1 control k=1 lam 7.82396275017e-11 ok
+G1 control k=2 lam 1.47853878161e-10 ok
+G1 control k=3 lam 8.58369711366e-11 ok
+G1 control k=4 lam 9.26191571099e-11 ok
+G1 control k=5 lam 1.09127522827e-10 ok
+G1 control k=6 lam 4.6318830868e-11 ok
+G1 control k=7 lam 4.46656072881e-11 ok
+G2/3 founder 16/0.05 lam 5.053612052e-11 rel 3.78e-26 fires=False match=True
+G2/3 founder 18/0.05 lam 6.978488137e-11 rel 5.94e-26 fires=False match=True
+G2/3 founder 19/0.05 lam 1.497705145e-10 rel 1.89e-25 fires=False match=True
+G2/3 founder 20/0.05 lam 9.928773792e-11 rel 2.5e-27 fires=False match=True
+G2/3 founder 21/0.05 lam 5.746150303e-11 rel 7.32e-26 fires=False match=True
+G2/3 founder 22/0.05 lam 7.092723674e-11 rel 6.0e-27 fires=False match=True
+G2/3 founder 23/0.05 lam 1.172846725e-10 rel 2.66e-25 fires=False match=True
+G2/3 founder 24/0.05 lam 1.628097523e-10 rel 1.62e-25 fires=False match=True
+G2/3 founder 24/0.1 lam 1.616794486e-10 rel 1.6e-25 fires=False match=True
+G2/3 founder 15/0.05 lam -6.329602531e-10 rel 6.5e-26 fires=True match=True
+G2/3 founder 17/0.05 lam -2.938951237e-11 rel 7.13e-26 fires=True match=True
+G2/3 founder 0/0.1 lam -2.630881951 rel 5.54e-26 fires=True match=True
+G4 defect injection rel 0.4872 (thresh 0.1, amended from 1e3) detected=True
+mutant  1/31  16/0.04  lam 9.71968906885e-11  survives
+mutant  2/31  16/0.06  lam -3.42701354232e-9  FIRES
+mutant  3/31  16/0.07  lam -2.56356073537e-8  FIRES
+mutant  4/31  18/0.04  lam 8.67667688773e-11  survives
+mutant  5/31  18/0.06  lam -5.11669914353e-10  FIRES
+mutant  6/31  18/0.07  lam -7.18184871824e-9  FIRES
+mutant  7/31  19/0.04  lam 1.61040519595e-10  survives
+mutant  8/31  19/0.06  lam 1.26718892439e-10  survives
+mutant  9/31  19/0.07  lam 6.39769993299e-11  survives
+mutant 10/31  20/0.04  lam 1.03804531412e-10  survives
+mutant 11/31  20/0.06  lam 8.95019428455e-11  survives
+mutant 12/31  20/0.07  lam 6.07965816438e-11  survives
+mutant 13/31  21/0.04  lam 5.84340237115e-11  survives
+mutant 14/31  21/0.06  lam 5.58398166738e-11  survives
+mutant 15/31  21/0.07  lam 5.28823149319e-11  survives
+mutant 16/31  22/0.04  lam 7.11413241029e-11  survives
+mutant 17/31  22/0.06  lam 7.05690328183e-11  survives
+mutant 18/31  22/0.07  lam 6.99347083759e-11  survives
+mutant 19/31  23/0.04  lam 1.22454057271e-10  survives
+mutant 20/31  23/0.06  lam 1.06790794376e-10  survives
+mutant 21/31  23/0.07  lam 8.84937983947e-11  survives
+mutant 22/31  24/0.04  lam 1.62871542117e-10  survives
+mutant 23/31  24/0.06  lam 1.62722042953e-10  survives
+mutant 24/31  24/0.07  lam 1.62596804146e-10  survives
+mutant 25/31  17/0.04  lam 4.00405600763e-11  survives
+mutant 26/31  25/0.05  lam 1.19794379859e-10  survives
+mutant 27/31  24/0.09  lam 1.62134721506e-10  survives
+mutant 28/31  24/0.11  lam 1.60847425135e-10  survives
+mutant 29/31  24/0.12  lam 1.58965494961e-10  survives
+mutant 30/31  23/0.1  lam -1.21475877707e-10  FIRES
+mutant 31/31  25/0.1  lam 1.16471738355e-10  survives
+WROTE /Users/gjw255/astrodata/SWARM/ASTRA-dev-main/Riemann/experiments/orchestrator/heat85_charter_pilot_g0.json  (31 mutants, 1687.5s)
