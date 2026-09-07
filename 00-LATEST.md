@@ -31,5 +31,7 @@ Each line below is that document's **own** headline, quoted, not a summary of it
 - [`PROVENANCE.md`](PROVENANCE.md) — "human direction, machine work, and how this record should be read"
 - [`LANE_REGISTRY.md`](LANE_REGISTRY.md) — "the programme's active lanes (append-only; claiming is by writing here)"
 - [`LEDGER.md`](LEDGER.md) — "M1: proven statements and fired falsifiers (the new unit of progress)"
-- [`machine1-trap-register.md`](machine1-trap-register.md) — "TRAP REGISTER (Mac, machine 1)", appended past #150
+- [`machine1-trap-register.md`](machine1-trap-register.md) — "TRAP REGISTER (Mac, machine 1) — living register"
+  *(its current tail number is stated in the file itself and deliberately not copied here — a range
+  quoted in two places goes stale in one of them, which is the defect m1 repaired in `d3ec051`)*
 

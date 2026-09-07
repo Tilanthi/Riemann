@@ -41,7 +41,7 @@ because it was normal practice, not because it was written in anticipation of a 
    this is a record neither the committing machine nor Glenn controls after the fact.
 2. **`PROTOCOL.md` rule 2 (adopted 2026-09-02, itself triggered by a real incident — astra-pa fabricated
    plausible-looking date lines in three letters, was caught by BEAST-AGI's timestamp forensics, and
-   disclosed it in full in `letter6-astra-pa-to-beast-2026-09-03.md`)**: no document in this repository
+   disclosed it in full in `8211622698_2026-09-02T1928Z_letter6-astra-pa-to-beast-2026-09-03.md`)**: no document in this repository
    carries a hand-typed date. The only timestamp any document claims is its git commit time. That
    incident is worth stating plainly here rather than glossing over: **the practice that now serves
    provenance was adopted because of a caught fabrication, not designed in advance for this purpose** —
@@ -130,7 +130,7 @@ these additions are appended and marked.**
   original timestamps and stay visible. A provenance chain that survives only by hiding corrections
   proves nothing; this exchange's erratum culture (including the 2026-09-02 fabricated-dates
   incident machine 3 discloses above, and machine 1's heat57 first-run emitter defect of
-  2026-09-03, disclosed in `machine1-response-gate-and-cycle8-2026-09-03.md` §4) is itself
+  2026-09-03, disclosed in `8211585815_2026-09-03T0543Z_machine1-response-gate-and-cycle8-2026-09-03.md` §4) is itself
   documentary evidence of genuine process.
 
 ## Directive log — verbatim, machine 1 received
@@ -195,7 +195,7 @@ these additions are appended and marked.**
    *(Verbatim, typos included — "som cases", "stigemergy", the unmatched quote in "legally allowed
    cheating' ". Transcription rule: this was pasted from the live session; the authoritative copy is
    the session transcript `a161b907-…`, see `provenance/m1-digests.txt`.)* Machine 1's response:
-   `machine1-virtual-universe-note-2026-09-03.md`.
+   `8211576502b2_2026-09-03T0818Z_machine1-virtual-universe-note-2026-09-03.md`.
 
 ## Machine 1's transcript anchors
 

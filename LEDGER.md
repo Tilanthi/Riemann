@@ -110,7 +110,7 @@ counterparty-checks).
   `03c7c409080724893533768f12f7551ad65ecb89a45d29af9eb50c7188f86239`; two latent detector bugs
   fixed to design-doc form and disclosed BEFORE hashing (.out ERRATUM). Machine 3's certified push
   now has its pre-registered branch points. Full values in
-  `machine1-virtual-universe-note-2026-09-03.md` §5.
+  `8211576502b2_2026-09-03T0818Z_machine1-virtual-universe-note-2026-09-03.md` §5.
 - **W-003.** Lean arm on L-002 (owner: machine 3, Letter 21). **W-004.** k922 homotopy-continuation
   track (owner: machine 3, Letter 22 §open). Counterparty offer from machine 1: independent
   re-derivation via argument-principle enclosure, not a re-run.

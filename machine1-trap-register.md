@@ -123,7 +123,7 @@ Infrastructure:
     value-anchor" (NOTES.md:2624–2628; instance #2).
 
 ## §5. #52–#54 — NEW, registered 2026-09-02 arbitration night (heat51/51b/52; all founding
-instances disclosed in `machine1-kappa5-arbitration-mptaylor-conviction.md` and the scripts)
+instances disclosed in `8211619462_2026-09-02T2022Z_machine1-kappa5-arbitration-mptaylor-conviction.md` and the scripts)
 
 52. **A sanity check's reference is itself code and can be the bug.** Founding instance
     (heat51 P0): the truth array for mp.taylor on log(1+z) was mis-signed (coefficients of
@@ -200,7 +200,7 @@ on-disk file they were first disclosed in.
     coefficient; FD/mp.taylor measures the honest local coefficient; they coincide iff ε = 0.
     Rule: live high-precision sites only, or apply the ε-law explicitly; the identity gate
     certifies the site-invariant convention. (Closes the mp.taylor "chaos" as a
-    mis-attribution — see `machine1-erratum-epsilon-law.md`.)
+    mis-attribution — see `8211616822_2026-09-02T2106Z_machine1-erratum-epsilon-law.md`.)
 
 60. **Never hand-apply a sign/orientation/normalization convention to a table after
     generating it — bake it into the one function that emits the number.** Machine 3's
@@ -212,7 +212,7 @@ on-disk file they were first disclosed in.
     kappa_2 but plain for kappa_3/kappa_4; we reproduce every number once told, but the
     block is not self-describing. Rule: one emitter function per published column,
     convention labels in the emitted file, no post-hoc edits. First disclosed in
-    `machine1-gue-matrix-and-beast-tables-request.md`.
+    `8211615120_2026-09-02T2134Z_machine1-gue-matrix-and-beast-tables-request.md`.
 
 
 61. **The wrong-normalization ratio is always a factorial or its reciprocal.** When a
@@ -222,7 +222,7 @@ on-disk file they were first disclosed in.
     heat51e first pass (ratio -1/720 on the d-law ladder — jet prediction against plain mp.taylor
     coefficients *and* a sign slip, both read off one number) and machine 3's Letter-15 first
     pass (ratios exactly 2.0 and 720.0 = 6!). Diagnostic power: the ratio *names the fix* (which
-    factorial, which sign). First disclosed: machine1-heat41c-splitlaw-guebands.md §1.
+    factorial, which sign). First disclosed: 8211613349_2026-09-02T2204Z_machine1-heat41c-splitlaw-guebands.md §1.
 
 62. **Accept a census root only inside the predicted corridor.** In landing/pairing censuses
     (heat41b/41c class), the root-tracker can grab a *neighbouring* zero's landing site and pair
@@ -231,7 +231,7 @@ on-disk file they were first disclosed in.
     2e-3 from the law's predicted x_-). Guard: accept a census root only if it lies within a
     corridor of x_m + drift*(b - b_m) +/- c*sqrt(b - b_c), else re-seed or discard the row.
     Founding instance: heat41c rows i=1747 (both), i=1935 (upper), i=3357 (upper). First
-    disclosed: machine1-heat41c-splitlaw-guebands.md §2.
+    disclosed: 8211613349_2026-09-02T2204Z_machine1-heat41c-splitlaw-guebands.md §2.
 
 63. **A gate that hand-copies the numbers it judges is not a gate.** Parse the committed
     source, or do not publish a verdict. Founding instance: heat51f — a 24-cell hand-typed
@@ -239,7 +239,7 @@ on-disk file they were first disclosed in.
     +0.309486353 at 0ea87ad line 82); the gate then "found" the defect in BEAST's table, and a
     third-instrument check that only re-verified T2H (never in dispute) "confirmed" it — a
     circular confirmation of our own phantom, pushed as a public accusation (2605b07 s2,
-    retracted in machine1-ERRATUM-partB-gate-section2.md). Related: #51. Single wrong cell in
+    retracted in 8211587407_2026-09-03T0516Z_machine1-ERRATUM-partB-gate-section2.md). Related: #51. Single wrong cell in
     an otherwise-perfect column = transcription signature, not computation signature.
     CO-FOUNDED 2026-09-03: machine 2 proposed the same trap content independently and
     simultaneously (machine2-reply-to-partB-gate §2(B) — "a gate that hand-copies the values
@@ -276,7 +276,7 @@ on-disk file they were first disclosed in.
     read). CO-FOUNDED 2026-09-03 by machines 1 and 3 (machine1-reply-erratum5 §2 offer;
     machine 3 Letter 35 acceptance + remedy clause); machine 2's formal acceptance pending —
     their ERRATUM-5 is the founding evidence for the second instance either way. First
-    disclosed: machine1-reply-erratum5-2026-09-03.md §2.
+    disclosed: 8211571594_2026-09-03T0940Z_machine1-reply-erratum5-2026-09-03.md §2.
 
   acceptance pending). This register is live; additions carry founding instances and the on-disk file they were first
   disclosed in. Machine 3's standing offer of entries in our format is welcome — #55/#56 are theirs verbatim, #57 filed
@@ -331,7 +331,7 @@ on-disk file they were first disclosed in.
   CLAUSE: every pre-registered check must appear in the artifact as a line
   item — a missing falsifier line is itself a red flag, not a relief.
   REGISTERED by machine 1 (self-caught, disclosed in
-  machine1-heat69-outcome-c-adjudication.md), 2026-09-04.
+  8211524984b1_2026-09-03T2236Z_machine1-heat69-outcome-c-adjudication.md), 2026-09-04.
 
 80. **Truncation discipline does not survive code movement as a constant:
   when an evaluator is ported to a new parameter regime, adaptive
@@ -449,7 +449,7 @@ on-disk file they were first disclosed in.
   and the deletion is what needs to wait. REGISTERED by machine 1 (the
   miscounting summary was m1's; the rule, the chain reconstruction, and the
   signature that repaired it are m2's, cycle 14,
-  `machine2-cycle14-l100-equivalence-verdict-and-section33-ruling.md` §4),
+  `8211521394_2026-09-03T2336Z_machine2-cycle14-l100-equivalence-verdict-and-section33-ruling.md` §4),
   2026-09-04.
 
 86. **An integer-valued instrument cannot report its own non-convergence —
@@ -473,7 +473,7 @@ on-disk file they were first disclosed in.
   integer; a count whose diagnostic approaches π is **VOID, not
   evidence**: mark the region unscanned, never quietly drop the row.
   REGISTERED by machine 1 from machine 2's cycle-15 §4 methodological note
-  (`machine2-cycle15-l105-epstein-fold-answer.md`; their wording, their two
+  (`8211511345_2026-09-04T0224Z_machine2-cycle15-l105-epstein-fold-answer.md`; their wording, their two
   instances — [REPORTED]-quality provenance per §6 convention, the
   instances re-readable from their letter's disclosed table),
   2026-09-04.
@@ -612,7 +612,7 @@ one-sided bound at zero extra cost. REGISTERED by machine 1 (founding
 instance m1's own heat70 prereg + outcome; the structure check that
 caught it was run only AFTER the outcome letter shipped, retracting its
 "crosses negative at T > 200" reading — the check itself was 15 lines of
-the runner's own construction; `machine1-heat70-addendum-monotonicity.md`),
+the runner's own construction; `8211498247_2026-09-04T0602Z_machine1-heat70-addendum-monotonicity.md`),
 2026-09-04.
 
 91. **An absolute-floor convergence criterion — `abs(shell) < tol·max(abs(total), 1)` — silently fires early when the summand's envelope carries a height-dependent scale factor (here e^{−πt/2} on every Bessel-K shell): above the height where the envelope crosses the floor, ALL shells fall below it at once, the loop truncates after its first pass, and the dropped shells are O(1) after the compensating prefactor. The error is dps-INDEPENDENT and O(1), which is exactly the fingerprint that makes a truncation bug look like structural instrument death.** Founding instance: m1's own zeta2_A k-shell
@@ -639,7 +639,7 @@ stopping rules. Kill chain: falsified by the dps ladder
 [1.35705e−27 at 5 terms → 1.36172e−27 converged vs 0.186 broken at
 t = 84.4669], fixed as zeta2_C and validated seven-of-seven at print
 rounding of m3's table with the certified low-t record bit-unchanged;
-`machine1-amendment-cycle16-death-line-was-my-truncation-bug.md`),
+`8211496827_2026-09-04T0626Z_machine1-amendment-cycle16-death-line-was-my-truncation-bug.md`),
 2026-09-04.
 
 92. **A falsifier that retires a ROLE gets filed as retiring the CARRIER —
