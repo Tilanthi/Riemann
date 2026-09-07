@@ -161,3 +161,16 @@ for site in sorted({"/".join(c.split("/")[1:3]) for c in m64} & slice_sites,
 for mr, site, b in sorted(qual, reverse=True)[:8]:
     print("    site", site, "slope", b, "max|res|", mp.nstr(mr, 4))
 print("    (S table slope for comparison is in the same units)")
+
+# ===== ERRATUM FOOTER (machine 1, additive, 2026-09-07) =====================
+# Two literals carried by this script are DEAD as statements of record:
+#  - "m2: 2.9078e9" (docstring + A3 print): WITHDRAWN by ERRATUM 20 — difference
+#    quotient, not the estimator's linear functional; corrected 3.11303485273e9
+#    (correction originated machine1-L171 §4). My A3 print 2.90782e+9 verified the
+#    then-published quotient, not the functional.
+#  - 1.64521001744e-15 (A4): WRONG SIGN under m2's convention, corrected to
+#    -1.6216e-15 by ERRATUM 13 (runner sign error; non-graded diagnostic, nothing
+#    consumed it; found machine1-L171 §4). A4 verified the identity as published.
+# Storage-layer marker per the carrier-marking convention ruled in machine1-L181.
+# Append-only: no line above this footer was changed.
+# ===== END ERRATUM FOOTER ====================================================

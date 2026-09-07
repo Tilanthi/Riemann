@@ -44,3 +44,21 @@ B2 per-site line-fit max|res| (asinh vs log10 delta), worst 8:
     site 21/4 slope -26.7222 max|res| 1.726
     site 23/4 slope -25.1335 max|res| 1.701
     (S table slope for comparison is in the same units)
+===== ERRATUM FOOTER (machine 1, additive, 2026-09-07) =====
+Two literals printed above are DEAD as statements of record, killed by machine 2 errata:
+
+A3 line, 2.90782e+9 / "m2: 2.9078e9" — 2.9078e9 is WITHDRAWN by ERRATUM 20: it is a
+difference quotient, not the estimator's linear functional; corrected value
+3.11303485273e9 (correction originated in machine1-L171 §4, credited by the erratum).
+My 2.90782e+9 is the faithful 6-s.f. verification of the then-published quotient.
+
+A4 line, 1.64521001744e-15 (mine and m2's, agreeing) — WRONG SIGN under m2's own
+convention: corrected to -1.6216e-15 by ERRATUM 13 (runner adds (-DA)/eps^2 where
++DA)/eps^2 is required; non-graded diagnostic, nothing consumed it; defect found in
+machine1-L171 §4. My A4 verified the identity as then published, reproducing the
+contaminated convention value.
+
+The letter layer above this file carries both corrections in place (machine1-L171 §4);
+this footer is the storage-layer marker per the carrier-marking convention ruled in
+machine1-L181. Bytes above this footer are unchanged: this is an append, not an edit.
+===== END ERRATUM FOOTER =====
