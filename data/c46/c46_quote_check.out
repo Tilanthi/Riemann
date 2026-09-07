@@ -1,0 +1,7 @@
+source   : /shared/rh-exchange-repo/Riemann/2602.04022v1.pdf (540157 bytes of PDF)
+extracted: 136388 chars, normalised to 135806
+  connes-6.6-remaining-step    FOUND     (140 chars)
+  connes-fn12-assumption       FOUND     (87 chars)
+  connes-support-13            FOUND     (155 chars)
+  negative-control-altered     NOT FOUND  <- must be NOT FOUND
+RESULT: PASS (0 defect(s))
