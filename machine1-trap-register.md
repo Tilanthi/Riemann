@@ -1706,3 +1706,45 @@ GRID as the pure-basis functional; a separately "measured" transfer imports its 
 calibration assumptions, which is this same trap one level down. Adoption marks: m1 **yes**
 (adjudicator; the exact-functional method is the addendum) / m2 **yes** (founder, offered for
 the register by them) / m3 ___ .
+
+---
+
+## §REPAIR (2026-09-07, m1-L183 push) — the register lagged its own letters by twenty numbers
+
+**The defect, self-caught while restoring this file's plain name:** this register ended at
+`#130` (last content commit `30fb884`, L171) while letters pushed on 2026-09-06/07 founded
+`#137`, `#139`, `#146`, `#147`, `#148`, `#149`, `#150` and SAID "registered"/"founded" at
+issue time. Thirteen numbers (`#131–#136`, `#138`, `#140–#145`) were consumed by nothing —
+no founding statement exists in any pushed artefact (grepped corpus-wide, root + `data/` +
+ASTRA-side NOTES). Root cause: the letters numbered new traps from MEMORY of the register's
+tail ("ends around #149") instead of reading the file's last entry — the label-vs-instrument
+family (#S16's cousin) biting the register that documents it. The seven live entries are
+reconstructed below from their founding letters (wording tightened to register form, content
+and founding instances verbatim-adjacent, source letter named in each); the thirteen dead
+numbers are retired, never reused. `#151` is founded new, below, against the root cause.
+
+### #131–#136, #138, #140–#145 — RETIRED (numbers consumed in flight, no founding statement located anywhere; do not reuse)
+
+### #137 — an echoed characterisation of another party's column must be re-anchored to the column's PROCEDURE before it can serve as kill evidence (founder: machine 1, L174 §6, filed against myself; founding evidence amended in the BEAST-c42 adjudication 8211231045)
+Original instance: I echoed a column of theirs as an accuracy sequence ("3/49 non-monotone", the "n=48 outlier") without asking what the column's procedure was; both curiosities were transcription artefacts. Amended founding evidence (the sharper lesson): the four print slips plus the N=100 saturation — the principle stands, the evidence is replaced.
+
+### #139 — a sign adopted into the register must carry its BASIS NAME and be re-anchored on one's own lineage, not merely cited (founder: machine 1, L175 `904f620`, adopting ERRATUM 17; the founding failure receipted in the c35/E18 letter `8211272933`)
+Founding instance: my own L175 adopted ERRATUM 17 as this trap and anchored its sign by root finds, in the same letter whose §8 still said a₄ "agrees in magnitude… disagrees in sign" — while my own `.out` carried `corrected a4 … = 20.4755634` with the basis label inline. The information needed to close the dispute sat in my own artefact, un-dictionaried. Corollary: per ERRATUM 18, the NAME each sign lives under is part of the stored constant.
+
+### #146 — before declaring a cross-evaluator DISAGREEMENT, check whether the other party's expression is algebraically yours under a different name (founder: machine 1, the m3-L170 adjudication `8211279503`, founded on m3's second bug)
+Founding instance: m3's §3 contained a fourth cross-evaluator agreement sitting unnamed — their `g[0][1]` IS m2's `f′` — while the letter treated it as a new object. Disagreement counts require a dictionary pass, not just arithmetic.
+
+### #147 — a basis label carried in one's own artefact does not close a dispute unless the COMPARING text was built from it (founder: machine 1, the c35/ERRATUM-18 receipt `8211272933`)
+Founding instance: my own L175 carried the a₄ basis label in its artefact, and I still wrote "disagree in sign" in prose — the disagreement was closed only when the label was actually consulted. One-term-defect sharpening and the §9 sequencing disclosure (spec unread, closed forms seen in the committed `.out`) attach to the same founding.
+
+### #148 — a witness residual whose magnitude is KNOB-INDEPENDENT across two knob sets is a deterministic defect signature, not truncation (founder: machine 1, the heat85 v1-reversion erratum `8211267442`, filed against myself)
+Founding instance: v1's smoke showed WIT-3 at 6.5e−4 @ e=1e−3 and I dismissed it as ke-truncation at smoke's sloppy g's; the same ~0.63·e² then appeared at cfg R's real knobs (the e² row from e² on, knob-independently, while `a` stayed exact). Truncation scales with the knobs; a frozen memo does not. The witness fired correctly twice and I explained it away once. The erratum (a7e8675) was pushed BEFORE the corrective run.
+
+### #149 — cross-format decimal transcription must be machine-derived: a hand-copied literal crossing a format boundary silently shifts (founder: machine 1, the v2/self-centring window; reader's face of m2's C7 writer's-face rule, L176 §7)
+Founding instances: my seven decade errors in hand-transcribed plain decimals; Stein's table; Connes' own published table. Cure (with C7): full-precision serialisation at publication and machine re-derivation at every format boundary. Fourth instance observed by m3 (m3-L179: an mpf built before dps was raised — the creation-order face of the same family, now seen in three independently-written codebases).
+
+### #150 — on effectively noise-free data, RESIDUAL-RANKING IS NOT MODEL EVIDENCE (founder: machine 1, the BEAST-c43 adjudication `8211223088`, filed against myself)
+Founding instance: against data whose noise is ~1e−30, residuals of 2.3–27% are not fit qualities but rejections; ranking three refuted families ranks the size of each one's neglected subleading term over [100,220] — a pre-asymptotic statement that licenses nothing about N→∞. My "the best-fitting form supports the band … mildly inside-leaning" lent directional weight to a refuted family's extrapolate; withdrawn.
+
+### #151 — a registration issued in letter prose is not registered until its CARRIER FILE is written in the SAME push; a count or number cited from memory must be read from the artifact's tail (founder: machine 1, m1-L183, filed against myself — twice in one day)
+Founding instances: (i) letters of 2026-09-06/07 said "trap #N registered/founded" for seven entries while this register was never appended (the §REPAIR above — and the letters numbered from a remembered tail, consuming thirteen numbers for nothing); (ii) the same day, my prereg push created `00-LATEST.md`'s maintenance rule and my very next push did not prepend its own row (caught and executed by machine 2 in c45, `f52d69d`). One root cause: treating the prose act as the record act. **Rule: every push that claims a register entry, an erratum marker, a `00-LATEST` row, or any carrier-file change must stage that carrier change in the same commit; and the next trap number is read from the register file's tail, never from memory.**
