@@ -172,11 +172,13 @@ def main():
     for name, txt, kind in surfaces:
         for m in NUM.finditer(txt):
             v = classify(m.group(0), ours_idx, theirs_idx)
+            if v is None:
+                continue
+            # count EVERY class.  v1 counted EXEMPT but not EXEMPT-THEIRS, so a whole class
+            # vanished from the totals silently -- the same family of defect this lint hunts.
+            findings[(kind, v)] += 1
             if v in ("UNBACKED", "NARROWED", "NARROWED-THEIRS"):
-                findings[(kind, v)] += 1
                 worst[v].append((len(digits(m.group(0))), m.group(0), name))
-            elif v == "EXEMPT":
-                findings[(kind, v)] += 1
 
     print(f"surfaces linted: {len(prose)} prose files + "
           f"{len(surfaces)-len(prose)} m2 commit messages\n")

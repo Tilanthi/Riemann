@@ -1,0 +1,59 @@
+== KNOWN-ANSWER TEST ==
+  [OK ] POSITIVE 1 -- hand-typed literal in no artefact
+         expected 'UNBACKED', got 'UNBACKED'
+  [OK ] POSITIVE 2 -- 20 s.f. truncation of a committed 45 s.f. value (the c35 defect)
+         expected 'NARROWED', got 'NARROWED'
+  [OK ] NEGATIVE 1 -- exact re-print of a committed 45 s.f. literal
+         expected 'EXEMPT', got 'EXEMPT'
+  [OK ] NEGATIVE 2 -- exact re-print of a committed 30 s.f. JSON serialisation
+         expected 'EXEMPT', got 'EXEMPT'
+  [OK ] NEGATIVE 3 -- 11 s.f. literal, one digit below threshold
+         expected None, got None
+  [OK ] NEGATIVE 4 -- ISO date, not a decimal literal
+         expected None, got None
+  [OK ] NEGATIVE 5 -- commit sha
+         expected None, got None
+  [OK ] NEGATIVE 6 -- exact quote of ANOTHER MACHINE'S committed literal (v1 false positive)
+         expected 'EXEMPT-THEIRS', got 'EXEMPT-THEIRS'
+== selftest PASSED ==
+
+artefact index: 5355 distinct >= 12 s.f. literals from 378 of our committed data/code files; 61180 from 755 of theirs (prose included)
+surfaces linted: 99 prose files + 68 m2 commit messages
+
+  prose   EXEMPT       465
+  prose   EXEMPT-THEIRS     48
+  prose   NARROWED      34
+  prose   NARROWED-THEIRS      2
+  prose   UNBACKED      58
+  commit  EXEMPT        68
+  commit  EXEMPT-THEIRS      3
+  commit  NARROWED       2
+  commit  NARROWED-THEIRS      1
+  commit  UNBACKED       7
+
+  FLAGGED 104 of 688 literals (15.1%) at threshold 12 s.f.
+
+-- widest NARROWED (top 8) --
+     85 s.f.  0.14173323966388719139541568508418502362314456 machine2-c37-MANIFEST-published-constants-with-width-half-ulp-an
+     83 s.f.  -37.481971360842881738759362390446858024869748 machine2-c37-MANIFEST-published-constants-with-width-half-ulp-an
+     30 s.f.  14.1680846707549756060541923597                machine2-c35-the-a4-sign-is-carried-by-the-formula-not-by-the-nu
+     29 s.f.  14.168084670754975606054192284                 machine2-c35-the-a4-sign-is-carried-by-the-formula-not-by-the-nu
+     22 s.f.  11.70071732043366760116                        machine2-c33-PREREG-fold-expansion-out-of-sample.md
+     20 s.f.  2.6455214118116628680                          machine2-c32-the-concession-audited-a-third-instrument-and-two-m
+     20 s.f.  0.56754972450101903502                         machine2-cycle15-l105-epstein-fold-answer.md
+     18 s.f.  11.7037889901534730                            machine2-c30-charter-vote-fitness-judge-conditions-and-the-small
+
+-- widest NARROWED-THEIRS (top 8) --
+     12 s.f.  11.7007173267                                  machine2-c28-two-point-anchor-catches-half-and-n6-graduation-att
+     12 s.f.  11.7007173267                                  machine2-c28-two-point-anchor-catches-half-and-n6-graduation-att
+     12 s.f.  11.7007173267                                  add2e0c (commit message)
+
+-- widest UNBACKED (top 8) --
+     25 s.f.  528.9086942446158239673448                     machine2-c36-prereg-filed-before-any-compute.md
+     22 s.f.  7.462452876793686267534                        machine2-c33-PREREG-fold-expansion-out-of-sample.md
+     22 s.f.  20.47553875539041250071                        machine2-c33-PREREG-fold-expansion-out-of-sample.md
+     22 s.f.  18.27116250114995103743                        machine2-c33-PREREG-fold-expansion-out-of-sample.md
+     20 s.f.  3.2831684545147381213e-80                      machine2-c37-the-print-width-is-not-a-communication-cap-it-is-an
+     20 s.f.  3.2831684545147381213e-80                      7b2aac5 (commit message)
+     20 s.f.  0.062100774805626263319                        machine2-cycle22-witness-fires-on-the-bare-zero-side.md
+     20 s.f.  0.062100774805626263319                        f871287 (commit message)
