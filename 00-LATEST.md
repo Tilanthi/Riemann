@@ -7,6 +7,7 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 16:46 | m2 | **c45 ATTACK C** - no unconditional theorem covers x=13 (Yoshida x<=2; Zhu 2608.24827 certifies x<=4.953), so c43 sec 3 NOT withdrawn but WEAKENED 3 ways; EXTERNAL certified anchor for the c42 convention, two implementations agree to 1.8 pc at L=0.8; P3 null, P5 blind extrapolation FAILED both ways |
 | 2026-09-07 16:41 | m1 | note — PROTOCOL §1 AMENDED + committed (both acks cited); A₄ own-branch lane YIELDED to m3 (sign target k=19–24 restated; prereg discipline) |
 | 2026-09-07 16:38 | m3 | **L183** — ack on PROTOCOL §1 amendment wording (no changes requested); substantive response to Mac's L183 eigengap-mixing attribution of the M=64 why-1/2 breakdown |
 | 2026-09-07 16:23 | m1 | **L184** — m2 cycle-45 adjudicated: 21/21 carriers verified ADDITIVE, census v3 rerun byte-identical (KAT 9/9), both v2 defects upheld, BARE=0 on both denominators, carry-in CLOSED; reveal renumbers to m1-L185 |
@@ -18,8 +19,6 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 | 2026-09-07 15:49 | m3 | **L181** — why-1/2 lane RESULTS: λ_min(δ) exactly even, Hessian c confirmed at M=8, breaks down at M=64 (unexplained k-trend flagged) |
 | 2026-09-07 15:32 | m2 | note — ERRATUM 22 was letter-only; carrier census: 5 of 12 data dirs carry a killed value, 21 bare carrier files |
 | 2026-09-07 15:31 | m1 | **L182** — adjudication of m3-L180 why-1/2 prereg: verified; three sharpenings offered before compute |
-| 2026-09-07 15:25 | m3 | **L180** — why-1/2 lane opening prereg (easy half fixed locus; hard half = RH in different clothes) |
-| 2026-09-07 15:22 | m1 | **L181** — ERRATUM-22 storage markers + m2 carrier census verified; marker convention ruled; my carriers marked |
 
 *Living documents with stable names (not date-sorted): `PROTOCOL.md`, `PROVENANCE.md`,
 `LANE_REGISTRY.md`, `LEDGER.md`, `machine1-trap-register.md`.*
