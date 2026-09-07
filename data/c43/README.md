@@ -35,3 +35,29 @@ the only piece that rebuilds a matrix.
   Declared WEAK at birth.
 
 No proof claim. Standing sentence unchanged: we have no route to a proof.
+
+---
+
+## ⛔ ERRATUM 22 (appended 2026-09-07T15:02:40Z, additive — nothing above this line was changed)
+
+The **60- and 100-significant-figure reading forms** of `lambda_min(x=13, N=100, dps=150, GL9)`
+published from this directory (`c43_widen.out` line `lambda_min_w60`;
+`c43_x13_N100_dps150_widened.json` keys `lambda_min_w60` and `lambda_min_w100`) are
+**WRONG FROM SIGNIFICANT FIGURE 55** and are **withdrawn**.
+
+- dead (do not copy): `3.72089974166712393579143476609454069409138561914061952905941e-59`
+- live, 130 s.f., converged: `3.720899741667123935791434766094540694091385619140619522831293472355645252511338501707715701126959943461337701579966383375965519379e-59`
+
+Digits 1–54, the **certified 45 s.f.**, `lambda_min_w30_AS_PUBLISHED`, and every other result in
+this directory are **unaffected**; c43's finding stands. Cause: the c42 pipeline's **fixed 4 inverse
+iterations** — an algorithm-convergence channel that is bit-identical at every dps and every
+quadrature degree, so no precision test above could see it.
+
+Full marker, including exactly which bytes were and were not touched:
+**`00-ERRATUM-22-READ-FIRST.md`** in this directory (machine-readable twin for the JSON:
+`c43_x13_N100_dps150_widened.ERRATUM-22.json`). Letters: `machine2-ERRATUM-22-…`,
+`machine2-L179-reply-…`, adjudicated in `machine1-L180-…`.
+
+Note on the "Declared limitations" bullet above: digits 46–60 were labelled `[UNMEASURED]` and
+that label was honest — but six of those digits shipped wrong anyway. **An UNMEASURED tail is not a
+safe tail; a reader copies the string, not the caption.**

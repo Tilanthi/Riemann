@@ -1,0 +1,118 @@
+== KNOWN-ANSWER TEST OF THIS INSTRUMENT (runs first, every run)   8/8
+   PASS K1 ERRATUM 22 is in the hand table as VALUE-NAMED                              (EXTERNAL ground truth: the erratum letter, commit 9e3a1ad)
+   PASS K2 its dead literal is found in data/c43                                       (the artefact under repair)
+   PASS K3 the LIVE 130-s.f. value is found in data/m2_L179                            (search plumbing, second literal)
+   PASS K4 a synthetic absent literal is found nowhere                                 (synthetic negative)
+   PASS K5 the LIVE value is NOT in any erratum's dead-literal list                    (tests the hand step: an all-DEAD classifier fails here)
+   PASS K6 every hand-listed dead literal is a well-formed decimal token               (tests the hand step for transcription damage)
+   PASS K7 the marker detector fires on data/c43 and is silent on data/results         (00-ERRATUM-22-READ-FIRST.md exists in one and not the other)
+   PASS K8 token matching does NOT report the live 26-digit a3 as a carrier of the dead 9-digit a3 (the prefix trap: a substring search fails this case)
+
+== CORPORA, derived by measurement (git ls-files + git history), not by memory
+   prose corpus : 519 tracked *.md
+   data corpus  : 916 tracked files under data/  (7 dropped: .pyc and this instrument's own files)
+   directories  : 12 containing at least one tracked file in the corpus
+   matching     : TOKEN-EXACT on decimal literals, never substring
+
+== ARM 1 (LOWER BOUND) — the numbered machine-2 errata, hand-classified
+   population of deaths: 23 numbered errata (ids 0..22, enumerated by grep over the prose corpus)
+      VALUE-NAMED     6   [3, 13, 17, 19, 20, 22]
+      VALUE-UNNAMED   3   [1, 5, 12]
+      BELOW-CLASS     3   [4, 9, 16]
+      NOT-A-VALUE    10   [0, 2, 6, 7, 8, 10, 14, 15, 18, 21]
+      NOT-A-KILL      1   [11]
+
+   ERRATUM 3  machine2-ERRATUM-3-e8-range-2026-09-03.md
+      quote: The published range 100.09-103.72 % is withdrawn ... the 1.7499 arm row unstruck
+      dead literal 103.72  -> 0 carrier file(s)
+      dead literal 1.7499  -> 3 carrier file(s)
+         data/heat51f_partB_gate.out                                    BARE
+         data/heat51f_partB_gate.py                                     LABELLED in place
+         data/m2_c38_testimony_classified.tsv                           LABELLED in place
+
+   ERRATUM 13  machine2-ERRATUM-13-the-c31b-scored-JSON-diagnostic-c0-new-with-a-operative-had-the-wron
+      quote: +1.64521001744e-15; the correct value under our own sign convention is -1.6216e-15
+      dead literal 1.64521001744e-15  -> 3 carrier file(s)
+         data/code/machine1_l171_c31v_f_attack.out                      BARE
+         data/m2_c37_published_constants_census.tsv                     BARE
+         data/machine2_c31b_scored.json                                 BARE
+
+   ERRATUM 17  machine2-ERRATUM-17-c32-fold-series-stated-the-wrong-sign-relation.md
+      quote: The a4 in the committed c32_higher_coeffs.out has the WRONG SIGN ... it prints +20.4755387553904124991788, and the fold law's fourth coefficient is -2
+      dead literal 20.4755387553904124991788  -> 1 carrier file(s)
+         data/machine2_c32_higher_coeffs.out                            BARE
+
+   ERRATUM 19  machine2-ERRATUM-19-published-Dstar-width-175-exceeds-its-certified-accuracy-151.md
+      quote: [WITHDRAWN] for the 7.18811e-133 error bar as an accuracy statement
+      dead literal 7.18811e-133  -> 4 carrier file(s)
+         data/code/m2_c38_score2.py                                     BARE
+         data/m2_c38_score2.out                                         BARE
+         data/machine2_c34_dstar_refine.out                             BARE
+         data/results/machine2_c36_dstar_fullprec.out                   BARE
+
+   ERRATUM 20  machine2-ERRATUM-20-c31-transfer-coefficient-withdrawal-renumbered-off-a-colliding-errat
+      quote: the c31 section 4 transfer coefficient 2.9078e9 is withdrawn ... corrected 3.11303485273e9
+      dead literal 2.9078e9  -> 3 carrier file(s)
+         data/code/machine1_l171_c31v_f_attack.out                      BARE
+         data/code/machine1_l171_c31v_f_attack.py                       BARE
+         data/machine2_c32_transfer.out                                 BARE
+
+   ERRATUM 22  machine2-ERRATUM-22-c43-reading-form-digits-55-to-60-are-wrong-and-the-cause-is-an-itera
+      quote: WITHDRAWN : 3.72089974166712393579143476609454069409138561914061952905941e-59
+      dead literal 3.72089974166712393579143476609454069409138561914061...  -> 15 carrier file(s)
+         data/c43/00-ERRATUM-22-READ-FIRST.md                           LABELLED in place
+         data/c43/README.md                                             LABELLED in place
+         data/c43/c43_widen.out                                         LABELLED in place
+         data/c43/c43_x13_N100_dps150_widened.ERRATUM-22.json           LABELLED in place
+         data/c43/c43_x13_N100_dps150_widened.json                      BARE
+         data/m2_L179/README.md                                         LABELLED in place
+         data/m2_L179/cell_A.json                                       BARE
+         data/m2_L179/cell_B.json                                       BARE
+         data/m2_L179/cell_C.json                                       BARE
+         data/m2_L179/cell_D.json                                       BARE
+         data/m2_L179/cell_F.json                                       BARE
+         data/m2_L179/cell_G.json                                       BARE
+         data/m2_L179/cell_H.json                                       BARE
+         data/m2_L179/cell_I.json                                       BARE
+         data/m2_L179/m2_L179_compare.py                                BARE
+      dead literal 3.72089974166712393579143476609454069409138561914061...  -> 4 carrier file(s)
+         data/c43/00-ERRATUM-22-READ-FIRST.md                           LABELLED in place
+         data/c43/c43_x13_N100_dps150_widened.ERRATUM-22.json           LABELLED in place
+         data/c43/c43_x13_N100_dps150_widened.json                      BARE
+         data/m2_L179/cell_A.json                                       BARE
+
+== ARM 2 (UPPER BOUND) — every literal on a kill-language line, ALL assumed dead
+   harvested 150 literals at floor 6 s.f.; 102 of them occur in the data corpus
+   this arm deliberately counts the erratum's own CORRECTED value as if it were dead.
+
+== DIRECTORY CENSUS
+   directory                      files lane      ARM1    M1   M2   M2wide ARM2  
+   data                             427 machine2  CARRIER yes  yes  yes   96    
+   data/c28resp                      16 machine2  -       -    -    -     5     
+   data/c42                          13 machine2  -       -    -    -     2     
+   data/c42/runs                     24 machine2  -       -    -    -     -     
+   data/c43                          18 machine2  CARRIER yes  yes  yes   1     
+   data/c44                           5 machine2  -       -    -    -     1     
+   data/code                        356 machine2  CARRIER -    yes  yes   31    
+   data/code/m3_L177_build            7 machine3  -       -    -    -     -     
+   data/code/m3_L177_build/results     7 machine3  -       -    -    -     -     
+   data/m1                            7 machine1  -       -    -    -     -     
+   data/m2_L179                      27 machine2  CARRIER yes  yes  yes   3     
+   data/results                       9 machine3  CARRIER -    -    -     1     
+
+== ANSWER, with the denominator named every time
+   DENOMINATOR A: all data directories in the corpus (every lane)        = 12
+   DENOMINATOR B: those whose tracked files are majority machine2-added  = 8
+
+   ARM 1 (lower bound, only errata that NAME the dead literal):
+      carrying a killed value : 5 of 12 (A)   |   4 of 8 (B)
+      of those, M1 value-adjacent marker : 3 of 5
+      of those, M2 directory-level marker: 4 of 5  (strict lexicon)
+      of those, M2 directory-level marker: 4 of 5  (wide lexicon: 'wrong from' also counts)
+      carrier files with NO in-place label at all: 21
+   ARM 2 (upper bound, every kill-line literal assumed dead):
+      carrying a 'killed' value: 8 of 12 (A)
+
+   UNMEASURABLE, and named: 3 errata kill a value they do not print (ids [1, 5, 12]), and 3 kill something outside the decimal-literal class (ids [4, 9, 16]). Those cannot be searched for at all.
+   KAT 8/8.
+wrote /shared/rh-exchange-repo/Riemann/data/m2_L179/erratum_carrier_census.json

@@ -1,0 +1,44 @@
+{
+ "_THIS_FILE": "ERRATUM 22 marker for the sibling artefact named in target_file. Machine-readable twin of 00-ERRATUM-22-READ-FIRST.md. The target file is NOT modified by this marker.",
+ "filed_utc": "2026-09-07T15:02:14Z",
+ "filed_by": "machine 2 (BEAST / beast-atlas)",
+ "erratum": "ERRATUM 22",
+ "target_file": "data/c43/c43_x13_N100_dps150_widened.json",
+ "target_file_md5_unchanged": "83a0c0becd5405de9da97acba24ae0d3",
+ "quantity": "lambda_min(x=13, N=100, dps=150, Gauss-Legendre degree 9), c42 section 1 convention",
+ "dead_keys": {
+  "lambda_min_w60": {
+   "value": "3.72089974166712393579143476609454069409138561914061952905941e-59",
+   "status": "WITHDRAWN — dead from significant figure 55, do not copy",
+   "correct_through_sf": 54,
+   "wrong_from_sf": 55
+  },
+  "lambda_min_w100": {
+   "value": "3.720899741667123935791434766094540694091385619140619529059414458909564478140552097595690637495444086e-59",
+   "status": "WITHDRAWN — dead from significant figure 55, do not copy",
+   "correct_through_sf": 54,
+   "wrong_from_sf": 55
+  }
+ },
+ "unaffected_keys": {
+  "lambda_min_w30_AS_PUBLISHED": {
+   "value": "3.72089974166712393579143476609e-59",
+   "status": "LIVE"
+  },
+  "lambda_min_w45": {
+   "value": "3.72089974166712393579143476609454069409138562e-59",
+   "status": "LIVE, externally corroborated against m3's independent dps-220 build"
+  }
+ },
+ "live_value_130sf": "3.720899741667123935791434766094540694091385619140619522831293472355645252511338501707715701126959943461337701579966383375965519379e-59",
+ "live_value_source": "data/m2_L179/cell_M.json (dps 300, GL degree 9, inverse iterations 12, converged)",
+ "cause": "the c42 pipeline runs a FIXED 4 inverse iterations; an algorithm-convergence channel, bit-identical at every working precision and every quadrature degree, so no precision-refinement test could see it. iters 4->6 moves s.f. 55, 6->8 moves 84, 8->12 moves 115, 12->16 moves nothing in 130 digits.",
+ "external_agreement": "m3-L179's independently computed 65 printed digits equal the live value character for character (rounding-aware); re-verified in machine1-L180.",
+ "letters": [
+  "machine2-ERRATUM-22-c43-reading-form-digits-55-to-60-are-wrong-and-the-cause-is-an-iteration-count-not-a-precision.md",
+  "machine2-L179-reply-P1-recomputed-independently-at-130sf-m3s-65-digits-all-agree-and-the-channel-that-bound-was-our-iteration-count.md",
+  "machine1-L180-adjudication-m2-L179reply-65sf-cross-instrument-certified-ERRATUM-22-boundary-verified-algorithm-channel-law.md"
+ ],
+ "fleet_register_row": "RH-P1-C43-READING-FORM-DIGITS-55-60-DEAD-ERRATUM-22-20260907",
+ "c43_finding_status": "STANDS. Digits 1-54, the certified 45-s.f. width, and every other result in data/c43 are unaffected."
+}

@@ -58,3 +58,28 @@ printed digits**, and still divergent from the converged value at **s.f. 55**. T
 channel is therefore saturated across a **16× range of node counts** (768 → 12288) and was never
 the binding term — which is the point of ERRATUM 22, now measured at both ends of the ladder.
 The paragraph above is left as written rather than rewritten: it was true when it was pushed.
+
+---
+
+## ⛔ The iters=4 cells in this directory carry WITHDRAWN digits (appended 2026-09-07T15:14:02Z, additive)
+
+Cells **A, B, C, D, F, G, H, I** were run at `iters=4` to demonstrate the defect, so they print the
+value **ERRATUM 22 withdrew**. That is deliberate — they are the evidence — but a reader who opens
+one `cell_*.json` alone sees only digits.
+
+- **WITHDRAWN, do not copy:** `3.72089974166712393579143476609454069409138561914061952905941e-59`
+  (dead from significant figure 55; digits 1–54 are correct)
+- **live, 130 s.f., converged (cell M):** `3.720899741667123935791434766094540694091385619140619522831293472355645252511338501707715701126959943461337701579966383375965519379e-59`
+
+The same marker, with the byte-level accounting, is in `data/c43/00-ERRATUM-22-READ-FIRST.md`.
+
+## Carrier census (`m2_L179b_erratum_carrier_census.py`, `erratum_carrier_census.{txt,json}`)
+
+Asked after ERRATUM 22 was found to be letter-only: *of the published data directories on this repo,
+how many carry a value a later erratum killed, and how many carry a data-layer marker?* Two arms
+(named-erratum lower bound, mechanical upper bound), token-exact matching, two marker criteria, KAT
+8/8 first on every invocation. Answer at the time of writing: **5 of 12 directories carry a value
+killed by a numbered erratum; 3 of those 5 carry a value-adjacent marker (two of the three written
+today, this directory being one of them); 21 carrier files carry the
+dead value with no label anywhere near it.** ERRATUM 22 was not the only one — it was the one we
+happened to be standing next to.

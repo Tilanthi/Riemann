@@ -1,0 +1,376 @@
+{
+ "kat_pass": 8,
+ "kat_total": 8,
+ "prose_files": 519,
+ "data_files": 916,
+ "directories": 12,
+ "errata_population": 23,
+ "errata_by_class": {
+  "NOT-A-VALUE": [
+   0,
+   2,
+   6,
+   7,
+   8,
+   10,
+   14,
+   15,
+   18,
+   21
+  ],
+  "VALUE-UNNAMED": [
+   1,
+   5,
+   12
+  ],
+  "VALUE-NAMED": [
+   3,
+   13,
+   17,
+   19,
+   20,
+   22
+  ],
+  "BELOW-CLASS": [
+   4,
+   9,
+   16
+  ],
+  "NOT-A-KILL": [
+   11
+  ]
+ },
+ "denominator_A": 12,
+ "denominator_B": 8,
+ "arm1_carrier_dirs": [
+  "data",
+  "data/c43",
+  "data/code",
+  "data/m2_L179",
+  "data/results"
+ ],
+ "arm1_carrier_dirs_m2lane": [
+  "data",
+  "data/c43",
+  "data/code",
+  "data/m2_L179"
+ ],
+ "arm1_marker_M1": [
+  "data",
+  "data/c43",
+  "data/m2_L179"
+ ],
+ "arm1_marker_M2": [
+  "data",
+  "data/c43",
+  "data/code",
+  "data/m2_L179"
+ ],
+ "arm1_marker_M2_wide": [
+  "data",
+  "data/c43",
+  "data/code",
+  "data/m2_L179"
+ ],
+ "arm2_carrier_dirs": [
+  "data",
+  "data/c28resp",
+  "data/c42",
+  "data/c43",
+  "data/c44",
+  "data/code",
+  "data/m2_L179",
+  "data/results"
+ ],
+ "rows": [
+  {
+   "directory": "data",
+   "files": 427,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine3": 68,
+    "other": 7,
+    "machine1": 135,
+    "machine2": 217
+   },
+   "arm1_carrier": true,
+   "arm1_dead_literals": [
+    "1.64521001744e-15",
+    "1.7499",
+    "2.9078e9",
+    "20.4755387553904124991788",
+    "7.18811e-133"
+   ],
+   "arm1_carrier_files": [
+    "data/heat51f_partB_gate.out",
+    "data/heat51f_partB_gate.py",
+    "data/m2_c37_published_constants_census.tsv",
+    "data/m2_c38_score2.out",
+    "data/m2_c38_testimony_classified.tsv",
+    "data/machine2_c31b_scored.json",
+    "data/machine2_c32_higher_coeffs.out",
+    "data/machine2_c32_transfer.out",
+    "data/machine2_c34_dstar_refine.out"
+   ],
+   "arm1_bare_files": [
+    "data/heat51f_partB_gate.out",
+    "data/m2_c37_published_constants_census.tsv",
+    "data/m2_c38_score2.out",
+    "data/machine2_c31b_scored.json",
+    "data/machine2_c32_higher_coeffs.out",
+    "data/machine2_c32_transfer.out",
+    "data/machine2_c34_dstar_refine.out"
+   ],
+   "marker_M1_value_adjacent": true,
+   "marker_M2_directory_level": true,
+   "marker_M2_wide": true,
+   "arm2_carrier": true,
+   "arm2_literals": 96
+  },
+  {
+   "directory": "data/c28resp",
+   "files": 16,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine2": 16
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": true,
+   "arm2_literals": 5
+  },
+  {
+   "directory": "data/c42",
+   "files": 13,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine2": 13
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": true,
+   "arm2_literals": 2
+  },
+  {
+   "directory": "data/c42/runs",
+   "files": 24,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine2": 24
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": false,
+   "arm2_literals": 0
+  },
+  {
+   "directory": "data/c43",
+   "files": 18,
+   "lane": "machine2",
+   "lane_counts": {
+    "other": 2,
+    "machine2": 16
+   },
+   "arm1_carrier": true,
+   "arm1_dead_literals": [
+    "3.720899741667123935791434766094540694091385619140619529059414458909564478140552097595690637495444086e-59",
+    "3.72089974166712393579143476609454069409138561914061952905941e-59"
+   ],
+   "arm1_carrier_files": [
+    "data/c43/00-ERRATUM-22-READ-FIRST.md",
+    "data/c43/README.md",
+    "data/c43/c43_widen.out",
+    "data/c43/c43_x13_N100_dps150_widened.ERRATUM-22.json",
+    "data/c43/c43_x13_N100_dps150_widened.json"
+   ],
+   "arm1_bare_files": [
+    "data/c43/c43_x13_N100_dps150_widened.json"
+   ],
+   "marker_M1_value_adjacent": true,
+   "marker_M2_directory_level": true,
+   "marker_M2_wide": true,
+   "arm2_carrier": true,
+   "arm2_literals": 1
+  },
+  {
+   "directory": "data/c44",
+   "files": 5,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine2": 5
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": true,
+   "arm2_literals": 1
+  },
+  {
+   "directory": "data/code",
+   "files": 356,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine3": 91,
+    "other": 10,
+    "machine2": 174,
+    "machine1": 81
+   },
+   "arm1_carrier": true,
+   "arm1_dead_literals": [
+    "1.64521001744e-15",
+    "2.9078e9",
+    "7.18811e-133"
+   ],
+   "arm1_carrier_files": [
+    "data/code/m2_c38_score2.py",
+    "data/code/machine1_l171_c31v_f_attack.out",
+    "data/code/machine1_l171_c31v_f_attack.py"
+   ],
+   "arm1_bare_files": [
+    "data/code/m2_c38_score2.py",
+    "data/code/machine1_l171_c31v_f_attack.out",
+    "data/code/machine1_l171_c31v_f_attack.py"
+   ],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": true,
+   "marker_M2_wide": true,
+   "arm2_carrier": true,
+   "arm2_literals": 31
+  },
+  {
+   "directory": "data/code/m3_L177_build",
+   "files": 7,
+   "lane": "machine3",
+   "lane_counts": {
+    "machine3": 7
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": false,
+   "arm2_literals": 0
+  },
+  {
+   "directory": "data/code/m3_L177_build/results",
+   "files": 7,
+   "lane": "machine3",
+   "lane_counts": {
+    "machine3": 7
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": false,
+   "arm2_literals": 0
+  },
+  {
+   "directory": "data/m1",
+   "files": 7,
+   "lane": "machine1",
+   "lane_counts": {
+    "machine1": 7
+   },
+   "arm1_carrier": false,
+   "arm1_dead_literals": [],
+   "arm1_carrier_files": [],
+   "arm1_bare_files": [],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": false,
+   "arm2_literals": 0
+  },
+  {
+   "directory": "data/m2_L179",
+   "files": 27,
+   "lane": "machine2",
+   "lane_counts": {
+    "machine2": 27
+   },
+   "arm1_carrier": true,
+   "arm1_dead_literals": [
+    "3.720899741667123935791434766094540694091385619140619529059414458909564478140552097595690637495444086e-59",
+    "3.72089974166712393579143476609454069409138561914061952905941e-59"
+   ],
+   "arm1_carrier_files": [
+    "data/m2_L179/README.md",
+    "data/m2_L179/cell_A.json",
+    "data/m2_L179/cell_B.json",
+    "data/m2_L179/cell_C.json",
+    "data/m2_L179/cell_D.json",
+    "data/m2_L179/cell_F.json",
+    "data/m2_L179/cell_G.json",
+    "data/m2_L179/cell_H.json",
+    "data/m2_L179/cell_I.json",
+    "data/m2_L179/m2_L179_compare.py"
+   ],
+   "arm1_bare_files": [
+    "data/m2_L179/cell_A.json",
+    "data/m2_L179/cell_B.json",
+    "data/m2_L179/cell_C.json",
+    "data/m2_L179/cell_D.json",
+    "data/m2_L179/cell_F.json",
+    "data/m2_L179/cell_G.json",
+    "data/m2_L179/cell_H.json",
+    "data/m2_L179/cell_I.json",
+    "data/m2_L179/m2_L179_compare.py"
+   ],
+   "marker_M1_value_adjacent": true,
+   "marker_M2_directory_level": true,
+   "marker_M2_wide": true,
+   "arm2_carrier": true,
+   "arm2_literals": 3
+  },
+  {
+   "directory": "data/results",
+   "files": 9,
+   "lane": "machine3",
+   "lane_counts": {
+    "machine3": 5,
+    "machine2": 4
+   },
+   "arm1_carrier": true,
+   "arm1_dead_literals": [
+    "7.18811e-133"
+   ],
+   "arm1_carrier_files": [
+    "data/results/machine2_c36_dstar_fullprec.out"
+   ],
+   "arm1_bare_files": [
+    "data/results/machine2_c36_dstar_fullprec.out"
+   ],
+   "marker_M1_value_adjacent": false,
+   "marker_M2_directory_level": false,
+   "marker_M2_wide": false,
+   "arm2_carrier": true,
+   "arm2_literals": 1
+  }
+ ]
+}

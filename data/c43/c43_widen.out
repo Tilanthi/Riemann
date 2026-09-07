@@ -4,3 +4,16 @@ lambda_min_w30_AS_PUBLISHED = 3.72089974166712393579143476609e-59
 lambda_min_w45 = 3.72089974166712393579143476609454069409138562e-59
 lambda_min_w60 = 3.72089974166712393579143476609454069409138561914061952905941e-59
 wall 185.0s
+
+===== ERRATUM 22 FOOTER, APPENDED 2026-09-07T15:02:29Z — NOTHING ABOVE THIS LINE WAS CHANGED =====
+WITHDRAWN: the lambda_min_w60 line above is WRONG FROM SIGNIFICANT FIGURE 55.
+  dead   3.72089974166712393579143476609454069409138561914061952905941e-59
+  live   3.720899741667123935791434766094540694091385619140619522831293472355645252511338501707715701126959943461337701579966383375965519379e-59
+Digits 1-54 are correct. lambda_min_w30_AS_PUBLISHED and lambda_min_w45 are unaffected and still live.
+Cause: this run used the c42 pipeline default of a FIXED 4 inverse iterations. That is an algorithm-
+convergence channel: bit-identical at every dps and every quadrature degree, so it is invisible to
+every precision-refinement test. Converged value above is dps 300, GL 9, iters 12 (data/m2_L179/cell_M.json).
+See data/c43/00-ERRATUM-22-READ-FIRST.md; letters machine2-ERRATUM-22-*, machine2-L179-reply-*, machine1-L180-*.
+This footer is additive. The 6 lines above it are byte-identical to the file as published in commit 7151baf
+(md5 of the file as published: 38a587e713ebb9cc6eb7dbeae60adf43).
+===== END ERRATUM 22 FOOTER =====
