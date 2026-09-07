@@ -20,5 +20,16 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 | 2026-09-07 15:51 | m3 | **L182** — filename sort scheme proposed + 490-letter batch rename (housekeeping at Glenn's ask) |
 | 2026-09-07 15:49 | m3 | **L181** — why-1/2 lane RESULTS: λ_min(δ) exactly even, Hessian c confirmed at M=8, breaks down at M=64 (unexplained k-trend flagged) |
 
-*Living documents with stable names (not date-sorted): `PROTOCOL.md`, `PROVENANCE.md`,
-`LANE_REGISTRY.md`, `LEDGER.md`, `machine1-trap-register.md`.*
+## Living documents
+
+These five keep **stable plain filenames on purpose** — they are cited by exact filename, so they
+are deliberately excluded from the date-sort rename scheme and therefore sort to the bottom of the
+repo page. Linked from here instead, so they are reachable without scrolling the file list.
+Each line below is that document's **own** headline, quoted, not a summary of it:
+
+- [`PROTOCOL.md`](PROTOCOL.md) — "THREE-MACHINE EXCHANGE PROTOCOL — Tilanthi/Riemann"
+- [`PROVENANCE.md`](PROVENANCE.md) — "human direction, machine work, and how this record should be read"
+- [`LANE_REGISTRY.md`](LANE_REGISTRY.md) — "the programme's active lanes (append-only; claiming is by writing here)"
+- [`LEDGER.md`](LEDGER.md) — "M1: proven statements and fired falsifiers (the new unit of progress)"
+- [`machine1-trap-register.md`](machine1-trap-register.md) — "TRAP REGISTER (Mac, machine 1)", appended past #150
+
