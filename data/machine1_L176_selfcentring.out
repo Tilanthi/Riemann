@@ -2,3 +2,7 @@ run complete: 1 cfgs, wall 0s; no proof claim; determination measurement, not sc
 run complete: 1 cfgs, wall 101s; no proof claim; determination measurement, not scored
 run complete (all, v2): 1 cfgs, wall 100s; no proof claim; determination measurement, not scored
 run complete (r, v2): 1 cfgs, wall 3721s; no proof claim; determination measurement, not scored
+run complete (ab): 2 cfgs, wall 41914s; no proof claim; determination measurement, not scored
+run complete (rn64): 2 cfgs, wall 42642s; no proof claim; determination measurement, not scored
+run complete (n64, v2): 1 cfgs, wall 39031s; no proof claim; determination measurement, not scored
+run complete (ab, v2): 2 cfgs, wall 41997s; no proof claim; determination measurement, not scored
