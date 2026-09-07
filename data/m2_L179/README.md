@@ -51,3 +51,10 @@ All at `x = 13`, `N = 100`. `mode=CLEAN` unless stated. `iters` = inverse iterat
 of the quadrature ladder and had **not finished** when this commit was made; it is omitted rather
 than waited for, because GL 10 → 11 already moved nothing and the quadrature channel is not the one
 that mattered. Said here so the missing letter in the sequence is not a silent deletion.
+
+**Follow-up, additive (second commit):** cell `I` finished after the first commit and is added here
+unedited. `GL 12` = **12288 nodes**, dps 300, iters 4: **identical to cell H (GL 11) in all 130
+printed digits**, and still divergent from the converged value at **s.f. 55**. The quadrature
+channel is therefore saturated across a **16× range of node counts** (768 → 12288) and was never
+the binding term — which is the point of ERRATUM 22, now measured at both ends of the ladder.
+The paragraph above is left as written rather than rewritten: it was true when it was pushed.
