@@ -1,0 +1,78 @@
+== KNOWN-ANSWER TEST OF THIS INSTRUMENT (runs first)   9/9
+   PASS K1 the byte-identical c43 JSON is SIBLING-covered (00-ERRATUM-22-READ-FIRST.md names it) (EXTERNAL ground truth: m1-L181 sec 3(3) ruled this exact case correct)
+   PASS K2 v2 calls that same file BARE (the class v2 cannot express)                  (the defect being repaired)
+   PASS K3 a synthetic absent literal is covered nowhere                               (synthetic negative)
+   PASS K4 the LIVE 130 s.f. value is not in any erratum's dead list                   (an all-DEAD classifier fails here)
+   PASS K5 m1's own footered file reads ADJACENT, not merely MARKER                    (m1's footers are value-adjacent; positive control on ADJACENT)
+   PASS K6 token matching does not report the live 26-digit a3 as the dead 9-digit a3  (the prefix trap, carried over from v2 K8)
+   PASS K7 substring trap: 103.72 inside the ordinate 103.7255380404 is NOT a carrier  (v3 draft 1 failed this and invented 20 false triples)
+   PASS K8 marker-file index is non-empty and derived by filename rule, not by hand    (a sibling detector with no sibling index is vacuous)
+   PASS K9 this instrument excludes itself and v2 from the scanned corpus              (c41: exclude your own output AND source)
+
+== PER-OCCURRENCE COVERAGE, value-naming errata only
+   file                                                           v3        v2          occ   out    in
+   ERRATUM 3   dead literal 1.7499
+      data/heat51f_partB_gate.out                                    MARKER    LABELLED      3     1     2
+      data/heat51f_partB_gate.py                                     ADJACENT  LABELLED      1     1     0
+      data/m2_c38_testimony_classified.tsv                           ADJACENT  LABELLED      1     1     0
+   ERRATUM 13  dead literal 1.64521001744e-15
+      data/code/machine1_l171_c31v_f_attack.out                      ADJACENT  LABELLED      2     2     0
+      data/code/machine1_l171_c31v_f_attack.py                       ADJACENT  LABELLED      1     1     0
+      data/m2_c37_published_constants_census.ERRATUM-13.md           ADJACENT  LABELLED      3     3     0
+      data/m2_c37_published_constants_census.tsv                     SIBLING   BARE          1     1     0
+      data/machine2_c31b_scored.ERRATUM-13.md                        ADJACENT  LABELLED      2     2     0
+      data/machine2_c31b_scored.json                                 SIBLING   BARE          1     1     0
+   ERRATUM 17  dead literal 20.4755387553904124991788
+      data/machine2_c32_higher_coeffs.out                            MARKER    LABELLED      3     1     2
+   ERRATUM 19  dead literal 7.18811e-133
+      data/code/m2_c38_score2.py                                     MARKER    LABELLED      3     1     2
+      data/m2_c38_score2.out                                         MARKER    LABELLED      3     1     2
+      data/machine2_c34_dstar_refine.out                             MARKER    LABELLED      3     1     2
+      data/results/machine2_c36_dstar_fullprec.out                   MARKER    LABELLED      3     1     2
+   ERRATUM 20  dead literal 2.9078e9
+      data/code/machine1_l171_c31v_f_attack.out                      ADJACENT  LABELLED      2     2     0
+      data/code/machine1_l171_c31v_f_attack.py                       ADJACENT  LABELLED      3     3     0
+      data/machine2_c32_transfer.out                                 MARKER    LABELLED      4     2     2
+   ERRATUM 22  dead literal 3.72089974166712393579143476609454069409138561914061...
+      data/c43/00-ERRATUM-22-READ-FIRST.md                           ADJACENT  LABELLED      1     1     0
+      data/c43/README.md                                             ADJACENT  LABELLED      1     1     0
+      data/c43/c43_widen.out                                         ADJACENT  LABELLED      2     2     0
+      data/c43/c43_x13_N100_dps150_widened.ERRATUM-22.json           ADJACENT  LABELLED      1     1     0
+      data/c43/c43_x13_N100_dps150_widened.json                      SIBLING   BARE          1     1     0
+      data/m2_L179/00-ERRATUM-22-CELL-CARRIERS-READ-FIRST.md         ADJACENT  LABELLED      1     1     0
+      data/m2_L179/README.md                                         ADJACENT  LABELLED      1     1     0
+      data/m2_L179/cell_A.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_B.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_C.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_D.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_F.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_G.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_H.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/cell_I.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/m2_L179_compare.py                                MARKER    LABELLED      2     1     1
+   ERRATUM 22  dead literal 3.72089974166712393579143476609454069409138561914061...
+      data/c43/00-ERRATUM-22-READ-FIRST.md                           ADJACENT  LABELLED      1     1     0
+      data/c43/c43_x13_N100_dps150_widened.ERRATUM-22.json           ADJACENT  LABELLED      1     1     0
+      data/c43/c43_x13_N100_dps150_widened.json                      SIBLING   BARE          1     1     0
+      data/m2_L179/00-ERRATUM-22-CELL-CARRIERS-READ-FIRST.md         ADJACENT  LABELLED      1     1     0
+      data/m2_L179/cell_A.json                                       SIBLING   BARE          1     1     0
+      data/m2_L179/m2_L179_compare.py                                MARKER    LABELLED      1     0     1
+
+== ANSWER, with the denominator named
+   carrier (erratum, literal, file) triples in the data corpus : 39
+      ADJACENT   17
+      SIBLING    13
+      MARKER      9
+      BARE        0
+   the three coverage booleans, counted independently of the precedence collapse:
+      adjacent          17
+      in_file_marker     9
+      sibling           21
+   triples BARE under v3                                       : 0
+   v2 would report BARE for                                    : 13
+   OCCURRENCES still unlabelled outside any marker block, in
+   files whose only marker is an EOF block or nothing at all   : 9
+
+   READING: an ADJACENT or SIBLING triple is marked in the sense m1 ruled. A MARKER triple
+   is marked in the sense v2 measures and NOT in the sense a reader experiences, because the
+   original occurrence is still bare where it sits. BARE is unmarked in every sense.

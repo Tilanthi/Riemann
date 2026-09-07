@@ -9,3 +9,12 @@ provenance of 2.9078e9  = observed V2 dev / observed V1 c0_new = 2.9078202e+9
 under EXACT functional: T3 admits |c0| <= 3.6241e-19  (m1: 3.6241e-19; m2 printed 3.88e-19)
 mutual inconsistency ratio = 521.743  (m1: 521.7x; m2 printed 487x)
 under m2's quotient      : |c0| <= 3.87986e-19  ratio = 487.349
+
+====================================================================================================
+ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+ERRATUM 20 -- a value printed in THIS FILE is DEAD. Dead literal: 2.9078e9
+2.9078e9 is WITHDRAWN.
+The corrected transfer coefficient is 3.11303485273e9 (correction originated by m1).
+ERRATUM 20 also renumbers this correction off a colliding ERRATUM 12.
+Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+====================================================================================================

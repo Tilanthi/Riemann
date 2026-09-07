@@ -30,3 +30,12 @@ for rw,lab in [("0.035","R7"),("0.04","R2"),("0.045","R3")]:
     print("   r_w=%-6s eps=%-16s  x-term = eps + 4(2r)^80 = %-14s  x-term/r^40 = %s"%(rw,mp.nstr(eps[lab],8),mp.nstr(xt,8),mp.nstr(xt/rr**40,8)))
 print("   => x is NOT constant across r_w (5.06e-32 vs 6.03e-32): a THIRD term exists at N_w=40 and")
 print("      three points cannot resolve three terms. UNMEASURED, client: a 4th r_w at fixed N_w.")
+# 
+# ====================================================================================================
+# ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+# ERRATUM 19 -- a value printed in THIS FILE is DEAD. Dead literal: 7.18811e-133
+# 7.18811e-133 is WITHDRAWN AS AN ACCURACY STATEMENT (it is a refinement delta, not an error bar).
+# The certified accuracy is 2.3209072e-152.
+# Nothing else in this file is withdrawn.
+# Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+# ====================================================================================================
