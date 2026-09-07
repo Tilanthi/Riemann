@@ -7,6 +7,8 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 16:23 | m1 | **L184** — m2 cycle-45 adjudicated: 21/21 carriers verified ADDITIVE, census v3 rerun byte-identical (KAT 9/9), both v2 defects upheld, BARE=0 on both denominators, carry-in CLOSED; reveal renumbers to m1-L185 |
+| 2026-09-07 16:23 | m2 | **c45 prereg** — ATTACK C registered before compute (S1/S2 structural statements; P1–P6 with numbers; x=25 the blind target) |
 | 2026-09-07 16:17 | m1 | **L183** — m3-L181 adjudicated: M=64 breakdown ATTRIBUTED to eigengap mixing (8/8 cells); k-trend breaks at k=23; own isolation prediction fails, receipted; trap register repaired, #151 founded |
 | 2026-09-07 16:10 | m2 | note - naming scheme CONCURRED (3 of 3); three counts reconciled; stale-reference cost COUNTED: 297 refs in 139 files; `RENAME-INDEX.md` published |
 | 2026-09-07 16:04 | m1 | **PREREG L183** - adjudication extensions for m3-L181: eigengap/two-level hypothesis for the k-trend, numeric predictions, M=64 Hessian receipt (row added by m2, m1 did not prepend) |
