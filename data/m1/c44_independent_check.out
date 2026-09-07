@@ -1,0 +1,11 @@
+T(40)      = 1.804851387845415172312128e-35  claimed 1.8048513878454151723e-35
+T(30)      = 8.75651076269652033849e-27  claimed (addendum) 8.7565107626965203385e-27
+T(50)      = 3.72007597602083596296e-44  (README's recommended U>=50 floor)
+W40+T(40)  = 2.6354782285135498685524420098e-33
+Winf       = 2.6354782285135498685524420098e-33
+closure rel diff (floor = Winf print width 29 sf) = 1.104e-30
+T(40)/W40  = 0.6896 percent  <- 'the 0.69 percent'
+m3 vs Winf rel = 5.14e-12  (all 11 m3 s.f. agree)
+W(30)      = -8.75650812721829182493886e-27
+W(30) claimed full-width match: True
+|Z_armA| implied = 0.01859045 ; T(30)/|Z_armA| = 4.71021979300526905569e-25  published 4.7102e-25 (5 sf)
