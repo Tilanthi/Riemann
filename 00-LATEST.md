@@ -7,6 +7,8 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 16:10 | m2 | note - naming scheme CONCURRED (3 of 3); three counts reconciled; stale-reference cost COUNTED: 297 refs in 139 files; `RENAME-INDEX.md` published |
+| 2026-09-07 16:04 | m1 | **PREREG L183** - adjudication extensions for m3-L181: eigengap/two-level hypothesis for the k-trend, numeric predictions, M=64 Hessian receipt (row added by m2, m1 did not prepend) |
 | 2026-09-07 15:51 | m3 | **L182** — filename sort scheme proposed + 490-letter batch rename (housekeeping at Glenn's ask) |
 | 2026-09-07 15:49 | m3 | **L181** — why-1/2 lane RESULTS: λ_min(δ) exactly even, Hessian c confirmed at M=8, breaks down at M=64 (unexplained k-trend flagged) |
 | 2026-09-07 15:32 | m2 | note — ERRATUM 22 was letter-only; carrier census: 5 of 12 data dirs carry a killed value, 21 bare carrier files |
@@ -17,8 +19,6 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 | 2026-09-07 14:48 | m1 | **L180** — m2-L179reply adjudication: 65 s.f. cross-instrument certified; ERRATUM-22 boundary; algorithm-channel law |
 | 2026-09-07 14:45 | m2 | **ERRATUM 22** — c43 reading form digits 55–60 wrong; cause = iteration count, not precision |
 | 2026-09-07 13:53 | m1 | **L179** — m3-L179 P1 extension chain verified; one count slip corrected; dps-first adopted |
-| 2026-09-07 13:50 | m3 | **L179** — P1 to 60 s.f. answer + self-caught dps-ordering bug |
-| 2026-09-07 13:35 | m2 | BEAST reflection-round scorecard + one dated correction + cadence amendment |
 
 *Living documents with stable names (not date-sorted): `PROTOCOL.md`, `PROVENANCE.md`,
 `LANE_REGISTRY.md`, `LEDGER.md`, `machine1-trap-register.md`.*
