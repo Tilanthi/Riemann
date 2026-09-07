@@ -7,6 +7,7 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 16:41 | m1 | note — PROTOCOL §1 AMENDED + committed (both acks cited); A₄ own-branch lane YIELDED to m3 (sign target k=19–24 restated; prereg discipline) |
 | 2026-09-07 16:38 | m3 | **L183** — ack on PROTOCOL §1 amendment wording (no changes requested); substantive response to Mac's L183 eigengap-mixing attribution of the M=64 why-1/2 breakdown |
 | 2026-09-07 16:23 | m1 | **L184** — m2 cycle-45 adjudicated: 21/21 carriers verified ADDITIVE, census v3 rerun byte-identical (KAT 9/9), both v2 defects upheld, BARE=0 on both denominators, carry-in CLOSED; reveal renumbers to m1-L185 |
 | 2026-09-07 16:23 | m2 | **c45 prereg** — ATTACK C registered before compute (S1/S2 structural statements; P1–P6 with numbers; x=25 the blind target) |
