@@ -1,0 +1,129 @@
+======================================================================================================
+c44 -- data/c42/README.md section 7A arm B, REPUBLISHED WIDE ENOUGH TO BE FALSIFIABLE
+======================================================================================================
+CONVENTION (verbatim from c42_weil.py, unchanged):
+  W(g) = h(i/2)+h(-i/2) - g(0) log(pi) + (1/2pi) INT h(r) Re psi(1/4+ir/2) dr
+         - 2 SUM_{n>=2} Lambda(n) n^{-1/2} g(log n)
+  arm B: g(t) = exp(-t^2/2)  [s=1],  h(r) = sqrt(2 pi) exp(-r^2/2)
+  POLE  channel: INT_{-U}^{+U} g(t)(e^{t/2}+e^{-t/2}) dt
+  ARCH  channel: -g(0)(log pi + gammaE) + 2 INT_0^U [e^{-2t}g(0) - e^{-t/2}g(t)]/(1-e^{-2t}) dt
+  PRIME channel: -2 SUM_{n <= nmax} Lambda(n) n^{-1/2} g(log n)
+  THREE knobs: U (archimedean cutoff), nmax (prime cutoff), dps (working precision).
+
+------------------------------------------------------------------------------------------------------
+KAT-C1  known-answer control -- reproduce the five published arm-B literals at the
+        PUBLISHED configuration dps=50, nmax=300000, U=40
+------------------------------------------------------------------------------------------------------
+   pole  published 5.68076390362                    recomputed 5.68076390362                    MATCH
+   arch  published -2.9987965098                    recomputed -2.9987965098                    MATCH
+   prime published -2.68196739383                   recomputed -2.68196739383                   MATCH
+   W     published 2.617429714635e-33               recomputed 2.617429714635e-33               MATCH
+   Z     published 2.070970413701769232754477e-43   recomputed 2.070970413701769232754477e-43   MATCH
+   KAT-C1: PASS -- 5/5, this file measures the object the artefact published
+
+------------------------------------------------------------------------------------------------------
+1. THE REPUBLICATION -- the published configuration, at 60 s.f. (dps 180)
+------------------------------------------------------------------------------------------------------
+   pole  = 5.68076390362337220081537235074368133790131864408074002328895
+   arch  = -2.99879650979646206429255896968442542071371164599795476802432
+   prime = -2.68196739382691013652281338105925329975789236298706842594390
+   ---------------------------------------------------------------------
+   W     = 2.61742971463509571682932072620940815728346026314942246686866e-33
+   Z     = 2.07097041370176923275447729620566694422732812448605620037456e-43
+
+   Three inputs at 60 s.f. against a cancellation depth of 33 => W is reconstructible
+   from the printed inputs alone to ~26 s.f., by anyone, with no code of ours.
+
+------------------------------------------------------------------------------------------------------
+2. KAT-C2 -- working precision is INERT (the null, printed because it is the null)
+------------------------------------------------------------------------------------------------------
+   dps=70    W = 2.61742971463509571682932072621e-33
+   dps=110   W = 2.61742971463509571682932072621e-33
+   dps=150   W = 2.61742971463509571682932072621e-33
+   dps=200   W = 2.61742971463509571682932072621e-33
+   => the residual is a TRUNCATION artefact, not a precision artefact. dps is not a knob here.
+
+------------------------------------------------------------------------------------------------------
+3. KAT-C3 -- the archimedean cutoff U, VARIED ALONE and DECOMPOSED PER CHANNEL
+------------------------------------------------------------------------------------------------------
+   U      pole(U) - pole(40)         arch(U) - arch(40)         W(U)
+   20     -3.11823691181e-84         -4.24835425529e-18         -4.24835425529158636887526e-18
+   30     0.0                        -8.75651074465e-27         -8.75650812721829182493886e-27
+   40     0.0                        0.0                        2.61742971463509571682932e-33
+   50     0.0                        1.80485138413e-35          2.63547822847634910879223e-33
+   60     0.0                        1.80485138785e-35          2.63547822851354986847577e-33
+   80     0.0                        1.80485138785e-35          2.63547822851354986855244e-33
+   120    0.0                        1.80485138785e-35          2.63547822851354986855244e-33
+   200    0.0                        1.80485138785e-35          2.63547822851354986855244e-33
+
+   READ: the POLE channel is exactly inert (difference 0.0 at every U tested -- its
+   integrand is g(t)e^{t/2} ~ e^{-t^2/2+t/2}, dead long before t=20). The ENTIRE U
+   dependence sits in the ARCH channel, whose integrand tends to e^{-2t}, not to zero
+   super-exponentially. That is the coefficient-bearing attribution c34 asks for.
+
+------------------------------------------------------------------------------------------------------
+4. KAT-C4 -- CLOSED FORM for the arch truncation, and its known-answer test
+------------------------------------------------------------------------------------------------------
+   For t large, g(t)=e^{-t^2/2} is negligible and the arch integrand -> e^{-2t}/(1-e^{-2t}).
+   The exact tail discarded by cutting at U is
+       T(U) = 2 INT_U^inf e^{-2t}/(1-e^{-2t}) dt = -log(1 - e^{-2U})   [substitute u=e^{-2t}]
+   so  arch(U) = arch(inf) - T(U)  and  W(U) = W(inf) - T(U),  T(U) ~ e^{-2U}.
+
+   U      measured W(U)-W(40)            predicted T(40)-T(U)           rel. error
+   20     -4.248354255291589e-18         -4.248354255291589e-18         7.33987e-67
+   30     -8.756510744648006e-27         -8.756510744648006e-27         3.58575e-155
+   40     0.0                            0.0                            exact 0
+   50     1.804851384125339e-35          1.804851384125339e-35          2.96282e-146
+   60     1.804851387845415e-35          1.804851387845415e-35          4.92575e-147
+   80     1.804851387845415e-35          1.804851387845415e-35          1.1865e-146
+   120    1.804851387845415e-35          1.804851387845415e-35          1.00006e-146
+   200    1.804851387845415e-35          1.804851387845415e-35          1.00006e-146
+
+   KAT-C4 PASS => the diagnostic itself is known-answer tested: the U-error is not a
+   fitted table, it is -log(1-e^{-2U}) and a third party inverts their own deviation
+   analytically. T(40) = 1.8048513878454151723e-35
+
+------------------------------------------------------------------------------------------------------
+5. LOCATING m3's 0.69 PERCENT DEVIATION -- and the direction it points
+------------------------------------------------------------------------------------------------------
+   BEAST published, U=40    W = 2.61742971463509571682932072621e-33
+   m3-L177                  W = 2.6354782285e-33
+   BEAST recomputed, U->inf W = 2.63547822851354986855244200978e-33
+
+   m3 - BEAST(U=40)           = 1.80485138649e-35   (0.689551% of ours)
+   T(40) = the tail we dropped = 1.80485138785e-35
+   m3 vs BEAST(U->inf)        = agree to 11 s.f. -- m3's number IS the converged value
+
+   => THE 0.69 PERCENT IS OURS, NOT m3's. m3's arm-B value is correct and our published one is
+      under-converged by exactly one analytically known term, T(40) = e^{-80}(1+O(e^{-80})).
+      m3 reported fixing 'a truncated-integration-range bug in KAT-1 arm B' -- that is the
+      same defect diagnosed from the other side, and their fix was right.
+
+------------------------------------------------------------------------------------------------------
+6. KAT-C5 -- the prime cutoff nmax, varied alone at U -> converged, and the real question
+------------------------------------------------------------------------------------------------------
+   nmax      W(nmax), U converged           W/Z
+   50000     1.632127162761772578906e-24    7.88097769e+18
+   100000    9.350829034534313481092e-28    4.515191995e+15
+   200000    3.366328183163726685265e-31    1.625483474e+12
+   300000    2.635478228513549868552e-33    1.272581303e+10
+   400000    7.449813360639966346758e-35    359725726.2
+   600000    4.377505798630405189305e-37    2113746.179
+   1000000   5.365007797180999619981e-40    2590.576747
+   1500000   2.365543210372110874225e-42    11.42239017
+   2000000   2.463200288346653135497e-43    1.189394243
+   3000000   2.072168398966498325733e-43    1.000578466
+   Z         2.070970413701769232754e-43    1.0
+
+   READ THIS, IT IS THE POINT OF THE WHOLE FILE: the published residual 2.617e-33 is not
+   a measure of how well the explicit formula closes. It is ~10 orders ABOVE Z, and it
+   falls monotonically as the prime cutoff rises. At nmax = 300000 the number is, to its
+   leading digit, THE PRIME-SUM TRUNCATION TAIL. Two implementations agreeing on it are
+   agreeing about where they stopped summing and where they cut their quadrature -- not
+   about their formulas. What arm B genuinely certifies is what section 7A claims for it in
+   words -- 'a sign or constant error anywhere shows up as an O(1) residue' -- i.e. it is a
+   detector with an O(1) threshold, and its residual DIGITS were never evidence of anything.
+
+   Elapsed: 28.6 s
+
+No proof claim. Standing sentence unchanged: we have no route to a proof.

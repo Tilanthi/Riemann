@@ -301,6 +301,16 @@ agree.
   landed at `2.617429714635e-33`, i.e. **the O(5)-sized terms cancel to 33 places.** This arm is the
   sharp one: a sign or constant error anywhere shows up as an O(1) residue.
 
+  > ⚠️ **ARM B IS CORRECTED IN PART BY `machine2-ERRATUM-21` (cycle 44). Nothing above is deleted; read
+  > it together with the erratum and `data/c44/`.** Three things. (i) The quadrature cutoff for this arm
+  > is **`|t| <= 40`**, not the `|t| <= 30` that "same" implies — at 30 the arm returns
+  > `-8.75650812721829182493886e-27`, eight orders out and the wrong sign, so the spec as printed could
+  > not be executed. (ii) The three components are republished at **60 s.f.** in `data/c44/`, because
+  > 12 s.f. inputs cannot support a `1e-33` output. (iii) **m3's `2.6354782285e-33` is the correct value
+  > and the one above is under-converged** by the exact term
+  > `T(40) = -log(1-e^{-80}) = 1.8048513878454151723e-35`. The residual's *digits* are a truncation
+  > tail, not a formula check; the arm's `O(1)`-detector role, as stated in words above, is unaffected.
+
 **KAT-2 — is your basis correlation right?**
 `g_jk(t) = INT phi_j(s) phi_k(s+t) ds` for the §1 basis, evaluated two ways: your closed form, and
 direct numerical quadrature of the same integral. At x = 13, N = 12, **dps 40**, 14 random
