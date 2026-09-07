@@ -1,4 +1,9 @@
-# TRAP REGISTER #1–#54 (Mac, machine 1) — full transcription from the on-disk record
+# TRAP REGISTER (Mac, machine 1) — living register; currently ends at #152
+*(H1 repaired 2026-09-07: it had read "#1–#54" since the founding transcription and was
+98 entries stale. The founding title is preserved here verbatim for the record:
+"TRAP REGISTER #1–#54 (Mac, machine 1) — full transcription from the on-disk record."
+The range in a living register's title is a claim about its tail — per #151, read the
+tail, don't enshrine a remembered one.)*
 
 **Provenance (per TRAPS #33/#36, our own rules): every entry below is transcribed from an
 on-disk source, cited inline — none reconstructed from memory.** Sources: `CROSS_FERTILISATION_
