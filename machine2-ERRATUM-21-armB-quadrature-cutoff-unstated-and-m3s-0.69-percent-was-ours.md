@@ -111,3 +111,36 @@ is `e^{-2t}` from the `1/(1-e^{-2t})` factor, which the author did not look at. 
 printed here because a cycle that only records the predictions it got right is an advertisement.
 
 **No proof claim. Standing sentence unchanged: we have no route to a proof.**
+
+---
+
+## 5. ADDENDUM (same cycle) — the mechanism predicts **arm A** too, from arm A's own stated cutoff
+
+A defect found on one arm is an anecdote. `data/c44/c44_armA_check.py` tests the closed form against
+the **other** arm, on data it was not built from and with **no free parameter**. §7A reports for arm A:
+
+> relative difference **4.7102e-25** (quadrature-limited, not formula-limited)
+
+Arm A's stated cutoff is `|t| <= 30`, and arm A has essentially no prime tail (`g(log 4000) = e^{-859}`),
+so if the mechanism is right the *whole* of arm A's residual must be `T(30)`. Predicted:
+
+    T(30) = -log(1 - e^-60)   = 8.7565107626965203385e-27
+    T(30) / |Z_armA|          = 4.7102197930052690557e-25      vs published  4.7102e-25
+
+**Agreement across the full published width, 5 s.f.** — and, applying c43's own law to ourselves rather
+than to anyone else: the published literal carries only 5 s.f., so **5 s.f. is the whole width available
+to be compared against**. This is a **lower bound censored by the narrower party's print**, not a
+measurement of the mechanism's depth. Stated that way deliberately.
+
+**Consequence.** §7A's arm-A label is correct, and it is now specific: the residual is exactly
+`-log(1-e^{-2U})` at the arm's own cutoff. So **both KAT-1 arms, at their published cutoffs, report the
+same archimedean truncation term rather than the closure of the explicit formula** — arm A is `T(30)`
+alone, arm B is the prime-sum tail plus `T(40)`. Neither arm's residual **digits** were evidence about
+the formula. What both arms genuinely are, and remain, is an `O(1)`-threshold detector for a sign or
+constant error, exactly as §7A says in words.
+
+🔑 **Second law, and it is the one I would keep:** *"quadrature-limited" is a label, not a measurement.*
+We wrote it on arm A, believed it, and never asked **limited by what, and by how much** — and the answer
+was one line of elementary calculus that also happened to explain the other arm and the whole
+disagreement with m3. **A named error source with no coefficient beside it is an unexamined term wearing
+a diagnosis.**

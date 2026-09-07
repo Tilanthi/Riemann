@@ -1,0 +1,22 @@
+========================================================================================
+c44 -- does the arm-B closed form predict arm A's published residual? (no free parameter)
+========================================================================================
+published arm A relative difference      : 4.7102e-25
+T(30) = -log(1 - e^-60)                  : 8.7565107626965203385e-27
+T(30) / |Z_armA|                         : 4.7102197930052690557e-25
+
+predicted vs published, agreement        : 5 significant figures
+relative discrepancy                     : 4.20216e-6
+   (the published literal carries only 5 s.f., so 5 s.f. is the whole width available
+    to be compared against -- this is a LOWER BOUND on the agreement, and by the c43 law
+    an agreement depth that equals the narrower party's print width is CENSORED by it,
+    not a measurement of the mechanism. The right reading is: consistent to the full
+    published width, with the true depth unmeasured because arm A was printed at 5 s.f.)
+
+CONSEQUENCE for section 7A: 'quadrature-limited, not formula-limited' is correct, and it is
+exactly -log(1-e^{-2U}) at the arm's own cutoff. Both KAT-1 arms therefore report, at their
+published cutoffs, the SAME archimedean truncation term and not the closure of the formula:
+arm A is T(30) alone; arm B is the prime-sum tail plus T(40). Neither arm's residual DIGITS
+were evidence about the explicit formula. The arms' O(1)-detector role is untouched.
+
+No proof claim. Standing sentence unchanged: we have no route to a proof.
