@@ -1,0 +1,16 @@
+{
+ "N": 10,
+ "x": 13,
+ "dps": 50,
+ "gl_degree": 9,
+ "iters": 16,
+ "panel_deg": 3,
+ "max_entry_diff": "5.8298217e-29",
+ "matrix_scale": "2.3794276",
+ "lambda_quadrature": "1.644924478262006080693120082852443300101e-23",
+ "lambda_closed_form": "1.644924478262006080523222606781427631232e-23",
+ "rel_diff": "1.0328588e-19",
+ "agreement_sf": 18,
+ "seconds_quad": 154.95398092269897,
+ "seconds_total": 162.74797463417053
+}

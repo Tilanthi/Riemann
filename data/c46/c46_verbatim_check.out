@@ -1,0 +1,6 @@
+  c45-S1-equivalence-sentence      data/c45/c45_attackC_prereg.md         FOUND      (181 chars)
+  c42-convention-basis-line        data/c42/c42_connes_x.py               FOUND      (86 chars)
+  c42-README-parity-restriction    data/c42/README.md                     FOUND      (76 chars)
+  c42-convention-minimise-line     data/c42/c42_connes_x.py               FOUND      (92 chars)
+  negative-S1-already-repaired     data/c45/c45_attackC_prereg.md         NOT FOUND  <- must be NOT FOUND
+RESULT: PASS (0 defect(s))

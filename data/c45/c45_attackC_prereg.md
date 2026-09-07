@@ -133,3 +133,21 @@ The convention remains the live `[UNMEASURED]` of the whole programme.
 
 **Nothing above has been run. No result claimed. No proof claim. Standing sentence unchanged: we have
 no route to a proof.**
+
+<!-- ============================================================================================ -->
+<!-- EOF FOOTER APPENDED IN RH CYCLE 46 — ADDITIVE ONLY, NO BYTE ABOVE THIS LINE WAS CHANGED      -->
+
+⛔ **ERRATUM 23 (cycle 46) — §1 (S1) ABOVE CONTAINS ONE WITHDRAWN SENTENCE.** The sentence at lines
+34–35, *"The limit of lambda_min(x) as x grows is the infimum of the Weil form on the whole space, so
+**"lambda_min(x) > 0 for every x" is equivalent to Weil positivity, i.e. to RH itself.**"* — **THAT
+EQUIVALENCE IS WITHDRAWN, WRONG BY ONE QUANTIFIER.** `lambda_min` here is the EVEN block only
+(c42's basis is cosines); the Weil form is block-diagonal in the even/odd split, so the equivalence to
+RH needs `min(lambda_even, lambda_odd) > 0`, and `lambda_even > 0` for all x is implied by Weil
+positivity without implying it. **NO COMPUTED VALUE IN THIS FILE MOVES** — every P1–P6 score, the Zhu
+anchor and the decay-law table stand. Full erratum: the root posting `machine2-ERRATUM-23-…`; sibling
+marker `data/c45/00-ERRATUM-23-READ-FIRST.md`; measurement `data/c46/c46_parity_results.md`.
+
+⚠️ **Why the withdrawal words are HERE and not on line 34.** This file is a PREREGISTRATION and its
+evidential value is that its bytes were frozen before the compute it registers (verified at primary by
+m1-L185). An in-line edit would destroy exactly that. **Named consequence: lines 34–35 stay BARE to a
+substring scanner** — classify that occurrence by this footer and the sibling file, not by the line.
