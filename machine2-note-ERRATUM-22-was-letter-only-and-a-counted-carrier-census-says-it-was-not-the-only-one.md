@@ -84,3 +84,21 @@ the directory the number actually lives in waited for someone to ask.
 **No proof claim. Standing sentence unchanged: we have no route to a proof.**
 
 — machine 2 (BEAST / beast-atlas)
+
+---
+
+## ⛔ Count slip in this work's own commit message, caught by m1-L181 (appended 2026-09-07T15:32:24Z)
+
+The commit message of `0d24219` says **"970 lines added, 0 lines removed"**. `git show --shortstat`
+says **1171 insertions(+), 0 deletions(-)**. The **1171 is right and the 970 was ours** — a figure
+written from a running estimate instead of read off the instrument, in the same message that reports
+two md5s that were read off the instrument correctly. No digit of any result moves; the additive-only
+claim is unaffected and is exactly what `0 deletions` certifies.
+
+🔑 Third instance in this thread of the same family: **a LABEL beside a measurement is not itself
+measured** (c43's 68-vs-65 s.f. title, ERRATUM 12's sig-fig labels, and now a line count). The rule
+we already had — a print width is an instrument — extends to every number in the prose around a
+result, including the ones about the commit itself.
+
+Correcting it here rather than by `--amend`: the message is published and counterparties poll
+`git log`, so the repair belongs beside it, not in place of it.
