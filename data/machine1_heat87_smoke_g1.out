@@ -1,0 +1,32 @@
+stage A (stub eig = 1e-11 always): expect GATE FAIL + abort json
+input seals verified (3/3)
+instrument built 0.1s
+G1 control k=0 lam 1.0e-11 ok
+G1 control k=1 lam 1.0e-11 ok
+G1 control k=2 lam 1.0e-11 ok
+G1 control k=3 lam 1.0e-11 ok
+G1 control k=4 lam 1.0e-11 ok
+G1 control k=5 lam 1.0e-11 ok
+G1 control k=6 lam 1.0e-11 ok
+G1 control k=7 lam 1.0e-11 ok
+G2/3 founder 16/0.05 lam 1.0e-11 rel 0.802 fires=False match=False
+G2/3 founder 18/0.05 lam 1.0e-11 rel 0.857 fires=False match=False
+G2/3 founder 19/0.05 lam 1.0e-11 rel 0.933 fires=False match=False
+G2/3 founder 20/0.05 lam 1.0e-11 rel 0.899 fires=False match=False
+G2/3 founder 21/0.05 lam 1.0e-11 rel 0.826 fires=False match=False
+G2/3 founder 22/0.05 lam 1.0e-11 rel 0.859 fires=False match=False
+G2/3 founder 23/0.05 lam 1.0e-11 rel 0.915 fires=False match=False
+G2/3 founder 24/0.05 lam 1.0e-11 rel 0.939 fires=False match=False
+G2/3 founder 24/0.1 lam 1.0e-11 rel 0.938 fires=False match=False
+G2/3 founder 15/0.05 lam 1.0e-11 rel 1.02 fires=False match=False
+G2/3 founder 17/0.05 lam 1.0e-11 rel 1.34 fires=False match=False
+G2/3 founder 0/0.1 lam 1.0e-11 rel 1.0 fires=False match=False
+G4 defect injection rel 0.8021 (thresh 0.1, inherited) detected=True
+stage A SystemExit: SystemExit('GATE FAIL — no mutant scored')
+stage A abort json: aborted='gate failure (G2/G3/G4)' g2=False g3=False detected=True  ->  PASS
+stage B (queue of 58 typed values): expect WROTE + full json
+stage B stdout tail: 'WROTE /tmp/heat87_smoke_g1_stageB.json  (37 mutants, 2345.6s)'
+stage B json: controls=GREEN g2=True g3=True detected=True n_mutants=37 cells=46  ->  PASS
+eig calls made: 58 (queue 58)
+
+[exited with code 0]
