@@ -61,16 +61,38 @@ SCOPE = m2_corpus_scope.declare(
     "m2_c40_rule_k_impl_B (RULE K carrier index)",
     entitled="every tracked our-side NON-.md file, corpus-wide (K1/K5/K6)",
     outputs=("data/m2_c40_rule_k_B.json",),
-    also_excl=("data/m2_c37_published_constants_census.tsv",
+    also_excl=("data/m2_c41_selfoutput_sweep.json",
+               "data/m2_c37_published_constants_census.tsv",
                "data/m2_c39_split_column.json", "data/m2_c39_split_column.tsv",
                "data/m2_c39_published_constants_census_split.tsv"),
     reason="the denominator file and the c39 column that this recount re-measures: both list the "
            "census keys, so both can supply carriership for the very rows being counted")
 
 
+# c41 ADDENDUM 3: the CARRIER CLASS is a declared scope and it is the second-largest axis found so
+# far (2.04x at floor 12, against index scope 4.42x, floor 1.24x, join 1.07x).  A rule enforceable
+# only by prose is a rule nobody re-reads -- the same reason the UPPER BOUND and the digit floor now
+# live in the format string -- so the class is a SWITCH, and the narrow list is read from the c41
+# sweep's machine-derived determination B rather than typed here.
+NARROW_LIST = "data/m2_c41_selfoutput_sweep.json"
+
+
+def narrow_exclusions():
+    """The 215 our-side instrument-output files, read from the sweep's output, never hand-listed."""
+    try:
+        import json as _j
+        return set(_j.load(open(os.path.join(R, NARROW_LIST)))["B_extension_class"])
+    except Exception as e:
+        print("REFUSING: narrow carrier class requested but %s is unreadable (%s). A missing "
+              "exclusion list must fail, not silently widen the class." % (NARROW_LIST, e))
+        sys.exit(2)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--floor", type=int, default=10)
+    ap.add_argument("--carrier-class", choices=("wide", "narrow"), default="wide",
+                    help="wide: every our-side non-.md file (as published in c40). narrow: our own instrument outputs excluded (ADDENDUM 3).")
     ap.add_argument("--family-only", action="store_true",
                     help="restore the low run's K6 violation: index only data/*c3[3-8]* artefacts")
     ap.add_argument("--json-out")
@@ -80,6 +102,15 @@ def main():
     cand = SCOPE.apply([f for f in ls if f and not f.lower().endswith(".pdf")
                         and not f.endswith(".md") and is_ours(f)])
     SCOPE.report()
+    if a.carrier_class == "narrow":
+        _nx = narrow_exclusions()
+        _n0 = len(cand)
+        cand = [f for f in cand if f not in _nx]
+        print("CARRIER CLASS narrow (ADDENDUM 3): %d of %d our-side files excluded as instrument "
+              "outputs; list read from %s, not typed.\n" % (_n0 - len(cand), _n0, NARROW_LIST))
+    else:
+        print("CARRIER CLASS wide (as published in c40): 0 instrument outputs excluded. The class "
+              "is NAMED even when nothing is removed -- an unnamed class is the defect.\n")
     if a.family_only:
         cand = [f for f in cand
                 if re.search(r"c3[3-8]", os.path.basename(f))
@@ -152,8 +183,8 @@ def main():
     #  (2) no knob figure without its DIGIT FLOOR beside it -- the two floors differ by 33 rows of
     #      486, against the 10-row threshold registered in ADDENDUM 2, so the floor is a
     #      load-bearing free parameter and a floorless figure is not a figure.
-    print("  RECOVERED <= %d/%d = %.2f%%  [UPPER BOUND, A3 aggregation; digit floor %d]"
-          % (rec, n, 100.0 * rec / n, a.floor))
+    print("  RECOVERED <= %d/%d = %.2f%%  [UPPER BOUND, A3 aggregation; digit floor %d; "
+          "carrier class %s]" % (rec, n, 100.0 * rec / n, a.floor, a.carrier_class))
     if a.json_out:
         json.dump(detail, open(a.json_out, "w"), indent=0)
         print("  written: %s" % a.json_out)
