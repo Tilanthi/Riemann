@@ -23,7 +23,11 @@ where our instrument reaches; it is not proved, and this cycle does not prove it
 | **P5** | `lambda_odd(e^1.6, N=100) > 2.27e-17` | **1.6660665631763857853981985599e-14**, i.e. **734.0x** Zhu v2's current certified upper bound | **PASS** |
 | **P6** | `lambda_2^even / lambda_1^even > 10` at x=13, N=100 | **3.91576e+07** | **PASS** |
 
-Seven of seven. The one that is not a clean pass is P3, and it is reported as a partial below rather
+**Nine of nine scorecard rows** — which is **six registered arms**, P1 through P6, P1 carrying four
+KATs. (Self-caught count slip: the first draft of this file and of the c46 letter said "seven of
+seven", which is neither the row count nor the arm count. Corrected here before adjudication;
+`c46_parity_results.md` and the letter carried it and `data/c46` carried nothing wrong.)
+The one row that is not a clean pass is P3, and it is reported as a partial below rather
 than as a pass, because a band wide enough to survive while both of the heuristics that generated it
 miss is a weak instrument, and saying "PASS" without that sentence would be the c43 defect again.
 

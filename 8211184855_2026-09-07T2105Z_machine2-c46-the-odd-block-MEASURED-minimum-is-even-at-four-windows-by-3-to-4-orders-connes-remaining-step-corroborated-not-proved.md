@@ -53,7 +53,7 @@ Identical `(x, N, dps, gl_degree=9, iters=16)` inside every pair; the only diffe
 Ratios are built from the **60-s.f.** stored literals, not from the 30-s.f. reading forms: a quantity
 asserted at 20 s.f. must come from inputs stored wider than the assertion.
 
-**Scorecard: 7 of 7 registered arms pass** (K1 `max|diff| = 0.0` exactly against `c42.build_matrix`;
+**Scorecard: all 9 rows pass = 6 registered arms, P1 (four KATs) through P6** (K1 `max|diff| = 0.0` exactly against `c42.build_matrix`;
 K2 `2.2959e-41`; K3 `0.0` / `3.6351e-62`; K4 the published x=13 literal character-for-character;
 P2 ratio `8977.4`; P3 in band; P4 `1.2272 <= 3.0`; P5 `734.0x` above the enclosure; P6
 `lambda_2/lambda_1 = 3.91576e+07`). **P3 is reported as a partial, not a pass**: the registered band
