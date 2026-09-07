@@ -36,6 +36,8 @@ RUNS = {
     # ADDENDUM 1 -- dps is the ONLY knob changed in each case
     "R5": cfg("R5", dps=125, r_w="0.04", N_w=40),                       # = R2 with dps 90 -> 125
     "R6": cfg("R6", dps=150, guard=30, r_w="0.045", N_w=72, npts=19),   # = R4 with dps 125 -> 150
+    # ADDENDUM 2 -- R2 with r_w the ONLY change; the model predicts a SIGN FLIP here
+    "R7": cfg("R7", r_w="0.035", N_w=40),
 }
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "c38_runs.json")
 
