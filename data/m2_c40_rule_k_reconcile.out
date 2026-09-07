@@ -1,0 +1,104 @@
+RULE K reconciliation -- full decomposition. Generated 2026-09-07T03:57:36Z at HEAD 9f3e22f.
+Denominator: data/m2_c37_published_constants_census.tsv, 486 transported constants, identical file in both c39 runs.
+
+===== IMPL A, RULE K, --floor 12
+IMPLEMENTATION A (from the high run's code) | floor=12
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 538
+  UNRESOLVED-BY-KNOB                           272  (55.97%)
+  POINT                                         97  (19.96%)
+  UNKEYABLE (below floor)                       77  (15.84%)
+  RANGE                                         40  (8.23%)
+    (of which TIGHT RANGE, max/min <= 2)        16  (3.29%)
+  RECOVERED 137/486 = 28.19%
+
+===== IMPL A, RULE K, --floor 10
+IMPLEMENTATION A (from the high run's code) | floor=10
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 747
+  UNRESOLVED-BY-KNOB                           316  (65.02%)
+  POINT                                        114  (23.46%)
+  RANGE                                         56  (11.52%)
+    (of which TIGHT RANGE, max/min <= 2)        29  (5.97%)
+  RECOVERED 170/486 = 34.98%
+
+===== IMPL B, RULE K, --floor 12
+IMPLEMENTATION B (from the low run's code) | floor=12 | family_only=False
+  candidate carrier files 380, stating a working precision 144, indexed keys 538
+  UNRESOLVED-BY-KNOB                           272  (55.97%)
+  POINT                                         97  (19.96%)
+  UNKEYABLE (below floor)                       77  (15.84%)
+  RANGE                                         40  (8.23%)
+    (of which TIGHT RANGE, max/min <= 2)        16  (3.29%)
+  RECOVERED 137/486 = 28.19%
+
+===== IMPL B, RULE K, --floor 10
+IMPLEMENTATION B (from the low run's code) | floor=10 | family_only=False
+  candidate carrier files 380, stating a working precision 144, indexed keys 747
+  UNRESOLVED-BY-KNOB                           316  (65.02%)
+  POINT                                        114  (23.46%)
+  RANGE                                         56  (11.52%)
+    (of which TIGHT RANGE, max/min <= 2)        29  (5.97%)
+  RECOVERED 170/486 = 34.98%
+
+===== VARIANTS: isolating each deviation of the two c39 runs from RULE K
+--- IMPL A --floor 10 --exact-join
+IMPLEMENTATION A (from the high run's code) | floor=10
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 747
+  UNRESOLVED-BY-KNOB                           327  (67.28%)
+  POINT                                        116  (23.87%)
+  RANGE                                         43  (8.85%)
+    (of which TIGHT RANGE, max/min <= 2)        18  (3.70%)
+  RECOVERED 159/486 = 32.72%
+
+--- IMPL A --floor 10 --exp-blind
+IMPLEMENTATION A (from the high run's code) | floor=10
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 746
+  UNRESOLVED-BY-KNOB                           316  (65.02%)
+  POINT                                        114  (23.46%)
+  RANGE                                         56  (11.52%)
+    (of which TIGHT RANGE, max/min <= 2)        29  (5.97%)
+  RECOVERED 170/486 = 34.98%
+
+--- IMPL A --floor 10 --exp-blind --exact-join
+IMPLEMENTATION A (from the high run's code) | floor=10
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 746
+  UNRESOLVED-BY-KNOB                           327  (67.28%)
+  POINT                                        116  (23.87%)
+  RANGE                                         43  (8.85%)
+    (of which TIGHT RANGE, max/min <= 2)        18  (3.70%)
+  RECOVERED 159/486 = 32.72%
+
+--- IMPL A --floor 12 --exp-blind --exact-join
+IMPLEMENTATION A (from the high run's code) | floor=12
+  our-side tracked files 485, non-.md 380, declaring a working precision 143
+  indexed keys 537
+  UNRESOLVED-BY-KNOB                           272  (55.97%)
+  POINT                                         97  (19.96%)
+  UNKEYABLE (below floor)                       77  (15.84%)
+  RANGE                                         40  (8.23%)
+    (of which TIGHT RANGE, max/min <= 2)        16  (3.29%)
+  RECOVERED 137/486 = 28.19%
+
+--- IMPL B --floor 12 --family-only
+IMPLEMENTATION B (from the low run's code) | floor=12 | family_only=True
+  candidate carrier files 71, stating a working precision 37, indexed keys 133
+  UNRESOLVED-BY-KNOB                           378  (77.78%)
+  UNKEYABLE (below floor)                       77  (15.84%)
+  POINT                                         19  (3.91%)
+  RANGE                                         12  (2.47%)
+    (of which TIGHT RANGE, max/min <= 2)         5  (1.03%)
+  RECOVERED 31/486 = 6.38%
+
+--- IMPL B --floor 10 --family-only
+IMPLEMENTATION B (from the low run's code) | floor=10 | family_only=True
+  candidate carrier files 71, stating a working precision 37, indexed keys 136
+  UNRESOLVED-BY-KNOB                           454  (93.42%)
+  POINT                                         19  (3.91%)
+  RANGE                                         13  (2.67%)
+    (of which TIGHT RANGE, max/min <= 2)         5  (1.03%)
+  RECOVERED 32/486 = 6.58%
+
