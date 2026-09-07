@@ -1,0 +1,25 @@
+[0.0s] phihat(i/2) table done
+  J_sin: m=20/100 done [2.9s]
+  J_sin: m=40/100 done [8.2s]
+  J_sin: m=60/100 done [13.8s]
+  J_sin: m=80/100 done [19.3s]
+  J_sin: m=100/100 done [30.6s]
+[30.6s] J_sin table done
+  diag_arch: m=0/100 done [0.1s]
+  diag_arch: m=20/100 done [5.2s]
+  diag_arch: m=40/100 done [14.6s]
+  diag_arch: m=60/100 done [24.6s]
+  diag_arch: m=80/100 done [34.5s]
+  diag_arch: m=100/100 done [53.9s]
+[84.5s] diagonal archimedean table done
+  matrix row 0/100 assembled [84.5s]
+  matrix row 20/100 assembled [86.6s]
+  matrix row 40/100 assembled [88.1s]
+  matrix row 60/100 assembled [89.3s]
+  matrix row 80/100 assembled [89.9s]
+  matrix row 100/100 assembled [90.2s]
+[90.2s] matrix built
+[121.1s] eigsy done
+lambda_min (N=100, x=13, dps=150) = 3.720899741667123935791434766094540694091e-59
+BEAST published value            = 3.72089974166712393579143476609e-59
+relative difference = 1.220321537e-30
