@@ -1,0 +1,27 @@
+digits read: D*=175 s.f.   f'=12 s.f.   centre_80=80 s.f.   centre_lit=38 s.f.
+
+N_w      eps = G(0,0) + 4(2 r_w)^N_w  configs (label/dps/r_w)
+40       1.378304e-74                 A/90/0.04, P17/90/0.04, H6/90/0.04, H8/90/0.04, Q125/125/0.04   [spread max/min = 1.0]
+56       3.283168455e-80              N56/90/0.04   [spread max/min = 1.0]
+64       3.283168455e-80              B/110/0.04   [spread max/min = 1.0]
+72       3.283168455e-80              N72/90/0.04, D/125/0.045, DH8/125/0.045, DP19/125/0.045   [spread max/min = 1.0]
+LIT      -1.412528474e-35             Alit/90/0.04   [spread max/min = 1.0]
+
+## MECHANISM: is the N_w>=56 floor our own 80-digit PRINT of D*?
+   delta = (80-digit centre string) - (175-digit value) = -8.759327045e-82
+   [c36 published this same rounding error as -8.75933e-82]
+   PREDICTED floor  f'(D*) x delta = 3.283168455e-80
+   MEASURED  floor  (N_w=56,64,72; dps 90/110/125; r_w 0.04 and 0.045) = 3.283168455e-80
+   predicted / measured = 1.0
+
+## POSITIVE CONTROL (known answer, already committed): the Alit config, 36-digit centre
+   delta_lit                    = 3.76855438e-37
+   predicted g00 = f'*delta_lit = -1.4125284736e-35
+   committed    g00             = -1.41252847891e-35
+   predicted / committed        = 1.0
+
+## what the N_w=40 family's larger floor is: UNMEASURED (one (r_w,N_w) point only)
+   eps(N_w=40) = 1.378304e-74  = 419809.0 x the print floor
+   it is dps-independent (90 and 125 agree to all printed digits) so it is an INPUT error,
+   but ONE (r_w,N_w) point cannot separate a coefficient from a channel (c34's own law).
+   client: one pipeline run at N_w=40, r_w=0.045.

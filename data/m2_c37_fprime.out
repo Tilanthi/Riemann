@@ -1,0 +1,25 @@
+frozen runner sha256 = c6c50459bb632fad0e0533e826eebfc62ed944cf4d323006ce6be42dc145977f
+LIT (carried literal) = 0.141733239663887191395415685084185024
+
+dps=130  [26s]
+  f'(D*) as PUBLISHED   nstr(fp,12) : -37.4819713608
+  f'(D*) FULL PRECISION nstr(fp,120): -37.4819713608428817387593623904468580248697488408325728217063406540320558044558185881303806706260060186590739055398449959
+  residual              nstr(|r|,6) : 3.60667e-131
+
+dps=150  [42s]
+  f'(D*) as PUBLISHED   nstr(fp,12) : -37.4819713608
+  f'(D*) FULL PRECISION nstr(fp,120): -37.4819713608428817387593623904468580248697488408325728217063406540320558044558185881124989205480984606329051543511281947
+  residual              nstr(|r|,6) : 6.75688e-151
+
+## P1 SCORING
+  f'_130 - f'_150            = -1.78817500779e-83
+  |f'_130 - f'_150| / |f'|   = 4.77076029587e-85
+  band was [1e-92, 1e-78], point 3e-86
+  VERDICT: CONFIRMED
+  first-12-figure reproduction: -37.4819713608 -37.4819713608
+  digits HIDDEN by the published 12-figure print: 72.3
+  half-ulp of published 'f'(D*) = -37.4819713608' (12 s.f.) = 5.0e-12 relative
+
+## remedy: f'(D*) re-serialised at the resolution actually achieved (dps-150 determination)
+   f'(D*) = -37.4819713608428817387593623904468580248697488408325728217063406540320558044558185881124989
+   error bar on that value (|f'_130 - f'_150|) = 1.78818e-83 abs / 4.77076e-85 rel

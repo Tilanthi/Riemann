@@ -1,0 +1,8 @@
+our commits (by subject-prefix measurement): 65
+distinct >=10 s.f. literals present in files at HEAD: 66811
+
+## P2 SCORING
+  distinct >=10 s.f. literals in OUR commit messages that appear in NO file at HEAD: 2
+  band was [1, 40]  => CONFIRMED
+   11 s.f.  1.9357195270e-9                 5f7afe2  | machine2: CYCLE 21 -- m1's heat72 birth-locus prereg SCORED 
+   10 s.f.  1.929766952e-4                  14c51b3  | machine2: CYCLE 17 -- certified zero census of zeta2(s,1/7) 
