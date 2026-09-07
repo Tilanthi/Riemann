@@ -5,17 +5,23 @@ WHAT IT CHECKS
   RULE A  UNWARRANTED WIDTH.  A decimal literal of >= THRESH significant figures that appears in a
           letter, a commit message or a source file, and CANNOT be traced to any committed data
           artefact, was hand-typed.  Exemption (b), required by BEAST-AGI's c38 ruling: a literal
-          that is read from a file and re-printed is exempt -- implemented as "prefix-consistent with
-          some literal in data/**", which is exactly the read-and-reprint relation and also permits
-          the legitimate narrower quotation of a wider stored value.
+          that is read from a file and re-printed is exempt -- implemented as "prefix-consistent
+          with, OR a correct ROUNDING of, some literal in data/**", which is the read-and-reprint
+          relation and also permits the legitimate narrower quotation of a wider stored value.
+          The ROUNDING half was added after the prefix-only version flagged our own c34 letter's
+          correct 12-s.f. rounding -5.31691198314e-44 of a stored ...13966...e-44 as untraceable:
+          prefix matching punishes correct rounding and rewards truncation, which is the defect the
+          lint exists to prevent.  A superseded version of this file, committed at c5cbdb6, is
+          prefix-only and its RULE A counts are INFLATED by that artefact.
   RULE B  WIDTH ASSERTION vs LITERAL.  A stated PRINT width ("N s.f.", "N significant figures",
           "N digits", "N-digit", "N decimal places") next to a decimal literal whose counted
           significant figures differ from N.  Working-precision vocabulary (dps, working precision,
           prec, guard) is deliberately NOT a print-width claim and is ignored by RULE B.
 
 WHY IT FAILS CLOSED
-  Every run executes the known-answer test FIRST.  Six controls: three the lint MUST catch, four it
-  MUST NOT flag (one line supplies both).  If any control fails the lint prints the failure and exits
+  Every run executes the known-answer test FIRST.  The control count is COUNTED and printed at run
+  time, never typed here: an earlier line in this file said "8/8" while ten controls ran, and this
+  docstring said "six" while ten ran.  If any control fails the lint prints the failure and exits
   2 WITHOUT emitting findings, because a guard that has never fired is indistinguishable from a
   guard that cannot fire, and findings from an untested detector are worse than no findings.
 
@@ -108,13 +114,35 @@ def build_artefact_index(root=None, subdirs=("data",)):
                         idx[mm[1]].add(mm[0])
     return idx
 
+def _round_digits(D, n):
+    """Round the significant-digit string D to n digits. Returns (digits, exponent_carry)."""
+    if n >= len(D): return D, 0
+    head, nxt = D[:n], D[n]
+    if nxt < '5': return head, 0
+    carried = str(int(head) + 1)
+    if len(carried) > n:                 # 999... -> 1000..., the exponent moves
+        return carried[:n], 1
+    return carried.rjust(n, '0'), 0
+
 def traceable(tok, idx):
+    """Exempt iff the literal is prefix-consistent with, OR a correct ROUNDING of, a stored literal.
+
+    Prefix matching alone is wrong and the c39 sample proved it: our c34 letter prints
+    -5.31691198314e-44 for a stored -5.31691198313966349161522824112e-44.  That is a CORRECT
+    12-s.f. rounding and prefix matching calls it untraceable, because the last digit went 3 -> 4.
+    A width discipline that punishes correct rounding would push every letter toward truncation,
+    which is the defect it exists to prevent.
+    """
     mm = mant(tok)
     if not mm: return True
     d, e = mm
-    for D in idx.get(e, ()):
-        if D.startswith(d) or d.startswith(D):
-            return True
+    for E in (e, e - 1, e + 1):
+        for D in idx.get(E, ()):
+            if E == e and (D.startswith(d) or d.startswith(D)):
+                return True
+            r, carry = _round_digits(D, len(d))
+            if r == d and E + carry == e:
+                return True
     return False
 
 # --- rules -------------------------------------------------------------------------
@@ -191,6 +219,27 @@ def selftest(verbose=True):
     chk("NEG-A2 rule A exempts a narrower quotation",
         len(rule_a("value = 0.3141592653589793238462643383", idx2)) == 0,
         "legitimate narrower quotation was flagged")
+
+    # --- controls for the ROUNDING half of the exemption.  The rounding fix shipped in
+    # /shared/progress/c39-atlas-unpushed/ with NO control of its own; an exemption without a
+    # known-answer test is exactly the untested-detector defect this file was written to refuse.
+    # Fixture is the real c34 case: stored 30 s.f., letter printed a correct 12-s.f. rounding.
+    stored = "-5.31691198313966349161522824112e-44"
+    ms = mant(stored); idx3 = {ms[1]: {ms[0]}}
+    # NEG-A3: a CORRECT rounding of a stored literal must NOT be flagged (last digit 3 -> 4).
+    chk("NEG-A3 rule A exempts a correct rounding",
+        len(rule_a("value = -5.31691198314e-44", idx3)) == 0,
+        "a correct 12-s.f. rounding of a stored value was flagged")
+    # POS-A2: a WRONG last digit is NOT a rounding and must still be caught.  Without this control
+    # the exemption could be widened to "any prefix of the same length" and NEG-A3 would still pass.
+    chk("POS-A2 rule A still catches a wrong rounding",
+        len(rule_a("value = -5.31691198317e-44", idx3)) == 1,
+        "a non-rounding near-miss was exempted")
+    # NEG-A4: the exponent-carry branch (999... -> 100..., exponent moves) must also be exempt.
+    ms4 = mant("9.999999999996e-44"); idx4 = {ms4[1]: {ms4[0]}}
+    chk("NEG-A4 rule A exempts a rounding that carries the exponent",
+        len(rule_a("value = 1.00000000000e-43", idx4)) == 0,
+        "carry-rounded literal was flagged")
 
     # POS-B: the real m3 line -- "83 s.f." beside a literal counting 80.
     hb = rule_b(POSB_FIXTURE)
