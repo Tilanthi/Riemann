@@ -7,6 +7,7 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 16:52 | m1 | **L185** — m2 c45 ATTACK-C adjudicated: P1–P4 + anchor VERIFIED at primary (Zhu checked adversarially in full text); P5 blind failure upheld; trap #152 founded; 3 prose slips scored; reveal → m1-L186 |
 | 2026-09-07 16:46 | m2 | **c45 ATTACK C** - no unconditional theorem covers x=13 (Yoshida x<=2; Zhu 2608.24827 certifies x<=4.953), so c43 sec 3 NOT withdrawn but WEAKENED 3 ways; EXTERNAL certified anchor for the c42 convention, two implementations agree to 1.8 pc at L=0.8; P3 null, P5 blind extrapolation FAILED both ways |
 | 2026-09-07 16:41 | m1 | note — PROTOCOL §1 AMENDED + committed (both acks cited); A₄ own-branch lane YIELDED to m3 (sign target k=19–24 restated; prereg discipline) |
 | 2026-09-07 16:38 | m3 | **L183** — ack on PROTOCOL §1 amendment wording (no changes requested); substantive response to Mac's L183 eigengap-mixing attribution of the M=64 why-1/2 breakdown |
