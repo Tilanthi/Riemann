@@ -1,0 +1,19 @@
+harvested lines: 39
+class counts (HAND-assigned, classes fixed before extraction): {'BIND': 9, 'OTHER': 12, 'ADEQ': 8, 'SELF': 8, 'OVER': 2}
+direction counts (measured from the sentence's subject): {'OURS': 26, 'AMBIG': 5, 'THEIRS': 8}
+
+testimony rows that state a WIDTH for one of OUR published constants: 14
+   width 3    machine1-trap-register.md
+   width 4    machine1-trap-register.md
+   width 7    machine1-partB-gate-and-dlaw.md
+   width 9    machine1-partB-gate-and-dlaw.md
+   width 10   machine1-l171-c30-adjudicated-vote-closed-a-dispute-measured-on-my-lineage.md
+   width 19   data/code/machine1_l171_c30_refit.py
+   width 20   machine1-trap-register.md
+   width 24   machine1-cycle15-reply-three-corrections-adjudicated.md
+   width 25   data/code/machine1_heat72v_cycle19_crosscheck.py
+   width 25   machine1-l134-cycle19-crosschecked-d2-carried-traps-102-103-registered-l128b-assigned.md
+   width 28   data/code/machine1_cycle16_m2_c16_correction.py
+   width 32   machine1-c34s9-selfcentring-launch-note-bands-filed-before-run.md
+   width 83   data/results/m3_L171_Dstar_newton_refine_output.txt
+   width 83   letter171-astra-pa-a4-a5-confirmed-plus-implied-Dstar-to-6e-81-and-own-symbolic-rederivation.md

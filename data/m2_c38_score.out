@@ -1,0 +1,43 @@
+delta = C80 - D175 = -8.75932704544e-82    f'*delta = 3.2831684545712e-80
+  R1  r_w=0.045  N_w=40  dps=90   centre=80 -digit  eps=3.2823013518706425794e-80
+  R2  r_w=0.04   N_w=40  dps=90   centre=175-digit  eps=-9.5129586867277666176e-89
+  R3  r_w=0.045  N_w=40  dps=90   centre=175-digit  eps=-8.6710259784257602965e-84
+  R4  r_w=0.045  N_w=72  dps=125  centre=175-digit  eps=-2.2391468835703207033e-128
+
+### P1 (PRIMARY, prefactor-free ratio; band [12241, 12489])
+   eps(R3)/eps(R2) = 91149.6229929  ->  FALSIFIED
+
+### P2 (eps at N_w=40, r_w=0.045, 80-digit centre = 3.28229455657e-80, rel <= 1e-6)
+   predicted 3.28229455657e-80   measured 3.28230135187e-80   rel dev 2.07029e-6 -> FALSIFIED
+
+### THE ONE-KNOB DIFFERENCE R1-R3 (identical knobs, centre the ONLY change)
+   eps(R1)-eps(R3) = 3.2831684544684851554e-80
+   f'(D*)*delta    = 3.2831684545712049186e-80
+   ratio           = 0.999999999969   [c37 predicted 3.2831684545749610703e-80]
+
+### TWO-CHANNEL DECOMPOSITION at N_w=40 from the R2/R3 pair (exactly determined, 0 dof)
+   eps = T(dps) + A*(2 r_w)^80
+   A            = -3.96917357409    [pure pole-pair model predicts exactly -4; dev -0.7707 %]
+   T(dps=90)    = 6.06162681031e-88
+   T(dps=125)   = -2.23914688357e-128   [= eps(R4); its own alias term is 4(0.09)^144 = 1.03e-150]
+   => the r-independent part is NOT dps-independent: it moves by -2.70711e+40 between dps 90 and 125
+   => at dps 125 it BOUNDS the centre error: |delta_175| <= |eps(R4)/f'| = 5.97393e-130
+      i.e. our published 175-digit D* is certified to ~129 digits, not 175.
+
+### P3(a) (band |eps(R4)| < 1e-129)
+   |eps(R4)| = 2.23914688357e-128 -> FALSIFIED (still a 48.2-order removal of the 3.28e-80 print floor)
+
+### P3(b) NO PUBLISHED CONSTANT MOVES  (c34 published cfg DP19 RECENTRED at 45 s.f.)
+   a   published 2.64552141181166286801612612120342539738354204   re-run@175-digit-centre -> 2.64552141181166286801612612120342539738354204  MATCH   |new-old(c34 rec)| = 0.0
+   b   published -7.46245287679368626753358035162874151331895732  re-run@175-digit-centre -> -7.46245287679368626753358035162874151331895732 MATCH   |new-old(c34 rec)| = 0.0
+   a3  published 11.700717320433667601156432487039813849333726    re-run@175-digit-centre -> 11.700717320433667601156432487039813849333726   MATCH   |new-old(c34 rec)| = 0.0
+   a4  published -20.4755387553904125007058067225760662898269858  re-run@175-digit-centre -> -20.4755387553904125007058067225760662898269858 MATCH   |new-old(c34 rec)| = 0.0
+   a5  published 18.2711625011499510374264312726700306984558616   re-run@175-digit-centre -> 18.2711625011499510374264312726700306984558616  MATCH   |new-old(c34 rec)| = 0.0
+   P3(b): CONFIRMED - no published digit moves, no erratum owed on this arm
+
+### P3(c) RAW shifts = S_k*(C175-C80), predicted vs measured, band 1%
+   a   predicted -3.7351401e-80   measured 0.0              ratio 0.0 -> OUT of band
+   b   predicted 3.9654189e-79    measured 0.0              ratio 0.0 -> OUT of band
+   a3  predicted -1.8597516e-78   measured 0.0              ratio 0.0 -> OUT of band
+   a4  predicted 5.8678517e-78    measured 0.0              ratio 0.0 -> OUT of band
+   a5  predicted -1.4733121e-77   measured 0.0              ratio 0.0 -> OUT of band

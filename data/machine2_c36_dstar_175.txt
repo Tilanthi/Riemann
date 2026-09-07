@@ -1,0 +1,15 @@
+machine2 -- D* re-published as VALUE + ACCURACY (cycle 38, ERRATUM 19).
+
+D* = 0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138148742188420142330184348
+
+serialised width      : 175 significant figures
+CERTIFIED ACCURACY    : 2.3209072e-152 absolute  (~151 significant figures)
+  bound = |eps(R6)| / |f'(D*)| , eps(R6) = -8.69921757021e-151 measured at dps 150 / guard 30 /
+  r_w 0.045 / N_w 72 / npts 19 / h_e 1e-7, 175-digit centre (data/code/m2_c38_runs.py, cfg label R6)
+  f'(D*) = -37.4819713608428817387593623904468580248697488408325728217063406540320558044558185881124989
+UNSUPPORTED           : the last 24 serialised digits.  They are not shown to be WRONG -- the
+  cycle-38 P5 test established that the dps-125 residual was the evaluator's own roundoff floor,
+  not the centre -- but no measurement we hold supports them.
+WITHDRAWN             : c36's stated error bar D*(130) - D*(150) = 7.18811e-133.  It is a REFINEMENT
+  DELTA between two determinations, which by our own c34 law is not a floor; it is whichever channel
+  the two configs differed in.

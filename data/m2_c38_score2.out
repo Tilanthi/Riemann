@@ -1,0 +1,20 @@
+### P5 (band log10|eps(R6)| in [-156,-149])
+   eps(R6) = -8.69921757021e-151   log10 = -150.06052 -> CONFIRMED
+   => the dps-125 residual was the EVALUATOR FLOOR, not the centre: raising dps alone moved it
+      from -2.23915e-128 to -8.69922e-151, a factor 2.57396e+22
+
+### ERRATUM-19 NUMBER: certified accuracy of our PUBLISHED 175-digit D*
+   |delta_175| <= |eps(R6)/f'(D*)| = 2.3209072e-152   => D* is supported to 151 significant figures
+   published width: 175 s.f.  =>  24 UNSUPPORTED digits
+   c36's stated error bar 7.18811e-133 is a REFINEMENT DELTA (dps 130 vs 150), not a floor.
+
+### P6 (band [+2.62e-90, +3.20e-90], POSITIVE)
+   eps(R7) = 3.47874503656e-90  -> sign + (predicted POSITIVE: CONFIRMED); magnitude OUT of band by 8.711 % -> FALSIFIED as filed
+   model split: x-term 2.92954e-90, y-term -1.62146e-92 ; measured minus y-term = 3.49496e-90 => x extrapolates 1.19301 x low
+
+### the three dps-90 points at N_w=40, x-term isolated (y = -4 exactly)
+   r_w=0.035  eps=3.478745e-90      x-term = eps + 4(2r)^80 = 3.4949595e-90   x-term/r^40 = 6.035599e-32
+   r_w=0.04   eps=-9.5129587e-89    x-term = eps + 4(2r)^80 = 6.1160924e-88   x-term/r^40 = 5.059113e-32
+   r_w=0.045  eps=-8.671026e-84     x-term = eps + 4(2r)^80 = 6.7954043e-86   x-term/r^40 = 5.0549254e-32
+   => x is NOT constant across r_w (5.06e-32 vs 6.03e-32): a THIRD term exists at N_w=40 and
+      three points cannot resolve three terms. UNMEASURED, client: a 4th r_w at fixed N_w.
