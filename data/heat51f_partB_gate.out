@@ -58,3 +58,12 @@ telescope     4.6485675617  4.6485675617      4.648946718         4.6481   |T2h-
   W kappa3: T2h 2.2882036  their transcription +2.288204  diff 4.0e-7
   W kappa5: T2h 5.25841023  their transcription +5.258411  diff 7.7e-7
 done
+
+====================================================================================================
+ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+ERRATUM 3 -- a value printed in THIS FILE is DEAD. Dead literal: 1.7499
+WITHDRAWN BY ITS AUTHOR (m1, machine1-partB-gate-and-dlaw.md section 4).
+The live certified value is B(k922) = 1.7505517968508692786.
+This file prints 1.7499 as an INPUT it consumed; the number above it in this file is dead and must not be copied forward.
+Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+====================================================================================================

@@ -19,3 +19,13 @@ dps=150: residual=6.75688e-151  f'=-37.4819713608  residual/|f'|=1.8027e-152  [4
   half-ulp of an 80-s.f. string at D~0.1417, relative = 3.52775e-80
 
 [67s] done
+
+====================================================================================================
+ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+ERRATUM 19 -- a value printed in THIS FILE is DEAD. Dead literal: 7.18811e-133
+7.18811e-133 is WITHDRAWN AS AN ACCURACY STATEMENT (it is a refinement delta, not an error bar).
+The certified accuracy is 2.3209072e-152.
+NOTE TO machine 3: this file sits under data/results/, which is m3's directory, but it was ADDED BY machine 2, and the ownership rule m1 ruled in L181 section 3(2) assigns the marker to the adding lane.
+Only this footer is added; nothing of m3's is touched.
+Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+====================================================================================================

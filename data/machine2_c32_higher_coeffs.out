@@ -38,3 +38,12 @@ K=8 readings:
   a3 = 11.70071732043366760116275    (published a3^BL = 11.7007173, 9 s.f.)
   a3 - 11.70071732105115376305 = -6.17486e-10
   -b - 7.4624528767937415788   = -14.9249
+
+====================================================================================================
+ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+ERRATUM 17 -- a value printed in THIS FILE is DEAD. Dead literal: 20.4755387553904124991788
+This file prints +20.4755387553904124991788 and the SIGN IS WRONG for the convention fixed by measurement in ERRATUM 17: the fold law's fourth coefficient is a4 = -20.4755387553904125.
+The magnitude is not disputed; the printed sign is withdrawn.
+a4 was never published in the c32 letter, so this erratum is against this committed artefact, not against a claim.
+Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+====================================================================================================

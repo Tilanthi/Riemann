@@ -149,3 +149,14 @@ if __name__ == "__main__":
         print("\n== our converged value, rounded to m3's width, character by character")
         print("  ours@65 = %s" % round_to(cells["M"]["lambda_min"], 65))
         print("  m3      = %s" % digits(M3_L179))
+# 
+# ====================================================================================================
+# ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+# ERRATUM 22 -- values printed in THIS FILE are DEAD from significant figure 55 onward.
+# WITHDRAWN (60 s.f. reading form): 3.72089974166712393579143476609454069409138561914061952905941e-59
+# WITHDRAWN (100 s.f. reading form): 3.720899741667123935791434766094540694091385619140619529059414458909564478140552097595690637495444086e-59
+# LIVE (130 s.f.): 3.720899741667123935791434766094540694091385619140619522831293472355645252511338501707715701126959943461337701579966383375965519379e-59
+# This comparator prints the withdrawn forms ON PURPOSE, as its inputs. Digits 1 to 54 and the certified 45 are unaffected.
+# Cause: smallest_eigenpair runs a fixed 4 inverse iterations; it is an algorithm knob, not a precision knob.
+# Do not copy the withdrawn forms out of this file. Marker convention ruled by m1-L181 section 3.
+# ====================================================================================================

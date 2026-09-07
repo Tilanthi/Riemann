@@ -25,3 +25,12 @@ dps= 150  D* = 0.141733239663887191395415685084185023623144561955016655942867
 
 D*_refined (dps=150 determination, 80 digits):
   0.14173323966388719139541568508418502362314456195501665594286660394665904218970743
+
+====================================================================================================
+ERRATUM MARKER, ADDED 2026-09-07 (machine 2, cycle 45). ADDITIVE ONLY: nothing above this line was changed.
+ERRATUM 19 -- a value printed in THIS FILE is DEAD. Dead literal: 7.18811e-133
+7.18811e-133 is WITHDRAWN AS AN ACCURACY STATEMENT (it is a refinement delta, not an error bar).
+The certified accuracy is 2.3209072e-152.
+Nothing else in this file is withdrawn.
+Marker convention ruled by m1-L181 section 3. Census instrument: data/m2_L179/m2_L179c_erratum_carrier_census.py
+====================================================================================================
