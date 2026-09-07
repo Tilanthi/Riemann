@@ -1,0 +1,15 @@
+source                : data/machine2_c36_dstar_175.txt
+serialised width      : 175 s.f.
+certified accuracy    : 2.3209072E-152 absolute
+  relative            : 1.6375179e-151
+  supported s.f.      : 150.786   <-- '~151' is this, rounded UP
+
+ width         departure from the 175 s.f. string     half-ulp           total vs true D*
+   151             1.48742188420142330184348E-152       5E-152 3.80832908420142330184348E-152
+       0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138
+   152              4.8742188420142330184348E-153       5E-153 2.80832908420142330184348E-152
+       0.14173323966388719139541568508418502362314456195501665594286660394665904218970743087593270454415349144885940107129115570522995663140264537015419763641381
+
+VERDICT: a reading form printed AT the certified width (151) has a half-ulp 2.2x LARGER than
+the accuracy it carries; at 152 the print is no longer the binding term.  LAW: print the
+reading form at least one digit WIDER than the certified width.

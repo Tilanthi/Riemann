@@ -1,0 +1,109 @@
+{
+ "B1  letter body (m2 cycle letters)": {
+  "population": 44,
+  "objects_with_wide_literal": 31,
+  "wide_literals": 400,
+  "widest_example": [
+   "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-the-evaluator.md",
+   175,
+   "0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138148742188420142330184348"
+  ]
+ },
+ "B2  commit message": {
+  "population": 66,
+  "objects_with_wide_literal": 30,
+  "wide_literals": 79,
+  "widest_example": [
+   "14c51b3",
+   40,
+   "0.1417332396638871913954156850841850236231"
+  ]
+ },
+ "B3  pre-registration file": {
+  "population": 11,
+  "objects_with_wide_literal": 9,
+  "wide_literals": 97,
+  "widest_example": [
+   "machine2-c38-PREREG-the-Nw40-residual-is-our-own-storage-print-and-the-refined-centre-run.md",
+   32,
+   "5.9123531765738369326433284082553e-42"
+  ]
+ },
+ "B4  erratum file": {
+  "population": 19,
+  "objects_with_wide_literal": 7,
+  "wide_literals": 36,
+  "widest_example": [
+   "machine2-ERRATUM-19-published-Dstar-width-175-exceeds-its-certified-accuracy-151.md",
+   152,
+   "0.14173323966388719139541568508418502362314456195501665594286660394665904218970743087593270454415349144885940107129115570522995663140264537015419763641381"
+  ]
+ },
+ "B5  JSON storage written by our scripts": {
+  "population": 145,
+  "objects_with_wide_literal": 132,
+  "wide_literals": 13933,
+  "widest_example": [
+   "data/m2_c38_runs.json",
+   175,
+   "0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138148742188420142330184348"
+  ]
+ },
+ "B6  plain-text run output / evaluator print": {
+  "population": 147,
+  "objects_with_wide_literal": 96,
+  "wide_literals": 1986,
+  "widest_example": [
+   "data/machine2_c36_dstar_175.txt",
+   175,
+   "0.1417332396638871913954156850841850236231445619550166559428666039466590421897074308759327045441534914488594010712911557052299566314026453701541976364138148742188420142330184348"
+  ]
+ },
+ "B7  source-code literal in a producing script": {
+  "population": 152,
+  "objects_with_wide_literal": 66,
+  "wide_literals": 459,
+  "widest_example": [
+   "data/code/machine2_c36_analysis.py",
+   81,
+   "0.141733239663887191395415685084185023623144561955016655942866603946659042189707430"
+  ]
+ },
+ "B8  spec / handover document written FOR another machine": {
+  "population": 1,
+  "objects_with_wide_literal": 1,
+  "wide_literals": 15,
+  "widest_example": [
+   "machine2-c35-extraction-spec-for-m3.md",
+   20,
+   "+11.700717320433667601"
+  ]
+ },
+ "B9  filename / label asserting a width": {
+  "population": null,
+  "objects_with_wide_literal": null,
+  "wide_literals": null,
+  "widest_example": null,
+  "note": "NOT MEASURED BY THIS SCRIPT -- see register"
+ },
+ "B10 README / index": {
+  "population": 1,
+  "objects_with_wide_literal": 0,
+  "wide_literals": 0,
+  "widest_example": null
+ },
+ "B11 external-lane artefact outside this repo": {
+  "population": null,
+  "objects_with_wide_literal": null,
+  "wide_literals": null,
+  "widest_example": null,
+  "note": "NOT MEASURED BY THIS SCRIPT -- see register"
+ },
+ "B12 audit extract / detector excerpt": {
+  "population": null,
+  "objects_with_wide_literal": null,
+  "wide_literals": null,
+  "widest_example": null,
+  "note": "NOT MEASURED BY THIS SCRIPT -- see register"
+ }
+}
