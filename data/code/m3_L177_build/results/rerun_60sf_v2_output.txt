@@ -1,0 +1,24 @@
+[0.0s] phihat(i/2) table done
+  J_sin: m=20/100 done [8.7s]
+  J_sin: m=40/100 done [19.7s]
+  J_sin: m=60/100 done [34.8s]
+  J_sin: m=80/100 done [57.2s]
+  J_sin: m=100/100 done [79.9s]
+[79.9s] J_sin table done
+  diag_arch: m=0/100 done [0.3s]
+  diag_arch: m=20/100 done [16.3s]
+  diag_arch: m=40/100 done [35.7s]
+  diag_arch: m=60/100 done [59.8s]
+  diag_arch: m=80/100 done [98.3s]
+  diag_arch: m=100/100 done [137.0s]
+[216.9s] diagonal archimedean table done
+  matrix row 0/100 assembled [217.0s]
+  matrix row 20/100 assembled [220.0s]
+  matrix row 40/100 assembled [222.3s]
+  matrix row 60/100 assembled [224.0s]
+  matrix row 80/100 assembled [225.0s]
+  matrix row 100/100 assembled [225.3s]
+[225.3s] matrix built, computing eigenvalues
+[264.2s] lambda_min (x=13, N=100, dps=250) = 3.7208997416671239357914347660945406940913856191406195228312934724e-59
+sanity dps150 rerun = 3.72089974166712393579143476609454069409138562e-59
+committed dps150    = 3.720899741667123935791434766094540694091e-59

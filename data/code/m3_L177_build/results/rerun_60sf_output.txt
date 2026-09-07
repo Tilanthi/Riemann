@@ -1,0 +1,22 @@
+[0.0s] phihat(i/2) table done
+  J_sin: m=20/100 done [10.0s]
+  J_sin: m=40/100 done [21.5s]
+  J_sin: m=60/100 done [36.6s]
+  J_sin: m=80/100 done [59.1s]
+  J_sin: m=100/100 done [81.8s]
+[81.9s] J_sin table done
+  diag_arch: m=0/100 done [0.3s]
+  diag_arch: m=20/100 done [15.8s]
+  diag_arch: m=40/100 done [35.0s]
+  diag_arch: m=60/100 done [59.0s]
+  diag_arch: m=80/100 done [97.1s]
+  diag_arch: m=100/100 done [135.5s]
+[217.3s] diagonal archimedean table done
+  matrix row 0/100 assembled [217.4s]
+  matrix row 20/100 assembled [220.8s]
+  matrix row 40/100 assembled [223.5s]
+  matrix row 60/100 assembled [225.4s]
+  matrix row 80/100 assembled [226.5s]
+  matrix row 100/100 assembled [226.9s]
+[226.9s] matrix built, computing eigenvalues
+[266.5s] lambda_min (x=13, N=100, dps=250) = 3.7208997416671221202881772152411083196157325547661749479087140031e-59
