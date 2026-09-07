@@ -1,0 +1,5 @@
+fixed extends committed150: True
+fixed extends sanity150:    True
+buggy vs fixed common digits: 16
+sanity vs committed150 common: 41 (= committed width, exact)
+fixed literal s.f. count: 66 (digit '3.' +  65 mantissa digits -> total s.f. = 66 )
