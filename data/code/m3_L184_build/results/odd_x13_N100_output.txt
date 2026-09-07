@@ -1,0 +1,23 @@
+[0.0s] psihat(i/2) table done
+  J_sin: m=20/100 done [2.9s]
+  J_sin: m=40/100 done [8.4s]
+  J_sin: m=60/100 done [14.1s]
+  J_sin: m=80/100 done [19.7s]
+  J_sin: m=100/100 done [31.1s]
+[31.1s] J_sin table done
+  diag_arch: m=20/100 done [5.4s]
+  diag_arch: m=40/100 done [15.6s]
+  diag_arch: m=60/100 done [26.3s]
+  diag_arch: m=80/100 done [36.9s]
+  diag_arch: m=100/100 done [57.9s]
+[89.1s] diagonal archimedean table done
+  matrix row 20/100 assembled [91.2s]
+  matrix row 40/100 assembled [92.8s]
+  matrix row 60/100 assembled [94.0s]
+  matrix row 80/100 assembled [94.7s]
+  matrix row 100/100 assembled [94.9s]
+[94.9s] matrix built
+[125.6s] eigsy done
+lambda_min_odd (N=100, x=13, dps=150) = 3.341077420320739656582137126019922362544e-55
+BEAST published odd value            = 3.341077420320739656582137126019922362544e-55
+relative difference = 1.335636816e-60
