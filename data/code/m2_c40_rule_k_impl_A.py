@@ -20,6 +20,9 @@ This file is one of TWO independent implementations of one specification.  F1 in
 they must agree EXACTLY; a difference of one row means RULE K does not name every axis.
 """
 import argparse, collections, csv, json, os, re, subprocess
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -69,6 +72,17 @@ def pref(a, b):
     return a.startswith(b) or b.startswith(a)          # A4: symmetric prefix-at-the-shorter-length
 
 
+SCOPE = m2_corpus_scope.declare(
+    "m2_c40_rule_k_impl_A (RULE K carrier index)",
+    entitled="every tracked our-side NON-.md file, corpus-wide (K1/K5/K6)",
+    outputs=("data/m2_c40_rule_k_A.json",),
+    also_excl=("data/m2_c37_published_constants_census.tsv",
+               "data/m2_c39_split_column.json", "data/m2_c39_split_column.tsv",
+               "data/m2_c39_published_constants_census_split.tsv"),
+    reason="the denominator file and the c39 column that this recount re-measures: both list the "
+           "census keys, so both can supply carriership for the very rows being counted")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--floor", type=int, default=10)
@@ -79,7 +93,8 @@ def main():
     ap.add_argument("--json-out")
     a = ap.parse_args()
 
-    files = [f for f in tracked() if is_ours(f)]
+    files = SCOPE.apply([f for f in tracked() if is_ours(f)])
+    SCOPE.report()
     dat = [f for f in files if not f.endswith(".md")]
 
     # K3: working precision declared IN the file; K7: guard ADDED to dps.
@@ -152,7 +167,16 @@ def main():
     print("  indexed keys %d" % len(idx))
     for s, c in st.most_common():
         print("  %-42s %5d  (%.2f%%)" % (s, c, 100.0 * c / n))
-    print("  RECOVERED %d/%d = %.2f%%" % (rec, n, 100.0 * rec / n))
+    # BINDING (BEAST-AGI c40 ruling, both clauses):
+    #  (1) every RULE-K figure is an UPPER BOUND -- ADDENDUM 2 A3: a file that aggregates constants
+    #      from many runs while declaring one dps marks every constant it carries as recovered, and
+    #      K5 forbids inheritance ACROSS files but cannot see aggregation WITHIN one.  Printed as
+    #      "<=" so the bound travels with the number instead of living in a letter nobody re-reads.
+    #  (2) no knob figure without its DIGIT FLOOR beside it -- the two floors differ by 33 rows of
+    #      486, against the 10-row threshold registered in ADDENDUM 2, so the floor is a
+    #      load-bearing free parameter and a floorless figure is not a figure.
+    print("  RECOVERED <= %d/%d = %.2f%%  [UPPER BOUND, A3 aggregation; digit floor %d]"
+          % (rec, n, 100.0 * rec / n, a.floor))
     if a.json_out:
         json.dump({k: v for k, v in detail.items()}, open(a.json_out, "w"), indent=0)
         print("  written: %s" % a.json_out)

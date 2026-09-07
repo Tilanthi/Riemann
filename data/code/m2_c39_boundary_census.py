@@ -25,6 +25,9 @@ import os
 import re
 import subprocess
 import sys
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -69,6 +72,14 @@ def scan_files(paths, threshold=12):
                 widest_example=ex)
 
 
+# c41: this census walks the WHOLE repo, so its own committed output is inside its own input set --
+# measured TIER 1 self-ingestion.  Declared and excluded; the count is printed on every run.
+SCOPE = m2_corpus_scope.declare(
+    "m2_c39_boundary_census (serialisation-boundary walk)",
+    entitled="every file under the repo except .git, filtered by the caller's predicate",
+    outputs=("data/m2_c39_boundary_census.json",))
+
+
 def m2_files(pred):
     out = []
     for root, dirs, files in os.walk(REPO):
@@ -77,7 +88,11 @@ def m2_files(pred):
             p = os.path.join(root, f)
             if pred(os.path.relpath(p, REPO)):
                 out.append(p)
-    return sorted(out)
+    rel = [os.path.relpath(x, REPO) for x in out]
+    kept = set(SCOPE.apply(rel))
+    if not getattr(SCOPE, "_reported", False):
+        SCOPE.report(); SCOPE._reported = True
+    return sorted(x for x in out if os.path.relpath(x, REPO) in kept)
 
 
 def m2_commit_messages():

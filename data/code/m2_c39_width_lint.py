@@ -30,9 +30,30 @@ the worst measured instances were hand-typed literals in letters and are invisib
 search.
 """
 import re, os, sys, subprocess, argparse, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THRESH = 12
+
+# --- DECLARED CORPUS SCOPE (c41) ---------------------------------------------------
+# The EXEMPTION index is the dangerous half and it is the one nobody was watching.  A carrier index
+# that eats its own output inflates a count; an EXEMPTION index that eats its own output DELETES
+# findings -- a literal this lint once reported as untraceable becomes traceable on the next run,
+# silently and monotonically.  Measured this cycle: no committed file under data/ carries this
+# lint's stdout, so the count is currently 0; the exclusion is declared anyway, because the reason
+# it is 0 is that nobody has yet redirected a run into data/, which is one shell character away.
+SCOPE_EXEMPT = m2_corpus_scope.declare(
+    "m2_c39_width_lint (EXEMPTION index)",
+    entitled="every file under data/**, tracked or not, as a source of stored literals",
+    outputs=("data/m2_c39_width_lint.out", "data/m2_c39_width_lint.json",
+             "data/m2_c39_width_lint_findings.out"),
+    reason="this lint's own findings list every literal it flagged; re-reading it would exempt "
+           "exactly the literals it exists to catch")
+SCOPE_TARGETS = m2_corpus_scope.declare(
+    "m2_c39_width_lint (TARGET set)",
+    entitled="repo-root machine2*.md letters, data/code/{m2_,machine2}*.py sources, our commits",
+    outputs=())
 
 # --- tokeniser -------------------------------------------------------------------
 # Boundary discipline in BOTH directions, and it is a tested requirement, not a taste:
@@ -101,10 +122,19 @@ def width_statements(text):
 def build_artefact_index(root=None, subdirs=("data",)):
     root = root or REPO
     idx = collections.defaultdict(set)
+    seen = []
     for sub in subdirs:
         for dp, _, fns in os.walk(os.path.join(root, sub)):
             for fn in fns:
                 p = os.path.join(dp, fn)
+                seen.append(os.path.relpath(p, root))
+    kept = set(SCOPE_EXEMPT.apply(seen))
+    SCOPE_EXEMPT.report()
+    for sub in subdirs:
+        for dp, _, fns in os.walk(os.path.join(root, sub)):
+            for fn in fns:
+                p = os.path.join(dp, fn)
+                if os.path.relpath(p, root) not in kept: continue
                 if os.path.getsize(p) > 40_000_000: continue
                 try: t = open(p, errors='replace').read()
                 except Exception: continue
@@ -145,13 +175,51 @@ def traceable(tok, idx):
                 return True
     return False
 
+# --- SYNTHETIC-LITERAL MARKER (c41, authorized with three binding conditions) --------
+# The class this exists for: an ILLUSTRATIVE number in prose.  My own c40 letters argue that an
+# exponent-blind key would identify 1.23456789012e-5 with 1.23456789012e+40, and RULE A flags both
+# -- true by the letter, false in substance, because neither is a measurement of anything.
+#
+# THE THREE CONDITIONS, and each is implemented rather than promised:
+#  (a) it ships with its own controls, INCLUDING a NEG arm proving an UNMARKED real literal still
+#      fires.  See the MARK-* arms in selftest().
+#  (b) every run PRINTS the count of literals exempted by the marker.  A rising count is the ONLY
+#      signal that someone is marking real constants to quiet the tool, and it cannot be a signal
+#      unless it is printed.  Printed even when it is 0.
+#  (c) the marker is NEVER inferred from a literal's appearance.  There is no "looks synthetic"
+#      branch and there must never be one: 1.23456789012e-5 and a real measurement are the same
+#      shape, which is exactly why the exemption has to be an author's explicit act.
+#
+# ORDERING (BEAST-AGI's c41 sequencing addendum): the marker runs INSIDE an already-declared corpus
+# scope.  The circular carrier and the synthetic literal are one defect -- an undeclared corpus
+# scope -- and marking literals inside a corpus nobody has bounded is the second half of the same
+# mistake.  Scope first (SCOPE_TARGETS / SCOPE_EXEMPT above), then mark what survives.
+#
+# FORM: the token [[SYN]] on the SAME LINE as the literal.  Same line, not same paragraph, so the
+# exempted span is bounded by something the author can see while typing it.
+SYN_MARK = "[[SYN]]"
+
+
+def _line_of(text, pos):
+    a = text.rfind("\n", 0, pos) + 1
+    b = text.find("\n", pos)
+    return text[a:(b if b != -1 else len(text))]
+
+
 # --- rules -------------------------------------------------------------------------
-def rule_a(text, idx):
+def rule_a(text, idx, marked_out=None):
+    """Returns hits.  If `marked_out` is a list, every literal exempted by the marker is appended
+    to it, so the exempted count is MEASURED at the call site and never typed."""
     hits = []
     for m in NUM.finditer(text):
         tok = m.group(0)
-        if sigfigs(tok) >= THRESH and not traceable(tok, idx):
-            hits.append((tok, m.start()))
+        if sigfigs(tok) < THRESH or traceable(tok, idx):
+            continue
+        if SYN_MARK in _line_of(text, m.start()):
+            if marked_out is not None:
+                marked_out.append(tok)
+            continue
+        hits.append((tok, m.start()))
     return hits
 
 ORDINAL = re.compile(r'\d+\s*(st|nd|rd|th)\b', re.I)
@@ -277,6 +345,29 @@ def selftest(verbose=True):
     chk("NEG-B tokeniser emits no sub-literal",
         toks == ["1", "71732.90783055708304445059087085997984896"], "got %r" % (toks,))
 
+    # --- MARK-*: the synthetic-literal marker's OWN controls (c41 condition (a)) --------
+    # An exemption shipped without a control is an unfalsifiable guard.  These four are red-proof
+    # arms, not decoration: MARK-NEG-1 and MARK-NEG-2 both FAIL if the marker is widened, and
+    # MARK-NEG-1 is the arm BEAST-AGI made binding -- an UNMARKED real literal must still fire.
+    _hand = "1.23456789012e-5"                       # not in any artefact: RULE A must catch it
+    _empty = {}
+    # MARK-NEG-1 (BINDING): unmarked, it fires.  If this arm goes quiet the marker is over-reaching.
+    _mo = []
+    chk("MARK-NEG-1 an UNMARKED real literal still fires",
+        len(rule_a("the value is %s here" % _hand, _empty, marked_out=_mo)) == 1 and _mo == [])
+    # MARK-POS-1: marked on the same line, it is exempt AND it is COUNTED.
+    _mo = []
+    chk("MARK-POS-1 a marked literal is exempt and is counted",
+        rule_a("illustrative %s [[SYN]]" % _hand, _empty, marked_out=_mo) == [] and _mo == [_hand])
+    # MARK-NEG-2: the marker does NOT reach across a line break.  Same-line is the whole bound.
+    _mo = []
+    chk("MARK-NEG-2 a marker on the PREVIOUS line does not exempt",
+        len(rule_a("[[SYN]]\nthe value is %s" % _hand, _empty, marked_out=_mo)) == 1 and _mo == [])
+    # MARK-NEG-3: nothing about a literal's APPEARANCE may exempt it (condition (c)).  A digit
+    # string that looks maximally synthetic must still fire when unmarked.
+    chk("MARK-NEG-3 no appearance-based exemption: 1.00000000000e+00 unmarked still fires",
+        len(rule_a("k = 1.00000000000e+00", _empty)) == 1)
+
     if fails:
         print("\nKNOWN-ANSWER TEST FAILED -- %d control(s):" % len(fails))
         for f in fails: print("  " + f)
@@ -328,9 +419,18 @@ def main():
             if an in OURS:
                 targets.append(("commit", sha[:7], body))
 
+    # the TARGET set is scoped too, and its self-output list is EMPTY BY CONSTRUCTION: this lint
+    # writes to stdout only.  Declared rather than assumed -- an empty declaration is a claim that
+    # can be checked, an absent one is not.
+    _names = [n for _, n, _ in targets]
+    _kept = set(SCOPE_TARGETS.apply(_names))
+    targets = [t for t in targets if t[1] in _kept]
+    SCOPE_TARGETS.report()
+
     nA = nB = 0
+    marked = []                      # condition (b): measured here, never typed
     for kind, name, text in targets:
-        ha, hb = rule_a(text, idx), rule_b(text)
+        ha, hb = rule_a(text, idx, marked_out=marked), rule_b(text)
         if ha or hb:
             print("--- %s %s" % (kind, name))
             for tok, _ in ha[:6]:
@@ -340,6 +440,14 @@ def main():
                 print("    RULE B claims %r but the literal counts %d s.f.: %s" % (span, n, tok))
             nA += len(ha); nB += len(hb)
     print("\nSCANNED %d objects | RULE A hits %d | RULE B hits %d" % (len(targets), nA, nB))
+    # condition (b), printed on EVERY run including when it is zero.  A rising number here is the
+    # only visible signal that real constants are being marked to quiet the tool.
+    print("SYNTHETIC-LITERAL MARKER %s: %d literal(s) exempted across %d objects"
+          % (SYN_MARK, len(marked), len(targets)))
+    for tokm in marked[:20]:
+        print("    exempted as synthetic: %s" % tokm[:60])
+    if len(marked) > 20:
+        print("    ... +%d more" % (len(marked) - 20))
 
 if __name__ == "__main__":
     main()

@@ -28,6 +28,9 @@ import json
 import os
 import re
 import subprocess
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -59,8 +62,20 @@ def read(p):
         return ""
 
 
+SCOPE = m2_corpus_scope.declare(
+    "m2_c39_knob_column (carrier + appearance index)",
+    entitled="every tracked our-side file, .md for appearance and non-.md for carriership",
+    outputs=("data/m2_c39_split_column.json",
+             "data/m2_c39_split_column.tsv",
+             "data/m2_c39_published_constants_census_split.tsv"),
+    also_excl=("data/m2_c37_published_constants_census.tsv",),
+    reason="the DENOMINATOR file: it lists every census key, so leaving it in the carrier index "
+           "lets the census supply its own evidence of carriership")
+
+
 def main():
-    files = [f for f in tracked() if is_ours(f)]
+    files = SCOPE.apply([f for f in tracked() if is_ours(f)])
+    SCOPE.report()
     md = [f for f in files if f.endswith(".md")]
     dat = [f for f in files if not f.endswith(".md")]
     print(f"attribution (declared over-approximation): {len(files)} our-side tracked files "

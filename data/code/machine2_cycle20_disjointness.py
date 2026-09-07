@@ -12,6 +12,9 @@ A carrier that has been *mentioned* is not a carrier that has been *run*: the te
 two by requiring a numeric distance row, not a string match, before it calls something "run".
 """
 import json, os, re, subprocess, sys
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 REPO = "/shared/rh-exchange-repo/Riemann"
 
@@ -53,8 +56,22 @@ def m2_files():
     return sorted(out)
 
 
+# c41: measured TIER 1 -- this sweep's own committed output, data/machine2_cycle20_disjointness.json,
+# lies inside the tree it walks.  Declared and excluded; the count is printed on every run.
+SCOPE = m2_corpus_scope.declare(
+    "machine2_cycle20_disjointness (carrier sweep)",
+    entitled="every our-side artefact under the repo tree",
+    outputs=("data/machine2_cycle20_disjointness.json", "machine2_cycle20_disjointness.json"),
+    sources=("data/code/machine2_cycle20_disjointness.py",
+             "data/code/machine2_cycle20_carriers.py"))
+
+
 def main():
-    files = m2_files()
+    _f = m2_files()
+    _rel = [os.path.relpath(x, REPO) if os.path.isabs(x) else x for x in _f]
+    _kept = set(SCOPE.apply(_rel))
+    SCOPE.report()
+    files = [x for x, r in zip(_f, _rel) if r in _kept]
     report = {"m2_artefacts_swept": len(files), "carriers": {}, "weights": {}}
     texts = {}
     for p in files:

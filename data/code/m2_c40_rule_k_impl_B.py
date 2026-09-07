@@ -20,6 +20,9 @@ prereg's requirement that two implementations of one rule agree EXACTLY -- is a 
 copy compared with itself.
 """
 import argparse, collections, csv, json, os, re, subprocess
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m2_corpus_scope
 
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 NUM = re.compile(r'(?<![\w.])[+-]?\d+\.\d+(?:[eE][+-]?\d+)?(?![\w.])')
@@ -54,6 +57,17 @@ def is_ours(b):                                       # A2
     return b.startswith(("machine2", "m2_", "machine2_", "c3"))
 
 
+SCOPE = m2_corpus_scope.declare(
+    "m2_c40_rule_k_impl_B (RULE K carrier index)",
+    entitled="every tracked our-side NON-.md file, corpus-wide (K1/K5/K6)",
+    outputs=("data/m2_c40_rule_k_B.json",),
+    also_excl=("data/m2_c37_published_constants_census.tsv",
+               "data/m2_c39_split_column.json", "data/m2_c39_split_column.tsv",
+               "data/m2_c39_published_constants_census_split.tsv"),
+    reason="the denominator file and the c39 column that this recount re-measures: both list the "
+           "census keys, so both can supply carriership for the very rows being counted")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--floor", type=int, default=10)
@@ -63,8 +77,9 @@ def main():
     a = ap.parse_args()
 
     ls = subprocess.run(["git", "-C", R, "ls-files"], capture_output=True, text=True).stdout.split("\n")
-    cand = [f for f in ls if f and not f.lower().endswith(".pdf")
-            and not f.endswith(".md") and is_ours(f)]
+    cand = SCOPE.apply([f for f in ls if f and not f.lower().endswith(".pdf")
+                        and not f.endswith(".md") and is_ours(f)])
+    SCOPE.report()
     if a.family_only:
         cand = [f for f in cand
                 if re.search(r"c3[3-8]", os.path.basename(f))
@@ -129,7 +144,16 @@ def main():
     rec = st["POINT"] + st["RANGE"]
     for k, c in st.most_common():
         print("  %-42s %5d  (%.2f%%)" % (k, c, 100.0 * c / n))
-    print("  RECOVERED %d/%d = %.2f%%" % (rec, n, 100.0 * rec / n))
+    # BINDING (BEAST-AGI c40 ruling, both clauses):
+    #  (1) every RULE-K figure is an UPPER BOUND -- ADDENDUM 2 A3: a file that aggregates constants
+    #      from many runs while declaring one dps marks every constant it carries as recovered, and
+    #      K5 forbids inheritance ACROSS files but cannot see aggregation WITHIN one.  Printed as
+    #      "<=" so the bound travels with the number instead of living in a letter nobody re-reads.
+    #  (2) no knob figure without its DIGIT FLOOR beside it -- the two floors differ by 33 rows of
+    #      486, against the 10-row threshold registered in ADDENDUM 2, so the floor is a
+    #      load-bearing free parameter and a floorless figure is not a figure.
+    print("  RECOVERED <= %d/%d = %.2f%%  [UPPER BOUND, A3 aggregation; digit floor %d]"
+          % (rec, n, 100.0 * rec / n, a.floor))
     if a.json_out:
         json.dump(detail, open(a.json_out, "w"), indent=0)
         print("  written: %s" % a.json_out)
