@@ -1,0 +1,29 @@
+successive lambda ratios: ['0.8577545606', '0.9273372117', '0.9574111949']
+successive DIFFERENCE ratios r1,r2: 0.4381640517 0.5435269502
+  (m3 quoted 0.438, 0.544; m1 quoted 0.4382, 0.5435)
+
+=== the data are EXACT: quote the noise level ===
+m3's own dps control: ratio 1.0 at dps150 vs 220 => noise on each lambda < ~1e-30 relative
+=> a model miss of 1e-3 relative is ~1e27 times the noise. Nothing here is a 'fit within error'.
+
+=== FAMILY TESTS: 3-parameter families, shape param fixed by r1, r2 PREDICTED (1 dof) ===
+A geometric (lam_inf + C*rho^N):   predicts r2 = r1 = 0.438164 ; measured 0.543527 ; miss -19.39%
+B algebraic 1/N (lam_inf + C/N):   predicts r1=0.555556 r2=0.636364 ; measured 0.438164 0.543527 ; miss +26.79% +17.08%
+C power law (lam_inf + C*N^-p):    p fit to r1 = 1.792093625 ; predicts r2=0.530946 ; measured 0.543527 ; miss -2.31%
+   (m1 quoted p=1.792, 'reproduces the second to 2.3%')
+D stretched exp: no root found: Could not find root within given tolerance. (0.00123450809451776476223472217551755153924234329380569605305339272716 > 1.51929083932156779959571876312991314467535453337919119460476479853e-64)
+Try another starting point or tweak arguments.
+
+=== IMPLIED lam_inf AND CUMULATIVE SHRINK FACTOR under each family ===
+  A geometric Aitken (100,140,180)       lam_inf=2.7788436e-59   cumulative factor L100/lam_inf = 1.33901
+  A geometric Aitken (140,180,220)       lam_inf=2.683567e-59   cumulative factor L100/lam_inf = 1.38655
+  B 1/N Richardson (100,140)             lam_inf=1.8684162e-59   cumulative factor L100/lam_inf = 1.99147
+  B 1/N Richardson (140,180)             lam_inf=2.1480151e-59   cumulative factor L100/lam_inf = 1.73225
+  B 1/N Richardson (180,220)             lam_inf=2.2664297e-59   cumulative factor L100/lam_inf = 1.64175
+  B 1/N Richardson (100,220)             lam_inf=2.094287e-59   cumulative factor L100/lam_inf = 1.77669
+  C power law p=1.79209 (from r1)        lam_inf=2.542403e-59   cumulative factor L100/lam_inf = 1.46354
+  C power law p=1.68996 (from r2)        lam_inf=2.5214344e-59   cumulative factor L100/lam_inf = 1.47571
+
+=== Is lam_inf = 0 (pure decay) refuted? ===
+  pure power decay exponents from consecutive pairs: ['-0.456018', '-0.300174', '-0.216884']
+  not constant (-0.456 -> -0.300 -> -0.217) => lam ~ C N^-p with lam_inf=0 is REFUTED

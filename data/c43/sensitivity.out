@@ -1,0 +1,22 @@
+=== SENSITIVITY of lam_inf / cumulative factor to the SHAPE parameter p ===
+   family lam(N)=lam_inf + C N^-p, lam_inf and C fixed by the LAST TWO points (180,220)
+   p        lam_inf(e-59)   cumulative factor L(100)/lam_inf
+   1.0      2.2664297       1.641745
+   1.2      2.3707001       1.569536
+   1.4      2.4450592       1.521804
+   1.6      2.5007239       1.487929
+   1.69     2.5214424       1.475703
+   1.79     2.5419974       1.46377
+   2.0      2.5784044       1.443102
+   2.5      2.6401757       1.409338
+   3.0      2.681014        1.38787
+   4.0      2.7313029       1.362317
+
+   p is pinned only to ~[1.69,1.79] by the two measured difference-ratios, and those two
+   ratios are MUTUALLY INCONSISTENT inside the family (2.31% apart against ~1e-30 data),
+   so p is not pinned by a fit at all -- it is a range over an unmodelled residual.
+
+=== registration arithmetic for d4/d3 ===
+   frozen p=1.5878 -> d4/d3 = 0.62090263
+   frozen p=1.6900 -> d4/d3 = 0.60923954
+   frozen p=1.7921 -> d4/d3 = 0.59780026

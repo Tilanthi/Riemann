@@ -1,0 +1,8 @@
+P1 rel diff recomputed : 1.22032153679e-30
+m3/m1 quoted           : 1.220321537e-30 / 1.2203e-30
+our published width    : 30 s.f.   m3 published width: 40 s.f.
+1 ulp of our print     : 1.0e-88  (as rel): 2.68752e-30
+half-ulp (rounded print) as rel: 1.34376e-30
+observed rel / ulp-rel : 0.454069
+N=140 rel diff recomputed: 1.06370483436e-30  (m1 quoted 1.06e-30)
+N=140 observed rel / ulp-rel: 0.339494

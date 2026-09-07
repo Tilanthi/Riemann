@@ -1,0 +1,27 @@
+log-ratios: ['-0.1534372803', '-0.07543801292', '-0.04352230902']  lr2/lr1= 0.4916537412  lr3/lr2= 0.5769280942
+
+=== A. IS lam_inf = 0 ADMISSIBLE?  (decay-to-zero families, fit 2 shape params to lr1,lr2) ===
+  family lam=C exp(-c N^q), c>0,q>0 is a genuine decay to 0.
+  F(q)=0 needed. F on q>0: [('0.001', '0.255476'), ('0.25', '0.312096'), ('0.5', '0.373035'), ('1', '0.508346'), ('2', '0.84168'), ('4', '1.85069')]
+  F(q) > 0 for EVERY q>0 tested and increasing => NO ROOT with q>0.
+  the only root is at q<0 (F(-2)=-0.08013, F(-1)=0.0639), and q<0 gives N^q->0 i.e. lam->C>0.
+  family lam=C N^-p (pure power decay to 0): p from each consecutive pair = ['0.456018', '0.300174', '0.216884'] -> not constant, REFUTED
+  => within the families tested, lam_inf > 0.  The SEQUENCE HAS A POSITIVE LIMIT is the part
+     these four points DO determine; the VALUE is the part they do not.
+
+=== B. MODEL-FREE INTERVAL (assumes only lam_min(N) non-increasing: Cauchy interlacing, nested basis) ===
+  0 < lam_inf <= lam(220)=2.83365643101e-59  =>  cumulative factor >= 1.31310899266 , no upper bound from the data alone
+  P2's registered band [1.15,1.6]: its LOWER half [1.15,1.313) is EXCLUDED model-free.
+
+=== C. LOCAL EFFECTIVE EXPONENT p_eff and its DRIFT (what N=260 actually measures) ===
+  p_eff(100,140,180) = 1.792093625 ;  p_eff(140,180,220) = 1.689963284 ;  drift = -0.10213 per 40-step
+  linear drift extrapolation -> p_eff(180,220,260) = 1.587832943
+
+  PREDICTED d4/d3 = (lam220-lam260)/(lam180-lam220) under each hypothesis:
+     geometric refit on last triple (r3=r2)                     0.54352695
+     pure 1/N                                                   0.69230769
+     frozen power law p=1.79209 (m1's registered centre)        0.59780096
+     frozen power law p=1.68996 (from r2)                       0.60924369
+     DRIFTING p_eff, linear, p=1.58783  <-- BEAST c43 registration 0.62089884
+
+  m1's registered band was [0.57,0.61] centred 0.598 on the FROZEN p=1.792 family.

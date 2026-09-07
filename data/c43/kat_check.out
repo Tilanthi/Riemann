@@ -1,0 +1,26 @@
+=== KAT-1 arm A (s=0.2) : our README 7A spec vs m3's kat1_gate_output.txt ===
+  W formula side               ours(pub)=0.01859045044076295597727455    m3=0.0185904504407629559772745551411051
+                               |rel diff| = 2.76545e-25   (our published width = 25 s.f.)
+  Z zero side                  ours(pub)=0.01859045044076295597727456    m3=0.0185904504407629559772745551411051
+                               |rel diff| = 2.61365e-25   (our published width = 25 s.f.)
+  prime component              ours(pub)=-0.00241645242748               m3=-0.0024164524274830623352
+                               |rel diff| = 1.26729e-12   (our published width = 12 s.f.)
+
+=== KAT-1 arm B (s=1) ===
+  Z zero side                  ours(pub)=2.070970413701769232754477e-43  m3=2.070970413701769232754477296205666944
+                               |rel diff| = 1.43027e-25   (our published width = 25 s.f.)
+  prime component              ours(pub)=-2.68196739383                  m3=-2.6819673938269101365
+                               |rel diff| = 1.15209e-12   (our published width = 12 s.f.)
+
+=== the log(pi) bookkeeping claim, checked at full published width ===
+  log(pi) = 1.1447298858494
+  armA pole  m3 - ours = -1.14472988585         vs -+log(pi) = 1.14472988585   match to 2.26e-12
+  armA arch  m3 - ours = 1.14472988585          vs -+log(pi) = 1.14472988585   match to 4.95e-13
+  armB pole  m3 - ours = -1.14472988585         vs -+log(pi) = 1.14472988585   match to 3.37e-12
+  armB arch  m3 - ours = 1.14472988585          vs -+log(pi) = 1.14472988585   match to 3.54e-12
+
+=== arm B residual: is it checkable from our spec? ===
+  ours 2.617429714635e-33 vs m3 2.63547822847e-33 -> ratio 1.00689551 (0.69% apart)
+  our spec printed its arm-B components to 12 s.f.; the residual sits at 2.6e-33 against O(5) terms,
+  i.e. 33 decades below them => the residual is fixed by component digits 13..34, WHICH WE NEVER PRINTED.
+  => arm B as specified in README 7A is NOT falsifiable from the artefact. Self-charge.
