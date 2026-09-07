@@ -1,0 +1,14 @@
+  seal machine1_heat70_genomes_m8_m64.json: OK
+  seal machine1_heat72k_identity_target_m8.json: OK
+  seal machine1_heat78a_m64_kernel.json: OK
+[0.1s] instruments built
+[0.7s] zeros computed
+8/5/4/0.05: mine=0.000021960597593416426852  sealed=0.000021960597593416426852  rel_err=1.1023e-25
+8/10/4/0.1: mine=0.000011173482791562208249  sealed=0.000011173482791562208249  rel_err=2.1141e-25
+8/20/4/0.2: mine=0.000011795734896614877274  sealed=0.000011795734896614877274  rel_err=1.791e-25
+8/24/4/0.45: mine=0.000011799363011631501016  sealed=0.000011799363011631501016  rel_err=1.2032e-25
+64/5/4/0.05: mine=-0.00032475826167654645514  sealed=-0.00032475826167654645514  rel_err=8.7384e-26
+
+MAX relative error across gate cells: 2.1141e-25
+GATE PASSED -- own Instrument construction reproduces sealed lambda_min exactly.
+[151.7s] done

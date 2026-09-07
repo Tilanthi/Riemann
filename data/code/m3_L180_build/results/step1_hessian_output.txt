@@ -1,0 +1,12 @@
+  seal machine1_heat70_genomes_m8_m64.json: OK
+  seal machine1_heat72k_identity_target_m8.json: OK
+  seal machine1_heat78a_m64_kernel.json: OK
+[0.7s] setup done
+max |finite-diff 1st derivative| (should be ~0, evenness check): 0.0
+max |A2_analytic| over the matrix: 0.0003512954624
+max |finite-diff 2nd deriv - analytic A2|: 9.80974e-20
+relative (to max|A2|): 2.79245e-16
+h=1.0e-6: max diff vs analytic = 9.80974e-16
+h=1.0e-10: max diff vs analytic = 9.80974e-24
+
+[23.1s] done
