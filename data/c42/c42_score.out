@@ -1,0 +1,73 @@
+== THE DECIMAL-SLIP DISCRIMINATOR (published x=13 column vs ours)
+  rows printed in scientific notation : 43, of which discrepant: 0
+  rows printed in decimal notation    : 7, of which discrepant: 4  -> n = [44, 45, 46, 48]
+     n=44 published 0.000141389  ours 1.4138902e-5     ratio ours/pub = 0.100000014
+     n=45 published 0.000556111  ours 5.5611071e-5     ratio ours/pub = 0.0999999479
+     n=46 published 0.000720794  ours 7.2079368e-5     ratio ours/pub = 0.0999999556
+     n=48 published 0.0209081    ours 0.0020908104     ratio ours/pub = 0.100000019
+  repaired column = published with those 4 entries divided by exactly 10
+
+== MONOTONICITY (a step is non-monotone if d_{n+1} <= d_n)
+  published (as printed)   3 / 49   at n = [46, 48, 49]
+  published (repaired)     1 / 49   at n = [49]
+  ours x=13                1 / 49   at n = [49]
+  ours x=11                5 / 49   at n = [40, 41, 46, 48, 49]
+  ours x=7                 16 / 49   at n = [20, 24, 26, 27, 31, 32, 34, 37, 38, 39, 41, 42, 44, 45, 47, 48]
+
+== LOG-LINEAR REACH FIT  log10 d_n = A + B n   (n = 1..50)
+  published (as printed)   A=-46.714291  B=1.0041544  rms=3.0114  resid(n=48)=-3.1648  max|resid|=8.8746 at n=1
+  published (repaired)     A=-46.595924  B=0.99637526  rms=3.0794  resid(n=48)=-3.9098  max|resid|=8.9852 at n=1
+  ours x=13                A=-46.595924  B=0.99637527  rms=3.0794  resid(n=48)=-3.9098  max|resid|=8.9852 at n=1
+  ours x=11                A=-34.945567  B=0.83623969  rms=3.6568  resid(n=48)=-5.2987  max|resid|=10.005 at n=1
+  ours x=7                 A=-12.266816  B=0.33099292  rms=3.7571  resid(n=48)=-3.7129  max|resid|=11.556 at n=1
+
+== CONVERGENCE IN x  (this is the deliverable's headline)
+  n= 1  x=7 3.2231084e-24   x=11 7.6898954e-45   x=13 2.6017922e-55   | decades 7->11 20.622, 11->13 10.471
+  n= 5  x=7 7.6279051e-16   x=11 1.3338675e-35   x=13 7.5945283e-46   | decades 7->11 19.757, 11->13 10.245
+  n=10  x=7 6.4867151e-9    x=11 3.213639e-27    x=13 4.2486852e-37   | decades 7->11 18.305, 11->13 9.8787
+  n=20  x=7 0.21933357      x=11 2.9881684e-15   x=13 3.767509e-24    | decades 7->11 13.866, 11->13 8.8994
+  n=30  x=7 0.97608609      x=11 1.4135663e-7    x=13 4.4711346e-15   | decades 7->11 6.8392, 11->13 7.4999
+  n=40  x=7 0.42328242      x=11 0.06073836      x=13 2.109312e-7     | decades 7->11 0.84317, 11->13 5.4593
+  n=50  x=7 1.4026398       x=11 0.24286936      x=13 0.0021272732    | decades 7->11 0.76157, 11->13 2.0575
+
+== lambda_min(x) AGAINST THE LETTER'S OWN EXPONENT  -4 pi e^L + (9/2) L,  e^L = x
+  x= 3  lambda_min=5.56116189628e-8  log10=-7.2548345  log10 - (exponent/ln10) = 6.9706361
+  x= 5  lambda_min=1.0050225302e-17  log10=-16.997824  log10 - (exponent/ln10) = 7.1443379
+  x= 7  lambda_min=7.73054116631e-28  log10=-27.11179  log10 - (exponent/ln10) = 7.2878066
+  x= 9  lambda_min=3.13548574494e-38  log10=-37.503695  log10 - (exponent/ln10) = 7.3197623
+  x=11  lambda_min=1.22586550773e-48  log10=-47.911557  log10 - (exponent/ln10) = 7.4347353
+  x=13  lambda_min=3.72089974167e-59  log10=-58.429352  log10 - (exponent/ln10) = 7.5054733
+  x=15  lambda_min=8.44558129967e-70  log10=-69.07337  log10 - (exponent/ln10) = 7.4968001
+  x=17  lambda_min=2.8462347276e-80  log10=-79.545729  log10 - (exponent/ln10) = 7.6948426
+  x=19  lambda_min=1.91753481e-90  log10=-89.717257  log10 - (exponent/ln10) = 8.2209549
+  x=23  lambda_min=8.49423237189e-107  log10=-106.07088  log10 - (exponent/ln10) = 13.323973
+  slope d log10 lambda / dx on [3,5] : measured -4.8714949, letter's exponent at midpoint -4.9689241, rel diff 0.0196
+  slope d log10 lambda / dx on [5,7] : measured -5.056983, letter's exponent at midpoint -5.1317846, rel diff 0.0146
+
+== TRUNCATION SENSITIVITY N=100 -> N=140 (same x, same dps, same quadrature)
+  x= 7  d_1 x0.975612   d_50 x1.01366   lambda_min x0.975317   |  d_1/lambda ratio agree to 0.000302  |  index offsets identical at all 50 n: True
+  x=11  d_1 x0.875349   d_50 x1.03439   lambda_min x0.874967   |  d_1/lambda ratio agree to 0.000437  |  index offsets identical at all 50 n: True
+  x=13  d_1 x0.857932   d_50 x0.915572   lambda_min x0.857755   |  d_1/lambda ratio agree to 0.000207  |  index offsets identical at all 50 n: True
+
+== SUPPORT LENGTH vs PRIME CONTENT (x=13 -> x=15 adds NO new prime power)
+  x  3 ->  5 : new prime powers [4, 5]       | d_1 gain 9.24573 decades, 4.62287 decades per unit x
+  x  5 ->  7 : new prime powers [7]          | d_1 gain 9.91273 decades, 4.95637 decades per unit x
+  x  7 ->  9 : new prime powers [8, 9]       | d_1 gain 10.2833 decades, 5.14163 decades per unit x
+  x  9 -> 11 : new prime powers [11]         | d_1 gain 10.3391 decades, 5.16955 decades per unit x
+  x 11 -> 13 : new prime powers [13]         | d_1 gain 10.4706 decades, 5.23532 decades per unit x
+  x 13 -> 15 : new prime powers NONE         | d_1 gain 10.6097 decades, 5.30484 decades per unit x
+  x 15 -> 17 : new prime powers [16, 17]     | d_1 gain 10.446 decades, 5.22299 decades per unit x
+  x 17 -> 19 : new prime powers [19]         | d_1 gain 10.15 decades, 5.075 decades per unit x
+  x 19 -> 23 : new prime powers [23]         | d_1 gain 16.3141 decades, 4.07853 decades per unit x
+
+== INDEX REACH (first n where the n-th approximant stops being nearest to gamma_n)
+  x= 3  reach = 6 zeros tracked   (last tracked gamma ~ 37.586178158)  lambda_min=0.0000000556116189628395294151385486082
+  x= 5  reach = 13 zeros tracked   (last tracked gamma ~ 59.347044002)  lambda_min=1.00502253020078329195348849809e-17
+  x= 7  reach = 24 zeros tracked   (last tracked gamma ~ 87.425274613)  lambda_min=7.7305411663074409110050627392e-28
+  x= 9  reach = 34 zeros tracked   (last tracked gamma ~ 111.02953554)  lambda_min=3.13548574493974002221380205172e-38
+  x=11  reach = 48 zeros tracked   (last tracked gamma ~ 139.73620895)  lambda_min=1.22586550773101489964513197545e-48
+  x=13  reach = >=50 zeros tracked   (last tracked gamma ~ 143.11184580)  lambda_min=3.72089974166712393579143476609e-59
+  x=15  reach = >=50 zeros tracked   (last tracked gamma ~ 143.11184580)  lambda_min=8.44558129967341199863934281522e-70
+  x=17  reach = >=50 zeros tracked   (last tracked gamma ~ 143.11184580)  lambda_min=2.84623472759797759222673062251e-80
+  x=19  reach = >=50 zeros tracked   (last tracked gamma ~ 143.11184580)  lambda_min=1.91753481000346992195154931041e-90
+  x=23  reach = 36 zeros tracked   (last tracked gamma ~ 114.32022091)  lambda_min=8.49423237189183542644609715289e-107
