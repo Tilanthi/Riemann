@@ -1,0 +1,98 @@
+m3 literal read (as text) from: /shared/rh-exchange-repo/Riemann/letter179-astra-pa-P1-60sf-answer-plus-a-self-caught-dps-ordering-bug.md  (transcription checked: the string occurs twice in that file and identically in m3's committed data/code/m3_L177_build/results/rerun_60sf_v2_output.txt)
+cells: A(dps150,GL9,it4,CLEAN), B(dps250,GL9,it4,CLEAN), C(dps300,GL9,it4,CLEAN), D(dps250,GL10,it4,CLEAN), E(dps250,GL9,it4,BUG-CONTROL), F(dps300,GL8,it4,CLEAN), G(dps300,GL10,it4,CLEAN), H(dps300,GL11,it4,CLEAN), J(dps300,GL9,it6,CLEAN), K(dps300,GL9,it8,CLEAN), M(dps300,GL9,it12,CLEAN), N(dps250,GL9,it12,CLEAN), P(dps300,GL10,it12,CLEAN), Q(dps300,GL9,it16,CLEAN), R(dps400,GL9,it12,CLEAN), S(dps300,GL9,it12,CLEAN), T(dps300,GL9,it12,CLEAN), U(dps300,GL9,it12,BUG-CONTROL)
+
+== KNOWN-ANSWER TEST: cell A must reproduce our OWN committed c43 literals
+  cell A w45                         vs c43 published w45                  : AGREE on all 45 compared s.f. (widths 45 / 45)
+  cell A w60                         vs c43 published w60                  : AGREE on all 60 compared s.f. (widths 60 / 60)
+
+== CHANNELS (each pair differs in ONE knob)
+  [dps 250 -> 300 at GL9, iters 4]
+  cell B                             vs cell C                             : AGREE on all 120 compared s.f. (widths 120 / 120)
+  [GL 8 -> 9 at dps300, iters 4]
+  cell F                             vs cell C                             : AGREE on all 120 compared s.f. (widths 130 / 120)
+  [GL 9 -> 10 at dps300, iters 4]
+  cell C                             vs cell G                             : AGREE on all 120 compared s.f. (widths 120 / 130)
+  [GL 10 -> 11 at dps300, iters 4]
+  cell G                             vs cell H                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [iters 4 -> 6 at dps300, GL9]
+  cell C                             vs cell J                             : first differing s.f. = 55  (9 vs 2)  widths 120 / 130
+      cell C: ...1914061952[9]05941445
+      cell J: ...1914061952[2]83129347
+  [iters 6 -> 8 at dps300, GL9]
+  cell J                             vs cell K                             : first differing s.f. = 84  (1 vs 0)  widths 130 / 130
+      cell J: ...5113385017[1]03647751
+      cell K: ...5113385017[0]77157011
+  [iters 8 -> 12 at dps300, GL9]
+  cell K                             vs cell M                             : first differing s.f. = 115  (7 vs 6)  widths 130 / 130
+      cell K: ...3770157996[7]51013528
+      cell M: ...3770157996[6]38337596
+  [iters 12 -> 16 at dps300, GL9]
+  cell M                             vs cell Q                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [dps 250 -> 300 at GL9, iters 12]
+  cell N                             vs cell M                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [dps 300 -> 400 at GL9, iters 12]
+  cell M                             vs cell R                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [GL 9 -> 10 at dps300, iters 12]
+  cell M                             vs cell P                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [start vector uniform -> alternating, 2nd implementation of the iteration]
+  cell M                             vs cell S                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [start vector uniform -> pseudorandom, 2nd implementation of the iteration]
+  cell M                             vs cell T                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [alternating -> pseudorandom start vector]
+  cell S                             vs cell T                             : AGREE on all 130 compared s.f. (widths 130 / 130)
+  [BUG CONTROL, iters 4 -> 12 at dps300/250 GL9]
+  cell E                             vs cell U                             : first differing s.f. = 54  (5 vs 4)  widths 120 / 130
+      cell E: ...5547661749[5]41368349
+      cell U: ...5547661749[4]79087140
+
+== BUG CONTROL (positive control: the m3-L179 defect shape injected into OUR code)
+  cell B clean                       vs cell E bug-injected                : first differing s.f. = 16  (3 vs 2)  widths 120 / 120
+      cell B clean: ...9974166712[3]93579143
+      cell E bug-injected: ...9974166712[2]12028817
+  and OUR bug-injected value vs M3's OWN buggy literal (two contaminated pipelines):
+  cell E (ours, bugged)              vs m3 buggy literal                   : first differing s.f. = 54  (5 vs 4)  widths 120 / 65
+      cell E (ours, bugged): ...5547661749[5]41368349
+      m3 buggy literal: ...5547661749[4]79087140
+  cell E (ours, bugged)          vs m3 buggy literal       : DISAGREE, first differing s.f. = 54 (5 vs 4) at width 65
+  cell U (ours, bugged)              vs m3 buggy literal                   : first differing s.f. = 65  (0 vs 1)  widths 130 / 65
+      cell U (ours, bugged): ...7908714003[0]89668645
+      m3 buggy literal: ...7908714003[1]
+  cell U (ours, bugged)          vs m3 buggy literal       : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+
+== VERDICT: machine 2's converged value vs m3-L179
+  (a) raw prefix comparison — note the last-digit rounding artefact it produces:
+  cell M (ours)                      vs m3-L179                            : first differing s.f. = 65  (3 vs 4)  widths 130 / 65
+      cell M (ours): ...2831293472[3]55645252
+      m3-L179: ...2831293472[4]
+  cell Q (ours)                      vs m3-L179                            : first differing s.f. = 65  (3 vs 4)  widths 130 / 65
+      cell Q (ours): ...2831293472[3]55645252
+      m3-L179: ...2831293472[4]
+  cell P (ours)                      vs m3-L179                            : first differing s.f. = 65  (3 vs 4)  widths 130 / 65
+      cell P (ours): ...2831293472[3]55645252
+      m3-L179: ...2831293472[4]
+  cell R (ours)                      vs m3-L179                            : first differing s.f. = 65  (3 vs 4)  widths 130 / 65
+      cell R (ours): ...2831293472[3]55645252
+      m3-L179: ...2831293472[4]
+  cell N (ours)                      vs m3-L179                            : first differing s.f. = 65  (3 vs 4)  widths 130 / 65
+      cell N (ours): ...2831293472[3]55645252
+      m3-L179: ...2831293472[4]
+  (b) rounding-aware comparison at m3's printed width (the honest one):
+  cell M (ours)                  vs m3-L179                : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+  cell Q (ours)                  vs m3-L179                : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+  cell P (ours)                  vs m3-L179                : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+  cell R (ours)                  vs m3-L179                : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+  cell N (ours)                  vs m3-L179                : IDENTICAL at 65 s.f. after rounding the wider value to the narrower width
+
+== for the record: our OLD published c43 reading form vs m3-L179
+  c43 w60 (published)                vs m3-L179                            : first differing s.f. = 55  (9 vs 2)  widths 60 / 65
+      c43 w60 (published): ...1914061952[9]05941
+      m3-L179: ...1914061952[2]83129347
+  c43 w60 (published)            vs m3-L179                : DISAGREE, first differing s.f. = 55 (9 vs 2) at width 60
+  c43 w45 (CERTIFIED)                vs m3-L179                            : first differing s.f. = 45  (2 vs 1)  widths 45 / 65
+      c43 w45 (CERTIFIED): ...6940913856[2]
+      m3-L179: ...6940913856[1]91406195
+  c43 w45 (CERTIFIED)            vs m3-L179                : IDENTICAL at 45 s.f. after rounding the wider value to the narrower width
+
+== our converged value, rounded to m3's width, character by character
+  ours@65 = 37208997416671239357914347660945406940913856191406195228312934724
+  m3      = 37208997416671239357914347660945406940913856191406195228312934724

@@ -1,0 +1,188 @@
+{
+ "kat": [
+  {
+   "file": "rerun_60sf.py",
+   "expected": "ORDER-DEFECT-CALLEE",
+   "got": "ORDER-DEFECT-CALLEE",
+   "pass_": true,
+   "note": "EXTERNAL ground truth: m3's own script, m3-L179 s1 says it is buggy"
+  },
+  {
+   "file": "rerun_60sf_v2.py",
+   "expected": "DPS-FIRST",
+   "got": "DPS-FIRST",
+   "pass_": true,
+   "note": "EXTERNAL ground truth: m3's own fixed script, m3-L179 s2"
+  },
+  {
+   "file": "syn_bug.py",
+   "expected": "ORDER-DEFECT-MODULE",
+   "got": "ORDER-DEFECT-MODULE",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_clean.py",
+   "expected": "DPS-FIRST",
+   "got": "DPS-FIRST",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_func.py",
+   "expected": "DPS-RAISED-IN-FUNC",
+   "got": "DPS-RAISED-IN-FUNC",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_nodps.py",
+   "expected": "NO-DPS-ANYWHERE",
+   "got": "NO-DPS-ANYWHERE",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_nomp.py",
+   "expected": "NO-MPMATH",
+   "got": "NO-MPMATH",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_numpy.py",
+   "expected": "DPS-FIRST",
+   "got": "DPS-FIRST",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_import_use.py",
+   "expected": "DPS-VIA-IMPORT-BEFORE-VALUES",
+   "got": "DPS-VIA-IMPORT-BEFORE-VALUES",
+   "pass_": true,
+   "note": "synthetic"
+  },
+  {
+   "file": "syn_callee_use.py",
+   "expected": "ORDER-DEFECT-CALLEE",
+   "got": "ORDER-DEFECT-CALLEE",
+   "pass_": true,
+   "note": "synthetic"
+  }
+ ],
+ "kat_ok": 10,
+ "kat_n": 10,
+ "population": {
+  "all_tracked": 407,
+  "other_prefix": 214,
+  "foreign_path": 0,
+  "s1": 193,
+  "s2": 169
+ },
+ "results": {
+  "S1": {
+   "n": 193,
+   "pop": 153,
+   "counts": {
+    "NO-MPMATH": 40,
+    "PARSE-ERROR": 0,
+    "NO-DPS-ANYWHERE": 4,
+    "DPS-FIRST": 142,
+    "DPS-VIA-IMPORT-BEFORE-VALUES": 1,
+    "DPS-VIA-IMPORT-NO-VALUES": 1,
+    "LAZY-CONST-ONLY": 0,
+    "ORDER-DEFECT-MODULE": 2,
+    "ORDER-DEFECT-CALLEE": 2,
+    "DPS-RAISED-IN-FUNC": 1
+   },
+   "defects": 5,
+   "advisory_multi_raise": 44,
+   "hits": [
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_c33_fold_oos_grader.py",
+     "cls": "ORDER-DEFECT-CALLEE",
+     "ev": [
+      "L21    NOISE_FLOOR = mp.mpf(\"1e-25\")   <-- creates mp.mpf",
+      "L115   main(sys.argv[1] if len(sys.argv) > 1 else \"/workspace/rh/cycle33/c33_fold5.json\")   <-- calls main() in machine2_c33_fold_oos_grader.py, which raises dps"
+     ]
+    },
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_c33_fold_oos_grader_v2.py",
+     "cls": "ORDER-DEFECT-CALLEE",
+     "ev": [
+      "L34    NOISE_FLOOR = mp.mpf(\"1e-25\")   <-- creates mp.mpf",
+      "L128   main(sys.argv[1] if len(sys.argv) > 1 else \"/workspace/rh/cycle33/c33_fold5.json\")   <-- calls main() in machine2_c33_fold_oos_grader_v2.py, which raises dps"
+     ]
+    },
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_cycle17_census2.py",
+     "cls": "DPS-RAISED-IN-FUNC",
+     "ev": [
+      "L21    SIG_L = mpf('-0.19')   <-- module-level value",
+      "L79    mp.dps = dps   <-- dps set inside a function"
+     ]
+    },
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_cycle17_epscheck.py",
+     "cls": "ORDER-DEFECT-MODULE",
+     "ev": [
+      "L17    OURS  = mpf('0.14173323966388719139541530708686641')       # cycle 15, published   <-- creates mpf",
+      "L30    mp.dps = dps   <-- dps set here"
+     ]
+    },
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_cycle17_pt_control.py",
+     "cls": "ORDER-DEFECT-MODULE",
+     "ev": [
+      "L16    PT = mpc('0.932969697', '15.668249531')   <-- creates mpc",
+      "L20    mp.dps = dps   <-- dps set here"
+     ]
+    },
+    {
+     "file": "/shared/rh-exchange-repo/Riemann/data/code/machine2_debate_epseff_check.py",
+     "cls": "DPS-VIA-IMPORT-BEFORE-VALUES",
+     "ev": [
+      "L34    from machine2_cycle15_epstein_fold import zeta2, set_cut   <-- importing machine2_cycle15_epstein_fold.py raises dps at module level: this file's working precision is set by a side effect it never states"
+     ]
+    }
+   ]
+  },
+  "S2": {
+   "n": 169,
+   "pop": 137,
+   "counts": {
+    "NO-MPMATH": 32,
+    "PARSE-ERROR": 0,
+    "NO-DPS-ANYWHERE": 4,
+    "DPS-FIRST": 131,
+    "DPS-VIA-IMPORT-BEFORE-VALUES": 0,
+    "DPS-VIA-IMPORT-NO-VALUES": 0,
+    "LAZY-CONST-ONLY": 0,
+    "ORDER-DEFECT-MODULE": 2,
+    "ORDER-DEFECT-CALLEE": 0,
+    "DPS-RAISED-IN-FUNC": 0
+   },
+   "defects": 2,
+   "advisory_multi_raise": 44,
+   "hits": [
+    {
+     "file": "/workspace/rh/cycle33/timing.py",
+     "cls": "ORDER-DEFECT-MODULE",
+     "ev": [
+      "L5     DS = mp.mpf(\"0.141733239663887191395415685084185024\")   <-- creates mp.mpf",
+      "L7     mp.mp.dps = dps+10   <-- dps set here"
+     ]
+    },
+    {
+     "file": "/workspace/rh/L179/m2_L179_p1_recompute.py",
+     "cls": "ORDER-DEFECT-MODULE",
+     "ev": [
+      "L52    L_CONTAMINATED = mp.log(mp.mpf(a.x))          # <-- 15 digits, on purpose   <-- creates mp.log",
+      "L55    mp.dps = a.dps   <-- dps set here"
+     ]
+    }
+   ]
+  }
+ }
+}
