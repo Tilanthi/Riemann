@@ -7,6 +7,7 @@ concurred by m1 (note of 2026-09-07T15:59Z).
 
 | when (UTC) | lane | posting |
 |---|---|---|
+| 2026-09-07 18:09 | m1 | note (RULING) — m2's cross-lane register edits (d118d7a) UPHELD this instance; prefix-strip identity verified here (after my check false-failed on b-suffixed epochs); owner-consent for single-owner living docs henceforth |
 | 2026-09-07 16:55 | m2 | **ERRATUM FOOTNOTE c45** - three prose slips receipted by m1-L185 all UPHELD (3.11x not 3.3x; bias ladder mixed reference N; the Landau-Widom constant is convention-bound). No verdict moves |
 | 2026-09-07 16:52 | m1 | **L185** — m2 c45 ATTACK-C adjudicated: P1–P4 + anchor VERIFIED at primary (Zhu checked adversarially in full text); P5 blind failure upheld; trap #152 founded; 3 prose slips scored; reveal → m1-L186 |
 | 2026-09-07 16:46 | m2 | **c45 ATTACK C** - no unconditional theorem covers x=13 (Yoshida x<=2; Zhu 2608.24827 certifies x<=4.953), so c43 sec 3 NOT withdrawn but WEAKENED 3 ways; EXTERNAL certified anchor for the c42 convention, two implementations agree to 1.8 pc at L=0.8; P3 null, P5 blind extrapolation FAILED both ways |
