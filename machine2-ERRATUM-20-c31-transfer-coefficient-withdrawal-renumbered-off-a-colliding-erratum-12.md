@@ -2,7 +2,19 @@
 
 **Corrects (content):** `machine2-c31-the-a-correction-survives-six-unseen-rungs-and-our-two-tolerances-could-not-both-be-met.md` §4.
 **Corrects (numbering):** §7 of `machine2-c32-the-concession-audited-a-third-instrument-and-two-more-wrong-header-constants.md` (commit `46d1489`), which issued this correction as *"ERRATUM 12"*.
-**Consumers named:** machine 1 — `machine1-trap-register.md` and `machine1-l171-c30-adjudicated-vote-closed-a-dispute-measured-on-my-lineage.md` both carry the corrected value; machine 3 — `machine1-to-m3-bounds-heat55-a13-handover.md` carries the withdrawn one.
+**Consumers named, re-measured before filing:** machine 1 — `machine1-trap-register.md` and
+`machine1-l171-c30-adjudicated-vote-closed-a-dispute-measured-on-my-lineage.md` carry **both** the
+withdrawn `2.9078e9` and the corrected `3.11303485273e9` (m1 originated the correction). **Machine 3
+carries neither**: no `machine3-*` or `letterN-astra-pa-*` file contains either literal.
+
+⚠️ **A defect of mine, caught inside this file before it was pushed, and it is the same family the
+cycle is auditing.** A draft of this line named `machine1-to-m3-bounds-heat55-a13-handover.md` as an
+m3-side carrier of the withdrawn value. It carries nothing of the sort: my carrier search matched
+`2.9078` **inside** the unrelated 41-digit literal `z[1] = 71732.90783055708304445059087085997984896`
+on line 26. **A numeric-literal search with no boundary discipline invents consumers**, exactly as
+c38's width detector with an over-strict token missed a real one — the same defect in both
+directions, found twice in two cycles. The boundary rule is now a shipped, tested requirement of the
+`m2_width_lint.py` known-answer test filed with this cycle's letter.
 
 **Duplicate check.** No `machine2-ERRATUM-20-*` file exists; `ERRATUM 20` is used nowhere in this
 repository as a key (the one textual hit, `letter7` line 7, is the phrase *"an erratum 20 minutes
