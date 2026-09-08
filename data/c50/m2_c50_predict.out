@@ -1,0 +1,24 @@
+== calibration point: x=13, N=100, dps=150, g=9, it=16 (PUBLISHED c46 k=3 block cells)
+   even log10: ['-58.4293520317', '-50.8365362964', '-43.9259467292'] c46_block_even_x13_N100_dps150_g9_it16_k3.json
+   odd  log10: ['-54.4761134607', '-47.3474925893', '-40.6436207214'] c46_block_odd_x13_N100_dps150_g9_it16_k3.json
+   pooled parity order : eoeoeo
+   pooled gaps (dex)   : ['3.95324', '3.63958', '3.48904', '3.42155', '3.28233']
+   d_1 = 3.953238571   s_1 = 7.592815735   r_1 = 0.5206551441   q_1 = 0.9206571015
+   lambda2/lambda1 (even) = 39157570.21   [c46 published 3.91576e7]
+   identity gap_1+gap_2-s_1 (EXACT)      : 0.0
+   identity r_1-1/(1+q_1) (division form): dps=50: 0.0  dps=60: 7.7787691e-62  dps=80: 0.0
+     ^ it is ZERO ONLY TO THE WORKING PRECISION and moves with dps: division rounding,
+       not an identity.  The identity is the subtraction one above, which is exact at
+       every precision.  (A print at one precision cannot tell those two apart.)
+   MODEL B at n=21, first 4 gaps: ['3.75252', '3.69755', '3.64737', '3.60135']
+   MODEL B level error at calibration: -5.077 % (gap_1)
+
+== REGISTERED point predictions for the four new (x,N) points
+   cell                 n    d_1(published)    A: q_1    A: s_1_hat   B: q_1    B: s_1_hat   B: gap_1_hat
+   x=5     N=100  dps=150  4    3.021684097   0.920657  5.803619   1.07609  6.2732806   3.97147
+   x=13    N=180  dps=150  21   3.959794828   0.920657  7.6054081   0.985349  7.8615741   3.75252
+   x=19    N=100  dps=300  38   4.248887189   0.920657  8.1606554   0.991519  8.461739   3.40259
+   x=13    N=100  dps=150  21   3.953238571   0.920657  7.5928157   0.985349  7.8485577   3.75252
+
+   (the last row x=13 N=100 is the calibration point itself, printed as a control:
+    model A reproduces its own s_1 there by construction, model B does not.)

@@ -1,0 +1,11 @@
+arm1a synthetic alternating ladder, known answer      : PASS
+arm1b identity gap1+gap2==s1 exact, r_1==1/(1+q_1)    : PASS
+arm1c non-alternating input reported as such          : PASS
+arm1d degenerate equal rungs flagged as near-tie      : PASS
+arm1e rung failing the residual rule dropped+counted  : PASS
+arm2a c46 PUBLISHED lambda2/lambda1 = 3.91576e7       : got 3.91576e+7 -> PASS
+arm2b c46 cells: order eoeoeo, gap1+gap2==s1 exactly  : PASS
+arm2c c46 PUBLISHED parity gap 3.9532 dex             : got 3.9532 -> PASS
+arm2d registered model-A constant == calibration q_1  : PASS
+arm3  k=5 calibration cells absent                    : NOT RUN (pre-launch)
+SELF-TEST: 0 fail(s)

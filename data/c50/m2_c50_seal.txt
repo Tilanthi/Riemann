@@ -1,0 +1,37 @@
+# machine2 cycle-50 PRE-LAUNCH SEAL
+# written 2026-09-08T08:14:24Z, in the same commit as the prereg, BEFORE any cycle-50 cell was launched.
+# paths are relative to the WORKING DIRECTORY /workspace/rh/cycle50 in which the cycle ran;
+# m2_c50_seal_verify.sh maps them to their committed locations (c49's rule: never edit the
+# sealed file to fix a path -- ship a mapper).
+
+## sha256 of the frozen documents and instruments
+c59bdce8efe7f63296b3bc657a5b982ed1da9008e412fb97118142a94a4afd9b  prereg/m2_c50_prereg.md
+1a8544093e8b123093b094218cf14ebc44470b93797f539a55a627429007c7e6  m2_c50_predict.py
+997f80665c3b910a1f9e409f8dd43d6e6a22f88b90151c049d166c9ec9390621  m2_c50_predict.out
+edc6c1c8dd67277fe448191314db8516c7e0ae9032f4de4274494180818bc2ac  m2_c50_ladder.py
+54b21f5fbb0db52b1c69c205b6f078b438a26890b3771cf03baad0badfd2e86e  m2_c50_ladder_selftest.out
+2eec491c8ee81c5c0fc4ef11da314956de4544ca097aaf1f21633243e06d9e59  data/c46/c46_parity.py
+bdf3b3e185c190f27dac758e551a600a7e5489bb87c20ac8f6d9ebfb53466863  data/c42/c42_connes_x.py
+5726bb99727a73a2efeddde50e6997f05465818a0ea2db03e22fadcf329b47d8  data/code/m2_c48_cell_storage.py
+
+## sha256 of the PUBLISHED cells the predictions were derived from (unchanged at origin)
+92b8d71896d5c536ef352f0291728d80d5d18c19c02b4cf0737b1a53bfec3229  data/c46/c46_block_even_x13_N100_dps150_g9_it16_k3.json
+b7e32adcd167c67477e1a15ba2e2f81d8b4e966fb39092dbd022a6dd103aeea2  data/c46/c46_block_odd_x13_N100_dps150_g9_it16_k3.json
+0c247e4186af4098afb2fa6454c8f99fc14c8fcddabe6c355d35649b0b8da544  data/c46/c46_even_x5_N100_dps150_g9_it16.json
+2f0f492e1630fb4d5008826f2c3f7ac2e0bfa02f96f771a0d6219a9e9679847e  data/c46/c46_odd_x5_N100_dps150_g9_it16.json
+287363832a54dc03435a73b97fbc9d923acaf2779e49491d731aba524d2c6b41  data/c46/c46_even_x19_N100_dps300_g9_it16.json
+ffe541bc41d4f0c880f0f10011698525f6e051fa0ebd01b9e425eb2e15169e16  data/c46/c46_odd_x19_N100_dps300_g9_it16.json
+4cd5f8cbe3f5fd2674b1b7d2e7dd9e03b035f5a26198e91f997720611b0e7444  data/c46/c46_even_x13_N180_dps150_g9_it16.json
+c5eb865f92edf2bd9991cdec7067dea01ccdfc5ba7415b18a4dfd94928112384  data/c46/c46_odd_x13_N180_dps150_g9_it16.json
+d78250213ef1a5f040b87660ac91c96531f08df00af16e1d52ccc5cea3c6692e  data/c46/c46_even_x13_N100_dps150_g9_it16.json
+dc4ce68ed801bd7b9f92832b7d9a7f5fb658d516845bb0825c38136d5ca11976  data/c46/c46_odd_x13_N100_dps150_g9_it16.json
+
+## PRE-LAUNCH STATE: the eight target outputs do not exist
+absent  data/c46/c46_block_even_x13_N100_dps150_g9_it16_k5.json
+absent  data/c46/c46_block_even_x5_N100_dps150_g9_it16_k5.json
+absent  data/c46/c46_block_even_x19_N100_dps300_g9_it16_k3.json
+absent  data/c46/c46_block_even_x13_N180_dps150_g9_it16_k3.json
+absent  data/c46/c46_block_odd_x13_N100_dps150_g9_it16_k5.json
+absent  data/c46/c46_block_odd_x5_N100_dps150_g9_it16_k5.json
+absent  data/c46/c46_block_odd_x19_N100_dps300_g9_it16_k3.json
+absent  data/c46/c46_block_odd_x13_N180_dps150_g9_it16_k3.json
