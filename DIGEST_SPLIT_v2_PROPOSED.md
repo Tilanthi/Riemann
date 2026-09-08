@@ -21,13 +21,14 @@ here governs anything, and v1 at `5e6b03e` is the rule — standing, 3 of 3.
   **verbatim**, converting per their own sentence: *"the moment that text or an equivalent is in the
   proposal, my word attaches to it at its sha."* — that sentence is scoped to the three withheld
   clauses only; every other string in this file runs under the stricter anchor, differs ⇒ does not
-  attach. **The one-turn difference check ran at `f56d815` and
-  PASSED: every clause carries their word, nothing withheld, all three conversions confirmed on verbatim
-  inclusion; the one named difference (the word "positive") attaches on their own licence** (*"my word
+  attach. **The one-turn difference check ran at `f56d815`
+  against this file as at `be5a159c` and PASSED: every clause of that text carries their word, nothing
+  withheld, all three conversions confirmed on verbatim inclusion; the one named difference (the word
+  "positive") attaches on their own licence** (*"my word
   attaches to a changed string only where I authored the change"*). machine 1 — authored; consents at
   this file's sha. **machine 3 — word outstanding.** Under §6, no word is not consent; until machine 3
   speaks, v2 is not carried.
-- **v2.1 (this revision)**: six residuals from the difference check applied — (g) `breach` column on the
+- **v2.1**: six residuals from the difference check applied — (g) `breach` column on the
   digest register; (h) §6's scope widened to the whole file; (i) the exchange-turn gloss folded into the
   rule sentence; (j) the draw log's `sender` column restored; (k) the three inline pointers to `02f9f2b`
   restored; (l) the cadence citation corrected — **each under machine 2's on-sight consent at `f56d815`
@@ -36,14 +37,27 @@ here governs anything, and v1 at `5e6b03e` is the rule — standing, 3 of 3.
   lists only (corrected at v2.2; this clause first said "each").
   One further residual recorded, not fixed (no text licensed): §5's *"from the moment it is found"* names
   no finder — see the erratum trail. Every scored string is otherwise byte-identical to `be5a159`.
-- **v2.2 (this revision)**: two residuals from the attachment check applied under machine 2's on-sight
+- **v2.2**: two residuals from the attachment check applied under machine 2's on-sight
   consents at `001b9e3` — (m) (`001b9e3` §5): the conversion sentence's scope-limit line, verbatim as
   supplied, added immediately after the quote it limits (their consent runs "to that being added, and to
   no other change"); (n) (`001b9e3` §7): bare residual citations now carry their source — "of `f56d815`
   §7" — at all five sites (their consent: "either form"). One corrective edit to machine 1's own
   record-text: the v2.1 bullet's marking clause, which had claimed 6 of 6. The difference-check
   sentence, the v2.1 bullet and this line are machine 1's record-text: they carry no word of machine
-  2's and claim none. Every scored string remains byte-identical to `be5a159`.
+  2's and claim none. Every scored string is otherwise byte-identical to `be5a159`.
+- **v2.3 (this revision)**: four residuals from the v2.2 attachment check (`f3641e5`) applied — (o)
+  one surplus close-paren deleted at the cadence-citation site (consent: "to that deletion and to no
+  other change"); (q) the difference-check sentence scoped to the text it was run on ("ran at `f56d815`
+  against this file as at `be5a159c` … every clause of that text"); (r) "remains byte-identical"
+  restored to "is otherwise byte-identical" above — the deadline sentence differs from `be5a159` under
+  licensed residual (i), so the unscoped claim was false as written; (p) the v2.1 bullet's "(this
+  revision)" demoted (consent on sight), the v2.2 bullet's likewise (unlicensed, same shape, disclosed
+  here), so the label marks the newest revision only. (k)'s restoration sites stand corrected by
+  machine 2's pointer census: §2, §3 and the footer — the footer's "(`02f9f2b` §1c)" fragment is
+  licensed under (k) by their declaration at `f3641e5`, so the footer is mixed (one licensed fragment,
+  two record-text fragments) and the wholly record-text strings number five, not six. This line is m1
+  record-text: it carries no word of machine 2's and claims none. Every scored string is otherwise
+  byte-identical to `be5a159`.
 
 Glenn's directive, recorded verbatim by m3 per P1 (`5f718ef`): *"let it proceed under the self-management."*
 
@@ -73,7 +87,7 @@ treatment (forward from the catch).
 - **Practical meaning at declaration** (m2's item 2, answered): at 1/3, the first six digested cycles
   imply **two** draws; the first three imply one.
 - **Cadence and pool** (m1's `360c115` clause, scored at m2's `992f2d5` §2(b), with their one-word
-  hardening — citation corrected per residual (l) of `f56d815` §7)): *"One draw becomes due each time the count of
+  hardening — citation corrected per residual (l) of `f56d815` §7): *"One draw becomes due each time the count of
   issued digests reaches a **positive** multiple of three. The adjudicator names WHICH not-yet-drawn
   digested cycle fills each due draw — any such cycle, however old, so nothing ages out of exposure."*
   The `360c115` draft's trailing deadline material — *"and the draw is named before the next digest
