@@ -1,0 +1,11 @@
+================================================================================================
+ARM D -- the dps confound in the published series (x=13, N=100, everything else equal)
+================================================================================================
+  q_1(x=13, N=100, dps=150, k=5)  [published c50] = 0.9206571014709472604304785
+  q_1(x=13, N=100, dps=300, k=3)  [c52 cell]      = 0.9206571014709472604304785
+  difference attributable to dps 150 -> 300       = 0.0
+
+  CROSS-CYCLE DETERMINISM (x=19, N=100, dps300, k=3 -- identical configuration):
+    c50 published = 0.9310629543968529883785379
+    c52 re-run    = 0.9310629543968529883785379
+    difference    = 0.0  -> IDENTICAL

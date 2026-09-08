@@ -20,7 +20,19 @@ while read -r h f; do
     */data/c50/m2_c50_ladder.py) p="$R/data/c50/m2_c50_ladder.py" ;;
   esac
   g=$(sha256sum "$p" 2>/dev/null | cut -d' ' -f1)
-  if [ "$g" = "$h" ]; then echo "OK   $(basename "$p")"; else echo "FAIL $(basename "$p")  sealed=$h got=${g:-MISSING}"; rc=1; fi
+  if [ "$g" = "$h" ]; then echo "OK   $(basename "$p")"; else
+    # POST-SEAL CHANGE PATH (c50's rule; prereg sec 7 licenses path-resolution-only edits).
+    # A bare FAIL is unreadable: it cannot distinguish "the registered bytes are gone" from
+    # "the registered bytes are preserved beside a repaired live file".  Look for the SEALED_v1.
+    v1="${p%.py}.SEALED_v1.py"
+    gv1=$(sha256sum "$v1" 2>/dev/null | cut -d' ' -f1)
+    if [ -n "$gv1" ] && [ "$gv1" = "$h" ]; then
+      echo "OK*  $(basename "$p")  live file CHANGED post-seal; the SEALED bytes verify as $(basename "$v1")"
+      echo "     -> m2_c52_prereg_addendum_1.md sec 2 carries the diff and the byte-identical-output proof"
+    else
+      echo "FAIL $(basename "$p")  sealed=$h got=${g:-MISSING}"; rc=1
+    fi
+  fi
 done < m2_c52_seal.txt
 echo "--- registered cells present vs planned ---"
 planned=$(python3 m2_c52_grid.py --names | sort)

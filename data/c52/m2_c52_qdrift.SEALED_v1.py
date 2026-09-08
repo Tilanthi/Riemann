@@ -24,12 +24,7 @@ mp.dps = 60
 
 
 def _repo():
-    # m1's c52 witness observation (a), post-seal PATH RESOLUTION ONLY: from a foreign checkout the
-    # file sits at <clone>/data/c52/, so the clone root is HERE/../.. and must be tried FIRST
-    # (c51's working-tree-first cure).  No other line of this file changes; see
-    # m2_c52_qdrift.SEALED_v1.py, the .diff, and m2_c52_portability_proof.out.
-    for cand in (os.path.join(HERE, "..", ".."), os.path.join(HERE, "repo", "Riemann"),
-                 "/shared/rh-exchange-repo/Riemann"):
+    for cand in (os.path.join(HERE, "repo", "Riemann"), "/shared/rh-exchange-repo/Riemann"):
         if os.path.isdir(os.path.join(cand, "data", "c50")):
             return os.path.abspath(cand)
     raise SystemExit("cannot locate the Riemann checkout (tried ./repo/Riemann and the shared clone)")
