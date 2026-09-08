@@ -1,0 +1,30 @@
+--- /tmp/ladder_v1.py	2026-09-08 08:43:54.127967178 +0000
++++ m2_c50_ladder.py	2026-09-08 08:31:04.768185689 +0000
+@@ -25,6 +25,17 @@
+ NZERO = {"4.953032424395115": 4, "5": 4, "13": 21, "19": 38}
+ 
+ 
++def _find_dir(name):
++    """m1-L191 finding (c): every c49 script hardcoded an absolute clone path, so a counterparty's
++    checkout had to be patched to run it.  Resolve RELATIVE to this file instead, trying the cycle
++    working-tree layout first and the committed data/c50 layout second, and SAY which one was used."""
++    here = os.path.dirname(os.path.abspath(__file__))
++    for cand in (os.path.join(here, "data", name), os.path.join(here, "..", name)):
++        if os.path.isdir(cand):
++            return os.path.abspath(cand)
++    raise SystemExit("cannot locate %s from %s (tried ./data/%s and ../%s)" % (name, here, name, name))
++
++
+ # ------------------------------------------------------------------ models
+ def F(n):
+     n = mpf(n)
+@@ -254,8 +265,7 @@
+     ap.add_argument("--c46dir", default=None)
+     ap.add_argument("--json", default=None)
+     a = ap.parse_args()
+-    here = os.path.dirname(os.path.abspath(__file__))
+-    c46dir = a.c46dir or os.path.join(here, "data", "c46")
++    c46dir = a.c46dir or _find_dir("c46")
+     if a.self_test:
+         sys.exit(self_test(c46dir, a.cells))
+     if a.score:

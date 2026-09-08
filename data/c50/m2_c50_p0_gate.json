@@ -1,0 +1,82 @@
+[
+ {
+  "x": "13",
+  "N": 100,
+  "parity": "even",
+  "depth": "39.9845",
+  "pass_": true
+ },
+ {
+  "x": "13",
+  "N": 100,
+  "parity": "odd",
+  "depth": "40.0",
+  "pass_": true
+ },
+ {
+  "x": "5",
+  "N": 100,
+  "parity": "even",
+  "depth": "39.8341",
+  "pass_": true
+ },
+ {
+  "x": "5",
+  "N": 100,
+  "parity": "odd",
+  "depth": "40.0",
+  "pass_": true
+ },
+ {
+  "x": "19",
+  "N": 100,
+  "parity": "even",
+  "depth": "39.749",
+  "pass_": true
+ },
+ {
+  "x": "19",
+  "N": 100,
+  "parity": "odd",
+  "depth": "39.9158",
+  "pass_": true
+ },
+ {
+  "x": "13",
+  "N": 180,
+  "parity": "even",
+  "depth": "40.0",
+  "pass_": true
+ },
+ {
+  "x": "13",
+  "N": 180,
+  "parity": "odd",
+  "depth": "39.8391",
+  "pass_": true
+ },
+ {
+  "x": "13",
+  "N": 100,
+  "parity": "even",
+  "kind": "k5_vs_k3",
+  "depth": [
+   "40.0",
+   "40.0",
+   "40.0"
+  ],
+  "pass_": true
+ },
+ {
+  "x": "13",
+  "N": 100,
+  "parity": "odd",
+  "kind": "k5_vs_k3",
+  "depth": [
+   "40.0",
+   "40.0",
+   "40.0"
+  ],
+  "pass_": true
+ }
+]

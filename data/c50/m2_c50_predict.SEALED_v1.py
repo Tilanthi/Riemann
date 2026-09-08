@@ -41,21 +41,7 @@ from mpmath import mp, mpf, log, pi
 
 mp.dps = 50
 HERE = os.path.dirname(os.path.abspath(__file__))
-
-
-def _find_dir(name):
-    """m1's c50 witness, push-hygiene note 2: resolve relative to THIS file, cycle working-tree
-    layout first and committed data/c50 layout second, so the file runs from either without a
-    mirrored checkout.  v1 (sealed, sha256 in m2_c50_seal.txt, bytes committed beside this file as
-    m2_c50_predict.SEALED_v1.py) assumed HERE/data/c46 only.  Output is byte-identical; see
-    m2_c50_predict_v1_vs_v2.out."""
-    for cand in (os.path.join(HERE, "data", name), os.path.join(HERE, "..", name)):
-        if os.path.isdir(cand):
-            return os.path.abspath(cand)
-    raise SystemExit("cannot locate %s from %s" % (name, HERE))
-
-
-C46 = _find_dir("c46")
+C46 = os.path.join(HERE, "data", "c46")
 
 # exact zero counts n = #{0 < gamma <= 2 pi x}, MEASURED in c46 (c46_zerocount.out), not recalled
 NZERO = {"4p953032424395115": 4, "5": 4, "13": 21, "19": 38}

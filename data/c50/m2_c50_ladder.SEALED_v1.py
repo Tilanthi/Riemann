@@ -25,17 +25,6 @@ Q_CAL = mpf("0.9206571015")       # model A constant, registered in the prereg
 NZERO = {"4.953032424395115": 4, "5": 4, "13": 21, "19": 38}
 
 
-def _find_dir(name):
-    """m1-L191 finding (c): every c49 script hardcoded an absolute clone path, so a counterparty's
-    checkout had to be patched to run it.  Resolve RELATIVE to this file instead, trying the cycle
-    working-tree layout first and the committed data/c50 layout second, and SAY which one was used."""
-    here = os.path.dirname(os.path.abspath(__file__))
-    for cand in (os.path.join(here, "data", name), os.path.join(here, "..", name)):
-        if os.path.isdir(cand):
-            return os.path.abspath(cand)
-    raise SystemExit("cannot locate %s from %s (tried ./data/%s and ../%s)" % (name, here, name, name))
-
-
 # ------------------------------------------------------------------ models
 def F(n):
     n = mpf(n)
@@ -75,16 +64,7 @@ def pool(even, odd):
     # a zero gap makes q undefined; report None rather than raising (found by self-test arm 1d,
     # which is the whole reason the degenerate case is in the KAT)
     q = [(gaps[i + 1] / gaps[i] if gaps[i] != 0 else None) for i in range(len(gaps) - 1)]
-    # COMPLETENESS CERTIFICATE.  We hold the k smallest of each sector, so the pooled list is
-    # provably the true bottom of the spectrum only up to T = min(last admitted even, last admitted
-    # odd): above T an uncomputed eigenvalue of the other sector could interleave.  Rungs beyond the
-    # certified prefix are REPORTED but are not claims about the operator's ordering.
-    if ev and od:
-        T = min(ev[-1]["log10"], od[-1]["log10"])
-        certified = sum(1 for v, _ in merged if v <= T)
-    else:
-        certified = 0
-    out = dict(order=order, gaps=gaps, q=q, dropped=dropped, certified=certified,
+    out = dict(order=order, gaps=gaps, q=q, dropped=dropped,
                n_even=len(ev), n_odd=len(od),
                alternates=(order == ("eo" * len(order))[:len(order)]),
                min_gap=(min(gaps) if gaps else None))
@@ -155,17 +135,6 @@ def self_test(c46dir, cellsdir=None):
     if not ok:
         fails.append("arm1e")
 
-    # arm 1f: the completeness certificate.  Two even and two odd rungs with the odd pair ABOVE the
-    # even pair: only the rungs at or below min(last even, last odd) may be claimed as the ordering.
-    e, o = synth(["-10", "-9"], ["-8", "-7"])
-    p = pool(e, o)
-    # min(last even, last odd) = min(-9, -7) = -9, so only -10 and -9 are certified: 2 of 4.
-    ok = (p["order"] == "eeoo" and p["certified"] == 2)
-    print("arm1f completeness certificate cuts at min(last e, last o): %s"
-          % ("PASS" if ok else "FAIL (got %d)" % p["certified"]))
-    if not ok:
-        fails.append("arm1f")
-
     # ---- arm 2: PUBLISHED number from the SEALED c46 instrument's frozen cells
     ev = load_block(os.path.join(c46dir, "c46_block_even_x13_N100_dps150_g9_it16_k3.json"))
     od = load_block(os.path.join(c46dir, "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"))
@@ -232,10 +201,6 @@ def score(cellsdir, c46dir, jsonout=None):
         n = NZERO.get(x)
         row = dict(x=x, N=ev["N"], dps=ev["dps"], k=ev["k"], n=n,
                    order=p["order"], alternates=p["alternates"], near_tie=p["near_tie"],
-                   certified=p["certified"],
-                   order_certified=p["order"][:p["certified"]],
-                   alternates_certified=(p["order"][:p["certified"]] ==
-                                         ("eo" * p["certified"])[:p["certified"]]),
                    dropped=p["dropped"], min_gap=ns(p["min_gap"], 10),
                    gaps=[ns(g, 12) for g in p["gaps"]], q=[ns(v, 12) for v in p["q"]],
                    gaps_decreasing=p["gaps_decreasing"],
@@ -258,21 +223,19 @@ def score(cellsdir, c46dir, jsonout=None):
         rows.append(row)
     if jsonout:
         json.dump(rows, open(jsonout, "w"), indent=1)
-    hdr = ["x", "N", "dps", "k", "n", "order", "alt", "cert", "drop", "d1", "s1", "q1",
+    hdr = ["x", "N", "dps", "k", "n", "order", "alt", "drop", "d1", "s1", "q1",
            "res_q1_A", "res_q1_B", "win", "lam2/lam1"]
     print("\t".join(hdr))
     for r in rows:
         print("\t".join(str(v) for v in [r["x"], r["N"], r["dps"], r["k"], r["n"], r["order"],
-                                         r["alternates"], r["certified"], r["dropped"], r["d1"], r["s1"],
+                                         r["alternates"], r["dropped"], r["d1"], r["s1"],
                                          r["q"][0] if r["q"] else "-",
                                          r.get("res_q1_A", "-"), r.get("res_q1_B", "-"),
                                          r.get("winner_q1", "-"), r["lam2_over_lam1"]]))
     print("\nper-cell detail")
     for r in rows:
-        print("  x=%s N=%s dps=%s k=%s  order=%s  CERTIFIED PREFIX %d (%s, alternates=%s)  "
-              "min_gap=%s  dropped=%s  max_rel_resid=%s"
-              % (r["x"], r["N"], r["dps"], r["k"], r["order"], r["certified"],
-                 r["order_certified"], r["alternates_certified"], r["min_gap"], r["dropped"],
+        print("  x=%s N=%s dps=%s k=%s  order=%s  min_gap=%s  dropped=%s  max_rel_resid=%s"
+              % (r["x"], r["N"], r["dps"], r["k"], r["order"], r["min_gap"], r["dropped"],
                  r["rel_resid_max"]))
         print("     gaps: %s" % ", ".join(r["gaps"]))
         print("     q   : %s   decreasing=%s" % (", ".join(r["q"]), r["gaps_decreasing"]))
@@ -291,7 +254,8 @@ if __name__ == "__main__":
     ap.add_argument("--c46dir", default=None)
     ap.add_argument("--json", default=None)
     a = ap.parse_args()
-    c46dir = a.c46dir or _find_dir("c46")
+    here = os.path.dirname(os.path.abspath(__file__))
+    c46dir = a.c46dir or os.path.join(here, "data", "c46")
     if a.self_test:
         sys.exit(self_test(c46dir, a.cells))
     if a.score:

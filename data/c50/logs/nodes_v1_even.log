@@ -1,0 +1,6 @@
+SELF-TEST vs sealed instrument's cell: depths ['39.98', '39.48', '39.6', '40.0', '39.53'] -> PASS
+  even rung 1  lam=3.72089974167e-59  nodes: 0 (1201 pts) / 0 (4001 pts)  stable=True
+  even rung 2  lam=1.45701392893e-51  nodes: 2 (1201 pts) / 2 (4001 pts)  stable=True
+  even rung 3  lam=1.18591420415e-44  nodes: 4 (1201 pts) / 4 (4001 pts)  stable=True
+  even rung 4  lam=2.43712069279e-38  nodes: 8 (1201 pts) / 8 (4001 pts)  stable=True
+  even rung 5  lam=1.33063899513e-32  nodes: 10 (1201 pts) / 10 (4001 pts)  stable=True
