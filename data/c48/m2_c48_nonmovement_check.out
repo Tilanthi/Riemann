@@ -1,0 +1,82 @@
+m2_c48_nonmovement_check
+  c48 cells   : /shared/rh-exchange-repo/Riemann/data/c48 (14)
+  frozen c46  : /shared/rh-exchange-repo/Riemann/data/c46
+  repo scanned: /shared/rh-exchange-repo/Riemann
+  repo files  : 1523
+
+  cell                                           field           self frozen   occ
+  even_x13_N100_dps150                           L                 OK     OK    20
+  even_x13_N100_dps150                           lambda_min        OK     OK    12
+  even_x13_N100_dps150                           lambda_min_30     OK     OK    29
+  even_x13_N100_dps150                           residual          OK     OK     2
+  even_x13_N100_dps150                           log10             OK     OK     6
+  even_x13_N100_dps220                           L                 OK      -     -
+  even_x13_N100_dps220                           lambda_min        OK      -     -
+  even_x13_N100_dps220                           lambda_min_30     OK      -     -
+  even_x13_N100_dps220                           residual          OK      -     -
+  even_x13_N100_dps220                           log10             OK      -     -
+  even_x13_N140_dps150                           L                 OK     OK    20
+  even_x13_N140_dps150                           lambda_min        OK     OK     1
+  even_x13_N140_dps150                           lambda_min_30     OK     OK     8
+  even_x13_N140_dps150                           residual          OK     OK     2
+  even_x13_N140_dps150                           log10             OK     OK     2
+  even_x13_N180_dps150                           L                 OK     OK    20
+  even_x13_N180_dps150                           lambda_min        OK     OK     1
+  even_x13_N180_dps150                           lambda_min_30     OK     OK     2
+  even_x13_N180_dps150                           residual          OK     OK     1
+  even_x13_N180_dps150                           log10             OK     OK     1
+  even_x13_N220_dps150                           L                 OK     OK    20
+  even_x13_N220_dps150                           lambda_min        OK     OK     1
+  even_x13_N220_dps150                           lambda_min_30     OK     OK     2
+  even_x13_N220_dps150                           residual          OK     OK     1
+  even_x13_N220_dps150                           log10             OK     OK     1
+  even_x13_N60_dps150                            L                 OK     OK    20
+  even_x13_N60_dps150                            lambda_min        OK     OK     1
+  even_x13_N60_dps150                            lambda_min_30     OK     OK     6
+  even_x13_N60_dps150                            residual          OK     OK     2
+  even_x13_N60_dps150                            log10             OK     OK     2
+  even_x13_N60_dps220                            L                 OK      -     -
+  even_x13_N60_dps220                            lambda_min        OK      -     -
+  even_x13_N60_dps220                            lambda_min_30     OK      -     -
+  even_x13_N60_dps220                            residual          OK      -     -
+  even_x13_N60_dps220                            log10             OK      -     -
+  odd_x13_N100_dps150                            L                 OK     OK    20
+  odd_x13_N100_dps150                            lambda_min        OK     OK     9
+  odd_x13_N100_dps150                            lambda_min_30     OK     OK     9
+  odd_x13_N100_dps150                            residual          OK     OK     2
+  odd_x13_N100_dps150                            log10             OK     OK     6
+  odd_x13_N100_dps220                            L                 OK     OK    20
+  odd_x13_N100_dps220                            lambda_min        OK     OK     9
+  odd_x13_N100_dps220                            lambda_min_30     OK     OK     9
+  odd_x13_N100_dps220                            residual          OK     OK     2
+  odd_x13_N100_dps220                            log10             OK     OK     6
+  odd_x13_N140_dps150                            L                 OK     OK    20
+  odd_x13_N140_dps150                            lambda_min        OK     OK     1
+  odd_x13_N140_dps150                            lambda_min_30     OK     OK     7
+  odd_x13_N140_dps150                            residual          OK     OK     2
+  odd_x13_N140_dps150                            log10             OK     OK     2
+  odd_x13_N180_dps150                            L                 OK     OK    20
+  odd_x13_N180_dps150                            lambda_min        OK     OK     1
+  odd_x13_N180_dps150                            lambda_min_30     OK     OK     2
+  odd_x13_N180_dps150                            residual          OK     OK     1
+  odd_x13_N180_dps150                            log10             OK     OK     1
+  odd_x13_N220_dps150                            L                 OK     OK    20
+  odd_x13_N220_dps150                            lambda_min        OK     OK     1
+  odd_x13_N220_dps150                            lambda_min_30     OK     OK     2
+  odd_x13_N220_dps150                            residual          OK     OK     1
+  odd_x13_N220_dps150                            log10             OK     OK     1
+  odd_x13_N60_dps150                             L                 OK     OK    20
+  odd_x13_N60_dps150                             lambda_min        OK     OK     1
+  odd_x13_N60_dps150                             lambda_min_30     OK     OK     6
+  odd_x13_N60_dps150                             residual          OK     OK     2
+  odd_x13_N60_dps150                             log10             OK     OK     2
+  odd_x13_N60_dps220                             L                 OK      -     -
+  odd_x13_N60_dps220                             lambda_min        OK      -     -
+  odd_x13_N60_dps220                             lambda_min_30     OK      -     -
+  odd_x13_N60_dps220                             residual          OK      -     -
+  odd_x13_N60_dps220                             log10             OK      -     -
+
+  distinct published strings regenerated and byte-compared : 42
+  total occurrences of those strings across the repository  : 164
+
+NON-MOVEMENT GATE: PASS

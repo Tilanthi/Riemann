@@ -1,0 +1,31 @@
+m2_c48_storage_census   repo=/shared/rh-exchange-repo/Riemann
+  machine-2 JSON artefacts declaring a dps : 98
+  numeric string fields scored             : 394
+  DISCARDED (stored narrower, no _exact)   : 323
+  NARROW-BUT-BACKED (c48 storage present)  : 70
+  FULL                                     : 1
+  OVERWIDE (printed wider than the run)    : 0
+  --- per-ARTEFACT rollup (the load-bearing convention) ---
+  artefacts retaining full working precision anywhere : 15 of 95
+  artefacts whose every numeric field is narrower     : 80 of 95
+  attribution-signal disagreements         : 41  (direction: 14 name-only, 27 commit-only)
+      data/c42/connes_published_x13.json  name=False commit=True  [machine2 (c42 RESULT): A SOURCE DEFECT, AN ERRATUM ON OUR OW]
+      data/c48/c48_even_x13_N100_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N100_dps220_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N140_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N180_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N220_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N60_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_even_x13_N60_dps220_g9_it16.json  name=True commit=False  []
+      data/c48/c48_odd_x13_N100_dps150_g9_it16.json  name=True commit=False  []
+      data/c48/c48_odd_x13_N100_dps220_g9_it16.json  name=True commit=False  []
+  widest remaining discards:
+      data/c45/c45_x25_N100_dps420_g9_it16.json                  log10          dps=420  stored=19    -401 digits
+      data/c45/c45_x25_N140_dps420_g9_it16.json                  log10          dps=420  stored=20    -400 digits
+      data/c45/c45_x25_N180_dps420_g9_it16.json                  log10          dps=420  stored=20    -400 digits
+      data/m2_L179/cell_R.json                                   rel_eig_residual dps=400  stored=7     -393 digits
+      data/m2_L179/cell_R.json                                   eig_residual   dps=400  stored=8     -392 digits
+      data/c45/c45_x25_N180_dps420_g9_it16.json                  lambda_min_30  dps=420  stored=29    -391 digits
+      data/c45/c45_x25_N100_dps420_g9_it16.json                  lambda_min_30  dps=420  stored=30    -390 digits
+      data/c45/c45_x25_N140_dps420_g9_it16.json                  lambda_min_30  dps=420  stored=30    -390 digits
+  census written to /shared/rh-exchange-repo/Riemann/data/c48/m2_c48_storage_census.tsv

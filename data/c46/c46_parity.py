@@ -32,6 +32,16 @@ Everything else -- Gauss-Legendre nodes, pole weight, archimedean weights, the c
 prime-power sum -- is a line-for-line copy of c42's build_matrix, and KAT K1 proves it is one by
 rebuilding the EVEN block here and differencing it entrywise against c42's own function.
 
+STORAGE (added in c48, 2026-09-08)
+----------------------------------
+This file used to write `lambda_min = mp.nstr(lam, 60)` out of a dps=150 run, discarding ~90 digits
+AT WRITE TIME. c47's published letter (commit c6f6315) named that as a defect of ours and promised
+the repair at the storage layer. run_cell and run_block now route every stored number through
+data/code/m2_c48_cell_storage.py, which KEEPS the historical narrow prints byte-identical (they are
+the same mp.nstr calls) and ADDS the full working-precision value beside each. The frozen c46 JSON
+cells in this directory are left exactly as published; the regenerated full-precision ladder lives in
+data/c48/, and data/code/m2_c48_nonmovement_check.py byte-compares the two.
+
 usage:
   c46_parity.py kat                                  run K1..K3 (K4 is the expensive one)
   c46_parity.py run PARITY X N DPS GLDEG ITERS       one cell, emits JSON next to itself
@@ -40,9 +50,11 @@ usage:
 import sys, os, json, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(HERE), "c42"))
+sys.path.insert(0, os.path.join(os.path.dirname(HERE), "code"))
 from mpmath import mp, mpf, exp, log, pi, sqrt, euler, cos, sin, cosh
 from mpmath.calculus.quadrature import GaussLegendre
 import c42_connes_x as c42
+import m2_c48_cell_storage as S       # c48: the storage layer; see the STORAGE note in the docstring
 
 
 # ---------------------------------------------------------------- basis
@@ -258,6 +270,15 @@ def kat(verbose=True):
 
 
 # ---------------------------------------------------------------- drivers
+def _ritz_cell(l, r):
+    """c48 STORAGE FIX: same narrow prints as before, plus the full working-precision value."""
+    d = {}
+    d.update(S.store_number(l, "lam", (("", 40),)))
+    d.update(S.store_number(mp.log(abs(l), 10), "log10", (("", 20),)))
+    d.update(S.store_number(r, "residual", (("", 10),)))
+    return d
+
+
 def run_cell(parity, X, N, DPS, GLDEG, ITERS):
     mp.dps = DPS                       # dps FIRST, before any mpmath value is created
     t0 = time.time()
@@ -268,10 +289,17 @@ def run_cell(parity, X, N, DPS, GLDEG, ITERS):
     Av = A * v
     res = sqrt(sum((Av[i] - lam * v[i]) ** 2 for i in range(len(M))))
     out = dict(parity=parity, x=X, N=N, dim=len(M), dps=DPS, gl_degree=GLDEG, iters=ITERS,
-               prime_powers=pps, L=mp.nstr(L, 40),
-               lambda_min=mp.nstr(lam, 60), lambda_min_30=mp.nstr(lam, 30),
-               residual=mp.nstr(res, 10), log10=mp.nstr(mp.log(lam, 10), 20),
-               seconds_build=t_build, seconds_total=time.time() - t0)
+               prime_powers=pps)
+    # c48 STORAGE FIX. The four narrow prints below are the SAME CALLS this file has always made --
+    # mp.nstr(L,40) / mp.nstr(lam,60) / mp.nstr(lam,30) / mp.nstr(res,10) / mp.nstr(log10,20) -- so no
+    # string this lane has published can move; store_number adds the full working-precision value
+    # beside each one instead of discarding it at write time.
+    out.update(S.store_number(L, "L", (("", 40),)))
+    out.update(S.store_number(lam, "lambda_min", (("", 60), ("_30", 30))))
+    out.update(S.store_number(res, "residual", (("", 10),)))
+    out.update(S.store_number(mp.log(lam, 10), "log10", (("", 20),)))
+    out["seconds_build"] = t_build
+    out["seconds_total"] = time.time() - t0
     fn = os.path.join(HERE, "c46_%s_x%s_N%d_dps%d_g%d_it%d.json"
                       % (parity, str(X).replace(".", "p"), N, DPS, GLDEG, ITERS))
     json.dump(out, open(fn, "w"), indent=1)
@@ -288,8 +316,7 @@ def run_block(parity, X, N, DPS, GLDEG, ITERS, K):
     pairs = smallest_block(M, k=K, iters=ITERS, verbose=True)
     out = dict(parity=parity, x=X, N=N, dim=len(M), dps=DPS, gl_degree=GLDEG, iters=ITERS, k=K,
                L=mp.nstr(L, 40),
-               ritz=[dict(lam=mp.nstr(l, 40), log10=mp.nstr(mp.log(abs(l), 10), 20),
-                          residual=mp.nstr(r, 10)) for (l, r) in pairs],
+               ritz=[_ritz_cell(l, r) for (l, r) in pairs],
                seconds_build=t_build, seconds_total=time.time() - t0)
     fn = os.path.join(HERE, "c46_block_%s_x%s_N%d_dps%d_g%d_it%d_k%d.json"
                       % (parity, str(X).replace(".", "p"), N, DPS, GLDEG, ITERS, K))

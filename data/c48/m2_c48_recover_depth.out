@@ -1,0 +1,59 @@
+m2_c48_recover_depth   (x=13, gl=9, it=16)
+
+D1  STORAGE DEPTH -- what the file physically retains
+    cell                     old s.f.   new bits     new s.f.
+    even N=60 dps=150              60        502        151.1
+    even N=60 dps=220              60        734        221.0
+    even N=100 dps=150             60        502        151.1
+    even N=100 dps=220             60        733        220.7
+    even N=140 dps=150             60        501        150.8
+    even N=180 dps=150             60        501        150.8
+    even N=220 dps=150             60        501        150.8
+    odd N=60 dps=150               60        502        151.1
+    odd N=60 dps=220               60        734        221.0
+    odd N=100 dps=150              60        502        151.1
+    odd N=100 dps=220              60        733        220.7
+    odd N=140 dps=150              60        501        150.8
+    odd N=180 dps=150              60        501        150.8
+    odd N=220 dps=150              60        502        151.1
+
+D2  REPRODUCIBLE DEPTH -- dps=150 vs an independent dps=220 run, one knob moved
+    read through the frozen 60-s.f. cell vs through the c48 full-precision cell
+    cell             via c46 (s.f.) via c48 (s.f.)       gain
+    even N=60                 59.87          92.66      32.78
+    even N=100                60.03          92.22      32.19
+    odd N=60                  60.24          95.81      35.56
+    odd N=100                 59.87          95.40      35.53
+
+    THE c47 HEADLINE, REPRODUCED: a third party holding a value good to 220 dps and
+    comparing it against our PUBLISHED cell measures a relative difference of
+        even N=60    1e-59.87  <- our print granularity, not an agreement depth
+        even N=100   1e-60.03  <- our print granularity, not an agreement depth
+        odd N=60     1e-60.24  <- our print granularity, not an agreement depth
+        odd N=100    1e-59.87  <- our print granularity, not an agreement depth
+    and against the c48 cell, of
+        even N=60    1e-92.66  <- the object
+        even N=100   1e-92.22  <- the object
+        odd N=60     1e-95.81  <- the object
+        odd N=100    1e-95.40  <- the object
+
+D3  RIGOROUS BOUND on the assembled matrix -- ||Mv-lam v||/(||v|| |lam|)
+    cell                     s.f. bounded
+    even N=60 dps=150           94.844389
+    even N=60 dps=220           113.74887
+    even N=100 dps=150          93.193785
+    even N=100 dps=220          114.20553
+    even N=140 dps=150          93.610113
+    even N=180 dps=150          93.548086
+    even N=220 dps=150           93.48132
+    odd N=60 dps=150             98.24217
+    odd N=60 dps=220            107.08085
+    odd N=100 dps=150           99.167247
+    odd N=100 dps=220           107.51329
+    odd N=140 dps=150           97.764102
+    odd N=180 dps=150           98.146243
+    odd N=220 dps=150           97.760163
+
+CLOSING CONDITION -- a committed cell stores the value at full working precision and
+re-reading it recovers MORE THAN 60 s.f., measured by an instrument that is not the
+60-s.f. print field: MET

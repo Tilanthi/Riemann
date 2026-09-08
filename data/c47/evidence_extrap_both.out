@@ -1,0 +1,97 @@
+==============================================================================
+LADDER SOURCE: m3-L185 published lambda values (arithmetic re-derived here, not copied)
+  ODD  ladder:
+     N=100  lambda=3.3410774203207396566e-55
+     N=140  lambda=2.8475156913393636772e-55
+     N=180  lambda=2.6980097787827496866e-55
+     N=220  lambda=2.5322446138126329379e-55
+  ODD  decay ratios lambda(N_k)/lambda(N_{k-1}):
+     100 -> 140 : 0.85227468
+     140 -> 180 : 0.94749602
+     180 -> 220 : 0.93856021
+  ODD  shape of the ratio sequence: ['DOWN(decel)', 'UP(re-accel of decay)']
+  EVEN ladder:
+     N=100  lambda=3.7208997416671239358e-59
+     N=140  lambda=3.1916187229042991878e-59
+     N=180  lambda=2.9597068072400600451e-59
+     N=220  lambda=2.8336564310093568989e-59
+  EVEN decay ratios lambda(N_k)/lambda(N_{k-1}):
+     100 -> 140 : 0.85775456
+     140 -> 180 : 0.92733721
+     180 -> 220 : 0.95741119
+  EVEN shape of the ratio sequence: ['DOWN(decel)', 'DOWN(decel)']
+
+  finite-N gap log10(odd/even):
+     N=100  3.953238571
+     N=140  3.950455122
+     N=180  3.959794828
+     N=220  3.951158463
+
+  R3 Aitken(Delta^2) on consecutive triples (ratio = lam_inf / lam(first N)):
+     ODD  [100, 140, 180] lam_inf=2.633043524e-55  ratio_to_N100=0.788082  usable
+     ODD  [140, 180, 220] lam_inf=4.222241744e-55  ratio_to_N140=1.48278  NONSENSICAL (>=1: predicts an increasing tail)
+     EVEN [100, 140, 180] lam_inf=2.778843577e-59  ratio_to_N100=0.74682  usable
+     EVEN [140, 180, 220] lam_inf=2.683567008e-59  ratio_to_N140=0.840817  usable
+
+  R4 Richardson(1/N) over matched pairs, and the extrapolated gap:
+     pair (100,140): odd_inf=1.613611369e-55 even_inf=1.868416176e-59  gap=3.9363253 dex   ordering SURVIVES
+     pair (100,180): odd_inf=1.894175227e-55 even_inf=2.008215639e-59  gap=3.9746098 dex   ordering SURVIVES
+     pair (100,220): odd_inf=1.858217275e-55 even_inf=2.094287005e-59  gap=3.9480603 dex   ordering SURVIVES
+     pair (140,180): odd_inf=2.174739085e-55 even_inf=2.148015102e-59  gap=4.0053698 dex   ordering SURVIVES
+     pair (140,220): odd_inf=1.980520228e-55 even_inf=2.20722242e-59  gap=3.9529332 dex   ordering SURVIVES
+     pair (180,220): odd_inf=1.786301371e-55 even_inf=2.266429738e-59  gap=3.8966125 dex   ordering SURVIVES
+     BAND over 6 pairs: [3.8966125, 4.0053698] dex   WIDTH = 0.108757 dex
+==============================================================================
+LADDER SOURCE: OUR OWN cells (c46 published + c47 new), x=13 dps=150 gl=9 it=16
+  ODD  ladder:
+     N=60   lambda=8.5468768301090444861e-55
+     N=100  lambda=3.3410774203207396566e-55
+     N=140  lambda=2.8475156913393636772e-55
+     N=180  lambda=2.6980097787827496866e-55
+     N=220  lambda=2.5322446138126329379e-55
+  ODD  decay ratios lambda(N_k)/lambda(N_{k-1}):
+      60 -> 100 : 0.39091208
+     100 -> 140 : 0.85227468
+     140 -> 180 : 0.94749602
+     180 -> 220 : 0.93856021
+  ODD  shape of the ratio sequence: ['DOWN(decel)', 'DOWN(decel)', 'UP(re-accel of decay)']
+  EVEN ladder:
+     N=60   lambda=1.0135629071691990736e-58
+     N=100  lambda=3.7208997416671239358e-59
+     N=140  lambda=3.1916187229042991878e-59
+     N=180  lambda=2.9597068072400600451e-59
+     N=220  lambda=2.8336564310093568989e-59
+  EVEN decay ratios lambda(N_k)/lambda(N_{k-1}):
+      60 -> 100 : 0.36711088
+     100 -> 140 : 0.85775456
+     140 -> 180 : 0.92733721
+     180 -> 220 : 0.95741119
+  EVEN shape of the ratio sequence: ['DOWN(decel)', 'DOWN(decel)', 'DOWN(decel)']
+
+  finite-N gap log10(odd/even):
+     N=60   3.925956737
+     N=100  3.953238571
+     N=140  3.950455122
+     N=180  3.959794828
+     N=220  3.951158463
+
+  R3 Aitken(Delta^2) on consecutive triples (ratio = lam_inf / lam(first N)):
+     ODD  [60, 100, 140]  lam_inf=2.795819831e-55  ratio_to_N60=0.327116  usable
+     ODD  [100, 140, 180] lam_inf=2.633043524e-55  ratio_to_N100=0.788082  usable
+     ODD  [140, 180, 220] lam_inf=4.222241744e-55  ratio_to_N140=1.48278  NONSENSICAL (>=1: predicts an increasing tail)
+     EVEN [60, 100, 140]  lam_inf=3.144020242e-59  ratio_to_N60=0.310195  usable
+     EVEN [100, 140, 180] lam_inf=2.778843577e-59  ratio_to_N100=0.74682  usable
+     EVEN [140, 180, 220] lam_inf=2.683567008e-59  ratio_to_N140=0.840817  usable
+
+  R4 Richardson(1/N) over matched pairs, and the extrapolated gap:
+     pair ( 60,100): NONPOSITIVE extrapolant odd=-4.46762e-55 even=-5.90119e-59 -- unusable
+     pair ( 60,140): NONPOSITIVE extrapolant odd=-1.42701e-55 even=-2.01639e-59 -- unusable
+     pair ( 60,180): NONPOSITIVE extrapolant odd=-2.26424e-56 even=-6.28254e-60 -- unusable
+     pair ( 60,220): odd_inf=2.767575327e-56 even_inf=9.541669075e-61  gap=4.4624751 dex   ordering SURVIVES
+     pair (100,140): odd_inf=1.613611369e-55 even_inf=1.868416176e-59  gap=3.9363253 dex   ordering SURVIVES
+     pair (100,180): odd_inf=1.894175227e-55 even_inf=2.008215639e-59  gap=3.9746098 dex   ordering SURVIVES
+     pair (100,220): odd_inf=1.858217275e-55 even_inf=2.094287005e-59  gap=3.9480603 dex   ordering SURVIVES
+     pair (140,180): odd_inf=2.174739085e-55 even_inf=2.148015102e-59  gap=4.0053698 dex   ordering SURVIVES
+     pair (140,220): odd_inf=1.980520228e-55 even_inf=2.20722242e-59  gap=3.9529332 dex   ordering SURVIVES
+     pair (180,220): odd_inf=1.786301371e-55 even_inf=2.266429738e-59  gap=3.8966125 dex   ordering SURVIVES
+     BAND over 7 pairs: [3.8966125, 4.4624751] dex   WIDTH = 0.565863 dex

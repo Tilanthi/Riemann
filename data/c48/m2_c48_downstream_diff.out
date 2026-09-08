@@ -1,0 +1,5 @@
+control (frozen cells vs committed c46_analyse.out) : REPRODUCES-EVERY-COMMITTED-LINE (committed .out is STALE: 12 rows added since)
+cells staged with full-precision lambda_min          : 11 ['c46_even_x13_N100_dps150_g9_it16.json', 'c46_even_x13_N140_dps150_g9_it16.json', 'c46_even_x13_N180_dps150_g9_it16.json', 'c46_even_x13_N220_dps150_g9_it16.json', 'c46_even_x13_N60_dps150_g9_it16.json', 'c46_odd_x13_N100_dps150_g9_it16.json', 'c46_odd_x13_N100_dps220_g9_it16.json', 'c46_odd_x13_N140_dps150_g9_it16.json', 'c46_odd_x13_N180_dps150_g9_it16.json', 'c46_odd_x13_N220_dps150_g9_it16.json', 'c46_odd_x13_N60_dps150_g9_it16.json']
+
+DOWNSTREAM MOVEMENT: NONE -- c46_analyse.py prints byte-identical output from
+60-s.f. and from full-precision inputs. No published derived number moves.

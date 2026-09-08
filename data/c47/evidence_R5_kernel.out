@@ -1,0 +1,26 @@
+L = log(13) = 2.564949357461536736053487
+dps = 60
+
+R5a  pointwise g_odd: 240 comparisons, worst RELATIVE diff = 2.07807e-58 at (j,k,t)=(6, 3, '1.70532975619')
+R5a  t = log 2, log 3, ... (the points the prime sum actually uses):
+   n= 2 t=0.6931471806  max ABS diff over 12x12 block = 1.55575e-61
+   n= 3 t=1.098612289  max ABS diff over 12x12 block = 3.88938e-62
+   n= 4 t=1.386294361  max ABS diff over 12x12 block = 7.77877e-62
+   n= 5 t=1.609437912  max ABS diff over 12x12 block = 3.88938e-62
+   n= 7 t=1.945910149  max ABS diff over 12x12 block = 3.88938e-62
+   n= 8 t=2.079441542  max ABS diff over 12x12 block = 2.91704e-62
+   n= 9 t=2.197224577  max ABS diff over 12x12 block = 1.94469e-62
+   n=11 t=2.397895273  max ABS diff over 12x12 block = 1.45852e-62
+
+R5b  is g_jk(t) even in t?  (direct quadrature of the defining integral, no closed form)
+   j=1 k=2 t=L/3: g(+t)=-0.275664447711 g(-t)=-0.275664447711  |g(+t)-g(-t)|=0.0   g(-t) vs g_kj(+t): 0.0
+   j=1 k=3 t=L/3: g(+t)=0.103374167892 g(-t)=0.103374167892  |g(+t)-g(-t)|=0.0   g(-t) vs g_kj(+t): 0.0
+   j=2 k=5 t=L/3: g(+t)=0.0393806353873 g(-t)=0.0393806353873  |g(+t)-g(-t)|=0.0   g(-t) vs g_kj(+t): 0.0
+   j=3 k=4 t=L/3: g(+t)=0.118141906162 g(-t)=0.118141906162  |g(+t)-g(-t)|=0.0   g(-t) vs g_kj(+t): 0.0
+R5b  m3 closed form at t<0 vs direct quadrature at t<0:
+   j=1 k=2: closed(|t| fold)=-0.275664447711  direct=-0.275664447711  diff=3.88938e-62
+   j=2 k=5: closed(|t| fold)=0.0393806353873  direct=0.0393806353873  diff=1.45852e-62
+
+R5c  code fact (read, not inferred):
+   ours  : Gauss-Legendre nodes on [0,L] and t=log n for prime powers n<=x  -> t >= 0 always
+   m3    : mp.quad over [0,L] and t=log n for n<=x                          -> t >= 0 always

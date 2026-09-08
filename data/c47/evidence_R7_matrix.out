@@ -1,0 +1,12 @@
+R7  x=13 N=12 dps=60  (ours gl_degree=9, m3 adaptive mp.quad)
+   our prime powers: [2, 3, 4, 5, 7, 8, 9, 11, 13]  m3 prime powers: [2, 3, 4, 5, 7, 8, 9, 11, 13]
+   our L = 2.564949357461536736053487   m3 L = 2.564949357461536736053487
+   entries compared: 144
+   matrix scale max|M_ij| = 2.3794276
+   worst ABSOLUTE diff = 4.4338984e-60 at (j,k)=(8, 8)
+   worst RELATIVE diff = 4.3292032e-58
+   worst diff / matrix scale = 1.8634306e-60
+   lambda_min from m3 matrix = 1.4588547787972781590500806326e-26
+   lambda_min from our matrix= 1.4588547787972781590500806326e-26
+   relative difference of the two lambda_min = 2.61774e-36
+R8  m3 psihat calls=12, resonance-guard firings=0  -> EMPTY FIRING WORLD in this build

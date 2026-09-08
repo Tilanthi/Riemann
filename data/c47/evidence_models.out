@@ -1,0 +1,40 @@
+rungs: [60, 100, 140, 180, 220]
+
+M1 Richardson 1/N
+   ( 60,100) unusable (nonpositive extrapolant)
+   ( 60,140) unusable (nonpositive extrapolant)
+   ( 60,180) unusable (nonpositive extrapolant)
+   ( 60,220) odd_inf=2.7675753e-56 even_inf=9.5416691e-61 gap=4.4624751
+   (100,140) odd_inf=1.6136114e-55 even_inf=1.8684162e-59 gap=3.9363253
+   (100,180) odd_inf=1.8941752e-55 even_inf=2.0082156e-59 gap=3.9746098
+   (100,220) odd_inf=1.8582173e-55 even_inf=2.094287e-59 gap=3.9480603
+   (140,180) odd_inf=2.1747391e-55 even_inf=2.1480151e-59 gap=4.0053698
+   (140,220) odd_inf=1.9805202e-55 even_inf=2.2072224e-59 gap=3.9529332
+   (180,220) odd_inf=1.7863014e-55 even_inf=2.2664297e-59 gap=3.8966125
+   odd_inf spread : 2.76758e-56 .. 2.17474e-55  (factor 7.858)
+   even_inf spread: 9.54167e-61 .. 2.26643e-59  (factor 23.75)
+   GAP band       : [3.8966125, 4.4624751] dex   width 0.5659
+   GAP band on m3 rung set {100,140,180,220} only: [3.8966125, 4.0053698] width 0.1088 over 6 pairs
+
+M2 Richardson 1/N^2
+   ( 60,100) odd_inf=4.1281525e-56 even_inf=1.1261449e-60 gap=4.5641614
+   ( 60,140) odd_inf=1.5651594e-55 even_inf=1.6292164e-59 gap=3.9825798
+   ( 60,180) odd_inf=1.9669014e-55 even_inf=2.0627165e-59 gap=3.979343
+   ( 60,220) odd_inf=2.048926e-55 even_inf=2.2468908e-59 gap=3.9599443
+   (100,140) odd_inf=2.3333889e-55 even_inf=2.6402843e-59 gap=3.9463364
+   (100,180) odd_inf=2.410926e-55 even_inf=2.6198885e-59 gap=3.9639011
+   (100,220) odd_inf=2.3216111e-55 even_inf=2.6026035e-59 gap=3.9503815
+   (140,180) odd_inf=2.4690789e-55 even_inf=2.6045917e-59 gap=3.9767953
+   (140,220) odd_inf=2.3176851e-55 even_inf=2.5900432e-59 gap=3.9517474
+   (180,220) odd_inf=2.1965702e-55 even_inf=2.5784044e-59 gap=3.930394
+   odd_inf spread : 4.12815e-56 .. 2.46908e-55  (factor 5.981)
+   even_inf spread: 1.12614e-60 .. 2.64028e-59  (factor 23.45)
+   GAP band       : [3.930394, 4.5641614] dex   width 0.6338
+   GAP band on m3 rung set {100,140,180,220} only: [3.930394, 3.9767953] width 0.0464 over 6 pairs
+
+M3 Aitken Delta^2 -- cross-model comparison of lam_inf and of the gap
+   [60, 100, 140]  odd_inf=2.7958198e-55  even_inf=3.1440202e-59
+   [100, 140, 180]  odd_inf=2.6330435e-55  even_inf=2.7788436e-59
+   [140, 180, 220]  odd_inf=4.2222417e-55  even_inf=2.683567e-59
+   usable odd Aitken values : []
+   usable even Aitken values: ['2.77884e-59', '2.68357e-59']

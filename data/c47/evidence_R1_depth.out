@@ -1,0 +1,9 @@
+parity    N  ours_sf  m3_sf  rel_diff        verdict
+even    100      60     40  1.03636e-40     agree to 39 s.f. (CAP set by the narrower print = 40 s.f.)
+even    140      60     40  7.07223e-41     agree to 40 s.f. (CAP set by the narrower print = 40 s.f.)
+even    180      60     40  9.79857e-41     agree to 40 s.f. (CAP set by the narrower print = 40 s.f.)  [NEW this cycle]
+even    220      60     40  1.71779e-40     agree to 39 s.f. (CAP set by the narrower print = 40 s.f.)  [NEW this cycle]
+odd     100      60     60  0.0             agree to 60 s.f. (CAP set by the narrower print = 60 s.f.)
+odd     140      60     50  1.21566e-50     agree to 49 s.f. (CAP set by the narrower print = 50 s.f.)
+odd     180      60     49  4.33049e-51     agree to 49 s.f. (CAP set by the narrower print = 49 s.f.)  [NEW this cycle]
+odd     220      60     50  1.58149e-50     agree to 49 s.f. (CAP set by the narrower print = 50 s.f.)  [NEW this cycle]

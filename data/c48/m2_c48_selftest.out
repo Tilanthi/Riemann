@@ -1,0 +1,17 @@
+m2_c48_cell_storage self-test
+  T1 exact field reconstructs bit-identically                PASS
+  T1 retained 60-s.f. field == mp.nstr(v,60)                 PASS
+  T1 retained 30-s.f. field == mp.nstr(v,30)                 PASS
+  T1 full field carries > 60 s.f.                            PASS
+  T1 additivity regenerates both narrow fields               PASS
+  T2 old 60-s.f. storage recovers only ~60 s.f. (59 < d < 62) PASS
+  T2 new storage recovers > 60 s.f. (bit-exact)              PASS
+  T3 narrow reader refuses (strict)                          PASS
+  T3b wide reader reconstructs bit-exactly                   PASS
+  T3b wide reader regenerates the 60-s.f. field byte-identically PASS
+  T3b and the decimal alone would NOT have (differs below the last stored digit) PASS
+  T4 roundtrip -3.14159e-200                                 PASS
+  T4 roundtrip 0.000976563                                   PASS
+  T5 dps=220 widens _full                                    PASS
+  T5 dps=220 leaves the 60-s.f. field byte-identical         PASS
+SELF-TEST PASS
