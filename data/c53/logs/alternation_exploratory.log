@@ -1,0 +1,8 @@
+x=13  N=100  positive eigenvalues 201/200 ; alternating prefix length 27 ; prefix=eoeoeoeoeoeoeoeoeoeoeoeoeoeeoo
+        log10 lambda at the break: -0.2301546713284066
+x=19  N=100  positive eigenvalues 201/200 ; alternating prefix length 43 ; prefix=eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
+        log10 lambda at the break: -0.14337355190781395
+x=13  N=180  positive eigenvalues 361/360 ; alternating prefix length 27 ; prefix=eoeoeoeoeoeoeoeoeoeoeoeoeoeeoo
+        log10 lambda at the break: -0.23334464300986038
+x=19  N=180  positive eigenvalues 361/360 ; alternating prefix length 45 ; prefix=eoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeoeo
+        log10 lambda at the break: -0.1402909610981802

@@ -1,0 +1,17 @@
+  odd  rung 1  log10lam=-54.568956480585 rel_resid=3.550732135e-96 adm=True  nu=1    refine=1    lobe=1.0        sturm=1   delta=0    stable=True
+  odd  rung 2  log10lam=-47.430539809223 rel_resid=3.495301252e-103 adm=True  nu=3    refine=3    lobe=0.553      sturm=3   delta=0    stable=True
+  odd  rung 3  log10lam=-40.749038783656 rel_resid=7.770138736e-110 adm=True  nu=7    refine=7    lobe=0.09696    sturm=5   delta=2    stable=True
+  odd  rung 4  log10lam=-34.872491075878 rel_resid=1.136002596e-115 adm=True  nu=9    refine=9    lobe=0.4449     sturm=7   delta=2    stable=True
+  odd  rung 5  log10lam=-29.050115934898 rel_resid=2.347044833e-121 adm=True  nu=15   refine=15   lobe=0.005481   sturm=9   delta=6    stable=True
+  odd  rung 6  log10lam=-24.066949620276 rel_resid=4.281900475e-126 adm=True  nu=17   refine=17   lobe=0.1614     sturm=11  delta=6    stable=True
+  odd  rung 7  log10lam=-19.143492184555 rel_resid=3.876002358e-131 adm=True  nu=19   refine=19   lobe=0.1143     sturm=13  delta=6    stable=True
+  odd  rung 8  log10lam=-14.780210043009 rel_resid=1.534537348e-135 adm=True  nu=25   refine=25   lobe=0.2036     sturm=15  delta=10   stable=True
+  odd  rung 9  log10lam=-10.641458834354 rel_resid=1.494560227e-139 adm=True  nu=33   refine=33   lobe=0.0559     sturm=17  delta=16   stable=True
+  odd  rung 10 log10lam=-7.0676732697718 rel_resid=5.472431587e-143 adm=True  nu=35   refine=35   lobe=0.1438     sturm=19  delta=16   stable=True
+  odd  rung 11 log10lam=-3.5357801250866 rel_resid=2.509127732e-146 adm=True  nu=45   refine=45   lobe=0.08859    sturm=21  delta=24   stable=True
+  odd  rung 12 log10lam=-0.9970225052220 rel_resid=6.203046766e-149 adm=True  nu=51   refine=51   lobe=0.03456    sturm=23  delta=28   stable=True
+  odd  rung 13 log10lam=-0.3171481040567 rel_resid=1.562385234e-149 adm=True  nu=89   refine=89   lobe=0.4611     sturm=25  delta=64   stable=True
+  odd  rung 14 log10lam=-0.1565413461438 rel_resid=7.402943289e-150 adm=True  nu=75   refine=75   lobe=0.03374    sturm=27  delta=48   stable=True
+  odd  rung 15 log10lam=-0.1252114092980 rel_resid=8.247127171e-150 adm=True  nu=103  refine=103  lobe=0.02073    sturm=29  delta=74   stable=True
+  odd  rung 16 log10lam=-0.1101284037545 rel_resid=8.948673007e-150 adm=True  nu=75   refine=75   lobe=0.05728    sturm=31  delta=44   stable=True
+wrote m2_c53_nodes_odd_x13_N180_dps150.json  4623.3s

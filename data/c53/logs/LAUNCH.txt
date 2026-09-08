@@ -1,2 +1,5 @@
 LAUNCH (stage A, spec only -- NO node counts) 2026-09-08T20:24:55Z
 prereg pushed as b83662c (f3641e5..b83662c) at 2026-09-08T20:24:37Z, measured by date -u at the push
+LAUNCH (stage B nodes N=100 + tier 2 block k=12) 2026-09-08T20:33:38Z -- after stage-A push 1a575d8 at 2026-09-08T20:33:17Z
+LAUNCH (stage B nodes N=180, the truncation control) 2026-09-08T20:44:36Z
+RELAUNCH block even x19 k12 (attempt 1 died silently after rung 6, no stderr, no artefact) 2026-09-08T21:54:34Z

@@ -1,0 +1,16 @@
+G0                           PASS
+G1                           PASS
+G2                           PASS (informative)
+P1                           MEASURED
+P2                           HELD
+P3                           MEASURED
+P4                           REFUTED -- HEADLINE
+P5                           PASS
+P6                           HELD
+P7                           HELD -- the detector runs out first
+TIER2_double_determination   PASS
+
+P1  p2(x=19) = 11   models {'C': 10, 'L': 11, 'Z': 13, 'G': 10}   survivors ['L'] (1)
+    pooled Delta x=19 N=100: [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 6, 6, 6, 6, 10, 10, 8, 8, 16, 16, 16, 12, 16, 20, 20, 24, 28, 28, 24, 28, 38, 38]
+P3  third jump at x=13 at pooled p=15, increment +4, survivors []
+    pooled Delta x=13 N=100: [0, 0, 0, 0, 0, 2, 2, 2, 2, 6, 6, 6, 6, 6, 10, 10, 8, 16, 16, 16, 12, 24, 24, 28, 60, 64, 44, 46, 46, 66, 44, 54]

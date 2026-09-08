@@ -1,0 +1,903 @@
+{
+ "G0": {
+  "verdict": "PASS",
+  "compared": 396,
+  "matched": 396,
+  "cells": 8
+ },
+ "G1": {
+  "rows": [
+   {
+    "cell": "even x13 N100",
+    "depths_sf": [
+     "39.9845",
+     "39.4787",
+     "39.6012",
+     "40.0",
+     "39.5263"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.4787
+   },
+   {
+    "cell": "odd x13 N100",
+    "depths_sf": [
+     "40.0",
+     "40.0",
+     "40.0",
+     "40.0",
+     "39.7902"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.7902
+   },
+   {
+    "cell": "even x19 N100",
+    "depths_sf": [
+     "39.749",
+     "39.8097",
+     "40.0"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.749
+   },
+   {
+    "cell": "odd x19 N100",
+    "depths_sf": [
+     "39.9158",
+     "39.6676",
+     "40.0"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.6676
+   },
+   {
+    "cell": "even x13 N180",
+    "depths_sf": [
+     "40.0",
+     "39.6255",
+     "40.0"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.6255
+   },
+   {
+    "cell": "odd x13 N180",
+    "depths_sf": [
+     "39.8391",
+     "40.0",
+     "39.7407"
+    ],
+    "ceiling_sf": 40,
+    "verdict": "PASS",
+    "min_sf": 39.7407
+   },
+   {
+    "cell": "even x19 N180",
+    "verdict": "NO REFERENCE PUBLISHED",
+    "ceiling": null
+   },
+   {
+    "cell": "odd x19 N180",
+    "verdict": "NO REFERENCE PUBLISHED",
+    "ceiling": null
+   }
+  ],
+  "verdict": "PASS",
+  "note": "depth is CEILING-LIMITED by the published print width (c37/c43)"
+ },
+ "G2": {
+  "verdict": "PASS (informative)",
+  "compared": 34,
+  "agreed": 34,
+  "top_of_block_compared": 6,
+  "top_of_block_agreed": 6,
+  "rows": [
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.483544493e-94"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.002746474e-101"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 3,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "5.158329582e-108"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "6.98151387e-115"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 5,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "6.954591357e-120"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 6,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.952540904e-125"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N100_k7.json",
+    "rung": 7,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "1.461324937e-71"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.981926061e-99"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "6.691522714e-105"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 3,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.796911331e-111"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "5.187398013e-117"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 5,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "7.593111703e-123"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 6,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.35914411e-127"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N100_k7.json",
+    "rung": 7,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "2.705586139e-66"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N180_k5.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "7.810374526e-94"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N180_k5.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.862798515e-101"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N180_k5.json",
+    "rung": 3,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "5.743388479e-108"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N180_k5.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.316754577e-114"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x13_N180_k5.json",
+    "rung": 5,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "8.162495398e-84"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N180_k5.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.407579869e-98"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N180_k5.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.906368077e-105"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N180_k5.json",
+    "rung": 3,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.423398558e-111"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N180_k5.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.686998305e-117"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x13_N180_k5.json",
+    "rung": 5,
+    "published_delta": 6,
+    "c53_delta": 6,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "8.608149438e-76"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x19_N100_k5.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.014860323e-212"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x19_N100_k5.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "8.830092283e-221"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x19_N100_k5.json",
+    "rung": 3,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.474780491e-228"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x19_N100_k5.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "2.859029844e-192"
+   },
+   {
+    "cell": "m2_c51_nodes_even_x19_N100_k5.json",
+    "rung": 5,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "3.417057734e-96"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x19_N100_k5.json",
+    "rung": 1,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "3.287584304e-218"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x19_N100_k5.json",
+    "rung": 2,
+    "published_delta": 0,
+    "c53_delta": 0,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.352936359e-224"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x19_N100_k5.json",
+    "rung": 3,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.124419447e-231"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x19_N100_k5.json",
+    "rung": 4,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": false,
+    "agree": true,
+    "block_rel_residual": "1.435790634e-187"
+   },
+   {
+    "cell": "m2_c51_nodes_odd_x19_N100_k5.json",
+    "rung": 5,
+    "published_delta": 2,
+    "c53_delta": 2,
+    "top_of_block": true,
+    "agree": true,
+    "block_rel_residual": "8.465221175e-91"
+   }
+  ]
+ },
+ "P1": {
+  "verdict": "MEASURED",
+  "p2": 11,
+  "occupied_bin": "11",
+  "certified_prefix": 31,
+  "models": {
+   "C": 10,
+   "L": 11,
+   "Z": 13,
+   "G": 10
+  },
+  "survivors": [
+   "L"
+  ],
+  "survivor_count": 1,
+  "discrimination": "one named survivor",
+  "pooled_delta": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   2,
+   2,
+   2,
+   6,
+   6,
+   6,
+   6,
+   10,
+   10,
+   8,
+   8,
+   16,
+   16,
+   16,
+   12,
+   16,
+   20,
+   20,
+   24,
+   28,
+   28,
+   24,
+   28,
+   38,
+   38
+  ]
+ },
+ "P2": {
+  "verdict": "HELD",
+  "predicted": 4,
+  "measured": 4
+ },
+ "P3": {
+  "verdict": "MEASURED",
+  "p3": 15,
+  "increment": 4,
+  "new_delta": 10,
+  "models": {
+   "A": 6,
+   "D": 8
+  },
+  "survivors": [],
+  "survivor_count": 0,
+  "pooled_delta": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   2,
+   2,
+   6,
+   6,
+   6,
+   6,
+   6,
+   10,
+   10,
+   8,
+   16,
+   16,
+   16,
+   12,
+   24,
+   24,
+   28,
+   60,
+   64,
+   44,
+   46,
+   46,
+   66,
+   44,
+   54
+  ],
+  "certified_prefix": 31
+ },
+ "P4": {
+  "verdict": "REFUTED -- HEADLINE",
+  "violations": [
+   {
+    "x": 13,
+    "N": 100,
+    "p": 17,
+    "prev": 10,
+    "now": 8
+   },
+   {
+    "x": 13,
+    "N": 100,
+    "p": 21,
+    "prev": 16,
+    "now": 12
+   },
+   {
+    "x": 13,
+    "N": 100,
+    "p": 27,
+    "prev": 64,
+    "now": 44
+   },
+   {
+    "x": 13,
+    "N": 100,
+    "p": 31,
+    "prev": 66,
+    "now": 44
+   },
+   {
+    "x": 19,
+    "N": 100,
+    "p": 17,
+    "prev": 10,
+    "now": 8
+   },
+   {
+    "x": 19,
+    "N": 100,
+    "p": 22,
+    "prev": 16,
+    "now": 12
+   },
+   {
+    "x": 19,
+    "N": 100,
+    "p": 29,
+    "prev": 28,
+    "now": 24
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "p": 17,
+    "prev": 10,
+    "now": 8
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "p": 21,
+    "prev": 16,
+    "now": 12
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "p": 27,
+    "prev": 64,
+    "now": 48
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "p": 28,
+    "prev": 48,
+    "now": 46
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "p": 31,
+    "prev": 74,
+    "now": 44
+   },
+   {
+    "x": 19,
+    "N": 180,
+    "p": 17,
+    "prev": 10,
+    "now": 8
+   },
+   {
+    "x": 19,
+    "N": 180,
+    "p": 22,
+    "prev": 16,
+    "now": 12
+   },
+   {
+    "x": 19,
+    "N": 180,
+    "p": 29,
+    "prev": 28,
+    "now": 24
+   }
+  ],
+  "note": "informative only over rungs deeper than c51 reached (prereg P4 criterion)"
+ },
+ "P5": {
+  "rows": [
+   {
+    "x": 13,
+    "N": 100,
+    "first_six": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    "verdict": "PASS"
+   },
+   {
+    "x": 19,
+    "N": 100,
+    "first_six": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    "verdict": "PASS"
+   },
+   {
+    "x": 13,
+    "N": 180,
+    "first_six": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    "verdict": "PASS"
+   },
+   {
+    "x": 19,
+    "N": 180,
+    "first_six": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    "verdict": "PASS"
+   }
+  ],
+  "verdict": "PASS"
+ },
+ "P6": {
+  "rows": [
+   {
+    "x": 13,
+    "parity": "even",
+    "agreed_sector_rungs": 13,
+    "first_disagreeing_rung": 14,
+    "N100_nu": [
+     0,
+     2,
+     4,
+     8,
+     10,
+     16,
+     18,
+     24,
+     24,
+     34,
+     32,
+     46,
+     84,
+     70,
+     74,
+     84
+    ],
+    "N180_nu": [
+     0,
+     2,
+     4,
+     8,
+     10,
+     16,
+     18,
+     24,
+     24,
+     34,
+     32,
+     46,
+     84,
+     74,
+     74,
+     84
+    ]
+   },
+   {
+    "x": 13,
+    "parity": "odd",
+    "agreed_sector_rungs": 13,
+    "first_disagreeing_rung": 14,
+    "N100_nu": [
+     1,
+     3,
+     7,
+     9,
+     15,
+     17,
+     19,
+     25,
+     33,
+     35,
+     45,
+     51,
+     89,
+     73,
+     95,
+     75
+    ],
+    "N180_nu": [
+     1,
+     3,
+     7,
+     9,
+     15,
+     17,
+     19,
+     25,
+     33,
+     35,
+     45,
+     51,
+     89,
+     75,
+     103,
+     75
+    ]
+   },
+   {
+    "x": 19,
+    "parity": "even",
+    "agreed_sector_rungs": 16,
+    "first_disagreeing_rung": null,
+    "N100_nu": [
+     0,
+     2,
+     4,
+     8,
+     10,
+     16,
+     18,
+     24,
+     24,
+     34,
+     36,
+     38,
+     44,
+     54,
+     52,
+     68
+    ],
+    "N180_nu": [
+     0,
+     2,
+     4,
+     8,
+     10,
+     16,
+     18,
+     24,
+     24,
+     34,
+     36,
+     38,
+     44,
+     54,
+     52,
+     68
+    ]
+   },
+   {
+    "x": 19,
+    "parity": "odd",
+    "agreed_sector_rungs": 16,
+    "first_disagreeing_rung": null,
+    "N100_nu": [
+     1,
+     3,
+     7,
+     9,
+     11,
+     17,
+     19,
+     25,
+     25,
+     35,
+     33,
+     43,
+     49,
+     55,
+     57,
+     69
+    ],
+    "N180_nu": [
+     1,
+     3,
+     7,
+     9,
+     11,
+     17,
+     19,
+     25,
+     25,
+     35,
+     33,
+     43,
+     49,
+     55,
+     57,
+     69
+    ]
+   }
+  ],
+  "pooled_trusted_depth": 25,
+  "predicted_at_least": 12,
+  "verdict": "HELD",
+  "note": "pooled trusted depth = 2*min(sector agreement)-1, the pooled prefix all of whose members are N-controlled; a depth equal to the computed depth R is a FLOOR, not a measurement of the truncation (prereg P6 criterion)"
+ },
+ "P7": {
+  "frontier": 0.005,
+  "deep_rungs_checked": 72,
+  "below_frontier": [
+   {
+    "cell": "odd x19 N180",
+    "rung": 15,
+    "lobe": "0.00415936",
+    "nu": 57,
+    "delta": 28
+   }
+  ],
+  "verdict": "HELD -- the detector runs out first"
+ },
+ "TIER2_double_determination": {
+  "rows": [
+   {
+    "cell": "even x13",
+    "compared": 12,
+    "disagreements": [],
+    "deepest_rung": 12,
+    "verdict": "PASS"
+   },
+   {
+    "cell": "odd x13",
+    "compared": 12,
+    "disagreements": [],
+    "deepest_rung": 12,
+    "verdict": "PASS"
+   },
+   {
+    "cell": "even x19",
+    "compared": 12,
+    "disagreements": [],
+    "deepest_rung": 12,
+    "verdict": "PASS"
+   },
+   {
+    "cell": "odd x19",
+    "compared": 12,
+    "disagreements": [],
+    "deepest_rung": 12,
+    "verdict": "PASS"
+   }
+  ],
+  "verdict": "PASS"
+ }
+}

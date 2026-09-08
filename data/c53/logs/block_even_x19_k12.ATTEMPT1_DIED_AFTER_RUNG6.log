@@ -1,0 +1,7 @@
+SELF-TEST vs c46_block_even_x19_N100_dps300_g9_it16_k3.json: depths ['39.75', '39.81', '40.0'] (CEILING 40 s.f. = the published print width) -> PASS
+  even rung 1  log10lam=-89.7172567433  rel_resid=9.735e-213  admitted=True  nu=0  refine48001=0  lobe_min=1.0  sturm=0  delta=0  stable=True
+  even rung 2  log10lam=-81.5123880948  rel_resid=3.707e-221  admitted=True  nu=2  refine48001=2  lobe_min=0.7  sturm=2  delta=0  stable=True
+  even rung 3  log10lam=-73.9913099209  rel_resid=2.739e-228  admitted=True  nu=4  refine48001=4  lobe_min=0.2839  sturm=4  delta=0  stable=True
+  even rung 4  log10lam=-66.9897763958  rel_resid=2.929e-235  admitted=True  nu=8  refine48001=8  lobe_min=0.4238  sturm=6  delta=2  stable=True
+  even rung 5  log10lam=-60.5663551498  rel_resid=2.731e-241  admitted=True  nu=10  refine48001=10  lobe_min=0.2731  sturm=8  delta=2  stable=True
+  even rung 6  log10lam=-54.2032845298  rel_resid=2.347e-247  admitted=True  nu=16  refine48001=16  lobe_min=0.1128  sturm=10  delta=6  stable=True

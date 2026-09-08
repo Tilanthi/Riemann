@@ -1,0 +1,14 @@
+SELF-TEST vs c46_block_odd_x13_N100_dps150_g9_it16_k5.json: depths ['40.0', '40.0', '40.0', '40.0', '39.79'] (CEILING 40 s.f. = the published print width) -> PASS
+  odd  rung 1  log10lam=-54.4761134607  rel_resid=9.322e-99  admitted=True  nu=1  refine48001=1  lobe_min=1.0  sturm=1  delta=0  stable=True
+  odd  rung 2  log10lam=-47.3474925893  rel_resid=4.736e-105  admitted=True  nu=3  refine48001=3  lobe_min=0.5529  sturm=3  delta=0  stable=True
+  odd  rung 3  log10lam=-40.6436207214  rel_resid=5.305e-112  admitted=True  nu=7  refine48001=7  lobe_min=0.09708  sturm=5  delta=2  stable=True
+  odd  rung 4  log10lam=-34.7803048144  rel_resid=1.882e-117  admitted=True  nu=9  refine48001=9  lobe_min=0.4447  sturm=7  delta=2  stable=True
+  odd  rung 5  log10lam=-28.9664999719  rel_resid=5.336e-123  admitted=True  nu=15  refine48001=15  lobe_min=0.005694  sturm=9  delta=6  stable=True
+  odd  rung 6  log10lam=-23.9934470861  rel_resid=1.197e-127  admitted=True  nu=17  refine48001=17  lobe_min=0.1614  sturm=11  delta=6  stable=True
+  odd  rung 7  log10lam=-19.0799024843  rel_resid=9.738e-133  admitted=True  nu=19  refine48001=19  lobe_min=0.1144  sturm=13  delta=6  stable=True
+  odd  rung 8  log10lam=-14.6875707857  rel_resid=7.35e-137  admitted=True  nu=25  refine48001=25  lobe_min=0.2027  sturm=15  delta=10  stable=True
+  odd  rung 9  log10lam=-10.5542219132  rel_resid=9.358e-141  admitted=True  nu=33  refine48001=33  lobe_min=0.05743  sturm=17  delta=16  stable=True
+  odd  rung 10  log10lam=-7.03686811751  rel_resid=1.912e-101  admitted=True  nu=35  refine48001=35  lobe_min=0.143  sturm=19  delta=16  stable=True
+  odd  rung 11  log10lam=-3.51307807132  rel_resid=3.117e-49  admitted=True  nu=45  refine48001=45  lobe_min=0.08897  sturm=21  delta=24  stable=True
+  odd  rung 12  log10lam=-0.944551161297  rel_resid=1.714e-10  admitted=False  nu=51  refine48001=51  lobe_min=0.03934  sturm=23  delta=28  stable=True
+wrote m2_c51_nodes_odd_x13_N100_k12.json  3100.5s

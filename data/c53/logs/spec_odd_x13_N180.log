@@ -1,0 +1,2 @@
+SELF-TEST vs c46_block_odd_x13_N180_dps150_g9_it16_k3.json: depths ['39.8391', '40.0', '39.7407'] (CEILING 40 s.f.)
+wrote m2_c53_spec_odd_x13_N180_dps150.json  dim=180 build=587.4s eigsy=207.9s total=808.3s
