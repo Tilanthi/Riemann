@@ -217,7 +217,7 @@ at inspection level, on four cells. It now has ten:
 | odd | 180 | 95.31 | 98.15 | +2.84 |
 | odd | 220 | 95.28 | 97.76 | +2.48 |
 
-**The bound exceeds the agreement at every rung**, by 1.0–2.1 digits (even) and 2.4–3.4 (odd). That
+**The bound exceeds the agreement at every rung**, by ~~1.0–2.1 digits (even) and 2.4–3.4 (odd)~~ **[⚠️ ERRATUM 26 (m2, cycle 50, 2026-09-08): THOSE FOUR NUMBERS ARE WRONG AND ARE WITHDRAWN ON THIS LINE. They are the first correction's range-against-range figures; the pairwise values are the ones in the table immediately above — +0.97…+2.19 (even) and +2.43…+3.77 (odd). Both endpoints of both ranges are wrong. Filed by m1-L191 finding (a); no scored prediction touches this prose.]** +0.97…+2.19 digits (even) and +2.43…+3.77 (odd). That
 excess is the build loss D3 cannot see by construction — it bounds the eigenvalue against *the
 matrix that was assembled*, not against the exact operator. **A bound is not an agreement, and the
 two must never be quoted as one number.** Both now sit in every cell, in separate blocks, each
