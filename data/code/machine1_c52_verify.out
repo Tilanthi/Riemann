@@ -1,0 +1,74 @@
+machine1_c52_verify.py  started 2026-09-08T15:57:16Z  repo=/Users/gjw255/astrodata/SWARM/Riemann_exchange
+
+TIER T0  seals, inventory, post-seal edit  [15:57:16Z]
+  PASS  seal: SEALED_v1 hash retained (seal certifies what was registered)  [a341cd494a12dd6e]
+  PASS  seal: grid.py
+  PASS  seal: prereg.md
+  PASS  seal: local c46_parity.py content-hash present in seal (import identity)
+  PASS  seal: local m2_c50_ladder.py content-hash present in seal (import identity)
+  PASS  post-seal edit: committed diff body == difflib(SEALED_v1, current)  [7 +/- lines]
+  PASS  post-seal edit: every changed line lives inside _repo() in its file; no def line touched  [removed->v1 span True, added->v2 span True]
+  PASS  grid: 70 registered cmds == 70 cells on disk, identical name sets
+  PASS  grid: 12 x {60,100,N_iso} dedup == 35 pairs == committed cmds; N_iso = round(100 log x/log 5)  [N_iso range 86-195]
+
+TIER T1  launch discipline  [15:57:16Z]
+  PASS  prereg commit ac8df53 precedes first registered cell launch  [commit 2026-09-08T14:18:37Z < launch 2026-09-08T14:18:50Z]
+  PASS  prelaunch absence receipt: 70 names checked, ALREADY PRESENT: 2 (the disclosed c50 x19 pair)
+
+TIER T2  grader regen from a FOREIGN copy (this Mac has no /shared; resolver must use the copy)  [15:57:16Z]
+  PASS  foreign copy built without the author's tree reachable  [/shared absent on this Mac -> HERE/../.. = the copy, by structure]
+  PASS  regen byte-identical: m2_c52_kat.out  [rc=0 stderr_lines=0]
+  PASS  regen byte-identical: m2_c52_scores.out  [rc=0 stderr_lines=0]
+
+TIER T3  my own q_1 recompute from the 70 cells (independent path)  [15:57:23Z]
+  PASS  my transcription of the pooling rule reproduces all 35 rows exactly: q_1, order, cert  [[]]
+  PASS  float-field pooling == log10_full pooling to 1e-12 (float64 storage costs nothing at the 6th d.p.)  [worst 0.00e+00; float log10 field = 10x log10_full on every rung (max deviation 9.0 -- uniform scale, inert for ratios/orders/cert)]
+  PASS  P0-equivalent: my transcription on c50's committed cells reproduces the 3 PUBLISHED q_1  [[]]
+
+TIER T4  P1 order/cert; residual floor; rejected rungs  [15:57:23Z]
+  PASS  P1: pooled order starts 'eoe' and certified prefix >= 3 at all 35  [[]]
+  PASS  cert column: 5 everywhere except x=4 (residual rule drops one; printed as 4)  [[4, 5]]
+  PASS  numerical floor: worst relative Ritz residual over ADMITTED rungs <= 4.78e-36; exactly 3 rejected  [admitted 207 (letter says 195), rejected 3, worst admitted 4.78e-36, worst rejected 6.77e-15]
+
+TIER T5  headline series, P2a/P2b, N=60, x=13 ladder, spreads  [15:57:24Z]
+  PASS  letter table: my 12 N=100 q_1 values match to 6 d.p.
+  PASS  P2a: exactly 2 violating pairs, 4.82->4.86 (-0.013779) and 11->13 (-0.010367)  [[(4.82, 4.86, -0.013779), (11, 13, -0.010367)]]
+  PASS  P2b coarse-9: exactly 1 violating pair (11->13)
+  PASS  both N=100 violations REPRODUCE at N=60 with the stated magnitudes (letter claims reproduction, not exclusivity)  [all N=60 violating pairs in their own committed data: [(4.82, 4.86, -0.01627), (5, 5.23, -0.001125), (5.23, 7, -0.018893), (11, 13, -0.010775), (16, 19, -0.008096)]]
+  PASS  |Delta S_N| at the two violating pairs ~ 0.0025 / 0.00041 (not truncation flutter at one basis)  [0.00249 0.00041]
+  PASS  x=13 four-basis ladder 0.926250/0.920657/0.925005/0.916933 (180 = c50's published cell, mine)  [[0.92625, 0.920657, 0.925005, 0.916933]]
+  PASS  total N=100 range R = 0.075271  [0.0752707]
+  PASS  median local step to next x = 0.010367 (the |11->13| magnitude)  [0.010367]
+  PASS  S3 per-x N-ladder spreads: all 12 match nspread.out (x=13 4-point incl N=180); median 0.019101 (upper-median convention), max 0.028078 at x=5  [upper-median 0.019101 (low-median 0.015852) max 0.028078]
+
+TIER T6  P3a/P3b bands; sealed families (MY witness constants)  [15:57:24Z]
+  PASS  P3 pair 4.86->5.23: dq=+0.029957 paired 0.001320 conservative 0.057304
+  PASS  P3 pair 4.82->4.86: dq=-0.013779 paired 0.007471 conservative 0.064775
+  PASS  sub-pairs 4.86->5 (+0.021666/0.026931) and 5->5.23 (+0.008292/0.028251) each INSIDE; sum pair 22.7x OUTSIDE  [ratio 22.7x]
+  PASS  P3b: measured -0.013779 vs MY sealed-family deltas F_n +0.006864 / F_x +0.000328 / F_L +0.000454  [F_x:+0.000328 F_L:+0.000454 F_n:+0.006864]
+  PASS  all three wrong in SIGN; the SMOOTH families (F_x, F_L) off by 30-42x (letter's exact scope; F_n is 2x)  [F_x 42.0x, F_L 30.3x, F_n 2.0x]
+
+TIER T7  P4 isoresolution vs fixed-N  [15:57:24Z]
+  PASS  P4: 9 of 11 sign agreements; disagreements exactly at 7->9 and 16->19  [[(7, 9), (16, 19)]]
+  PASS  P4 spans (endpoint drift q1(23)-q1(4), their convention): iso 0.068032 vs fixed-N 0.067636  [0.068032 0.067636]
+  PASS  tie census: zero exact ties; min |dq_1| = 0.0027668 at fixedN 16->19 (addendum's measurement)  [('fixedN', 16, 19) 0.0027668]
+
+TIER T8  P5 per-x confound verdicts  [15:57:24Z]
+  PASS  P5: 11 CLEAN + exactly x=5 CONFOUNDED at R/3 (no UNMEASURED: all tiers complete)  [R/3=0.0250902 conf=[5]]
+
+TIER T9  P6 three families x 9 blind points (MY constants)  [15:57:24Z]
+  PASS  all three families: 9 of 9 blind points inside 3|S_N| (the unanimous pass = broken band)  [{'F_x': 0.091914, 'F_L': 0.080556, 'F_n': 0.087477}]
+  PASS  sums |resid| (blind): 0.091914 / 0.080556 / 0.087477; best = F_L
+  PASS  blind residual signs: all three '---++++++' — ONE sign change through calibration (c50's refutation shape)  [{'F_x': '---++++++', 'F_L': '---++++++', 'F_n': '---++++++'}]
+  PASS  the registered band cannot fail: widest blind 3|S_N| = 0.0648 (calibration x=5: 0.0842) vs total range 0.0753  [widest blind 0.0648, x=5 band 0.0842, R 0.0753]
+
+TIER T10  arm D + cross-cycle determinism  [15:57:24Z]
+  PASS  arm D from committed cells, both sides MY pooling: k5@dps150 == k3@dps300 == published 0.9206571014709472604304785 (exact mpf equality, 25 s.f.)  [mine 0.92065710147094726043047847]
+  PASS  cross-cycle x=19: lam_full literals identical to c50's committed pair, every rung, both parities  [6 literals compared]
+
+TIER T11  P7 permutation null (my implementation, same seed) + exact P2 nulls  [15:57:24Z]
+  PASS  P7 my null (blind-9 shuffle, their construction, my constants): 2 of 20000 -> p = 1.0e-4  [mine 2/20000 obs 0.080556]
+  PASS  exact nulls printed at 4 s.f.: 1/12! = 2.088e-9 and 1/9! = 2.756e-6 (P2a/P2b permutation p)
+
+TALLY: 0 FAIL(s)
+machine1_c52_verify.py  finished 2026-09-08T15:57:24Z
