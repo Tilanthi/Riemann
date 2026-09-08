@@ -1,0 +1,5 @@
+a341cd494a12dd6e6c1e09ef94501e2b30bc5c8da3906edd1880e3e782da780c  m2_c52_qdrift.py
+cfaf19f8b6c3f0fa8d56ccd5559267f063bb07cc7dbdb7ddf822c6b75d22083a  m2_c52_grid.py
+c8fb75c2d49fc542d984e56b1a55f3f3ba5d7bd7ca688718cfff614c3dabceef  m2_c52_prereg.md
+2eec491c8ee81c5c0fc4ef11da314956de4544ca097aaf1f21633243e06d9e59  /shared/rh-exchange-repo/Riemann/data/c46/c46_parity.py
+9a4d045de96028211dd60f6b429dc32d366db8f62458f2502f20f32c733d48fe  /shared/rh-exchange-repo/Riemann/data/c50/m2_c50_ladder.py

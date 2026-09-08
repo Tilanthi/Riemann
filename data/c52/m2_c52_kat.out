@@ -1,0 +1,23 @@
+====================================================================================================
+c52 KAT -- the pooling import, the zero counter against EXTERNAL ground truth, and the fitter
+====================================================================================================
+arm1a synthetic alternating ladder, known answer      : PASS
+arm1b identity gap1+gap2==s1 exact, r_1==1/(1+q_1)    : PASS
+arm1c non-alternating input reported as such          : PASS
+arm1d degenerate equal rungs flagged as near-tie      : PASS
+arm1e rung failing the residual rule dropped+counted  : PASS
+arm1f completeness certificate cuts at min(last e, last o): PASS
+arm2a c46 PUBLISHED lambda2/lambda1 = 3.91576e7       : got 3.91576e+7 -> PASS
+arm2b c46 cells: order eoeoeo, gap1+gap2==s1 exactly  : PASS
+arm2c c46 PUBLISHED parity gap 3.9532 dex             : got 3.9532 -> PASS
+arm2d registered model-A constant == calibration q_1  : PASS
+arm3  k=5 calibration cells absent                    : NOT RUN (pre-launch)
+SELF-TEST: 0 fail(s)
+K0 c50 ladder self-test through this import           : PASS
+K1 n(x) vs m1's EXACT counts 21/32/38/56 at 13/17/19/25: got [21, 32, 38, 56] -> PASS
+K1b first five ordinates vs c46_analyse's comment      : ['14.1347', '21.022', '25.0109', '30.4249', '32.9351'] -> PASS
+K1c same-n blocks: n(4)=n(4.82)=3, n(4.86)=n(5)=n(5.23)=4 : PASS
+K2 fitter recovers y = 3 u^-0.7 exactly               : A=3.0 beta=0.7 -> PASS
+K2b planted non-power data leaves visible residuals   : max 0.024573 -> PASS
+K3 permutation null of a monotone m=5 sequence = 1/120 : PASS
+KAT RESULT: 0 fail(s)

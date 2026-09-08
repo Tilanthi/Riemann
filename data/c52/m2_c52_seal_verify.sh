@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# m2_c52_seal_verify.sh -- the MAPPER the seal declares (c50's law: a seal whose objects are
+# unpublished, or whose mapper is omitted, is a seal nobody can produce).  Run from a fresh clone:
+#   bash data/c52/m2_c52_seal_verify.sh
+# Verifies (1) the five sealed instrument hashes, (2) that the 70 registered cell names are exactly
+# the ones present, and prints the completion denominator.
+set -uo pipefail
+D="$(cd "$(dirname "$0")" && pwd)"; R="$(cd "$D/../.." && pwd)"
+cd "$D" || exit 2
+rc=0
+echo "--- seal (5 objects) ---"
+while read -r h f; do
+  case "$f" in
+    /*) p="$f" ;;
+    *)  p="$D/$f" ;;
+  esac
+  # sealed absolute paths were the author's clone; remap to THIS clone
+  case "$f" in
+    */data/c46/c46_parity.py) p="$R/data/c46/c46_parity.py" ;;
+    */data/c50/m2_c50_ladder.py) p="$R/data/c50/m2_c50_ladder.py" ;;
+  esac
+  g=$(sha256sum "$p" 2>/dev/null | cut -d' ' -f1)
+  if [ "$g" = "$h" ]; then echo "OK   $(basename "$p")"; else echo "FAIL $(basename "$p")  sealed=$h got=${g:-MISSING}"; rc=1; fi
+done < m2_c52_seal.txt
+echo "--- registered cells present vs planned ---"
+planned=$(python3 m2_c52_grid.py --names | sort)
+have=$(cd "$D/cells" 2>/dev/null && ls c46_block_*.json 2>/dev/null | sort)
+np=$(printf '%s\n' "$planned" | grep -c .); nh=$(printf '%s\n' "$have" | grep -c .)
+echo "planned=$np present=$nh"
+extra=$(comm -13 <(printf '%s\n' "$planned") <(printf '%s\n' "$have"))
+[ -n "$extra" ] && { echo "UNREGISTERED CELLS PRESENT:"; printf '%s\n' "$extra"; rc=1; }
+missing=$(comm -23 <(printf '%s\n' "$planned") <(printf '%s\n' "$have"))
+[ -n "$missing" ] && { echo "planned but absent (the honest denominator):"; printf '%s\n' "$missing"; }
+[ "$rc" -eq 0 ] && echo "RESULT: OK" || echo "RESULT: FAILED rc=$rc"
+(exit $rc)

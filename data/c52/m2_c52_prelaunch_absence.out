@@ -1,0 +1,8 @@
+PRE-LAUNCH ABSENCE PROOF -- run at 2026-09-08T14:17:56Z
+search roots: /shared/rh-exchange-repo/Riemann (whole repo, tracked+untracked) and /workspace/rh/cycle52
+
+PRESENT c46_block_even_x19_N100_dps300_g9_it16_k3.json
+/shared/rh-exchange-repo/Riemann/data/c50/c46_block_even_x19_N100_dps300_g9_it16_k3.json
+PRESENT c46_block_odd_x19_N100_dps300_g9_it16_k3.json
+/shared/rh-exchange-repo/Riemann/data/c50/c46_block_odd_x19_N100_dps300_g9_it16_k3.json
+checked 70 registered cell names; ALREADY PRESENT: 2
