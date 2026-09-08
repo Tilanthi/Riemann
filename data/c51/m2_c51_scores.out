@@ -1,0 +1,36 @@
+CENSUS (counts, never ratios):
+  even_x13_N100    computed 7  admitted 7  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 0, 2, 2, 6, 6]
+  even_x13_N180    computed 5  admitted 5  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 0, 2, 2]
+  even_x19_N100    computed 5  admitted 5  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 0, 2, 2]
+  even_x5_N100     computed 5  admitted 4  dropped(resid) 1  dropped(unstable) 0  delta [0, 0, 0, 2]
+  odd_x13_N100     computed 7  admitted 7  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 2, 2, 6, 6, 6]
+  odd_x13_N180     computed 5  admitted 5  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 2, 2, 6]
+  odd_x19_N100     computed 5  admitted 5  dropped(resid) 0  dropped(unstable) 0  delta [0, 0, 2, 2, 2]
+  odd_x5_N100      computed 5  admitted 3  dropped(resid) 2  dropped(unstable) 0  delta [0, 0, 2]
+P7 (instrument): refine mismatches 0 ; admitted rungs at/below the KAT frontier 0.0050: 0  -> HELD
+P1 (Sturm prefix, new windows): 15 integers tested, 0 nonzero -> HELD []
+ONSETS (measured): {'even_x13_N100': 4, 'even_x13_N180': 4, 'even_x19_N100': 4, 'even_x5_N100': 4, 'odd_x13_N100': 3, 'odd_x13_N180': 3, 'odd_x19_N100': 3, 'odd_x5_N100': 3}
+P2 (Model N onset (4,3) universal): held 8  refuted 0  censored 0 -> HELD
+     even_x13_N100    HELD(4)
+     even_x13_N180    HELD(4)
+     even_x19_N100    HELD(4)
+     even_x5_N100     HELD(4)
+     odd_x13_N100     HELD(3)
+     odd_x13_N180     HELD(3)
+     odd_x19_N100     HELD(3)
+     odd_x5_N100      HELD(3)
+P3 (first defect == +2): {'even_x5_N100': 2, 'odd_x5_N100': 2, 'even_x19_N100': 2, 'odd_x19_N100': 2, 'even_x13_N180': 2, 'odd_x13_N180': 2, 'even_x13_N100': 2, 'odd_x13_N100': 2} -> HELD
+P4 (N-control, NOT independent of P2): {'even_x13_N180': 'HELD(4)', 'odd_x13_N180': 'HELD(3)'} -> HELD
+P5 (delta non-decreasing, k=7 deep arm): {'even': [0, 0, 0, 2, 2, 6, 6], 'odd': [0, 0, 2, 2, 6, 6, 6]} -> HELD
+P6 (ABSOLUTE full-vector test of Model N): 27 integers tested, 1 mismatches -> REFUTED
+     odd x19 N100 rung 5: delta 2, Model N says 6
+P8 (comparison, NOT validation): out of 8 cells, correct onsets -- Model N 8 / SCALING 4 / THRESHOLD 2
+     even_x13_N100    measured 4      N 4      True   SCALING 4      True   THRESHOLD 4                        True
+     even_x13_N180    measured 4      N 4      True   SCALING 4      True   THRESHOLD 4                        True
+     even_x19_N100    measured 4      N 4      True   SCALING onset>5 (beyond computed) False  THRESHOLD no-defect-through-5      False
+     even_x5_N100     measured 4      N 4      True   SCALING 1      False  THRESHOLD 1                        False
+     odd_x13_N100     measured 3      N 3      True   SCALING 3      True   THRESHOLD 4                        False
+     odd_x13_N180     measured 3      N 3      True   SCALING 3      True   THRESHOLD 4                        False
+     odd_x19_N100     measured 3      N 3      True   SCALING 5      False  THRESHOLD no-defect-through-5      False
+     odd_x5_N100      measured 3      N 3      True   SCALING 1      False  THRESHOLD 1                        False
+Theorem T (node-count parity == sector parity; an INSTRUMENT check, not a prediction): 0 violations over every computed rung

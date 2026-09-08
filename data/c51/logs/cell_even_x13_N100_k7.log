@@ -1,0 +1,9 @@
+SELF-TEST vs c46_block_even_x13_N100_dps150_g9_it16_k5.json: depths ['39.98', '39.48', '39.6', '40.0', '39.53'] (CEILING 40 s.f. = the published print width) -> PASS
+  even rung 1  log10lam=-58.4293520317  rel_resid=3.484e-94  admitted=True  nu=0  refine48001=0  lobe_min=1.0  sturm=0  delta=0  stable=True
+  even rung 2  log10lam=-50.8365362964  rel_resid=1.003e-101  admitted=True  nu=2  refine48001=2  lobe_min=0.6908  sturm=2  delta=0  stable=True
+  even rung 3  log10lam=-43.9259467292  rel_resid=5.158e-108  admitted=True  nu=4  refine48001=4  lobe_min=0.2553  sturm=4  delta=0  stable=True
+  even rung 4  log10lam=-37.6131229628  rel_resid=6.982e-115  admitted=True  nu=8  refine48001=8  lobe_min=0.457  sturm=6  delta=2  stable=True
+  even rung 5  log10lam=-31.8759397535  rel_resid=6.955e-120  admitted=True  nu=10  refine48001=10  lobe_min=0.2532  sturm=8  delta=2  stable=True
+  even rung 6  log10lam=-26.3713452801  rel_resid=1.953e-125  admitted=True  nu=16  refine48001=16  lobe_min=0.1031  sturm=10  delta=6  stable=True
+  even rung 7  log10lam=-21.5001571129  rel_resid=1.461e-71  admitted=True  nu=18  refine48001=18  lobe_min=0.2008  sturm=12  delta=6  stable=True
+wrote m2_c51_nodes_even_x13_N100_k7.json  1219.6s

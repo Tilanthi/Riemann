@@ -1,0 +1,64 @@
+
+x=5  N=100  k=5 per sector   certificate T = log10 lambda -0.21732655446868097187 (pooled order certified at or below T)
+  pooled | sector | sector rung | log10 lambda | nodes | m-1 | pooled defect | admitted | certified
+       1 | even   |           1 | -16.99782420 |     0 |   0 |             0 |     True |      True
+       2 | odd    |           1 | -13.97614010 |     1 |   1 |             0 |     True |      True
+       3 | even   |           2 | -11.28908753 |     2 |   2 |             0 |     True |      True
+       4 | odd    |           2 | -8.719219764 |     3 |   3 |             0 |     True |      True
+       5 | even   |           3 | -6.387526133 |     4 |   4 |             0 |     True |      True
+       6 | odd    |           3 | -4.247134591 |     7 |   5 |             2 |     True |      True
+       7 | even   |           4 | -2.628821445 |     8 |   6 |             2 |     True |      True
+       8 | odd    |           4 | -1.050002684 |     9 |   7 |             2 |    False |      True
+       9 | even   |           5 | -0.217326554 |    14 |   8 |             6 |    False |      True
+      10 | odd    |           5 | -0.111157900 |    15 |   9 |             6 |    False |     False
+  pooled parity order: eoeoeoeoeo
+  certified pooled prefix: 9 of 10 computed; of those admitted: 7
+
+x=13  N=100  k=7 per sector   certificate T = log10 lambda -21.50015711286410134 (pooled order certified at or below T)
+  pooled | sector | sector rung | log10 lambda | nodes | m-1 | pooled defect | admitted | certified
+       1 | even   |           1 | -58.42935203 |     0 |   0 |             0 |     True |      True
+       2 | odd    |           1 | -54.47611346 |     1 |   1 |             0 |     True |      True
+       3 | even   |           2 | -50.83653629 |     2 |   2 |             0 |     True |      True
+       4 | odd    |           2 | -47.34749258 |     3 |   3 |             0 |     True |      True
+       5 | even   |           3 | -43.92594672 |     4 |   4 |             0 |     True |      True
+       6 | odd    |           3 | -40.64362072 |     7 |   5 |             2 |     True |      True
+       7 | even   |           4 | -37.61312296 |     8 |   6 |             2 |     True |      True
+       8 | odd    |           4 | -34.78030481 |     9 |   7 |             2 |     True |      True
+       9 | even   |           5 | -31.87593975 |    10 |   8 |             2 |     True |      True
+      10 | odd    |           5 | -28.96649997 |    15 |   9 |             6 |     True |      True
+      11 | even   |           6 | -26.37134528 |    16 |  10 |             6 |     True |      True
+      12 | odd    |           6 | -23.99344708 |    17 |  11 |             6 |     True |      True
+      13 | even   |           7 | -21.50015711 |    18 |  12 |             6 |     True |      True
+      14 | odd    |           7 | -19.07990248 |    19 |  13 |             6 |     True |     False
+  pooled parity order: eoeoeoeoeoeoeo
+  certified pooled prefix: 13 of 14 computed; of those admitted: 13
+
+x=13  N=180  k=5 per sector   certificate T = log10 lambda -31.974775699181920728 (pooled order certified at or below T)
+  pooled | sector | sector rung | log10 lambda | nodes | m-1 | pooled defect | admitted | certified
+       1 | even   |           1 | -58.52875130 |     0 |   0 |             0 |     True |      True
+       2 | odd    |           1 | -54.56895648 |     1 |   1 |             0 |     True |      True
+       3 | even   |           2 | -50.93808961 |     2 |   2 |             0 |     True |      True
+       4 | odd    |           2 | -47.43053980 |     3 |   3 |             0 |     True |      True
+       5 | even   |           3 | -44.02406141 |     4 |   4 |             0 |     True |      True
+       6 | odd    |           3 | -40.74903878 |     7 |   5 |             2 |     True |      True
+       7 | even   |           4 | -37.68690078 |     8 |   6 |             2 |     True |      True
+       8 | odd    |           4 | -34.87249107 |     9 |   7 |             2 |     True |      True
+       9 | even   |           5 | -31.97477569 |    10 |   8 |             2 |     True |      True
+      10 | odd    |           5 | -29.05011593 |    15 |   9 |             6 |     True |     False
+  pooled parity order: eoeoeoeoeo
+  certified pooled prefix: 9 of 10 computed; of those admitted: 9
+
+x=19  N=100  k=5 per sector   certificate T = log10 lambda -60.566355149764946587 (pooled order certified at or below T)
+  pooled | sector | sector rung | log10 lambda | nodes | m-1 | pooled defect | admitted | certified
+       1 | even   |           1 | -89.71725674 |     0 |   0 |             0 |     True |      True
+       2 | odd    |           1 | -85.46836955 |     1 |   1 |             0 |     True |      True
+       3 | even   |           2 | -81.51238809 |     2 |   2 |             0 |     True |      True
+       4 | odd    |           2 | -77.71150954 |     3 |   3 |             0 |     True |      True
+       5 | even   |           3 | -73.99130992 |     4 |   4 |             0 |     True |      True
+       6 | odd    |           3 | -70.38885636 |     7 |   5 |             2 |     True |      True
+       7 | even   |           4 | -66.98977639 |     8 |   6 |             2 |     True |      True
+       8 | odd    |           4 | -63.78783057 |     9 |   7 |             2 |     True |      True
+       9 | even   |           5 | -60.56635514 |    10 |   8 |             2 |     True |      True
+      10 | odd    |           5 | -57.28193279 |    11 |   9 |             2 |     True |     False
+  pooled parity order: eoeoeoeoeo
+  certified pooled prefix: 9 of 10 computed; of those admitted: 9

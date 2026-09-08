@@ -1,0 +1,11 @@
+  even rung 1  published nu=[0]  recounted nu=0  OK
+  even rung 2  published nu=[2]  recounted nu=2  OK
+  even rung 3  published nu=[4]  recounted nu=4  OK
+  even rung 4  published nu=[8]  recounted nu=8  OK
+  even rung 5  published nu=[10]  recounted nu=10  OK
+  odd  rung 1  published nu=[1]  recounted nu=1  OK
+  odd  rung 2  published nu=[3]  recounted nu=3  OK
+  odd  rung 3  published nu=[7]  recounted nu=7  OK
+  odd  rung 4  published nu=[9]  recounted nu=9  OK
+  odd  rung 5  published nu=[15]  recounted nu=15  OK
+P0 GATE: 90/90 integers reproduced -> PASS

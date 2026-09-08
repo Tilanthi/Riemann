@@ -1,0 +1,671 @@
+{
+ "missing_cells": [],
+ "census": {
+  "even_x5_N100": {
+   "computed": 5,
+   "admitted": 4,
+   "dropped_residual": 1,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    0,
+    2
+   ],
+   "nu": [
+    0,
+    2,
+    4,
+    8
+   ],
+   "log10": [
+    "-16.99782420229105423",
+    "-11.289087533357270071",
+    "-6.3875261334701600725",
+    "-2.628821445215809822"
+   ]
+  },
+  "odd_x5_N100": {
+   "computed": 5,
+   "admitted": 3,
+   "dropped_residual": 2,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    2
+   ],
+   "nu": [
+    1,
+    3,
+    7
+   ],
+   "log10": [
+    "-13.976140105653629366",
+    "-8.7192197644754424551",
+    "-4.2471345913758053798"
+   ]
+  },
+  "even_x19_N100": {
+   "computed": 5,
+   "admitted": 5,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "nu": [
+    0,
+    2,
+    4,
+    8,
+    10
+   ],
+   "log10": [
+    "-89.717256743334548248",
+    "-81.512388094769783839",
+    "-73.991309920907421298",
+    "-66.989776395816041362",
+    "-60.566355149764946587"
+   ]
+  },
+  "odd_x19_N100": {
+   "computed": 5,
+   "admitted": 5,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    2,
+    2,
+    2
+   ],
+   "nu": [
+    1,
+    3,
+    7,
+    9,
+    11
+   ],
+   "log10": [
+    "-85.468369554088318821",
+    "-77.711509541887508675",
+    "-70.388856364921914252",
+    "-63.787830575395694911",
+    "-57.2819327941324524"
+   ]
+  },
+  "even_x13_N180": {
+   "computed": 5,
+   "admitted": 5,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "nu": [
+    0,
+    2,
+    4,
+    8,
+    10
+   ],
+   "log10": [
+    "-58.528751308638497882",
+    "-50.938089611915031214",
+    "-44.024061414370820105",
+    "-37.686900782114239893",
+    "-31.974775699181920728"
+   ]
+  },
+  "odd_x13_N180": {
+   "computed": 5,
+   "admitted": 5,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    2,
+    2,
+    6
+   ],
+   "nu": [
+    1,
+    3,
+    7,
+    9,
+    15
+   ],
+   "log10": [
+    "-54.568956480585652126",
+    "-47.430539809223882012",
+    "-40.749038783656574398",
+    "-34.872491075878199098",
+    "-29.05011593489897926"
+   ]
+  },
+  "even_x13_N100": {
+   "computed": 7,
+   "admitted": 7,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    0,
+    2,
+    2,
+    6,
+    6
+   ],
+   "nu": [
+    0,
+    2,
+    4,
+    8,
+    10,
+    16,
+    18
+   ],
+   "log10": [
+    "-58.429352031732654245",
+    "-50.836536296392770201",
+    "-43.92594672919323011",
+    "-37.613122962847781438",
+    "-31.875939753456433366",
+    "-26.371345280136811402",
+    "-21.50015711286410134"
+   ]
+  },
+  "odd_x13_N100": {
+   "computed": 7,
+   "admitted": 7,
+   "dropped_residual": 0,
+   "dropped_unstable": 0,
+   "delta": [
+    0,
+    0,
+    2,
+    2,
+    6,
+    6,
+    6
+   ],
+   "nu": [
+    1,
+    3,
+    7,
+    9,
+    15,
+    17,
+    19
+   ],
+   "log10": [
+    "-54.476113460659827868",
+    "-47.347492589284878714",
+    "-40.643620721386850624",
+    "-34.780304814438514168",
+    "-28.966499971904698775",
+    "-23.993447086077703558",
+    "-19.079902484311495037"
+   ]
+  }
+ },
+ "P7": {
+  "refine_mismatches": 0,
+  "lobes_at_or_below_frontier": 0,
+  "frontier": "0.0050",
+  "lobe_min_ratios": [
+   [
+    "even_x5_N100_r1",
+    "1.0"
+   ],
+   [
+    "even_x5_N100_r2",
+    "0.629301"
+   ],
+   [
+    "even_x5_N100_r3",
+    "0.149433"
+   ],
+   [
+    "even_x5_N100_r4",
+    "0.407137"
+   ],
+   [
+    "odd_x5_N100_r1",
+    "1.0"
+   ],
+   [
+    "odd_x5_N100_r2",
+    "0.464085"
+   ],
+   [
+    "odd_x5_N100_r3",
+    "0.32654"
+   ],
+   [
+    "even_x19_N100_r1",
+    "1.0"
+   ],
+   [
+    "even_x19_N100_r2",
+    "0.699956"
+   ],
+   [
+    "even_x19_N100_r3",
+    "0.283865"
+   ],
+   [
+    "even_x19_N100_r4",
+    "0.423787"
+   ],
+   [
+    "even_x19_N100_r5",
+    "0.273126"
+   ],
+   [
+    "odd_x19_N100_r1",
+    "1.0"
+   ],
+   [
+    "odd_x19_N100_r2",
+    "0.566974"
+   ],
+   [
+    "odd_x19_N100_r3",
+    "0.0634124"
+   ],
+   [
+    "odd_x19_N100_r4",
+    "0.485143"
+   ],
+   [
+    "odd_x19_N100_r5",
+    "0.219294"
+   ],
+   [
+    "even_x13_N180_r1",
+    "1.0"
+   ],
+   [
+    "even_x13_N180_r2",
+    "0.690828"
+   ],
+   [
+    "even_x13_N180_r3",
+    "0.255388"
+   ],
+   [
+    "even_x13_N180_r4",
+    "0.456891"
+   ],
+   [
+    "even_x13_N180_r5",
+    "0.253257"
+   ],
+   [
+    "odd_x13_N180_r1",
+    "1.0"
+   ],
+   [
+    "odd_x13_N180_r2",
+    "0.552978"
+   ],
+   [
+    "odd_x13_N180_r3",
+    "0.0969638"
+   ],
+   [
+    "odd_x13_N180_r4",
+    "0.444917"
+   ],
+   [
+    "odd_x13_N180_r5",
+    "0.0054808"
+   ],
+   [
+    "even_x13_N100_r1",
+    "1.0"
+   ],
+   [
+    "even_x13_N100_r2",
+    "0.690803"
+   ],
+   [
+    "even_x13_N100_r3",
+    "0.255319"
+   ],
+   [
+    "even_x13_N100_r4",
+    "0.45697"
+   ],
+   [
+    "even_x13_N100_r5",
+    "0.253225"
+   ],
+   [
+    "even_x13_N100_r6",
+    "0.103141"
+   ],
+   [
+    "even_x13_N100_r7",
+    "0.200818"
+   ],
+   [
+    "odd_x13_N100_r1",
+    "1.0"
+   ],
+   [
+    "odd_x13_N100_r2",
+    "0.552947"
+   ],
+   [
+    "odd_x13_N100_r3",
+    "0.097081"
+   ],
+   [
+    "odd_x13_N100_r4",
+    "0.444747"
+   ],
+   [
+    "odd_x13_N100_r5",
+    "0.00569431"
+   ],
+   [
+    "odd_x13_N100_r6",
+    "0.16142"
+   ],
+   [
+    "odd_x13_N100_r7",
+    "0.114421"
+   ]
+  ],
+  "verdict": "HELD"
+ },
+ "P1": {
+  "tested": 15,
+  "failed": 0,
+  "detail": [],
+  "verdict": "HELD"
+ },
+ "onsets": {
+  "even_x5_N100": {
+   "onset": 4,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "odd_x5_N100": {
+   "onset": 3,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "even_x19_N100": {
+   "onset": 4,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "odd_x19_N100": {
+   "onset": 3,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "even_x13_N180": {
+   "onset": 4,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "odd_x13_N180": {
+   "onset": 3,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "even_x13_N100": {
+   "onset": 4,
+   "censored_at": null,
+   "first_delta": 2
+  },
+  "odd_x13_N100": {
+   "onset": 3,
+   "censored_at": null,
+   "first_delta": 2
+  }
+ },
+ "P2": {
+  "per_cell": {
+   "even_x5_N100": "HELD(4)",
+   "odd_x5_N100": "HELD(3)",
+   "even_x19_N100": "HELD(4)",
+   "odd_x19_N100": "HELD(3)",
+   "even_x13_N180": "HELD(4)",
+   "odd_x13_N180": "HELD(3)",
+   "even_x13_N100": "HELD(4)",
+   "odd_x13_N100": "HELD(3)"
+  },
+  "held": 8,
+  "refuted": 0,
+  "censored": 0,
+  "verdict": "HELD"
+ },
+ "P3": {
+  "first_deltas": {
+   "even_x5_N100": 2,
+   "odd_x5_N100": 2,
+   "even_x19_N100": 2,
+   "odd_x19_N100": 2,
+   "even_x13_N180": 2,
+   "odd_x13_N180": 2,
+   "even_x13_N100": 2,
+   "odd_x13_N100": 2
+  },
+  "not_two": {},
+  "verdict": "HELD"
+ },
+ "P4": {
+  "per_cell": {
+   "even_x13_N180": "HELD(4)",
+   "odd_x13_N180": "HELD(3)"
+  },
+  "independent_of_P2": false,
+  "verdict": "HELD"
+ },
+ "P5": {
+  "sequences": {
+   "even": [
+    0,
+    0,
+    0,
+    2,
+    2,
+    6,
+    6
+   ],
+   "odd": [
+    0,
+    0,
+    2,
+    2,
+    6,
+    6,
+    6
+   ]
+  },
+  "decreases": [],
+  "verdict": "HELD"
+ },
+ "P6": {
+  "tested": 27,
+  "mismatches": 1,
+  "detail": [
+   "odd x19 N100 rung 5: delta 2, Model N says 6"
+  ],
+  "verdict": "REFUTED",
+  "note": "ABSOLUTE: decided with no reference to any competing model (c50's law)."
+ },
+ "P8": {
+  "per_cell": {
+   "even_x5_N100": {
+    "measured": 4,
+    "admitted": 4,
+    "N": {
+     "pred": "4",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "1",
+     "correct": false,
+     "raw": "0.7619047619047619047619047619"
+    },
+    "THRESHOLD": {
+     "pred": "1",
+     "correct": false,
+     "ambiguous_rung_present": false
+    }
+   },
+   "odd_x5_N100": {
+    "measured": 3,
+    "admitted": 3,
+    "N": {
+     "pred": "3",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "1",
+     "correct": false,
+     "raw": "0.5714285714285714285714285714"
+    },
+    "THRESHOLD": {
+     "pred": "1",
+     "correct": false,
+     "ambiguous_rung_present": false
+    }
+   },
+   "even_x19_N100": {
+    "measured": 4,
+    "admitted": 5,
+    "N": {
+     "pred": "4",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "onset>5 (beyond computed)",
+     "correct": false,
+     "raw": "7.238095238095238095238095238"
+    },
+    "THRESHOLD": {
+     "pred": "no-defect-through-5",
+     "correct": false,
+     "ambiguous_rung_present": false
+    }
+   },
+   "odd_x19_N100": {
+    "measured": 3,
+    "admitted": 5,
+    "N": {
+     "pred": "3",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "5",
+     "correct": false,
+     "raw": "5.428571428571428571428571429"
+    },
+    "THRESHOLD": {
+     "pred": "no-defect-through-5",
+     "correct": false,
+     "ambiguous_rung_present": false
+    }
+   },
+   "even_x13_N180": {
+    "measured": 4,
+    "admitted": 5,
+    "N": {
+     "pred": "4",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "4",
+     "correct": true,
+     "raw": "4"
+    },
+    "THRESHOLD": {
+     "pred": "4",
+     "correct": true,
+     "ambiguous_rung_present": false
+    }
+   },
+   "odd_x13_N180": {
+    "measured": 3,
+    "admitted": 5,
+    "N": {
+     "pred": "3",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "3",
+     "correct": true,
+     "raw": "3"
+    },
+    "THRESHOLD": {
+     "pred": "4",
+     "correct": false,
+     "ambiguous_rung_present": true
+    }
+   },
+   "even_x13_N100": {
+    "measured": 4,
+    "admitted": 7,
+    "N": {
+     "pred": "4",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "4",
+     "correct": true,
+     "raw": "4"
+    },
+    "THRESHOLD": {
+     "pred": "4",
+     "correct": true,
+     "ambiguous_rung_present": false
+    }
+   },
+   "odd_x13_N100": {
+    "measured": 3,
+    "admitted": 7,
+    "N": {
+     "pred": "3",
+     "correct": true
+    },
+    "SCALING": {
+     "pred": "3",
+     "correct": true,
+     "raw": "3"
+    },
+    "THRESHOLD": {
+     "pred": "4",
+     "correct": false,
+     "ambiguous_rung_present": true
+    }
+   }
+  },
+  "tally": {
+   "N": 8,
+   "SCALING": 4,
+   "THRESHOLD": 2
+  },
+  "denominator": 8,
+  "note": "A COMPARISON IS NOT A VALIDATION (c50). Read this line beside P6's verdict."
+ },
+ "theoremT_violations": 0
+}

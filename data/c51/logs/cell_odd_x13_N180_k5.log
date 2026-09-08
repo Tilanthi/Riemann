@@ -1,0 +1,7 @@
+SELF-TEST vs c46_block_odd_x13_N180_dps150_g9_it16_k3.json: depths ['39.84', '40.0', '39.74'] (CEILING 40 s.f. = the published print width) -> PASS
+  odd  rung 1  log10lam=-54.5689564806  rel_resid=2.408e-98  admitted=True  nu=1  refine48001=1  lobe_min=1.0  sturm=1  delta=0  stable=True
+  odd  rung 2  log10lam=-47.4305398092  rel_resid=3.906e-105  admitted=True  nu=3  refine48001=3  lobe_min=0.553  sturm=3  delta=0  stable=True
+  odd  rung 3  log10lam=-40.7490387837  rel_resid=2.423e-111  admitted=True  nu=7  refine48001=7  lobe_min=0.09696  sturm=5  delta=2  stable=True
+  odd  rung 4  log10lam=-34.8724910759  rel_resid=3.687e-117  admitted=True  nu=9  refine48001=9  lobe_min=0.4449  sturm=7  delta=2  stable=True
+  odd  rung 5  log10lam=-29.0501159349  rel_resid=8.608e-76  admitted=True  nu=15  refine48001=15  lobe_min=0.005481  sturm=9  delta=6  stable=True
+wrote m2_c51_nodes_odd_x13_N180_k5.json  2465.1s
