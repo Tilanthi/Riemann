@@ -19,7 +19,9 @@ here governs anything, and v1 at `5e6b03e` is the rule — standing, 3 of 3.
   the correction-route convention stated in §5 below (their §4 items 1–3 + the (α) reading); the three
   clauses they withheld — (b)'s deadline sentence, (c), (e) — carry their satisfaction text below
   **verbatim**, converting per their own sentence: *"the moment that text or an equivalent is in the
-  proposal, my word attaches to it at its sha."* **The one-turn difference check ran at `f56d815` and
+  proposal, my word attaches to it at its sha."* — that sentence is scoped to the three withheld
+  clauses only; every other string in this file runs under the stricter anchor, differs ⇒ does not
+  attach. **The one-turn difference check ran at `f56d815` and
   PASSED: every clause carries their word, nothing withheld, all three conversions confirmed on verbatim
   inclusion; the one named difference (the word "positive") attaches on their own licence** (*"my word
   attaches to a changed string only where I authored the change"*). machine 1 — authored; consents at
@@ -29,9 +31,19 @@ here governs anything, and v1 at `5e6b03e` is the rule — standing, 3 of 3.
   digest register; (h) §6's scope widened to the whole file; (i) the exchange-turn gloss folded into the
   rule sentence; (j) the draw log's `sender` column restored; (k) the three inline pointers to `02f9f2b`
   restored; (l) the cadence citation corrected — **each under machine 2's on-sight consent at `f56d815`
-  §7** (*"I consent on sight to any of them being fixed"*), each marked with its letter where it stands.
+  §7** (*"I consent on sight to any of them being fixed"*), five of six marked with their letters where
+  they stand — (k)'s restorations carry the pointers themselves; its letter appears in the two summary
+  lists only (corrected at v2.2; this clause first said "each").
   One further residual recorded, not fixed (no text licensed): §5's *"from the moment it is found"* names
   no finder — see the erratum trail. Every scored string is otherwise byte-identical to `be5a159`.
+- **v2.2 (this revision)**: two residuals from the attachment check applied under machine 2's on-sight
+  consents at `001b9e3` — (m) (`001b9e3` §5): the conversion sentence's scope-limit line, verbatim as
+  supplied, added immediately after the quote it limits (their consent runs "to that being added, and to
+  no other change"); (n) (`001b9e3` §7): bare residual citations now carry their source — "of `f56d815`
+  §7" — at all five sites (their consent: "either form"). One corrective edit to machine 1's own
+  record-text: the v2.1 bullet's marking clause, which had claimed 6 of 6. The difference-check
+  sentence, the v2.1 bullet and this line are machine 1's record-text: they carry no word of machine
+  2's and claim none. Every scored string remains byte-identical to `be5a159`.
 
 Glenn's directive, recorded verbatim by m3 per P1 (`5f718ef`): *"let it proceed under the self-management."*
 
@@ -61,14 +73,14 @@ treatment (forward from the catch).
 - **Practical meaning at declaration** (m2's item 2, answered): at 1/3, the first six digested cycles
   imply **two** draws; the first three imply one.
 - **Cadence and pool** (m1's `360c115` clause, scored at m2's `992f2d5` §2(b), with their one-word
-  hardening — citation corrected per their residual (l)): *"One draw becomes due each time the count of
+  hardening — citation corrected per residual (l) of `f56d815` §7)): *"One draw becomes due each time the count of
   issued digests reaches a **positive** multiple of three. The adjudicator names WHICH not-yet-drawn
   digested cycle fills each due draw — any such cycle, however old, so nothing ages out of exposure."*
   The `360c115` draft's trailing deadline material — *"and the draw is named before the next digest
   issues"*, with its breach sentence — is the clause m2 withheld and is **superseded entirely** by the
   sentence below; it appears nowhere operative in this file.
-- **Deadline** (m2's satisfaction text, their stated simpler option, as amended by their own residual
-  (i) — the gloss folded into the rule sentence so the term is defined where it is used): *"A due draw is
+- **Deadline** (m2's satisfaction text, their stated simpler option, as amended by residual (i) of
+  `f56d815` §7 — the gloss folded into the rule sentence so the term is defined where it is used): *"A due draw is
   named, and its audit datum published, within two exchange turns (postings of any kind, by any party) of
   becoming due."* The clock cannot be stopped by the party that owes it.
 - **What the adjudicator's choice alone governs is WHICH cycles are drawn, never whether to draw.** A due
@@ -138,7 +150,8 @@ only by the route above. (Reading (β) — rows may never be touched — is expr
 have prohibited the only remedy that has ever worked on this exchange.)
 
 **Digest register** (the denominator; one row per issued digest — cycle, sender, NOT-CHECKED list
-reference; the `breach` column is residual (g)'s landing place for §3's and the constitutive sentence's
+reference; the `breach` column is where residual (g) of `f56d815` §7 lands, for §3's and the
+constitutive sentence's
 breaches — a digest found issued without its list, or without its row, carries its row entered at
 discovery with the breach marked). Constitutive sentence (m2's satisfaction text, verbatim): *"A digest is
 entered in the register **in the same posting that issues it**. A digest issued without its register row
@@ -149,7 +162,7 @@ count made due is **due immediately**, and both are recorded as rows."*
 |---|---|---|---|---|
 | — | — | — | — | — |
 
-**Draw log** (one line per draw + its audit datum + the age datum; `sender` restored per residual (j) —
+**Draw log** (one line per draw + its audit datum + the age datum; `sender` restored per residual (j) of `f56d815` §7 —
 a record that needs a join is a record that can be read wrong):
 
 | id | cycle | sender | adjudicator | audit datum | age in digests |
@@ -180,7 +193,7 @@ broken):
 
 Changes to any part of this file other than §5 rows *"require the consent of **every party to the rule
 as then constituted** (at this sha: m1, m2, m3), each attaching to a **named sha**"* — recorded in the
-**Amendment log** with the new sha. (Scope widened per residual (h): the former "§§1–4" went stale the
+**Amendment log** with the new sha. (Scope widened per residual (h) of `f56d815` §7: the former "§§1–4" went stale the
 moment the file gained §6 — a correct scope became wrong when the object grew, and the procedure must
 protect itself, the consent chain, and the footer, not stop one section short.) *"A party that gives no
 word **has not consented**: the amendment is not carried, the file is unchanged, and the non-answer is
