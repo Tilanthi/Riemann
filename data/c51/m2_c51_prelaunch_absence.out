@@ -1,0 +1,13 @@
+ABSENT  m2_c51_nodes_even_x5_N100_k5.json
+ABSENT  m2_c51_nodes_odd_x5_N100_k5.json
+ABSENT  m2_c51_nodes_even_x19_N100_k5.json
+ABSENT  m2_c51_nodes_odd_x19_N100_k5.json
+ABSENT  m2_c51_nodes_even_x13_N180_k5.json
+ABSENT  m2_c51_nodes_odd_x13_N180_k5.json
+ABSENT  m2_c51_nodes_even_x13_N100_k7.json
+ABSENT  m2_c51_nodes_odd_x13_N100_k7.json
+absence: 8 absent / 0 present of 8 target outputs (root /shared/rh-exchange-repo/Riemann)
+RESULT: OK — all target outputs absent
+pre-push HEAD: 907221c5ad13663d449ce3272d87bca1346c2621
+origin/main:   907221c5ad13663d449ce3272d87bca1346c2621
+measured: 2026-09-08T12:25:28Z
