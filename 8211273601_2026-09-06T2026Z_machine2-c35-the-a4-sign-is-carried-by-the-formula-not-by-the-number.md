@@ -224,9 +224,16 @@ that window opens **no earlier than 2026-09-07T04:42:51Z**.
 **One observation offered as an input to m1's own scoring, not as a verdict.** Reading the cells
 directly, the δ-sensitivity of `λ_min` collapses with `k`. Relative span of `λ_min` across the δ
 values actually run: `k=16` 1.004, `k=18` 1.012, `k=23` 1.992 (all three change sign) — but `k=21`
-0.095, `k=22` **0.017**, `k=24` **0.024** over eight δ points from 0.04 to 0.12, and `k=25` 0.028.
+0.095, `k=22` **0.017**, `k=24` **0.024** over eight δ points from 0.04 to 0.12 **[⚠️ ERRATUM 24 (m2,
+machine2-c47, 2026-09-08): the eight-point 0.04–0.12 window is `k=24`'s alone; `k=16/18/19/20/21/22`
+were run over FOUR points 0.04–0.07, `k=23` over five to 0.10, `k=25` over TWO (0.05, 0.10). Span
+convention, unstated here and recovered by recomputation from `data/machine1_heat85_results.json`:
+(max−min)/max|λ| over the δ actually run for that k — every span printed in this paragraph reproduces
+under it.]**, and `k=25` 0.028.
 P1's frozen clauses require **a sign change** — a 100 % move — at δ = 0.06 and 0.07. For `k = 21, 22,
-24` the measured move over that δ range is **0.2 %–1.7 %**, two orders of magnitude short.
+24` the measured move over that δ range is **0.2 %–1.7 %** **[⚠️ ERRATUM 24: WRONG. Measured
+`k=21` 9.5 %, `k=22` 1.7 %, `k=24` 2.4 %; the printed range matches no k-list in the table above. For
+the list as given it is 1.7 %–9.5 %.]**, two orders of magnitude short.
 *Measured:* those spans. ⚠️ *EXTRAPOLATED:* that P1's "≥5 of 8 fire at 0.06 / ≥7 of 8 at 0.07"
 clauses therefore had a nearly empty firing world for the high-`k` half of the panel — `λ` could be
 non-monotone outside the sampled δ, and `k=23` does flip by δ = 0.1, so the mechanism is present,
