@@ -1,0 +1,190 @@
+{
+ "rows": [
+  {
+   "kat": "E1",
+   "planted": "1.0e-90",
+   "got": "1.0e-90",
+   "rel_err": "2.4042e-212",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-80",
+   "got": "1.0e-80",
+   "rel_err": "6.4398e-222",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-70",
+   "got": "1.0e-70",
+   "rel_err": "1.1716e-232",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-60",
+   "got": "1.0e-60",
+   "rel_err": "1.9559e-242",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-50",
+   "got": "1.0e-50",
+   "rel_err": "6.3332e-252",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-40",
+   "got": "1.0e-40",
+   "rel_err": "1.3185e-262",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-30",
+   "got": "1.0e-30",
+   "rel_err": "3.6227e-272",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-20",
+   "got": "1.0e-20",
+   "rel_err": "5.1402e-282",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0e-10",
+   "got": "1.0e-10",
+   "rel_err": "2.9045e-292",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E1",
+   "planted": "1.0",
+   "got": "1.0",
+   "rel_err": "1.8665e-301",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E3-E1",
+   "planted": "1.0e-90",
+   "rel_residual": "9.1939e-212",
+   "dps": 300,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-90",
+   "got": "1.0e-90",
+   "rel_err": "5.7692e-63",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-80",
+   "got": "1.0e-80",
+   "rel_err": "6.8178e-72",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-70",
+   "got": "1.0e-70",
+   "rel_err": "8.7698e-83",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-60",
+   "got": "1.0e-60",
+   "rel_err": "9.5388e-93",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-50",
+   "got": "1.0e-50",
+   "rel_err": "1.0832e-102",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-40",
+   "got": "1.0e-40",
+   "rel_err": "1.6941e-112",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-30",
+   "got": "1.0e-30",
+   "rel_err": "1.5748e-122",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-20",
+   "got": "1.0e-20",
+   "rel_err": "3.6043e-132",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0e-10",
+   "got": "1.0e-10",
+   "rel_err": "1.1938e-142",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E2",
+   "planted": "1.0",
+   "got": "1.0",
+   "rel_err": "7.6373e-152",
+   "dps": 150,
+   "pass_": true
+  },
+  {
+   "kat": "E3-E2",
+   "planted": "1.0e-90",
+   "rel_residual": "6.7942e-62",
+   "dps": 150,
+   "pass_": true
+  }
+ ],
+ "fails": 0,
+ "verdict": "PASS",
+ "resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c53",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ },
+ "note": "E1/E2 relative-accuracy floor is 10^-(dps-100), a deliberately loose gate: the point is orders of magnitude, not the last digit."
+}

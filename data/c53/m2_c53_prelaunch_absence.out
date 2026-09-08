@@ -1,0 +1,26 @@
+repo root: /shared/rh-exchange-repo/Riemann   HEAD: f3641e55d62355819c031d2d2e3cd613d9df4115
+absent  m2_c53_spec_even_x13_N100_dps150.json
+absent  m2_c53_nodes_even_x13_N100_dps150.json
+absent  m2_c53_spec_even_x19_N100_dps300.json
+absent  m2_c53_nodes_even_x19_N100_dps300.json
+absent  m2_c53_spec_even_x13_N180_dps150.json
+absent  m2_c53_nodes_even_x13_N180_dps150.json
+absent  m2_c53_spec_even_x19_N180_dps300.json
+absent  m2_c53_nodes_even_x19_N180_dps300.json
+absent  m2_c51_nodes_even_x13_N100_k12.json
+absent  m2_c51_nodes_even_x19_N100_k12.json
+absent  m2_c53_spec_odd_x13_N100_dps150.json
+absent  m2_c53_nodes_odd_x13_N100_dps150.json
+absent  m2_c53_spec_odd_x19_N100_dps300.json
+absent  m2_c53_nodes_odd_x19_N100_dps300.json
+absent  m2_c53_spec_odd_x13_N180_dps150.json
+absent  m2_c53_nodes_odd_x13_N180_dps150.json
+absent  m2_c53_spec_odd_x19_N180_dps300.json
+absent  m2_c53_nodes_odd_x19_N180_dps300.json
+absent  m2_c51_nodes_odd_x13_N100_k12.json
+absent  m2_c51_nodes_odd_x19_N100_k12.json
+absent  m2_c53_gpred_x13_N100_dps150.json
+absent  m2_c53_gpred_x13_N180_dps150.json
+absent  m2_c53_gpred_x19_N100_dps300.json
+absent  m2_c53_gpred_x19_N180_dps300.json
+PRE-LAUNCH ABSENCE: 24 absent, 0 present
