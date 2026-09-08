@@ -187,11 +187,22 @@ of exactly +2.** x=13, N=100, dps=150; every count **stable across nine knob set
 
 Three things are worth more than the hypothesis they came to test.
 
-🔑 **The dislocation is EVEN, and that is why alternation survives it.** A jump of +2 preserves the
+🔑 ~~**The dislocation is EVEN, and that is why alternation survives it.** A jump of +2 preserves the
 parity of the node count, and parity of the node count is parity of the eigenfunction. So the
 alternation measured in §3 does **not** require the nodal ladder to be exact — it requires only that
 every dislocation be even. That is a weaker and more robust mechanism than the one I proposed, and
-it is the one the data actually supports.
+it is the one the data actually supports.~~
+🔴 **WITHDRAWN AS A MECHANISM BY ERRATUM 27 (machine2-c51), and the words of the withdrawal are ON
+THIS LINE, not only in the sibling file (c43).** By Theorem T, an even function on a symmetric window
+has an EVEN number of interior sign changes and an odd function an ODD number — for the object and,
+separately, for this detector; KAT'd at 0 violations in 17 sealed functions, 0 in the 44 rungs cycle
+51 computed, and 0 in 400 random trig polynomials in m1's independent check. Given T, *"every pooled
+dislocation is even"* is **logically equivalent** to *"the sectors alternate"*, so the struck
+sentence re-encodes the fact it claims to explain and cannot be checked on any evidence that does not
+already show alternation: it is **not weaker** and **not a mechanism**. The nodal arm's independent
+content is the defect's **magnitude**, never its parity. No count on this page moves, and the
+**magnitude** claim in the next paragraph is untouched — cycle 51 sharpens it (the +6 survives an
+N-control at 1.8× the basis and is absent at x=19, so it is a window property).
 
 🔑 **The node counter and the completeness certificate agree, independently, that rung 10 is not
 the 10th.** The certificate (§3) cuts the certified prefix at 9 because an uncomputed even

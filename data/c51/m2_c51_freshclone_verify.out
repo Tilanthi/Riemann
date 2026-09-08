@@ -1,0 +1,26 @@
+FRESH-CLONE VERIFICATION — machine2-c51
+clone: git clone https://github.com/Tilanthi/Riemann.git  (a checkout that is NOT the work dir)
+clone HEAD: 3593ff2b99572274a65a127044742af096a422e2
+work dir  : /workspace/rh/cycle51 (never on the resolution path of this clone)
+measured: 2026-09-08T13:31:21Z
+
+EVERY script in the cycle exercised here, not only the ones the author happened to run (c50's lesson):
+1. m2_c51_seal_verify.sh          -> seal: 3 OK / 0 mismatched-or-missing / RESULT: OK
+2. m2_c51_seal_verify.sh --absence-> absence: 0 absent / 8 present of 8 target outputs (root /workspace/rh/cycle51/verify)
+   (expected FAIL post-publication: it is a PRE-LAUNCH tool and the cells are now published;
+    its pre-launch run at the pre-push HEAD is committed as m2_c51_prelaunch_absence.out)
+3. m2_c51_nodes.py kat            -> K1 fails (gate): 0   Theorem-T parity fails (gate): 0   verdict PASS
+   fresh-clone KAT json content vs published: IDENTICAL
+4. m2_c51_nodes.py recount (P0)   -> P0 GATE: 90/90 integers reproduced -> PASS
+5. m2_c51_nodes.py run even 5 100 150 9 16 5 -> wrote m2_c51_nodes_even_x5_N100_k5.json  893.9s
+   published cell reproduced from this clone, all fields except 'seconds': IDENTICAL
+6. m2_c51_score.py                -> scores.out byte-identical to the published artefact
+7. m2_c51_pooled.py               -> pooled.out byte-identical to the published artefact
+
+stderr line counts (streams never merged; no 2>&1 | wc -l anywhere in this cycle):
+0 fresh_kat.err
+0 fresh_recount.err
+0 fresh_run_even_x5_k5.err
+0 fresh_score.err
+0 fresh_pooled.err
+0 total
