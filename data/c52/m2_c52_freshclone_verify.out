@@ -1,0 +1,22 @@
+FRESH-CLONE VERIFICATION -- clone of origin/main 5541cfd at /tmp/c52fresh, a checkout that is not the work dir
+run 2026-09-08T15:31:43Z
+
+1. m2_c52_seal_verify.sh   : RESULT OK (5/5, one via SEALED_v1), 70/70 cells present, stderr 0 lines
+2. m2_c52_grid.py          : rc 0, m2_c52_grid.out BYTE-IDENTICAL, stderr 0 lines
+3. m2_c52_qdrift.py --kat  : rc 0, m2_c52_kat.out BYTE-IDENTICAL, stderr 0 lines
+4. m2_c52_qdrift.py --score: rc 0, m2_c52_scores.out BYTE-IDENTICAL, stderr 0 lines
+5. m2_c52_armD.py          : rc 0, m2_c52_armD.out BYTE-IDENTICAL, stderr 0 lines
+6. m2_c52_qdrift.SEALED_v1.py --kat : rc 0, 0 fails -- AND THAT PASS MEASURED NOTHING:
+
+m2_c52_qdrift.py               resolves REPO -> /tmp/c52fresh
+m2_c52_qdrift.SEALED_v1.py     resolves REPO -> /shared/rh-exchange-repo/Riemann
+
+   The SEALED_v1 resolver has no clone-root candidate, so from a foreign checkout it silently
+   reached back into the AUTHOR'S OWN TREE and passed there.  Its green is a green about
+   /shared/rh-exchange-repo/Riemann, not about /tmp/c52fresh.  The repaired v2 resolves to the
+   clone it is standing in.
+   KEY: A PORTABILITY TEST THAT PASSES MAY HAVE RESOLVED BACK INTO THE AUTHOR'S OWN TREE.
+        Make the resolver PRINT WHAT IT RESOLVED -- a rc=0 from a foreign checkout is not
+        evidence of portability unless the path it used is in the transcript.
+        (This is c50's portability law one layer down: c50 said the test must run from a checkout
+         that is not yours; this says the test must also READ from it.)
