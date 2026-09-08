@@ -1,0 +1,25 @@
+m2_c49_depth_all_rungs   x=13, gl_degree=9, iters=16, dps 150 vs an independent 220
+
+  parity N     cont s.f.     digits   via frozen       gain  arm
+  even   60        92.66         93        59.87      32.78  c48 (published)
+  even   100       92.22         92        60.03      32.19  c48 (published)
+  even   140       92.15         92        60.25      31.91  UNREGISTERED (killed run, 02:14-02:19Z)
+  even   180       92.12         92        59.83      32.29  UNREGISTERED (killed run, 02:14-02:19Z)
+  even   220       92.10         92        59.93      32.17  REGISTERED (c49 prereg P1b)
+  odd    60        95.81         95        60.24      35.56  c48 (published)
+  odd    100       95.40         95        59.87      35.53  c48 (published)
+  odd    140       95.33         95        59.85      35.48  UNREGISTERED (killed run, 02:14-02:19Z)
+  odd    180       95.31         95        59.97      35.34  UNREGISTERED (killed run, 02:14-02:19Z)
+  odd    220       95.28         95        59.95      35.32  REGISTERED (c49 prereg P1b)
+
+SCORING the preregistered predictions (prereg/m2_c49_prereg.md s2)
+  P1a monotone non-increasing in N (tol 0.30): HELD
+  P1b band at N=220: even 92.10 in [89.7,92.7] -> INSIDE | odd 95.28 in [93.0,96.0] -> INSIDE
+  P1c odd depth > even depth at every rung: HELD
+  P1d frozen-cell reading < 61 s.f. everywhere: HELD
+      c48-cell reading > 85 s.f. everywhere:   HELD
+
+CONVENTION CHECK (m1-L190 s4): |continuous - string_digits| <= 1 everywhere?
+  YES
+
+wrote m2_c49_depth_all_rungs.json

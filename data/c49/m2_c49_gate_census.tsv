@@ -1,0 +1,96 @@
+file	fails_raw	fails_discriminating	discriminating_paths
+data/c48/c48_even_x13_N100_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N100_dps220_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N140_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N180_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N220_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N60_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_even_x13_N60_dps220_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N100_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N100_dps220_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N140_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N180_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N220_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N60_dps150_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c48/c48_odd_x13_N60_dps220_g9_it16.json	14	9	/L_full_sf;/L_width_is_a_knob;/eig_residual_bound_sf;/lambda_min_full_sf;/lambda_min_width_is_a_knob;/log10_full_sf;/log10_width_is_a_knob;/residual_full_sf;/residual_width_is_a_knob
+data/c46/c46_K5_indep_N10_x13_dps50_p3.json	2	1	/agreement_sf
+data/c46/c46_K5_indep_N10_x13_dps50_p4.json	2	1	/agreement_sf
+data/c42/runs/c42_x11_N100_dps150_g10_G_x11d10.json	1	0	
+data/c42/runs/c42_x11_N100_dps150_g9_D_x11.json	1	0	
+data/c42/runs/c42_x11_N140_dps150_g9_K_x11N140.json	1	0	
+data/c42/runs/c42_x13_N100_dps150_g10_F_x13d10.json	1	0	
+data/c42/runs/c42_x13_N100_dps150_g8_B_quadctl.json	1	0	
+data/c42/runs/c42_x13_N100_dps150_g9_A_primary.json	1	0	
+data/c42/runs/c42_x13_N140_dps150_g9_I_x13N140.json	1	0	
+data/c42/runs/c42_x13_N30_dps40_g6_pilot.json	1	0	
+data/c42/runs/c42_x13_N70_dps150_g9_C_truncctl.json	1	0	
+data/c42/runs/c42_x15_N100_dps200_g9_Q_x15.json	1	0	
+data/c42/runs/c42_x17_N100_dps220_g9_O_x17.json	1	0	
+data/c42/runs/c42_x17_N100_dps300_g9_R_x17hp.json	1	0	
+data/c42/runs/c42_x17_N140_dps220_g9_W_x17N140.json	1	0	
+data/c42/runs/c42_x19_N100_dps250_g9_P_x19.json	1	0	
+data/c42/runs/c42_x19_N100_dps340_g9_S_x19hp.json	1	0	
+data/c42/runs/c42_x19_N140_dps250_g9_U_x19N140.json	1	0	
+data/c42/runs/c42_x19_N180_dps250_g9_V_x19N180.json	1	0	
+data/c42/runs/c42_x23_N100_dps380_g9_T_x23.json	1	0	
+data/c42/runs/c42_x3_N100_dps150_g9_L_x3.json	1	0	
+data/c42/runs/c42_x5_N100_dps150_g9_M_x5.json	1	0	
+data/c42/runs/c42_x7_N100_dps150_g10_H_x7d10.json	1	0	
+data/c42/runs/c42_x7_N100_dps150_g9_E_x7.json	1	0	
+data/c42/runs/c42_x7_N140_dps150_g9_J_x7N140.json	1	0	
+data/c42/runs/c42_x9_N100_dps150_g9_N_x9.json	1	0	
+data/c43/c43_x13_N100_dps150_widened.json	1	0	
+data/c45/c45_x13_N100_dps150_g9_it16.json	1	0	
+data/c45/c45_x14_N100_dps200_g9_it16.json	1	0	
+data/c45/c45_x16_N100_dps220_g9_it16.json	1	0	
+data/c45/c45_x16_N100_dps300_g9_it16.json	1	0	
+data/c45/c45_x18_N100_dps250_g9_it16.json	1	0	
+data/c45/c45_x25_N100_dps420_g9_it16.json	1	0	
+data/c45/c45_x25_N140_dps420_g9_it16.json	1	0	
+data/c45/c45_x25_N180_dps420_g9_it16.json	1	0	
+data/c45/c45_x4p953032424395115_N100_dps150_g9_it16.json	1	0	
+data/c45/c45_x4p953032424395115_N140_dps150_g9_it16.json	1	0	
+data/c46/c46_block_even_x13_N100_dps150_g9_it16_k3.json	1	0	
+data/c46/c46_block_odd_x13_N100_dps150_g9_it16_k3.json	1	0	
+data/c46/c46_even_x13_N100_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x13_N140_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x13_N180_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x13_N220_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x13_N60_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x19_N100_dps300_g9_it16.json	1	0	
+data/c46/c46_even_x4p953032424395115_N100_dps150_g9_it16.json	1	0	
+data/c46/c46_even_x5_N100_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N100_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N100_dps220_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N140_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N180_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N220_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x13_N60_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x19_N100_dps300_g9_it16.json	1	0	
+data/c46/c46_odd_x4p953032424395115_N100_dps150_g9_it16.json	1	0	
+data/c46/c46_odd_x5_N100_dps150_g9_it16.json	1	0	
+data/m2_L179/cell_A.json	1	0	
+data/m2_L179/cell_B.json	1	0	
+data/m2_L179/cell_C.json	1	0	
+data/m2_L179/cell_D.json	1	0	
+data/m2_L179/cell_E.json	1	0	
+data/m2_L179/cell_F.json	1	0	
+data/m2_L179/cell_G.json	1	0	
+data/m2_L179/cell_H.json	1	0	
+data/m2_L179/cell_I.json	1	0	
+data/m2_L179/cell_J.json	1	0	
+data/m2_L179/cell_K.json	1	0	
+data/m2_L179/cell_M.json	1	0	
+data/m2_L179/cell_N.json	1	0	
+data/m2_L179/cell_P.json	1	0	
+data/m2_L179/cell_Q.json	1	0	
+data/m2_L179/cell_R.json	1	0	
+data/m2_L179/cell_S.json	1	0	
+data/m2_L179/cell_T.json	1	0	
+data/m2_L179/cell_U.json	1	0	
+data/machine2_cycle27_anchorblind_c1.json	1	0	
+data/machine2_cycle27_anchorblind_c2.json	1	0	
+data/machine2_cycle27_anchorblind_clean.json	1	0	
+data/machine2_cycle27_firesflip_c1.json	1	0	
+data/machine2_cycle27_firesflip_clean.json	1	0	
+data/machine2_dn_dps50_n30.json	1	0	

@@ -1,0 +1,32 @@
+m2_c49_gate_census -- the c49 precision gate over the c48 census denominator
+
+  artefacts in census file      : 95
+  artefacts read (exist on disk): 95
+  P2a  >=1 FAIL of any kind     : 95 of 95
+  P2b  >=1 FAIL excluding knobs : 16 of 95
+
+  most common failing paths (raw):
+      /dps                                     95
+      /L_full_sf                               14
+      /L_exact/prec                            14
+      /L_width_is_a_knob                       14
+      /lambda_min_full_sf                      14
+      /lambda_min_exact/prec                   14
+      /lambda_min_width_is_a_knob              14
+      /residual_full_sf                        14
+
+  most common failing paths (discriminating):
+      /L_full_sf                               14
+      /L_width_is_a_knob                       14
+      /lambda_min_full_sf                      14
+      /lambda_min_width_is_a_knob              14
+      /residual_full_sf                        14
+      /residual_width_is_a_knob                14
+      /log10_full_sf                           14
+      /log10_width_is_a_knob                   14
+
+SCORING (prereg s3)
+  P2a >= 90 of 95 fail, top path is /dps : HELD
+  P2b <= 20 discriminating fails         : 16 -> HELD (<=20): the defect is c48-local, and the gate does fire outside its author.
+
+wrote m2_c49_gate_census.tsv

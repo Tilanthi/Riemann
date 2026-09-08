@@ -1,0 +1,17 @@
+--- m2_c49_precision.SEALED_v1.py	2026-09-08 07:11:12.579885625 +0000
++++ m2_c49_precision.py	2026-09-08 07:32:20.959481915 +0000
+@@ -238,8 +238,12 @@
+             "knobs_held_NOT_covered": ["gl_degree (the quadrature that defines M)", "N", "iters"],
+             "means": ("a LOWER BOUND on the digits of lam certified against the assembled matrix. "
+                       "It answers a different question from the *_sf blocks and is systematically "
+-                      "LARGER: at dps=220 this bound reads 107-114 while the measured dps-stability "
+-                      "of the same cell is 92-96. A bound is not an agreement."),
++                      "LARGER ON THE SAME CELL. Measured pairwise over the ten dps=150 rungs "
++                      "of the c49 ladder, the excess (bound minus measured agreement) runs "
++                      "+0.97 to +2.19 digits (even) and +2.43 to +3.77 (odd); the per-rung "
++                      "table is data/c49/m2_c49_depth_all_rungs.out. That excess is the build "
++                      "loss the bound cannot see by construction. A bound is not an "
++                      "agreement; never quote them as one number."),
+             "source": "computed at write time by c48_recell.py; see data/c49/m2_c49_depth_all_rungs.out",
+         }
+         moves.append(("eig_residual_bound_sf", b, "(dict)",

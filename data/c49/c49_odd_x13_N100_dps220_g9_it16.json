@@ -1,0 +1,122 @@
+{
+ "parity": "odd",
+ "x": 13,
+ "N": 100,
+ "dim": 100,
+ "dps": 220,
+ "gl_degree": 9,
+ "iters": 16,
+ "prime_powers": [
+  2,
+  3,
+  4,
+  5,
+  7,
+  8,
+  9,
+  11,
+  13
+ ],
+ "L": "2.564949357461536736053487441565318604805",
+ "L_full": "2.564949357461536736053487441565318604805267944760207116419045510663464667324410179399574663440489488769258192092762721631532154491986587013825268116972297751783697080477562044104565901179389994342739594739927504061389608646",
+ "L_full_sf": "223 significant digits WERE WRITTEN, at the dps=220 working-precision knob. This is a WIDTH and it is NOT an accuracy: the digits this cell's L actually supports are a MEASUREMENT and live in L_sf. Quoting this number as a precision is trap #155.",
+ "L_exact": {
+  "sign": 0,
+  "man": "14486905577702106408974889896103612408675932567671443754932065918620263453855857520526862963184333914254868061189082524383172007578408515306932520061303825227572831003541677371201916015454270468060353957316990960735842473",
+  "exp": -730,
+  "prec": 734,
+  "form": "value = (-1)**sign * man * 2**exp   (exact)",
+  "prec_is_a_knob": "734 bits is the WORKING PRECISION the value was written at (the same knob as dps, in bits). It is NOT an accuracy; it is retained because the loader needs it to check the _full decimal at the precision it was printed at. Measured accuracy: L_sf."
+ },
+ "L_width_is_a_knob": "TRUE, and this sentence is the point: L_full_sf is a width, L_sf is the measurement. The previous value of this field was a bare `true`, which carried the caveat in the field NAME and reached only a reader who already knew to look.",
+ "lambda_min": "3.34107742032073965658213712601992236254413410378763387206214e-55",
+ "lambda_min_30": "3.34107742032073965658213712602e-55",
+ "lambda_min_full": "3.341077420320739656582137126019922362544134103787633872062144462466006202340069854156638615394295373338143647207285465626374097581377554004650349209537312363790588712288394975856350921444204040634179109027178641198108263285e-55",
+ "lambda_min_full_sf": "223 significant digits WERE WRITTEN, at the dps=220 working-precision knob. This is a WIDTH and it is NOT an accuracy: the digits this cell's lambda_min actually supports are a MEASUREMENT and live in lambda_min_sf. Quoting this number as a precision is trap #155.",
+ "lambda_min_exact": {
+  "sign": 0,
+  "man": "23135163898348216225067358487128224488402246194831415549613998771293484472140145013865768091522737741565508329198493293526006827095409363836240347760608890104961970823625516560059956021734188367407202626109572148204243593",
+  "exp": -913,
+  "prec": 734,
+  "form": "value = (-1)**sign * man * 2**exp   (exact)",
+  "prec_is_a_knob": "734 bits is the WORKING PRECISION the value was written at (the same knob as dps, in bits). It is NOT an accuracy; it is retained because the loader needs it to check the _full decimal at the precision it was printed at. Measured accuracy: lambda_min_sf."
+ },
+ "lambda_min_width_is_a_knob": "TRUE, and this sentence is the point: lambda_min_full_sf is a width, lambda_min_sf is the measurement. The previous value of this field was a bare `true`, which carried the caveat in the field NAME and reached only a reader who already knew to look.",
+ "residual": "1.024709662e-162",
+ "residual_full": "1.02470966183657014559440454940138188846074048885027684999170674749338916521857903231621597784583307315414472273193364128025337714341155432722777288273803521826166850956646802813679701453106200469249605603342159198091566421e-162",
+ "residual_full_sf": "223 significant digits WERE WRITTEN, at the dps=220 working-precision knob. This is a WIDTH and it is NOT an accuracy: the digits this cell's residual actually supports are a MEASUREMENT and live in residual_sf. Quoting this number as a precision is trap #155.",
+ "residual_exact": {
+  "sign": 0,
+  "man": "20830290389868179186397287218497019760909747303392241379928158437996956461865578406930616783057049063526854787487509620603277858944685038679427311308650944302579574559621327073670412939329370179715787967753727643399413693",
+  "exp": -1270,
+  "prec": 734,
+  "form": "value = (-1)**sign * man * 2**exp   (exact)",
+  "prec_is_a_knob": "734 bits is the WORKING PRECISION the value was written at (the same knob as dps, in bits). It is NOT an accuracy; it is retained because the loader needs it to check the _full decimal at the precision it was printed at. Measured accuracy: residual_sf."
+ },
+ "residual_width_is_a_knob": "TRUE, and this sentence is the point: residual_full_sf is a width, residual_sf is the measurement. The previous value of this field was a bare `true`, which carried the caveat in the field NAME and reached only a reader who already knew to look.",
+ "log10": "-54.476113460659827868",
+ "log10_full": "-5.447611346065982786831861495104026906003139062590710241492583644879975453689642457156102726580270839609091399904078324929209801381495359154811590601622680269646834572467870488108256714552613529039297224440985846944273761017e+1",
+ "log10_full_sf": "223 significant digits WERE WRITTEN, at the dps=220 working-precision knob. This is a WIDTH and it is NOT an accuracy: the digits this cell's log10 actually supports are a MEASUREMENT and live in log10_sf. Quoting this number as a precision is trap #155.",
+ "log10_exact": {
+  "sign": 1,
+  "man": "76920652414537987254316656694055813070789024415657263921185649548441862031521132870522713501749055315411384378524854350132049316218951879447208834033229313255267072150922015251808952265990221561163319606528296547762383191",
+  "exp": -728,
+  "prec": 734,
+  "form": "value = (-1)**sign * man * 2**exp   (exact)",
+  "prec_is_a_knob": "734 bits is the WORKING PRECISION the value was written at (the same knob as dps, in bits). It is NOT an accuracy; it is retained because the loader needs it to check the _full decimal at the precision it was printed at. Measured accuracy: log10_sf."
+ },
+ "log10_width_is_a_knob": "TRUE, and this sentence is the point: log10_full_sf is a width, log10_sf is the measurement. The previous value of this field was a bare `true`, which carried the caveat in the field NAME and reached only a reader who already knew to look.",
+ "eig_residual_bound_sf": {
+  "sf_vs_assembled_matrix_bound": 107.51329,
+  "measure": "Weyl/Rayleigh residual bound |lam - lam_exact(M)| <= ||Mv-lam v||/||v||, divided by |lam|, for the matrix M THAT WAS BUILT.",
+  "knobs_varied": [],
+  "knobs_held_NOT_covered": [
+   "gl_degree (the quadrature that defines M)",
+   "N",
+   "iters"
+  ],
+  "means": "a LOWER BOUND on the digits of lam certified against the assembled matrix. It answers a different question from the *_sf blocks and is systematically LARGER ON THE SAME CELL. Measured pairwise over the ten dps=150 rungs of the c49 ladder, the excess (bound minus measured agreement) runs +0.97 to +2.19 digits (even) and +2.43 to +3.77 (odd); the per-rung table is data/c49/m2_c49_depth_all_rungs.out. That excess is the build loss the bound cannot see by construction. A bound is not an agreement; never quote them as one number.",
+  "source": "computed at write time by c48_recell.py; see data/c49/m2_c49_depth_all_rungs.out"
+ },
+ "accuracy_note": "_full is the WORKING PRECISION of the run (a knob). The digits of lambda_min supported by the eigensolve on the assembled matrix are bounded below by eig_residual_bound_sf; the digits supported against the exact matrix are a separate MEASUREMENT (vary dps, see m2_c48_recover_depth.py). A width is not a certificate.",
+ "seconds_build": 176.13341331481934,
+ "seconds_total": 207.2447566986084,
+ "storage": "m2_c48_cell_storage.py; retained fields byte-identical to c46_parity.run_cell",
+ "L_sf": {
+  "sf_measured": null,
+  "status": "UNMEASURED -- this cell has no partner run with one knob moved, so this lane can hand you no supported precision number for it. Absence is deliberate: the alternative is a width, and a width is not an accuracy.",
+  "measure": null,
+  "knobs_varied": [],
+  "knobs_held_NOT_covered": null,
+  "means": null,
+  "source": null
+ },
+ "lambda_min_sf": {
+  "sf_measured": null,
+  "status": "UNMEASURED -- this cell has no partner run with one knob moved, so this lane can hand you no supported precision number for it. Absence is deliberate: the alternative is a width, and a width is not an accuracy.",
+  "measure": null,
+  "knobs_varied": [],
+  "knobs_held_NOT_covered": null,
+  "means": null,
+  "source": null
+ },
+ "residual_sf": {
+  "sf_measured": null,
+  "status": "UNMEASURED -- this cell has no partner run with one knob moved, so this lane can hand you no supported precision number for it. Absence is deliberate: the alternative is a width, and a width is not an accuracy.",
+  "measure": null,
+  "knobs_varied": [],
+  "knobs_held_NOT_covered": null,
+  "means": null,
+  "source": null
+ },
+ "log10_sf": {
+  "sf_measured": null,
+  "status": "UNMEASURED -- this cell has no partner run with one knob moved, so this lane can hand you no supported precision number for it. Absence is deliberate: the alternative is a width, and a width is not an accuracy.",
+  "measure": null,
+  "knobs_varied": [],
+  "knobs_held_NOT_covered": null,
+  "means": null,
+  "source": null
+ },
+ "dps_is_a_knob": "dps=220 is the working-precision KNOB this run was configured with. It is NOT an accuracy of any number in this file; the measured accuracies are in the *_sf blocks."
+}

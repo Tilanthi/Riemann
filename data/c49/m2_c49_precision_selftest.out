@@ -1,0 +1,22 @@
+m2_c49_precision self-test (two arms on KNOWN ANSWERS)
+  A1 c48 shape FAILS the gate                                      PASS
+  A1 the 154 width is caught                                       PASS
+  A1 the bare-true guard is caught                                 PASS
+  A1 the numeral-STRING bound is caught (float() lifts it)         PASS
+  A1 the dps knob is caught                                        PASS
+  A1 the prec knob is caught                                       PASS
+  A1 structure: width without depth slot                           PASS
+  A2 upgraded shape PASSES the gate                                PASS
+  A2 depth slot present                                            PASS
+  A2 the measured depth IS liftable (a reader gets a supported number) PASS
+  A2 the width is NOT liftable                                     PASS
+  A2 and it still carries the number 154 in prose                  PASS
+  A2 print fields untouched                                        PASS
+  A2 _exact reconstruction fields untouched                        PASS
+  A2 moves are reported, not silent                                PASS
+  A3 unmeasured depth slot is null (nothing liftable)              PASS
+  A3 unmeasured cell still PASSES (absence is allowed, overstatement is not) PASS
+  A4 a measurement key without knob metadata FAILS                 PASS
+  A5 a knob declaration missing the token FAILS                    PASS
+  A5 the same field WITH the token passes                          PASS
+SELF-TEST PASS

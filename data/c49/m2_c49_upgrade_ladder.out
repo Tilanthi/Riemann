@@ -1,0 +1,32 @@
+m2_c49_upgrade_ladder -- c48 ladder -> data/c49/ with a measured depth per cell
+
+  depth measurements available for 10 (parity,N) pairs: [('even', 60), ('even', 100), ('even', 140), ('even', 180), ('even', 220), ('odd', 60), ('odd', 100), ('odd', 140), ('odd', 180), ('odd', 220)]
+
+  c49_even_x13_N100_dps150_g9_it16.json      dps=150 depth=92.22   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_even_x13_N100_dps220_g9_it16.json      dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_even_x13_N140_dps150_g9_it16.json      dps=150 depth=92.15   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_even_x13_N180_dps150_g9_it16.json      dps=150 depth=92.12   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_even_x13_N220_dps150_g9_it16.json      dps=150 depth=92.1    moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_even_x13_N60_dps150_g9_it16.json       dps=150 depth=92.66   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_even_x13_N60_dps220_g9_it16.json       dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_odd_x13_N100_dps150_g9_it16.json       dps=150 depth=95.4    moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_odd_x13_N100_dps220_g9_it16.json       dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_odd_x13_N140_dps150_g9_it16.json       dps=150 depth=95.33   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_odd_x13_N180_dps150_g9_it16.json       dps=150 depth=95.31   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_odd_x13_N220_dps150_g9_it16.json       dps=150 depth=95.28   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_odd_x13_N60_dps150_g9_it16.json        dps=150 depth=95.81   moves=18 nonmove=PASS gate=PASS    measured against the dps=220 partn
+  c49_odd_x13_N60_dps220_g9_it16.json        dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_even_x13_N140_dps220_g9_it16.json      dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_even_x13_N180_dps220_g9_it16.json      dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_even_x13_N220_dps220_g9_it16.json      dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_odd_x13_N140_dps220_g9_it16.json       dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_odd_x13_N180_dps220_g9_it16.json       dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+  c49_odd_x13_N220_dps220_g9_it16.json       dps=220 depth=-       moves=18 nonmove=PASS gate=PASS    UNMEASURED: this IS the reference 
+
+  cells: 20   non-movement violations: 0   gate failures: 0
+
+  NON-MOVEMENT: PASS on every field of every cell (no tolerance was used).
+  GATE: every upgraded cell passes m2_c49_precision, including the structural
+  requirement that a stored width is accompanied by a depth slot (trap #155).
+
+  wrote 20 cells to /shared/rh-exchange-repo/Riemann/data/c49

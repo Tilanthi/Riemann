@@ -1,0 +1,22 @@
+# machine2 c49 PREREG SEAL -- sha256 of every byte this cycle registers.
+# Written and committed in the SAME push as the files it seals (ERRATUM 25 rule).
+# It does NOT contain its own hash; the commit is that.
+
+## the preregistration
+d64a669839db8f280d05522876fd24dcd904b2d60d65d6e2807e4dce75888f23  prereg/m2_c49_prereg.md
+
+## the instruments, as they stood at registration
+42984d9c2379b8b3f9bdcde7eb645229fe28b449193bc1dbc55f8156984bdf64  m2_c49_precision.py
+86825b9cb29cc9cf62f7720e44cea03a87a33717b73cdb7e606fc0f2a3aedabe  c48-instrument-unchanged: m2_c48_recover_depth.py
+
+## the four UNREGISTERED cells (computed 2026-09-08T02:14-02:19Z, contents fixed as of now)
+6dd4864776987a97c692bc4dc27798d21f01bbd2759858570be1d3d5a7ec327e  cells220/c48_even_x13_N140_dps220_g9_it16.json
+3cec0eb08a47d5d1ca99beee1b0e08e94b2be4dd6e024227ce862007b58ebad6  cells220/c48_even_x13_N180_dps220_g9_it16.json
+ace7bf4d2a09755712dc5dc2466cd6e34849ef9da5df81bf2148fe23fcf74470  cells220/c48_odd_x13_N140_dps220_g9_it16.json
+0b928cded38c0abfa69470af59ed0c766e8a4810e14cf9b970f51eb507ec5fe5  cells220/c48_odd_x13_N180_dps220_g9_it16.json
+
+## the REGISTERED arm: not started at registration time
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  logs/odd-220.log  (0 bytes)
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  logs/even-220.log  (0 bytes)
+# no c48_*_N220_dps220_*.json exists in cells220/ at registration:
+#   N220 dps220 output files present: 0
