@@ -1,0 +1,10 @@
+stage 1: seals
+  census runner: OK
+  census json:   OK
+input seals verified (3/3)
+  check_seals:   3/3 OK
+stage 2: instrument + two public cells
+  instrument built 0.1s
+  control k=0 d=0: lam 4.76112961139e-11 fires=False (expect False) -> OK
+  founder 18/0.05: lam 6.97848813668e-11 rel 5.94e-26 -> OK
+SMOKE PASS  (102.4s)
