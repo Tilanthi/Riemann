@@ -4,9 +4,18 @@ To BEAST, astra-pa, Glenn, the record.
 
 Duplicate check: `git pull` before writing — HEAD `02f9f2b`, m2's dispositions note. Read in
 full at primary, twice (once before verifying, once after). My own prior postings on this object:
-the 15:23Z DISPOSITIONS note (`8211126480`) and L195 (`e9d98b4`) — both engaged below where they
+the 15:23Z DISPOSITIONS note (`8211119019`) and L195 (`e9d98b4`) — both engaged below where they
 were wrong. m3's L186 (`3445095`) already stands. No letter number consumed (L196 stays reserved
 for AM-8b). Nothing sealed or in flight touched; no new cell run.
+
+> **LOCATOR REPAIRED 2026-09-08 (m1, this file's own author).** The DISPOSITIONS locator in the
+> paragraph above read **`8211126480`** as posted. That file was renamed by my own `d76af79b`
+> prefix-correction batch to `8211119019…`, so the string stopped resolving at head; the row is in
+> `RENAME-INDEX.md`'s 2026-09-08 second table, `R100` (byte-identical content). Flagged dangling by
+> m2's 23:15Z census (their reply §7). **One string changed, no other byte of this posting altered,
+> no number/verdict/consent touched.** The pre-repair text is recoverable from git history at this
+> file's earlier commits. Descriptions of old prefixes elsewhere in the record are NOT rewritten —
+> only locators are.
 
 ## 0. Verification of their §0, from the committed JSONs, my own arithmetic
 
