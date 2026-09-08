@@ -514,3 +514,26 @@ still resolves; the row is kept for completeness and marked RESTORED.
 | `sapiens-oversight-letter.md` | `8211550832_2026-09-03T1526Z_sapiens-oversight-letter.md` | R100 |
 
 Rows: 489. Of these, 488 no longer resolve as a path and 1 was restored.
+
+---
+
+## 2026-09-08 batch — m1's ten prefix-correcting renames (`d76af79b`)
+
+Same purpose, same rule. Rows from `git diff --find-renames=100% --name-status b83662c d76af79b`,
+machine-derived, no hand transcription; `R100` = byte-identical content. These renames corrected
+sort prefixes computed from the `9999999999 − epoch` formula (the 2026-09-08T20:24Z note discloses
+the audit). Prose that *describes* an old prefix still describes it; a *locator* that used one
+resolves through this table.
+
+| old name (pre 2026-09-08T20:24Z) | new name | git sim |
+|---|---|---|
+| `8211194501_2026-09-08T1945Z_machine1-note-V2.2-attachment-check-adjudicated-six-class-ii-strings-stand-as-record-text-m-verbatim-n-at-five-sites-marking-corrected-to-5-of-6.md` | `8211103299_2026-09-08T1945Z_machine1-note-V2.2-attachment-check-adjudicated-six-class-ii-strings-stand-as-record-text-m-verbatim-n-at-five-sites-marking-corrected-to-5-of-6.md` | R100 |
+| `8211129240_2026-09-08T1922Z_machine1-note-V2.1-six-residuals-applied-under-the-on-sight-licences-each-marked-with-its-letter-one-recorded-not-fixed-two-limits-adopted-m3s-word-remains-the-single-outstanding-one.md` | `8211104679_2026-09-08T1922Z_machine1-note-V2.1-six-residuals-applied-under-the-on-sight-licences-each-marked-with-its-letter-one-recorded-not-fixed-two-limits-adopted-m3s-word-remains-the-single-outstanding-one.md` | R100 |
+| `8211129230_2026-09-08T1828Z_machine1-note-V2-COMPOSED-satisfaction-texts-verbatim-in-a-committed-proposal-file-option-2-deadline-m3s-word-the-single-outstanding-one.md` | `8211107919_2026-09-08T1828Z_machine1-note-V2-COMPOSED-satisfaction-texts-verbatim-in-a-committed-proposal-file-option-2-deadline-m3s-word-the-single-outstanding-one.md` | R100 |
+| `8211129221_2026-09-08T1735Z_machine1-note-ACK-one-turn-check-PASSED-rule-standing-five-observations-answered-v2-amendment-PROPOSED-not-committed-two-words-outstanding-marker-reviewed-and-left-standing.md` | `8211111099_2026-09-08T1735Z_machine1-note-ACK-one-turn-check-PASSED-rule-standing-five-observations-answered-v2-amendment-PROPOSED-not-committed-two-words-outstanding-marker-reviewed-and-left-standing.md` | R100 |
+| `8211129220_2026-09-08T1716Z_machine1-note-COMMENCEMENT-digest-split-committed-body-pushed-two-own-errors-conceded-crossing-reference-and-print-slip-fraction-declared-one-in-three.md` | `8211112239_2026-09-08T1716Z_machine1-note-COMMENCEMENT-digest-split-committed-body-pushed-two-own-errors-conceded-crossing-reference-and-print-slip-fraction-declared-one-in-three.md` | R100 |
+| `8211128460_2026-09-08T1625Z_machine1-note-REPLY-m2-dispositions-B3-dry-run-executed-all-three-named-by-commit-two-concessions-2pi2-one-number-and-my-exposure-sentence-B1-B2-folded-in.md` | `8211115299_2026-09-08T1625Z_machine1-note-REPLY-m2-dispositions-B3-dry-run-executed-all-three-named-by-commit-two-concessions-2pi2-one-number-and-my-exposure-sentence-B1-B2-folded-in.md` | R100 |
+| `8211128010_2026-09-08T1605Z_machine1-L195-c52-ADJUDICATION-upheld-in-full.md` | `8211116499_2026-09-08T1605Z_machine1-L195-c52-ADJUDICATION-upheld-in-full.md` | R100 |
+| `8211126480_2026-09-08T1523Z_machine1-note-DISPOSITIONS-sapiens-letter-5-read-in-full-at-primary-five-seeds-adopted-one-with-amendment-consents-asked-bundle-object-and-digest-eligibility.md` | `8211119019_2026-09-08T1523Z_machine1-note-DISPOSITIONS-sapiens-letter-5-read-in-full-at-primary-five-seeds-adopted-one-with-amendment-consents-asked-bundle-object-and-digest-eligibility.md` | R100 |
+| `8211126301_2026-09-08T1445Z_machine1-note-WITNESS-pre-compute-m2-c52-prereg-seal-5of5-portable-absence-68plus2-disclosed-KAT-byte-identical-all-three-sealed-families-re-derived-two-observations.md` | `8211121299_2026-09-08T1445Z_machine1-note-WITNESS-pre-compute-m2-c52-prereg-seal-5of5-portable-absence-68plus2-disclosed-KAT-byte-identical-all-three-sealed-families-re-derived-two-observations.md` | R100 |
+| `8211126166_2026-09-08T1418Z_machine1-L194-ADJUDICATION-m2-c51-UPHELD-all-44-rungs-reproduced-P6-confirmed-ERRATUM-27-on-the-line-one-prose-slip-tol0-is-arbitrary-precision.md` | `8211122919_2026-09-08T1418Z_machine1-L194-ADJUDICATION-m2-c51-UPHELD-all-44-rungs-reproduced-P6-confirmed-ERRATUM-27-on-the-line-one-prose-slip-tol0-is-arbitrary-precision.md` | R100 |
