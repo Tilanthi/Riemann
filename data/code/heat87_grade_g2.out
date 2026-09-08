@@ -1,0 +1,41 @@
+gate: controls=GREEN G2=True G3=True G4-detected=True  n_mutants=8
+
+--- the merged k=18 ladder (descriptive; nothing scored on it) ---
+  18/0.04: lam = 8.676676887731142657644369E-11  fires=False
+  18/0.05: lam = 6.978488136681017448086459E-11  fires=False
+  18/0.0510: lam = 6.320744690653367377246535E-11  fires=False
+  18/0.0525: lam = 4.539405996728798478771141E-11  fires=False
+  18/0.0540: lam = 7.883466610075161176082923E-12  fires=False
+  18/0.0542: lam = 6.398442115792329516849178E-13  fires=False
+  18/0.0544: lam = -7.211258232050565885948757E-12  fires=True
+  18/0.0546: lam = -1.568326588697445033711391E-11  fires=True
+  18/0.0548: lam = -2.478534368532118090567891E-11  fires=True
+  18/0.0552: lam = -4.490011208214205184044605E-11  fires=True
+  18/0.0560: lam = -9.283091072805689659860627E-11  fires=True
+  18/0.0580: lam = -2.598697987720327880858772E-10  fires=True
+  18/0.06: lam = -5.116699143531604630255282E-10  fires=True
+  18/0.07: lam = -7.181848718236694861267001E-9  fires=True
+
+--- P2': the pinned constraint reproduces (fires iff lam_min < -1E-12) ---
+  P2': lam_g2(18, 0.0540) = 7.883466610075161176082923E-12
+  P2': pin (gen-1 full print) = 7.883466610075161176082923E-12
+  P2': rel = 0 (tol 1e-9) -> REPRODUCE -> HELD
+
+--- P1': the k=18 bracket closure (partition B1..B8 + contradiction) ---
+  P1': measured bracket = (0.0542, 0.0544]
+  P1': branch = B2   band projection {B1, B2} -> HELD
+
+--- P3': the law — 10 registered NEW equal-spacing triples accelerate ---
+  P3': k=18 (0.050,0.0540,0.0580): d -6.1901e-11 -> -2.6775e-10  accelerating=True  [crossing]
+  P3': k=18 (0.0540,0.0542,0.0544): d -7.2436e-12 -> -7.8511e-12  accelerating=True  [crossing]
+  P3': k=18 (0.0540,0.0544,0.0548): d -1.5095e-11 -> -1.7574e-11  accelerating=True  [crossing]
+  P3': k=18 (0.0540,0.0546,0.0552): d -2.3567e-11 -> -2.9217e-11  accelerating=True  [crossing]
+  P3': k=18 (0.0540,0.0560,0.0580): d -1.0071e-10 -> -1.6704e-10  accelerating=True  [crossing]
+  P3': k=18 (0.0542,0.0544,0.0546): d -7.8511e-12 -> -8.4720e-12  accelerating=True  [crossing]
+  P3': k=18 (0.0544,0.0546,0.0548): d -8.4720e-12 -> -9.1021e-12  accelerating=True  [post-crossing]
+  P3': k=18 (0.0544,0.0548,0.0552): d -1.7574e-11 -> -2.0115e-11  accelerating=True  [post-crossing]
+  P3': k=18 (0.0544,0.0552,0.0560): d -3.7689e-11 -> -4.7931e-11  accelerating=True  [post-crossing]
+  P3': k=18 (0.0560,0.0580,0.060): d -1.6704e-10 -> -2.5180e-10  accelerating=True  [post-crossing]
+  P3': HELD  (10/10)
+
+TALLY: 3 HELD / 0 FIRED of 3 registered predictions
