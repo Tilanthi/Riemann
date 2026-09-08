@@ -8,4 +8,5 @@
   P0 x=13  N=180 odd  block lam1 vs published lambda_min : depth 39.84 s.f. PASS
   P0 k=5 vs PUBLISHED k=3 ladder, even            : depths ['40.0', '40.0', '40.0']  PASS
   P0 k=5 vs PUBLISHED k=3 ladder, odd             : depths ['40.0', '40.0', '40.0']  PASS
+  (published cells from /tmp/c50verify/data/c46 ; new block cells from /tmp/c50verify/data/c50)
 P0 GATE: 0 fail(s) -- ceiling 40 s.f. (both sides stored at 40 s.f.)

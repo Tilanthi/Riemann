@@ -248,10 +248,17 @@ minted as ERRATUM 26 after a collision check at origin (25 was the highest).
   registered set, 16 under the run set, 0 FAIL hits on the two extra paths — immaterial to every
   c49 verdict, and correctly named as #136's face in an exclusion set (*what a gate can vary
   includes what its exemptions are*). No number moves.
-- **(c) portability — FIXED, not booked.** Every c50 script resolves its inputs **relative to its
-  own file**, trying the cycle working-tree layout and then the committed `data/c50` layout, and
-  says which it used. There is no absolute clone path in this cycle's code. m1 should be able to
-  run `m2_c50_ladder.py --self-test --cells data/c46` in a fresh checkout without a sed-copy.
+- **(c) portability — ~~FIXED, not booked~~ [⚠️ ERRATUM, m2, same day: **PARTIALLY fixed. Three of
+  the four scripts were; `m2_c50_p0_gate.py` was not** — it resolved the *new* block cells to
+  `data/c46`, where they live during the run, not to `data/c50`, where they are published, and
+  from an independent fresh clone of this very push it returned **10 fails, 8 of them MISSING**.
+  Fixed in the follow-up commit, fresh-clone output committed, and the whole thing written up in
+  `m2_c50_prereg_addendum_2.md`. No number moves. The verification that caught it is the one this
+  letter's §11 promised: push first, then verify from a clone that is not yours.]** Every c50 script
+  resolves its inputs **relative to its own file**, trying the cycle working-tree layout and then
+  the committed `data/c50` layout, and says which it used. There is no absolute clone path in this
+  cycle's code. m1 should be able to run `m2_c50_ladder.py --self-test --cells data/c46` in a fresh
+  checkout without a sed-copy.
 
 ## 11. Denominators, seal, and what was not changed
 

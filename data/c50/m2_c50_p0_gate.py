@@ -22,7 +22,20 @@ def _find_dir(name):
     raise SystemExit("cannot locate %s from %s (tried ./data/%s and ../%s)" % (name, here, name, name))
 
 
-C46 = _find_dir("c46")
+C46 = _find_dir("c46")          # the PUBLISHED c46 run_cell cells the gate compares against
+# and the NEW block cells, which live beside this script once committed (data/c50) and in the c46
+# working copy while the cycle runs.  v1 of this file looked for them in C46 only: correct in the
+# working tree, WRONG in a fresh clone -- and the fresh-clone verification is what caught it.
+# See m2_c50_prereg_addendum_2.md.
+def _find_cells():
+    for cand in (HERE, C46):
+        import glob as _g
+        if _g.glob(os.path.join(cand, "c46_block_*_k5.json")):
+            return cand
+    return HERE
+
+
+CELLS = _find_cells()
 CEIL = 40          # both sides are stored via mp.nstr(...,40); the depth cannot exceed this
 
 
@@ -38,7 +51,7 @@ def main():
     cells = [("13", 100, 150, 5), ("5", 100, 150, 5), ("19", 100, 300, 3), ("13", 180, 150, 3)]
     for xs, N, dps, k in cells:
         for par in ("even", "odd"):
-            fb = os.path.join(C46, "c46_block_%s_x%s_N%d_dps%d_g9_it16_k%d.json" % (par, xs, N, dps, k))
+            fb = os.path.join(CELLS, "c46_block_%s_x%s_N%d_dps%d_g9_it16_k%d.json" % (par, xs, N, dps, k))
             fc = os.path.join(C46, "c46_%s_x%s_N%d_dps%d_g9_it16.json" % (par, xs, N, dps))
             if not os.path.exists(fb):
                 print("  MISSING %s" % os.path.basename(fb)); fails += 1; continue
@@ -52,7 +65,7 @@ def main():
             rows.append(dict(x=xs, N=N, parity=par, depth=mp.nstr(d, 6), pass_=bool(ok)))
     # k=5 vs published k=3 ladder
     for par in ("even", "odd"):
-        f5 = os.path.join(C46, "c46_block_%s_x13_N100_dps150_g9_it16_k5.json" % par)
+        f5 = os.path.join(CELLS, "c46_block_%s_x13_N100_dps150_g9_it16_k5.json" % par)
         f3 = os.path.join(C46, "c46_block_%s_x13_N100_dps150_g9_it16_k3.json" % par)
         if not os.path.exists(f5):
             print("  MISSING %s" % os.path.basename(f5)); fails += 1; continue
@@ -64,6 +77,7 @@ def main():
               % (par, [mp.nstr(d, 4) for d in ds], "PASS" if ok else "FAIL"))
         rows.append(dict(x="13", N=100, parity=par, kind="k5_vs_k3",
                          depth=[mp.nstr(d, 6) for d in ds], pass_=bool(ok)))
+    print("  (published cells from %s ; new block cells from %s)" % (C46, CELLS))
     print("P0 GATE: %d fail(s) -- ceiling %d s.f. (both sides stored at 40 s.f.)" % (fails, CEIL))
     json.dump(rows, open(os.path.join(HERE, "m2_c50_p0_gate.json"), "w"), indent=1)
     return 1 if fails else 0
