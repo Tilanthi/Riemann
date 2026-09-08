@@ -1,0 +1,100 @@
+
+===== T0 seals / inventory / launch timing  [2026-09-08T13:50:01Z] =====
+PASS seal m2_c51_nodes.py  -- matches
+PASS seal m2_c51_score.py  -- matches
+PASS seal m2_c51_seal_verify.sh  -- matches
+PASS inventory 18 artefacts  -- missing: []
+LAUNCH.txt: LAUNCH 2026-09-08T12:26:18Z prereg pushed as 2723194 at 2026-09-08T12:26:02+00:00
+PASS prereg push precedes first cell  -- 2723194 committer date 2026-09-08T12:26:02Z vs first cell 12:26:18Z
+
+===== T1 grader and pooled byte-reproduction (in a copy, never in place)  [2026-09-08T13:50:01Z] =====
+PASS m2_c51_score.py exit 0
+PASS m2_c51_score.py stderr empty  -- streams never merged (c51 §8)
+PASS m2_c51_score.py byte-identical: m2_c51_scores.out  -- db886a48380b2701
+PASS m2_c51_score.py byte-identical: m2_c51_scores.json  -- 327bbba559a2c263
+PASS m2_c51_pooled.py exit 0
+PASS m2_c51_pooled.py stderr empty  -- streams never merged (c51 §8)
+PASS m2_c51_pooled.py byte-identical: m2_c51_pooled.out  -- f2f6dbd22e06c647
+
+===== T2 census and P1-P8 re-derivation from the cell JSONs (m1's own code, prereg rules)  [2026-09-08T13:50:01Z] =====
+PASS census even_x13_N100  -- delta [0, 0, 0, 2, 2, 6, 6]
+PASS census even_x13_N180  -- delta [0, 0, 0, 2, 2]
+PASS census even_x19_N100  -- delta [0, 0, 0, 2, 2]
+PASS census even_x5_N100  -- delta [0, 0, 0, 2]
+PASS census odd_x13_N100  -- delta [0, 0, 2, 2, 6, 6, 6]
+PASS census odd_x13_N180  -- delta [0, 0, 2, 2, 6]
+PASS census odd_x19_N100  -- delta [0, 0, 2, 2, 2]
+PASS census odd_x5_N100  -- delta [0, 0, 2]
+my onsets: {'even_x13_N100': 4, 'even_x13_N180': 4, 'even_x19_N100': 4, 'even_x5_N100': 4, 'odd_x13_N100': 3, 'odd_x13_N180': 3, 'odd_x19_N100': 3, 'odd_x5_N100': 3}
+PASS P1: 15 prefix integers, 0 nonzero -> HELD
+PASS P2: onset (4,3) at all 8 cells -> HELD
+PASS P4: N180 conjunct of P2 -> HELD
+PASS P3: first defect == +2 at all 8 cells
+PASS P5 even k=7 non-decreasing  -- [0, 0, 0, 2, 2, 6, 6]
+PASS P5 odd k=7 non-decreasing  -- [0, 0, 2, 2, 6, 6, 6]
+PASS P6: 27 integers tested, 1 mismatch(es) -> REFUTED
+PASS P6 mismatch is exactly the registered one (odd x19 N100 rung 5, 2 vs 6)
+PASS P7 (field-level): refine mismatches 0, lobes at/below frontier 0
+PASS Theorem T: 0 parity violations over every computed rung
+
+===== T3 NZERO re-derived from the zeta zeros themselves (mpmath, independent of c46's table)  [2026-09-08T13:50:01Z] =====
+PASS mpmath ordinates strictly increasing
+PASS NZERO[5] = 4  -- gamma_4 = 30.424876 <= 2pi*5 = 31.415927 < gamma_5 = 32.935062
+PASS NZERO[13] = 21  -- gamma_21 = 79.337375 <= 2pi*13 = 81.681409 < gamma_22 = 82.910381
+PASS NZERO[19] = 38  -- gamma_38 = 118.790783 <= 2pi*19 = 119.380521 < gamma_39 = 121.370125
+
+===== T4 THRESHOLD interval re-derivation + the disclosed exclusion defect  [2026-09-08T13:50:02Z] =====
+PASS calibration: last exact pooled rung is even rung 3 @ -43.92594672919323011
+PASS calibration: first defective pooled rung is odd rung 3 @ -40.643620721386850624
+PASS sealed LO = 6-decimal round of the last-exact rung  -- -43.9259 vs -43.92594672919323011
+PASS sealed HI = 6-decimal round of the first-defective rung  -- -40.6436 vs -40.643620721386850624
+PASS EXCLUSION DEFECT reproduced: first-defective -40.643620721386850624 is strictly inside (-43.9259, -40.6436]  -- gap = 0.000020721386850624
+     FINDING (prose slip in m2's letter sec 3): the gap is 2.0721e-05, the letter says "2.1e-8"
+     -- the mechanism (strictly inside the sealed band) is unaffected; the number is off
+PASS rounding direction isolated: HI(6dp toward zero) > rung > HI(6dp away from zero)  -- only the away-from-zero round includes its own calibration point
+PASS THRESHOLD per-cell predictions match the grader under the sealed rule
+PASS calibration-window odd cell mis-scored by the sealed literal (m2's disclosure)
+
+===== T5 SCALING re-derivation: onset = max(1, round_half_up(onset_13 * n_x / 21))  [2026-09-08T13:50:02Z] =====
+     SCALING even x=5: onset 1
+     SCALING odd x=5: onset 1
+     SCALING even x=13: onset 4
+     SCALING odd x=13: onset 3
+     SCALING even x=19: onset 7
+     SCALING odd x=19: onset 5
+PASS SCALING per-cell predictions match the grader (1,1 / 4,3 / 7,5)
+
+===== T9 ERRATUM 27 marker on the line in the c50 letter  [2026-09-08T13:50:03Z] =====
+PASS c50 letter carries the on-the-line withdrawal
+PASS the strike delimiters wrap the mechanism sentence itself
+PASS ERRATUM 27 sibling file present (standalone, not the c51 letter)  -- ['8211125739_2026-09-08T1331Z_machine2-ERRATUM-27-c50-sec8-dislocation-is-even-mechanism-is-an-IDENTITY-under-a-symmetry-theorem-no-count-moves.md']
+PASS marker entered the c50 letter in the c51 letter push (fdee199)  -- ['fdee199']
+
+===== T6 independent recount: float64 everywhere + mpmath arbitration of near-noise samples  [2026-09-08T13:50:07Z] =====
+     basis: w_j = 2 pi j / L (even j=0..N, odd j=1..N); nr = 1/sqrt(L), sqrt(2/L)
+     m1's own sampling/counting code; only samples with |v| < 1e-9*max are re-evaluated
+     at dps 50 (their instrument's working precision), spliced back before counting.
+     float64 limitation, measured: even x19 rung 1, first grid point of the 1201 grid --
+     float64 value -1.110e-16 vs dps-50 value 2.110e-41: the deep-window eigenfunctions carry
+     single-signed plateaus at the 1e-38 level, 22 orders below the float64 noise floor;
+     pure float64 fragments them into spurious tol=0 sign changes (28 vs 2 at rung 2).
+     The tol!=0 knobs are immune (cut 1e-8*max sits far above the noise floor).
+PASS T6: all 44 rungs reproduce (9-knob dict, consensus nu, refine48001, lobe to 1e-3)  -- 0 mismatches
+     thinnest admitted lobe margin over the frontier: odd_x13_N180_r5 at 1.096x
+     (m2's letter: odd x13 rung 5 at 1.139x N=100 / 1.096x N=180)
+
+TALLY: 0 FAIL(s)
+
+===== T7 exact-instrument recount (machine2's committed count_all_knobs + refine, mpmath dps 50)  [2026-09-08T14:13:47Z] =====
+     odd  x19 N100 rung 5  nu=11 refine=11 lobe=0.219294 vs 0.219294  PASS  (80s)  [the P6 refutation carrier (delta 2 vs Model N's 6)]
+     odd  x13 N100 rung 5  nu=15 refine=15 lobe=0.005694 vs 0.00569431  PASS  (82s)  [the +6 carrier, thinnest lobe margin (0.005694)]
+     odd  x13 N180 rung 5  nu=15 refine=15 lobe=0.005481 vs 0.0054808  PASS  (145s)  [the +6 N-control (0.005481)]
+     even x13 N100 rung 1  nu=0 refine=0 lobe=1.000000 vs 1.0  PASS  (82s)  [a clean Sturm-prefix rung]
+     even x5  N100 rung 4  nu=8 refine=8 lobe=0.407137 vs 0.407137  PASS  (82s)  [first defect +2 at x=5]
+     odd  x5  N100 rung 3  nu=7 refine=7 lobe=0.326540 vs 0.32654  PASS  (82s)  [odd first defect +2 at x=5]
+PASS T7: 6 critical rungs reproduce under the registered instrument itself
+
+===== T8 P0 gate re-run (their recount, in a temp tree with c42/c46/c50/code beside it)  [2026-09-08T14:23:00Z] =====
+PASS P0 gate: P0 GATE: 90/90 integers reproduced -> PASS  -- exit 0, stderr 
+
+TALLY: 0 FAIL(s)
