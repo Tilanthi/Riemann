@@ -1,0 +1,55 @@
+P0  even x13_N100_dps150_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (40 s.f.)
+P0  even x5_N100_dps150_g9_it16_k lam1 vs published  >=30 s.f.           PASS  (60 s.f.)
+P0  even x19_N100_dps300_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (59 s.f.)
+P0  even x13_N180_dps150_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (60 s.f.)
+P0   odd x13_N100_dps150_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (40 s.f.)
+P0   odd x5_N100_dps150_g9_it16_k lam1 vs published  >=30 s.f.           PASS  (59 s.f.)
+P0   odd x19_N100_dps300_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (60 s.f.)
+P0   odd x13_N180_dps150_g9_it16_ lam1 vs published  >=30 s.f.           PASS  (60 s.f.)
+P0  k=5 calibration ladder vs published k=3 (6 values)                   PASS  (worst 38 s.f.)
+P1  x13_N100_dps150_g9_it16_k5 alternates                                PASS  (eoeoeoeoeo)
+P1  x13_N100_dps150_g9_it16_k5 min pooled gap > 1 dex                    PASS  (2.8328)
+P1  x13_N180_dps150_g9_it16_k3 alternates                                PASS  (eoeoeo)
+P1  x13_N180_dps150_g9_it16_k3 min pooled gap > 1 dex                    PASS  (3.2750)
+P1  x19_N100_dps300_g9_it16_k3 alternates                                PASS  (eoeoeo)
+P1  x19_N100_dps300_g9_it16_k3 min pooled gap > 1 dex                    PASS  (3.6025)
+P1   x5_N100_dps150_g9_it16_k5 alternates                                PASS  (eoeoeoe)
+P1   x5_N100_dps150_g9_it16_k5 min pooled gap > 1 dex                    PASS  (1.6183)
+P1  certificate prefixes 9/5/5/6 (x13k5/x13N180/x19/x5)                  PASS  [9, 5, 5, 6]
+P1  x=5 drop rule: 3 dropped                                             PASS  (3)
+P1  x=5 max dropped rel residual = 3.6e-3                                PASS  (3.6395e-3)
+P1  x=5 an off-ladder rung at lam ~0.606 (even[5])                       PASS  (['0.6063', '0.0891', '0.7742'])
+P2  q1 x=5   = 0.889256615305                                            PASS  (0.889256615305)
+P2  q1 x=13  = 0.920657101471                                            PASS  (0.920657101471)
+P2  q1 x=13N180 = 0.916933080206                                         PASS  (0.916933080206)
+P2  q1 x=19  = 0.931062954397                                            PASS  (0.931062954397)
+P2  A residuals -0.031400 / -2.9e-11 / -0.003724 / +0.010406             PASS  (-0.031400 / -0.003724 / +0.010406)
+P2  A residual sign change through calibration (x5<0, x19>0)             PASS
+P3  model B q1(x=5) predicted > 1 (recomputed from F)                    PASS  (1.07609)
+P3  measured q1(x=5) < 1 -> B dead by sign                               PASS  (0.889257)
+P3  |q1-1| = 0.1107 (the knife-edge distance, letter 8b)                 PASS  (0.1107)
+P4  |ds1| = 0.00215 <= 0.15 (interval held)                              PASS  (-0.002154)
+P4  ds1 sign NEGATIVE (predicted positive -> consequence applied)        PASS  (-0.002154)
+P5  lam2/lam1 x5_N100_dps150_g9_it16 ~ 5.11e5                            PASS  (5.114e+5)
+P5  lam2/lam1 x13_N100_dps150_g9_it1 ~ 3.92e7                            PASS  (3.916e+7)
+P5  lam2/lam1 x13_N180_dps150_g9_it1 ~ 3.90e7                            PASS  (3.896e+7)
+P5  lam2/lam1 x19_N100_dps300_g9_it1 ~ 1.60e8                            PASS  (1.603e+8)
+P6  gaps stop decreasing at j=8 (REFUTED as letter says)                 PASS  (gap7=2.83282 gap8=2.90437)
+P6  q7 = 1.02526                                                         PASS  (1.02526)
+P6  rungs 7-9 inside certified prefix 9                                  PASS
+ID  gap1+gap2 == s1 EXACT  x13_N100_dps150_g9_it16_                      PASS
+ID  gap1+gap2 == s1 EXACT  x13_N180_dps150_g9_it16_                      PASS
+ID  gap1+gap2 == s1 EXACT  x19_N100_dps300_g9_it16_                      PASS
+ID  gap1+gap2 == s1 EXACT  x5_N100_dps150_g9_it16_k                      PASS
+x-drift = 2.8-8.4x the N-drift                                           PASS  (8.43x, 2.79x)
+NODAL  10/10 rungs stable across all 9 knob settings                     PASS
+NODAL  exact for rungs 1-5 (nodes = rung-1)                              PASS  [0, 1, 2, 3, 4]
+NODAL  +2 dislocation from rung 6, +6 at rung 10 (15 nodes)              PASS  [7, 8, 9, 10, 15]
+NODAL  every dislocation even (why alternation survives)                 PASS
+NODAL  node parity matches sector at every rung                          PASS
+HYG  data/c46 + data/c48 untouched 995ecf7..ddf0172                      PASS
+HYG  sealed predict.out sha == seal entry 997f8066...                    PASS
+HYG  ERRATUM 26 marked on-the-line in c49 letter 7 (original preserved)  PASS
+SLIP  committed gate .out says even x13 N180 = 40.0 (letter 2 table says 39.90) PASS  (finding: letter-vs-artefact transcription slip, immaterial)
+
+RESULT: 0 failed checks
