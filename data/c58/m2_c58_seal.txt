@@ -1,0 +1,8 @@
+# m2_c58_seal.txt -- SHA-256 of every c58 file in the sealing commit, written 2026-09-09T08:14:55Z
+# Zero output artefacts (m2_c58_*.json) exist at seal time; check the commit's file list.
+# RESEALED after a push race; see prereg sec 8. The first attempt never reached the remote.
+87190155d1536cc13b3a8c2f73fe1cc96225ccf77b5a94da0b71df0131bb4f65  m2_c58_prereg.md
+c5db390d7c3a73bfa32377788d1bf9ade6b1f2a04da6eb2d973cfc4f4e0097e8  m2_c58_residual_price.py
+9bbd964c82a3b28c6ace277b078b81a688fc2008d5fb54c979ad5c3718dabdc4  m2_c58_visible_rung_dps.py
+7b06503767b6dc856dcc63ac25d3224e70b32276725e150321f876882140a881  m2_c58_pair_residual.py
+43463f8febed765bd19e00aa72e8b051995ea832f106b36ff0a76ec87da893c2  m2_c58_population_audit.py
