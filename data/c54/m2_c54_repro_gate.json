@@ -1,0 +1,150 @@
+{
+ "cell": {
+  "parity": "even",
+  "x": 13,
+  "N": 100,
+  "dps": 150,
+  "gl": 9,
+  "R": 5
+ },
+ "compared_fields": 22,
+ "fails": 1,
+ "verdict": "FAIL",
+ "ignored_fields": [
+  "build_seconds",
+  "eigsy_seconds",
+  "label",
+  "resolver",
+  "seconds",
+  "source"
+ ],
+ "rows": [
+  {
+   "kind": "spec",
+   "field": "L",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "N",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "admit_rule",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "dim",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "dps",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "gl",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "parity",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "reference",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "rungs",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "selftest_ceiling_sf",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "selftest_depths_sf",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "solver",
+   "identical": true
+  },
+  {
+   "kind": "spec",
+   "field": "x",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "L",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "N",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "R",
+   "identical": false
+  },
+  {
+   "kind": "nodes",
+   "field": "detector",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "dim",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "dps",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "parity",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "rungs",
+   "identical": true
+  },
+  {
+   "kind": "nodes",
+   "field": "x",
+   "identical": true
+  }
+ ],
+ "report": {
+  "wrapper": "/shared/rh-exchange-repo/Riemann/data/c54/m2_c54_spectrum.py",
+  "c53_module": "/shared/rh-exchange-repo/Riemann/data/c53/m2_c53_spectrum.py",
+  "c53_dir": "/shared/rh-exchange-repo/Riemann/data/c53",
+  "out_dir": "/shared/rh-exchange-repo/Riemann/data/c54",
+  "redirected": true,
+  "inner_resolver": {
+   "HERE": "/shared/rh-exchange-repo/Riemann/data/c54",
+   "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+   "code": "/shared/rh-exchange-repo/Riemann/data/code",
+   "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+   "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+   "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+   "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+  }
+ },
+ "note": "the redirection is the ONLY difference between this wrapper and c53's registered instrument; this gate is what turns that sentence into a measurement."
+}

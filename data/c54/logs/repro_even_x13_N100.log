@@ -1,0 +1,26 @@
+REDIRECTION: {
+ "wrapper": "/shared/rh-exchange-repo/Riemann/data/c54/m2_c54_spectrum.py",
+ "c53_module": "/shared/rh-exchange-repo/Riemann/data/c53/m2_c53_spectrum.py",
+ "c53_dir": "/shared/rh-exchange-repo/Riemann/data/c53",
+ "out_dir": "/shared/rh-exchange-repo/Riemann/data/c54",
+ "redirected": true,
+ "inner_resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c54",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ }
+}
+SELF-TEST vs c46_block_even_x13_N100_dps150_g9_it16_k5.json: depths ['39.9845', '39.4787', '39.6012', '40.0', '39.5263'] (CEILING 40 s.f.)
+wrote m2_c54_spec_even_x13_N100_dps150.json  dim=101 build=167.7s eigsy=19.6s total=188.5s
+  even rung 1  log10lam=-58.429352031732 rel_resid=2.436090625e-92 adm=True  nu=0    refine=0    lobe=1.0        sturm=0   delta=0    stable=True
+  even rung 2  log10lam=-50.836536296392 rel_resid=5.215504703e-100 adm=True  nu=2    refine=2    lobe=0.6908     sturm=2   delta=0    stable=True
+  even rung 3  log10lam=-43.925946729193 rel_resid=5.879538653e-107 adm=True  nu=4    refine=4    lobe=0.2553     sturm=4   delta=0    stable=True
+  even rung 4  log10lam=-37.613122962847 rel_resid=4.591370544e-113 adm=True  nu=8    refine=8    lobe=0.457      sturm=6   delta=2    stable=True
+  even rung 5  log10lam=-31.875939753456 rel_resid=1.012652564e-118 adm=True  nu=10   refine=10   lobe=0.2532     sturm=8   delta=2    stable=True
+wrote m2_c54_nodes_even_x13_N100_dps150.json  558.5s
+  DIFF nodes.R
+G0-REPRO: 21/22 fields identical -> FAIL
