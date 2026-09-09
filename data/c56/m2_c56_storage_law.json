@@ -1,0 +1,127 @@
+{
+ "hypothesis": "M3: the 1e-41 lobe_min_ratio is a readout of the storage noise floor and must MOVE with STORE_SF; a real lobe would STAY PUT",
+ "registered_in": "m2_c56_prereg.md sec 6, pushed as 197c71b before this ran",
+ "cell": {
+  "parity": "even",
+  "x": 22,
+  "N": 100,
+  "dps": 300,
+  "gl": 9,
+  "rungs": 2
+ },
+ "scope": "INSTRUMENT test at a RETIRED window; rungs 1-2 only; cannot yield p2",
+ "rows": [
+  {
+   "store_sf": 40,
+   "rung": 1,
+   "nu": null,
+   "stable": false,
+   "lobe_min_ratio": "1.70629e-41",
+   "log10_lobe": -40.767947154471926
+  },
+  {
+   "store_sf": 40,
+   "rung": 2,
+   "nu": null,
+   "stable": false,
+   "lobe_min_ratio": "3.01399e-41",
+   "log10_lobe": -40.52085819294774
+  },
+  {
+   "store_sf": 60,
+   "rung": 1,
+   "nu": 0,
+   "stable": true,
+   "lobe_min_ratio": "1.0",
+   "log10_lobe": 0.0
+  },
+  {
+   "store_sf": 60,
+   "rung": 2,
+   "nu": 2,
+   "stable": true,
+   "lobe_min_ratio": "0.703095",
+   "log10_lobe": -0.15298599050175374
+  },
+  {
+   "store_sf": 80,
+   "rung": 1,
+   "nu": 0,
+   "stable": true,
+   "lobe_min_ratio": "1.0",
+   "log10_lobe": 0.0
+  },
+  {
+   "store_sf": 80,
+   "rung": 2,
+   "nu": 2,
+   "stable": true,
+   "lobe_min_ratio": "0.703095",
+   "log10_lobe": -0.15298599050175374
+  },
+  {
+   "store_sf": 120,
+   "rung": 1,
+   "nu": 0,
+   "stable": true,
+   "lobe_min_ratio": "1.0",
+   "log10_lobe": 0.0
+  },
+  {
+   "store_sf": 120,
+   "rung": 2,
+   "nu": 2,
+   "stable": true,
+   "lobe_min_ratio": "0.703095",
+   "log10_lobe": -0.15298599050175374
+  }
+ ],
+ "per_rung": [
+  {
+   "rung": 1,
+   "sf40_lobe": "1.70629e-41",
+   "moved": [
+    [
+     60,
+     0.0,
+     0
+    ],
+    [
+     80,
+     0.0,
+     0
+    ],
+    [
+     120,
+     0.0,
+     0
+    ]
+   ],
+   "stayed": []
+  },
+  {
+   "rung": 2,
+   "sf40_lobe": "3.01399e-41",
+   "moved": [
+    [
+     60,
+     -0.15298599050175374,
+     2
+    ],
+    [
+     80,
+     -0.15298599050175374,
+     2
+    ],
+    [
+     120,
+     -0.15298599050175374,
+     2
+    ]
+   ],
+   "stayed": []
+  }
+ ],
+ "verdict": "HELD",
+ "reading": "At every widened store the rung that was unstable at 40 s.f. either becomes STABLE with an O(1) lobe or its 'lobe' moves with the store width. A lobe that is a property of the eigenfunction cannot do that."
+}

@@ -1,0 +1,7 @@
+REBINDING: out -> m2_c56_law_spec_x22_N100_dps300_sf60.json ; STORE_SF 40 -> 60
+SELF-TEST vs None: depths None (CEILING None s.f.)
+wrote m2_c56_law_spec_x22_N100_dps300_sf60.json  dim=101 build=188.9s eigsy=21.0s total=211.3s
+REBINDING: out -> m2_c56_law_spec_x22_N100_dps300_sf60.json ; STORE_SF 40 -> 60
+  even rung 1  log10lam=-102.53204209593 rel_resid=2.648359636e-198 adm=True  nu=0    refine=0    lobe=1.0        sturm=0   delta=0    stable=True
+  even rung 2  log10lam=-94.407420926944 rel_resid=1.74358798e-206 adm=True  nu=2    refine=2    lobe=0.7031     sturm=2   delta=0    stable=True
+wrote m2_c56_law_nodes_x22_N100_dps300_sf60.json  227.2s

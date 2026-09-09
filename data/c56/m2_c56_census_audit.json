@@ -1,0 +1,100 @@
+{
+ "condition": "BEAST-AGI c55 ruling C2",
+ "arm_A_replication_of_c55": {
+  "rule": "glob data/c5?/m2_c5?_nodes_*.json, then require nu+lobe_min_ratio in rungs[0]",
+  "globbed": 36,
+  "scanned": 34,
+  "excluded": 2,
+  "excluded_files": [
+   "c50/m2_c50_nodes_even_x13_N100.json",
+   "c50/m2_c50_nodes_odd_x13_N100.json"
+  ],
+  "reproduces_c55": true,
+  "stable_rungs": 367,
+  "unstable_rungs": 15,
+  "rungs_without_a_ratio": 0,
+  "min_lobe_ratio_among_stable": 0.00340916,
+  "max_lobe_ratio_among_unstable": 4.59992e-05,
+  "disjoint": true
+ },
+ "the_two_excluded": [
+  {
+   "file": "c50/m2_c50_nodes_even_x13_N100.json",
+   "rungs": 5,
+   "keys_in_rung0": [
+    "coef",
+    "counts",
+    "lam",
+    "rung",
+    "stable"
+   ],
+   "keys_in_any_rung": [
+    "coef",
+    "counts",
+    "lam",
+    "rung",
+    "stable"
+   ],
+   "decidable_from_content": true,
+   "same_answer_from_every_rung": true,
+   "label": "UNREGISTERED EXPLORATORY ARM"
+  },
+  {
+   "file": "c50/m2_c50_nodes_odd_x13_N100.json",
+   "rungs": 5,
+   "keys_in_rung0": [
+    "coef",
+    "counts",
+    "lam",
+    "rung",
+    "stable"
+   ],
+   "keys_in_any_rung": [
+    "coef",
+    "counts",
+    "lam",
+    "rung",
+    "stable"
+   ],
+   "decidable_from_content": true,
+   "same_answer_from_every_rung": true,
+   "label": "UNREGISTERED EXPLORATORY ARM"
+  }
+ ],
+ "finding_1": "c55's REPORT said 'excluded BY NAME'. The CODE excludes by CONTENT: `'nu' not in d['rungs'][0] or 'lobe_min_ratio' not in d['rungs'][0]`. The rule IS decidable from content and IS implemented from content. The report was worse than the instrument -- a narration defect, not a census defect.",
+ "finding_2": "The name-based part of c55's corpus rule is the GLOB, not the exclusion. Deriving the population by CONTENT finds 1 artefact(s) with the fields that the glob never saw.",
+ "what_the_name_glob_missed": [
+  {
+   "file": "c55/m2_c55_hp_nodes_even_x22_N100_dps300_sf120.json",
+   "rungs": 3,
+   "L_printed_significant_figures": 120,
+   "min_stable_lobe_ratio": 0.293256,
+   "why_the_glob_missed_it": "filename does not match m2_c5?_nodes_*"
+  }
+ ],
+ "arm_B_content_corpus": {
+  "rule": "walk data/ for any json with rungs[]; require nu+lobe_min_ratio in EVERY rung",
+  "corpus": 60,
+  "scanned": 35,
+  "excluded": 25,
+  "stable_rungs": 370,
+  "unstable_rungs": 15,
+  "rungs_without_a_ratio": 0,
+  "min_lobe_ratio_among_stable": 0.00340916,
+  "max_lobe_ratio_among_unstable": 4.59992e-05,
+  "disjoint": true
+ },
+ "arm_C_no_schema_filter": {
+  "rule": "arm B corpus, schema filter REMOVED; a missing field is UNMEASURED, not a value",
+  "corpus": 60,
+  "scanned": 60,
+  "excluded": 0,
+  "stable_rungs": 370,
+  "unstable_rungs": 15,
+  "rungs_without_a_ratio": 3123,
+  "min_lobe_ratio_among_stable": 0.00340916,
+  "max_lobe_ratio_among_unstable": 4.59992e-05,
+  "disjoint": true
+ },
+ "residual_defect": "c55 decides a per-FILE question from rungs[0] only. Every scanned file is homogeneous here (checked), so it changed no number -- but it is a one-row decision about a whole artefact and it is recorded as a live weakness, not as a passed test."
+}

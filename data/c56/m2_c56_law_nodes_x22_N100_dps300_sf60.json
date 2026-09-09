@@ -1,0 +1,74 @@
+{
+ "parity": "even",
+ "x": 22,
+ "N": 100,
+ "dps": 300,
+ "dim": 101,
+ "L": "3.09104245335831585347917569942330586789720698829767242933925",
+ "R": 2,
+ "rungs": [
+  {
+   "rung": 1,
+   "lam": "2.93736492092664585951482065394666880247871661371346551022869e-103",
+   "log10": "-102.53204209593553847",
+   "rel_residual": "2.648359636e-198",
+   "admitted": true,
+   "counts": {
+    "1201_0.0": 0,
+    "1201_1.0e-8": 0,
+    "1201_0.0001": 0,
+    "4001_0.0": 0,
+    "4001_1.0e-8": 0,
+    "4001_0.0001": 0,
+    "12001_0.0": 0,
+    "12001_1.0e-8": 0,
+    "12001_0.0001": 0
+   },
+   "stable": true,
+   "nu": 0,
+   "nu_refine_48001": 0,
+   "lobe_min_ratio": "1.0",
+   "sturm": 0,
+   "delta": 0,
+   "parity_T_ok": true
+  },
+  {
+   "rung": 2,
+   "lam": "3.91362376943096146212890411517003997741818384058040887375145e-95",
+   "log10": "-94.407420926944157021",
+   "rel_residual": "1.74358798e-206",
+   "admitted": true,
+   "counts": {
+    "1201_0.0": 2,
+    "1201_1.0e-8": 2,
+    "1201_0.0001": 2,
+    "4001_0.0": 2,
+    "4001_1.0e-8": 2,
+    "4001_0.0001": 2,
+    "12001_0.0": 2,
+    "12001_1.0e-8": 2,
+    "12001_0.0001": 2
+   },
+   "stable": true,
+   "nu": 2,
+   "nu_refine_48001": 2,
+   "lobe_min_ratio": "0.703095",
+   "sturm": 2,
+   "delta": 0,
+   "parity_T_ok": true
+  }
+ ],
+ "seconds": 227.1794729232788,
+ "source": "m2_c56_law_spec_x22_N100_dps300_sf60.json",
+ "detector": "IMPORTED from data/c51/m2_c51_nodes.py (not copied)",
+ "resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c56",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ },
+ "label": "REGISTERED (cycle 53 prereg) -- STAGE B: node counts"
+}

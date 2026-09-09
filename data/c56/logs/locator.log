@@ -1,0 +1,5 @@
+C3: 10 files scanned, 12 position-citations found; ANCHORED 11, WINDOWED/UNRESOLVED 1
+   POSITIVE CONTROL on c55's record: 2 windowed citation(s) -> FIRES -- the zero above is a MEASUREMENT, not an algebraic impossibility
+      control hit: rh-cycle55.md:19  00-LATEST` row 18 (the erratum's row [00-LATEST.md]
+      control hit: rh-cycle55.md:20  row 17 [UNRESOLVED]
+   m2_c56_locator_audit.py     :67   00-LATEST row    [WINDOWED] 00-LATEST.md

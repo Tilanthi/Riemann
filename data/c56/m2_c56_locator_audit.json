@@ -1,0 +1,169 @@
+{
+ "condition": "BEAST-AGI c55 ruling C3 (carry)",
+ "corpus": [
+  "data/c56/m2_c56_absence_audit.py",
+  "data/c56/m2_c56_census_audit.py",
+  "data/c56/m2_c56_locator_audit.py",
+  "data/c56/m2_c56_prelaunch_absence.sh",
+  "data/c56/m2_c56_prereg.md",
+  "data/c56/m2_c56_spectrum.py",
+  "data/c56/m2_c56_storage_law.py",
+  "data/c56/m2_c56_window_choice.py",
+  "data/c56/m2_c56_zerocount.py",
+  "/shared/progress/rh-cycle56.md"
+ ],
+ "files_scanned": 10,
+ "citations_found": 12,
+ "anchored": 11,
+ "windowed_or_unresolved": 1,
+ "windowed_detail": [
+  {
+   "file": "data/c56/m2_c56_locator_audit.py",
+   "line_no": 67,
+   "citation": "00-LATEST row",
+   "line": "# citation (\"00-LATEST row 18\"), so it is run as a control and MUST produce hits.",
+   "container": "00-LATEST.md",
+   "kind": "WINDOWED",
+   "why": "trimmed to 12 rows; c55's own ERRATUM-28 annotation was trimmed out by the next push"
+  }
+ ],
+ "all_hits": [
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "line_no": 31,
+   "citation": "rungs[0]",
+   "line": "if not rungs or not isinstance(rungs[0], dict):",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "line_no": 34,
+   "citation": "rungs[0]",
+   "line": "return all(f in rungs[0] for f in FIELDS)",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "line_no": 85,
+   "citation": "rungs[0]",
+   "line": "armA = dict(rule=\"glob data/c5?/m2_c5?_nodes_*.json, then require nu+lobe_min_ratio in rungs[0]\",",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "line_no": 137,
+   "citation": "rungs[0]",
+   "line": "residual_defect=(\"c55 decides a per-FILE question from rungs[0] only. Every scanned file is \"",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_locator_audit.py",
+   "line_no": 37,
+   "citation": "rung 1",
+   "line": "\"rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R\"),",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_locator_audit.py",
+   "line_no": 67,
+   "citation": "00-LATEST row",
+   "line": "# citation (\"00-LATEST row 18\"), so it is run as a control and MUST produce hits.",
+   "container": "00-LATEST.md",
+   "kind": "WINDOWED",
+   "why": "trimmed to 12 rows; c55's own ERRATUM-28 annotation was trimmed out by the next push"
+  },
+  {
+   "file": "data/c56/m2_c56_prereg.md",
+   "line_no": 80,
+   "citation": "pooled 17",
+   "line": "`10, 10 \u2192 8` at pooled 17 at all three.",
+   "container": "the pooled eigenvalue ladder",
+   "kind": "ANCHORED",
+   "why": "indexed from the SMALLEST eigenvalue and extended only at the top; raising R from 13 to 15 appends, it does not renumber"
+  },
+  {
+   "file": "data/c56/m2_c56_prereg.md",
+   "line_no": 162,
+   "citation": "rung 1",
+   "line": "rung 1:  sf40  nu=None  lobe=1.70629e-41   ->  sf120  nu=0  lobe=1.0",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_prereg.md",
+   "line_no": 163,
+   "citation": "rung 2",
+   "line": "rung 2:  sf40  nu=None  lobe=3.01399e-41   ->  sf120  nu=2  lobe=0.703095",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_prereg.md",
+   "line_no": 164,
+   "citation": "rung 3",
+   "line": "rung 3:  sf40  nu=4     lobe=0.293256      ->  sf120  nu=4  lobe=0.293256",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "data/c56/m2_c56_storage_law.py",
+   "line_no": 6,
+   "citation": "rung 1",
+   "line": "register as a domain rule.  The competing reading, from c55's own SF=120 cell (rung 1: nu None,",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  },
+  {
+   "file": "/shared/progress/rh-cycle56.md",
+   "line_no": 27,
+   "citation": "rung 1",
+   "line": "SF=120 cell says rung 1 of even/x22/N100 goes `nu=None, lobe=1.70629e-41` -> `nu=0, lobe=1.0`.",
+   "container": "a cell's rung list",
+   "kind": "ANCHORED",
+   "why": "rung 1 is the smallest eigenvalue of the cell; the list is extended at the top by R"
+  }
+ ],
+ "use_vs_mention_note": "The single WINDOWED hit in c56 is this tool's own CONTAINERS table NAMING the container it classifies -- a MENTION of a rolling index, not a citation of a position in one. It is left in the count rather than filtered out, because the same use/mention confusion had to be repaired in the C4 absence audit in the same hour (a negative operator inside a quoted string is not an operator), and a detector that silently exempts its own text is exactly the shape C2 is about. Reader: 1 hit, 0 of them a real locator.",
+ "rule": "ANCHORED = the list grows only away from the cited position. WINDOWED = it is trimmed or rebuilt from the newest items. Decided from the CONTAINER.",
+ "positive_control": {
+  "files": [
+   "/shared/progress/rh-cycle55.md",
+   "/shared/rh-exchange-repo/Riemann/data/c55/m2_c55_prereg.md"
+  ],
+  "windowed_hits": 2,
+  "detail": [
+   {
+    "file": "/shared/progress/rh-cycle55.md",
+    "line_no": 19,
+    "citation": "00-LATEST` row 18 (the erratum's row",
+    "container": "00-LATEST.md",
+    "kind": "WINDOWED",
+    "why": "trimmed to 12 rows; c55's own ERRATUM-28 annotation was trimmed out by the next push"
+   },
+   {
+    "file": "/shared/progress/rh-cycle55.md",
+    "line_no": 20,
+    "citation": "row 17",
+    "container": "UNRESOLVED",
+    "kind": "UNRESOLVED",
+    "why": "the container could not be identified from the line; treat as WINDOWED until it is, because the safe default for a locator is distrust"
+   }
+  ],
+  "verdict": "FIRES -- the zero above is a MEASUREMENT, not an algebraic impossibility"
+ },
+ "standing_note": "c56 cites no position in 00-LATEST. The one rolling-index citation the programme owns is c55's, and it is already marked in the c55 record; c56 does not repeat it. Positions in the pooled ladder and in a cell's rung list are ANCHORED and are safe to quote, and that is a measured property of those containers, not a convention."
+}

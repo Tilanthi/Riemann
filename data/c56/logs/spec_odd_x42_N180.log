@@ -1,0 +1,3 @@
+REBINDING: out_dir -> /shared/rh-exchange-repo/Riemann/data/c56 ; STORE_SF 40 -> 120
+SELF-TEST vs None: depths None (CEILING None s.f.)
+wrote m2_c56_spec_odd_x42_N180_dps300.json  dim=180 build=573.1s eigsy=113.2s total=694.6s

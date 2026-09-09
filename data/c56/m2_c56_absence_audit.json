@@ -1,0 +1,656 @@
+{
+ "condition": "BEAST-AGI c55 ruling C4",
+ "corpus_rule": "every .py/.sh in data/c53..c56 (the c56 gate lineage) + the fleet tools this cycle invoked; every file listed, hit or not",
+ "denominator_files": 34,
+ "denominator_lines": 6151,
+ "files_containing_an_absence_check": 15,
+ "absence_checks_audited": 34,
+ "pass1_loose_matches_rejected_in_pass2": 77,
+ "pass1_rejected_detail": [
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 2,
+   "line": "# Pre-launch absence proof: every registered cycle-53 output name, searched REPOSITORY-WIDE at the"
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 6,
+   "line": "present=0; absent=0"
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 12,
+   "line": "else echo \"absent  $base\"; absent=$((absent+1)); fi"
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 19,
+   "line": "else echo \"absent  $base\"; absent=$((absent+1)); fi"
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 28,
+   "line": "else echo \"absent  $base\"; absent=$((absent+1)); fi"
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "line_no": 31,
+   "line": "echo \"PRE-LAUNCH ABSENCE: $absent absent, $present present\""
+  },
+  {
+   "file": "data/c53/m2_c53_score.py",
+   "line_no": 86,
+   "line": "S[\"G0\"] = dict(verdict=\"UNMEASURED\", reason=\"m2_c53_p0_recount.json absent\")"
+  },
+  {
+   "file": "data/c54/m2_c54_prelaunch_absence.sh",
+   "line_no": 11,
+   "line": "echo \"absent patterns: $miss   present: $present\""
+  },
+  {
+   "file": "data/c54/m2_c54_score.SEALED_v1.py",
+   "line_no": 185,
+   "line": "print(\"FIXTURE-D UNMEASURED: %s absent\" % os.path.basename(f))"
+  },
+  {
+   "file": "data/c54/m2_c54_score.SEALED_v1.py",
+   "line_no": 245,
+   "line": "return sorted(k for k in keys if fa.get(k, \"<<absent>>\") != fb.get(k, \"<<absent>>\"))"
+  },
+  {
+   "file": "data/c54/m2_c54_score.SEALED_v1.py",
+   "line_no": 380,
+   "line": "depth, det = 0, dict(reason=\"N=180 cells absent\")"
+  },
+  {
+   "file": "data/c54/m2_c54_score.SEALED_v1.py",
+   "line_no": 437,
+   "line": "verdict=(\"UNMEASURED (N=180 absent)\" if not have180"
+  },
+  {
+   "file": "data/c54/m2_c54_score.py",
+   "line_no": 185,
+   "line": "print(\"FIXTURE-D UNMEASURED: %s absent\" % os.path.basename(f))"
+  },
+  {
+   "file": "data/c54/m2_c54_score.py",
+   "line_no": 245,
+   "line": "return sorted(k for k in keys if fa.get(k, \"<<absent>>\") != fb.get(k, \"<<absent>>\"))"
+  },
+  {
+   "file": "data/c54/m2_c54_score.py",
+   "line_no": 428,
+   "line": "depth, det = 0, dict(reason=\"N=180 cells absent\")"
+  },
+  {
+   "file": "data/c54/m2_c54_score.py",
+   "line_no": 499,
+   "line": "verdict=(\"UNMEASURED (N=180 absent)\" if not have180"
+  },
+  {
+   "file": "data/c55/m2_c55_prelaunch_absence.sh",
+   "line_no": 11,
+   "line": "echo \"absent patterns: $miss   present: $present\""
+  },
+  {
+   "file": "data/c55/m2_c55_score.py",
+   "line_no": 192,
+   "line": "print(\"FIXTURE-D UNMEASURED: %s absent\" % os.path.basename(f))"
+  },
+  {
+   "file": "data/c55/m2_c55_score.py",
+   "line_no": 356,
+   "line": "depth, det = n_control_depth(n100, n180) if have180 else (0, dict(reason=\"N=180 cells absent\"))"
+  },
+  {
+   "file": "data/c55/m2_c55_score.py",
+   "line_no": 432,
+   "line": "verdict=(\"UNMEASURED (N=180 absent)\" if not have180"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 7,
+   "line": "returns TWO hits at origin, so a naive absence check reports the erratum as STILL hedged.  In the"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 8,
+   "line": "same hour a fleet prompt-edit guard asserted the absence of a string its own approved replacement"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 16,
+   "line": "contains an absence check, so the denominator is visible and not chosen after the fact."
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 29,
+   "line": "(r\"\\bnot\\s+in\\b\", \"python `not in`\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 30,
+   "line": "(r\"\\.count\\([^)]*\\)\\s*==\\s*0\", \"python .count(...) == 0\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 31,
+   "line": "(r\"\\bnot\\s+re\\.(search|match|findall)\", \"python not re.search\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 33,
+   "line": "(r\"grep\\s+-[a-zA-Z]*v\", \"shell grep -v\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 34,
+   "line": "(r\"!\\s*grep\", \"shell ! grep\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 35,
+   "line": "(r\"grep\\s+-[a-zA-Z]*q[^|]*\\|\\|\", \"shell grep -q ||\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 37,
+   "line": "(r\"\\[\\s*!\\s*-e\", \"shell [ ! -e ]\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 38,
+   "line": "(r\"\\[\\s*-e\\b\", \"shell [ -e ] (file existence)\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 39,
+   "line": "(r\"\\babsen(t|ce)\\b\", \"self-declared absence check\"),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 41,
+   "line": "# a matched line is WORDING-absence (the C4-vulnerable class) only if the thing it looks for is a"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 49,
+   "line": "# on the real corpus, because the planted set contained no `print(\"... absence ...\")` line: a KAT"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 59,
+   "line": "# indicators (a file test, a zero comparison, the word \"absence\") need control flow to count."
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 61,
+   "line": "STRONG = (\"python `not in`\", \"python .count(...) == 0\", \"python not re.search\","
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 62,
+   "line": "\"python not .find(\", \"shell grep -v\", \"shell ! grep\", \"shell grep -q ||\")"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 69,
+   "line": "'absence', or a regex in a data table, is not a check no matter what words it contains.\"\"\""
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 111,
+   "line": "\"structural absence (file, key, flag, count) -- correction hygiene cannot \""
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 118,
+   "line": "('if \"not quite right\" not in open(f).read(): ok()', True),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 119,
+   "line": "('assert text.count(\"the framing is not quite right\") == 0', True),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 120,
+   "line": "('grep -v \"this wording is now superseded\" file', True),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 121,
+   "line": "('[ -e \"the file we must not have yet\" ] && fail', False),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 122,
+   "line": "('if key not in d: raise', False),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 123,
+   "line": "('[ -e \"$f\" ] || continue', False),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 124,
+   "line": "('if x not in (1, 2, 3): fail()', False),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 125,
+   "line": "('miss=$((miss+1)); [ \"$present\" -eq 0 ]', False),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 129,
+   "line": "('    (r\"\\\\babsen(t|ce)\\\\b\", \"self-declared absence check\"),', None),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 130,
+   "line": "('# c55 asserted the absence of \"the framing is not quite right\"', None),"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 152,
+   "line": "\"/shared/bin/memfile-alarm.sh\", \"/shared/bin/absence-claim.sh\"):"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 199,
+   "line": "\"matched line -- not an absence claim about the file.\")"
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 225,
+   "line": "print(\"DENOMINATOR: %d files, %d lines; %d files carry at least one absence check\""
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "line_no": 227,
+   "line": "print(\"AUDITED: %d absence/negative checks; VULNERABLE to correction hygiene: %d\""
+  },
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "line_no": 129,
+   "line": "\"`'nu' not in d['rungs'][0] or 'lobe_min_ratio' not in d['rungs'][0]`. The rule \""
+  },
+  {
+   "file": "data/c56/m2_c56_prelaunch_absence.sh",
+   "line_no": 6,
+   "line": "# PATTERNS and counted \"absent patterns\", so when a pattern matched nothing bash left the literal"
+  },
+  {
+   "file": "data/c56/m2_c56_prelaunch_absence.sh",
+   "line_no": 14,
+   "line": "# So `m2_c56_scores.json` and `m2_c56_regression.json`, both absent, were reported PRESENT and the"
+  },
+  {
+   "file": "data/c56/m2_c56_prelaunch_absence.sh",
+   "line_no": 15,
+   "line": "# gate said FAIL before a single cell had run.  c55's version had `[ -e \"$f\" ]` and was immune; my"
+  },
+  {
+   "file": "/shared/bin/stampnow.sh",
+   "line_no": 333,
+   "line": "# was absent from exactly the mode that needed it. An honest caveat that cannot fire is not a caveat."
+  },
+  {
+   "file": "/shared/bin/memfile-audit.py",
+   "line_no": 313,
+   "line": "print(\"\\n!! = this section is BELOW the auto-load cutoff. It is not in your context.\")"
+  },
+  {
+   "file": "/shared/bin/memfile-audit.py",
+   "line_no": 427,
+   "line": "# rc 3 = the canary itself is absent. Deliberately non-zero: every existing caller treats"
+  },
+  {
+   "file": "/shared/bin/memfile-alarm.sh",
+   "line_no": 58,
+   "line": "# A ceiling nobody can breach loudly is not a ceiling. Optional and backward-compatible: absent"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 2,
+   "line": "# absence-claim.sh \u2014 you may not publish \"X does not exist\" without a POSITIVE CONTROL."
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 20,
+   "line": "#    An absence claim needs its own positive control \u2014 search for something I KNOW is there,"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 28,
+   "line": "# (this file) already covers the absence-shaped claim with a corpus and a positive control, and"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 36,
+   "line": "# half was NOT: before today, a corpus of 1 file certified an absence as confidently as a corpus of"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 41,
+   "line": "# that is NO DATA (rc 3), not an absence. It is the caller's assertion about scope, which is the"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 49,
+   "line": "#   absence-claim.sh --needle <pattern> --control <pattern-known-present> --corpus <dir> [--name N]"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 52,
+   "line": "#   Runs the SAME command shape twice: once for the thing you claim is absent, once for a thing"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 57,
+   "line": "#                           Safe to publish the absence, WITH the printed denominator beside it."
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 58,
+   "line": "#   1  PRESENT            \u2014 the needle was found. Your absence claim is false. (This is the win.)"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 89,
+   "line": "echo \"PRESENT \u2014 '$needle' found in $n file(s). The absence claim is FALSE. Do not publish it.\""
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 92,
+   "line": "# P2 residue: a reduction over a THINNED corpus reported as PASS is not an absence claim."
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 106,
+   "line": "echo \"Publishable as an absence, WITH this denominator ($files files) stated beside it.\""
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 123,
+   "line": "# THE DECISIVE ARM: the control is absent too => the search shape is broken => never 0."
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 135,
+   "line": "# The corpus holds 2 files. The caller declares it expected 6. A true absence over a corpus"
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 136,
+   "line": "# one third the declared scope is NOT an absence claim. Before today this returned 0."
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "line_no": 152,
+   "line": "echo \"SELFTEST: GREEN \u2014 8 arms; ARM 3 proves a broken search shape cannot certify an absence,\""
+  }
+ ],
+ "pass1_note": "PASS 1 of this tool counted 101 matches and called 30 of them vulnerable; most were its own regex table and its own print statements. The planted KAT passed 8/8 while the detector was wrong on the real corpus. Recorded, not deleted: a KAT tests the ANTECEDENT, the population must be derived by MEASUREMENT.",
+ "vulnerable_to_correction_hygiene": 0,
+ "vulnerable_detail": [],
+ "classifier_kat": {
+  "rows": [
+   {
+    "line": "if \"not quite right\" not in open(f).read(): ok()",
+    "expected": true,
+    "got": true,
+    "agree": true
+   },
+   {
+    "line": "assert text.count(\"the framing is not quite right\") == 0",
+    "expected": true,
+    "got": true,
+    "agree": true
+   },
+   {
+    "line": "grep -v \"this wording is now superseded\" file",
+    "expected": true,
+    "got": true,
+    "agree": true
+   },
+   {
+    "line": "[ -e \"the file we must not have yet\" ] && fail",
+    "expected": false,
+    "got": false,
+    "agree": true
+   },
+   {
+    "line": "if key not in d: raise",
+    "expected": false,
+    "got": false,
+    "agree": true
+   },
+   {
+    "line": "[ -e \"$f\" ] || continue",
+    "expected": false,
+    "got": false,
+    "agree": true
+   },
+   {
+    "line": "if x not in (1, 2, 3): fail()",
+    "expected": false,
+    "got": false,
+    "agree": true
+   },
+   {
+    "line": "miss=$((miss+1)); [ \"$present\" -eq 0 ]",
+    "expected": false,
+    "got": false,
+    "agree": true
+   },
+   {
+    "line": "nothing negative here at all",
+    "expected": null,
+    "got": null,
+    "agree": true
+   },
+   {
+    "line": "    print(\"PRE-LAUNCH ABSENCE: nothing of the run exists yet\")",
+    "expected": null,
+    "got": null,
+    "agree": true
+   },
+   {
+    "line": "    (r\"\\babsen(t|ce)\\b\", \"self-declared absence check\"),",
+    "expected": null,
+    "got": null,
+    "agree": true
+   },
+   {
+    "line": "# c55 asserted the absence of \"the framing is not quite right\"",
+    "expected": null,
+    "got": null,
+    "agree": true
+   }
+  ],
+  "passed": true,
+  "note": "planted inputs, not real ones: a KAT built from your own data would have passed under the defect (c54)"
+ },
+ "live_test_on_our_own_corrected_erratum": {
+  "file": "8211090684_2026-09-08T2315Z_machine2-ERRATUM-28-c53-letter-sec7-ragged-tail-46-should-be-47-four-banked-tail-values-and-one-P4-violation-row-corrected-no-verdict-and-no-headline-moves.md",
+  "hits_of_the_superseded_wording": 2,
+  "hits_of_the_corrected_wording": 1,
+  "naive_absence_check_would_say": "STILL HEDGED (false positive)",
+  "reading": "The superseded wording is PRESENT because the repair preserved and marked it, which is correct practice. Any check of the form 'the hedge is gone' reports failure on a correctly repaired file. The check that works asks whether every occurrence is MARKED, which is a positive claim about the matched line -- not an absence claim about the file."
+ },
+ "files": [
+  {
+   "file": "data/c53/m2_c53_block_VERBATIM_COPY_of_c51_nodes.py",
+   "lines": 412,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c53/m2_c53_prelaunch_absence.sh",
+   "lines": 31,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c53/m2_c53_score.py",
+   "lines": 322,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c53/m2_c53_seal_verify.sh",
+   "lines": 18,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c53/m2_c53_spectrum.py",
+   "lines": 335,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/m2_c54_prelaunch_absence.sh",
+   "lines": 12,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c54/m2_c54_repro_fix.py",
+   "lines": 114,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/m2_c54_score.SEALED_v1.py",
+   "lines": 478,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/m2_c54_score.py",
+   "lines": 540,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/m2_c54_score_binfix.py",
+   "lines": 64,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/m2_c54_spectrum.py",
+   "lines": 149,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c54/zc.py",
+   "lines": 20,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c55/m2_c55_copyproof.py",
+   "lines": 137,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c55/m2_c55_detector_ceiling.py",
+   "lines": 113,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c55/m2_c55_prelaunch_absence.sh",
+   "lines": 12,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c55/m2_c55_repro_fix.py",
+   "lines": 134,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c55/m2_c55_score.py",
+   "lines": 568,
+   "absence_checks": 3
+  },
+  {
+   "file": "data/c55/m2_c55_score_jointfix.py",
+   "lines": 141,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c55/m2_c55_spectrum.py",
+   "lines": 151,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c55/m2_c55_storage_test.py",
+   "lines": 140,
+   "absence_checks": 1
+  },
+  {
+   "file": "data/c55/m2_c55_storage_test_h1fix.py",
+   "lines": 92,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c55/m2_c55_zerocount.py",
+   "lines": 47,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c56/m2_c56_absence_audit.py",
+   "lines": 238,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c56/m2_c56_census_audit.py",
+   "lines": 163,
+   "absence_checks": 1
+  },
+  {
+   "file": "data/c56/m2_c56_prelaunch_absence.sh",
+   "lines": 30,
+   "absence_checks": 2
+  },
+  {
+   "file": "data/c56/m2_c56_spectrum.py",
+   "lines": 176,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c56/m2_c56_storage_law.py",
+   "lines": 118,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c56/m2_c56_window_choice.py",
+   "lines": 63,
+   "absence_checks": 0
+  },
+  {
+   "file": "data/c56/m2_c56_zerocount.py",
+   "lines": 23,
+   "absence_checks": 0
+  },
+  {
+   "file": "/shared/bin/stampnow.sh",
+   "lines": 386,
+   "absence_checks": 6
+  },
+  {
+   "file": "/shared/bin/stampwrite.sh",
+   "lines": 84,
+   "absence_checks": 1
+  },
+  {
+   "file": "/shared/bin/memfile-audit.py",
+   "lines": 435,
+   "absence_checks": 0
+  },
+  {
+   "file": "/shared/bin/memfile-alarm.sh",
+   "lines": 224,
+   "absence_checks": 1
+  },
+  {
+   "file": "/shared/bin/absence-claim.sh",
+   "lines": 181,
+   "absence_checks": 5
+  }
+ ]
+}

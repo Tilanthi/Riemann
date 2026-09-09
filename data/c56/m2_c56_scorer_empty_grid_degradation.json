@@ -1,0 +1,44 @@
+{
+ "cycle": 56,
+ "window": {
+  "x": 42,
+  "dps": 300,
+  "gl": 9,
+  "R": 15,
+  "N": [
+   100,
+   180
+  ],
+  "store_sf": 120
+ },
+ "retired_windows_refused_by_this_grader": [
+  22,
+  25
+ ],
+ "registered_column": {
+  "I": 16,
+  "X": 13,
+  "A": 12,
+  "S": 15,
+  "L": 12,
+  "Z": 28
+ },
+ "registered_margins": {
+  "I": 0.088,
+  "X": 0.41,
+  "A": 0.255,
+  "S": 0.099,
+  "L": 0.329,
+  "Z": 0.405
+ },
+ "depth_legend": {
+  "completeness_certified_prefix": "c50's COMPLETENESS certificate: with R rungs of each sector the pooled ORDER is certified only at or below T = min(top_even, top_odd). It licenses the ORDER, not the values.",
+  "n_control_trusted_depth": "the N-CONTROL trusted depth (c53 P6): 2*min(sector rungs whose node count agrees between N=100 and N=180) - 1. It licenses the NODE COUNTS, and it is the depth a claim is scored over. Conservative by >= 1 level by construction.",
+  "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
+ },
+ "inputs": {
+  "N100_present": false,
+  "N180_present": false
+ },
+ "VERDICT": "UNMEASURED -- the N=100 node cells do not exist"
+}

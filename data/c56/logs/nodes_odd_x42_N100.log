@@ -1,0 +1,2 @@
+REBINDING: out_dir -> /shared/rh-exchange-repo/Riemann/data/c56 ; STORE_SF 40 -> 120
+  odd  rung 1  log10lam=-142.94581707872 rel_resid=9.815908045e-159 adm=True  nu=None refine=456  lobe=2.407e-54  sturm=1   delta=None stable=False
