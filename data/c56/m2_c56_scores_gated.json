@@ -1,0 +1,382 @@
+{
+ "cycle": 56,
+ "window": {
+  "x": 42,
+  "dps": 300,
+  "gl": 9,
+  "R": 15,
+  "store_sf": 120
+ },
+ "erratum": "against our own prereg sec 7: it forbade QUOTING the untrusted index and that is not enough. Section 0's own reason is that the author SEEING it is what spends a window. This sibling refuses to COMPUTE it.",
+ "trust_gate": {
+  "passed": false,
+  "depth": 0,
+  "detail": {
+   "even": {
+    "agreed_sector_rungs": 0,
+    "compared": 15,
+    "first_disagreement": {
+     "rung": 1,
+     "N100": null,
+     "N180": null
+    }
+   },
+   "odd": {
+    "agreed_sector_rungs": 0,
+    "compared": 15,
+    "first_disagreement": {
+     "rung": 1,
+     "N100": null,
+     "N180": null
+    }
+   }
+  },
+  "holes": 39,
+  "registered_floor": 16
+ },
+ "planted_control": {
+  "assertion_1_gate_admits_a_sufficient_cell": {
+   "gate_passed": true,
+   "depth": 29,
+   "verdict": "FIRES -- the gate is not a blanket refusal"
+  },
+  "assertion_2_p2_is_computed_when_the_gate_passes": {
+   "p2_computed": 9,
+   "expected": 9,
+   "verdict": "FIRES -- p2 = 9 as planted"
+  },
+  "note": "conjuncts reported separately: a compound verdict blamed the wrong one on run 1"
+ },
+ "p1_p2_p3": "NOT COMPUTED",
+ "pooled_delta_sequence": "NOT COMPUTED",
+ "VERDICT": "UNMEASURED at x=42 -- the N-control trusted depth is 0 against a registered floor of 16, so no model is scored, and p2 is NOT COMPUTED rather than merely not quoted. x=42 is left UNSPENT for a future cycle.",
+ "instrument": {
+  "M1": {
+   "registered": "no rung with lobe_min_ratio in [1e-45, 1e-35] at STORE_SF=120",
+   "hits": [],
+   "verdict": "HELD",
+   "firing_world": "non-empty: 15 rungs of c55 sat in exactly this band at STORE_SF=40"
+  },
+  "M2": {
+   "registered": "every rung of every x=42 cell is stable (nu is not None)",
+   "holes": [
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 1,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.07503e-54"
+    },
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 2,
+     "nu": null,
+     "stable": false,
+     "lobe": "9.21326e-55"
+    },
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 3,
+     "nu": null,
+     "stable": false,
+     "lobe": "9.71134e-54"
+    },
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 4,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.85391e-54"
+    },
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 5,
+     "nu": null,
+     "stable": false,
+     "lobe": "6.71951e-54"
+    },
+    {
+     "N": 100,
+     "parity": "even",
+     "rung": 6,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.53389e-54"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 1,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.4074e-54"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 2,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.38226e-54"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 3,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.23627e-52"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 4,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.11346e-51"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 5,
+     "nu": null,
+     "stable": false,
+     "lobe": "7.95475e-53"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 6,
+     "nu": null,
+     "stable": false,
+     "lobe": "5.57124e-52"
+    },
+    {
+     "N": 100,
+     "parity": "odd",
+     "rung": 7,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.18713e-51"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 1,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.20524e-55"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 2,
+     "nu": null,
+     "stable": false,
+     "lobe": "9.419e-55"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 3,
+     "nu": null,
+     "stable": false,
+     "lobe": "6.66087e-55"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 4,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.76281e-53"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 5,
+     "nu": null,
+     "stable": false,
+     "lobe": "8.07443e-54"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 6,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.14806e-54"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 7,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.86001e-53"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 8,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.15298e-53"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 9,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.56159e-53"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 10,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.37178e-53"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 11,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.45542e-52"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 12,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.62685e-52"
+    },
+    {
+     "N": 180,
+     "parity": "even",
+     "rung": 13,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.14613e-53"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 1,
+     "nu": null,
+     "stable": false,
+     "lobe": "5.5832e-55"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 2,
+     "nu": null,
+     "stable": false,
+     "lobe": "7.12067e-55"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 3,
+     "nu": null,
+     "stable": false,
+     "lobe": "6.24329e-54"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 4,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.06058e-53"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 5,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.07686e-54"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 6,
+     "nu": null,
+     "stable": false,
+     "lobe": "7.99591e-54"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 7,
+     "nu": null,
+     "stable": false,
+     "lobe": "5.68806e-54"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 8,
+     "nu": null,
+     "stable": false,
+     "lobe": "6.27545e-53"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 9,
+     "nu": null,
+     "stable": false,
+     "lobe": "7.69869e-52"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 10,
+     "nu": null,
+     "stable": false,
+     "lobe": "1.80406e-52"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 11,
+     "nu": null,
+     "stable": false,
+     "lobe": "2.60369e-51"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 12,
+     "nu": null,
+     "stable": false,
+     "lobe": "9.49601e-53"
+    },
+    {
+     "N": 180,
+     "parity": "odd",
+     "rung": 14,
+     "nu": null,
+     "stable": false,
+     "lobe": "3.02835e-50"
+    }
+   ],
+   "verdict": "REFUTED",
+   "note": "registered in advance as the more fragile of the two"
+  },
+  "rungs_examined": 60
+ },
+ "what_the_author_has_seen": "the per-sector node counts of the STABLE rungs (printed by the run logs) and every lobe ratio. NOT p2: with the bottom rungs unmeasured the pooled ladder has no prefix to count from, so p2 is not derivable from what has been seen. The raw node artefacts are committed and DO contain the values; any future cycle scoring x=42 must say so and treat it as at most SEMI-BLIND."
+}

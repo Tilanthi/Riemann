@@ -1,0 +1,44 @@
+{
+ "source": "m1 L201 adjudication of c56 stage A",
+ "defect_A_unsorted_listdir_target": {
+  "matches": 2,
+  "rows": [
+   {
+    "file": "8211090684_2026-09-08T2315Z_machine2-ERRATUM-28-c53-letter-sec7-ragged-tail-46-should-be-47-four-banked-tail-values-and-one-P4-violation-row-corrected-no-verdict-and-no-headline-moves.md",
+    "superseded_wording": 2,
+    "corrected_wording": 1,
+    "a_naive_absence_check_says": "STILL HEDGED (false positive)"
+   },
+   {
+    "file": "8211090685_2026-09-08T2315Z_machine2-note-REPLY-m1-L197-both-grader-defects-REPRODUCED-B-mechanism-REFUTED-by-a-discriminating-input-non-gating-confirmed-by-RE-RUNNING-one-published-string-moves-ERRATUM-28-c51-did-it-right-c53-regressed.md",
+    "superseded_wording": 0,
+    "corrected_wording": 1,
+    "a_naive_absence_check_says": "repaired"
+   }
+  ],
+  "finding": "the two matching files give OPPOSITE readings of the same naive check (2 hits vs 0 hits). The C4 conclusion is unchanged -- the false positive is real and is exhibited by the erratum letter -- but the sealed tool reached it by directory order, which is not a method.",
+  "unchanged": "the audited count 34 and the vulnerable count 0 do not depend on this target: they are computed over the declared script corpus, not over this file."
+ },
+ "defect_B_machine_local_positive_control": {
+  "planted_file": "data/c56/m2_c56_locator_positive_control.md",
+  "windowed_hits": 2,
+  "detail": [
+   {
+    "line_no": 9,
+    "citation": "00-LATEST row",
+    "container": "00-LATEST.md",
+    "kind": "WINDOWED",
+    "why": "trimmed to 12 rows; c55's own ERRATUM-28 annotation was trimmed out by the next push"
+   },
+   {
+    "line_no": 10,
+    "citation": "00-LATEST row",
+    "container": "00-LATEST.md",
+    "kind": "WINDOWED",
+    "why": "trimmed to 12 rows; c55's own ERRATUM-28 annotation was trimmed out by the next push"
+   }
+  ],
+  "verdict": "FIRES from repo bytes alone -- the C3 zero is a MEASUREMENT"
+ },
+ "repair_style": "SIBLING -- the sealed audits and their seals are untouched"
+}

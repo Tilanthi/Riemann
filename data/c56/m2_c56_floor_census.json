@@ -1,0 +1,78 @@
+{
+ "regimes": [
+  {
+   "regime": "c55: STORE_SF=40 (storage binds)",
+   "files": [
+    "m2_c55_nodes_even_x22_N100_dps300.json",
+    "m2_c55_nodes_even_x22_N180_dps300.json",
+    "m2_c55_nodes_even_x25_N100_dps300.json",
+    "m2_c55_nodes_even_x25_N180_dps300.json",
+    "m2_c55_nodes_odd_x22_N100_dps300.json",
+    "m2_c55_nodes_odd_x22_N180_dps300.json",
+    "m2_c55_nodes_odd_x25_N100_dps300.json",
+    "m2_c55_nodes_odd_x25_N180_dps300.json"
+   ],
+   "binding_floor": "STORE_SF = 40",
+   "floor_decades": -40,
+   "unstable": 15,
+   "stable": 89,
+   "unstable_min": 2.84436e-43,
+   "unstable_max": 4.59992e-05,
+   "unstable_median_log10": -41.13,
+   "unstable_max_log10": -4.34,
+   "stable_min": 0.00340916,
+   "stable_below_the_unstable_max": [],
+   "populations_disjoint": true
+  },
+  {
+   "regime": "c56: STORE_SF=120, detector dps=50 (working precision binds)",
+   "files": [
+    "m2_c56_nodes_even_x42_N100_dps300.json",
+    "m2_c56_nodes_even_x42_N180_dps300.json",
+    "m2_c56_nodes_odd_x42_N100_dps300.json",
+    "m2_c56_nodes_odd_x42_N180_dps300.json"
+   ],
+   "binding_floor": "mp.dps = 50 inside c53 nodes()",
+   "floor_decades": -50,
+   "unstable": 39,
+   "stable": 21,
+   "unstable_min": 3.20524e-55,
+   "unstable_max": 3.02835e-50,
+   "unstable_median_log10": -52.97,
+   "unstable_max_log10": -49.52,
+   "stable_min": 5.94092e-53,
+   "stable_below_the_unstable_max": [
+    5.94092e-53,
+    6.6413e-53
+   ],
+   "populations_disjoint": false
+  }
+ ],
+ "cluster_tracks_the_floor": {
+  "statistic": "MEDIAN log10 of the unstable lobe ratios (the MAX is dominated by the single c55 outlier at 4.6e-5, which is a TOLERANCE effect, not a floor effect -- c55's own H4)",
+  "criterion": "|median log10 - (-floor_decades)| <= 5 decades",
+  "at_store_sf_40": {
+   "median_log10": -41.13,
+   "floor": -40,
+   "within_5": true
+  },
+  "at_dps_50": {
+   "median_log10": -52.97,
+   "floor": -50,
+   "within_5": true
+  },
+  "disclosure_of_a_defect_in_this_very_file": "the first version of this verdict tested only that both numbers were NOT None, so it could print CONFIRMED for any values whatever -- a VACUOUS gate, caught by reading its own output against the numbers above it. Recorded, not deleted.",
+  "verdict": "CONFIRMED at both floors"
+ },
+ "domain_rule_test": {
+  "claim_under_test": "m1 L200 sec 7 / our own c55 letter: a rung whose lobe_min_ratio falls below the stored resolution is OUTSIDE the detector's domain",
+  "disjoint_at_store_sf_40": true,
+  "disjoint_at_dps_50": false,
+  "stable_rungs_inside_the_unstable_range_at_dps_50": [
+   5.94092e-53,
+   6.6413e-53
+  ],
+  "verdict": "REFUTED AS A PREDICATE: at the dps=50 floor the two populations OVERLAP -- stable rungs sit inside the unstable range -- so lobe_min_ratio does not decide domain membership. The disjointness c55 saw at STORE_SF=40 was a property of a 38-decade gap between the storage floor and the true lobes, not a property of the quantity."
+ },
+ "what_still_works": "the `stable` flag itself: DISAGREEMENT BETWEEN THE TOLERANCE KNOBS. It is a property of the reading, not of a number derived from the same contaminated reconstruction, so it does not go circular at the floor."
+}

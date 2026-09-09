@@ -1,1 +1,17 @@
 REBINDING: out_dir -> /shared/rh-exchange-repo/Riemann/data/c56 ; STORE_SF 40 -> 120
+  even rung 1  log10lam=-191.33517950144 rel_resid=1.751029005e-109 adm=True  nu=None refine=1284 lobe=3.205e-55  sturm=0   delta=None stable=False
+  even rung 2  log10lam=-182.50025998154 rel_resid=2.249087728e-118 adm=True  nu=None refine=720  lobe=9.419e-55  sturm=2   delta=None stable=False
+  even rung 3  log10lam=-174.29819418943 rel_resid=2.013775969e-126 adm=True  nu=None refine=1044 lobe=6.661e-55  sturm=4   delta=None stable=False
+  even rung 4  log10lam=-166.56145863039 rel_resid=3.833539646e-134 adm=True  nu=None refine=488  lobe=1.763e-53  sturm=6   delta=None stable=False
+  even rung 5  log10lam=-159.50765773813 rel_resid=3.91974685e-141 adm=True  nu=None refine=372  lobe=8.074e-54  sturm=8   delta=None stable=False
+  even rung 6  log10lam=-152.31890085310 rel_resid=4.359333445e-148 adm=True  nu=None refine=490  lobe=1.148e-54  sturm=10  delta=None stable=False
+  even rung 7  log10lam=-145.85955420334 rel_resid=7.310162956e-155 adm=True  nu=None refine=424  lobe=1.86e-53   sturm=12  delta=None stable=False
+  even rung 8  log10lam=-139.41309809696 rel_resid=3.599745153e-161 adm=True  nu=None refine=120  lobe=1.153e-53  sturm=14  delta=None stable=False
+  even rung 9  log10lam=-133.27749584826 rel_resid=3.82560096e-167 adm=True  nu=None refine=166  lobe=3.562e-53  sturm=16  delta=None stable=False
+  even rung 10 log10lam=-127.35672795764 rel_resid=3.357546957e-173 adm=True  nu=None refine=174  lobe=2.372e-53  sturm=18  delta=None stable=False
+  even rung 11 log10lam=-121.52938108029 rel_resid=5.124055097e-179 adm=True  nu=None refine=140  lobe=1.455e-52  sturm=20  delta=None stable=False
+  even rung 12 log10lam=-116.06481037346 rel_resid=1.388039008e-184 adm=True  nu=None refine=62   lobe=1.627e-52  sturm=22  delta=None stable=False
+  even rung 13 log10lam=-110.42431900157 rel_resid=6.11798471e-190 adm=True  nu=None refine=53   lobe=3.146e-53  sturm=24  delta=None stable=False
+  even rung 14 log10lam=-105.20785355933 rel_resid=3.905760748e-195 adm=True  nu=48   refine=50   lobe=5.941e-53  sturm=26  delta=22   stable=True
+  even rung 15 log10lam=-100.04941004383 rel_resid=1.982190662e-200 adm=True  nu=52   refine=52   lobe=0.03928    sturm=28  delta=24   stable=True
+wrote m2_c56_nodes_even_x42_N180_dps300.json  3013.6s
