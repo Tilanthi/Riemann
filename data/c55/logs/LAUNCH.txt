@@ -1,2 +1,3 @@
 LAUNCH stage A (x=22 and x=25 spectra, 8 cells) + G0-REPRO 2026-09-09T02:18:07Z -- after prereg push c51163f (verified at origin)
 LAUNCH stage B nodes x=22 and x=25, N=100 and N=180, R=13 (8 cells), after stage-A push 2420ca3, 2026-09-09T02:32:25Z
+LAUNCH storage test (STORE_SF 40->120, even x=22 N=100, R=3) after addendum+seal-3 push 0409177, 2026-09-09T03:25:42Z

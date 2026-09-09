@@ -1,0 +1,22 @@
+{
+ "gate": "H1' -- sealed 40-s.f. values equal the 120-s.f. values rounded to 40 s.f.",
+ "sealed_file": "m2_c55_spec_even_x22_N100_dps300.json",
+ "hp_file": "m2_c55_hp_spec_even_x22_N100_dps300_sf120.json",
+ "registered_H1_as_written": {
+  "form": "bit-identical strings",
+  "result": "0/101 -> REFUTED",
+  "why": "STORE_SF is the PRINT WIDTH of lam, L and every coefficient, so raising it changes every string by construction; the gate tested the print, not the computation",
+  "law": "c37: a print format is an instrument -- and this time it was my own gate"
+ },
+ "compared_values": 10302,
+ "mismatches": 0,
+ "mismatch_detail": [],
+ "verdict": "HELD",
+ "mutation_control": {
+  "planted": "one digit of rungs[0].lam in the hp file",
+  "mismatches_without": 0,
+  "mismatches_with": 1,
+  "fires": true
+ },
+ "reading": "the two runs are the SAME computation stored at two widths: 10302 values compared (101 eigenvalues + 101x101 coefficients), 0 mismatches."
+}

@@ -1,0 +1,99 @@
+{
+ "parity": "even",
+ "x": 22,
+ "N": 100,
+ "dps": 300,
+ "dim": 101,
+ "L": "3.09104245335831585347917569942330586789720698829767242933924771862396724588293142868091803499905347895671720690870868426",
+ "R": 3,
+ "rungs": [
+  {
+   "rung": 1,
+   "lam": "2.93736492092664585951482065394666880247871661371346551022868901782042173036419152763858813993572894215887155128595213638e-103",
+   "log10": "-102.53204209593553847",
+   "rel_residual": "2.648359636e-198",
+   "admitted": true,
+   "counts": {
+    "1201_0.0": 0,
+    "1201_1.0e-8": 0,
+    "1201_0.0001": 0,
+    "4001_0.0": 0,
+    "4001_1.0e-8": 0,
+    "4001_0.0001": 0,
+    "12001_0.0": 0,
+    "12001_1.0e-8": 0,
+    "12001_0.0001": 0
+   },
+   "stable": true,
+   "nu": 0,
+   "nu_refine_48001": 0,
+   "lobe_min_ratio": "1.0",
+   "sturm": 0,
+   "delta": 0,
+   "parity_T_ok": true
+  },
+  {
+   "rung": 2,
+   "lam": "3.91362376943096146212890411517003997741818384058040887375145226451353217882460477365790627446491821019754925775437066942e-95",
+   "log10": "-94.407420926944157021",
+   "rel_residual": "1.74358798e-206",
+   "admitted": true,
+   "counts": {
+    "1201_0.0": 2,
+    "1201_1.0e-8": 2,
+    "1201_0.0001": 2,
+    "4001_0.0": 2,
+    "4001_1.0e-8": 2,
+    "4001_0.0001": 2,
+    "12001_0.0": 2,
+    "12001_1.0e-8": 2,
+    "12001_0.0001": 2
+   },
+   "stable": true,
+   "nu": 2,
+   "nu_refine_48001": 2,
+   "lobe_min_ratio": "0.703095",
+   "sturm": 2,
+   "delta": 0,
+   "parity_T_ok": true
+  },
+  {
+   "rung": 3,
+   "lam": "1.07705641430159758283937379672564332844298277278659293604786827923720698094766661809730525343271550187120420615561185552e-87",
+   "log10": "-86.967761548532818026",
+   "rel_residual": "6.513933663e-214",
+   "admitted": true,
+   "counts": {
+    "1201_0.0": 4,
+    "1201_1.0e-8": 4,
+    "1201_0.0001": 4,
+    "4001_0.0": 4,
+    "4001_1.0e-8": 4,
+    "4001_0.0001": 4,
+    "12001_0.0": 4,
+    "12001_1.0e-8": 4,
+    "12001_0.0001": 4
+   },
+   "stable": true,
+   "nu": 4,
+   "nu_refine_48001": 4,
+   "lobe_min_ratio": "0.293256",
+   "sturm": 4,
+   "delta": 0,
+   "parity_T_ok": true
+  }
+ ],
+ "seconds": 331.02351474761963,
+ "source": "m2_c55_hp_spec_even_x22_N100_dps300_sf120.json",
+ "detector": "IMPORTED from data/c51/m2_c51_nodes.py (not copied)",
+ "resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c55",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ },
+ "label": "REGISTERED (cycle 53 prereg) -- STAGE B: node counts"
+}

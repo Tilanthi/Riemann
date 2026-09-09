@@ -1,0 +1,159 @@
+{
+ "cell": {
+  "parity": "even",
+  "x": 22,
+  "N": 100,
+  "dps": 300,
+  "gl": 9,
+  "R": 3,
+  "store_sf": 120
+ },
+ "H1_eigenvalues_bit_identical": {
+  "compared": 101,
+  "identical": 0,
+  "all_identical": false,
+  "coef_sf_sealed": 41,
+  "coef_sf_hp": 121,
+  "verdict": "REFUTED"
+ },
+ "H2_unstable_rungs_become_stable": {
+  "unstable_at_sf40": [
+   1,
+   2
+  ],
+  "now_stable": [
+   1,
+   2
+  ],
+  "still_unstable": [],
+  "verdict": "HELD"
+ },
+ "H3_stabilised_counts_equal_the_zero_tolerance_counts": {
+  "rows": [
+   {
+    "rung": 1,
+    "predicted": 2,
+    "measured": 0,
+    "agree": false
+   },
+   {
+    "rung": 2,
+    "predicted": 4,
+    "measured": 2,
+    "agree": false
+   }
+  ],
+  "verdict": "REFUTED"
+ },
+ "H0_control_already_stable_rungs_unmoved": {
+  "rows": [
+   {
+    "rung": 3,
+    "sf40": 4,
+    "sf120": 4,
+    "agree": true
+   }
+  ],
+  "verdict": "HELD",
+  "why": "CONTROL: a rung that was already stable must not move. If widening storage moved a settled count, the storage width was load-bearing where we thought it was not and every published node count would be in question."
+ },
+ "rows": [
+  {
+   "rung": 1,
+   "nu_at_sf40": null,
+   "stable_at_sf40": false,
+   "nu_at_sf120": 0,
+   "stable_at_sf120": true,
+   "lobe_min_ratio": "1.70629e-41",
+   "counts_sf40": {
+    "1201_0.0": 2,
+    "1201_1.0e-8": 0,
+    "1201_0.0001": 0,
+    "4001_0.0": 2,
+    "4001_1.0e-8": 0,
+    "4001_0.0001": 0,
+    "12001_0.0": 2,
+    "12001_1.0e-8": 0,
+    "12001_0.0001": 0
+   },
+   "counts_sf120": {
+    "1201_0.0": 0,
+    "1201_1.0e-8": 0,
+    "1201_0.0001": 0,
+    "4001_0.0": 0,
+    "4001_1.0e-8": 0,
+    "4001_0.0001": 0,
+    "12001_0.0": 0,
+    "12001_1.0e-8": 0,
+    "12001_0.0001": 0
+   },
+   "zero_tol_count_sf40": 2,
+   "refine_sf40": 2
+  },
+  {
+   "rung": 2,
+   "nu_at_sf40": null,
+   "stable_at_sf40": false,
+   "nu_at_sf120": 2,
+   "stable_at_sf120": true,
+   "lobe_min_ratio": "3.01399e-41",
+   "counts_sf40": {
+    "1201_0.0": 4,
+    "1201_1.0e-8": 2,
+    "1201_0.0001": 2,
+    "4001_0.0": 4,
+    "4001_1.0e-8": 2,
+    "4001_0.0001": 2,
+    "12001_0.0": 4,
+    "12001_1.0e-8": 2,
+    "12001_0.0001": 2
+   },
+   "counts_sf120": {
+    "1201_0.0": 2,
+    "1201_1.0e-8": 2,
+    "1201_0.0001": 2,
+    "4001_0.0": 2,
+    "4001_1.0e-8": 2,
+    "4001_0.0001": 2,
+    "12001_0.0": 2,
+    "12001_1.0e-8": 2,
+    "12001_0.0001": 2
+   },
+   "zero_tol_count_sf40": 4,
+   "refine_sf40": 4
+  },
+  {
+   "rung": 3,
+   "nu_at_sf40": 4,
+   "stable_at_sf40": true,
+   "nu_at_sf120": 4,
+   "stable_at_sf120": true,
+   "lobe_min_ratio": "0.293256",
+   "counts_sf40": {
+    "1201_0.0": 4,
+    "1201_1.0e-8": 4,
+    "1201_0.0001": 4,
+    "4001_0.0": 4,
+    "4001_1.0e-8": 4,
+    "4001_0.0001": 4,
+    "12001_0.0": 4,
+    "12001_1.0e-8": 4,
+    "12001_0.0001": 4
+   },
+   "counts_sf120": {
+    "1201_0.0": 4,
+    "1201_1.0e-8": 4,
+    "1201_0.0001": 4,
+    "4001_0.0": 4,
+    "4001_1.0e-8": 4,
+    "4001_0.0001": 4,
+    "12001_0.0": 4,
+    "12001_1.0e-8": 4,
+    "12001_0.0001": 4
+   },
+   "zero_tol_count_sf40": 4,
+   "refine_sf40": 4
+  }
+ ],
+ "verdict": "MIXED -- read the individual hypotheses"
+}

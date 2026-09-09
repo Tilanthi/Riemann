@@ -1,0 +1,5 @@
+REBINDING: HERE/specname/nodename -> data/c55 hp names ; STORE_SF 40 -> 120
+  even rung 1  log10lam=-102.53204209593 rel_resid=2.648359636e-198 adm=True  nu=0    refine=0    lobe=1.0        sturm=0   delta=0    stable=True
+  even rung 2  log10lam=-94.407420926944 rel_resid=1.74358798e-206 adm=True  nu=2    refine=2    lobe=0.7031     sturm=2   delta=0    stable=True
+  even rung 3  log10lam=-86.967761548532 rel_resid=6.513933663e-214 adm=True  nu=4    refine=4    lobe=0.2933     sturm=4   delta=0    stable=True
+wrote m2_c55_hp_nodes_even_x22_N100_dps300_sf120.json  331.0s

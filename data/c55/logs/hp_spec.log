@@ -1,0 +1,3 @@
+REBINDING: HERE/specname/nodename -> data/c55 hp names ; STORE_SF 40 -> 120
+SELF-TEST vs None: depths None (CEILING None s.f.)
+wrote m2_c55_hp_spec_even_x22_N100_dps300_sf120.json  dim=101 build=176.6s eigsy=20.1s total=198.0s
