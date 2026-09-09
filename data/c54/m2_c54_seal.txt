@@ -1,0 +1,12 @@
+# CYCLE 54 SEAL -- sha256 of the preregistration and every registered instrument.
+# Pushed in the SAME commit as the bytes it seals (ERRATUM 25). Never appended to.
+# Verify:  cd data/c54 && sha256sum -c <(grep -v '^#' m2_c54_seal.txt)
+b4272c356840930753bc95cfdeb8eb7e93037b5e2d939507db3e64a8a492bc92  m2_c54_prereg.md
+862096810c1c3a05f79c3d1ab2393698061bce81675e3e812f6f58cddfcd35b1  m2_c54_spectrum.py
+4681186a80d3f2b457d1fe34b4ca18821e065846563daee32681304346f710b3  m2_c54_prelaunch_absence.sh
+2ffa349b32f27ab73a5a7fee8ca02e052d84f4809a86d8f8996af337aabebe6b  m2_c54_prelaunch_absence.out
+# imported, unmodified, sealed by reference (their own cycles sealed the bytes):
+98f7bf50b2da8ad9ce386fe591cfc348a7dbf064d62d05791f38794bbe11b95a  ../c53/m2_c53_spectrum.py
+3a75c9615a085769ee5a9cf479b0b3dc36316d6d5f42c12b490ce6c83d24d8cf  ../c53/m2_c53_score.py
+109a6e3a8dcc82b49850baa906ec38864e85e52b0714e0a30e396096173c6581  ../c51/m2_c51_nodes.py
+2eec491c8ee81c5c0fc4ef11da314956de4544ca097aaf1f21633243e06d9e59  ../c46/c46_parity.py
