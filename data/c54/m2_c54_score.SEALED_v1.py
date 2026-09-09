@@ -330,61 +330,13 @@ def regression(scratch):
 # ------------------------------------------------------------------ the x=17 scorecard
 DPS, GL, X = 300, 9, 17
 
-# ---------------------------------------------------------------------------------------------
-# AMENDMENT 1 (m1's witness observation (b), adopted BEFORE any x=17 node count existed; see
-# m2_c54_prereg_addendum_1.md and m2_c54_score.SEALED_v1.py + its diff).
-# 🔴 THE POINT: the prereg REGISTERED RULES that are functions of the zero count n and of log x,
-# and then PRINTED their n=32 instances.  A scorer that hardcodes the printed bins is scoring the
-# instances, not the rules -- so a re-measurement that moved a bin would look like a broken
-# registration instead of the rule firing.  The models are therefore evaluated HERE from the
-# MEASURED n (m2_c54_zerocount.json, bracketing ordinates published) and from log x, and the
-# printed bins are carried alongside as a CHECK that must agree.
-# Direction check (m1's discipline): this amendment cannot move a bin at the measured n -- proved
-# by the n-sweep printed in the output -- and it can only ADD a way for the cycle to report a
-# discrepancy.  It removes no failure mode.
-# `round` here is HALF-UP, matching the prereg's arithmetic; Python's built-in round() is
-# banker's rounding and would send 4.5 to 4 and 10.5 to 10.  No registered value is a tie, and
-# the sweep prints the margins.
-# ---------------------------------------------------------------------------------------------
-from math import log as _log, floor as _floor
-
-P1_ONSET = 6                      # the registered universal onset; p2 = onset + plateau length
-
-
-def _round_half_up(v):
-    return int(_floor(float(v) + 0.5))
-
-
-def model_values(x, n):
-    """The REGISTERED RULES, evaluated. Returns {name: dict(p2=..., live=..., rule=...)}."""
-    L13, L19 = _log(13.0), _log(19.0)
-    lx = _log(float(x))
-    return {
-        "L": dict(p2=P1_ONSET + _round_half_up(4 * lx / L13), live=True,
-                  rule="p2 = 6 + round(4*log x / log 13)",
-                  raw=4 * lx / L13),
-        "I": dict(p2=_round_half_up(10 + (n - 21) / (38 - 21)), live=True,
-                  rule="p2 = round(10 + (n-21)/(38-21)), n MEASURED",
-                  raw=10 + (n - 21) / (38 - 21)),
-        "X": dict(p2=_round_half_up(10 + (lx - L13) / (L19 - L13)), live=True,
-                  rule="p2 = round(10 + (log x - log 13)/(log 19 - log 13))",
-                  raw=10 + (lx - L13) / (L19 - L13)),
-        "Z": dict(p2=P1_ONSET + _round_half_up(4.0 * n / 21), live=False,
-                  rule="p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=19",
-                  raw=4.0 * n / 21),
-        "G": dict(p2=None, live=False, raw=None,
-                  rule="gap turnaround, computed at STAGE A -- REFUTED at x=19")}
-
-
-PRINTED_BINS = {"L": 10, "I": 11, "X": 11, "Z": 12}     # the prereg's n=32 instances, as printed
-
-
-def measured_n(x):
-    """n from m2_c54_zerocount.json -- MEASURED, with its bracketing ordinates published."""
-    fn = os.path.join(HERE, "m2_c54_zerocount.json")
-    if not os.path.exists(fn):
-        return None
-    return json.load(open(fn))["counts"][str(x)]["n"]
+# the registered models, verbatim from m2_c54_prereg.md section 3. LIVE vs CONTROL is part of the
+# registration: Z and G were already refuted at x=19 and are not scored as live models.
+MODELS = {"L": dict(p2=10, live=True,  rule="length = round(4*log x / log 13) = round(4.41835) = 4"),
+          "I": dict(p2=11, live=True,  rule="p2 = 10 + (n-21)/(38-21) = 10.647"),
+          "X": dict(p2=11, live=True,  rule="p2 = 10 + (log x - log 13)/(log 19 - log 13) = 10.707"),
+          "Z": dict(p2=12, live=False, rule="length = round(4n/21) = round(6.0952) = 6 -- REFUTED at x=19"),
+          "G": dict(p2=None, live=False, rule="gap turnaround, computed at STAGE A -- REFUTED at x=19")}
 
 
 def _nodefiles(N):
@@ -443,20 +395,6 @@ def score():
 
     # ---- P2: the target
     p2 = _first_leave(seq, 2)
-    n_meas = measured_n(X)
-    MODELS = model_values(X, n_meas if n_meas is not None else 32)
-    sweep = {str(nn): {k: v["p2"] for k, v in model_values(X, nn).items() if v["p2"] is not None}
-             for nn in range(29, 37)}
-    bin_check = {k: dict(rule_value=MODELS[k]["p2"], printed_in_prereg=PRINTED_BINS[k],
-                         agree=bool(MODELS[k]["p2"] == PRINTED_BINS[k]),
-                         raw=MODELS[k]["raw"]) for k in PRINTED_BINS}
-    S["measured_zero_count_n"] = n_meas
-    S["rule_vs_printed_bin"] = bin_check
-    S["n_sweep_of_the_rules"] = sweep
-    S["amendment_1"] = ("models evaluated from the MEASURED n and log x, not from the prereg's "
-                        "printed instances (m1 witness observation (b)); the printed bins are "
-                        "carried as a check that must agree, and the n-sweep shows where a "
-                        "re-measurement would have moved one.")
     bins = {}
     for k, m in MODELS.items():
         if m["p2"] is not None:

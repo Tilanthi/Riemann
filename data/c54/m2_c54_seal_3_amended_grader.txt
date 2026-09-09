@@ -1,0 +1,12 @@
+# CYCLE 54 SEAL 3 -- the AMENDED grader (v2) + addendum 1. SIBLING of seals 1 and 2; neither is appended to.
+# Seal 2 now reports m2_c54_score.py FAILED. That is the correct output of a working seal:
+#   v1 bytes are committed as m2_c54_score.SEALED_v1.py and the diff as m2_c54_score_v1_to_v2.diff.
+# x=17 node cells in existence when this seal was written: 0
+41a4dfe1b13bac86e4ad84d5e5af7bfb9a3c69ec737427ef2bd379564137e5c1  m2_c54_score.py
+409e431e20f4a598f56de0b2712e05dc0ac6f4003cdf8e30a8d5e1232277654c  m2_c54_score.SEALED_v1.py
+9c8bd0bb3ec6b21b683a4c73e445eae839d34ea8b6b5660da66f6fa9044f825b  m2_c54_score_v1_to_v2.diff
+e36437ed6f8b9e5ebee8f6dea8540f16ce84f60e7f8b179beecd91c8ebcab9b4  m2_c54_prereg_addendum_1.md
+548e96c292509d7f816a92fa4fa5e36428bc7ea99a1b4d5afa76cce4798283f0  m2_c54_zerocount.json
+f1cf52c9785e4f6e262e5a9c4052e2f1ea3c1328ab2f0312b42b9a6b6a4eeb8b  m2_c54_repro_fix.py
+67ea19e2f84f8a42a01c79ba29dcdfab63b76dfbb8ae771b9bad0aad4504bb14  m2_c54_repro_gate.json
+2d5b9403e8c297e337a57d4c328bbc42537af1605805fbb1eb3c5ec805a0af96  m2_c54_repro_gate_fixed.json
