@@ -1,0 +1,600 @@
+--- ../c54/m2_c54_score.py	2026-09-09 00:35:11.330450841 +0000
++++ m2_c55_score.py	2026-09-09 02:20:40.091530471 +0000
+@@ -1,5 +1,13 @@
+ #!/usr/bin/env python3
+-"""m2_c54_score.py -- cycle 54's grader: the REMEDY, and the scorer for the x=17 window.
++"""m2_c55_score.py -- cycle 55's grader: the scorer for TWO windows, x = 22 and x = 25.
++
++x = 25 is the extrapolation SEALED UNRUN in c54's prereg (ef19ac5) and is OPENED here.  x = 22 is
++added because x = 25 cannot discriminate models I and X and x = 22 can, at identical cost.  The
++JOINT criterion on the pair (p2(22), p2(25)) is the cycle's discriminating instrument; see
++m2_c55_prereg.md sections 3-5.  Derived from data/c54/m2_c54_score.py; the diff is shipped as
++m2_c55_score_from_c54.diff and the c54 regression arm is deliberately not carried.
++
++THE REMEDY THIS FILE INHERITS
+ 
+ THE DEFECT THIS FILE EXISTS TO END
+ ----------------------------------
+@@ -27,10 +35,9 @@
+ MEASUREMENT, and reported beside the Decimal order rather than assumed equal.
+ 
+ usage:
+-  m2_c54_score.py kat_na       remedy item 3
+-  m2_c54_score.py fixture_d    remedy item 4
+-  m2_c54_score.py regression   R3 + R4 (needs a scratch copy; see --scratch)
+-  m2_c54_score.py score        the x=17 scorecard -> m2_c54_scores.json
++  m2_c55_score.py kat_na       remedy item 3
++  m2_c55_score.py fixture_d    remedy item 4
++  m2_c55_score.py score        both scorecards + the JOINT criterion -> m2_c55_scores.json
+ """
+ import json, os, sys, subprocess, shutil, glob
+ from decimal import Decimal
+@@ -117,7 +124,7 @@
+ 
+ # ------------------------------------------------------------------ REMEDY 3: planted KAT
+ def kat_na():
+-    """A PLANTED NON-ALTERNATING pooled ladder on which the c53 formula and the c54 formula MUST
++    """A PLANTED NON-ALTERNATING pooled ladder on which the c53 formula and the c55 formula MUST
+     differ.  Firing world non-empty BY CONSTRUCTION, and the expected divergence is written down
+     here, in the source, before the run.
+ 
+@@ -142,10 +149,10 @@
+     for i, r in enumerate(plant):
+         p = i + 1
+         c53_formula = r["nu"] - sturm(r["par"], r["m"])
+-        c54_formula = r["nu"] - (p - 1)
++        c55_formula = r["nu"] - (p - 1)
+         rows.append(dict(p=p, parity=r["par"], sector_rung=r["m"], nu=r["nu"],
+-                         c53_sector_delta=c53_formula, c54_pooled_delta=c54_formula,
+-                         differ=bool(c53_formula != c54_formula)))
++                         c53_sector_delta=c53_formula, c55_pooled_delta=c55_formula,
++                         differ=bool(c53_formula != c55_formula)))
+     got = dict(rows=len(rows), disagreements=sum(1 for r in rows if r["differ"]),
+                at=[r["p"] for r in rows if r["differ"]])
+     # control: the SAME test on an ALTERNATING pool must show ZERO disagreement
+@@ -162,7 +169,7 @@
+                note="POSITIVE arm: a non-alternating pool, where the c53 shortcut is wrong at 3 of 4 "
+                     "rows. NEGATIVE arm (the control): an alternating pool, where it is wrong at 0 "
+                     "of 4 -- which is exactly why four cycles of alternating data never showed it.")
+-    json.dump(out, open(os.path.join(HERE, "m2_c54_kat_na.json"), "w"), indent=1)
++    json.dump(out, open(os.path.join(HERE, "m2_c55_kat_na.json"), "w"), indent=1)
+     print("KAT-NA: expected %s measured %s ; alternating control fires %d -> %s"
+           % (expected, got, ctrl_fires, out["verdict"]))
+     return 0 if ok else 1
+@@ -184,7 +191,7 @@
+         if not os.path.exists(f):
+             print("FIXTURE-D UNMEASURED: %s absent" % os.path.basename(f))
+             json.dump(dict(verdict="UNMEASURED", missing=os.path.basename(f)),
+-                      open(os.path.join(HERE, "m2_c54_fixture_d.json"), "w"), indent=1)
++                      open(os.path.join(HERE, "m2_c55_fixture_d.json"), "w"), indent=1)
+             return 1
+     tmp = os.path.join(HERE, "_fixture_d_tmp")
+     os.makedirs(tmp, exist_ok=True)
+@@ -209,7 +216,7 @@
+                     "different on purpose: the certificate is unchanged at %d while the N-control "
+                     "depth falls from %d to %d. Any grader that prints one for the other fails here."
+                     % (cert, depth_full, depth_trunc))
+-    json.dump(out, open(os.path.join(HERE, "m2_c54_fixture_d.json"), "w"), indent=1)
++    json.dump(out, open(os.path.join(HERE, "m2_c55_fixture_d.json"), "w"), indent=1)
+     shutil.rmtree(tmp, ignore_errors=True)
+     print("FIXTURE-D: certificate %s ; N-control full %s -> truncated %s (expected 7) -> %s"
+           % (cert, depth_full, depth_trunc, out["verdict"]))
+@@ -217,127 +224,23 @@
+ 
+ 
+ 
+-# ------------------------------------------------------------------ R3 + R4: the regression
+-def _flatten(o, path="", out=None):
+-    if out is None:
+-        out = {}
+-    if isinstance(o, dict):
+-        for k in o:
+-            _flatten(o[k], path + "/" + str(k), out)
+-    elif isinstance(o, list):
+-        for i, v in enumerate(o):
+-            _flatten(v, path + "[%d]" % i, out)
+-    else:
+-        out[path] = o
+-    return out
+-
+-
+-def _viol_key(r):
+-    """the identity of a P4 violation ROW, independent of where the list happens to put it."""
+-    return (r.get("x"), r.get("N"), r.get("p"), r.get("why"))
+-
+-
+-def _leafdiff_positional(a, b):
+-    """CONVENTION A (m1's): leaves aligned by POSITION, so a list that grows shifts everything
+-    after the insertion point."""
+-    fa, fb = _flatten(a), _flatten(b)
+-    keys = set(fa) | set(fb)
+-    return sorted(k for k in keys if fa.get(k, "<<absent>>") != fb.get(k, "<<absent>>"))
+-
+-
+-def _leafdiff_keyaligned(a, b):
+-    """CONVENTION B (machine 2's): identical to A except that P4's `violations` rows are matched by
+-    their identifying key (x, N, p, why) instead of by list index, so an inserted row is counted as
+-    an ADDITION and the rows after it are not counted as changes."""
+-    a2, b2 = json.loads(json.dumps(a)), json.loads(json.dumps(b))
+-    for d in (a2, b2):
+-        v = d.get("P4", {}).get("violations")
+-        if isinstance(v, list):
+-            d["P4"]["violations"] = {json.dumps(_viol_key(r)): r for r in v}
+-    return _leafdiff_positional(a2, b2)
+-
+-
+-def regression(scratch):
+-    """R3: KAT first -- the UNPATCHED sealed c53 grader must reproduce the banked scores exactly.
+-    Only then is the patched run evidence about the DEFECT rather than about the harness.
+-    R4: the 45-vs-48 leaf count, under BOTH conventions, each printed with its definition."""
+-    banked = json.load(open(os.path.join(C53, "m2_c53_scores.json")))
+-    sc53 = os.path.join(scratch, "c53")
+-    grader = os.path.join(sc53, "m2_c53_score.py")
+-    if not os.path.exists(grader):
+-        raise SystemExit("scratch copy missing: %s" % grader)
+-    # --- KAT: unpatched
+-    subprocess.run([sys.executable, grader], cwd=sc53, check=True, stdout=subprocess.DEVNULL)
+-    unpatched = json.load(open(os.path.join(sc53, "m2_c53_scores.json")))
+-    kat_ok = (json.dumps(unpatched, sort_keys=True) == json.dumps(banked, sort_keys=True))
+-    # --- the one-line patch, applied to the SCRATCH copy only
+-    src = open(grader).read()
+-    assert src.count("delta=r[4]") == 1, "the defect line is not where c53 left it"
+-    open(grader, "w").write(src.replace("delta=r[4]", "delta=r[3] - i"))
+-    subprocess.run([sys.executable, grader], cwd=sc53, check=True, stdout=subprocess.DEVNULL)
+-    patched = json.load(open(os.path.join(sc53, "m2_c53_scores.json")))
+-    # --- verdicts
+-    def verdicts(d):
+-        return {k: v.get("verdict") for k, v in d.items() if isinstance(v, dict) and "verdict" in v}
+-    vb, vp = verdicts(banked), verdicts(patched)
+-    same_verdicts = (vb == vp)
+-    posit = _leafdiff_positional(banked, patched)
+-    keyal = _leafdiff_keyaligned(banked, patched)
+-    def bucket(keys):
+-        b = {}
+-        for k in keys:
+-            top = k.split("/")[1] if k.startswith("/") else k
+-            b[top] = b.get(top, 0) + 1
+-        return b
+-    out = dict(
+-        R3_kat_unpatched_reproduces_banked=bool(kat_ok),
+-        verdict_count=len(vb), verdicts_identical=bool(same_verdicts),
+-        verdicts_banked=vb, verdicts_patched=vp,
+-        R4_leaf_counts=dict(
+-            convention_A_positional=dict(
+-                count=len(posit), by_top_key=bucket(posit),
+-                definition="leaves aligned by POSITION; a list that grows shifts every leaf after "
+-                           "the insertion point, so re-valued and displaced leaves are both counted "
+-                           "(m1's convention)"),
+-            convention_B_key_aligned=dict(
+-                count=len(keyal), by_top_key=bucket(keyal),
+-                definition="identical, except P4.violations rows are matched by their identity "
+-                           "(x, N, p, why); an inserted row is an ADDITION and the rows after it are "
+-                           "not counted as changes (machine 2's convention)")),
+-        differing_leaf_paths_positional=posit,
+-        differing_leaf_paths_key_aligned=keyal,
+-        headline_values=dict(
+-            p2=patched.get("P1", {}).get("p2"), occupied_bin=patched.get("P1", {}).get("occupied_bin"),
+-            survivors=patched.get("P1", {}).get("survivors"),
+-            p3=patched.get("P3", {}).get("p3"),
+-            violations_banked=len(banked.get("P4", {}).get("violations", [])),
+-            violations_patched=len(patched.get("P4", {}).get("violations", []))),
+-        depth_legend=DEPTH_LEGEND,
+-        note="the scratch copy is disposable; data/c53 is never written by this gate. A count "
+-             "travels with its convention (trap #154): neither number is 'the' answer alone.")
+-    json.dump(out, open(os.path.join(HERE, "m2_c54_regression.json"), "w"), indent=1)
+-    print("R3 KAT (unpatched reproduces banked): %s" % ("PASS" if kat_ok else "FAIL"))
+-    print("R3 verdicts identical: %s (%d verdicts)" % (same_verdicts, len(vb)))
+-    print("R4 leaf counts: convention A (positional) = %d ; convention B (key-aligned) = %d"
+-          % (len(posit), len(keyal)))
+-    print("   A by key: %s" % bucket(posit))
+-    print("   B by key: %s" % bucket(keyal))
+-    print("   violations rows %s -> %s" % (out["headline_values"]["violations_banked"],
+-                                           out["headline_values"]["violations_patched"]))
+-    return 0 if (kat_ok and same_verdicts) else 1
+-
+-
+-# ------------------------------------------------------------------ the x=17 scorecard
+-DPS, GL, X = 300, 9, 17
++# NOTE: cycle 54's R3+R4 regression arm (the ERRATUM-28 re-score of c53's banked scores and
++# the 45-vs-48-vs-49 leaf-count settlement) is DELIBERATELY NOT CARRIED HERE.  It was a gate
++# about c53's artefacts and it discharged in c54; shipping it under a c55 name would be an
++# unrun instrument wearing this cycle's label.  See m2_c55_score_from_c54.diff.
++
++# ------------------------------------------------------------------ the x=22 and x=25 scorecards
++DPS, GL = 300, 9
++WINDOWS = (22, 25)                # x=25 = c54's SEALED extrapolation; x=22 = the discriminator
+ 
+ # ---------------------------------------------------------------------------------------------
+ # AMENDMENT 1 (m1's witness observation (b), adopted BEFORE any x=17 node count existed; see
+-# m2_c54_prereg_addendum_1.md and m2_c54_score.SEALED_v1.py + its diff).
++# m2_c55_prereg_addendum_1.md and m2_c55_score.SEALED_v1.py + its diff).
+ # 🔴 THE POINT: the prereg REGISTERED RULES that are functions of the zero count n and of log x,
+ # and then PRINTED their n=32 instances.  A scorer that hardcodes the printed bins is scoring the
+ # instances, not the rules -- so a re-measurement that moved a bin would look like a broken
+ # registration instead of the rule firing.  The models are therefore evaluated HERE from the
+-# MEASURED n (m2_c54_zerocount.json, bracketing ordinates published) and from log x, and the
++# MEASURED n (m2_c55_zerocount.json, bracketing ordinates published) and from log x, and the
+ # printed bins are carried alongside as a CHECK that must agree.
+ # Direction check (m1's discipline): this amendment cannot move a bin at the measured n -- proved
+ # by the n-sweep printed in the output -- and it can only ADD a way for the cycle to report a
+@@ -346,7 +249,7 @@
+ # banker's rounding and would send 4.5 to 4 and 10.5 to 10.  No registered value is a tie, and
+ # the sweep prints the margins.
+ # ---------------------------------------------------------------------------------------------
+-from math import log as _log, floor as _floor
++from math import log as _log, floor as _floor, sqrt as _sqrt
+ 
+ P1_ONSET = 6                      # the registered universal onset; p2 = onset + plateau length
+ 
+@@ -356,39 +259,56 @@
+ 
+ 
+ def model_values(x, n):
+-    """The REGISTERED RULES, evaluated. Returns {name: dict(p2=..., live=..., rule=...)}."""
++    """The REGISTERED RULES, evaluated at the MEASURED n and at log x. Zero free parameters.
++
++    live=True means NOT YET REFUTED at any published window.  L died at x=17 (said 10, measured 11)
++    and Z died at x=17 and x=19; they are carried as CONTROLS, because a refuted model that suddenly
++    hits would say the refutation was window-specific.  S and A are registered at c55 (weaker than
++    L/I/X/Z's cross-cycle c54 seal, and labelled `sealed_at`).
++    """
+     L13, L19 = _log(13.0), _log(19.0)
+     lx = _log(float(x))
++    def m(p2, raw, live, rule, sealed_at):
++        return dict(p2=p2, raw=raw, live=live, rule=rule, sealed_at=sealed_at,
++                    rounding_margin=abs(raw - (_floor(raw) + 0.5)) if raw is not None else None)
+     return {
+-        "L": dict(p2=P1_ONSET + _round_half_up(4 * lx / L13), live=True,
+-                  rule="p2 = 6 + round(4*log x / log 13)",
+-                  raw=4 * lx / L13),
+-        "I": dict(p2=_round_half_up(10 + (n - 21) / (38 - 21)), live=True,
+-                  rule="p2 = round(10 + (n-21)/(38-21)), n MEASURED",
+-                  raw=10 + (n - 21) / (38 - 21)),
+-        "X": dict(p2=_round_half_up(10 + (lx - L13) / (L19 - L13)), live=True,
+-                  rule="p2 = round(10 + (log x - log 13)/(log 19 - log 13))",
+-                  raw=10 + (lx - L13) / (L19 - L13)),
+-        "Z": dict(p2=P1_ONSET + _round_half_up(4.0 * n / 21), live=False,
+-                  rule="p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=19",
+-                  raw=4.0 * n / 21),
+-        "G": dict(p2=None, live=False, raw=None,
+-                  rule="gap turnaround, computed at STAGE A -- REFUTED at x=19")}
+-
+-
+-PRINTED_BINS = {"L": 10, "I": 11, "X": 11, "Z": 12}     # the prereg's n=32 instances, as printed
++        "L": m(P1_ONSET + _round_half_up(4 * lx / L13), 4 * lx / L13, False,
++               "p2 = 6 + round(4*log x / log 13)  -- REFUTED at x=17", "c54"),
++        "I": m(_round_half_up(10 + (n - 21) / (38 - 21)), 10 + (n - 21) / (38 - 21), True,
++               "p2 = round(10 + (n-21)/(38-21)), n MEASURED", "c54"),
++        "X": m(_round_half_up(10 + (lx - L13) / (L19 - L13)), 10 + (lx - L13) / (L19 - L13), True,
++               "p2 = round(10 + (log x - log 13)/(log 19 - log 13))", "c54"),
++        "Z": m(P1_ONSET + _round_half_up(4.0 * n / 21), 4.0 * n / 21, False,
++               "p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=17 and x=19", "c54"),
++        "S": m(P1_ONSET + _round_half_up(4.0 * _sqrt(n / 21.0)), 4.0 * _sqrt(n / 21.0), True,
++               "p2 = 6 + round(4*sqrt(n/21)), n MEASURED -- NEW at c55", "c55"),
++        "A": m(P1_ONSET + _round_half_up(4.0 * _log(n) / _log(21.0)), 4.0 * _log(n) / _log(21.0), True,
++               "p2 = 6 + round(4*log n / log 21), n MEASURED -- NEW at c55", "c55"),
++        "G": dict(p2=None, live=False, raw=None, rounding_margin=None, sealed_at="c54",
++                  rule="gap turnaround, computed at STAGE A -- REFUTED at x=17 and x=19")}
++
++
++# The prereg's PRINTED instances, per window.  x=25's row is c54's SEALED column, opened here.
++PRINTED_BINS = {22: {"L": 11, "I": 12, "X": 11, "Z": 15, "S": 12, "A": 11},
++                25: {"L": 11, "I": 12, "X": 12, "Z": 17, "S": 13, "A": 11}}
++SEALED_AT_C54 = {"L": 11, "I": 12, "X": 12, "Z": 17}      # the x=25 column, verbatim from ef19ac5
++# The JOINT signatures declared in the prereg, on the pair (p2(22), p2(25)).
++JOINT_SIGNATURES = {"A": (11, 11), "X": (11, 12), "I": (12, 12), "S": (12, 13),
++                    "L": (11, 11), "Z": (15, 17)}
++REGISTERED_TAIL = [4, 2, 2, 3, 1]        # P8: plateau lengths l3..l7
++REGISTERED_VALUES = [0, 2, 6, 10, 8, 16, 12]   # P9: the first seven plateau VALUES
+ 
+ 
+ def measured_n(x):
+-    """n from m2_c54_zerocount.json -- MEASURED, with its bracketing ordinates published."""
+-    fn = os.path.join(HERE, "m2_c54_zerocount.json")
++    """n from m2_c55_zerocount.json -- MEASURED, with its bracketing ordinates published."""
++    fn = os.path.join(HERE, "m2_c55_zerocount.json")
+     if not os.path.exists(fn):
+         return None
+     return json.load(open(fn))["counts"][str(x)]["n"]
+ 
+ 
+-def _nodefiles(N):
+-    return {p: os.path.join(HERE, "m2_c54_nodes_%s_x%d_N%d_dps%d.json" % (p, X, N, DPS))
++def _nodefiles(x, N):
++    return {p: os.path.join(HERE, "m2_c55_nodes_%s_x%d_N%d_dps%d.json" % (p, x, N, DPS))
+             for p in ("even", "odd")}
+ 
+ 
+@@ -399,18 +319,29 @@
+     return None
+ 
+ 
+-def score():
+-    S = dict(window=dict(x=X, dps=DPS, gl=GL, N=[100, 180]), depth_legend=DEPTH_LEGEND)
+-    n100, n180 = _nodefiles(100), _nodefiles(180)
++def plateaus(seq):
++    """[(value, length), ...] in pooled order."""
++    out = []
++    for v in seq:
++        if out and out[-1][0] == v:
++            out[-1][1] += 1
++        else:
++            out.append([v, 1])
++    return [(v, n) for v, n in out]
++
++
++def score_window(x):
++    """Everything that is a property of ONE window.  Returns the record; writes nothing."""
++    S = dict(window=dict(x=x, dps=DPS, gl=GL, N=[100, 180]), depth_legend=DEPTH_LEGEND)
++    n100, n180 = _nodefiles(x, 100), _nodefiles(x, 180)
+     have100 = all(os.path.exists(f) for f in n100.values())
+     have180 = all(os.path.exists(f) for f in n180.values())
+     S["inputs"] = dict(N100_present=have100, N180_present=have180,
+-                       files={k: os.path.basename(v) for k, v in list(n100.items()) + list(n180.items())})
++                       files={k: os.path.basename(v)
++                              for k, v in list(n100.items()) + list(n180.items())})
+     if not have100:
+         S["VERDICT"] = "UNMEASURED -- the N=100 node cells do not exist"
+-        json.dump(S, open(os.path.join(HERE, "m2_c54_scores.json"), "w"), indent=1)
+-        print("UNMEASURED: no N=100 node cells")
+-        return 2
++        return S
+ 
+     tab, cert, float_same = pooled_table(n100)
+     S["completeness_certified_prefix"] = cert
+@@ -422,41 +353,41 @@
+     S["sector_delta_field_would_have_given"] = [r["sector_delta_FROM_FILE"] for r in tab]
+     S["sort_index_vs_sector_field_agree"] = bool(seq == S["sector_delta_field_would_have_given"])
+ 
+-    if have180:
+-        depth, det = n_control_depth(n100, n180)
+-    else:
+-        depth, det = 0, dict(reason="N=180 cells absent")
++    depth, det = n_control_depth(n100, n180) if have180 else (0, dict(reason="N=180 cells absent"))
+     S["n_control_trusted_depth"] = depth
+     S["n_control_detail"] = det
+ 
+     def scored_over(p):
+-        """a prediction about pooled index p is scored only if p is inside the trusted depth."""
+         return p is not None and depth >= p
+ 
+-    # ---- P1: the onset
++    # ---- P1 onset (control, declared WEAK)
+     p1 = _first_leave(seq, 0)
+     S["P1"] = dict(measured_p1=p1, registered=6,
+                    verdict=("UNMEASURED (outside trust)" if not scored_over(p1)
+                             else ("HELD" if p1 == 6 else "REFUTED")),
+-                   confirmation_note="declared WEAK in advance: c51's onset held 8/8 across a 9.5x "
+-                                     "range of n, so a pass here is UNINFORMATIVE-if-passed.")
++                   confirmation_note="declared WEAK in advance: UNINFORMATIVE-if-passed.")
+ 
+-    # ---- P2: the target
++    # ---- P2 the target
+     p2 = _first_leave(seq, 2)
+-    n_meas = measured_n(X)
+-    MODELS = model_values(X, n_meas if n_meas is not None else 32)
+-    sweep = {str(nn): {k: v["p2"] for k, v in model_values(X, nn).items() if v["p2"] is not None}
+-             for nn in range(29, 37)}
+-    bin_check = {k: dict(rule_value=MODELS[k]["p2"], printed_in_prereg=PRINTED_BINS[k],
+-                         agree=bool(MODELS[k]["p2"] == PRINTED_BINS[k]),
+-                         raw=MODELS[k]["raw"]) for k in PRINTED_BINS}
++    n_meas = measured_n(x)
++    MODELS = model_values(x, n_meas)
++    bin_check = {k: dict(rule_value=MODELS[k]["p2"], printed_in_prereg=PRINTED_BINS[x][k],
++                         agree=bool(MODELS[k]["p2"] == PRINTED_BINS[x][k]),
++                         raw=MODELS[k]["raw"], rounding_margin=MODELS[k]["rounding_margin"])
++                 for k in PRINTED_BINS[x]}
+     S["measured_zero_count_n"] = n_meas
+     S["rule_vs_printed_bin"] = bin_check
++    S["rule_vs_printed_bin_all_agree"] = all(v["agree"] for v in bin_check.values())
++    if x == 25:
++        S["sealed_column_c54"] = dict(
++            sealed=SEALED_AT_C54,
++            rule_values_now={k: MODELS[k]["p2"] for k in SEALED_AT_C54},
++            agree=all(MODELS[k]["p2"] == SEALED_AT_C54[k] for k in SEALED_AT_C54),
++            note="c54's P8, sealed at ef19ac5 2026-09-09T00:17:40Z before x=17 was computed; "
++                 "OPENED and scored here, never re-derived.")
++    sweep = {str(nn): {k: v["p2"] for k, v in model_values(x, nn).items() if v["p2"] is not None}
++             for nn in range(max(n_meas - 4, 1), n_meas + 5)}
+     S["n_sweep_of_the_rules"] = sweep
+-    S["amendment_1"] = ("models evaluated from the MEASURED n and log x, not from the prereg's "
+-                        "printed instances (m1 witness observation (b)); the printed bins are "
+-                        "carried as a check that must agree, and the n-sweep shows where a "
+-                        "re-measurement would have moved one.")
+     bins = {}
+     for k, m in MODELS.items():
+         if m["p2"] is not None:
+@@ -468,61 +399,160 @@
+                    survivor_count=len(live_occ),
+                    refuted_live_models=[k for k, m in MODELS.items()
+                                         if m["live"] and m["p2"] is not None and m["p2"] != p2],
++                   knife_edge_occupants=[k for k in occupants
++                                         if (MODELS[k]["rounding_margin"] or 1) < 0.05],
+                    discrimination=("NONE -- more than one registered model names this bin"
+                                    if len(occupants) > 1 else
+                                    ("SINGLE OCCUPANT" if len(occupants) == 1 else
+-                                    "EMPTY BIN -- every registered model is refuted")),
++                                    "EMPTY BIN -- every registered model is refuted at this window")),
+                    verdict=("UNMEASURED (outside trust)" if not scored_over(p2) else "MEASURED"))
+ 
+-    # ---- P3: the size
++    # ---- P3 the size
+     inc = None if p2 is None or p2 > len(seq) else seq[p2 - 1] - 2
+     S["P3"] = dict(registered=4, measured_increment=inc,
+                    verdict=("UNMEASURED (outside trust)" if not scored_over(p2)
+                             else ("HELD" if inc == 4 else "REFUTED")))
+ 
+-    # ---- P4: p3 as an INVARIANCE
++    # ---- P4 the invariance
+     p3 = _first_leave(seq, 6)
+     S["P4"] = dict(registered=15, measured_p3=p3,
+                    verdict=("UNMEASURED (outside trust)" if not scored_over(p3)
+                             else ("HELD" if p3 == 15 else "REFUTED")),
+-                   note="registered as an INVARIANCE: p3 was 15 at BOTH x=13 and x=19 while p2 moved.")
++                   note="registered as an INVARIANCE: p3 = 15 at x = 13, 17 and 19 while p2 moved.")
+ 
+-    # ---- P5: the decrease
++    # ---- P5 the decrease
+     got = {p: (seq[p - 1] if p <= len(seq) else None) for p in (15, 16, 17)}
+     ok5 = (got[15] == 10 and got[16] == 10 and got[17] == 8)
+     S["P5"] = dict(registered=dict(p15=10, p16=10, p17=8), measured=got,
+                    verdict=("UNMEASURED (outside trust)" if depth < 17
+                             else ("HELD" if ok5 else "REFUTED")))
+ 
+-    # ---- P6: the N-control itself
+-    S["P6"] = dict(registered_floor=21, measured_depth=depth, detail=det,
++    # ---- P6 the N-control
++    S["P6"] = dict(registered_floor=23, measured_depth=depth, detail=det,
+                    verdict=("UNMEASURED (N=180 absent)" if not have180
+-                            else ("HELD" if depth >= 21 else "REFUTED")))
++                            else ("HELD" if depth >= 23 else "REFUTED")))
+ 
+-    # ---- P7: alternation through trust
++    # ---- P7 alternation through trust
+     order = S["pooled_parity_order_N100"][:max(depth, 0)]
+     alt = all(order[i] != order[i + 1] for i in range(len(order) - 1)) if len(order) > 1 else None
+     S["P7"] = dict(order_through_trust=order, depth=depth,
+                    verdict=("UNMEASURED" if not order else ("HELD" if alt else "REFUTED")))
+ 
+-    # ---- model G, from the stage-A file if it exists
+-    g = os.path.join(HERE, "m2_c54_gpred_x%d_N%d_dps%d.json" % (X, 100, DPS))
++    # ---- P8 plateau lengths (tail l3..l7 only: l1 is P1 and l2 is P2 restated)
++    pl = plateaus(seq)
++    lens = [n for _v, n in pl]
++    vals = [v for v, _n in pl]
++    inside = sum(lens[:7]) <= depth
++    tail = lens[2:7]
++    S["P8"] = dict(registered_tail_l3_to_l7=REGISTERED_TAIL, measured_tail=tail,
++                   all_lengths=lens[:8], reference_x17_x19=[5, 5, 4, 2, 2, 3, 1],
++                   reference_x13=[5, 4, 5, 2, 1, 3, 1],
++                   verdict=("UNMEASURED (the first seven plateaux reach past the trusted depth)"
++                            if not inside else ("HELD" if tail == REGISTERED_TAIL else "REFUTED")))
++
++    # ---- P9 plateau values
++    S["P9"] = dict(registered=REGISTERED_VALUES, measured=vals[:7],
++                   verdict=("UNMEASURED (outside trust)" if not inside
++                            else ("HELD" if vals[:7] == REGISTERED_VALUES else "REFUTED")))
++
++    # ---- P10 the eighth value, DIRECTION only, declared WEAK (outcome space 3)
++    eighth = vals[7] if len(vals) > 7 else None
++    eighth_inside = (sum(lens[:8]) <= depth) if len(lens) > 7 else False
++    S["P10"] = dict(registered="< 16 (direction only; 24/20/16 at x=13/17/19)",
++                    measured_eighth_value=eighth, reference=[24, 20, 16],
++                    verdict=("UNMEASURED (outside trust)" if not eighth_inside
++                             else ("HELD" if eighth < 16 else "REFUTED")),
++                    strength="WEAK by declaration: outcome space 3, worth one bit at most.")
++
++    # ---- P11 model G, from the stage-A file
++    g = os.path.join(HERE, "m2_c55_gpred_x%d_N%d_dps%d.json" % (x, 100, DPS))
+     if os.path.exists(g):
+         gd = json.load(open(g))
+         S["P2"]["models"]["G"]["p2"] = gd.get("model_G_p2")
+-        S["model_G_stageA"] = dict(p2=gd.get("model_G_p2"),
+-                                   first_local_min_index=gd.get("first_local_min_index"),
+-                                   first_local_max_after=gd.get("first_local_max_after"))
+-    json.dump(S, open(os.path.join(HERE, "m2_c54_scores.json"), "w"), indent=1)
+-    print("x=%d  certificate=%s  N-control trusted depth=%s" % (X, cert, depth))
+-    print("  pooled Delta (N=100): %s" % seq)
+-    print("  parity order        : %s" % S["pooled_parity_order_N100"])
+-    print("  p1=%s  p2=%s  size=%s  p3=%s" % (p1, p2, inc, p3))
+-    print("  occupants of bin %s: %s   live survivors: %s" % (p2, occupants, live_occ))
+-    for k in ("P1", "P3", "P4", "P5", "P6", "P7"):
+-        print("  %s: %s" % (k, S[k]["verdict"]))
+-    print("  sort-index vs sector-field agree: %s (float order == Decimal order: %s)"
+-          % (S["sort_index_vs_sector_field_agree"], float_same))
++        S["P11"] = dict(registered=10, measured=gd.get("model_G_p2"),
++                        first_local_min_index=gd.get("first_local_min_index"),
++                        first_local_max_after=gd.get("first_local_max_after"),
++                        verdict=("HELD" if gd.get("model_G_p2") == 10 else "REFUTED"),
++                        note="a prediction about the EIGENVALUE ladder alone, settled at stage A "
++                             "before any node count of this window existed.")
++        if gd.get("model_G_p2") is not None:
++            S["P2"]["bins"].setdefault(str(gd["model_G_p2"]), [])
++            if "G" not in S["P2"]["bins"][str(gd["model_G_p2"])]:
++                S["P2"]["bins"][str(gd["model_G_p2"])].append("G")
++            if gd["model_G_p2"] == p2 and "G" not in S["P2"]["occupants"]:
++                S["P2"]["occupants"].append("G")
++                S["P2"]["discrimination"] = ("NONE -- more than one registered model names this bin"
++                                             if len(S["P2"]["occupants"]) > 1
++                                             else S["P2"]["discrimination"])
++    else:
++        S["P11"] = dict(verdict="UNMEASURED -- no stage-A gpred artefact for this window")
++
++    # ---- the FORK, evaluated rather than narrated
++    l2 = (p2 - p1) if (p2 and p1) else None
++    l3 = (p3 - p2) if (p3 and p2) else None
++    S["FORK"] = dict(identity="p3 = 6 + l2 + l3 ; the p3=15 invariance IS l2 + l3 = 9",
++                     l2=l2, l3=l3, sum_l2_l3=(None if l2 is None or l3 is None else l2 + l3),
++                     invariance_holds=(None if l2 is None or l3 is None else (l2 + l3 == 9)),
++                     reading=("p2 moved and p3 stayed: the invariance absorbed the move"
++                              if (l2 is not None and l3 is not None and l2 + l3 == 9)
++                              else "the invariance did NOT absorb the move"))
++    return S
++
++
++def score():
++    """Both windows, then the JOINT criterion registered in the prereg."""
++    OUT = dict(cycle=55, windows={}, generated_by=os.path.basename(__file__))
++    for x in WINDOWS:
++        OUT["windows"][str(x)] = score_window(x)
++
++    pair = tuple(OUT["windows"][str(x)].get("P2", {}).get("measured_p2") for x in WINDOWS)
++    depths = {str(x): OUT["windows"][str(x)].get("n_control_trusted_depth") for x in WINDOWS}
++    both = all(v is not None for v in pair)
++    named = sorted(k for k, sig in JOINT_SIGNATURES.items() if both and tuple(sig) == pair)
++    live_named = [k for k in named if k in ("I", "X", "S", "A")]
++    if not both:
++        verdict = "UNMEASURED -- one or both windows did not produce p2 inside trust"
++    elif not named:
++        verdict = ("EVERY REGISTERED RULE REFUTED -- the measured pair %s matches no registered "
++                   "signature" % (pair,))
++    elif len(named) == 1:
++        verdict = "CONFIRMED: %s is the sole registered namer of the pair %s" % (named[0], pair)
++    else:
++        verdict = ("NO BANK -- the pair %s is named by more than one registered rule (%s); the "
++                   "strict criterion blocks a bank even when only one of them is live"
++                   % (pair, ", ".join(named)))
++    OUT["JOINT"] = dict(windows=list(WINDOWS), measured_pair=list(pair),
++                        signatures={k: list(v) for k, v in JOINT_SIGNATURES.items()},
++                        namers=named, live_namers=live_named, verdict=verdict,
++                        criterion="a model is CONFIRMED only if it names BOTH measured values and no "
++                                  "other REGISTERED model (live or refuted control) names both.",
++                        trusted_depths=depths)
++    json.dump(OUT, open(os.path.join(HERE, "m2_c55_scores.json"), "w"), indent=1)
++
++    for x in WINDOWS:
++        S = OUT["windows"][str(x)]
++        if "pooled_delta_N100" not in S:
++            print("x=%d: %s" % (x, S.get("VERDICT")))
++            continue
++        print("x=%d  certificate=%s  N-control trusted depth=%s"
++              % (x, S["completeness_certified_prefix"], S["n_control_trusted_depth"]))
++        print("  pooled Delta (N=100): %s" % S["pooled_delta_N100"])
++        print("  parity order        : %s" % S["pooled_parity_order_N100"])
++        print("  p1=%s p2=%s size=%s p3=%s   plateau lengths %s"
++              % (S["P1"]["measured_p1"], S["P2"]["measured_p2"], S["P3"]["measured_increment"],
++                 S["P4"]["measured_p3"], S["P8"]["all_lengths"]))
++        print("  occupants of bin %s: %s   live: %s   knife-edge: %s"
++              % (S["P2"]["occupied_bin"], S["P2"]["occupants"], S["P2"]["live_occupants"],
++                 S["P2"]["knife_edge_occupants"]))
++        print("  FORK: l2=%s l3=%s sum=%s invariance_holds=%s"
++              % (S["FORK"]["l2"], S["FORK"]["l3"], S["FORK"]["sum_l2_l3"],
++                 S["FORK"]["invariance_holds"]))
++        for k in ("P1", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10", "P11"):
++            print("    %s: %s" % (k, S.get(k, {}).get("verdict")))
++        if x == 25 and "sealed_column_c54" in S:
++            print("  SEALED c54 column agrees with the rules re-evaluated at measured n: %s"
++                  % S["sealed_column_c54"]["agree"])
++    print("JOINT: pair=%s -> %s" % (OUT["JOINT"]["measured_pair"], OUT["JOINT"]["verdict"]))
+     return 0
+ 
+ 
+@@ -532,8 +562,6 @@
+         sys.exit(kat_na())
+     if cmd == "fixture_d":
+         sys.exit(fixture_d())
+-    if cmd == "regression":
+-        sys.exit(regression(sys.argv[2]))
+     if cmd == "score":
+         sys.exit(score())
+     print(__doc__)

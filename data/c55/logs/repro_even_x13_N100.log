@@ -1,0 +1,16 @@
+REDIRECTION: {
+ "wrapper": "/shared/rh-exchange-repo/Riemann/data/c55/m2_c55_spectrum.py",
+ "c53_module": "/shared/rh-exchange-repo/Riemann/data/c53/m2_c53_spectrum.py",
+ "c53_dir": "/shared/rh-exchange-repo/Riemann/data/c53",
+ "out_dir": "/shared/rh-exchange-repo/Riemann/data/c55",
+ "redirected": true,
+ "inner_resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c55",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ }
+}

@@ -1,0 +1,11 @@
+# CYCLE 55 SEAL 2 -- the GRADER, sealed while ZERO node cells of either window exist.
+# The node-count grid is empty at this moment; the pre-launch absence tool's node pattern is checked below.
+# Verify:  cd data/c55 && sha256sum -c <(grep -v '^#' m2_c55_seal_2_grader.txt)
+f9643e6bfdefe746ad2b4dbf4e116eb6ffb5c31438a6b192811b59fba38f93bb  m2_c55_score.py
+6a621aedd7b36624e3a8c57bb8068705ba39ed613697032df43c72021a3b13b1  m2_c55_score_from_c54.diff
+091d1155aabb5410953556d2b574c799fd30998a57317798a12ea58925dd081b  m2_c55_kat_na.json
+2a5c63949beb9ba25103df2713ecdb327a10f538bd58f2db869ac1a11a7e2279  m2_c55_fixture_d.json
+8594f58dc4621af016d8ef5469e4e1480b0f391d0ebdd785b539a6744b17b11d  m2_c55_scorer_empty_grid_degradation.out
+# node cells present at seal time (must be 0): 0
+# spec cells present at seal time: 0
+# sealed 2026-09-09T02:21:05Z
