@@ -1,0 +1,580 @@
+{
+ "window": {
+  "x": 17,
+  "dps": 300,
+  "gl": 9,
+  "N": [
+   100,
+   180
+  ]
+ },
+ "depth_legend": {
+  "completeness_certified_prefix": "c50's COMPLETENESS certificate: with R rungs of each sector the pooled ORDER is certified only at or below T = min(top_even, top_odd). It licenses the ORDER, not the values.",
+  "n_control_trusted_depth": "the N-CONTROL trusted depth (c53 P6): 2*min(sector rungs whose node count agrees between N=100 and N=180) - 1. It licenses the NODE COUNTS, and it is the depth a claim is scored over. Conservative by >= 1 level by construction.",
+  "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
+ },
+ "inputs": {
+  "N100_present": true,
+  "N180_present": true,
+  "files": {
+   "even": "m2_c54_nodes_even_x17_N180_dps300.json",
+   "odd": "m2_c54_nodes_odd_x17_N180_dps300.json"
+  }
+ },
+ "completeness_certified_prefix": 23,
+ "float_order_equals_decimal_order": true,
+ "pooled_table_N100": [
+  {
+   "p": 1,
+   "parity": "even",
+   "sector_rung": 1,
+   "nu": 0,
+   "log10": "-79.545729286719433631",
+   "pooled_delta": 0,
+   "sector_delta_FROM_FILE": 0,
+   "lobe": "1.0",
+   "admitted": true,
+   "refine": 0
+  },
+  {
+   "p": 2,
+   "parity": "odd",
+   "sector_rung": 1,
+   "nu": 1,
+   "log10": "-75.34102946495257073",
+   "pooled_delta": 0,
+   "sector_delta_FROM_FILE": 0,
+   "lobe": "1.0",
+   "admitted": true,
+   "refine": 1
+  },
+  {
+   "p": 3,
+   "parity": "even",
+   "sector_rung": 2,
+   "nu": 2,
+   "log10": "-71.40999527285722413",
+   "pooled_delta": 0,
+   "sector_delta_FROM_FILE": 0,
+   "lobe": "0.697629",
+   "admitted": true,
+   "refine": 2
+  },
+  {
+   "p": 4,
+   "parity": "odd",
+   "sector_rung": 2,
+   "nu": 3,
+   "log10": "-67.655943079044540046",
+   "pooled_delta": 0,
+   "sector_delta_FROM_FILE": 0,
+   "lobe": "0.563431",
+   "admitted": true,
+   "refine": 3
+  },
+  {
+   "p": 5,
+   "parity": "even",
+   "sector_rung": 3,
+   "nu": 4,
+   "log10": "-64.008634102895127509",
+   "pooled_delta": 0,
+   "sector_delta_FROM_FILE": 0,
+   "lobe": "0.276743",
+   "admitted": true,
+   "refine": 4
+  },
+  {
+   "p": 6,
+   "parity": "odd",
+   "sector_rung": 3,
+   "nu": 7,
+   "log10": "-60.472489258850558261",
+   "pooled_delta": 2,
+   "sector_delta_FROM_FILE": 2,
+   "lobe": "0.0715934",
+   "admitted": true,
+   "refine": 7
+  },
+  {
+   "p": 7,
+   "parity": "even",
+   "sector_rung": 4,
+   "nu": 8,
+   "log10": "-57.139569450915412379",
+   "pooled_delta": 2,
+   "sector_delta_FROM_FILE": 2,
+   "lobe": "0.432417",
+   "admitted": true,
+   "refine": 8
+  },
+  {
+   "p": 8,
+   "parity": "odd",
+   "sector_rung": 4,
+   "nu": 9,
+   "log10": "-54.02775642545436196",
+   "pooled_delta": 2,
+   "sector_delta_FROM_FILE": 2,
+   "lobe": "0.475164",
+   "admitted": true,
+   "refine": 9
+  },
+  {
+   "p": 9,
+   "parity": "even",
+   "sector_rung": 5,
+   "nu": 10,
+   "log10": "-50.909218393985061939",
+   "pooled_delta": 2,
+   "sector_delta_FROM_FILE": 2,
+   "lobe": "0.267517",
+   "admitted": true,
+   "refine": 10
+  },
+  {
+   "p": 10,
+   "parity": "odd",
+   "sector_rung": 5,
+   "nu": 11,
+   "log10": "-47.736561413791531689",
+   "pooled_delta": 2,
+   "sector_delta_FROM_FILE": 2,
+   "lobe": "0.226178",
+   "admitted": true,
+   "refine": 11
+  },
+  {
+   "p": 11,
+   "parity": "even",
+   "sector_rung": 6,
+   "nu": 16,
+   "log10": "-44.787029175260486305",
+   "pooled_delta": 6,
+   "sector_delta_FROM_FILE": 6,
+   "lobe": "0.109409",
+   "admitted": true,
+   "refine": 16
+  },
+  {
+   "p": 12,
+   "parity": "odd",
+   "sector_rung": 6,
+   "nu": 17,
+   "log10": "-42.101184520176196399",
+   "pooled_delta": 6,
+   "sector_delta_FROM_FILE": 6,
+   "lobe": "0.135554",
+   "admitted": true,
+   "refine": 17
+  },
+  {
+   "p": 13,
+   "parity": "even",
+   "sector_rung": 7,
+   "nu": 18,
+   "log10": "-39.355744568120591827",
+   "pooled_delta": 6,
+   "sector_delta_FROM_FILE": 6,
+   "lobe": "0.187024",
+   "admitted": true,
+   "refine": 18
+  },
+  {
+   "p": 14,
+   "parity": "odd",
+   "sector_rung": 7,
+   "nu": 19,
+   "log10": "-36.611879508021499819",
+   "pooled_delta": 6,
+   "sector_delta_FROM_FILE": 6,
+   "lobe": "0.125302",
+   "admitted": true,
+   "refine": 19
+  },
+  {
+   "p": 15,
+   "parity": "even",
+   "sector_rung": 8,
+   "nu": 24,
+   "log10": "-33.992317032504178982",
+   "pooled_delta": 10,
+   "sector_delta_FROM_FILE": 10,
+   "lobe": "0.0730047",
+   "admitted": true,
+   "refine": 24
+  },
+  {
+   "p": 16,
+   "parity": "odd",
+   "sector_rung": 8,
+   "nu": 25,
+   "log10": "-31.467968876057495192",
+   "pooled_delta": 10,
+   "sector_delta_FROM_FILE": 10,
+   "lobe": "0.183454",
+   "admitted": true,
+   "refine": 25
+  },
+  {
+   "p": 17,
+   "parity": "even",
+   "sector_rung": 9,
+   "nu": 24,
+   "log10": "-29.04267205996256037",
+   "pooled_delta": 8,
+   "sector_delta_FROM_FILE": 8,
+   "lobe": "0.135258",
+   "admitted": true,
+   "refine": 24
+  },
+  {
+   "p": 18,
+   "parity": "odd",
+   "sector_rung": 9,
+   "nu": 25,
+   "log10": "-26.590595582760151596",
+   "pooled_delta": 8,
+   "sector_delta_FROM_FILE": 8,
+   "lobe": "0.0642167",
+   "admitted": true,
+   "refine": 25
+  },
+  {
+   "p": 19,
+   "parity": "even",
+   "sector_rung": 10,
+   "nu": 34,
+   "log10": "-24.206170254568638447",
+   "pooled_delta": 16,
+   "sector_delta_FROM_FILE": 16,
+   "lobe": "0.0387793",
+   "admitted": true,
+   "refine": 34
+  },
+  {
+   "p": 20,
+   "parity": "odd",
+   "sector_rung": 10,
+   "nu": 35,
+   "log10": "-22.083191740966396589",
+   "pooled_delta": 16,
+   "sector_delta_FROM_FILE": 16,
+   "lobe": "0.0723031",
+   "admitted": true,
+   "refine": 35
+  },
+  {
+   "p": 21,
+   "parity": "even",
+   "sector_rung": 11,
+   "nu": 36,
+   "log10": "-19.950646665220889945",
+   "pooled_delta": 16,
+   "sector_delta_FROM_FILE": 16,
+   "lobe": "0.0300052",
+   "admitted": true,
+   "refine": 36
+  },
+  {
+   "p": 22,
+   "parity": "odd",
+   "sector_rung": 11,
+   "nu": 33,
+   "log10": "-17.718656663030502392",
+   "pooled_delta": 12,
+   "sector_delta_FROM_FILE": 12,
+   "lobe": "0.12243",
+   "admitted": true,
+   "refine": 33
+  },
+  {
+   "p": 23,
+   "parity": "even",
+   "sector_rung": 12,
+   "nu": 42,
+   "log10": "-15.55093624304782179",
+   "pooled_delta": 20,
+   "sector_delta_FROM_FILE": 20,
+   "lobe": "0.042989",
+   "admitted": true,
+   "refine": 42
+  },
+  {
+   "p": 24,
+   "parity": "odd",
+   "sector_rung": 12,
+   "nu": 43,
+   "log10": "-13.685583018827754282",
+   "pooled_delta": 20,
+   "sector_delta_FROM_FILE": 20,
+   "lobe": "0.0971946",
+   "admitted": true,
+   "refine": 43
+  }
+ ],
+ "pooled_delta_N100": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  2,
+  2,
+  2,
+  2,
+  2,
+  6,
+  6,
+  6,
+  6,
+  10,
+  10,
+  8,
+  8,
+  16,
+  16,
+  16,
+  12,
+  20,
+  20
+ ],
+ "pooled_parity_order_N100": "eoeoeoeoeoeoeoeoeoeoeoeo",
+ "sector_delta_field_would_have_given": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  2,
+  2,
+  2,
+  2,
+  2,
+  6,
+  6,
+  6,
+  6,
+  10,
+  10,
+  8,
+  8,
+  16,
+  16,
+  16,
+  12,
+  20,
+  20
+ ],
+ "sort_index_vs_sector_field_agree": true,
+ "n_control_trusted_depth": 23,
+ "n_control_detail": {
+  "even": {
+   "agreed_sector_rungs": 12,
+   "compared": 12,
+   "first_disagreement": null
+  },
+  "odd": {
+   "agreed_sector_rungs": 12,
+   "compared": 12,
+   "first_disagreement": null
+  }
+ },
+ "P1": {
+  "measured_p1": 6,
+  "registered": 6,
+  "verdict": "HELD",
+  "confirmation_note": "declared WEAK in advance: c51's onset held 8/8 across a 9.5x range of n, so a pass here is UNINFORMATIVE-if-passed."
+ },
+ "measured_zero_count_n": 32,
+ "rule_vs_printed_bin": {
+  "L": {
+   "rule_value": 10,
+   "printed_in_prereg": 10,
+   "agree": true,
+   "raw": 4.418353658038962
+  },
+  "I": {
+   "rule_value": 11,
+   "printed_in_prereg": 11,
+   "agree": true,
+   "raw": 10.647058823529411
+  },
+  "X": {
+   "rule_value": 11,
+   "printed_in_prereg": 11,
+   "agree": true,
+   "raw": 10.706907307212964
+  },
+  "Z": {
+   "rule_value": 12,
+   "printed_in_prereg": 12,
+   "agree": true,
+   "raw": 6.095238095238095
+  }
+ },
+ "n_sweep_of_the_rules": {
+  "29": {
+   "L": 10,
+   "I": 10,
+   "X": 11,
+   "Z": 12
+  },
+  "30": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 12
+  },
+  "31": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 12
+  },
+  "32": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 12
+  },
+  "33": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 12
+  },
+  "34": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 12
+  },
+  "35": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 13
+  },
+  "36": {
+   "L": 10,
+   "I": 11,
+   "X": 11,
+   "Z": 13
+  }
+ },
+ "amendment_1": "models evaluated from the MEASURED n and log x, not from the prereg's printed instances (m1 witness observation (b)); the printed bins are carried as a check that must agree, and the n-sweep shows where a re-measurement would have moved one.",
+ "P2": {
+  "measured_p2": 11,
+  "models": {
+   "L": {
+    "p2": 10,
+    "live": true,
+    "rule": "p2 = 6 + round(4*log x / log 13)",
+    "raw": 4.418353658038962
+   },
+   "I": {
+    "p2": 11,
+    "live": true,
+    "rule": "p2 = round(10 + (n-21)/(38-21)), n MEASURED",
+    "raw": 10.647058823529411
+   },
+   "X": {
+    "p2": 11,
+    "live": true,
+    "rule": "p2 = round(10 + (log x - log 13)/(log 19 - log 13))",
+    "raw": 10.706907307212964
+   },
+   "Z": {
+    "p2": 12,
+    "live": false,
+    "rule": "p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=19",
+    "raw": 6.095238095238095
+   },
+   "G": {
+    "p2": 10,
+    "live": false,
+    "raw": null,
+    "rule": "gap turnaround, computed at STAGE A -- REFUTED at x=19"
+   }
+  },
+  "bins": {
+   "10": [
+    "L"
+   ],
+   "11": [
+    "I",
+    "X"
+   ],
+   "12": [
+    "Z"
+   ]
+  },
+  "occupied_bin": 11,
+  "occupants": [
+   "I",
+   "X"
+  ],
+  "live_occupants": [
+   "I",
+   "X"
+  ],
+  "survivor_count": 2,
+  "refuted_live_models": [
+   "L"
+  ],
+  "discrimination": "NONE -- more than one registered model names this bin",
+  "verdict": "MEASURED"
+ },
+ "P3": {
+  "registered": 4,
+  "measured_increment": 4,
+  "verdict": "HELD"
+ },
+ "P4": {
+  "registered": 15,
+  "measured_p3": 15,
+  "verdict": "HELD",
+  "note": "registered as an INVARIANCE: p3 was 15 at BOTH x=13 and x=19 while p2 moved."
+ },
+ "P5": {
+  "registered": {
+   "p15": 10,
+   "p16": 10,
+   "p17": 8
+  },
+  "measured": {
+   "15": 10,
+   "16": 10,
+   "17": 8
+  },
+  "verdict": "HELD"
+ },
+ "P6": {
+  "registered_floor": 21,
+  "measured_depth": 23,
+  "detail": {
+   "even": {
+    "agreed_sector_rungs": 12,
+    "compared": 12,
+    "first_disagreement": null
+   },
+   "odd": {
+    "agreed_sector_rungs": 12,
+    "compared": 12,
+    "first_disagreement": null
+   }
+  },
+  "verdict": "HELD"
+ },
+ "P7": {
+  "order_through_trust": "eoeoeoeoeoeoeoeoeoeoeoe",
+  "depth": 23,
+  "verdict": "HELD"
+ },
+ "model_G_stageA": {
+  "p2": 10,
+  "first_local_min_index": 7,
+  "first_local_max_after": 9
+ }
+}

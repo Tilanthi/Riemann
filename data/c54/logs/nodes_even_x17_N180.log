@@ -1,0 +1,29 @@
+REDIRECTION: {
+ "wrapper": "/shared/rh-exchange-repo/Riemann/data/c54/m2_c54_spectrum.py",
+ "c53_module": "/shared/rh-exchange-repo/Riemann/data/c53/m2_c53_spectrum.py",
+ "c53_dir": "/shared/rh-exchange-repo/Riemann/data/c53",
+ "out_dir": "/shared/rh-exchange-repo/Riemann/data/c54",
+ "redirected": true,
+ "inner_resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c54",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ }
+}
+  even rung 1  log10lam=-79.802592682465 rel_resid=6.945755355e-221 adm=True  nu=0    refine=0    lobe=1.0        sturm=0   delta=0    stable=True
+  even rung 2  log10lam=-71.642633622774 rel_resid=6.709641067e-229 adm=True  nu=2    refine=2    lobe=0.6976     sturm=2   delta=0    stable=True
+  even rung 3  log10lam=-64.207850126354 rel_resid=2.377090388e-236 adm=True  nu=4    refine=4    lobe=0.2767     sturm=4   delta=0    stable=True
+  even rung 4  log10lam=-57.346505772363 rel_resid=3.064580855e-243 adm=True  nu=8    refine=8    lobe=0.4325     sturm=6   delta=2    stable=True
+  even rung 5  log10lam=-51.115825790526 rel_resid=2.616361495e-249 adm=True  nu=10   refine=10   lobe=0.2674     sturm=8   delta=2    stable=True
+  even rung 6  log10lam=-44.943014237652 rel_resid=1.805604062e-255 adm=True  nu=16   refine=16   lobe=0.1095     sturm=10  delta=6    stable=True
+  even rung 7  log10lam=-39.531816203379 rel_resid=7.423714094e-261 adm=True  nu=18   refine=18   lobe=0.1869     sturm=12  delta=6    stable=True
+  even rung 8  log10lam=-34.135308132893 rel_resid=3.286643127e-266 adm=True  nu=24   refine=24   lobe=0.07277    sturm=14  delta=10   stable=True
+  even rung 9  log10lam=-29.230275031597 rel_resid=3.366929347e-271 adm=True  nu=24   refine=24   lobe=0.1354     sturm=16  delta=8    stable=True
+  even rung 10 log10lam=-24.311961336807 rel_resid=5.418677973e-276 adm=True  nu=34   refine=34   lobe=0.03852    sturm=18  delta=16   stable=True
+  even rung 11 log10lam=-20.096967504789 rel_resid=3.314102512e-280 adm=True  nu=36   refine=36   lobe=0.03036    sturm=20  delta=16   stable=True
+  even rung 12 log10lam=-15.678756945173 rel_resid=2.384612383e-284 adm=True  nu=42   refine=42   lobe=0.04279    sturm=22  delta=20   stable=True
+wrote m2_c54_nodes_even_x17_N180_dps300.json  2370.9s

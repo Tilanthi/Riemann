@@ -1,0 +1,51 @@
+{
+ "corrected_bins": {
+  "10": [
+   "G",
+   "L"
+  ],
+  "11": [
+   "I",
+   "X"
+  ],
+  "12": [
+   "Z"
+  ]
+ },
+ "bins_as_scored": {
+  "10": [
+   "L"
+  ],
+  "11": [
+   "I",
+   "X"
+  ],
+  "12": [
+   "Z"
+  ]
+ },
+ "measured_p2": 11,
+ "occupants": [
+  "I",
+  "X"
+ ],
+ "live_occupants": [
+  "I",
+  "X"
+ ],
+ "survivor_count": 2,
+ "refuted_models": [
+  "G",
+  "L",
+  "Z"
+ ],
+ "refuted_live_models": [
+  "L"
+ ],
+ "discrimination": "NONE -- more than one registered model names this bin",
+ "changed_vs_scored": [
+  10
+ ],
+ "direction_check": "the correction moves ONLY the membership of bin 10, which the measurement did not occupy; it adds a model to the REFUTED list and removes none. It cannot change p2, the occupied bin, the live survivors, or any verdict.",
+ "docstring": "m2_c54_score_binfix.py -- a SCORER DEFECT, found AFTER the numbers existed, disclosed and\nrepaired in a sibling file rather than by editing the scored artefact.\n\nTHE DEFECT.  `m2_c54_score.py` builds the outcome-bin membership map from `model_values(...)`,\nin which Model G's `p2` is `None` (G is computed at stage A, not from a closed form).  It then\nloads the stage-A file and writes G's value into `S[\"P2\"][\"models\"][\"G\"][\"p2\"]` -- but the bins\nhave already been built.  So `m2_c54_scores.json` reports bin 10 as `['L']` when G also names 10.\n\nWHY IT CHANGES NOTHING THIS CYCLE, stated as a direction check and not as an excuse:\n  * the MEASURED value is p2 = 11.  Bin 10 is EMPTY of the measurement.\n  * bin 11's occupants (I, X) are untouched, so the \"no discrimination\" verdict is untouched.\n  * the refuted-live-models list (L) is untouched.\n  * the only thing that moves is the membership list of a bin nothing landed in -- and it moves in\n    the direction of MORE models being named as refuted, i.e. against the cycle's own models.\n  * had p2 been 10, this defect would have printed L as the SOLE namer of the occupied bin and the\n    prereg's own G-onto-L clause would have been silently skipped.  **That is the gating case, and\n    it did not occur** -- a fact about which outcome happened, not a property of the defect.\n    (The same boundary sentence machine 2 required of \"non-gating\" in the L197 round, applied here\n    to machine 2.)\n\nOutput: m2_c54_scores_binfix.json -- the corrected bin map beside the scored one.\n"
+}
