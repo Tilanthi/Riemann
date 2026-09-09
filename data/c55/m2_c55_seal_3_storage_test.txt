@@ -1,0 +1,11 @@
+# CYCLE 55 SEAL 3 -- the STORAGE TEST, sealed BEFORE it is run (0 hp artefacts exist).
+# Verify:  cd data/c55 && sha256sum -c <(grep -v '^#' m2_c55_seal_3_storage_test.txt)
+86110f2e00f3dd8b78f412989aeaa5bf8aba28f37ee9cdb8570bdad6d7486d82  m2_c55_prereg_addendum_1.md
+969ca937b00815f60e2ccdb9a6d5fc96dcf71b9fd86c58519dac2c53413d0815  m2_c55_storage_test.py
+c836327bae9654fcf672e2e988a9a2f9e541c2482bd8f6414f62bae5d71e472b  m2_c55_detector_ceiling.py
+7f4d6ea504d6f5a0f3b7c43586559000faf041be60c1c130035b33c623b5debf  m2_c55_detector_ceiling.json
+c08c6c056533acd4cbdcab0256a47220479c99d133ac4b88da5e8c17b62d5956  m2_c55_score_jointfix.py
+b3f071aed2ea9a49bc2efe33ed25a3dfdf81ec01f53336b393f52455428f9aa4  m2_c55_scores_jointfix.json
+9a5e5498dea4aa27a30da905255f368dbc589419e0fc7a0790a7605ea84ccc6f  m2_c55_scores.json
+# hp artefacts present at seal time (must be 0): 0
+# sealed 2026-09-09T03:25:10Z

@@ -1,0 +1,195 @@
+{
+ "repairs": "(1) JOINT arm trust gate, (2) hole-aware plateaus (sibling; the sealed grader and m2_c55_scores.json are unedited)",
+ "plateaus_hole_aware": {
+  "22": {
+   "sealed_grader_lengths": [
+    4,
+    1,
+    5,
+    5,
+    2,
+    2,
+    2,
+    1
+   ],
+   "hole_aware": [
+    {
+     "value": null,
+     "hole": true,
+     "length": 4
+    },
+    {
+     "value": 0,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 2,
+     "hole": false,
+     "length": 5
+    },
+    {
+     "value": 6,
+     "hole": false,
+     "length": 5
+    },
+    {
+     "value": 10,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 8,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 16,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 12,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 16,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 20,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 24,
+     "hole": false,
+     "length": 1
+    }
+   ],
+   "holes": 1,
+   "note": "the sealed grader's length list counts a run of unmeasured rungs as a plateau; here a hole is a hole. Nothing is re-scored: P8 and P9 are UNMEASURED at both windows because the N-control trusted depth is 0."
+  },
+  "25": {
+   "sealed_grader_lengths": [
+    2,
+    1,
+    2,
+    5,
+    5,
+    2,
+    2,
+    1
+   ],
+   "hole_aware": [
+    {
+     "value": 0,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": null,
+     "hole": true,
+     "length": 1
+    },
+    {
+     "value": 0,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 2,
+     "hole": false,
+     "length": 5
+    },
+    {
+     "value": 6,
+     "hole": false,
+     "length": 5
+    },
+    {
+     "value": 10,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 8,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 12,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 16,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 12,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 16,
+     "hole": false,
+     "length": 2
+    },
+    {
+     "value": 20,
+     "hole": false,
+     "length": 1
+    },
+    {
+     "value": 24,
+     "hole": false,
+     "length": 1
+    }
+   ],
+   "holes": 1,
+   "note": "the sealed grader's length list counts a run of unmeasured rungs as a plateau; here a hole is a hole. Nothing is re-scored: P8 and P9 are UNMEASURED at both windows because the N-control trusted depth is 0."
+  }
+ },
+ "sealed_joint_verdict": "NO BANK -- the pair (11, 11) is named by more than one registered rule (A, L); the strict criterion blocks a bank even when only one of them is live",
+ "gated_joint": {
+  "measured_pair": [
+   11,
+   11
+  ],
+  "trust_gated": true,
+  "windows": [
+   {
+    "x": 22,
+    "p2": 11,
+    "trusted_depth": 0,
+    "window_verdict": "UNMEASURED (outside trust)"
+   },
+   {
+    "x": 25,
+    "p2": 11,
+    "trusted_depth": 0,
+    "window_verdict": "UNMEASURED (outside trust)"
+   }
+  ],
+  "namers": [],
+  "live_namers": [],
+  "verdict": "UNMEASURED -- 2 of 2 windows produced p2 OUTSIDE the N-control trusted depth, so the pair is not a measurement and no model is scored on it"
+ },
+ "direction_check": "the gate can only turn a substantive joint verdict into UNMEASURED; it cannot create a bank, refute a model, or move a number",
+ "planted_controls": {
+  "pair_11_12_with_depth_25": {
+   "verdict": "CONFIRMED: X is the sole registered namer of the pair (11, 12)",
+   "fires": true
+  },
+  "pair_12_12_with_depth_25": {
+   "verdict": "CONFIRMED: I is the sole registered namer of the pair (12, 12)",
+   "fires": true
+  },
+  "why": "if the gate simply said UNMEASURED always, these would fail"
+ },
+ "verdict": "PASS"
+}

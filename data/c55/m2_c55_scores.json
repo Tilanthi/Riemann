@@ -17,14 +17,777 @@
     "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
    },
    "inputs": {
-    "N100_present": false,
-    "N180_present": false,
+    "N100_present": true,
+    "N180_present": true,
     "files": {
      "even": "m2_c55_nodes_even_x22_N180_dps300.json",
      "odd": "m2_c55_nodes_odd_x22_N180_dps300.json"
     }
    },
-   "VERDICT": "UNMEASURED -- the N=100 node cells do not exist"
+   "completeness_certified_prefix": 25,
+   "float_order_equals_decimal_order": true,
+   "pooled_table_N100": [
+    {
+     "p": 1,
+     "parity": "even",
+     "sector_rung": 1,
+     "nu": null,
+     "log10": "-102.53204209593553847",
+     "pooled_delta": null,
+     "sector_delta_FROM_FILE": null,
+     "lobe": "1.70629e-41",
+     "admitted": true,
+     "refine": 2
+    },
+    {
+     "p": 2,
+     "parity": "odd",
+     "sector_rung": 1,
+     "nu": null,
+     "log10": "-98.325838859015703668",
+     "pooled_delta": null,
+     "sector_delta_FROM_FILE": null,
+     "lobe": "1.5695e-42",
+     "admitted": true,
+     "refine": 3
+    },
+    {
+     "p": 3,
+     "parity": "even",
+     "sector_rung": 2,
+     "nu": null,
+     "log10": "-94.407420926944157021",
+     "pooled_delta": null,
+     "sector_delta_FROM_FILE": null,
+     "lobe": "3.01399e-41",
+     "admitted": true,
+     "refine": 4
+    },
+    {
+     "p": 4,
+     "parity": "odd",
+     "sector_rung": 2,
+     "nu": null,
+     "log10": "-90.633324336024586534",
+     "pooled_delta": null,
+     "sector_delta_FROM_FILE": null,
+     "lobe": "2.84436e-43",
+     "admitted": true,
+     "refine": 5
+    },
+    {
+     "p": 5,
+     "parity": "even",
+     "sector_rung": 3,
+     "nu": 4,
+     "log10": "-86.967761548532818026",
+     "pooled_delta": 0,
+     "sector_delta_FROM_FILE": 0,
+     "lobe": "0.293256",
+     "admitted": true,
+     "refine": 4
+    },
+    {
+     "p": 6,
+     "parity": "odd",
+     "sector_rung": 3,
+     "nu": 7,
+     "log10": "-83.395535362634882842",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.0529803",
+     "admitted": true,
+     "refine": 7
+    },
+    {
+     "p": 7,
+     "parity": "even",
+     "sector_rung": 4,
+     "nu": 8,
+     "log10": "-79.992868698796464682",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.409781",
+     "admitted": true,
+     "refine": 8
+    },
+    {
+     "p": 8,
+     "parity": "odd",
+     "sector_rung": 4,
+     "nu": 9,
+     "log10": "-76.82863146981883976",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.49819",
+     "admitted": true,
+     "refine": 9
+    },
+    {
+     "p": 9,
+     "parity": "even",
+     "sector_rung": 5,
+     "nu": 10,
+     "log10": "-73.661703352297877034",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.281169",
+     "admitted": true,
+     "refine": 10
+    },
+    {
+     "p": 10,
+     "parity": "odd",
+     "sector_rung": 5,
+     "nu": 11,
+     "log10": "-70.382299318485675198",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.211424",
+     "admitted": true,
+     "refine": 11
+    },
+    {
+     "p": 11,
+     "parity": "even",
+     "sector_rung": 6,
+     "nu": 16,
+     "log10": "-67.26439753672324369",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.118128",
+     "admitted": true,
+     "refine": 16
+    },
+    {
+     "p": 12,
+     "parity": "odd",
+     "sector_rung": 6,
+     "nu": 17,
+     "log10": "-64.427473280342654148",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.116014",
+     "admitted": true,
+     "refine": 17
+    },
+    {
+     "p": 13,
+     "parity": "even",
+     "sector_rung": 7,
+     "nu": 18,
+     "log10": "-61.573992115774585586",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.145168",
+     "admitted": true,
+     "refine": 18
+    },
+    {
+     "p": 14,
+     "parity": "odd",
+     "sector_rung": 7,
+     "nu": 19,
+     "log10": "-58.663731880409031265",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.146403",
+     "admitted": true,
+     "refine": 19
+    },
+    {
+     "p": 15,
+     "parity": "even",
+     "sector_rung": 8,
+     "nu": 20,
+     "log10": "-55.845855180051298665",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.117537",
+     "admitted": true,
+     "refine": 20
+    },
+    {
+     "p": 16,
+     "parity": "odd",
+     "sector_rung": 8,
+     "nu": 25,
+     "log10": "-53.137501000629258186",
+     "pooled_delta": 10,
+     "sector_delta_FROM_FILE": 10,
+     "lobe": "0.138371",
+     "admitted": true,
+     "refine": 25
+    },
+    {
+     "p": 17,
+     "parity": "even",
+     "sector_rung": 9,
+     "nu": 26,
+     "log10": "-50.57000639290933872",
+     "pooled_delta": 10,
+     "sector_delta_FROM_FILE": 10,
+     "lobe": "0.024413",
+     "admitted": true,
+     "refine": 26
+    },
+    {
+     "p": 18,
+     "parity": "odd",
+     "sector_rung": 9,
+     "nu": 25,
+     "log10": "-47.990280295176047525",
+     "pooled_delta": 8,
+     "sector_delta_FROM_FILE": 8,
+     "lobe": "0.111633",
+     "admitted": true,
+     "refine": 25
+    },
+    {
+     "p": 19,
+     "parity": "even",
+     "sector_rung": 10,
+     "nu": 26,
+     "log10": "-45.347545948573648873",
+     "pooled_delta": 8,
+     "sector_delta_FROM_FILE": 8,
+     "lobe": "0.0534438",
+     "admitted": true,
+     "refine": 26
+    },
+    {
+     "p": 20,
+     "parity": "odd",
+     "sector_rung": 10,
+     "nu": 35,
+     "log10": "-42.873694280441423972",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.00340916",
+     "admitted": true,
+     "refine": 35
+    },
+    {
+     "p": 21,
+     "parity": "even",
+     "sector_rung": 11,
+     "nu": 36,
+     "log10": "-40.53342309850170245",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.137456",
+     "admitted": true,
+     "refine": 36
+    },
+    {
+     "p": 22,
+     "parity": "odd",
+     "sector_rung": 11,
+     "nu": 33,
+     "log10": "-38.161942548711797266",
+     "pooled_delta": 12,
+     "sector_delta_FROM_FILE": 12,
+     "lobe": "0.194929",
+     "admitted": true,
+     "refine": 33
+    },
+    {
+     "p": 23,
+     "parity": "even",
+     "sector_rung": 12,
+     "nu": 38,
+     "log10": "-35.647550902576669847",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.0412788",
+     "admitted": true,
+     "refine": 38
+    },
+    {
+     "p": 24,
+     "parity": "odd",
+     "sector_rung": 12,
+     "nu": 43,
+     "log10": "-33.324626432711197448",
+     "pooled_delta": 20,
+     "sector_delta_FROM_FILE": 20,
+     "lobe": "0.0084753",
+     "admitted": true,
+     "refine": 43
+    },
+    {
+     "p": 25,
+     "parity": "even",
+     "sector_rung": 13,
+     "nu": 44,
+     "log10": "-31.161003242257839949",
+     "pooled_delta": 20,
+     "sector_delta_FROM_FILE": 20,
+     "lobe": "0.0522732",
+     "admitted": true,
+     "refine": 44
+    },
+    {
+     "p": 26,
+     "parity": "odd",
+     "sector_rung": 13,
+     "nu": 49,
+     "log10": "-28.883377020192559185",
+     "pooled_delta": 24,
+     "sector_delta_FROM_FILE": 24,
+     "lobe": "0.053225",
+     "admitted": true,
+     "refine": 49
+    }
+   ],
+   "pooled_delta_N100": [
+    null,
+    null,
+    null,
+    null,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    6,
+    10,
+    10,
+    8,
+    8,
+    16,
+    16,
+    12,
+    16,
+    20,
+    20,
+    24
+   ],
+   "pooled_parity_order_N100": "eoeoeoeoeoeoeoeoeoeoeoeoeo",
+   "sector_delta_field_would_have_given": [
+    null,
+    null,
+    null,
+    null,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    6,
+    10,
+    10,
+    8,
+    8,
+    16,
+    16,
+    12,
+    16,
+    20,
+    20,
+    24
+   ],
+   "sort_index_vs_sector_field_agree": true,
+   "n_control_trusted_depth": 0,
+   "n_control_detail": {
+    "even": {
+     "agreed_sector_rungs": 0,
+     "compared": 13,
+     "first_disagreement": {
+      "rung": 1,
+      "N100": null,
+      "N180": null
+     }
+    },
+    "odd": {
+     "agreed_sector_rungs": 0,
+     "compared": 13,
+     "first_disagreement": {
+      "rung": 1,
+      "N100": null,
+      "N180": null
+     }
+    }
+   },
+   "P1": {
+    "measured_p1": 6,
+    "registered": 6,
+    "verdict": "UNMEASURED (outside trust)",
+    "confirmation_note": "declared WEAK in advance: UNINFORMATIVE-if-passed."
+   },
+   "measured_zero_count_n": 47,
+   "rule_vs_printed_bin": {
+    "L": {
+     "rule_value": 11,
+     "printed_in_prereg": 11,
+     "agree": true,
+     "raw": 4.820434281661514,
+     "rounding_margin": 0.3204342816615142
+    },
+    "I": {
+     "rule_value": 12,
+     "printed_in_prereg": 12,
+     "agree": true,
+     "raw": 11.529411764705882,
+     "rounding_margin": 0.02941176470588225
+    },
+    "X": {
+     "rule_value": 11,
+     "printed_in_prereg": 11,
+     "agree": true,
+     "raw": 11.386317479601265,
+     "rounding_margin": 0.11368252039873461
+    },
+    "Z": {
+     "rule_value": 15,
+     "printed_in_prereg": 15,
+     "agree": true,
+     "raw": 8.952380952380953,
+     "rounding_margin": 0.45238095238095255
+    },
+    "S": {
+     "rule_value": 12,
+     "printed_in_prereg": 12,
+     "agree": true,
+     "raw": 5.984105932344765,
+     "rounding_margin": 0.4841059323447654
+    },
+    "A": {
+     "rule_value": 11,
+     "printed_in_prereg": 11,
+     "agree": true,
+     "raw": 5.058458501083081,
+     "rounding_margin": 0.4415414989169193
+    }
+   },
+   "rule_vs_printed_bin_all_agree": true,
+   "n_sweep_of_the_rules": {
+    "43": {
+     "L": 11,
+     "I": 11,
+     "X": 11,
+     "Z": 14,
+     "S": 12,
+     "A": 11
+    },
+    "44": {
+     "L": 11,
+     "I": 11,
+     "X": 11,
+     "Z": 14,
+     "S": 12,
+     "A": 11
+    },
+    "45": {
+     "L": 11,
+     "I": 11,
+     "X": 11,
+     "Z": 15,
+     "S": 12,
+     "A": 11
+    },
+    "46": {
+     "L": 11,
+     "I": 11,
+     "X": 11,
+     "Z": 15,
+     "S": 12,
+     "A": 11
+    },
+    "47": {
+     "L": 11,
+     "I": 12,
+     "X": 11,
+     "Z": 15,
+     "S": 12,
+     "A": 11
+    },
+    "48": {
+     "L": 11,
+     "I": 12,
+     "X": 11,
+     "Z": 15,
+     "S": 12,
+     "A": 11
+    },
+    "49": {
+     "L": 11,
+     "I": 12,
+     "X": 11,
+     "Z": 15,
+     "S": 12,
+     "A": 11
+    },
+    "50": {
+     "L": 11,
+     "I": 12,
+     "X": 11,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    },
+    "51": {
+     "L": 11,
+     "I": 12,
+     "X": 11,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    }
+   },
+   "P2": {
+    "measured_p2": 11,
+    "models": {
+     "L": {
+      "p2": 11,
+      "raw": 4.820434281661514,
+      "live": false,
+      "rule": "p2 = 6 + round(4*log x / log 13)  -- REFUTED at x=17",
+      "sealed_at": "c54",
+      "rounding_margin": 0.3204342816615142
+     },
+     "I": {
+      "p2": 12,
+      "raw": 11.529411764705882,
+      "live": true,
+      "rule": "p2 = round(10 + (n-21)/(38-21)), n MEASURED",
+      "sealed_at": "c54",
+      "rounding_margin": 0.02941176470588225
+     },
+     "X": {
+      "p2": 11,
+      "raw": 11.386317479601265,
+      "live": true,
+      "rule": "p2 = round(10 + (log x - log 13)/(log 19 - log 13))",
+      "sealed_at": "c54",
+      "rounding_margin": 0.11368252039873461
+     },
+     "Z": {
+      "p2": 15,
+      "raw": 8.952380952380953,
+      "live": false,
+      "rule": "p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=17 and x=19",
+      "sealed_at": "c54",
+      "rounding_margin": 0.45238095238095255
+     },
+     "S": {
+      "p2": 12,
+      "raw": 5.984105932344765,
+      "live": true,
+      "rule": "p2 = 6 + round(4*sqrt(n/21)), n MEASURED -- NEW at c55",
+      "sealed_at": "c55",
+      "rounding_margin": 0.4841059323447654
+     },
+     "A": {
+      "p2": 11,
+      "raw": 5.058458501083081,
+      "live": true,
+      "rule": "p2 = 6 + round(4*log n / log 21), n MEASURED -- NEW at c55",
+      "sealed_at": "c55",
+      "rounding_margin": 0.4415414989169193
+     },
+     "G": {
+      "p2": 10,
+      "live": false,
+      "raw": null,
+      "rounding_margin": null,
+      "sealed_at": "c54",
+      "rule": "gap turnaround, computed at STAGE A -- REFUTED at x=17 and x=19"
+     }
+    },
+    "bins": {
+     "11": [
+      "L",
+      "X",
+      "A"
+     ],
+     "12": [
+      "I",
+      "S"
+     ],
+     "15": [
+      "Z"
+     ],
+     "10": [
+      "G"
+     ]
+    },
+    "occupied_bin": 11,
+    "occupants": [
+     "L",
+     "X",
+     "A"
+    ],
+    "live_occupants": [
+     "X",
+     "A"
+    ],
+    "survivor_count": 2,
+    "refuted_live_models": [
+     "I",
+     "S"
+    ],
+    "knife_edge_occupants": [],
+    "discrimination": "NONE -- more than one registered model names this bin",
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P3": {
+    "registered": 4,
+    "measured_increment": 4,
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P4": {
+    "registered": 15,
+    "measured_p3": 16,
+    "verdict": "UNMEASURED (outside trust)",
+    "note": "registered as an INVARIANCE: p3 = 15 at x = 13, 17 and 19 while p2 moved."
+   },
+   "P5": {
+    "registered": {
+     "p15": 10,
+     "p16": 10,
+     "p17": 8
+    },
+    "measured": {
+     "15": 6,
+     "16": 10,
+     "17": 10
+    },
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P6": {
+    "registered_floor": 23,
+    "measured_depth": 0,
+    "detail": {
+     "even": {
+      "agreed_sector_rungs": 0,
+      "compared": 13,
+      "first_disagreement": {
+       "rung": 1,
+       "N100": null,
+       "N180": null
+      }
+     },
+     "odd": {
+      "agreed_sector_rungs": 0,
+      "compared": 13,
+      "first_disagreement": {
+       "rung": 1,
+       "N100": null,
+       "N180": null
+      }
+     }
+    },
+    "verdict": "REFUTED"
+   },
+   "P7": {
+    "order_through_trust": "",
+    "depth": 0,
+    "verdict": "UNMEASURED"
+   },
+   "P8": {
+    "registered_tail_l3_to_l7": [
+     4,
+     2,
+     2,
+     3,
+     1
+    ],
+    "measured_tail": [
+     5,
+     5,
+     2,
+     2,
+     2
+    ],
+    "all_lengths": [
+     4,
+     1,
+     5,
+     5,
+     2,
+     2,
+     2,
+     1
+    ],
+    "reference_x17_x19": [
+     5,
+     5,
+     4,
+     2,
+     2,
+     3,
+     1
+    ],
+    "reference_x13": [
+     5,
+     4,
+     5,
+     2,
+     1,
+     3,
+     1
+    ],
+    "verdict": "UNMEASURED (the first seven plateaux reach past the trusted depth)"
+   },
+   "P9": {
+    "registered": [
+     0,
+     2,
+     6,
+     10,
+     8,
+     16,
+     12
+    ],
+    "measured": [
+     null,
+     0,
+     2,
+     6,
+     10,
+     8,
+     16
+    ],
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P10": {
+    "registered": "< 16 (direction only; 24/20/16 at x=13/17/19)",
+    "measured_eighth_value": 12,
+    "reference": [
+     24,
+     20,
+     16
+    ],
+    "verdict": "UNMEASURED (outside trust)",
+    "strength": "WEAK by declaration: outcome space 3, worth one bit at most."
+   },
+   "P11": {
+    "registered": 10,
+    "measured": 10,
+    "first_local_min_index": 7,
+    "first_local_max_after": 9,
+    "verdict": "HELD",
+    "note": "a prediction about the EIGENVALUE ladder alone, settled at stage A before any node count of this window existed."
+   },
+   "FORK": {
+    "identity": "p3 = 6 + l2 + l3 ; the p3=15 invariance IS l2 + l3 = 9",
+    "l2": 5,
+    "l3": 5,
+    "sum_l2_l3": 10,
+    "invariance_holds": false,
+    "reading": "the invariance did NOT absorb the move"
+   }
   },
   "25": {
    "window": {
@@ -42,14 +805,794 @@
     "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
    },
    "inputs": {
-    "N100_present": false,
-    "N180_present": false,
+    "N100_present": true,
+    "N180_present": true,
     "files": {
      "even": "m2_c55_nodes_even_x25_N180_dps300.json",
      "odd": "m2_c55_nodes_odd_x25_N180_dps300.json"
     }
    },
-   "VERDICT": "UNMEASURED -- the N=100 node cells do not exist"
+   "completeness_certified_prefix": 25,
+   "float_order_equals_decimal_order": true,
+   "pooled_table_N100": [
+    {
+     "p": 1,
+     "parity": "even",
+     "sector_rung": 1,
+     "nu": 0,
+     "log10": "-112.4876689366176228",
+     "pooled_delta": 0,
+     "sector_delta_FROM_FILE": 0,
+     "lobe": "1.0",
+     "admitted": true,
+     "refine": 0
+    },
+    {
+     "p": 2,
+     "parity": "odd",
+     "sector_rung": 1,
+     "nu": 1,
+     "log10": "-108.3085773181538153",
+     "pooled_delta": 0,
+     "sector_delta_FROM_FILE": 0,
+     "lobe": "1.0",
+     "admitted": true,
+     "refine": 1
+    },
+    {
+     "p": 3,
+     "parity": "even",
+     "sector_rung": 2,
+     "nu": null,
+     "log10": "-104.39864692044400386",
+     "pooled_delta": null,
+     "sector_delta_FROM_FILE": null,
+     "lobe": "5.57564e-41",
+     "admitted": true,
+     "refine": 4
+    },
+    {
+     "p": 4,
+     "parity": "odd",
+     "sector_rung": 2,
+     "nu": 3,
+     "log10": "-100.60671854078070683",
+     "pooled_delta": 0,
+     "sector_delta_FROM_FILE": 0,
+     "lobe": "0.576244",
+     "admitted": true,
+     "refine": 3
+    },
+    {
+     "p": 5,
+     "parity": "even",
+     "sector_rung": 3,
+     "nu": 4,
+     "log10": "-96.904526823608889648",
+     "pooled_delta": 0,
+     "sector_delta_FROM_FILE": 0,
+     "lobe": "0.302206",
+     "admitted": true,
+     "refine": 4
+    },
+    {
+     "p": 6,
+     "parity": "odd",
+     "sector_rung": 3,
+     "nu": 7,
+     "log10": "-93.332812429976662153",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.0433263",
+     "admitted": true,
+     "refine": 7
+    },
+    {
+     "p": 7,
+     "parity": "even",
+     "sector_rung": 4,
+     "nu": 8,
+     "log10": "-89.965582985662270321",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.393712",
+     "admitted": true,
+     "refine": 8
+    },
+    {
+     "p": 8,
+     "parity": "odd",
+     "sector_rung": 4,
+     "nu": 9,
+     "log10": "-86.821892016078626589",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.510506",
+     "admitted": true,
+     "refine": 9
+    },
+    {
+     "p": 9,
+     "parity": "even",
+     "sector_rung": 5,
+     "nu": 10,
+     "log10": "-83.672772509359134463",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.28955",
+     "admitted": true,
+     "refine": 10
+    },
+    {
+     "p": 10,
+     "parity": "odd",
+     "sector_rung": 5,
+     "nu": 11,
+     "log10": "-80.413101533466733974",
+     "pooled_delta": 2,
+     "sector_delta_FROM_FILE": 2,
+     "lobe": "0.204506",
+     "admitted": true,
+     "refine": 11
+    },
+    {
+     "p": 11,
+     "parity": "even",
+     "sector_rung": 6,
+     "nu": 16,
+     "log10": "-77.317144023904489148",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.124316",
+     "admitted": true,
+     "refine": 16
+    },
+    {
+     "p": 12,
+     "parity": "odd",
+     "sector_rung": 6,
+     "nu": 17,
+     "log10": "-74.510236066348084396",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.106002",
+     "admitted": true,
+     "refine": 17
+    },
+    {
+     "p": 13,
+     "parity": "even",
+     "sector_rung": 7,
+     "nu": 18,
+     "log10": "-71.696950201155032499",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.122232",
+     "admitted": true,
+     "refine": 18
+    },
+    {
+     "p": 14,
+     "parity": "odd",
+     "sector_rung": 7,
+     "nu": 19,
+     "log10": "-68.84684977422466275",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.162009",
+     "admitted": true,
+     "refine": 19
+    },
+    {
+     "p": 15,
+     "parity": "even",
+     "sector_rung": 8,
+     "nu": 20,
+     "log10": "-66.071311415128171617",
+     "pooled_delta": 6,
+     "sector_delta_FROM_FILE": 6,
+     "lobe": "0.113785",
+     "admitted": true,
+     "refine": 20
+    },
+    {
+     "p": 16,
+     "parity": "odd",
+     "sector_rung": 8,
+     "nu": 25,
+     "log10": "-63.343533923941545144",
+     "pooled_delta": 10,
+     "sector_delta_FROM_FILE": 10,
+     "lobe": "0.118202",
+     "admitted": true,
+     "refine": 25
+    },
+    {
+     "p": 17,
+     "parity": "even",
+     "sector_rung": 9,
+     "nu": 26,
+     "log10": "-60.78496976360685628",
+     "pooled_delta": 10,
+     "sector_delta_FROM_FILE": 10,
+     "lobe": "0.120519",
+     "admitted": true,
+     "refine": 26
+    },
+    {
+     "p": 18,
+     "parity": "odd",
+     "sector_rung": 9,
+     "nu": 25,
+     "log10": "-58.266207890059510787",
+     "pooled_delta": 8,
+     "sector_delta_FROM_FILE": 8,
+     "lobe": "0.14259",
+     "admitted": true,
+     "refine": 25
+    },
+    {
+     "p": 19,
+     "parity": "even",
+     "sector_rung": 10,
+     "nu": 26,
+     "log10": "-55.644800105077580942",
+     "pooled_delta": 8,
+     "sector_delta_FROM_FILE": 8,
+     "lobe": "0.0265021",
+     "admitted": true,
+     "refine": 26
+    },
+    {
+     "p": 20,
+     "parity": "odd",
+     "sector_rung": 10,
+     "nu": 31,
+     "log10": "-53.156213577139529418",
+     "pooled_delta": 12,
+     "sector_delta_FROM_FILE": 12,
+     "lobe": "0.0256923",
+     "admitted": true,
+     "refine": 31
+    },
+    {
+     "p": 21,
+     "parity": "even",
+     "sector_rung": 11,
+     "nu": 36,
+     "log10": "-50.838659809278473251",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.129485",
+     "admitted": true,
+     "refine": 36
+    },
+    {
+     "p": 22,
+     "parity": "odd",
+     "sector_rung": 11,
+     "nu": 33,
+     "log10": "-48.551367161548186526",
+     "pooled_delta": 12,
+     "sector_delta_FROM_FILE": 12,
+     "lobe": "0.224145",
+     "admitted": true,
+     "refine": 33
+    },
+    {
+     "p": 23,
+     "parity": "even",
+     "sector_rung": 12,
+     "nu": 38,
+     "log10": "-46.09628568906415412",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.00482721",
+     "admitted": true,
+     "refine": 38
+    },
+    {
+     "p": 24,
+     "parity": "odd",
+     "sector_rung": 12,
+     "nu": 39,
+     "log10": "-43.721995809259301953",
+     "pooled_delta": 16,
+     "sector_delta_FROM_FILE": 16,
+     "lobe": "0.0584162",
+     "admitted": true,
+     "refine": 39
+    },
+    {
+     "p": 25,
+     "parity": "even",
+     "sector_rung": 13,
+     "nu": 44,
+     "log10": "-41.574844316417460856",
+     "pooled_delta": 20,
+     "sector_delta_FROM_FILE": 20,
+     "lobe": "0.0683229",
+     "admitted": true,
+     "refine": 44
+    },
+    {
+     "p": 26,
+     "parity": "odd",
+     "sector_rung": 13,
+     "nu": 49,
+     "log10": "-39.373070012767438519",
+     "pooled_delta": 24,
+     "sector_delta_FROM_FILE": 24,
+     "lobe": "0.0266212",
+     "admitted": true,
+     "refine": 49
+    }
+   ],
+   "pooled_delta_N100": [
+    0,
+    0,
+    null,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    6,
+    10,
+    10,
+    8,
+    8,
+    12,
+    16,
+    12,
+    16,
+    16,
+    20,
+    24
+   ],
+   "pooled_parity_order_N100": "eoeoeoeoeoeoeoeoeoeoeoeoeo",
+   "sector_delta_field_would_have_given": [
+    0,
+    0,
+    null,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    6,
+    10,
+    10,
+    8,
+    8,
+    12,
+    16,
+    12,
+    16,
+    16,
+    20,
+    24
+   ],
+   "sort_index_vs_sector_field_agree": true,
+   "n_control_trusted_depth": 0,
+   "n_control_detail": {
+    "even": {
+     "agreed_sector_rungs": 0,
+     "compared": 13,
+     "first_disagreement": {
+      "rung": 1,
+      "N100": 0,
+      "N180": null
+     }
+    },
+    "odd": {
+     "agreed_sector_rungs": 0,
+     "compared": 13,
+     "first_disagreement": {
+      "rung": 1,
+      "N100": 1,
+      "N180": null
+     }
+    }
+   },
+   "P1": {
+    "measured_p1": 3,
+    "registered": 6,
+    "verdict": "UNMEASURED (outside trust)",
+    "confirmation_note": "declared WEAK in advance: UNINFORMATIVE-if-passed."
+   },
+   "measured_zero_count_n": 56,
+   "rule_vs_printed_bin": {
+    "L": {
+     "rule_value": 11,
+     "printed_in_prereg": 11,
+     "agree": true,
+     "raw": 5.019788504602427,
+     "rounding_margin": 0.48021149539757335
+    },
+    "I": {
+     "rule_value": 12,
+     "printed_in_prereg": 12,
+     "agree": true,
+     "raw": 12.058823529411764,
+     "rounding_margin": 0.4411764705882355
+    },
+    "X": {
+     "rule_value": 12,
+     "printed_in_prereg": 12,
+     "agree": true,
+     "raw": 11.723173520447856,
+     "rounding_margin": 0.22317352044785643
+    },
+    "Z": {
+     "rule_value": 17,
+     "printed_in_prereg": 17,
+     "agree": true,
+     "raw": 10.666666666666666,
+     "rounding_margin": 0.16666666666666607
+    },
+    "S": {
+     "rule_value": 13,
+     "printed_in_prereg": 13,
+     "agree": true,
+     "raw": 6.531972647421808,
+     "rounding_margin": 0.031972647421808276
+    },
+    "A": {
+     "rule_value": 11,
+     "printed_in_prereg": 11,
+     "agree": true,
+     "raw": 5.2886477575053155,
+     "rounding_margin": 0.21135224249468454
+    }
+   },
+   "rule_vs_printed_bin_all_agree": true,
+   "sealed_column_c54": {
+    "sealed": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17
+    },
+    "rule_values_now": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17
+    },
+    "agree": true,
+    "note": "c54's P8, sealed at ef19ac5 2026-09-09T00:17:40Z before x=17 was computed; OPENED and scored here, never re-derived."
+   },
+   "n_sweep_of_the_rules": {
+    "52": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    },
+    "53": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    },
+    "54": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    },
+    "55": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 16,
+     "S": 12,
+     "A": 11
+    },
+    "56": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17,
+     "S": 13,
+     "A": 11
+    },
+    "57": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17,
+     "S": 13,
+     "A": 11
+    },
+    "58": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17,
+     "S": 13,
+     "A": 11
+    },
+    "59": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17,
+     "S": 13,
+     "A": 11
+    },
+    "60": {
+     "L": 11,
+     "I": 12,
+     "X": 12,
+     "Z": 17,
+     "S": 13,
+     "A": 11
+    }
+   },
+   "P2": {
+    "measured_p2": 11,
+    "models": {
+     "L": {
+      "p2": 11,
+      "raw": 5.019788504602427,
+      "live": false,
+      "rule": "p2 = 6 + round(4*log x / log 13)  -- REFUTED at x=17",
+      "sealed_at": "c54",
+      "rounding_margin": 0.48021149539757335
+     },
+     "I": {
+      "p2": 12,
+      "raw": 12.058823529411764,
+      "live": true,
+      "rule": "p2 = round(10 + (n-21)/(38-21)), n MEASURED",
+      "sealed_at": "c54",
+      "rounding_margin": 0.4411764705882355
+     },
+     "X": {
+      "p2": 12,
+      "raw": 11.723173520447856,
+      "live": true,
+      "rule": "p2 = round(10 + (log x - log 13)/(log 19 - log 13))",
+      "sealed_at": "c54",
+      "rounding_margin": 0.22317352044785643
+     },
+     "Z": {
+      "p2": 17,
+      "raw": 10.666666666666666,
+      "live": false,
+      "rule": "p2 = 6 + round(4n/21), n MEASURED -- REFUTED at x=17 and x=19",
+      "sealed_at": "c54",
+      "rounding_margin": 0.16666666666666607
+     },
+     "S": {
+      "p2": 13,
+      "raw": 6.531972647421808,
+      "live": true,
+      "rule": "p2 = 6 + round(4*sqrt(n/21)), n MEASURED -- NEW at c55",
+      "sealed_at": "c55",
+      "rounding_margin": 0.031972647421808276
+     },
+     "A": {
+      "p2": 11,
+      "raw": 5.2886477575053155,
+      "live": true,
+      "rule": "p2 = 6 + round(4*log n / log 21), n MEASURED -- NEW at c55",
+      "sealed_at": "c55",
+      "rounding_margin": 0.21135224249468454
+     },
+     "G": {
+      "p2": 10,
+      "live": false,
+      "raw": null,
+      "rounding_margin": null,
+      "sealed_at": "c54",
+      "rule": "gap turnaround, computed at STAGE A -- REFUTED at x=17 and x=19"
+     }
+    },
+    "bins": {
+     "11": [
+      "L",
+      "A"
+     ],
+     "12": [
+      "I",
+      "X"
+     ],
+     "13": [
+      "S"
+     ],
+     "17": [
+      "Z"
+     ],
+     "10": [
+      "G"
+     ]
+    },
+    "occupied_bin": 11,
+    "occupants": [
+     "L",
+     "A"
+    ],
+    "live_occupants": [
+     "A"
+    ],
+    "survivor_count": 1,
+    "refuted_live_models": [
+     "I",
+     "X",
+     "S"
+    ],
+    "knife_edge_occupants": [],
+    "discrimination": "NONE -- more than one registered model names this bin",
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P3": {
+    "registered": 4,
+    "measured_increment": 4,
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P4": {
+    "registered": 15,
+    "measured_p3": 16,
+    "verdict": "UNMEASURED (outside trust)",
+    "note": "registered as an INVARIANCE: p3 = 15 at x = 13, 17 and 19 while p2 moved."
+   },
+   "P5": {
+    "registered": {
+     "p15": 10,
+     "p16": 10,
+     "p17": 8
+    },
+    "measured": {
+     "15": 6,
+     "16": 10,
+     "17": 10
+    },
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P6": {
+    "registered_floor": 23,
+    "measured_depth": 0,
+    "detail": {
+     "even": {
+      "agreed_sector_rungs": 0,
+      "compared": 13,
+      "first_disagreement": {
+       "rung": 1,
+       "N100": 0,
+       "N180": null
+      }
+     },
+     "odd": {
+      "agreed_sector_rungs": 0,
+      "compared": 13,
+      "first_disagreement": {
+       "rung": 1,
+       "N100": 1,
+       "N180": null
+      }
+     }
+    },
+    "verdict": "REFUTED"
+   },
+   "P7": {
+    "order_through_trust": "",
+    "depth": 0,
+    "verdict": "UNMEASURED"
+   },
+   "P8": {
+    "registered_tail_l3_to_l7": [
+     4,
+     2,
+     2,
+     3,
+     1
+    ],
+    "measured_tail": [
+     2,
+     5,
+     5,
+     2,
+     2
+    ],
+    "all_lengths": [
+     2,
+     1,
+     2,
+     5,
+     5,
+     2,
+     2,
+     1
+    ],
+    "reference_x17_x19": [
+     5,
+     5,
+     4,
+     2,
+     2,
+     3,
+     1
+    ],
+    "reference_x13": [
+     5,
+     4,
+     5,
+     2,
+     1,
+     3,
+     1
+    ],
+    "verdict": "UNMEASURED (the first seven plateaux reach past the trusted depth)"
+   },
+   "P9": {
+    "registered": [
+     0,
+     2,
+     6,
+     10,
+     8,
+     16,
+     12
+    ],
+    "measured": [
+     0,
+     null,
+     0,
+     2,
+     6,
+     10,
+     8
+    ],
+    "verdict": "UNMEASURED (outside trust)"
+   },
+   "P10": {
+    "registered": "< 16 (direction only; 24/20/16 at x=13/17/19)",
+    "measured_eighth_value": 12,
+    "reference": [
+     24,
+     20,
+     16
+    ],
+    "verdict": "UNMEASURED (outside trust)",
+    "strength": "WEAK by declaration: outcome space 3, worth one bit at most."
+   },
+   "P11": {
+    "registered": 10,
+    "measured": 10,
+    "first_local_min_index": 7,
+    "first_local_max_after": 9,
+    "verdict": "HELD",
+    "note": "a prediction about the EIGENVALUE ladder alone, settled at stage A before any node count of this window existed."
+   },
+   "FORK": {
+    "identity": "p3 = 6 + l2 + l3 ; the p3=15 invariance IS l2 + l3 = 9",
+    "l2": 8,
+    "l3": 5,
+    "sum_l2_l3": 13,
+    "invariance_holds": false,
+    "reading": "the invariance did NOT absorb the move"
+   }
   }
  },
  "generated_by": "m2_c55_score.py",
@@ -59,8 +1602,8 @@
    25
   ],
   "measured_pair": [
-   null,
-   null
+   11,
+   11
   ],
   "signatures": {
    "A": [
@@ -88,13 +1631,18 @@
     17
    ]
   },
-  "namers": [],
-  "live_namers": [],
-  "verdict": "UNMEASURED -- one or both windows did not produce p2 inside trust",
+  "namers": [
+   "A",
+   "L"
+  ],
+  "live_namers": [
+   "A"
+  ],
+  "verdict": "NO BANK -- the pair (11, 11) is named by more than one registered rule (A, L); the strict criterion blocks a bank even when only one of them is live",
   "criterion": "a model is CONFIRMED only if it names BOTH measured values and no other REGISTERED model (live or refuted control) names both.",
   "trusted_depths": {
-   "22": null,
-   "25": null
+   "22": 0,
+   "25": 0
   }
  }
 }

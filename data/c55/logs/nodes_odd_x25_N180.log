@@ -1,0 +1,30 @@
+REDIRECTION: {
+ "wrapper": "/shared/rh-exchange-repo/Riemann/data/c55/m2_c55_spectrum.py",
+ "c53_module": "/shared/rh-exchange-repo/Riemann/data/c53/m2_c53_spectrum.py",
+ "c53_dir": "/shared/rh-exchange-repo/Riemann/data/c53",
+ "out_dir": "/shared/rh-exchange-repo/Riemann/data/c55",
+ "redirected": true,
+ "inner_resolver": {
+  "HERE": "/shared/rh-exchange-repo/Riemann/data/c55",
+  "c42": "/shared/rh-exchange-repo/Riemann/data/c42",
+  "code": "/shared/rh-exchange-repo/Riemann/data/code",
+  "c46": "/shared/rh-exchange-repo/Riemann/data/c46",
+  "c50": "/shared/rh-exchange-repo/Riemann/data/c50",
+  "c51": "/shared/rh-exchange-repo/Riemann/data/c51",
+  "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
+ }
+}
+  odd  rung 1  log10lam=-117.92546215763 rel_resid=2.848934997e-183 adm=True  nu=None refine=3    lobe=3.224e-42  sturm=1   delta=None stable=False
+  odd  rung 2  log10lam=-109.54409228917 rel_resid=2.018069817e-191 adm=True  nu=3    refine=3    lobe=0.5737     sturm=3   delta=0    stable=True
+  odd  rung 3  log10lam=-101.61650029017 rel_resid=3.487070608e-199 adm=True  nu=None refine=9    lobe=1.044e-41  sturm=5   delta=None stable=False
+  odd  rung 4  log10lam=-94.417833953420 rel_resid=2.949769785e-206 adm=True  nu=9    refine=9    lobe=0.5042     sturm=7   delta=2    stable=True
+  odd  rung 5  log10lam=-87.374172149981 rel_resid=2.31925923e-213 adm=True  nu=11   refine=11   lobe=0.2071     sturm=9   delta=2    stable=True
+  odd  rung 6  log10lam=-80.862522191763 rel_resid=1.345753234e-219 adm=True  nu=17   refine=17   lobe=0.1096     sturm=11  delta=6    stable=True
+  odd  rung 7  log10lam=-74.565999037278 rel_resid=4.874673764e-226 adm=True  nu=19   refine=19   lobe=0.1551     sturm=13  delta=6    stable=True
+  odd  rung 8  log10lam=-68.491666446004 rel_resid=3.827015261e-232 adm=True  nu=25   refine=25   lobe=0.1241     sturm=15  delta=10   stable=True
+  odd  rung 9  log10lam=-62.827870030956 rel_resid=9.518551917e-238 adm=True  nu=25   refine=25   lobe=0.1321     sturm=17  delta=8    stable=True
+  odd  rung 10 log10lam=-57.224627865389 rel_resid=3.321425651e-243 adm=True  nu=31   refine=31   lobe=0.04349    sturm=19  delta=12   stable=True
+  odd  rung 11 log10lam=-52.013316042486 rel_resid=1.791943136e-248 adm=True  nu=33   refine=33   lobe=0.2145     sturm=21  delta=12   stable=True
+  odd  rung 12 log10lam=-46.668439103526 rel_resid=8.920907182e-254 adm=True  nu=39   refine=39   lobe=0.0857     sturm=23  delta=16   stable=True
+  odd  rung 13 log10lam=-41.889786233606 rel_resid=1.640044327e-258 adm=True  nu=49   refine=49   lobe=0.02966    sturm=25  delta=24   stable=True
+wrote m2_c55_nodes_odd_x25_N180_dps300.json  2745.7s
