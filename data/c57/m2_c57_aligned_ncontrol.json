@@ -1,0 +1,911 @@
+{
+ "cycle": 57,
+ "repair": "c56 registered it, c57 applies it: align the N-control by EIGENVALUE, not rung index",
+ "method": "s* = argmin_s sum_{k=1..6} |log10 lam100_k - log10 lam180_{k+s}|, s in 0..12; then recount the agreeing prefix on the aligned pairs",
+ "corpus_rule": "content: json with rungs[] and x/N/parity; node cells carry nu, spectra do not",
+ "spectra": 29,
+ "node_cells": 41,
+ "selection_discipline": "every file pinned: sorted corpus, exactly-one assertion per pick",
+ "unpinnable": [
+  {
+   "what": "spectrum",
+   "x": 13,
+   "N": 100,
+   "parity": "even",
+   "candidates": [
+    "c53/m2_c53_spec_even_x13_N100_dps150.json",
+    "c54/m2_c54_spec_even_x13_N100_dps150.json",
+    "c55/m2_c55_spec_even_x13_N100_dps150.json"
+   ],
+   "status": "AMBIGUOUS -- 3 candidates"
+  },
+  {
+   "what": "nodes",
+   "x": 13,
+   "N": 100,
+   "parity": "odd",
+   "candidates": [
+    "c51/m2_c51_nodes_odd_x13_N100_k7.json",
+    "c53/m2_c51_nodes_odd_x13_N100_k12.json",
+    "c53/m2_c53_nodes_odd_x13_N100_dps150.json"
+   ],
+   "status": "AMBIGUOUS -- 3 candidates"
+  },
+  {
+   "what": "nodes",
+   "x": 13,
+   "N": 180,
+   "parity": "odd",
+   "candidates": [
+    "c51/m2_c51_nodes_odd_x13_N180_k5.json",
+    "c53/m2_c53_nodes_odd_x13_N180_dps150.json"
+   ],
+   "status": "AMBIGUOUS -- 2 candidates"
+  },
+  {
+   "what": "nodes",
+   "x": 19,
+   "N": 100,
+   "parity": "even",
+   "candidates": [
+    "c51/m2_c51_nodes_even_x19_N100_k5.json",
+    "c53/m2_c51_nodes_even_x19_N100_k12.json",
+    "c53/m2_c53_nodes_even_x19_N100_dps300.json"
+   ],
+   "status": "AMBIGUOUS -- 3 candidates"
+  },
+  {
+   "what": "nodes",
+   "x": 19,
+   "N": 100,
+   "parity": "odd",
+   "candidates": [
+    "c51/m2_c51_nodes_odd_x19_N100_k5.json",
+    "c53/m2_c51_nodes_odd_x19_N100_k12.json",
+    "c53/m2_c53_nodes_odd_x19_N100_dps300.json"
+   ],
+   "status": "AMBIGUOUS -- 3 candidates"
+  },
+  {
+   "what": "spectrum",
+   "x": 22,
+   "N": 100,
+   "parity": "even",
+   "candidates": [
+    "c55/m2_c55_hp_spec_even_x22_N100_dps300_sf120.json",
+    "c55/m2_c55_spec_even_x22_N100_dps300.json",
+    "c56/m2_c56_law_spec_x22_N100_dps300_sf60.json",
+    "c56/m2_c56_law_spec_x22_N100_dps300_sf80.json"
+   ],
+   "status": "AMBIGUOUS -- 4 candidates"
+  }
+ ],
+ "rows": [
+  {
+   "x": 13,
+   "parity": "odd",
+   "spectrum_N100": "c53/m2_c53_spec_odd_x13_N100_dps150.json",
+   "spectrum_N180": "c53/m2_c53_spec_odd_x13_N180_dps150.json",
+   "local_gap": 7.1286,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 0.088436,
+   "residual_in_local_gaps": 0.0124,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": null,
+   "agree_eigen_aligned": null,
+   "aligned_pairs_with_two_values": 0,
+   "aligned_pairs_equal": 0,
+   "pairs": []
+  },
+  {
+   "x": 17,
+   "parity": "even",
+   "spectrum_N100": "c54/m2_c54_spec_even_x17_N100_dps300.json",
+   "spectrum_N180": "c54/m2_c54_spec_even_x17_N180_dps300.json",
+   "local_gap": 8.1357,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 0.209708,
+   "residual_in_local_gaps": 0.0258,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": 12,
+   "agree_eigen_aligned": 12,
+   "aligned_pairs_with_two_values": 12,
+   "aligned_pairs_equal": 12,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 1,
+     "nu100": 0,
+     "nu180": 0,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 2,
+     "rung180": 2,
+     "nu100": 2,
+     "nu180": 2,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 3,
+     "rung180": 3,
+     "nu100": 4,
+     "nu180": 4,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 4,
+     "rung180": 4,
+     "nu100": 8,
+     "nu180": 8,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 5,
+     "rung180": 5,
+     "nu100": 10,
+     "nu180": 10,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 6,
+     "rung180": 6,
+     "nu100": 16,
+     "nu180": 16,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 7,
+     "rung180": 7,
+     "nu100": 18,
+     "nu180": 18,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 8,
+     "rung180": 8,
+     "nu100": 24,
+     "nu180": 24,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 9,
+     "rung180": 9,
+     "nu100": 24,
+     "nu180": 24,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 10,
+     "rung180": 10,
+     "nu100": 34,
+     "nu180": 34,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 11,
+     "rung180": 11,
+     "nu100": 36,
+     "nu180": 36,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 12,
+     "rung180": 12,
+     "nu100": 42,
+     "nu180": 42,
+     "both_present": true,
+     "equal": true
+    }
+   ]
+  },
+  {
+   "x": 17,
+   "parity": "odd",
+   "spectrum_N100": "c54/m2_c54_spec_odd_x17_N100_dps300.json",
+   "spectrum_N180": "c54/m2_c54_spec_odd_x17_N180_dps300.json",
+   "local_gap": 7.6851,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 0.203177,
+   "residual_in_local_gaps": 0.0264,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": 12,
+   "agree_eigen_aligned": 12,
+   "aligned_pairs_with_two_values": 12,
+   "aligned_pairs_equal": 12,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 1,
+     "nu100": 1,
+     "nu180": 1,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 2,
+     "rung180": 2,
+     "nu100": 3,
+     "nu180": 3,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 3,
+     "rung180": 3,
+     "nu100": 7,
+     "nu180": 7,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 4,
+     "rung180": 4,
+     "nu100": 9,
+     "nu180": 9,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 5,
+     "rung180": 5,
+     "nu100": 11,
+     "nu180": 11,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 6,
+     "rung180": 6,
+     "nu100": 17,
+     "nu180": 17,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 7,
+     "rung180": 7,
+     "nu100": 19,
+     "nu180": 19,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 8,
+     "rung180": 8,
+     "nu100": 25,
+     "nu180": 25,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 9,
+     "rung180": 9,
+     "nu100": 25,
+     "nu180": 25,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 10,
+     "rung180": 10,
+     "nu100": 35,
+     "nu180": 35,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 11,
+     "rung180": 11,
+     "nu100": 33,
+     "nu180": 33,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 12,
+     "rung180": 12,
+     "nu100": 43,
+     "nu180": 43,
+     "both_present": true,
+     "equal": true
+    }
+   ]
+  },
+  {
+   "x": 19,
+   "parity": "even",
+   "spectrum_N100": "c53/m2_c53_spec_even_x19_N100_dps300.json",
+   "spectrum_N180": "c53/m2_c53_spec_even_x19_N180_dps300.json",
+   "local_gap": 8.2049,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 0.483214,
+   "residual_in_local_gaps": 0.0589,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": null,
+   "agree_eigen_aligned": null,
+   "aligned_pairs_with_two_values": 0,
+   "aligned_pairs_equal": 0,
+   "pairs": []
+  },
+  {
+   "x": 19,
+   "parity": "odd",
+   "spectrum_N100": "c53/m2_c53_spec_odd_x19_N100_dps300.json",
+   "spectrum_N180": "c53/m2_c53_spec_odd_x19_N180_dps300.json",
+   "local_gap": 7.7569,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 0.451795,
+   "residual_in_local_gaps": 0.0582,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": null,
+   "agree_eigen_aligned": null,
+   "aligned_pairs_with_two_values": 0,
+   "aligned_pairs_equal": 0,
+   "pairs": []
+  },
+  {
+   "x": 22,
+   "parity": "odd",
+   "spectrum_N100": "c55/m2_c55_spec_odd_x22_N100_dps300.json",
+   "spectrum_N180": "c55/m2_c55_spec_odd_x22_N180_dps300.json",
+   "local_gap": 7.6925,
+   "best_offset_s": 0,
+   "mean_abs_residual_log10": 2.647961,
+   "residual_in_local_gaps": 0.3442,
+   "N180_rungs_below_the_N100_floor": 1,
+   "agree_index_aligned": 0,
+   "agree_eigen_aligned": 0,
+   "aligned_pairs_with_two_values": 11,
+   "aligned_pairs_equal": 11,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 1,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 2,
+     "rung180": 2,
+     "nu100": null,
+     "nu180": 3,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 3,
+     "rung180": 3,
+     "nu100": 7,
+     "nu180": 7,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 4,
+     "rung180": 4,
+     "nu100": 9,
+     "nu180": 9,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 5,
+     "rung180": 5,
+     "nu100": 11,
+     "nu180": 11,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 6,
+     "rung180": 6,
+     "nu100": 17,
+     "nu180": 17,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 7,
+     "rung180": 7,
+     "nu100": 19,
+     "nu180": 19,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 8,
+     "rung180": 8,
+     "nu100": 25,
+     "nu180": 25,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 9,
+     "rung180": 9,
+     "nu100": 25,
+     "nu180": 25,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 10,
+     "rung180": 10,
+     "nu100": 35,
+     "nu180": 35,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 11,
+     "rung180": 11,
+     "nu100": 33,
+     "nu180": 33,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 12,
+     "rung180": 12,
+     "nu100": 43,
+     "nu180": 43,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 13,
+     "rung180": 13,
+     "nu100": 49,
+     "nu180": 49,
+     "both_present": true,
+     "equal": true
+    }
+   ]
+  },
+  {
+   "x": 25,
+   "parity": "even",
+   "spectrum_N100": "c55/m2_c55_spec_even_x25_N100_dps300.json",
+   "spectrum_N180": "c55/m2_c55_spec_even_x25_N180_dps300.json",
+   "local_gap": 8.089,
+   "best_offset_s": 1,
+   "mean_abs_residual_log10": 0.831759,
+   "residual_in_local_gaps": 0.1028,
+   "N180_rungs_below_the_N100_floor": 2,
+   "agree_index_aligned": 0,
+   "agree_eigen_aligned": 0,
+   "aligned_pairs_with_two_values": 8,
+   "aligned_pairs_equal": 0,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 2,
+     "nu100": 0,
+     "nu180": 2,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 2,
+     "rung180": 3,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 3,
+     "rung180": 4,
+     "nu100": 4,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 4,
+     "rung180": 5,
+     "nu100": 8,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 5,
+     "rung180": 6,
+     "nu100": 10,
+     "nu180": 16,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 6,
+     "rung180": 7,
+     "nu100": 16,
+     "nu180": 18,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 7,
+     "rung180": 8,
+     "nu100": 18,
+     "nu180": 20,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 8,
+     "rung180": 9,
+     "nu100": 20,
+     "nu180": 26,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 9,
+     "rung180": 10,
+     "nu100": 26,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 10,
+     "rung180": 11,
+     "nu100": 26,
+     "nu180": 36,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 11,
+     "rung180": 12,
+     "nu100": 36,
+     "nu180": 38,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 12,
+     "rung180": 13,
+     "nu100": 38,
+     "nu180": 44,
+     "both_present": true,
+     "equal": false
+    }
+   ]
+  },
+  {
+   "x": 25,
+   "parity": "odd",
+   "spectrum_N100": "c55/m2_c55_spec_odd_x25_N100_dps300.json",
+   "spectrum_N180": "c55/m2_c55_spec_odd_x25_N180_dps300.json",
+   "local_gap": 7.7019,
+   "best_offset_s": 1,
+   "mean_abs_residual_log10": 0.731297,
+   "residual_in_local_gaps": 0.095,
+   "N180_rungs_below_the_N100_floor": 2,
+   "agree_index_aligned": 0,
+   "agree_eigen_aligned": 0,
+   "aligned_pairs_with_two_values": 11,
+   "aligned_pairs_equal": 1,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 2,
+     "nu100": 1,
+     "nu180": 3,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 2,
+     "rung180": 3,
+     "nu100": 3,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 3,
+     "rung180": 4,
+     "nu100": 7,
+     "nu180": 9,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 4,
+     "rung180": 5,
+     "nu100": 9,
+     "nu180": 11,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 5,
+     "rung180": 6,
+     "nu100": 11,
+     "nu180": 17,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 6,
+     "rung180": 7,
+     "nu100": 17,
+     "nu180": 19,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 7,
+     "rung180": 8,
+     "nu100": 19,
+     "nu180": 25,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 8,
+     "rung180": 9,
+     "nu100": 25,
+     "nu180": 25,
+     "both_present": true,
+     "equal": true
+    },
+    {
+     "rung100": 9,
+     "rung180": 10,
+     "nu100": 25,
+     "nu180": 31,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 10,
+     "rung180": 11,
+     "nu100": 31,
+     "nu180": 33,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 11,
+     "rung180": 12,
+     "nu100": 33,
+     "nu180": 39,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 12,
+     "rung180": 13,
+     "nu100": 39,
+     "nu180": 49,
+     "both_present": true,
+     "equal": false
+    }
+   ]
+  },
+  {
+   "x": 42,
+   "parity": "even",
+   "spectrum_N100": "c56/m2_c56_spec_even_x42_N100_dps300.json",
+   "spectrum_N180": "c56/m2_c56_spec_even_x42_N180_dps300.json",
+   "local_gap": 8.0776,
+   "best_offset_s": 6,
+   "mean_abs_residual_log10": 2.078798,
+   "residual_in_local_gaps": 0.2574,
+   "N180_rungs_below_the_N100_floor": 6,
+   "agree_index_aligned": 0,
+   "agree_eigen_aligned": 0,
+   "aligned_pairs_with_two_values": 2,
+   "aligned_pairs_equal": 0,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 7,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 2,
+     "rung180": 8,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 3,
+     "rung180": 9,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 4,
+     "rung180": 10,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 5,
+     "rung180": 11,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 6,
+     "rung180": 12,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 7,
+     "rung180": 13,
+     "nu100": 18,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 8,
+     "rung180": 14,
+     "nu100": 20,
+     "nu180": 48,
+     "both_present": true,
+     "equal": false
+    },
+    {
+     "rung100": 9,
+     "rung180": 15,
+     "nu100": 26,
+     "nu180": 52,
+     "both_present": true,
+     "equal": false
+    }
+   ]
+  },
+  {
+   "x": 42,
+   "parity": "odd",
+   "spectrum_N100": "c56/m2_c56_spec_odd_x42_N100_dps300.json",
+   "spectrum_N180": "c56/m2_c56_spec_odd_x42_N180_dps300.json",
+   "local_gap": 7.6288,
+   "best_offset_s": 6,
+   "mean_abs_residual_log10": 2.218038,
+   "residual_in_local_gaps": 0.2907,
+   "N180_rungs_below_the_N100_floor": 6,
+   "agree_index_aligned": 0,
+   "agree_eigen_aligned": 0,
+   "aligned_pairs_with_two_values": 1,
+   "aligned_pairs_equal": 0,
+   "pairs": [
+    {
+     "rung100": 1,
+     "rung180": 7,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 2,
+     "rung180": 8,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 3,
+     "rung180": 9,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 4,
+     "rung180": 10,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 5,
+     "rung180": 11,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 6,
+     "rung180": 12,
+     "nu100": null,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 7,
+     "rung180": 13,
+     "nu100": null,
+     "nu180": 45,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 8,
+     "rung180": 14,
+     "nu100": 25,
+     "nu180": null,
+     "both_present": false,
+     "equal": false
+    },
+    {
+     "rung100": 9,
+     "rung180": 15,
+     "nu100": 27,
+     "nu180": 57,
+     "both_present": true,
+     "equal": false
+    }
+   ]
+  }
+ ],
+ "trusted_depth": {
+  "17": {
+   "index_aligned": 23,
+   "eigen_aligned": 23,
+   "offsets": {
+    "even": 0,
+    "odd": 0
+   }
+  },
+  "25": {
+   "index_aligned": 0,
+   "eigen_aligned": 0,
+   "offsets": {
+    "even": 1,
+    "odd": 1
+   }
+  },
+  "42": {
+   "index_aligned": 0,
+   "eigen_aligned": 0,
+   "offsets": {
+    "even": 6,
+    "odd": 6
+   }
+  }
+ },
+ "NOT_COMPUTED": "p1, p2, p3, the pooled delta sequence -- no call to _first_leave exists here"
+}

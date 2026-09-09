@@ -1,0 +1,191 @@
+{
+ "cycle": 57,
+ "repairs": [
+  "subscript keys count as names in a gate test",
+  "three pin classes instead of two"
+ ],
+ "direction_check": "both repairs can only move the numbers AGAINST prediction B1",
+ "controls": {
+  "C2 positive (ungated producer is FOUND and marked ungated)": true,
+  "C2 positive (gated producer is FOUND and marked gated)": true,
+  "C2/C4/C5 negative (a QUOTATION of an operator does not fire)": true,
+  "C4 positive (cycle token in a path literal is FOUND)": true,
+  "C5 positive (unsorted listdir FOUND, sorted one marked pinned)": true,
+  "C5 repair (a walk sorted downstream is PINNED_IN_SCOPE, not UNPINNED)": true
+ },
+ "denominator_python_files": 503,
+ "C2": {
+  "producer_calls": 96,
+  "gated": 8,
+  "gated_fraction": 0.0833,
+  "by_layer": {
+   "index": {
+    "calls": 43,
+    "gated": 7
+   },
+   "nodal": {
+    "calls": 48,
+    "gated": 1
+   },
+   "spectral": {
+    "calls": 5,
+    "gated": 0
+   }
+  },
+  "gated_sites": [
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 122,
+    "callee": "pooled_table",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 143,
+    "callee": "_first_leave",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 144,
+    "callee": "_first_leave",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 145,
+    "callee": "_first_leave",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 130,
+    "callee": "n_control_depth",
+    "base": "S55",
+    "layer": "nodal",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score.py",
+    "line": 147,
+    "callee": "plateaus",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score_gated.py",
+    "line": 89,
+    "callee": "pooled_table",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   },
+   {
+    "file": "data/c56/m2_c56_score_gated.py",
+    "line": 90,
+    "callee": "_first_leave",
+    "base": "S55",
+    "layer": "index",
+    "gated": true
+   }
+  ]
+ },
+ "C5": {
+  "classes": {
+   "PINNED_AT_CALL": 1,
+   "PINNED_IN_SCOPE": 44,
+   "UNPINNED": 16
+  },
+  "unpinned_sites": [
+   {
+    "file": "data/c47/c47_extrap.py",
+    "line": 34,
+    "callee": "glob.glob"
+   },
+   {
+    "file": "data/c50/m2_c50_p0_gate.py",
+    "line": 33,
+    "callee": "_g.glob"
+   },
+   {
+    "file": "data/c52/m2_c52_qdrift.SEALED_v1.py",
+    "line": 439,
+    "callee": "glob.glob"
+   },
+   {
+    "file": "data/c52/m2_c52_qdrift.py",
+    "line": 444,
+    "callee": "glob.glob"
+   },
+   {
+    "file": "data/c56/m2_c56_absence_audit.py",
+    "line": 186,
+    "callee": "os.listdir"
+   },
+   {
+    "file": "data/code/m2_c27_prov_tier3.py",
+    "line": 12,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/code/m2_c27_provenance.py",
+    "line": 112,
+    "callee": "os.listdir"
+   },
+   {
+    "file": "data/code/m2_c27_provenance.py",
+    "line": 151,
+    "callee": "os.listdir"
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 127,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 134,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/code/m2_c41_selfoutput_sweep.py",
+    "line": 400,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/code/m2_c48_nonmovement_check.py",
+    "line": 39,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/code/machine1_c51_verify.py",
+    "line": 486,
+    "callee": "os.listdir"
+   },
+   {
+    "file": "data/code/machine1_c51_verify.py",
+    "line": 479,
+    "callee": "os.listdir"
+   },
+   {
+    "file": "data/m2_L179/m2_L179_dps_order_census_v1_KEPT.py",
+    "line": 264,
+    "callee": "os.walk"
+   },
+   {
+    "file": "data/m2_L179/m2_L179_dps_order_census_v2.py",
+    "line": 364,
+    "callee": "os.walk"
+   }
+  ]
+ }
+}

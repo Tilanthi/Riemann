@@ -1,0 +1,263 @@
+{
+ "cycle": 57,
+ "question": "is the constant-offset alignment valid at the rungs it compared?",
+ "finding_under_test": "A6 (aligned pairs disagree by ~2x at x=42)",
+ "rows": [
+  {
+   "parity": "even",
+   "rung100": 8,
+   "rung180_used": 14,
+   "local_gap_here": 5.293,
+   "residual_log10": 3.957203,
+   "residual_in_local_gaps": 0.7476,
+   "nearest_N180_rung": 15,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "even",
+   "rung100": 9,
+   "rung180_used": 15,
+   "local_gap_here": 4.8636,
+   "residual_log10": 4.091761,
+   "residual_in_local_gaps": 0.8413,
+   "nearest_N180_rung": 16,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "even",
+   "rung100": 15,
+   "rung180_used": 21,
+   "local_gap_here": 4.1336,
+   "residual_log10": 3.547425,
+   "residual_in_local_gaps": 0.8582,
+   "nearest_N180_rung": 22,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "even",
+   "offset_drift_up_the_ladder": [
+    {
+     "rung100": 1,
+     "nearest_N180": 7,
+     "offset": 6,
+     "resid_gaps": -0.1564
+    },
+    {
+     "rung100": 2,
+     "nearest_N180": 8,
+     "offset": 6,
+     "resid_gaps": 0.0502
+    },
+    {
+     "rung100": 3,
+     "nearest_N180": 9,
+     "offset": 6,
+     "resid_gaps": 0.2255
+    },
+    {
+     "rung100": 4,
+     "nearest_N180": 10,
+     "offset": 6,
+     "resid_gaps": 0.4075
+    },
+    {
+     "rung100": 5,
+     "nearest_N180": 12,
+     "offset": 7,
+     "resid_gaps": -0.3983
+    },
+    {
+     "rung100": 6,
+     "nearest_N180": 13,
+     "offset": 7,
+     "resid_gaps": -0.3402
+    },
+    {
+     "rung100": 7,
+     "nearest_N180": 14,
+     "offset": 7,
+     "resid_gaps": -0.2805
+    },
+    {
+     "rung100": 8,
+     "nearest_N180": 15,
+     "offset": 7,
+     "resid_gaps": -0.2269
+    },
+    {
+     "rung100": 9,
+     "nearest_N180": 16,
+     "offset": 7,
+     "resid_gaps": -0.1745
+    },
+    {
+     "rung100": 10,
+     "nearest_N180": 17,
+     "offset": 7,
+     "resid_gaps": -0.1932
+    },
+    {
+     "rung100": 11,
+     "nearest_N180": 18,
+     "offset": 7,
+     "resid_gaps": -0.1384
+    },
+    {
+     "rung100": 12,
+     "nearest_N180": 19,
+     "offset": 7,
+     "resid_gaps": -0.1725
+    },
+    {
+     "rung100": 13,
+     "nearest_N180": 20,
+     "offset": 7,
+     "resid_gaps": -0.1553
+    },
+    {
+     "rung100": 14,
+     "nearest_N180": 21,
+     "offset": 7,
+     "resid_gaps": -0.1554
+    },
+    {
+     "rung100": 15,
+     "nearest_N180": 22,
+     "offset": 7,
+     "resid_gaps": -0.2095
+    }
+   ]
+  },
+  {
+   "parity": "odd",
+   "rung100": 8,
+   "rung180_used": 14,
+   "local_gap_here": 5.0126,
+   "residual_log10": 4.135368,
+   "residual_in_local_gaps": 0.825,
+   "nearest_N180_rung": 15,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "odd",
+   "rung100": 9,
+   "rung180_used": 15,
+   "local_gap_here": 4.9844,
+   "residual_log10": 3.991132,
+   "residual_in_local_gaps": 0.8007,
+   "nearest_N180_rung": 16,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "odd",
+   "rung100": 15,
+   "rung180_used": 21,
+   "local_gap_here": 3.9621,
+   "residual_log10": 3.363162,
+   "residual_in_local_gaps": 0.8488,
+   "nearest_N180_rung": 22,
+   "offset_if_fitted_here": 7,
+   "offset_fitted_at_the_bottom": 6
+  },
+  {
+   "parity": "odd",
+   "offset_drift_up_the_ladder": [
+    {
+     "rung100": 1,
+     "nearest_N180": 7,
+     "offset": 6,
+     "resid_gaps": -0.0445
+    },
+    {
+     "rung100": 2,
+     "nearest_N180": 8,
+     "offset": 6,
+     "resid_gaps": 0.134
+    },
+    {
+     "rung100": 3,
+     "nearest_N180": 9,
+     "offset": 6,
+     "resid_gaps": 0.3333
+    },
+    {
+     "rung100": 4,
+     "nearest_N180": 10,
+     "offset": 6,
+     "resid_gaps": 0.4373
+    },
+    {
+     "rung100": 5,
+     "nearest_N180": 12,
+     "offset": 7,
+     "resid_gaps": -0.3821
+    },
+    {
+     "rung100": 6,
+     "nearest_N180": 13,
+     "offset": 7,
+     "resid_gaps": -0.3092
+    },
+    {
+     "rung100": 7,
+     "nearest_N180": 14,
+     "offset": 7,
+     "resid_gaps": -0.2377
+    },
+    {
+     "rung100": 8,
+     "nearest_N180": 15,
+     "offset": 7,
+     "resid_gaps": -0.2038
+    },
+    {
+     "rung100": 9,
+     "nearest_N180": 16,
+     "offset": 7,
+     "resid_gaps": -0.1747
+    },
+    {
+     "rung100": 10,
+     "nearest_N180": 17,
+     "offset": 7,
+     "resid_gaps": -0.187
+    },
+    {
+     "rung100": 11,
+     "nearest_N180": 18,
+     "offset": 7,
+     "resid_gaps": -0.1455
+    },
+    {
+     "rung100": 12,
+     "nearest_N180": 19,
+     "offset": 7,
+     "resid_gaps": -0.1568
+    },
+    {
+     "rung100": 13,
+     "nearest_N180": 20,
+     "offset": 7,
+     "resid_gaps": -0.147
+    },
+    {
+     "rung100": 14,
+     "nearest_N180": 21,
+     "offset": 7,
+     "resid_gaps": -0.2031
+    },
+    {
+     "rung100": 15,
+     "nearest_N180": 22,
+     "offset": 7,
+     "resid_gaps": -0.2248
+    }
+   ]
+  }
+ ]
+}

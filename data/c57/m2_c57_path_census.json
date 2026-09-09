@@ -1,0 +1,4515 @@
+{
+ "corpus_rule": "DECLARED: every *.py under the repo root minus .git/__pycache__; planted control files excluded by CONTENT (they carry a marker string)",
+ "search_roots": [
+  "/shared/rh-exchange-repo/Riemann"
+ ],
+ "denominator_python_files": 500,
+ "files_that_failed_to_parse": [
+  "data/code/machine1_c48_verify.py"
+ ],
+ "controls": {
+  "C2 positive (ungated producer is FOUND and marked ungated)": true,
+  "C2 positive (gated producer is FOUND and marked gated)": false,
+  "C2/C4/C5 negative (a QUOTATION of an operator does not fire)": true,
+  "C4 positive (cycle token in a path literal is FOUND)": true,
+  "C5 positive (unsorted listdir FOUND, sorted one marked pinned)": true
+ },
+ "C2": {
+  "question": "how many code paths can compute a value at a protected window, and how many of those are gated?",
+  "producer_vocabulary": {
+   "spectral": [
+    "gpred",
+    "pooled_ladder",
+    "run_spectrum",
+    "spectrum"
+   ],
+   "nodal": [
+    "count_all_knobs",
+    "n_control_depth",
+    "nodes",
+    "refine",
+    "sturm"
+   ],
+   "index": [
+    "_first_leave",
+    "plateaus",
+    "plateaus_holeaware",
+    "pool_rows",
+    "pooled_table",
+    "score",
+    "score_window"
+   ]
+  },
+  "gate_vocabulary": [
+   "PROTECTED_WINDOWS",
+   "RETIRED_WINDOWS",
+   "TRUST_FLOOR_LIVE",
+   "TRUST_FLOOR_Z",
+   "gate_first",
+   "gate_passed",
+   "open_protected",
+   "trust_gate"
+  ],
+  "dominance_criterion": "a producer call is GATED iff an ancestor If/While test names a gate symbol, or its enclosing function opens with a gate-tested raise/return. Generous to the code: it can only overcount gated.",
+  "files_with_a_producer_call": 22,
+  "producer_calls_total": 96,
+  "producer_calls_gated": 6,
+  "files_in_which_EVERY_producer_call_is_gated": 0,
+  "by_layer": {
+   "index": {
+    "calls": 43,
+    "gated": 5
+   },
+   "nodal": {
+    "calls": 48,
+    "gated": 1
+   },
+   "spectral": {
+    "calls": 5,
+    "gated": 0
+   }
+  },
+  "detail": {
+   "data/c50/m2_c50_ladder.SEALED_v1.py": {
+    "producers": [
+     {
+      "line": 262,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 166,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+     },
+     {
+      "line": 167,
+      "cycle_token": "c46",
+      "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+     },
+     {
+      "line": 139,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x13_N100_dps150_g9_it16_k3.json"
+     },
+     {
+      "line": 140,
+      "cycle_token": "c46",
+      "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"
+     },
+     {
+      "line": 258,
+      "cycle_token": "c46",
+      "literal": "c46"
+     },
+     {
+      "line": 192,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_*.json"
+     },
+     {
+      "line": 172,
+      "cycle_token": "c46",
+      "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+     }
+    ],
+    "c5": [
+     {
+      "line": 192,
+      "callee": "glob.glob",
+      "pinned": true
+     }
+    ]
+   },
+   "data/c50/m2_c50_ladder.py": {
+    "producers": [
+     {
+      "line": 298,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 197,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+     },
+     {
+      "line": 198,
+      "cycle_token": "c46",
+      "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+     },
+     {
+      "line": 170,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x13_N100_dps150_g9_it16_k3.json"
+     },
+     {
+      "line": 171,
+      "cycle_token": "c46",
+      "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"
+     },
+     {
+      "line": 223,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_*.json"
+     },
+     {
+      "line": 203,
+      "cycle_token": "c46",
+      "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+     }
+    ],
+    "c5": [
+     {
+      "line": 223,
+      "callee": "glob.glob",
+      "pinned": true
+     }
+    ]
+   },
+   "data/c51/m2_c51_nodes.py": {
+    "producers": [
+     {
+      "line": 255,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 263,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 276,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 370,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 371,
+      "callee": "refine",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 374,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 315,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 394,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+     },
+     {
+      "line": 289,
+      "cycle_token": "c51",
+      "literal": "m2_c51_kat.json"
+     },
+     {
+      "line": 310,
+      "cycle_token": "c50",
+      "literal": "m2_c50_nodes_%s_x13_N100.json"
+     },
+     {
+      "line": 326,
+      "cycle_token": "c50",
+      "literal": "P0 reproduction gate: c50's published coefficients, c51's detector"
+     },
+     {
+      "line": 327,
+      "cycle_token": "c51",
+      "literal": "m2_c51_p0_recount.json"
+     },
+     {
+      "line": 208,
+      "cycle_token": "c46",
+      "literal": "c46_block_%s_x%d_N%d_dps%d_g%d_it%d_k%d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c51/m2_c51_score.py": {
+    "producers": [
+     {
+      "line": 237,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 238,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 239,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 39,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+     },
+     {
+      "line": 271,
+      "cycle_token": "c51",
+      "literal": "m2_c51_scores.json"
+     },
+     {
+      "line": 272,
+      "cycle_token": "c51",
+      "literal": "m2_c51_scores.out"
+     }
+    ],
+    "c5": []
+   },
+   "data/c52/m2_c52_qdrift.SEALED_v1.py": {
+    "producers": [
+     {
+      "line": 456,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 34,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 227,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 64,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x%s_N%d_dps%d_g9_it16_k%d.json"
+     },
+     {
+      "line": 108,
+      "cycle_token": "c46",
+      "literal": "c46"
+     },
+     {
+      "line": 28,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 439,
+      "cycle_token": "c46",
+      "literal": "c46_block_*_dps300_*_k3.json"
+     }
+    ],
+    "c5": [
+     {
+      "line": 439,
+      "callee": "glob.glob",
+      "pinned": false
+     }
+    ]
+   },
+   "data/c52/m2_c52_qdrift.py": {
+    "producers": [
+     {
+      "line": 461,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 39,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 232,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 69,
+      "cycle_token": "c46",
+      "literal": "c46_block_even_x%s_N%d_dps%d_g9_it16_k%d.json"
+     },
+     {
+      "line": 113,
+      "cycle_token": "c46",
+      "literal": "c46"
+     },
+     {
+      "line": 33,
+      "cycle_token": "c50",
+      "literal": "c50"
+     },
+     {
+      "line": 444,
+      "cycle_token": "c46",
+      "literal": "c46_block_*_dps300_*_k3.json"
+     }
+    ],
+    "c5": [
+     {
+      "line": 444,
+      "callee": "glob.glob",
+      "pinned": false
+     }
+    ]
+   },
+   "data/c53/m2_c53_block_VERBATIM_COPY_of_c51_nodes.py": {
+    "producers": [
+     {
+      "line": 255,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 263,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 276,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 370,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 371,
+      "callee": "refine",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 374,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 315,
+      "callee": "count_all_knobs",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 394,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+     },
+     {
+      "line": 289,
+      "cycle_token": "c51",
+      "literal": "m2_c51_kat.json"
+     },
+     {
+      "line": 310,
+      "cycle_token": "c50",
+      "literal": "m2_c50_nodes_%s_x13_N100.json"
+     },
+     {
+      "line": 326,
+      "cycle_token": "c50",
+      "literal": "P0 reproduction gate: c50's published coefficients, c51's detector"
+     },
+     {
+      "line": 327,
+      "cycle_token": "c51",
+      "literal": "m2_c51_p0_recount.json"
+     },
+     {
+      "line": 208,
+      "cycle_token": "c46",
+      "literal": "c46_block_%s_x%d_N%d_dps%d_g%d_it%d_k%d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c53/m2_c53_spectrum.py": {
+    "producers": [
+     {
+      "line": 297,
+      "callee": "pooled_ladder",
+      "base": null,
+      "layer": "spectral",
+      "gated": false
+     },
+     {
+      "line": 248,
+      "callee": "count_all_knobs",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 249,
+      "callee": "refine",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 250,
+      "callee": "sturm",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 175,
+      "callee": "count_all_knobs",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 331,
+      "callee": "nodes",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 333,
+      "callee": "gpred",
+      "base": null,
+      "layer": "spectral",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 88,
+      "cycle_token": "c53",
+      "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 92,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 311,
+      "cycle_token": "c53",
+      "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 150,
+      "cycle_token": "c53",
+      "literal": "m2_c53_kat.json"
+     },
+     {
+      "line": 187,
+      "cycle_token": "c53",
+      "literal": "m2_c53_p0_recount.json"
+     }
+    ],
+    "c5": [
+     {
+      "line": 168,
+      "callee": "os.listdir",
+      "pinned": true
+     }
+    ]
+   },
+   "data/c54/m2_c54_score.SEALED_v1.py": {
+    "producers": [
+     {
+      "line": 80,
+      "callee": "pool_rows",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 198,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 199,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 200,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 367,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 389,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 397,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 422,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 378,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 144,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 476,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 157,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 265,
+      "cycle_token": "c53",
+      "literal": "c53"
+     },
+     {
+      "line": 266,
+      "cycle_token": "c53",
+      "literal": "m2_c53_score.py"
+     },
+     {
+      "line": 447,
+      "cycle_token": "c54",
+      "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 165,
+      "cycle_token": "c54",
+      "literal": "m2_c54_kat_na.json"
+     },
+     {
+      "line": 181,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+     },
+     {
+      "line": 182,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+     },
+     {
+      "line": 212,
+      "cycle_token": "c54",
+      "literal": "m2_c54_fixture_d.json"
+     },
+     {
+      "line": 264,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 271,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 278,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 318,
+      "cycle_token": "c54",
+      "literal": "m2_c54_regression.json"
+     },
+     {
+      "line": 343,
+      "cycle_token": "c54",
+      "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 454,
+      "cycle_token": "c54",
+      "literal": "m2_c54_scores.json"
+     },
+     {
+      "line": 363,
+      "cycle_token": "c54",
+      "literal": "m2_c54_scores.json"
+     },
+     {
+      "line": 187,
+      "cycle_token": "c54",
+      "literal": "m2_c54_fixture_d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c54/m2_c54_score.py": {
+    "producers": [
+     {
+      "line": 80,
+      "callee": "pool_rows",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 198,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 199,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 200,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 415,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 437,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 445,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 484,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 426,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 144,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 538,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 157,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 265,
+      "cycle_token": "c53",
+      "literal": "c53"
+     },
+     {
+      "line": 266,
+      "cycle_token": "c53",
+      "literal": "m2_c53_score.py"
+     },
+     {
+      "line": 384,
+      "cycle_token": "c54",
+      "literal": "m2_c54_zerocount.json"
+     },
+     {
+      "line": 509,
+      "cycle_token": "c54",
+      "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 165,
+      "cycle_token": "c54",
+      "literal": "m2_c54_kat_na.json"
+     },
+     {
+      "line": 181,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+     },
+     {
+      "line": 182,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+     },
+     {
+      "line": 212,
+      "cycle_token": "c54",
+      "literal": "m2_c54_fixture_d.json"
+     },
+     {
+      "line": 264,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 271,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 278,
+      "cycle_token": "c53",
+      "literal": "m2_c53_scores.json"
+     },
+     {
+      "line": 318,
+      "cycle_token": "c54",
+      "literal": "m2_c54_regression.json"
+     },
+     {
+      "line": 391,
+      "cycle_token": "c54",
+      "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 516,
+      "cycle_token": "c54",
+      "literal": "m2_c54_scores.json"
+     },
+     {
+      "line": 411,
+      "cycle_token": "c54",
+      "literal": "m2_c54_scores.json"
+     },
+     {
+      "line": 187,
+      "cycle_token": "c54",
+      "literal": "m2_c54_fixture_d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c54/m2_c54_spectrum.py": {
+    "producers": [
+     {
+      "line": 85,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 127,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 130,
+      "callee": "gpred",
+      "base": "S53",
+      "layer": "spectral",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 49,
+      "cycle_token": "c54",
+      "literal": "m2_c54_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 53,
+      "cycle_token": "c54",
+      "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 110,
+      "cycle_token": "c54",
+      "literal": "m2_c54_repro_gate.json"
+     },
+     {
+      "line": 134,
+      "cycle_token": "c53",
+      "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 135,
+      "cycle_token": "c54",
+      "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 89,
+      "cycle_token": "c53",
+      "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 91,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c55/m2_c55_score.py": {
+    "producers": [
+     {
+      "line": 87,
+      "callee": "pool_rows",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 205,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 206,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 207,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 346,
+      "callee": "pooled_table",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 364,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 371,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 417,
+      "callee": "_first_leave",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 442,
+      "callee": "plateaus",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 356,
+      "callee": "n_control_depth",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 506,
+      "callee": "score_window",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 151,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 566,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 164,
+      "callee": "sturm",
+      "base": null,
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 304,
+      "cycle_token": "c55",
+      "literal": "m2_c55_zerocount.json"
+     },
+     {
+      "line": 468,
+      "cycle_token": "c55",
+      "literal": "m2_c55_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 172,
+      "cycle_token": "c55",
+      "literal": "m2_c55_kat_na.json"
+     },
+     {
+      "line": 188,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+     },
+     {
+      "line": 189,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+     },
+     {
+      "line": 219,
+      "cycle_token": "c55",
+      "literal": "m2_c55_fixture_d.json"
+     },
+     {
+      "line": 311,
+      "cycle_token": "c55",
+      "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 530,
+      "cycle_token": "c55",
+      "literal": "m2_c55_scores.json"
+     },
+     {
+      "line": 194,
+      "cycle_token": "c55",
+      "literal": "m2_c55_fixture_d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c55/m2_c55_score_jointfix.py": {
+    "producers": [
+     {
+      "line": 103,
+      "callee": "plateaus_holeaware",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 36,
+      "cycle_token": "c55",
+      "literal": "m2_c55_scores.json"
+     },
+     {
+      "line": 37,
+      "cycle_token": "c55",
+      "literal": "m2_c55_scores_jointfix.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c55/m2_c55_spectrum.py": {
+    "producers": [
+     {
+      "line": 87,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 129,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 132,
+      "callee": "gpred",
+      "base": "S53",
+      "layer": "spectral",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 51,
+      "cycle_token": "c55",
+      "literal": "m2_c55_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 55,
+      "cycle_token": "c55",
+      "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 112,
+      "cycle_token": "c55",
+      "literal": "m2_c55_repro_gate.json"
+     },
+     {
+      "line": 136,
+      "cycle_token": "c53",
+      "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 137,
+      "cycle_token": "c55",
+      "literal": "m2_c55_gpred_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 91,
+      "cycle_token": "c53",
+      "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 93,
+      "cycle_token": "c53",
+      "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c55/m2_c55_storage_test.py": {
+    "producers": [
+     {
+      "line": 132,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 134,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 46,
+      "cycle_token": "c55",
+      "literal": "m2_c55_hp_spec_%s_x%d_N%d_dps%d_sf%d.json"
+     },
+     {
+      "line": 50,
+      "cycle_token": "c55",
+      "literal": "m2_c55_hp_nodes_%s_x%d_N%d_dps%d_sf%d.json"
+     },
+     {
+      "line": 61,
+      "cycle_token": "c55",
+      "literal": "m2_c55_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 62,
+      "cycle_token": "c55",
+      "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 113,
+      "cycle_token": "c55",
+      "literal": "m2_c55_storage_test.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c56/m2_c56_score.py": {
+    "producers": [
+     {
+      "line": 122,
+      "callee": "pooled_table",
+      "base": "S55",
+      "layer": "index",
+      "gated": true
+     },
+     {
+      "line": 143,
+      "callee": "_first_leave",
+      "base": "S55",
+      "layer": "index",
+      "gated": true
+     },
+     {
+      "line": 144,
+      "callee": "_first_leave",
+      "base": "S55",
+      "layer": "index",
+      "gated": true
+     },
+     {
+      "line": 145,
+      "callee": "_first_leave",
+      "base": "S55",
+      "layer": "index",
+      "gated": true
+     },
+     {
+      "line": 130,
+      "callee": "n_control_depth",
+      "base": "S55",
+      "layer": "nodal",
+      "gated": true
+     },
+     {
+      "line": 201,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 147,
+      "callee": "plateaus",
+      "base": "S55",
+      "layer": "index",
+      "gated": true
+     }
+    ],
+    "c4": [
+     {
+      "line": 49,
+      "cycle_token": "c56",
+      "literal": "m2_c56_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 185,
+      "cycle_token": "c56",
+      "literal": "m2_c56_scores.json"
+     },
+     {
+      "line": 119,
+      "cycle_token": "c56",
+      "literal": "m2_c56_scores.json"
+     },
+     {
+      "line": 134,
+      "cycle_token": "c56",
+      "literal": "m2_c56_zerocount.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c56/m2_c56_score_gated.py": {
+    "producers": [
+     {
+      "line": 44,
+      "callee": "n_control_depth",
+      "base": "S55",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 89,
+      "callee": "pooled_table",
+      "base": "S55",
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 90,
+      "callee": "_first_leave",
+      "base": "S55",
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 128,
+      "cycle_token": "c56",
+      "literal": "m2_c56_scores_gated.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c56/m2_c56_spectrum.py": {
+    "producers": [
+     {
+      "line": 172,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 174,
+      "callee": "gpred",
+      "base": "S53",
+      "layer": "spectral",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 60,
+      "cycle_token": "c56",
+      "literal": "m2_c56_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 64,
+      "cycle_token": "c56",
+      "literal": "m2_c56_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 126,
+      "cycle_token": "c53",
+      "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 129,
+      "cycle_token": "c56",
+      "literal": "m2_c56_kat_%s_spec.json"
+     },
+     {
+      "line": 132,
+      "cycle_token": "c56",
+      "literal": "m2_c56_kat_%s_nodes.json"
+     },
+     {
+      "line": 151,
+      "cycle_token": "c56",
+      "literal": "m2_c56_kat_%s.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c56/m2_c56_storage_law.py": {
+    "producers": [
+     {
+      "line": 111,
+      "callee": "score",
+      "base": null,
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 117,
+      "callee": "nodes",
+      "base": "S53",
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 43,
+      "cycle_token": "c56",
+      "literal": "m2_c56_law_spec_x22_N100_dps300_sf%d.json"
+     },
+     {
+      "line": 44,
+      "cycle_token": "c56",
+      "literal": "m2_c56_law_nodes_x22_N100_dps300_sf%d.json"
+     },
+     {
+      "line": 100,
+      "cycle_token": "c56",
+      "literal": "m2_c56_storage_law.json"
+     },
+     {
+      "line": 58,
+      "cycle_token": "c55",
+      "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+     },
+     {
+      "line": 59,
+      "cycle_token": "c55",
+      "literal": "m2_c55_hp_nodes_%s_x%d_N%d_dps%d_sf120.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c57/m2_c57_c1_derivability.py": {
+    "producers": [
+     {
+      "line": 13,
+      "callee": "pooled_table",
+      "base": "S55",
+      "layer": "index",
+      "gated": false
+     },
+     {
+      "line": 37,
+      "callee": "_first_leave",
+      "base": "S55",
+      "layer": "index",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 8,
+      "cycle_token": "c56",
+      "literal": "c56"
+     },
+     {
+      "line": 9,
+      "cycle_token": "c55",
+      "literal": "c55"
+     },
+     {
+      "line": 12,
+      "cycle_token": "c56",
+      "literal": "m2_c56_nodes_%s_x42_N100_dps300.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/c57/m2_c57_detector_dps_probe.py": {
+    "producers": [
+     {
+      "line": 45,
+      "callee": "count_all_knobs",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 46,
+      "callee": "refine",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 51,
+      "callee": "sturm",
+      "base": "ND",
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 24,
+      "cycle_token": "c53",
+      "literal": "c53"
+     },
+     {
+      "line": 30,
+      "cycle_token": "c56",
+      "literal": "c56"
+     },
+     {
+      "line": 31,
+      "cycle_token": "c56",
+      "literal": "m2_c56_spec_even_x42_N100_dps300.json"
+     },
+     {
+      "line": 32,
+      "cycle_token": "c56",
+      "literal": "c56"
+     },
+     {
+      "line": 33,
+      "cycle_token": "c56",
+      "literal": "m2_c56_nodes_even_x42_N100_dps300.json"
+     },
+     {
+      "line": 101,
+      "cycle_token": "c57",
+      "literal": "m2_c57_detector_dps_probe.json"
+     }
+    ],
+    "c5": []
+   },
+   "data/code/machine1_c51_verify.py": {
+    "producers": [
+     {
+      "line": 446,
+      "callee": "count_all_knobs",
+      "base": "mod",
+      "layer": "nodal",
+      "gated": false
+     },
+     {
+      "line": 447,
+      "callee": "refine",
+      "base": "mod",
+      "layer": "nodal",
+      "gated": false
+     }
+    ],
+    "c4": [
+     {
+      "line": 32,
+      "cycle_token": "c51",
+      "literal": "c51"
+     },
+     {
+      "line": 33,
+      "cycle_token": "c51",
+      "literal": "machine1_c51_verify.out"
+     },
+     {
+      "line": 76,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+     },
+     {
+      "line": 118,
+      "cycle_token": "c51",
+      "literal": "c51"
+     },
+     {
+      "line": 434,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes.py"
+     },
+     {
+      "line": 136,
+      "cycle_token": "c51",
+      "literal": "m2_c51_scores.json"
+     },
+     {
+      "line": 265,
+      "cycle_token": "c51",
+      "literal": "m2_c51_scores.json"
+     },
+     {
+      "line": 293,
+      "cycle_token": "c51",
+      "literal": "m2_c51_scores.json"
+     },
+     {
+      "line": 468,
+      "cycle_token": "c51",
+      "literal": "c51"
+     },
+     {
+      "line": 468,
+      "cycle_token": "c51",
+      "literal": "m2_c51_nodes.py"
+     },
+     {
+      "line": 91,
+      "cycle_token": "c51",
+      "literal": "m2_c51_prereg.md"
+     },
+     {
+      "line": 121,
+      "cycle_token": "c51",
+      "literal": "c51"
+     },
+     {
+      "line": 122,
+      "cycle_token": "c51",
+      "literal": "c51"
+     },
+     {
+      "line": 127,
+      "cycle_token": "c51",
+      "literal": "c51"
+     }
+    ],
+    "c5": [
+     {
+      "line": 486,
+      "callee": "os.listdir",
+      "pinned": false
+     },
+     {
+      "line": 479,
+      "callee": "os.listdir",
+      "pinned": false
+     }
+    ]
+   }
+  }
+ },
+ "C4": {
+  "question": "does any code path read the cycle token out of a filename?",
+  "files_building_a_path_from_a_cycle_token": 129,
+  "sites": 443,
+  "detail": {
+   "data/c42/c42_score.py": [
+    {
+     "line": 9,
+     "cycle_token": "c42",
+     "literal": "c42_convergence_in_x.json"
+    },
+    {
+     "line": 97,
+     "cycle_token": "c42",
+     "literal": "c42_convergence_in_x.json"
+    },
+    {
+     "line": 86,
+     "cycle_token": "c42",
+     "literal": "c42_x%d_N100_dps150_g9_*.json"
+    },
+    {
+     "line": 87,
+     "cycle_token": "c42",
+     "literal": "c42_x%d_N140_dps150_g9_*.json"
+    }
+   ],
+   "data/c42/c42_table.py": [
+    {
+     "line": 9,
+     "cycle_token": "c42",
+     "literal": "c42_x*_N100_dps*_g9_*.json"
+    },
+    {
+     "line": 30,
+     "cycle_token": "c42",
+     "literal": "c42_convergence_in_x.tsv"
+    },
+    {
+     "line": 36,
+     "cycle_token": "c42",
+     "literal": "c42_convergence_in_x.md"
+    },
+    {
+     "line": 57,
+     "cycle_token": "c42",
+     "literal": "c42_convergence_in_x.json"
+    }
+   ],
+   "data/c43/c43_widen.py": [
+    {
+     "line": 24,
+     "cycle_token": "c43",
+     "literal": "/workspace/c43/c43_x13_N100_dps150_widened.json"
+    }
+   ],
+   "data/c45/c45_lam_x.py": [
+    {
+     "line": 10,
+     "cycle_token": "c42",
+     "literal": "c42"
+    },
+    {
+     "line": 28,
+     "cycle_token": "c45",
+     "literal": "c45_x%s_N%d_dps%d_g%d_it%d.json"
+    }
+   ],
+   "data/c46/c46_analyse.py": [
+    {
+     "line": 20,
+     "cycle_token": "c46",
+     "literal": "c46_*_x*_N*_dps*_g*_it*.json"
+    }
+   ],
+   "data/c46/c46_odd_indep.py": [
+    {
+     "line": 20,
+     "cycle_token": "c42",
+     "literal": "c42"
+    },
+    {
+     "line": 108,
+     "cycle_token": "c46",
+     "literal": "c46_K5_indep_N%d_x%d_dps%d_p%d.json"
+    }
+   ],
+   "data/c46/c46_parity.py": [
+    {
+     "line": 52,
+     "cycle_token": "c42",
+     "literal": "c42"
+    },
+    {
+     "line": 303,
+     "cycle_token": "c46",
+     "literal": "c46_%s_x%s_N%d_dps%d_g%d_it%d.json"
+    },
+    {
+     "line": 321,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x%s_N%d_dps%d_g%d_it%d_k%d.json"
+    }
+   ],
+   "data/c47/c47_R1_depth.py": [
+    {
+     "line": 25,
+     "cycle_token": "c46",
+     "literal": "c46_*_x13_N*_dps150_g9_it16.json"
+    }
+   ],
+   "data/c47/c47_extrap.py": [
+    {
+     "line": 34,
+     "cycle_token": "c46",
+     "literal": "c46_*_x13_N*_dps150_g9_it16.json"
+    }
+   ],
+   "data/c47/c47_models.py": [
+    {
+     "line": 17,
+     "cycle_token": "c46",
+     "literal": "c46_*_x13_N*_dps150_g9_it16.json"
+    }
+   ],
+   "data/c48/c48_recell.py": [
+    {
+     "line": 30,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 32,
+     "cycle_token": "c42",
+     "literal": "c42"
+    },
+    {
+     "line": 74,
+     "cycle_token": "c48",
+     "literal": "c48_%s_x%s_N%d_dps%d_g%d_it%d.json"
+    },
+    {
+     "line": 79,
+     "cycle_token": "c46",
+     "literal": "c46_%s_x%s_N%d_dps%d_g%d_it%d.json"
+    }
+   ],
+   "data/c49/m2_c49_depth_all_rungs.py": [
+    {
+     "line": 38,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 39,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 89,
+     "cycle_token": "c48",
+     "literal": "c48_*_dps150_*.json"
+    },
+    {
+     "line": 101,
+     "cycle_token": "c48",
+     "literal": "c48_"
+    },
+    {
+     "line": 101,
+     "cycle_token": "c46",
+     "literal": "c46_"
+    },
+    {
+     "line": 94,
+     "cycle_token": "c48",
+     "literal": "c48_*_dps220_*.json"
+    }
+   ],
+   "data/c49/m2_c49_gate_census.py": [
+    {
+     "line": 26,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 26,
+     "cycle_token": "c48",
+     "literal": "m2_c48_storage_census.tsv"
+    }
+   ],
+   "data/c49/m2_c49_upgrade_ladder.py": [
+    {
+     "line": 29,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 30,
+     "cycle_token": "c49",
+     "literal": "c49"
+    },
+    {
+     "line": 47,
+     "cycle_token": "c48",
+     "literal": "c48_*.json"
+    },
+    {
+     "line": 49,
+     "cycle_token": "c48",
+     "literal": "c48_*.json"
+    }
+   ],
+   "data/c50/m2_c50_ladder.SEALED_v1.py": [
+    {
+     "line": 166,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 167,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 139,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 140,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 258,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 192,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_*.json"
+    },
+    {
+     "line": 172,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+    }
+   ],
+   "data/c50/m2_c50_ladder.py": [
+    {
+     "line": 197,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 198,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 170,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 171,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 223,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_*.json"
+    },
+    {
+     "line": 203,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+    }
+   ],
+   "data/c50/m2_c50_nodes.py": [
+    {
+     "line": 128,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 129,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x%d_N%d_dps%d_g%d_it%d_k%d.json"
+    },
+    {
+     "line": 167,
+     "cycle_token": "c50",
+     "literal": "m2_c50_nodes_%s_x%d_N%d.json"
+    }
+   ],
+   "data/c50/m2_c50_p0_gate.py": [
+    {
+     "line": 33,
+     "cycle_token": "c46",
+     "literal": "c46_block_*_k5.json"
+    },
+    {
+     "line": 68,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 69,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 82,
+     "cycle_token": "c50",
+     "literal": "m2_c50_p0_gate.json"
+    },
+    {
+     "line": 54,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x%s_N%d_dps%d_g9_it16_k%d.json"
+    },
+    {
+     "line": 55,
+     "cycle_token": "c46",
+     "literal": "c46_%s_x%s_N%d_dps%d_g9_it16.json"
+    }
+   ],
+   "data/c50/m2_c50_predict.SEALED_v1.py": [
+    {
+     "line": 44,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 60,
+     "cycle_token": "c46",
+     "literal": "c46_%s_x%s_N%d_dps%d_g9_it16.json"
+    },
+    {
+     "line": 65,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+    }
+   ],
+   "data/c50/m2_c50_predict.py": [
+    {
+     "line": 74,
+     "cycle_token": "c46",
+     "literal": "c46_%s_x%s_N%d_dps%d_g9_it16.json"
+    },
+    {
+     "line": 79,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x13_N100_dps150_g9_it16_k3.json"
+    }
+   ],
+   "data/c51/m2_c51_nodes.py": [
+    {
+     "line": 394,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 289,
+     "cycle_token": "c51",
+     "literal": "m2_c51_kat.json"
+    },
+    {
+     "line": 310,
+     "cycle_token": "c50",
+     "literal": "m2_c50_nodes_%s_x13_N100.json"
+    },
+    {
+     "line": 326,
+     "cycle_token": "c50",
+     "literal": "P0 reproduction gate: c50's published coefficients, c51's detector"
+    },
+    {
+     "line": 327,
+     "cycle_token": "c51",
+     "literal": "m2_c51_p0_recount.json"
+    },
+    {
+     "line": 208,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x%d_N%d_dps%d_g%d_it%d_k%d.json"
+    }
+   ],
+   "data/c51/m2_c51_pooled.py": [
+    {
+     "line": 24,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 59,
+     "cycle_token": "c51",
+     "literal": "m2_c51_pooled.out"
+    }
+   ],
+   "data/c51/m2_c51_score.py": [
+    {
+     "line": 39,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 271,
+     "cycle_token": "c51",
+     "literal": "m2_c51_scores.json"
+    },
+    {
+     "line": 272,
+     "cycle_token": "c51",
+     "literal": "m2_c51_scores.out"
+    }
+   ],
+   "data/c52/m2_c52_armD.py": [
+    {
+     "line": 28,
+     "cycle_token": "c50",
+     "literal": "c50"
+    }
+   ],
+   "data/c52/m2_c52_qdrift.SEALED_v1.py": [
+    {
+     "line": 34,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 227,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 64,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x%s_N%d_dps%d_g9_it16_k%d.json"
+    },
+    {
+     "line": 108,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 28,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 439,
+     "cycle_token": "c46",
+     "literal": "c46_block_*_dps300_*_k3.json"
+    }
+   ],
+   "data/c52/m2_c52_qdrift.py": [
+    {
+     "line": 39,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 232,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 69,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x%s_N%d_dps%d_g9_it16_k%d.json"
+    },
+    {
+     "line": 113,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 33,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 444,
+     "cycle_token": "c46",
+     "literal": "c46_block_*_dps300_*_k3.json"
+    }
+   ],
+   "data/c53/m2_c53_block_VERBATIM_COPY_of_c51_nodes.py": [
+    {
+     "line": 394,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 289,
+     "cycle_token": "c51",
+     "literal": "m2_c51_kat.json"
+    },
+    {
+     "line": 310,
+     "cycle_token": "c50",
+     "literal": "m2_c50_nodes_%s_x13_N100.json"
+    },
+    {
+     "line": 326,
+     "cycle_token": "c50",
+     "literal": "P0 reproduction gate: c50's published coefficients, c51's detector"
+    },
+    {
+     "line": 327,
+     "cycle_token": "c51",
+     "literal": "m2_c51_p0_recount.json"
+    },
+    {
+     "line": 208,
+     "cycle_token": "c46",
+     "literal": "c46_block_%s_x%d_N%d_dps%d_g%d_it%d_k%d.json"
+    }
+   ],
+   "data/c53/m2_c53_score.py": [
+    {
+     "line": 80,
+     "cycle_token": "c53",
+     "literal": "m2_c53_p0_recount.json"
+    },
+    {
+     "line": 157,
+     "cycle_token": "c53",
+     "literal": "m2_c53_gpred_x19_N100_dps300.json"
+    },
+    {
+     "line": 34,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 39,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 44,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 305,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    }
+   ],
+   "data/c53/m2_c53_spectrum.py": [
+    {
+     "line": 88,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 92,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 311,
+     "cycle_token": "c53",
+     "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 150,
+     "cycle_token": "c53",
+     "literal": "m2_c53_kat.json"
+    },
+    {
+     "line": 187,
+     "cycle_token": "c53",
+     "literal": "m2_c53_p0_recount.json"
+    }
+   ],
+   "data/c54/m2_c54_repro_fix.py": [
+    {
+     "line": 28,
+     "cycle_token": "c53",
+     "literal": "c53"
+    },
+    {
+     "line": 58,
+     "cycle_token": "c54",
+     "literal": "m2_c54_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 59,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 60,
+     "cycle_token": "c54",
+     "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 61,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 106,
+     "cycle_token": "c54",
+     "literal": "m2_c54_repro_gate_fixed.json"
+    }
+   ],
+   "data/c54/m2_c54_score.SEALED_v1.py": [
+    {
+     "line": 265,
+     "cycle_token": "c53",
+     "literal": "c53"
+    },
+    {
+     "line": 266,
+     "cycle_token": "c53",
+     "literal": "m2_c53_score.py"
+    },
+    {
+     "line": 447,
+     "cycle_token": "c54",
+     "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 165,
+     "cycle_token": "c54",
+     "literal": "m2_c54_kat_na.json"
+    },
+    {
+     "line": 181,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+    },
+    {
+     "line": 182,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+    },
+    {
+     "line": 212,
+     "cycle_token": "c54",
+     "literal": "m2_c54_fixture_d.json"
+    },
+    {
+     "line": 264,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 271,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 278,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 318,
+     "cycle_token": "c54",
+     "literal": "m2_c54_regression.json"
+    },
+    {
+     "line": 343,
+     "cycle_token": "c54",
+     "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 454,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores.json"
+    },
+    {
+     "line": 363,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores.json"
+    },
+    {
+     "line": 187,
+     "cycle_token": "c54",
+     "literal": "m2_c54_fixture_d.json"
+    }
+   ],
+   "data/c54/m2_c54_score.py": [
+    {
+     "line": 265,
+     "cycle_token": "c53",
+     "literal": "c53"
+    },
+    {
+     "line": 266,
+     "cycle_token": "c53",
+     "literal": "m2_c53_score.py"
+    },
+    {
+     "line": 384,
+     "cycle_token": "c54",
+     "literal": "m2_c54_zerocount.json"
+    },
+    {
+     "line": 509,
+     "cycle_token": "c54",
+     "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 165,
+     "cycle_token": "c54",
+     "literal": "m2_c54_kat_na.json"
+    },
+    {
+     "line": 181,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+    },
+    {
+     "line": 182,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+    },
+    {
+     "line": 212,
+     "cycle_token": "c54",
+     "literal": "m2_c54_fixture_d.json"
+    },
+    {
+     "line": 264,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 271,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 278,
+     "cycle_token": "c53",
+     "literal": "m2_c53_scores.json"
+    },
+    {
+     "line": 318,
+     "cycle_token": "c54",
+     "literal": "m2_c54_regression.json"
+    },
+    {
+     "line": 391,
+     "cycle_token": "c54",
+     "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 516,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores.json"
+    },
+    {
+     "line": 411,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores.json"
+    },
+    {
+     "line": 187,
+     "cycle_token": "c54",
+     "literal": "m2_c54_fixture_d.json"
+    }
+   ],
+   "data/c54/m2_c54_score_binfix.py": [
+    {
+     "line": 27,
+     "cycle_token": "c54",
+     "literal": "m2_c54_score.py"
+    },
+    {
+     "line": 31,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores.json"
+    },
+    {
+     "line": 32,
+     "cycle_token": "c54",
+     "literal": "m2_c54_gpred_x17_N100_dps300.json"
+    },
+    {
+     "line": 60,
+     "cycle_token": "c54",
+     "literal": "m2_c54_scores_binfix.json"
+    }
+   ],
+   "data/c54/m2_c54_spectrum.py": [
+    {
+     "line": 49,
+     "cycle_token": "c54",
+     "literal": "m2_c54_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 53,
+     "cycle_token": "c54",
+     "literal": "m2_c54_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 110,
+     "cycle_token": "c54",
+     "literal": "m2_c54_repro_gate.json"
+    },
+    {
+     "line": 134,
+     "cycle_token": "c53",
+     "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 135,
+     "cycle_token": "c54",
+     "literal": "m2_c54_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 89,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 91,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    }
+   ],
+   "data/c54/zc.py": [
+    {
+     "line": 20,
+     "cycle_token": "c54",
+     "literal": "m2_c54_zerocount.json"
+    }
+   ],
+   "data/c55/m2_c55_copyproof.py": [
+    {
+     "line": 28,
+     "cycle_token": "c54",
+     "literal": "c54"
+    },
+    {
+     "line": 127,
+     "cycle_token": "c55",
+     "literal": "m2_c55_copyproof.json"
+    }
+   ],
+   "data/c55/m2_c55_detector_ceiling.py": [
+    {
+     "line": 27,
+     "cycle_token": "c55",
+     "literal": "m2_c55_detector_ceiling.json"
+    }
+   ],
+   "data/c55/m2_c55_repro_fix.py": [
+    {
+     "line": 35,
+     "cycle_token": "c53",
+     "literal": "c53"
+    },
+    {
+     "line": 49,
+     "cycle_token": "c55",
+     "literal": "m2_c55_repro_gate.json"
+    },
+    {
+     "line": 80,
+     "cycle_token": "c55",
+     "literal": "m2_c55_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 81,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 82,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 83,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 126,
+     "cycle_token": "c55",
+     "literal": "m2_c55_repro_gate_fixed.json"
+    }
+   ],
+   "data/c55/m2_c55_score.py": [
+    {
+     "line": 304,
+     "cycle_token": "c55",
+     "literal": "m2_c55_zerocount.json"
+    },
+    {
+     "line": 468,
+     "cycle_token": "c55",
+     "literal": "m2_c55_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 172,
+     "cycle_token": "c55",
+     "literal": "m2_c55_kat_na.json"
+    },
+    {
+     "line": 188,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N100_dps150.json"
+    },
+    {
+     "line": 189,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x13_N180_dps150.json"
+    },
+    {
+     "line": 219,
+     "cycle_token": "c55",
+     "literal": "m2_c55_fixture_d.json"
+    },
+    {
+     "line": 311,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 530,
+     "cycle_token": "c55",
+     "literal": "m2_c55_scores.json"
+    },
+    {
+     "line": 194,
+     "cycle_token": "c55",
+     "literal": "m2_c55_fixture_d.json"
+    }
+   ],
+   "data/c55/m2_c55_score_jointfix.py": [
+    {
+     "line": 36,
+     "cycle_token": "c55",
+     "literal": "m2_c55_scores.json"
+    },
+    {
+     "line": 37,
+     "cycle_token": "c55",
+     "literal": "m2_c55_scores_jointfix.json"
+    }
+   ],
+   "data/c55/m2_c55_spectrum.py": [
+    {
+     "line": 51,
+     "cycle_token": "c55",
+     "literal": "m2_c55_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 55,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 112,
+     "cycle_token": "c55",
+     "literal": "m2_c55_repro_gate.json"
+    },
+    {
+     "line": 136,
+     "cycle_token": "c53",
+     "literal": "m2_c53_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 137,
+     "cycle_token": "c55",
+     "literal": "m2_c55_gpred_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 91,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 93,
+     "cycle_token": "c53",
+     "literal": "m2_c53_nodes_%s_x%d_N%d_dps%d.json"
+    }
+   ],
+   "data/c55/m2_c55_storage_test.py": [
+    {
+     "line": 46,
+     "cycle_token": "c55",
+     "literal": "m2_c55_hp_spec_%s_x%d_N%d_dps%d_sf%d.json"
+    },
+    {
+     "line": 50,
+     "cycle_token": "c55",
+     "literal": "m2_c55_hp_nodes_%s_x%d_N%d_dps%d_sf%d.json"
+    },
+    {
+     "line": 61,
+     "cycle_token": "c55",
+     "literal": "m2_c55_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 62,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 113,
+     "cycle_token": "c55",
+     "literal": "m2_c55_storage_test.json"
+    }
+   ],
+   "data/c55/m2_c55_storage_test_h1fix.py": [
+    {
+     "line": 29,
+     "cycle_token": "c55",
+     "literal": "m2_c55_spec_even_x22_N100_dps300.json"
+    },
+    {
+     "line": 30,
+     "cycle_token": "c55",
+     "literal": "m2_c55_hp_spec_even_x22_N100_dps300_sf120.json"
+    },
+    {
+     "line": 31,
+     "cycle_token": "c55",
+     "literal": "m2_c55_storage_test_h1fix.json"
+    }
+   ],
+   "data/c55/m2_c55_zerocount.py": [
+    {
+     "line": 37,
+     "cycle_token": "c54",
+     "literal": "m2_c54_zerocount.json"
+    },
+    {
+     "line": 16,
+     "cycle_token": "c54",
+     "literal": "c54"
+    },
+    {
+     "line": 46,
+     "cycle_token": "c55",
+     "literal": "m2_c55_zerocount.json"
+    }
+   ],
+   "data/c56/m2_c56_absence_audit.py": [
+    {
+     "line": 220,
+     "cycle_token": "c56",
+     "literal": "m2_c56_absence_audit.json"
+    }
+   ],
+   "data/c56/m2_c56_audit_siblings.py": [
+    {
+     "line": 25,
+     "cycle_token": "c56",
+     "literal": "m2_c56_locator_positive_control.md"
+    },
+    {
+     "line": 81,
+     "cycle_token": "c56",
+     "literal": "m2_c56_audit_siblings.json"
+    }
+   ],
+   "data/c56/m2_c56_census_audit.py": [
+    {
+     "line": 26,
+     "cycle_token": "c56",
+     "literal": "m2_c56_census_audit.json"
+    }
+   ],
+   "data/c56/m2_c56_floor_census.py": [
+    {
+     "line": 17,
+     "cycle_token": "c55",
+     "literal": "c55"
+    },
+    {
+     "line": 47,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_*x2[25]*.json"
+    },
+    {
+     "line": 48,
+     "cycle_token": "c56",
+     "literal": "m2_c56_nodes_*x42*.json"
+    },
+    {
+     "line": 86,
+     "cycle_token": "c56",
+     "literal": "m2_c56_floor_census.json"
+    },
+    {
+     "line": 95,
+     "cycle_token": "c56",
+     "literal": "m2_c56_floor_census.json"
+    }
+   ],
+   "data/c56/m2_c56_locator_audit.py": [
+    {
+     "line": 69,
+     "cycle_token": "c55",
+     "literal": "c55"
+    },
+    {
+     "line": 69,
+     "cycle_token": "c55",
+     "literal": "m2_c55_prereg.md"
+    },
+    {
+     "line": 104,
+     "cycle_token": "c56",
+     "literal": "m2_c56_locator_audit.json"
+    }
+   ],
+   "data/c56/m2_c56_ncontrol_validity.py": [
+    {
+     "line": 84,
+     "cycle_token": "c56",
+     "literal": "m2_c56_ncontrol_validity.json"
+    }
+   ],
+   "data/c56/m2_c56_score.py": [
+    {
+     "line": 49,
+     "cycle_token": "c56",
+     "literal": "m2_c56_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 185,
+     "cycle_token": "c56",
+     "literal": "m2_c56_scores.json"
+    },
+    {
+     "line": 119,
+     "cycle_token": "c56",
+     "literal": "m2_c56_scores.json"
+    },
+    {
+     "line": 134,
+     "cycle_token": "c56",
+     "literal": "m2_c56_zerocount.json"
+    }
+   ],
+   "data/c56/m2_c56_score_gated.py": [
+    {
+     "line": 128,
+     "cycle_token": "c56",
+     "literal": "m2_c56_scores_gated.json"
+    }
+   ],
+   "data/c56/m2_c56_spectrum.py": [
+    {
+     "line": 60,
+     "cycle_token": "c56",
+     "literal": "m2_c56_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 64,
+     "cycle_token": "c56",
+     "literal": "m2_c56_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 126,
+     "cycle_token": "c53",
+     "literal": "m2_c53_spec_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 129,
+     "cycle_token": "c56",
+     "literal": "m2_c56_kat_%s_spec.json"
+    },
+    {
+     "line": 132,
+     "cycle_token": "c56",
+     "literal": "m2_c56_kat_%s_nodes.json"
+    },
+    {
+     "line": 151,
+     "cycle_token": "c56",
+     "literal": "m2_c56_kat_%s.json"
+    }
+   ],
+   "data/c56/m2_c56_storage_law.py": [
+    {
+     "line": 43,
+     "cycle_token": "c56",
+     "literal": "m2_c56_law_spec_x22_N100_dps300_sf%d.json"
+    },
+    {
+     "line": 44,
+     "cycle_token": "c56",
+     "literal": "m2_c56_law_nodes_x22_N100_dps300_sf%d.json"
+    },
+    {
+     "line": 100,
+     "cycle_token": "c56",
+     "literal": "m2_c56_storage_law.json"
+    },
+    {
+     "line": 58,
+     "cycle_token": "c55",
+     "literal": "m2_c55_nodes_%s_x%d_N%d_dps%d.json"
+    },
+    {
+     "line": 59,
+     "cycle_token": "c55",
+     "literal": "m2_c55_hp_nodes_%s_x%d_N%d_dps%d_sf120.json"
+    }
+   ],
+   "data/c56/m2_c56_window_choice.py": [
+    {
+     "line": 50,
+     "cycle_token": "c56",
+     "literal": "m2_c56_window_choice.json"
+    }
+   ],
+   "data/c56/m2_c56_zerocount.py": [
+    {
+     "line": 20,
+     "cycle_token": "c56",
+     "literal": "m2_c56_zerocount.json"
+    }
+   ],
+   "data/c57/m2_c57_aligned_ncontrol.py": [
+    {
+     "line": 165,
+     "cycle_token": "c57",
+     "literal": "m2_c57_aligned_ncontrol.json"
+    }
+   ],
+   "data/c57/m2_c57_c1_derivability.py": [
+    {
+     "line": 8,
+     "cycle_token": "c56",
+     "literal": "c56"
+    },
+    {
+     "line": 9,
+     "cycle_token": "c55",
+     "literal": "c55"
+    },
+    {
+     "line": 12,
+     "cycle_token": "c56",
+     "literal": "m2_c56_nodes_%s_x42_N100_dps300.json"
+    }
+   ],
+   "data/c57/m2_c57_detector_dps_probe.py": [
+    {
+     "line": 24,
+     "cycle_token": "c53",
+     "literal": "c53"
+    },
+    {
+     "line": 30,
+     "cycle_token": "c56",
+     "literal": "c56"
+    },
+    {
+     "line": 31,
+     "cycle_token": "c56",
+     "literal": "m2_c56_spec_even_x42_N100_dps300.json"
+    },
+    {
+     "line": 32,
+     "cycle_token": "c56",
+     "literal": "c56"
+    },
+    {
+     "line": 33,
+     "cycle_token": "c56",
+     "literal": "m2_c56_nodes_even_x42_N100_dps300.json"
+    },
+    {
+     "line": 101,
+     "cycle_token": "c57",
+     "literal": "m2_c57_detector_dps_probe.json"
+    }
+   ],
+   "data/code/m2_c24_breakdown5_gated.py": [
+    {
+     "line": 42,
+     "cycle_token": "c24",
+     "literal": "/workspace/rh-c24/breakdown5.json"
+    }
+   ],
+   "data/code/m2_c24_build_census.py": [
+    {
+     "line": 95,
+     "cycle_token": "c24",
+     "literal": "/workspace/rh-c24/machine2_cycle24_census.tsv"
+    }
+   ],
+   "data/code/m2_c25_bandaudit.py": [
+    {
+     "line": 29,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 30,
+     "cycle_token": "c25",
+     "literal": "c25_scored.json"
+    },
+    {
+     "line": 95,
+     "cycle_token": "c25",
+     "literal": "c25_bandaudit.json"
+    },
+    {
+     "line": 70,
+     "cycle_token": "c25",
+     "literal": "c25_scored.json"
+    }
+   ],
+   "data/code/m2_c25_bands.py": [
+    {
+     "line": 15,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 59,
+     "cycle_token": "c25",
+     "literal": "c25_bands.json"
+    }
+   ],
+   "data/code/m2_c25_design.py": [
+    {
+     "line": 126,
+     "cycle_token": "c25",
+     "literal": "c25_design_scan_k%d_%d.json"
+    }
+   ],
+   "data/code/m2_c25_prereg.py": [
+    {
+     "line": 250,
+     "cycle_token": "c25",
+     "literal": "m2_c25_scored.py"
+    },
+    {
+     "line": 266,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    }
+   ],
+   "data/code/m2_c25_scored.py": [
+    {
+     "line": 21,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 150,
+     "cycle_token": "c25",
+     "literal": "c25_scored.json"
+    }
+   ],
+   "data/code/m2_c26_bandlaw.py": [
+    {
+     "line": 32,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 133,
+     "cycle_token": "c26",
+     "literal": "c26_bandlaw.json"
+    },
+    {
+     "line": 109,
+     "cycle_token": "c25",
+     "literal": "c25_scored.json"
+    }
+   ],
+   "data/code/m2_c26_boundary.py": [
+    {
+     "line": 21,
+     "cycle_token": "c26",
+     "literal": "m2_c26_bandlaw.py"
+    },
+    {
+     "line": 81,
+     "cycle_token": "c26",
+     "literal": "c26_boundary.json"
+    }
+   ],
+   "data/code/m2_c26_branch.py": [
+    {
+     "line": 16,
+     "cycle_token": "c26",
+     "literal": "m2_c26_bandlaw.py"
+    },
+    {
+     "line": 63,
+     "cycle_token": "c26",
+     "literal": "c26_branch.json"
+    }
+   ],
+   "data/code/m2_c27_anchorblind.py": [
+    {
+     "line": 72,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 170,
+     "cycle_token": "c27",
+     "literal": "c27_anchorblind_%s.json"
+    }
+   ],
+   "data/code/m2_c27_firesflip.py": [
+    {
+     "line": 33,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 131,
+     "cycle_token": "c27",
+     "literal": "c27_firesflip_%s.json"
+    }
+   ],
+   "data/code/m2_c27_prov_tier3.py": [
+    {
+     "line": 20,
+     "cycle_token": "c27",
+     "literal": "c27_provenance_triage.json"
+    },
+    {
+     "line": 35,
+     "cycle_token": "c27",
+     "literal": "c27_provenance_tier3.json"
+    }
+   ],
+   "data/code/m2_c27_provenance.py": [
+    {
+     "line": 156,
+     "cycle_token": "c27",
+     "literal": "/workspace/rh/cycle27/c27_provenance.json"
+    }
+   ],
+   "data/code/m2_c27_s3_prereg.py": [
+    {
+     "line": 291,
+     "cycle_token": "c27",
+     "literal": "m2_c27_s3_scored.py"
+    },
+    {
+     "line": 313,
+     "cycle_token": "c27",
+     "literal": "c27_s3_prereg.json"
+    },
+    {
+     "line": 85,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    }
+   ],
+   "data/code/m2_c27_s3_scored.py": [
+    {
+     "line": 34,
+     "cycle_token": "c27",
+     "literal": "c27_s3_prereg.json"
+    },
+    {
+     "line": 169,
+     "cycle_token": "c27",
+     "literal": "c27_s3_scored.json"
+    },
+    {
+     "line": 77,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    }
+   ],
+   "data/code/m2_c28_anchorcover.py": [
+    {
+     "line": 83,
+     "cycle_token": "c25",
+     "literal": "c25_prereg.json"
+    },
+    {
+     "line": 217,
+     "cycle_token": "c28",
+     "literal": "c28_cover_%s.json"
+    }
+   ],
+   "data/code/m2_c28_score.py": [
+    {
+     "line": 12,
+     "cycle_token": "c28",
+     "literal": "c28_prereg.json"
+    },
+    {
+     "line": 139,
+     "cycle_token": "c28",
+     "literal": "c28_score.json"
+    },
+    {
+     "line": 14,
+     "cycle_token": "c28",
+     "literal": "c28_cover_%s.json"
+    }
+   ],
+   "data/code/m2_c29_s3_branch_recheck.py": [
+    {
+     "line": 39,
+     "cycle_token": "c27",
+     "literal": "/workspace/rh/cycle27/c27_s3_scored.json"
+    },
+    {
+     "line": 138,
+     "cycle_token": "c29",
+     "literal": "/workspace/rh/cycle29/c29_s3_branch_recheck.json"
+    }
+   ],
+   "data/code/m2_c30_counterfactual.py": [
+    {
+     "line": 20,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c30_grade.py": [
+    {
+     "line": 97,
+     "cycle_token": "c30",
+     "literal": "m2_c30_verdicts.json"
+    },
+    {
+     "line": 27,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c30_ladder_runner.py": [
+    {
+     "line": 277,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    },
+    {
+     "line": 197,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c30_posthoc.py": [
+    {
+     "line": 31,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c30_posthoc2.py": [
+    {
+     "line": 25,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c30_posthoc3.py": [
+    {
+     "line": 21,
+     "cycle_token": "c30",
+     "literal": "m2_c30_scored.json"
+    }
+   ],
+   "data/code/m2_c37_fprime.py": [
+    {
+     "line": 11,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/m2_c34_dstar_refine.py"
+    }
+   ],
+   "data/code/m2_c37_g00_v2.py": [
+    {
+     "line": 15,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/c34_refit.json"
+    },
+    {
+     "line": 12,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    },
+    {
+     "line": 14,
+     "cycle_token": "c37",
+     "literal": "c37_fprime.out"
+    }
+   ],
+   "data/code/m2_c38_derive_storage_print.py": [
+    {
+     "line": 11,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/c34_refit.json"
+    },
+    {
+     "line": 7,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    },
+    {
+     "line": 10,
+     "cycle_token": "c37",
+     "literal": "/workspace/rh/cycle37/c37_fprime.out"
+    }
+   ],
+   "data/code/m2_c38_fit2.py": [
+    {
+     "line": 7,
+     "cycle_token": "c38",
+     "literal": "c38_runs.json"
+    }
+   ],
+   "data/code/m2_c38_predict.py": [
+    {
+     "line": 10,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/c34_refit.json"
+    },
+    {
+     "line": 5,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    },
+    {
+     "line": 9,
+     "cycle_token": "c37",
+     "literal": "/workspace/rh/cycle37/c37_fprime.out"
+    }
+   ],
+   "data/code/m2_c38_runs.py": [
+    {
+     "line": 42,
+     "cycle_token": "c38",
+     "literal": "c38_runs.json"
+    },
+    {
+     "line": 17,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/c34_refit.json"
+    },
+    {
+     "line": 15,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    }
+   ],
+   "data/code/m2_c38_score.py": [
+    {
+     "line": 8,
+     "cycle_token": "c34",
+     "literal": "/workspace/rh/cycle34/c34_refit.json"
+    },
+    {
+     "line": 8,
+     "cycle_token": "c38",
+     "literal": "c38_runs.json"
+    },
+    {
+     "line": 5,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    },
+    {
+     "line": 7,
+     "cycle_token": "c37",
+     "literal": "/workspace/rh/cycle37/c37_fprime.out"
+    }
+   ],
+   "data/code/m2_c38_score2.py": [
+    {
+     "line": 4,
+     "cycle_token": "c36",
+     "literal": "machine2-c36-the-two-unanchored-checks-are-real-and-neither-touches-th"
+    },
+    {
+     "line": 7,
+     "cycle_token": "c38",
+     "literal": "c38_runs.json"
+    },
+    {
+     "line": 6,
+     "cycle_token": "c37",
+     "literal": "/workspace/rh/cycle37/c37_fprime.out"
+    }
+   ],
+   "data/code/m2_c38_testimony_classify.py": [
+    {
+     "line": 21,
+     "cycle_token": "c38",
+     "literal": "c38_testimony_classified.tsv"
+    },
+    {
+     "line": 20,
+     "cycle_token": "c38",
+     "literal": "c38_testimony_raw_v2.tsv"
+    }
+   ],
+   "data/code/m2_c38_testimony_harvest.py": [
+    {
+     "line": 46,
+     "cycle_token": "c38",
+     "literal": "/workspace/rh/cycle38/c38_testimony_raw_v2.tsv"
+    }
+   ],
+   "data/code/m2_c38_testimony_map.py": [
+    {
+     "line": 6,
+     "cycle_token": "c37",
+     "literal": "/shared/rh-exchange-repo/Riemann/data/m2_c37_published_constants_censu"
+    },
+    {
+     "line": 10,
+     "cycle_token": "c38",
+     "literal": "c38_testimony_classified.tsv"
+    }
+   ],
+   "data/code/m2_c39_boundary_census.py": [
+    {
+     "line": 211,
+     "cycle_token": "c39",
+     "literal": "m2_c39_boundary_census.json"
+    }
+   ],
+   "data/code/m2_c39_dstar_reading_form.py": [
+    {
+     "line": 23,
+     "cycle_token": "c36",
+     "literal": "machine2_c36_dstar_175.txt"
+    }
+   ],
+   "data/code/m2_c39_knob_column.py": [
+    {
+     "line": 133,
+     "cycle_token": "c39",
+     "literal": "m2_c39_split_column.json"
+    },
+    {
+     "line": 137,
+     "cycle_token": "c39",
+     "literal": "m2_c39_split_column.tsv"
+    },
+    {
+     "line": 153,
+     "cycle_token": "c37",
+     "literal": "m2_c37_published_constants_census.tsv"
+    }
+   ],
+   "data/code/m2_c39_width_lint.py": [
+    {
+     "line": 331,
+     "cycle_token": "c36",
+     "literal": "machine2_c36_dstar_175.txt"
+    }
+   ],
+   "data/code/m2_c40_rule_k_impl_A.py": [
+    {
+     "line": 153,
+     "cycle_token": "c37",
+     "literal": "m2_c37_published_constants_census.tsv"
+    }
+   ],
+   "data/code/m2_c40_rule_k_impl_B.py": [
+    {
+     "line": 141,
+     "cycle_token": "c37",
+     "literal": "m2_c37_published_constants_census.tsv"
+    }
+   ],
+   "data/code/m2_c41_selfoutput_sweep.py": [
+    {
+     "line": 250,
+     "cycle_token": "c41",
+     "literal": "m2_c41__selftest_probe.py"
+    },
+    {
+     "line": 260,
+     "cycle_token": "c41",
+     "literal": "m2_c41__selftest_probe3.py"
+    },
+    {
+     "line": 272,
+     "cycle_token": "c41",
+     "literal": "m2_c41__selftest_probe2.py"
+    }
+   ],
+   "data/code/m2_c48_downstream_diff.py": [
+    {
+     "line": 63,
+     "cycle_token": "c46",
+     "literal": "c46_analyse.out"
+    },
+    {
+     "line": 51,
+     "cycle_token": "c46",
+     "literal": "c46_analyse.py"
+    },
+    {
+     "line": 35,
+     "cycle_token": "c48",
+     "literal": "c48_*.json"
+    },
+    {
+     "line": 37,
+     "cycle_token": "c48",
+     "literal": "c48_"
+    },
+    {
+     "line": 37,
+     "cycle_token": "c46",
+     "literal": "c46_"
+    },
+    {
+     "line": 103,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 104,
+     "cycle_token": "c46",
+     "literal": "c46"
+    }
+   ],
+   "data/code/m2_c48_nonmovement_check.py": [
+    {
+     "line": 47,
+     "cycle_token": "c48",
+     "literal": "c48_*.json"
+    },
+    {
+     "line": 77,
+     "cycle_token": "c48",
+     "literal": "c48_"
+    },
+    {
+     "line": 77,
+     "cycle_token": "c46",
+     "literal": "c46_"
+    },
+    {
+     "line": 119,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 120,
+     "cycle_token": "c46",
+     "literal": "c46"
+    }
+   ],
+   "data/code/m2_c48_recover_depth.py": [
+    {
+     "line": 48,
+     "cycle_token": "c48",
+     "literal": "c48_*.json"
+    },
+    {
+     "line": 76,
+     "cycle_token": "c48",
+     "literal": "c48_"
+    },
+    {
+     "line": 76,
+     "cycle_token": "c46",
+     "literal": "c46_"
+    },
+    {
+     "line": 116,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 117,
+     "cycle_token": "c46",
+     "literal": "c46"
+    }
+   ],
+   "data/code/m2_c48_storage_census.py": [
+    {
+     "line": 142,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 143,
+     "cycle_token": "c48",
+     "literal": "m2_c48_storage_census.tsv"
+    }
+   ],
+   "data/code/machine1_L187_verify.py": [
+    {
+     "line": 45,
+     "cycle_token": "c46",
+     "literal": "data/c46/c46_odd_x13_N100_dps150_g9_it16.json"
+    }
+   ],
+   "data/code/machine1_c32_units_check.py": [
+    {
+     "line": 38,
+     "cycle_token": "c32",
+     "literal": "machine1_c32_units_check.out"
+    }
+   ],
+   "data/code/machine1_c49_verify.py": [
+    {
+     "line": 33,
+     "cycle_token": "c49",
+     "literal": "c49"
+    },
+    {
+     "line": 34,
+     "cycle_token": "c48",
+     "literal": "c48"
+    },
+    {
+     "line": 287,
+     "cycle_token": "c48",
+     "literal": "m2_c48_storage_census.tsv"
+    },
+    {
+     "line": 85,
+     "cycle_token": "c48",
+     "literal": "c48_%s_x13_N%d_dps%d_g9_it16.json"
+    },
+    {
+     "line": 89,
+     "cycle_token": "c49",
+     "literal": "c49_%s_x13_N%d_dps%d_g9_it16.json"
+    },
+    {
+     "line": 95,
+     "cycle_token": "c48",
+     "literal": "c48_%s_x13_N%d_dps%d_g9_it16.json"
+    },
+    {
+     "line": 350,
+     "cycle_token": "c48",
+     "literal": "m2_c48_storage_census.tsv"
+    },
+    {
+     "line": 351,
+     "cycle_token": "c49",
+     "literal": "m2_c49_residue_census_after.tsv"
+    },
+    {
+     "line": 104,
+     "cycle_token": "c49",
+     "literal": "m2_c49_prereg.md"
+    },
+    {
+     "line": 106,
+     "cycle_token": "c49",
+     "literal": "m2_c49_precision.SEALED_v1.py"
+    },
+    {
+     "line": 108,
+     "cycle_token": "c48",
+     "literal": "m2_c48_recover_depth.py"
+    },
+    {
+     "line": 110,
+     "cycle_token": "c48",
+     "literal": "c48_even_x13_N140_dps220_g9_it16.json"
+    },
+    {
+     "line": 112,
+     "cycle_token": "c48",
+     "literal": "c48_even_x13_N180_dps220_g9_it16.json"
+    },
+    {
+     "line": 114,
+     "cycle_token": "c48",
+     "literal": "c48_odd_x13_N140_dps220_g9_it16.json"
+    },
+    {
+     "line": 116,
+     "cycle_token": "c48",
+     "literal": "c48_odd_x13_N180_dps220_g9_it16.json"
+    },
+    {
+     "line": 326,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 101,
+     "cycle_token": "c49",
+     "literal": "m2_c49_prereg_seal.txt"
+    },
+    {
+     "line": 326,
+     "cycle_token": "c46",
+     "literal": "c46_K5_indep_N10_x13_dps50_%s.json"
+    }
+   ],
+   "data/code/machine1_c50_verify.py": [
+    {
+     "line": 16,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 17,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 178,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 179,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 71,
+     "cycle_token": "c46",
+     "literal": "c46_block_"
+    },
+    {
+     "line": 85,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 86,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k3.json"
+    },
+    {
+     "line": 94,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_"
+    },
+    {
+     "line": 95,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_"
+    },
+    {
+     "line": 120,
+     "cycle_token": "c46",
+     "literal": "c46_block_"
+    },
+    {
+     "line": 137,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_"
+    },
+    {
+     "line": 138,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_"
+    },
+    {
+     "line": 172,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_"
+    },
+    {
+     "line": 192,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_"
+    },
+    {
+     "line": 193,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_"
+    },
+    {
+     "line": 205,
+     "cycle_token": "c50",
+     "literal": "m2_c50_nodes_even_x13_N100.json"
+    },
+    {
+     "line": 206,
+     "cycle_token": "c50",
+     "literal": "m2_c50_nodes_odd_x13_N100.json"
+    },
+    {
+     "line": 227,
+     "cycle_token": "c49",
+     "literal": "8211147020_2026-09-08T0736Z_machine2-c49-the-width-row-CLOSED-by-measu"
+    },
+    {
+     "line": 234,
+     "cycle_token": "c50",
+     "literal": "m2_c50_p0_gate.out"
+    },
+    {
+     "line": 83,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 84,
+     "cycle_token": "c46",
+     "literal": "c46_block_odd_x13_N100_dps150_g9_it16_k5.json"
+    },
+    {
+     "line": 130,
+     "cycle_token": "c46",
+     "literal": "c46_block_"
+    },
+    {
+     "line": 164,
+     "cycle_token": "c46",
+     "literal": "c46_block_even_"
+    },
+    {
+     "line": 226,
+     "cycle_token": "c50",
+     "literal": "m2_c50_predict.out"
+    },
+    {
+     "line": 74,
+     "cycle_token": "c46",
+     "literal": "c46_block_"
+    }
+   ],
+   "data/code/machine1_c51_verify.py": [
+    {
+     "line": 32,
+     "cycle_token": "c51",
+     "literal": "c51"
+    },
+    {
+     "line": 33,
+     "cycle_token": "c51",
+     "literal": "machine1_c51_verify.out"
+    },
+    {
+     "line": 76,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes_%s_x%d_N%d_k%d.json"
+    },
+    {
+     "line": 118,
+     "cycle_token": "c51",
+     "literal": "c51"
+    },
+    {
+     "line": 434,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes.py"
+    },
+    {
+     "line": 136,
+     "cycle_token": "c51",
+     "literal": "m2_c51_scores.json"
+    },
+    {
+     "line": 265,
+     "cycle_token": "c51",
+     "literal": "m2_c51_scores.json"
+    },
+    {
+     "line": 293,
+     "cycle_token": "c51",
+     "literal": "m2_c51_scores.json"
+    },
+    {
+     "line": 468,
+     "cycle_token": "c51",
+     "literal": "c51"
+    },
+    {
+     "line": 468,
+     "cycle_token": "c51",
+     "literal": "m2_c51_nodes.py"
+    },
+    {
+     "line": 91,
+     "cycle_token": "c51",
+     "literal": "m2_c51_prereg.md"
+    },
+    {
+     "line": 121,
+     "cycle_token": "c51",
+     "literal": "c51"
+    },
+    {
+     "line": 122,
+     "cycle_token": "c51",
+     "literal": "c51"
+    },
+    {
+     "line": 127,
+     "cycle_token": "c51",
+     "literal": "c51"
+    }
+   ],
+   "data/code/machine1_c52_verify.py": [
+    {
+     "line": 32,
+     "cycle_token": "c52",
+     "literal": "c52"
+    },
+    {
+     "line": 158,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 158,
+     "cycle_token": "c46",
+     "literal": "c46_block_*.json"
+    },
+    {
+     "line": 169,
+     "cycle_token": "c52",
+     "literal": "m2_c52_scores.out"
+    },
+    {
+     "line": 277,
+     "cycle_token": "c52",
+     "literal": "m2_c52_nspread.out"
+    },
+    {
+     "line": 57,
+     "cycle_token": "c46",
+     "literal": "c46"
+    },
+    {
+     "line": 57,
+     "cycle_token": "c46",
+     "literal": "c46_parity.py"
+    },
+    {
+     "line": 58,
+     "cycle_token": "c50",
+     "literal": "c50"
+    },
+    {
+     "line": 58,
+     "cycle_token": "c50",
+     "literal": "m2_c50_ladder.py"
+    },
+    {
+     "line": 53,
+     "cycle_token": "c52",
+     "literal": "m2_c52_qdrift.SEALED_v1.py"
+    },
+    {
+     "line": 55,
+     "cycle_token": "c52",
+     "literal": "m2_c52_grid.py"
+    },
+    {
+     "line": 56,
+     "cycle_token": "c52",
+     "literal": "m2_c52_prereg.md"
+    },
+    {
+     "line": 119,
+     "cycle_token": "c52",
+     "literal": "c52"
+    },
+    {
+     "line": 63,
+     "cycle_token": "c52",
+     "literal": "m2_c52_qdrift.SEALED_v1.py"
+    },
+    {
+     "line": 64,
+     "cycle_token": "c52",
+     "literal": "m2_c52_qdrift.py"
+    },
+    {
+     "line": 106,
+     "cycle_token": "c52",
+     "literal": "m2_c52_prelaunch_absence.out"
+    },
+    {
+     "line": 65,
+     "cycle_token": "c52",
+     "literal": "m2_c52_qdrift.v1_to_v2.diff"
+    },
+    {
+     "line": 87,
+     "cycle_token": "c52",
+     "literal": "m2_c52_grid_cmds.tsv"
+    },
+    {
+     "line": 51,
+     "cycle_token": "c52",
+     "literal": "m2_c52_seal.txt"
+    }
+   ],
+   "data/code/machine1_l171_c31v_f_attack.py": [
+    {
+     "line": 28,
+     "cycle_token": "c31",
+     "literal": "machine2_c31b_scored.json"
+    },
+    {
+     "line": 96,
+     "cycle_token": "c31",
+     "literal": "machine2_c31_fitness_constants.json"
+    }
+   ],
+   "data/code/machine1_l175_sign_d4_graded_check.py": [
+    {
+     "line": 170,
+     "cycle_token": "c33",
+     "literal": "machine2_c33_oos_graded.out"
+    }
+   ],
+   "data/code/machine2_c31_calibrate.py": [
+    {
+     "line": 190,
+     "cycle_token": "c31",
+     "literal": "c31_calib.out"
+    }
+   ],
+   "data/code/machine2_c31_fitness_rule.py": [
+    {
+     "line": 181,
+     "cycle_token": "c31",
+     "literal": "m2_c31_fitness_constants.json"
+    }
+   ],
+   "data/code/machine2_c31_grade.py": [
+    {
+     "line": 20,
+     "cycle_token": "c31",
+     "literal": "m2_c31_scored.json"
+    },
+    {
+     "line": 54,
+     "cycle_token": "c31",
+     "literal": "m2_c31_verdicts.json"
+    },
+    {
+     "line": 32,
+     "cycle_token": "c31",
+     "literal": "m2_c31_verdicts.json"
+    }
+   ],
+   "data/code/machine2_c31_oos_runner.py": [
+    {
+     "line": 306,
+     "cycle_token": "c31",
+     "literal": "m2_c31_scored.json"
+    },
+    {
+     "line": 224,
+     "cycle_token": "c31",
+     "literal": "m2_c31_scored.json"
+    },
+    {
+     "line": 152,
+     "cycle_token": "c31",
+     "literal": "m2_c31_prereg.json"
+    }
+   ],
+   "data/code/machine2_c31b_grade.py": [
+    {
+     "line": 20,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_scored.json"
+    },
+    {
+     "line": 54,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_verdicts.json"
+    },
+    {
+     "line": 32,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_verdicts.json"
+    }
+   ],
+   "data/code/machine2_c31b_oos_runner.py": [
+    {
+     "line": 306,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_scored.json"
+    },
+    {
+     "line": 224,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_scored.json"
+    },
+    {
+     "line": 152,
+     "cycle_token": "c31",
+     "literal": "m2_c31b_prereg.json"
+    }
+   ],
+   "data/code/machine2_c32_a_from_ladder_noheader.py": [
+    {
+     "line": 23,
+     "cycle_token": "c30",
+     "literal": "/workspace/rh/cycle30/m2_c30_scored.json"
+    },
+    {
+     "line": 24,
+     "cycle_token": "c31",
+     "literal": "/workspace/rh/cycle31/m2_c31b_scored.json"
+    }
+   ],
+   "data/code/machine2_c32_estimator_bias.py": [
+    {
+     "line": 22,
+     "cycle_token": "c30",
+     "literal": "/workspace/rh/cycle30/m2_c30_scored.json"
+    },
+    {
+     "line": 23,
+     "cycle_token": "c31",
+     "literal": "/workspace/rh/cycle31/m2_c31b_scored.json"
+    }
+   ],
+   "data/code/machine2_c33_fold5.py": [
+    {
+     "line": 206,
+     "cycle_token": "c33",
+     "literal": "c33_fold5.json"
+    }
+   ],
+   "data/code/machine2_c33_fold7.py": [
+    {
+     "line": 207,
+     "cycle_token": "c33",
+     "literal": "c33_fold7.json"
+    }
+   ],
+   "data/code/machine2_c34_analyse.py": [
+    {
+     "line": 42,
+     "cycle_token": "c34",
+     "literal": "c34_refit.json"
+    }
+   ],
+   "data/code/machine2_c34_refit.py": [
+    {
+     "line": 291,
+     "cycle_token": "c34",
+     "literal": "c34_refit.json"
+    }
+   ],
+   "data/code/machine2_c35_onesided.py": [
+    {
+     "line": 155,
+     "cycle_token": "c35",
+     "literal": "../machine2_c35_onesided.json"
+    }
+   ],
+   "data/code/machine2_c35_signgroup.py": [
+    {
+     "line": 148,
+     "cycle_token": "c35",
+     "literal": "../machine2_c35_signgroup.json"
+    }
+   ],
+   "data/code/machine2_c36_analysis.py": [
+    {
+     "line": 48,
+     "cycle_token": "c36",
+     "literal": "/workspace/rh/cycle36/c36_dstar_fullprec.out"
+    }
+   ]
+  }
+ },
+ "C5": {
+  "question": "does any live test choose its object by directory order?",
+  "directory_order_call_sites": 60,
+  "unpinned": 29,
+  "pinned": 31,
+  "detail": [
+   {
+    "file": "data/c42/c42_run.py",
+    "line": 20,
+    "callee": "_glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c42/c42_score.py",
+    "line": 86,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c42/c42_score.py",
+    "line": 87,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c42/c42_table.py",
+    "line": 9,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c46/c46_analyse.py",
+    "line": 20,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c47/c47_R1_depth.py",
+    "line": 25,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c47/c47_extrap.py",
+    "line": 34,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c47/c47_models.py",
+    "line": 17,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c49/m2_c49_depth_all_rungs.py",
+    "line": 89,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c49/m2_c49_depth_all_rungs.py",
+    "line": 94,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c49/m2_c49_upgrade_ladder.py",
+    "line": 47,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c49/m2_c49_upgrade_ladder.py",
+    "line": 49,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c50/m2_c50_ladder.SEALED_v1.py",
+    "line": 192,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c50/m2_c50_ladder.py",
+    "line": 223,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c50/m2_c50_p0_gate.py",
+    "line": 33,
+    "callee": "_g.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c52/m2_c52_qdrift.SEALED_v1.py",
+    "line": 439,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c52/m2_c52_qdrift.py",
+    "line": 444,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/c53/m2_c53_spectrum.py",
+    "line": 168,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/c55/m2_c55_detector_ceiling.py",
+    "line": 31,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_absence_audit.py",
+    "line": 186,
+    "callee": "os.listdir",
+    "pinned": false
+   },
+   {
+    "file": "data/c56/m2_c56_absence_audit.py",
+    "line": 148,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_audit_siblings.py",
+    "line": 29,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_census_audit.py",
+    "line": 42,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/c56/m2_c56_census_audit.py",
+    "line": 80,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_floor_census.py",
+    "line": 47,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_floor_census.py",
+    "line": 48,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_locator_audit.py",
+    "line": 20,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/c56/m2_c56_ncontrol_validity.py",
+    "line": 30,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/c57/m2_c57_aligned_ncontrol.py",
+    "line": 34,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c27_prov_tier3.py",
+    "line": 12,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c27_provenance.py",
+    "line": 112,
+    "callee": "os.listdir",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c27_provenance.py",
+    "line": 124,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c27_provenance.py",
+    "line": 151,
+    "callee": "os.listdir",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c39_boundary_census.py",
+    "line": 85,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 127,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 134,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 403,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c39_width_lint.py",
+    "line": 408,
+    "callee": "os.listdir",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c41_selfoutput_sweep.py",
+    "line": 400,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c48_downstream_diff.py",
+    "line": 35,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c48_nonmovement_check.py",
+    "line": 39,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/m2_c48_nonmovement_check.py",
+    "line": 47,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c48_recover_depth.py",
+    "line": 48,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/m2_c48_storage_census.py",
+    "line": 49,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine1_c51_verify.py",
+    "line": 486,
+    "callee": "os.listdir",
+    "pinned": false
+   },
+   {
+    "file": "data/code/machine1_c51_verify.py",
+    "line": 479,
+    "callee": "os.listdir",
+    "pinned": false
+   },
+   {
+    "file": "data/code/machine1_c52_verify.py",
+    "line": 154,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/code/machine1_c52_verify.py",
+    "line": 158,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/code/machine1_c52_verify.py",
+    "line": 218,
+    "callee": "glob.glob",
+    "pinned": false
+   },
+   {
+    "file": "data/code/machine1_c52_verify.py",
+    "line": 88,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine2_cycle16_disjointness.py",
+    "line": 24,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine2_cycle16_disjointness.py",
+    "line": 25,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine2_cycle16_disjointness.py",
+    "line": 26,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine2_cycle16_disjointness.py",
+    "line": 27,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/machine2_cycle20_disjointness.py",
+    "line": 50,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/code/rung_discipline_check.py",
+    "line": 21,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/code/rung_discipline_check.py",
+    "line": 25,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/m2_L179/m2_L179_compare.py",
+    "line": 88,
+    "callee": "glob.glob",
+    "pinned": true
+   },
+   {
+    "file": "data/m2_L179/m2_L179_dps_order_census_v1_KEPT.py",
+    "line": 264,
+    "callee": "os.walk",
+    "pinned": false
+   },
+   {
+    "file": "data/m2_L179/m2_L179_dps_order_census_v2.py",
+    "line": 364,
+    "callee": "os.walk",
+    "pinned": false
+   }
+  ]
+ }
+}
