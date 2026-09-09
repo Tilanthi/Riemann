@@ -1,0 +1,285 @@
+{
+ "cycle": 58,
+ "arm": "D1",
+ "law": "#188",
+ "denominator": {
+  "py_files": 511,
+  "unparseable": 1,
+  "unparseable_detail": [
+   {
+    "file": "data/code/machine1_c48_verify.py",
+    "error": "SyntaxError"
+   }
+  ]
+ },
+ "scan_sites_total": 40,
+ "unguarded_sites": 40,
+ "unguarded_in_m2_files": 11,
+ "hits": [
+  {
+   "file": "data/c47/c47_extrap.py",
+   "lineno": 51,
+   "population": "name:Ns",
+   "guarded": false
+  },
+  {
+   "file": "data/c47/c47_extrap.py",
+   "lineno": 90,
+   "population": "name:Ss",
+   "guarded": false
+  },
+  {
+   "file": "data/c47/c47_extrap.py",
+   "lineno": 101,
+   "population": "name:Ns",
+   "guarded": false
+  },
+  {
+   "file": "data/c47/c47_models.py",
+   "lineno": 38,
+   "population": "name:Ns",
+   "guarded": false
+  },
+  {
+   "file": "data/c47/c47_models.py",
+   "lineno": 49,
+   "population": "name:Ns",
+   "guarded": false
+  },
+  {
+   "file": "data/c47/c47_models.py",
+   "lineno": 65,
+   "population": "name:Ns",
+   "guarded": false
+  },
+  {
+   "file": "data/code/identity_check_fast.py",
+   "lineno": 71,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/identity_check_fast.py",
+   "lineno": 72,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/identity_check_fast.py",
+   "lineno": 89,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/identity_check_fast.py",
+   "lineno": 98,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/kappa_denominator_census.py",
+   "lineno": 245,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter129_identity_check_fast_bilinear.py",
+   "lineno": 71,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter129_identity_check_fast_bilinear.py",
+   "lineno": 72,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter129_identity_check_fast_bilinear.py",
+   "lineno": 89,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter129_identity_check_fast_bilinear.py",
+   "lineno": 98,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter141_n2n5_full_identity.py",
+   "lineno": 45,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter141_n2n5_full_identity.py",
+   "lineno": 54,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter142_n2n5_matrix_build_gl.py",
+   "lineno": 41,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/letter142_n2n5_matrix_build_gl.py",
+   "lineno": 50,
+   "population": "name:pts",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c30_counterfactual.py",
+   "lineno": 32,
+   "population": "name:o",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c30_ladder_runner.py",
+   "lineno": 86,
+   "population": "name:order",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c30_posthoc.py",
+   "lineno": 88,
+   "population": "name:order",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c30_posthoc2.py",
+   "lineno": 65,
+   "population": "name:o",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c37_census_constants.py",
+   "lineno": 48,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c37_census_constants.py",
+   "lineno": 51,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c37_p2.py",
+   "lineno": 37,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c39_lint_widths.py",
+   "lineno": 196,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c40_rule_k_impl_B.py",
+   "lineno": 39,
+   "population": "call:split",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c41_selfoutput_sweep.py",
+   "lineno": 320,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/m2_c48_storage_census.py",
+   "lineno": 127,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_c47_verify.py",
+   "lineno": 165,
+   "population": "name:rungs",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_c52_verify.py",
+   "lineno": 78,
+   "population": "name:v1",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_c52_verify.py",
+   "lineno": 79,
+   "population": "name:v2",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_der_route_a_b_a3.py",
+   "lineno": 222,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_der_route_a_b_a3_v2.py",
+   "lineno": 255,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_der_route_a_b_a3_v3.py",
+   "lineno": 287,
+   "population": "call:sorted",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_l171_c31v_f_attack.py",
+   "lineno": 119,
+   "population": "call:split",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_l171_c31v_f_attack.py",
+   "lineno": 147,
+   "population": "call:split",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_l171_c31v_f_attack.py",
+   "lineno": 151,
+   "population": "call:split",
+   "guarded": false
+  },
+  {
+   "file": "data/code/machine1_l171_c31v_f_attack.py",
+   "lineno": 161,
+   "population": "call:sorted",
+   "guarded": false
+  }
+ ],
+ "controls": [
+  {
+   "name": "P1_planted_positive",
+   "passed": true,
+   "note": "must FIRE"
+  },
+  {
+   "name": "P2_planted_guarded",
+   "passed": true,
+   "note": "must NOT fire"
+  },
+  {
+   "name": "P3_planted_quotation",
+   "passed": true,
+   "note": "must NOT fire"
+  },
+  {
+   "name": "P4_planted_literal",
+   "passed": true,
+   "note": "must NOT fire"
+  }
+ ],
+ "detector": "AST slice-of-a-population with no assert/if-raise naming the sliced or population name in the enclosing scope; GENEROUS-TO-CODE, so a LOWER BOUND",
+ "unmeasured": "Python only; islice/heapq/explicit-counter scans; dynamically built slices. Outside the detector, not absent.",
+ "D1_verdict": "FOUND"
+}

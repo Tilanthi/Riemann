@@ -1,0 +1,75 @@
+{
+ "cycle": 58,
+ "prediction": "B1",
+ "registered_confidence": 0.55,
+ "selection_rule": "the FIRST pooled position with a committed nu that is not None; pinned with exactly-one assertions at both the spectrum and the cell layer",
+ "window": {
+  "x": 42,
+  "parity": "even",
+  "N": 100,
+  "dps_spectrum": 300,
+  "sector_rung": 7,
+  "pooled_position": 13
+ },
+ "committed": {
+  "nu": 18,
+  "stable": true,
+  "nu_refine_48001": 24,
+  "lobe_min_ratio": "6.6413e-53"
+ },
+ "known_answer_control": {
+  "dps": 50,
+  "reproduces": true,
+  "detail": {
+   "dps": 50,
+   "rung": 7,
+   "lam": "1.77633545949323907189525136029933719348083296513883739882488943880383463660307224459366587158959523488443426028164418005e-107",
+   "log10": "-106.75047501465572825",
+   "counts": {
+    "1201_0.0": 18,
+    "1201_1.0e-8": 18,
+    "1201_0.0001": 18,
+    "4001_0.0": 18,
+    "4001_1.0e-8": 18,
+    "4001_0.0001": 18,
+    "12001_0.0": 18,
+    "12001_1.0e-8": 18,
+    "12001_0.0001": 18
+   },
+   "stable": true,
+   "nu": 18,
+   "nu_refine_48001": 24,
+   "lobe_min_ratio": "6.6413e-53",
+   "sturm": 12,
+   "seconds": 107.8
+  }
+ },
+ "measurement": {
+  "dps": 200,
+  "rung": 7,
+  "lam": "1.77633545949323907189525136029933719348083296513883739882488943880383463660307224459366587158959523488443426028164418005e-107",
+  "log10": "-106.75047501465572825",
+  "counts": {
+   "1201_0.0": 18,
+   "1201_1.0e-8": 18,
+   "1201_0.0001": 18,
+   "4001_0.0": 18,
+   "4001_1.0e-8": 18,
+   "4001_0.0001": 18,
+   "12001_0.0": 18,
+   "12001_1.0e-8": 18,
+   "12001_0.0001": 18
+  },
+  "stable": true,
+  "nu": 18,
+  "nu_refine_48001": 18,
+  "lobe_min_ratio": "0.0102783",
+  "sturm": 12,
+  "seconds": 160.6
+ },
+ "B1_verdict": "HELD",
+ "B1_statement": "the committed (dps-50) node count at the first VISIBLE pooled position is UNCHANGED when the same detector is re-run at dps=200",
+ "scope": "ONE rung. No node cell written, no pooled table rebuilt, no depth recomputed, no model scored, p2 not computed.",
+ "cap_seconds": 2400,
+ "wall_seconds": 268.3
+}

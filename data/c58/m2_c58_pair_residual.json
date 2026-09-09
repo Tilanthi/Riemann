@@ -1,0 +1,245 @@
+{
+ "cycle": 58,
+ "arm": "C1",
+ "kind": "REPLICATION (not a blind prediction; excluded from Brier)",
+ "window": 42,
+ "fitted_offset": 6,
+ "convention": "c57 drift-census local gap",
+ "comparable_pairs": 3,
+ "rows": [
+  {
+   "parity": "even",
+   "rung": 7,
+   "fitted": null,
+   "per_rung": {
+    "j": 14,
+    "nu_a": 18,
+    "nu_b": 48,
+    "residual_gaps": 0.2805
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 8,
+   "fitted": {
+    "j": 14,
+    "nu_a": 20,
+    "nu_b": 48,
+    "residual_gaps": 0.7476
+   },
+   "per_rung": {
+    "j": 15,
+    "nu_a": 20,
+    "nu_b": 52,
+    "residual_gaps": 0.2269
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 9,
+   "fitted": {
+    "j": 15,
+    "nu_a": 26,
+    "nu_b": 52,
+    "residual_gaps": 0.8413
+   },
+   "per_rung": {
+    "j": 16,
+    "nu_a": 26,
+    "nu_b": null,
+    "residual_gaps": 0.1745
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 10,
+   "fitted": null,
+   "per_rung": {
+    "j": 17,
+    "nu_a": 26,
+    "nu_b": null,
+    "residual_gaps": 0.1932
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 11,
+   "fitted": null,
+   "per_rung": {
+    "j": 18,
+    "nu_a": 28,
+    "nu_b": null,
+    "residual_gaps": 0.1384
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 12,
+   "fitted": null,
+   "per_rung": {
+    "j": 19,
+    "nu_a": 34,
+    "nu_b": null,
+    "residual_gaps": 0.1725
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 13,
+   "fitted": null,
+   "per_rung": {
+    "j": 20,
+    "nu_a": 36,
+    "nu_b": null,
+    "residual_gaps": 0.1553
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 14,
+   "fitted": null,
+   "per_rung": {
+    "j": 21,
+    "nu_a": 44,
+    "nu_b": null,
+    "residual_gaps": 0.1554
+   }
+  },
+  {
+   "parity": "even",
+   "rung": 15,
+   "fitted": null,
+   "per_rung": {
+    "j": 22,
+    "nu_a": 52,
+    "nu_b": null,
+    "residual_gaps": 0.2095
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 8,
+   "fitted": null,
+   "per_rung": {
+    "j": 15,
+    "nu_a": 25,
+    "nu_b": 57,
+    "residual_gaps": 0.2038
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 9,
+   "fitted": {
+    "j": 15,
+    "nu_a": 27,
+    "nu_b": 57,
+    "residual_gaps": 0.8007
+   },
+   "per_rung": {
+    "j": 16,
+    "nu_a": 27,
+    "nu_b": null,
+    "residual_gaps": 0.1747
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 10,
+   "fitted": null,
+   "per_rung": {
+    "j": 17,
+    "nu_a": 27,
+    "nu_b": null,
+    "residual_gaps": 0.187
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 11,
+   "fitted": null,
+   "per_rung": {
+    "j": 18,
+    "nu_a": 37,
+    "nu_b": null,
+    "residual_gaps": 0.1455
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 12,
+   "fitted": null,
+   "per_rung": {
+    "j": 19,
+    "nu_a": 39,
+    "nu_b": null,
+    "residual_gaps": 0.1568
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 13,
+   "fitted": null,
+   "per_rung": {
+    "j": 20,
+    "nu_a": 41,
+    "nu_b": null,
+    "residual_gaps": 0.147
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 14,
+   "fitted": null,
+   "per_rung": {
+    "j": 21,
+    "nu_a": 41,
+    "nu_b": null,
+    "residual_gaps": 0.2031
+   }
+  },
+  {
+   "parity": "odd",
+   "rung": 15,
+   "fitted": null,
+   "per_rung": {
+    "j": 22,
+    "nu_a": 45,
+    "nu_b": null,
+    "residual_gaps": 0.2248
+   }
+  }
+ ],
+ "fitted_residual_gaps": {
+  "min": 0.7476,
+  "max": 0.8413,
+  "all": [
+   0.7476,
+   0.8413,
+   0.8007
+  ]
+ },
+ "per_rung_residual_gaps": {
+  "min": 0.1745,
+  "max": 0.2269,
+  "all": [
+   0.2269,
+   0.1745,
+   0.1747
+  ]
+ },
+ "m1_fitted_range": [
+  0.75,
+  0.86
+ ],
+ "m1_per_rung_range": [
+  0.13,
+  0.28
+ ],
+ "C1_fitted_replicates": false,
+ "C1_per_rung_replicates": false,
+ "C1_verdict": "NOT REPLICATED",
+ "c57_published_sentence": "the matched eigenvalue residual is 0.53-0.57 local gaps -- referent to be settled by this file",
+ "c57_census_present": true,
+ "scope": "Eigenvalue ladders only. No node cell written, no model scored."
+}

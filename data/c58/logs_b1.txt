@@ -1,0 +1,12 @@
+resolver: c53 dir = /shared/rh-exchange-repo/Riemann/data/c53
+resolver: c56 dir = /shared/rh-exchange-repo/Riemann/data/c56
+target selected by rule: first visible pooled position p=13 -> parity=even sector_rung=7
+KNOWN-ANSWER control: re-running the detector at the SEALED dps=50 ...
+  committed: nu=18 stable=True refine=24 lobe=6.6413e-53
+  re-run   : nu=18 stable=True refine=24 lobe=6.6413e-53   (107.8s)
+  KAT: REPRODUCES
+
+MEASUREMENT: same coefficients, detector at mp.dps = 200 ...
+  nu=18 stable=True refine=18 lobe=0.0102783   (160.6s)
+
+B1: HELD

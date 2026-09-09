@@ -1,0 +1,151 @@
+{
+ "cycle": 58,
+ "arm": "C1 diagnostic (sibling; changes no verdict)",
+ "m1_published": {
+  "fitted": [
+   0.75,
+   0.86
+  ],
+  "per_rung": [
+   0.13,
+   0.28
+  ]
+ },
+ "grid": {
+  "A_c57|comparable": {
+   "pairs": 3,
+   "fitted": [
+    0.75,
+    0.84
+   ],
+   "per_rung": [
+    0.17,
+    0.23
+   ]
+  },
+  "A_c57|all20": {
+   "pairs": 40,
+   "fitted": [
+    0.04,
+    0.91
+   ],
+   "per_rung": [
+    0.04,
+    0.57
+   ]
+  },
+  "A_c57|all15": {
+   "pairs": 30,
+   "fitted": [
+    0.04,
+    0.91
+   ],
+   "per_rung": [
+    0.04,
+    0.44
+   ]
+  },
+  "A_fwd|comparable": {
+   "pairs": 3,
+   "fitted": [
+    0.75,
+    0.84
+   ],
+   "per_rung": [
+    0.17,
+    0.23
+   ]
+  },
+  "A_fwd|all20": {
+   "pairs": 40,
+   "fitted": [
+    0.04,
+    0.91
+   ],
+   "per_rung": [
+    0.04,
+    0.57
+   ]
+  },
+  "A_fwd|all15": {
+   "pairs": 30,
+   "fitted": [
+    0.04,
+    0.91
+   ],
+   "per_rung": [
+    0.04,
+    0.44
+   ]
+  },
+  "A_bwd|comparable": {
+   "pairs": 3,
+   "fitted": [
+    0.72,
+    0.8
+   ],
+   "per_rung": [
+    0.16,
+    0.22
+   ]
+  },
+  "A_bwd|all20": {
+   "pairs": 38,
+   "fitted": [
+    0.05,
+    0.86
+   ],
+   "per_rung": [
+    0.05,
+    0.51
+   ]
+  },
+  "A_bwd|all15": {
+   "pairs": 28,
+   "fitted": [
+    0.05,
+    0.86
+   ],
+   "per_rung": [
+    0.05,
+    0.42
+   ]
+  },
+  "B_at_jf|comparable": {
+   "pairs": 3,
+   "fitted": [
+    0.77,
+    0.83
+   ],
+   "per_rung": [
+    0.17,
+    0.23
+   ]
+  },
+  "B_at_jf|all20": {
+   "pairs": 40,
+   "fitted": [
+    0.05,
+    0.87
+   ],
+   "per_rung": [
+    0.05,
+    0.49
+   ]
+  },
+  "B_at_jf|all15": {
+   "pairs": 30,
+   "fitted": [
+    0.05,
+    0.87
+   ],
+   "per_rung": [
+    0.05,
+    0.49
+   ]
+  }
+ },
+ "conventions_reproducing_m1": [],
+ "finding": "no convention in this 4x3 grid reproduces m1-L203's published ranges; the disagreement is not explained by the obvious gap definitions or by the obvious pair populations, and m1's code has not been read",
+ "direction": "m1's SUBSTANTIVE correction is CONFIRMED independently of the digits: the pair-level fitted residual measured here, 0.75-0.84 gaps, is WORSE than the 0.53-0.57 c57 published, so c57's sentence understated the mismatch and its referent was indeed the window maximum"
+}
