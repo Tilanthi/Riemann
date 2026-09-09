@@ -1,0 +1,130 @@
+{
+ "R3_kat_unpatched_reproduces_banked": true,
+ "verdict_count": 11,
+ "verdicts_identical": true,
+ "verdicts_banked": {
+  "G0": "PASS",
+  "G1": "PASS",
+  "G2": "PASS (informative)",
+  "P1": "MEASURED",
+  "P2": "HELD",
+  "P3": "MEASURED",
+  "P4": "REFUTED -- HEADLINE",
+  "P5": "PASS",
+  "P6": "HELD",
+  "P7": "HELD -- the detector runs out first",
+  "TIER2_double_determination": "PASS"
+ },
+ "verdicts_patched": {
+  "G0": "PASS",
+  "G1": "PASS",
+  "G2": "PASS (informative)",
+  "P1": "MEASURED",
+  "P2": "HELD",
+  "P3": "MEASURED",
+  "P4": "REFUTED -- HEADLINE",
+  "P5": "PASS",
+  "P6": "HELD",
+  "P7": "HELD -- the detector runs out first",
+  "TIER2_double_determination": "PASS"
+ },
+ "R4_leaf_counts": {
+  "convention_A_positional": {
+   "count": 49,
+   "by_top_key": {
+    "P3": 4,
+    "P4": 45
+   },
+   "definition": "leaves aligned by POSITION; a list that grows shifts every leaf after the insertion point, so re-valued and displaced leaves are both counted (m1's convention)"
+  },
+  "convention_B_key_aligned": {
+   "count": 12,
+   "by_top_key": {
+    "P3": 4,
+    "P4": 8
+   },
+   "definition": "identical, except P4.violations rows are matched by their identity (x, N, p, why); an inserted row is an ADDITION and the rows after it are not counted as changes (machine 2's convention)"
+  }
+ },
+ "differing_leaf_paths_positional": [
+  "/P3/pooled_delta[27]",
+  "/P3/pooled_delta[28]",
+  "/P3/pooled_delta[30]",
+  "/P3/pooled_delta[31]",
+  "/P4/violations[10]/now",
+  "/P4/violations[10]/p",
+  "/P4/violations[10]/prev",
+  "/P4/violations[11]/now",
+  "/P4/violations[11]/p",
+  "/P4/violations[11]/prev",
+  "/P4/violations[12]/now",
+  "/P4/violations[12]/p",
+  "/P4/violations[12]/prev",
+  "/P4/violations[12]/x",
+  "/P4/violations[13]/now",
+  "/P4/violations[13]/p",
+  "/P4/violations[13]/prev",
+  "/P4/violations[14]/now",
+  "/P4/violations[14]/p",
+  "/P4/violations[14]/prev",
+  "/P4/violations[15]/N",
+  "/P4/violations[15]/now",
+  "/P4/violations[15]/p",
+  "/P4/violations[15]/prev",
+  "/P4/violations[15]/x",
+  "/P4/violations[3]/now",
+  "/P4/violations[3]/p",
+  "/P4/violations[3]/prev",
+  "/P4/violations[4]/now",
+  "/P4/violations[4]/p",
+  "/P4/violations[4]/prev",
+  "/P4/violations[4]/x",
+  "/P4/violations[5]/now",
+  "/P4/violations[5]/p",
+  "/P4/violations[5]/prev",
+  "/P4/violations[6]/now",
+  "/P4/violations[6]/p",
+  "/P4/violations[6]/prev",
+  "/P4/violations[7]/N",
+  "/P4/violations[7]/now",
+  "/P4/violations[7]/p",
+  "/P4/violations[7]/prev",
+  "/P4/violations[7]/x",
+  "/P4/violations[8]/now",
+  "/P4/violations[8]/p",
+  "/P4/violations[8]/prev",
+  "/P4/violations[9]/now",
+  "/P4/violations[9]/p",
+  "/P4/violations[9]/prev"
+ ],
+ "differing_leaf_paths_key_aligned": [
+  "/P3/pooled_delta[27]",
+  "/P3/pooled_delta[28]",
+  "/P3/pooled_delta[30]",
+  "/P3/pooled_delta[31]",
+  "/P4/violations/[13, 100, 29, null]/N",
+  "/P4/violations/[13, 100, 29, null]/now",
+  "/P4/violations/[13, 100, 29, null]/p",
+  "/P4/violations/[13, 100, 29, null]/prev",
+  "/P4/violations/[13, 100, 29, null]/x",
+  "/P4/violations/[13, 100, 31, null]/now",
+  "/P4/violations/[13, 180, 28, null]/now",
+  "/P4/violations/[13, 180, 31, null]/now"
+ ],
+ "headline_values": {
+  "p2": 11,
+  "occupied_bin": "11",
+  "survivors": [
+   "L"
+  ],
+  "p3": 15,
+  "violations_banked": 15,
+  "violations_patched": 16
+ },
+ "depth_legend": {
+  "completeness_certified_prefix": "c50's COMPLETENESS certificate: with R rungs of each sector the pooled ORDER is certified only at or below T = min(top_even, top_odd). It licenses the ORDER, not the values.",
+  "n_control_trusted_depth": "the N-CONTROL trusted depth (c53 P6): 2*min(sector rungs whose node count agrees between N=100 and N=180) - 1. It licenses the NODE COUNTS, and it is the depth a claim is scored over. Conservative by >= 1 level by construction.",
+  "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
+ },
+ "note": "the scratch copy is disposable; data/c53 is never written by this gate. A count travels with its convention (trap #154): neither number is 'the' answer alone."
+}

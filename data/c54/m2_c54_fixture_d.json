@@ -1,0 +1,45 @@
+{
+ "verdict": "PASS",
+ "completeness_certified_prefix": 31,
+ "n_control_trusted_depth_full": 25,
+ "n_control_trusted_depth_truncated": 7,
+ "expected_truncated_depth": 7,
+ "depth_legend": {
+  "completeness_certified_prefix": "c50's COMPLETENESS certificate: with R rungs of each sector the pooled ORDER is certified only at or below T = min(top_even, top_odd). It licenses the ORDER, not the values.",
+  "n_control_trusted_depth": "the N-CONTROL trusted depth (c53 P6): 2*min(sector rungs whose node count agrees between N=100 and N=180) - 1. It licenses the NODE COUNTS, and it is the depth a claim is scored over. Conservative by >= 1 level by construction.",
+  "why_both": "c53 printed only the first, under a name the second answers to (m1-L197 defect, reproduced and merged in ERRATUM 28). Neither number is 'the' depth."
+ },
+ "detail_full": {
+  "even": {
+   "agreed_sector_rungs": 13,
+   "compared": 16,
+   "first_disagreement": {
+    "rung": 14,
+    "N100": 70,
+    "N180": 74
+   }
+  },
+  "odd": {
+   "agreed_sector_rungs": 13,
+   "compared": 16,
+   "first_disagreement": {
+    "rung": 14,
+    "N100": 73,
+    "N180": 75
+   }
+  }
+ },
+ "detail_truncated": {
+  "even": {
+   "agreed_sector_rungs": 4,
+   "compared": 4,
+   "first_disagreement": null
+  },
+  "odd": {
+   "agreed_sector_rungs": 4,
+   "compared": 4,
+   "first_disagreement": null
+  }
+ },
+ "note": "the two depths are DIFFERENT QUANTITIES and this fixture makes them numerically different on purpose: the certificate is unchanged at 31 while the N-control depth falls from 25 to 7. Any grader that prints one for the other fails here."
+}

@@ -1,0 +1,9 @@
+# CYCLE 54 SEAL 2 -- the GRADER, sealed before any x=17 node count exists.
+# SIBLING file: seal 1 (m2_c54_seal.txt) is never appended to (ERRATUM 25 / c49).
+# At the moment this was written, m2_c54_nodes_*.json count was:
+#   0
+409e431e20f4a598f56de0b2712e05dc0ac6f4003cdf8e30a8d5e1232277654c  m2_c54_score.py
+720653baeb739c5ce92551f923255596213ebdca937b4dabc52f8eb8fa0ca760  m2_c54_kat_na.json
+2a5c63949beb9ba25103df2713ecdb327a10f538bd58f2db869ac1a11a7e2279  m2_c54_fixture_d.json
+d228c5fac22306aecf243768434d7251d4b020669cada130c3f236e0ba7f0290  m2_c54_regression.json
+8a28f3321090cd3e751cb4e503f3c8b6b3bf015fc31dc9fc01e05faca836463c  m2_c54_scorer_empty_grid_degradation.out
