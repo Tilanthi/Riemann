@@ -1,0 +1,170 @@
+{
+ "files": [
+  {
+   "new": "m2_c55_spectrum.py",
+   "old": "../c54/m2_c54_spectrum.py",
+   "code_differences": [],
+   "prose_differences": [
+    {
+     "line": 2,
+     "text": "\"\"\"m2_c54_spectrum.py -- cycle 54's instrument for the FOURTH and FIFTH windows:"
+    },
+    {
+     "line": 3,
+     "text": "x = 25 (the extrapolation SEALED UNRUN in c54's prereg) and x = 22 (the window that"
+    },
+    {
+     "line": 4,
+     "text": "DISCRIMINATES models I and X, which x = 25 does not)."
+    }
+   ],
+   "declared": {
+    "code_changes": [],
+    "prose_changes": [
+     "module docstring line 1: 'the THIRD WINDOW (x = 17)' -> the fourth and fifth windows (x = 25 sealed extrapolation, x = 22 discriminating)"
+    ]
+   },
+   "undeclared_code_difference": false,
+   "mutation_control": {
+    "planted_line": 32,
+    "code_diffs_without": 0,
+    "code_diffs_with": 1,
+    "fires": true
+   }
+  },
+  {
+   "new": "m2_c55_repro_fix.py",
+   "old": "../c54/m2_c54_repro_fix.py",
+   "code_differences": [
+    {
+     "line": 45,
+     "text": ""
+    },
+    {
+     "line": 46,
+     "text": ""
+    },
+    {
+     "line": 47,
+     "text": "def _sealed_gate_result():"
+    },
+    {
+     "line": 49,
+     "text": "    fn = os.path.join(HERE, \"m2_c54_repro_gate.json\")"
+    },
+    {
+     "line": 50,
+     "text": "    if not os.path.exists(fn):"
+    },
+    {
+     "line": 51,
+     "text": "        return dict(file=\"m2_c54_repro_gate.json\", present=False,"
+    },
+    {
+     "line": 52,
+     "text": "                    note=\"the sealed gate has not been run in this cycle -- nothing is claimed \""
+    },
+    {
+     "line": 53,
+     "text": "                         \"about it here\")"
+    },
+    {
+     "line": 54,
+     "text": "    g = json.load(open(fn))"
+    },
+    {
+     "line": 55,
+     "text": "    return dict(file=\"m2_c54_repro_gate.json\", present=True, verdict=g.get(\"verdict\"),"
+    },
+    {
+     "line": 56,
+     "text": "                fields_identical=\"%d/%d\" % (g.get(\"compared_fields\", 0) - g.get(\"fails\", 0),"
+    },
+    {
+     "line": 57,
+     "text": "                                            g.get(\"compared_fields\", 0)),"
+    },
+    {
+     "line": 58,
+     "text": "                differing_fields=[r[\"field\"] for r in g.get(\"rows\", []) if not r[\"identical\"]],"
+    },
+    {
+     "line": 59,
+     "text": "                note=\"left in the record unedited; this file does not replace it\")"
+    },
+    {
+     "line": 107,
+     "text": "        sealed_gate_result=_sealed_gate_result(),"
+    }
+   ],
+   "prose_differences": [
+    {
+     "line": 7,
+     "text": "IN CYCLE 54 the sealed `repro` gate compared a c53 cell re-run through that cycle's wrapper"
+    },
+    {
+     "line": 9,
+     "text": "differing field was `nodes.R`: the gate re-runs only rungs 1..5 (to keep the gate cheap) and then"
+    },
+    {
+     "line": 10,
+     "text": "compares against a banked cell whose `R` field records 16.  Every eigenvalue string, every"
+    },
+    {
+     "line": 11,
+     "text": "coefficient, every node count, every delta -- 21 of 22 fields -- was identical."
+    },
+    {
+     "line": 12,
+     "text": ""
+    },
+    {
+     "line": 13,
+     "text": "\ud83d\udd34 THIS PARAGRAPH IS CYCLE 54's HISTORY, NOT A CLAIM ABOUT CYCLE 54.  This file was cloned from"
+    },
+    {
+     "line": 14,
+     "text": "`../c54/m2_c54_repro_fix.py` by a 54->55 substitution, and that substitution silently rewrote a"
+    },
+    {
+     "line": 15,
+     "text": "past narrative into a present-tense assertion about a gate that had not yet run.  It is corrected"
+    },
+    {
+     "line": 16,
+     "text": "here, and `sealed_gate_result` below is now READ FROM cycle 54's own gate output instead of being"
+    },
+    {
+     "line": 17,
+     "text": "hardcoded -- a cloned instrument that carries the previous cycle's story is the c53 name-collision"
+    },
+    {
+     "line": 18,
+     "text": "one layer up: right arithmetic, wrong referent."
+    },
+    {
+     "line": 48,
+     "text": "    \"\"\"READ the sealed gate's own output for THIS cycle; never hardcode last cycle's verdict.\"\"\""
+    }
+   ],
+   "declared": {
+    "code_changes": [
+     "_sealed_gate_result(): NEW -- reads THIS cycle's own m2_c55_repro_gate.json instead of the hardcoded c54 verdict 'FAIL 21/22'",
+     "out['sealed_gate_result'] now calls _sealed_gate_result()"
+    ],
+    "prose_changes": [
+     "docstring: c54's gate-failure narrative re-marked as c54 HISTORY, with the substitution hazard stated"
+    ]
+   },
+   "undeclared_code_difference": false,
+   "mutation_control": {
+    "planted_line": 34,
+    "code_diffs_without": 15,
+    "code_diffs_with": 16,
+    "fires": true
+   }
+  }
+ ],
+ "verdict": "PASS",
+ "legend": "CODE difference = a line that is not inside a docstring and is not a comment. Every CODE difference must be named in DECLARED; every prose difference is listed."
+}

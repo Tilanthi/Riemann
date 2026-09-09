@@ -1,0 +1,149 @@
+{
+ "verdict": "PASS",
+ "cell": {
+  "parity": "even",
+  "x": 13,
+  "N": 100,
+  "dps": 150,
+  "R": 5
+ },
+ "sealed_gate_result": {
+  "file": "m2_c55_repro_gate.json",
+  "present": true,
+  "verdict": "FAIL",
+  "fields_identical": "21/22",
+  "differing_fields": [
+   "R"
+  ],
+  "note": "left in the record unedited; this file does not replace it"
+ },
+ "spec": {
+  "compared": 13,
+  "fails": 0,
+  "rows": [
+   {
+    "field": "L",
+    "identical": true
+   },
+   {
+    "field": "N",
+    "identical": true
+   },
+   {
+    "field": "admit_rule",
+    "identical": true
+   },
+   {
+    "field": "dim",
+    "identical": true
+   },
+   {
+    "field": "dps",
+    "identical": true
+   },
+   {
+    "field": "gl",
+    "identical": true
+   },
+   {
+    "field": "parity",
+    "identical": true
+   },
+   {
+    "field": "reference",
+    "identical": true
+   },
+   {
+    "field": "rungs",
+    "identical": true
+   },
+   {
+    "field": "selftest_ceiling_sf",
+    "identical": true
+   },
+   {
+    "field": "selftest_depths_sf",
+    "identical": true
+   },
+   {
+    "field": "solver",
+    "identical": true
+   },
+   {
+    "field": "x",
+    "identical": true
+   }
+  ]
+ },
+ "nodes": {
+  "compared": 8,
+  "fails": 0,
+  "rows": [
+   {
+    "field": "L",
+    "identical": true
+   },
+   {
+    "field": "N",
+    "identical": true
+   },
+   {
+    "field": "detector",
+    "identical": true
+   },
+   {
+    "field": "dim",
+    "identical": true
+   },
+   {
+    "field": "dps",
+    "identical": true
+   },
+   {
+    "field": "parity",
+    "identical": true
+   },
+   {
+    "field": "rungs",
+    "identical": true
+   },
+   {
+    "field": "x",
+    "identical": true
+   }
+  ],
+  "truncated": true,
+  "mine_R": 5,
+  "theirs_R": 16
+ },
+ "added_exemption": {
+  "fields": [
+   "R"
+  ],
+  "active": true,
+  "reason": "`R` records HOW MANY rungs the run counted. The gate deliberately re-runs a SHORT prefix (R=5) of a banked 16-rung cell to stay cheap, so R differs BY CONSTRUCTION and its inequality carries no information about the computation. Exempt ONLY while the comparison is truncated (mine < theirs); a truncated comparison that reported R equal would itself be the defect."
+ },
+ "sealed_exemptions": [
+  "build_seconds",
+  "eigsy_seconds",
+  "label",
+  "resolver",
+  "seconds",
+  "source"
+ ],
+ "mutation_control": {
+  "node_count_mutation": {
+   "planted": "rungs[0].nu 0 -> 1",
+   "fails_reported": 1,
+   "fires": true
+  },
+  "eigenvalue_mutation": {
+   "planted": "rungs[0].lam last digit changed",
+   "fails_reported": 1,
+   "fires": true
+  },
+  "verdict": "PASS",
+  "why": "an exemption is indistinguishable from a loosening on any evidence that does not include a planted failure."
+ },
+ "headline": "the c55 wrapper reproduces c53's published cell field-for-field on every field that carries a number: 13/13 spec fields and 8/8 node fields identical, with one exemption class (R) that is named, conditional, and shown to leave the gate able to fail."
+}

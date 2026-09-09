@@ -14,3 +14,5 @@ REDIRECTION: {
   "detector_module": "/shared/rh-exchange-repo/Riemann/data/c51/m2_c51_nodes.py"
  }
 }
+SELF-TEST vs None: depths None (CEILING None s.f.)
+wrote m2_c55_spec_odd_x22_N180_dps300.json  dim=180 build=611.0s eigsy=133.5s total=753.7s
