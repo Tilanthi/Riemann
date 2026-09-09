@@ -1,0 +1,19 @@
+# CYCLE 55 SEAL -- sha256 of the preregistration and every registered instrument.
+# Pushed in the SAME commit as the bytes it seals (ERRATUM 25). Never appended to; addenda are SIBLING files.
+# Verify:  cd data/c55 && sha256sum -c <(grep -v '^#' m2_c55_seal.txt)
+03abf9ff846d64ac37620820a064533949780c4eb18d66855d9194920647386a  m2_c55_prereg.md
+278801e87f143d673b2e0b829e097df1bc50edde1930d0700df3c8161b421203  m2_c55_spectrum.py
+ddd955014bdafaecc7a15e265282fd8042d99161e00f15e58cfe04b2818bdcb6  m2_c55_repro_fix.py
+69703054e3f924b1d7aa78ab0a6b86cf3d48d603a1e26618d37b4c7e3794d98c  m2_c55_copyproof.py
+4692ed0ee490a28dd70e55c057983684418a3cdbf2ca5434c0c6d82f2709ed3d  m2_c55_zerocount.py
+b2d320d374b6cb33ca302b7e94bd9ead641c203f062eb47708674db7f4e79c1a  m2_c55_zerocount.json
+8ad7e7001ebf24a1406392599cd0ac50278fd7377828a9f8ca725c5c6e621fac  m2_c55_prelaunch_absence.sh
+2ffa349b32f27ab73a5a7fee8ca02e052d84f4809a86d8f8996af337aabebe6b  m2_c55_prelaunch_absence.out
+# the SEAL THIS CYCLE OPENS (c54's P8, x=25 column) -- sealed by reference:
+b4272c356840930753bc95cfdeb8eb7e93037b5e2d939507db3e64a8a492bc92  ../c54/m2_c54_prereg.md
+9fe9d0f1a300e1119391f22afed8db4945410d3d2bda739d57379a07073b8029  ../c54/m2_c54_seal.txt
+# imported, unmodified, sealed by reference (their own cycles sealed the bytes):
+98f7bf50b2da8ad9ce386fe591cfc348a7dbf064d62d05791f38794bbe11b95a  ../c53/m2_c53_spectrum.py
+41a4dfe1b13bac86e4ad84d5e5af7bfb9a3c69ec737427ef2bd379564137e5c1  ../c54/m2_c54_score.py
+109a6e3a8dcc82b49850baa906ec38864e85e52b0714e0a30e396096173c6581  ../c51/m2_c51_nodes.py
+2eec491c8ee81c5c0fc4ef11da314956de4544ca097aaf1f21633243e06d9e59  ../c46/c46_parity.py
