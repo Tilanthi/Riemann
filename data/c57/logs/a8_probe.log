@@ -1,0 +1,9 @@
+KNOWN-ANSWER control: re-running the detector at the SEALED dps=50 ...
+  committed: nu=None stable=False refine=664 lobe=1.07503e-54
+  re-run   : nu=None stable=False refine=664 lobe=1.07503e-54   (111.0s)
+  KAT: REPRODUCES -- the probe is measuring the detector, not itself
+
+MEASUREMENT: same coefficients, detector at mp.dps = 200 ...
+  nu=0 stable=True refine=0 lobe=1.0   (165.5s)
+
+A8: HELD
