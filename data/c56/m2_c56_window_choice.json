@@ -1,0 +1,747 @@
+{
+ "rule": "a window is FULLY DISCRIMINATING iff the four LIVE models give four distinct p2",
+ "searched": "x = 13..45 inclusive",
+ "inputs": "published model rules + n(x) from mpmath.zetazero (dps 40); NO new-window artefact",
+ "fully_discriminating": [
+  42
+ ],
+ "first_fully_discriminating": 42,
+ "chosen": 42,
+ "rows": [
+  {
+   "x": 13,
+   "n": 21,
+   "bracket_below": "2.34403",
+   "bracket_above": "1.22897",
+   "live": {
+    "I": 10,
+    "X": 10,
+    "A": 10,
+    "S": 10
+   },
+   "controls": {
+    "L": 10,
+    "Z": 10
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 14,
+   "n": 24,
+   "bracket_below": "0.53932",
+   "bracket_above": "0.844517",
+   "live": {
+    "I": 10,
+    "X": 10,
+    "A": 10,
+    "S": 10
+   },
+   "controls": {
+    "L": 10,
+    "Z": 11
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 15,
+   "n": 26,
+   "bracket_below": "1.75588",
+   "bracket_above": "0.403564",
+   "live": {
+    "I": 10,
+    "X": 10,
+    "A": 10,
+    "S": 10
+   },
+   "controls": {
+    "L": 10,
+    "Z": 11
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 16,
+   "n": 29,
+   "bracket_below": "1.69977",
+   "bracket_above": "0.786886",
+   "live": {
+    "I": 10,
+    "X": 11,
+    "A": 10,
+    "S": 11
+   },
+   "controls": {
+    "L": 10,
+    "Z": 12
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 17,
+   "n": 32,
+   "bracket_below": "1.36753",
+   "bracket_above": "0.354461",
+   "live": {
+    "I": 11,
+    "X": 11,
+    "A": 11,
+    "S": 11
+   },
+   "controls": {
+    "L": 10,
+    "Z": 12
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 18,
+   "n": 35,
+   "bracket_below": "1.22268",
+   "bracket_above": "1.22289",
+   "live": {
+    "I": 11,
+    "X": 11,
+    "A": 11,
+    "S": 11
+   },
+   "controls": {
+    "L": 11,
+    "Z": 13
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 19,
+   "n": 38,
+   "bracket_below": "0.589738",
+   "bracket_above": "1.9896",
+   "live": {
+    "I": 11,
+    "X": 11,
+    "A": 11,
+    "S": 11
+   },
+   "controls": {
+    "L": 11,
+    "Z": 13
+   },
+   "distinct_live": 1,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 20,
+   "n": 41,
+   "bracket_below": "1.40689",
+   "bracket_above": "1.85298",
+   "live": {
+    "I": 11,
+    "X": 11,
+    "A": 11,
+    "S": 12
+   },
+   "controls": {
+    "L": 11,
+    "Z": 14
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 21,
+   "n": 44,
+   "bracket_below": "0.859203",
+   "bracket_above": "1.55085",
+   "live": {
+    "I": 11,
+    "X": 11,
+    "A": 11,
+    "S": 12
+   },
+   "controls": {
+    "L": 11,
+    "Z": 14
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 22,
+   "n": 47,
+   "bracket_below": "0.114035",
+   "bracket_above": "1.50613",
+   "live": {
+    "I": 12,
+    "X": 11,
+    "A": 11,
+    "S": 12
+   },
+   "controls": {
+    "L": 11,
+    "Z": 15
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 23,
+   "n": 50,
+   "bracket_below": "1.40142",
+   "bracket_above": "1.48772",
+   "live": {
+    "I": 12,
+    "X": 12,
+    "A": 11,
+    "S": 12
+   },
+   "controls": {
+    "L": 11,
+    "Z": 16
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 24,
+   "n": 53,
+   "bracket_below": "0.742927",
+   "bracket_above": "0.12881",
+   "live": {
+    "I": 12,
+    "X": 12,
+    "A": 11,
+    "S": 12
+   },
+   "controls": {
+    "L": 11,
+    "Z": 16
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 25,
+   "n": 56,
+   "bracket_below": "0.966723",
+   "bracket_above": "0.517959",
+   "live": {
+    "I": 12,
+    "X": 12,
+    "A": 11,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 17
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 26,
+   "n": 60,
+   "bracket_below": "0.332108",
+   "bracket_above": "2.17425",
+   "live": {
+    "I": 12,
+    "X": 12,
+    "A": 11,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 17
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 27,
+   "n": 63,
+   "bracket_below": "0.551488",
+   "bracket_above": "0.265973",
+   "live": {
+    "I": 12,
+    "X": 12,
+    "A": 11,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 18
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 28,
+   "n": 66,
+   "bracket_below": "1.175",
+   "bracket_above": "0.512246",
+   "live": {
+    "I": 13,
+    "X": 12,
+    "A": 12,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 19
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 29,
+   "n": 70,
+   "bracket_below": "0.00529542",
+   "bracket_above": "2.66209",
+   "live": {
+    "I": 13,
+    "X": 12,
+    "A": 12,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 19
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 30,
+   "n": 73,
+   "bracket_below": "1.26664",
+   "bracket_above": "0.920599",
+   "live": {
+    "I": 13,
+    "X": 12,
+    "A": 12,
+    "S": 13
+   },
+   "controls": {
+    "L": 11,
+    "Z": 20
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 31,
+   "n": 76,
+   "bracket_below": "1.69902",
+   "bracket_above": "0.486652",
+   "live": {
+    "I": 13,
+    "X": 12,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 11,
+    "Z": 20
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 32,
+   "n": 79,
+   "bracket_below": "3.04662",
+   "bracket_above": "0.202822",
+   "live": {
+    "I": 13,
+    "X": 12,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 11,
+    "Z": 21
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "X",
+    "A"
+   ]
+  },
+  {
+   "x": 33,
+   "n": 83,
+   "bracket_below": "1.95042",
+   "bracket_above": "0.561144",
+   "live": {
+    "I": 14,
+    "X": 12,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 11,
+    "Z": 22
+   },
+   "distinct_live": 2,
+   "collisions": [
+    "I",
+    "X",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 34,
+   "n": 87,
+   "bracket_below": "0.280381",
+   "bracket_above": "0.918744",
+   "live": {
+    "I": 14,
+    "X": 13,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 11,
+    "Z": 23
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "S"
+   ]
+  },
+  {
+   "x": 35,
+   "n": 90,
+   "bracket_below": "0.843889",
+   "bracket_above": "0.803433",
+   "live": {
+    "I": 14,
+    "X": 13,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 12,
+    "Z": 23
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 36,
+   "n": 94,
+   "bracket_below": "1.21135",
+   "bracket_above": "1.22677",
+   "live": {
+    "I": 14,
+    "X": 13,
+    "A": 12,
+    "S": 14
+   },
+   "controls": {
+    "L": 12,
+    "Z": 24
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 37,
+   "n": 98,
+   "bracket_below": "0.490621",
+   "bracket_above": "1.21555",
+   "live": {
+    "I": 15,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 25
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 38,
+   "n": 101,
+   "bracket_below": "0.991221",
+   "bracket_above": "0.794436",
+   "live": {
+    "I": 15,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 25
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 39,
+   "n": 105,
+   "bracket_below": "0.973328",
+   "bracket_above": "2.09276",
+   "live": {
+    "I": 15,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 26
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 40,
+   "n": 109,
+   "bracket_below": "0.312464",
+   "bracket_above": "1.74257",
+   "live": {
+    "I": 15,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 27
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 41,
+   "n": 112,
+   "bracket_below": "1.22988",
+   "bracket_above": "0.999842",
+   "live": {
+    "I": 15,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 27
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 42,
+   "n": 116,
+   "bracket_below": "0.319889",
+   "bracket_above": "1.66407",
+   "live": {
+    "I": 16,
+    "X": 13,
+    "A": 12,
+    "S": 15
+   },
+   "controls": {
+    "L": 12,
+    "Z": 28
+   },
+   "distinct_live": 4,
+   "collisions": [
+    "A"
+   ]
+  },
+  {
+   "x": 43,
+   "n": 120,
+   "bracket_below": "0.206519",
+   "bracket_above": "1.31709",
+   "live": {
+    "I": 16,
+    "X": 13,
+    "A": 12,
+    "S": 16
+   },
+   "controls": {
+    "L": 12,
+    "Z": 29
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 44,
+   "n": 124,
+   "bracket_below": "0.00810401",
+   "bracket_above": "1.79059",
+   "live": {
+    "I": 16,
+    "X": 13,
+    "A": 12,
+    "S": 16
+   },
+   "controls": {
+    "L": 12,
+    "Z": 30
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  },
+  {
+   "x": 45,
+   "n": 127,
+   "bracket_below": "0.278224",
+   "bracket_above": "0.467847",
+   "live": {
+    "I": 16,
+    "X": 13,
+    "A": 12,
+    "S": 16
+   },
+   "controls": {
+    "L": 12,
+    "Z": 30
+   },
+   "distinct_live": 3,
+   "collisions": [
+    "I",
+    "A",
+    "S"
+   ]
+  }
+ ]
+}

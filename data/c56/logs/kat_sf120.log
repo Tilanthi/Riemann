@@ -1,0 +1,4 @@
+KAT sf120: re-running published c53 cell even x=13 N=100 dps=150 gl=9 at STORE_SF=120
+SELF-TEST vs c46_block_even_x13_N100_dps150_g9_it16_k5.json: depths ['39.9845', '39.4787', '39.6012', '40.0', '39.5263'] (CEILING 40 s.f.)
+wrote m2_c56_kat_sf120_spec.json  dim=101 build=165.1s eigsy=19.2s total=185.4s
+KAT sf120: 0 diffs over 10605 values (skipped ['build_seconds', 'detector', 'eigsy_seconds', 'label', 'reference', 'resolver', 'seconds', 'selftest_ceiling_sf', 'selftest_depths_sf', 'source']); mutation control FIRES -> PASS

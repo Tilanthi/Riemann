@@ -1,0 +1,25 @@
+{
+ "tag": "sf120",
+ "store_sf": 120,
+ "compare_after_rounding_to_sf": 40,
+ "banked": "../c53/m2_c53_spec_even_x13_N100_dps150.json",
+ "rerun": "m2_c56_kat_sf120_spec.json",
+ "fields_skipped": [
+  "build_seconds",
+  "detector",
+  "eigsy_seconds",
+  "label",
+  "reference",
+  "resolver",
+  "seconds",
+  "selftest_ceiling_sf",
+  "selftest_depths_sf",
+  "source"
+ ],
+ "n_diffs": 0,
+ "diffs": [],
+ "n_values_compared": 10605,
+ "mutation_control_diffs": 1,
+ "mutation_control": "FIRES",
+ "verdict": "PASS"
+}

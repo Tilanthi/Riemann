@@ -1,0 +1,11 @@
+{
+ "x": 42,
+ "T_star": "263.893782901542632030862",
+ "n": 116,
+ "gamma_n": "263.5738939048701322330816",
+ "gamma_n_plus_1": "265.5578518388763202924773",
+ "bracket_below": "0.3198889967",
+ "bracket_above": "1.664068937",
+ "method": "mpmath.zetazero, dps 40, strict inequality gamma <= T*",
+ "comparison": "c55 disclosed x=22 as its narrowest bracket at 0.114 below T*"
+}
